@@ -1,0 +1,97 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic|Roboto+Mono:700,300,300italic,700italic|Roboto+Slab:400,700|Ultra);
+
+// Our variables.
+// $base-font-family: Helvetica, Arial, sans-serif;
+$base-font-family: 'Roboto', sans-serif;
+$title-font-family: 'Ultra', 'Roboto Slab', 'Roboto', sans-serif;
+$heading-font-family: 'Roboto Slab', 'Roboto', sans-serif;
+$code-font-family: 'Roboto Mono', Consolas, monaco, monospace;
+$base-font-size:   14px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     20px;
+
+
+// Colors.
+$text-color:       #222;
+$background-color: #fff;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+$color-black: #000;
+$color-blue-400: #42a5f5;
+$color-blue-700: #1976d2;
+$color-blue-a400: #2979ff;
+$color-cyan: #00bcd4;
+$color-cyan-600: #00acc1;
+$color-cyan-700: #0097a7;
+$color-cyan-900: #006064;
+$color-darkgray: #555;
+$color-deep-purple-700: #512da8;
+$color-green-a700: #00c853;
+$color-grey-900: #212121;
+$color-indigo-a700: #304ffe;
+$color-lime-700: #afb42b;
+$color-purple: #9c27b0;
+$color-purple-700: #7b1fa2;
+$color-teal: #009688;
+$color-teal-600: #00897b;
+
+// Normal colors.
+// $color-black: #000;
+// $color-blue: #00f;
+// $color-brown: #a50;
+// $color-cyan: #077;
+// $color-gray: #aaa;
+// $color-green: #006a00;
+// $color-magenta: #a0a;
+// $color-red: #a00;
+
+// Bright colors.
+// $color-darkgray: #555;
+// $color-lightblue: #06f;
+// $color-lightcyan: #0aa;
+// $color-lightgreen: #5f5;
+// $color-lightmagenta: #f5f;
+// $color-lightred: #f55;
+// $color-white: #fff;
+// $color-yellow: #ff5;
+
+// Width of the content area.
+$content-width:    100%;
+
+$on-palm:          600px;
+$on-laptop:        100%;
+
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
