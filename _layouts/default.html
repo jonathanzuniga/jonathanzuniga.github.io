@@ -15,6 +15,15 @@
 
     <script type="text/javascript">
       $(function() {
+        $('h1 .site-title').cypher('decode', {
+          alphabet: alphabet,
+          animate: 'leftToRight',
+          digits: '',
+          endText: 'wbanguna múñvtn',
+          scheme: 'offset',
+          speed: 0
+        });
+
         var alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
         $('h1 .site-title').on('mouseover touchstart', function() {
