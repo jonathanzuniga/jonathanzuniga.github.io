@@ -12,5 +12,33 @@
     </div>
 
     {% include footer.html %}
+
+    <script type="text/javascript">
+      $(function() {
+        var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+
+        $('h1 .site-title').on('mouseover touchstart', function() {
+          $(this).cypher('decode', {
+            alphabet: alphabet,
+            animate: 'rightToLeft',
+            digits: '',
+            endText: 'jonathan zúñiga',
+            scheme: 'offset',
+            speed: 25
+          });
+        });
+
+        $('h1 .site-title').on('mouseleave touchend', function() {
+          $(this).cypher('decode', {
+            alphabet: alphabet,
+            animate: 'leftToRight',
+            digits: '',
+            endText: 'wbanguna múñvtn',
+            scheme: 'offset',
+            speed: 25
+          });
+        });
+      });
+    </script>
   </body>
 </html>

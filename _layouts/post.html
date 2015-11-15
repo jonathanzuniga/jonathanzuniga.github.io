@@ -6,7 +6,7 @@ layout: default
   <header class="post-header">
     <h2>{{ page.title }}</h2>
 
-    <p class="post-meta">Published on {{ page.date | date: "%a %d %m %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <p class="post-meta">Published on <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%a %d %m %Y" }}</time></p>
   </header>
 
   <article class="post-content">

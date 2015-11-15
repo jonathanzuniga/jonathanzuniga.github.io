@@ -14,11 +14,11 @@ layout: default
           </time>
 
           <div class="post-words">
-            Words: {{ post.content | number_of_words }}
+            0{{ post.content | number_of_words }} Words
           </div>
 
           <div class="post-category">
-            {{ post.categories }}
+            {{ post.categories | join: ' ' }}
           </div>
 
           <div class="post-title">
