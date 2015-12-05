@@ -102,23 +102,6 @@ h2, h3, h4, h5, h6 {
 /**
  * Links
  */
-@-moz-keyframes blink {
-    0% {
-        border-bottom: 0;
-    }
-    50% {
-        border-bottom: 1px solid $color-cyan-600;
-    }
-}
-@-webkit-keyframes blink {
-    0% {
-        border-bottom: 0;
-    }
-    50% {
-        border-bottom: 1px solid $color-cyan-600;
-    }
-}
-
 a {
     color: $color-cyan-600;
     text-decoration: none;
@@ -128,8 +111,6 @@ a {
     }
 
     &:hover {
-        -moz-animation: blink 150ms steps(1,end) infinite;
-        -webkit-animation: blink 150ms steps(1,end) infinite;
         border-bottom: 1px solid $color-cyan-600;
         color: $color-cyan-600;
         text-decoration: none;
@@ -161,7 +142,7 @@ blockquote {
  */
 pre,
 code {
-    font-family: $code-font-family;
+    font-family: $mono-font-family;
     font-weight: normal;
     // border: 1px solid $grey-color-light;
     border-radius: 3px;

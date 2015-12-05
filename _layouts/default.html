@@ -15,13 +15,33 @@
 
     <script type="text/javascript">
       $(function() {
+        $('.post-category span').text().replace(/ /g,'_');
+
+        String.prototype.shuffle = function () {
+            var a = this.split(""),
+                n = a.length;
+
+            for(var i = n - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var tmp = a[i];
+
+                a[i] = a[j];
+                a[j] = tmp;
+            }
+
+            return a.join("");
+        }
+
+        var site_title = 'jonathan zúñiga';
+
         $('h1 .site-title').cypher('decode', {
           alphabet: alphabet,
           animate: 'leftToRight',
+          delay: 10000,
           digits: '',
-          endText: 'wbanguna múñvtn',
+          endText: site_title.shuffle(),
           scheme: 'offset',
-          speed: 0
+          speed: 25
         });
 
         var alphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -31,7 +51,7 @@
             alphabet: alphabet,
             animate: 'rightToLeft',
             digits: '',
-            endText: 'jonathan zúñiga',
+            endText: site_title,
             scheme: 'offset',
             speed: 25
           });
@@ -42,7 +62,7 @@
             alphabet: alphabet,
             animate: 'leftToRight',
             digits: '',
-            endText: 'wbanguna múñvtn',
+            endText: site_title.shuffle(),
             scheme: 'offset',
             speed: 25
           });

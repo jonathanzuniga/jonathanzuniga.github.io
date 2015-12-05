@@ -13,12 +13,13 @@ $title-font-family: 'Roboto Mono', Consolas, monaco, monospace;
 // $title-font-family: 'Ultra', 'Roboto Slab', 'Roboto', sans-serif;
 $heading-font-family: 'Roboto Mono', Consolas, monaco, monospace;
 // $heading-font-family: 'Roboto Slab', 'Roboto', sans-serif;
-$code-font-family: 'Roboto Mono', Consolas, monaco, monospace;
+$mono-font-family: 'Roboto Mono', Consolas, monaco, monospace;
 $base-font-size:   14px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $spacing-unit:     20px;
+
 
 
 // Colors.
@@ -31,44 +32,11 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 $color-black: #000;
-$color-blue-400: #42a5f5;
-$color-blue-700: #1976d2;
-$color-blue-a400: #2979ff;
-$color-cyan: #00bcd4;
 $color-cyan-600: #00acc1;
-$color-cyan-700: #0097a7;
-$color-cyan-900: #006064;
 $color-darkgray: #555;
-$color-deep-purple-700: #512da8;
 $color-grey-100: #f5f5f5;
-$color-green-a700: #00c853;
-$color-grey-900: #212121;
-$color-indigo-a700: #304ffe;
-$color-lime-700: #afb42b;
-$color-purple: #9c27b0;
-$color-purple-700: #7b1fa2;
-$color-teal: #009688;
-$color-teal-600: #00897b;
 
-// Normal colors.
-// $color-black: #000;
-// $color-blue: #00f;
-// $color-brown: #a50;
-// $color-cyan: #077;
-// $color-gray: #aaa;
-// $color-green: #006a00;
-// $color-magenta: #a0a;
-// $color-red: #a00;
 
-// Bright colors.
-// $color-darkgray: #555;
-// $color-lightblue: #06f;
-// $color-lightcyan: #0aa;
-// $color-lightgreen: #5f5;
-// $color-lightmagenta: #f5f;
-// $color-lightred: #f55;
-// $color-white: #fff;
-// $color-yellow: #ff5;
 
 // Width of the content area.
 $content-width:    940px;

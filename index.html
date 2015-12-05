@@ -13,12 +13,12 @@ layout: default
             {{ post.date | date: "%a %d %m %Y" }}
           </time>
 
-          <div class="post-words">
+          <!-- <div class="post-words">
             0{{ post.content | number_of_words }} Words
-          </div>
+          </div> -->
 
           <div class="post-category">
-            {{ post.categories | join: ' ' }}
+            {{ post.categories | join: ' ' }}<span></span>
           </div>
 
           <div class="post-title">
@@ -28,102 +28,4 @@ layout: default
       {% endfor %}
     </ul>
   </section>
-
-  <!-- <section id="sect-latest-posts">
-    <h2>Latest posts</h2>
-
-    <div class="table">
-      {% for post in site.posts %}
-        <div class="row">
-          <div class="col-date">
-            <div class="col-in">
-              {{ post.date | date: "%a %d %m %Y" }}
-            </div>
-          </div>
-
-          <div class="col-title">
-            <div class="col-in">
-              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </div>
-          </div>
-
-          <div class="col-tags">
-            <div class="col-in">
-              {{ post.tags }}
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </section> -->
-
-  <!-- <hr>
-
-  <section id="sect-social-media">
-    <h2>Contact</h2>
-
-    <div class="table">
-      <div class="row">
-        <div>
-          <div class="col-in">
-            <p>
-              <a href="mailto:{{ site.email }}">E-mail</a><br>
-              <span>jonathanzuniga</span><span class="text-darkgray">(at)</span><span>gmail</span><span class="text-darkgray">(dot)</span><span>com</span>
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <div class="col-in">
-            <p>
-              <a href="http://twitter.com/{{ site.twitter_username }}" target="_blank">Twitter</a><br>
-              <span class="text-darkgray">(at)</span>{{ site.twitter_username }}
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div>
-          <div class="col-in">
-            <p>
-              <a href="http://facebook.com/jonathanzuniga" target="_blank">Facebook</a><br>
-              jonathanzuniga
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <div class="col-in">
-            <p>
-              <a href="https://plus.google.com/110998212527855988388" target="_blank">Google+</a><br>
-              plus.google.com/110998212527855988388
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div>
-          <div class="col-in">
-            <p>
-              <a href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a><br>
-              github.com/{{ site.github_username }}
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <div class="col-in">
-            <p>
-              <a href="http://delicous.com/jonathanzuniga" target="_blank">Delicious</a><br>
-              delicious.com/jonathanzuniga
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <p>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
 </div>

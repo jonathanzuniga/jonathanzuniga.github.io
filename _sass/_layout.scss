@@ -230,46 +230,17 @@
 }
 
 .post-meta {
+	font-family: $mono-font-family;
 	// font-size: $small-font-size;
 	// color: $color-darkgray;
+	.category {
+		text-transform: capitalize;
+	}
 }
 
 .post-link {
 	display: block;
 	font-size: 24px;
-}
-
-/* The div to table technique. */
-.col-in {
-	margin: 0;
-	padding: 0;
-}
-
-div.table {
-	display: table;
-	padding: 0;
-	width: 100%;
-}
-
-div.row  {
-	display: table-row;
-}
-
-div.row > div {
-	display: table-cell;
-}
-
-#sect-latest-posts div.col-date {
-	width: 30%;
-}
-
-div.col-tags {
-	text-align: right;
-}
-
-#sect-latest-posts,
-#sect-social-media {
-	margin-bottom: $spacing-unit;
 }
 
 
@@ -349,19 +320,24 @@ hr {
 	
 	.post-date {
 		display: inline-block;
-		font-family: $code-font-family;
+		font-family: $mono-font-family;
 		width: 140px;
 	}
 
 	.post-words {
 		display: inline-block;
-		font-family: $code-font-family;
+		font-family: $mono-font-family;
 		width: 105px;
 	}
 
 	.post-category {
 		display: inline-block;
-		width: 130px;
+		font-family: $mono-font-family;
+		width: 165px;
+
+		span {
+			width: 20px;
+		}
 	}
 
 	.post-title {
@@ -375,24 +351,3 @@ hr {
  * Text colors.
  */
 .text-darkgray { color: $color-darkgray; }
-.text-teal { color: $color-teal; }
-
- // Normal colors.
-// .text-black { color: $color-black; }
-// .text-blue { color: $color-blue; }
-// .text-brown { color: $color-brown; }
-// .text-cyan { color: $color-cyan; }
-// .text-gray { color: $color-gray; }
-// .text-green { color: $color-green; }
-// .text-magenta { color: $color-magenta; }
-// .text-red { color: $color-red; }
-
-// Bright colors.
-// .text-darkgray { color: $color-darkgray; }
-// .text-lightblue { color: $color-lightblue; }
-// .text-lightcyan { color: $color-lightcyan; }
-// .text-lightgreen { color: $color-lightgreen; }
-// .text-lightmagenta { color: $color-lightmagenta; }
-// .text-lightred { color: $color-lightred; }
-// .text-white { color: $color-white; }
-// .text-yellow { color: $color-yellow; }

@@ -2,7 +2,7 @@
 layout: post
 title:  "Encrypt your data with ROT13 algorithm"
 date:   2015-11-14 17:39:00
-categories: Classical ciphers
+categories: classical ciphers
 ---
 [ROT13][rot13] is a text encryption method, which consists in moving the 
 letters of the alphabet (English) in 13 locations (ie, "a" corresponds to the 
