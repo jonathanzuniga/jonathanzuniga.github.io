@@ -15,8 +15,35 @@
 
     <script type="text/javascript">
       $(function() {
-        $('.post-category span').text().replace(/ /g,'_');
+        // Number of words background color opacity.
+        var array_of_numbers = [];
+        $('.post-words a span').each(function() {
+          array_of_numbers.push($(this).text());  
+        });
+        var max_number = Math.max.apply(null, array_of_numbers);
+        // console.log(max_number);
 
+        function percentCalculation(a, b) {
+          var c = parseFloat(a) / parseFloat(b);
+          return c;
+        }
+
+        // $('.post-words a').each(function() {
+        //   var percentage = percentCalculation($(this).children('span').text(), max_number);
+        //   $(this).css('background-color', 'rgba(225, 190, 231, ' + percentage + ')');
+        //   // console.log(percentage);
+        // });
+
+        $('.post-words a').each(function() {
+          var percentage = percentCalculation($(this).children('span').text(), max_number);
+          $(this).closest('.post-meta').find('.post-words-bar').css({
+            // 'opacity' : percentage,
+            'width' : percentage * 100 + '%'
+          });
+          // console.log(percentage);
+        });
+
+        // Shuffle title fx.
         String.prototype.shuffle = function () {
             var a = this.split(""),
                 n = a.length;

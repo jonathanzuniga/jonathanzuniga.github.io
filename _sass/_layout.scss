@@ -91,14 +91,14 @@
 }
 
 .clearfix {
-  &:before,
-  &:after {
+	&:before,
+	&:after {
 	content: " ";
 	display: table;
-  }
-  &:after {
+	}
+	&:after {
 	clear: both;
-  }
+	}
 }
 
 
@@ -218,6 +218,10 @@
  */
 .page-content {
 	// padding: $spacing-unit 0;
+
+	.post-footer-meta {
+		line-height: normal;
+	}
 }
 
 .post-list {
@@ -229,20 +233,6 @@
 	}
 }
 
-.post-meta {
-	font-family: $mono-font-family;
-	// font-size: $small-font-size;
-	// color: $color-darkgray;
-	.category {
-		text-transform: capitalize;
-	}
-}
-
-.post-link {
-	display: block;
-	font-size: 24px;
-}
-
 
 
 /**
@@ -252,56 +242,14 @@
 	margin-bottom: $spacing-unit / 2;
 }
 
-// .post-title {
-//     // font-size: 42px;
-//     font-size: 32px;
-//     // letter-spacing: -1px;
-//     // line-height: 1;
-
-//     @include media-query($on-laptop) {
-//         // font-size: 36px;
-//         font-size: 28px;
-//     }
-// }
-
 .post-content {
 	margin-bottom: $spacing-unit;
-
-	// h2 {
-	//     font-size: 32px;
-
-	//     @include media-query($on-laptop) {
-	//         font-size: 28px;
-	//     }
-	// }
-
-	// h3 {
-	//     font-size: 26px;
-
-	//     @include media-query($on-laptop) {
-	//         font-size: 22px;
-	//     }
-	// }
-
-	// h4 {
-	//     font-size: 20px;
-
-	//     @include media-query($on-laptop) {
-	//         font-size: 18px;
-	//     }
-	// }
 }
 
 
 
-// h2 {
-//     font-size: $base-font-size;
-// }
-
-
-
 hr {
-	border-bottom: 1px solid $grey-color-light;
+	border-bottom: 1px solid $colo-grey-light;
 	border-top: none;
 	clear: both;
 	margin: $spacing-unit 0;
@@ -312,42 +260,63 @@ hr {
 /**
  * Latest posts.
  */
-.posts {
-	list-style: outside none none;
-	margin: 0;
-	padding: 0;
-	text-transform: capitalize;
-	
-	.post-date {
-		display: inline-block;
-		font-family: $mono-font-family;
-		width: 140px;
-	}
+.home {
+	.post {
+		margin-bottom: $spacing-unit - 5;
 
-	.post-words {
-		display: inline-block;
-		font-family: $mono-font-family;
-		width: 105px;
-	}
-
-	.post-category {
-		display: inline-block;
-		font-family: $mono-font-family;
-		width: 165px;
-
-		span {
-			width: 20px;
+		.post-title {
+			font-weight: normal;
+			line-height: normal;
+			margin-bottom: 0;
+			text-transform: capitalize;
 		}
-	}
 
-	.post-title {
-		display: inline-block;
+		.post-meta {
+			// color: $color-grey;
+			font-size: $small-font-size;
+			position: relative;
+			
+			a {
+				// color: $color-blue-light;
+			}
+
+			.post-tags, .post-date, .post-words {
+				display: inline-block;
+			}
+			.post-words {
+				a {
+					padding: 0 0.2em;
+				}
+			}
+
+			.post-words-bar {
+				top: 0;
+				color: #e1bee7;
+				left: 0;
+				overflow: hidden;
+				position: absolute;
+				z-index: -1;
+			}
+		}
 	}
 }
 
 
 
 /**
- * Text colors.
+ * Tags.
  */
-.text-darkgray { color: $color-darkgray; }
+.tags {
+	h3 {
+		text-transform: lowercase;
+	}
+
+	ul {
+		list-style: none;
+		// margin-left: 0;
+
+		li {
+			text-transform: capitalize;
+		}
+	}
+}

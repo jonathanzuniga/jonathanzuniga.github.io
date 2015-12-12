@@ -4,8 +4,8 @@
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 
@@ -14,17 +14,17 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: normal;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	font-weight: normal;
+	color: $text-color;
+	background-color: $background-color;
+	-webkit-text-size-adjust: 100%;
 
-    b, strong {
-        font-weight: bold;
-    }
+	b, strong {
+		font-weight: bold;
+	}
 }
 
 
@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+	margin-bottom: $spacing-unit - 5;
 }
 
 
@@ -45,8 +45,8 @@ ul, ol, dl, figure,
  * Images
  */
 img {
-    max-width: 100%;
-    vertical-align: middle;
+	max-width: 100%;
+	vertical-align: middle;
 }
 
 
@@ -55,11 +55,11 @@ img {
  * Figures
  */
 figure > img {
-    display: block;
+	display: block;
 }
 
 figcaption {
-    font-size: $small-font-size;
+	font-size: $small-font-size;
 }
 
 
@@ -68,14 +68,14 @@ figcaption {
  * Lists
  */
 ul, ol {
-    margin-left: $spacing-unit;
+	margin-left: $spacing-unit;
 }
 
 li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
+	> ul,
+	> ol {
+		 margin-bottom: 0;
+	}
 }
 
 
@@ -84,17 +84,17 @@ li {
  * Headings
  */
 h1 {
-    font-family: $title-font-family;
-    font-weight: bold;
+	font-family: $title-font-family;
+	font-weight: bold;
 
-    a:hover {
-        border-bottom: none;
-    }
+	a:hover {
+		border-bottom: none;
+	}
 }
 h2, h3, h4, h5, h6 {
-    font-family: $heading-font-family;
-    font-weight: bold;
-    text-transform: capitalize;
+	font-family: $heading-font-family;
+	font-weight: bold;
+	text-transform: capitalize;
 }
 
 
@@ -103,18 +103,17 @@ h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $color-cyan-600;
-    text-decoration: none;
+	color: $color-blue;
+	text-decoration: none;
 
-    &:visited {
-        color: $color-cyan-600;
-    }
+	&:visited {
+		color: $color-blue;
+	}
 
-    &:hover {
-        border-bottom: 1px solid $color-cyan-600;
-        color: $color-cyan-600;
-        text-decoration: none;
-    }
+	&:hover {
+		color: $color-blue;
+		text-decoration: underline;
+	}
 }
 
 
@@ -123,16 +122,16 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
+	color: $grey-color;
+	border-left: 4px solid $grey-color-light;
+	padding-left: $spacing-unit / 2;
+	font-size: 18px;
+	letter-spacing: -1px;
+	font-style: italic;
 
-    > :last-child {
-        margin-bottom: 0;
-    }
+	> :last-child {
+		margin-bottom: 0;
+	}
 }
 
 
@@ -142,27 +141,27 @@ blockquote {
  */
 pre,
 code {
-    font-family: $mono-font-family;
-    font-weight: normal;
-    // border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: $color-grey-100;
+	font-family: $mono-font-family;
+	font-weight: normal;
+	// border: 1px solid $grey-color-light;
+	border-radius: 3px;
+	background-color: $colo-grey-light;
 }
 
 code {
-    padding: 1px 5px;
+	padding: 1px 5px;
 }
 
 pre {
-    padding: 8px 12px;
-    // overflow-x: scroll;
-    overflow-x: auto;
+	padding: 8px 12px;
+	// overflow-x: scroll;
+	overflow-x: auto;
 
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+	> code {
+		border: 0;
+		padding-right: 0;
+		padding-left: 0;
+	}
 }
 
 
@@ -171,20 +170,20 @@ pre {
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit + 10;
-    padding-left: $spacing-unit + 10;
-    @extend %clearfix;
+	max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+	max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: $spacing-unit + 10;
+	padding-left: $spacing-unit + 10;
+	@extend %clearfix;
 
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit - 5;
-        padding-left: $spacing-unit - 5;
-    }
+	@include media-query($on-laptop) {
+		max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+		max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+		padding-right: $spacing-unit - 5;
+		padding-left: $spacing-unit - 5;
+	}
 }
 
 
@@ -194,11 +193,11 @@ pre {
  */
 %clearfix {
 
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }
 
 
@@ -208,14 +207,14 @@ pre {
  */
 .icon {
 
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
+	> svg {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		vertical-align: middle;
 
-        path {
-            fill: $color-cyan-600;
-        }
-    }
+		path {
+			fill: $color-blue;
+		}
+	}
 }

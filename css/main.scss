@@ -6,13 +6,14 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic|Roboto+Mono:300,300italic,400,400italic,700,700italic|Roboto+Slab:400,700);
 // @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic|Roboto+Mono:300,300italic,400,400italic,700,700italic|Roboto+Slab:400,700|Ultra);
 
+
+
 // Our variables.
-// $base-font-family: Helvetica, Arial, sans-serif;
-$base-font-family: 'Roboto', sans-serif;
+$base-font-family: 'Roboto', Helvetica, Arial, sans-serif;
 $title-font-family: 'Roboto Mono', Consolas, monaco, monospace;
 // $title-font-family: 'Ultra', 'Roboto Slab', 'Roboto', sans-serif;
-$heading-font-family: 'Roboto Mono', Consolas, monaco, monospace;
-// $heading-font-family: 'Roboto Slab', 'Roboto', sans-serif;
+// $heading-font-family: 'Roboto Mono', Consolas, monaco, monospace;
+$heading-font-family: 'Roboto', Helvetica, Arial, sans-serif;
 $mono-font-family: 'Roboto Mono', Consolas, monaco, monospace;
 $base-font-size:   14px;
 $small-font-size:  $base-font-size * 0.875;
@@ -32,17 +33,18 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 $color-black: #000;
-$color-cyan-600: #00acc1;
-$color-darkgray: #555;
-$color-grey-100: #f5f5f5;
+$color-blue: #00e;
+$color-blue-light: #99f;
+$color-grey: #999;
+$colo-grey-light: #eee;
 
 
 
 // Width of the content area.
-$content-width:    940px;
+$content-width:    800px;
 
 $on-palm:          600px;
-$on-laptop:        940px;
+$on-laptop:        800px;
 
 
 
@@ -54,16 +56,16 @@ $on-laptop:        940px;
 //     }
 // }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+		@media screen and (max-width: $device) {
+				@content;
+		}
 }
 
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "syntax-highlighting"
+				"base",
+				"layout",
+				"syntax-highlighting"
 ;
