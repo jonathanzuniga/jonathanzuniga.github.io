@@ -35,15 +35,12 @@ layout: default
           </div>
         </div>
 
-        <div class="post-bars">
-          {% assign words = post.content | number_of_words %}
-          {% if words < 360 %}
-            <div class="post-read-time-bar" data-read-time="1" title="Estimated read time: 1 min."><div></div></div>
-          {% else %}
-            <div class="post-read-time-bar" data-read-time="{{ words | divided_by: 180 }}" title="Estimated read time: {{ words | divided_by: 180 }} mins."><div></div></div>
-          {% endif %}
-          <!-- <div class="post-number-of-words-bar" data-number-of-words="{{ words }}"></div> -->
-        </div>
+        {% assign words = post.content | number_of_words %}
+        {% if words < 360 %}
+          <div class="post-read-time-bar" data-read-time="1" title="Estimated read time: 1 min."><div></div></div>
+        {% else %}
+          <div class="post-read-time-bar" data-read-time="{{ words | divided_by: 180 }}" title="Estimated read time: {{ words | divided_by: 180 }} mins."><div></div></div>
+        {% endif %}
       </article>
     {% endfor %}
   </section>

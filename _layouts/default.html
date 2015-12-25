@@ -16,37 +16,26 @@
     <script type="text/javascript">
       $(function() {
         var array_read_time = [];
-        // var array_number_of_words = [];
-        $('.post-bars').each(function() {
-          array_read_time.push($(this).children('.post-read-time-bar').attr('data-read-time'));
-          // array_number_of_words.push($(this).children('.post-number-of-words-bar').attr('data-number-of-words'));
+        $('.post-read-time-bar').each(function() {
+          array_read_time.push($(this).attr('data-read-time'));
         });
         var max_read_time = Math.max.apply(null, array_read_time);
-        // var max_number_of_words = Math.max.apply(null, array_number_of_words);
 
         function percentCalculation(a, b) {
           var c = parseFloat(a) / parseFloat(b);
           return c;
         }
 
-        $('.post-bars').each(function() {
-          var percentage_read_time = percentCalculation($(this).children('.post-read-time-bar').attr('data-read-time'), max_read_time);
-          $(this).children('.post-read-time-bar').css({
+        $('.post-read-time-bar').each(function() {
+          var percentage_read_time = percentCalculation($(this).attr('data-read-time'), max_read_time);
+          $(this).css({
             'opacity' : percentage_read_time
           });
-          $(this).children('.post-read-time-bar').children('div').css({
+          $(this).children('div').css({
             'width' : (1 - percentage_read_time) * 100 + '%'
           });
 
           // console.log(percentage_read_time);
-
-          // var percentage_words = percentCalculation($(this).children('.post-number-of-words-bar').attr('data-number-of-words'), max_number_of_words);
-          // $(this).children('.post-number-of-words-bar').css({
-          //   'opacity' : percentage_words,
-          //   'width' : percentage_words * 100 + '%'
-          // });
-
-          // console.log(percentage_words);
         });
 
         // Shuffle title fx.
