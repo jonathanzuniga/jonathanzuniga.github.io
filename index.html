@@ -14,19 +14,17 @@ layout: default
         <div class="post-description">{{ post.description }}</div>
 
         <div class="post-meta">
-          <div class="post-tags">
+          <div class="post-categories">
+            Categorized
+            {% assign sorted_categories = post.categories | sort %}
+            {% for category in sorted_categories %}
+              <a href="/categories/#{{ category }}">{{ category }}</a>
+            {% endfor %}
             tagged 
             {% assign sorted_tags = post.tags | sort %}
             {% for tag in sorted_tags %}
               <a href="/tags/#{{ tag }}">{{ tag }}</a>
             {% endfor %}
-          </div>
-
-          <div class="post-words">
-            about
-            <a href="{{ post.url | prepend: site.baseurl }}">
-              <span>{{ post.content | number_of_words }}</span> words written
-            </a>
           </div>
 
           <div class="post-date">
@@ -35,10 +33,16 @@ layout: default
               {{ post.date | date: "%a %d %m %Y" }}
             </time>
           </div>
+        </div>
 
-          <div class="post-words-bar">
-            ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-          </div>
+        <div class="post-bars">
+          {% assign words = post.content | number_of_words %}
+          {% if words < 360 %}
+            <div class="post-read-time-bar" data-read-time="1" title="Estimated read time: 1 min."><div></div></div>
+          {% else %}
+            <div class="post-read-time-bar" data-read-time="{{ words | divided_by: 180 }}" title="Estimated read time: {{ words | divided_by: 180 }} mins."><div></div></div>
+          {% endif %}
+          <!-- <div class="post-number-of-words-bar" data-number-of-words="{{ words }}"></div> -->
         </div>
       </article>
     {% endfor %}

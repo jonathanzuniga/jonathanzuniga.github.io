@@ -1,4 +1,4 @@
-# Site settings
+# Site settings.
 title: Jonathan Zúñiga
 email: jonathanzuniga@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
@@ -6,7 +6,14 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jonathan_zuniga
-github_username:  jonathanzuniga
+github_username: jonathanzuniga
 
-# Build settings
+# Build settings.
 markdown: kramdown
+
+# Author details.
+authors:
+  jonathan:
+    name: Jonathan Zúñiga
+    email: jonathanzuniga@gmail.com
+    web: http://

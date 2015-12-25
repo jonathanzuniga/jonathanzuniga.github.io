@@ -15,32 +15,38 @@
 
     <script type="text/javascript">
       $(function() {
-        // Number of words background color opacity.
-        var array_of_numbers = [];
-        $('.post-words a span').each(function() {
-          array_of_numbers.push($(this).text());  
+        var array_read_time = [];
+        // var array_number_of_words = [];
+        $('.post-bars').each(function() {
+          array_read_time.push($(this).children('.post-read-time-bar').attr('data-read-time'));
+          // array_number_of_words.push($(this).children('.post-number-of-words-bar').attr('data-number-of-words'));
         });
-        var max_number = Math.max.apply(null, array_of_numbers);
-        // console.log(max_number);
+        var max_read_time = Math.max.apply(null, array_read_time);
+        // var max_number_of_words = Math.max.apply(null, array_number_of_words);
 
         function percentCalculation(a, b) {
           var c = parseFloat(a) / parseFloat(b);
           return c;
         }
 
-        // $('.post-words a').each(function() {
-        //   var percentage = percentCalculation($(this).children('span').text(), max_number);
-        //   $(this).css('background-color', 'rgba(225, 190, 231, ' + percentage + ')');
-        //   // console.log(percentage);
-        // });
-
-        $('.post-words a').each(function() {
-          var percentage = percentCalculation($(this).children('span').text(), max_number);
-          $(this).closest('.post-meta').find('.post-words-bar').css({
-            // 'opacity' : percentage,
-            'width' : percentage * 100 + '%'
+        $('.post-bars').each(function() {
+          var percentage_read_time = percentCalculation($(this).children('.post-read-time-bar').attr('data-read-time'), max_read_time);
+          $(this).children('.post-read-time-bar').css({
+            'opacity' : percentage_read_time
           });
-          // console.log(percentage);
+          $(this).children('.post-read-time-bar').children('div').css({
+            'width' : (1 - percentage_read_time) * 100 + '%'
+          });
+
+          // console.log(percentage_read_time);
+
+          // var percentage_words = percentCalculation($(this).children('.post-number-of-words-bar').attr('data-number-of-words'), max_number_of_words);
+          // $(this).children('.post-number-of-words-bar').css({
+          //   'opacity' : percentage_words,
+          //   'width' : percentage_words * 100 + '%'
+          // });
+
+          // console.log(percentage_words);
         });
 
         // Shuffle title fx.

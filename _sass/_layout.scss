@@ -108,6 +108,7 @@
  */
 .site-footer {
 	padding-bottom: $spacing-unit;
+	text-align: center;
 }
 
 .footer-heading {
@@ -130,13 +131,16 @@
 }
 
 .social-media-list {
-	float: right;
+	// float: right;
 	list-style: none;
 	margin-left: 0;
 
 	li {
 		display: inline;
 		margin-left: $spacing-unit / 2;
+	}
+	.li-icon {
+		display: none;
 	}
 }
 
@@ -160,9 +164,9 @@
 	width: -webkit-calc(30% - (#{$spacing-unit} / 2));
 	width:         calc(30% - (#{$spacing-unit} / 2));
 
-		.li-icon {
-			display: none;
-		}
+		// .li-icon {
+		// 	display: none;
+		// }
 }
 
 // .footer-col-3 {
@@ -184,6 +188,19 @@
 }
 
 @include media-query($on-palm) {
+	.social-media-list {
+		li:not(.li-icon) {
+			display: none;
+		}
+		.li-icon {
+			display: inline;
+
+			a:hover {
+				border-bottom: none;
+			}
+		}
+	}
+
 	.footer-col-1 {
 		width: -webkit-calc(60% - (#{$spacing-unit} / 2));
 		width:         calc(60% - (#{$spacing-unit} / 2));
@@ -192,16 +209,16 @@
 		width: -webkit-calc(40% - (#{$spacing-unit} / 2));
 		width:         calc(40% - (#{$spacing-unit} / 2));
 
-			li:not(.li-icon) {
-				display: none;
-			}
-			.li-icon {
-				display: inline;
+			// li:not(.li-icon) {
+			// 	display: none;
+			// }
+			// .li-icon {
+			// 	display: inline;
 
-				a:hover {
-					border-bottom: none;
-				}
-			}
+			// 	a:hover {
+			// 		border-bottom: none;
+			// 	}
+			// }
 	}
 
 	// .footer-col {
@@ -249,7 +266,7 @@
 
 
 hr {
-	border-bottom: 1px solid $colo-grey-light;
+	border-bottom: 1px solid $color-grey-light;
 	border-top: none;
 	clear: both;
 	margin: $spacing-unit 0;
@@ -266,7 +283,6 @@ hr {
 
 		.post-title {
 			font-weight: normal;
-			line-height: normal;
 			margin-bottom: 0;
 			text-transform: capitalize;
 		}
@@ -274,29 +290,48 @@ hr {
 		.post-meta {
 			// color: $color-grey;
 			font-size: $small-font-size;
+			margin-bottom: $spacing-unit - 15;
 			position: relative;
 			
 			a {
 				// color: $color-blue-light;
 			}
 
-			.post-tags, .post-date, .post-words {
+			.post-categories, .post-tags, .post-date {
 				display: inline-block;
 			}
-			.post-words {
-				a {
-					padding: 0 0.2em;
+		}
+
+		.post-bars {
+			height: 10px;
+			position: relative;
+
+			.post-read-time-bar {
+				// Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#82b1ff+0,ce93d8+100
+				background: #82b1ff; /* Old browsers */
+				background: -moz-linear-gradient(left,  #82b1ff 0%, #ce93d8 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(left,  #82b1ff 0%,#ce93d8 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to right,  #82b1ff 0%,#ce93d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82b1ff', endColorstr='#ce93d8',GradientType=1 ); /* IE6-9 */
+
+				height: 4px;
+				z-index: -1;
+
+				div {
+					background-color: $background-color;
+					float: right;
+					height: 4px;
 				}
 			}
-
-			.post-words-bar {
-				top: 0;
-				color: #e1bee7;
-				left: 0;
-				overflow: hidden;
-				position: absolute;
-				z-index: -1;
-			}
+			// .post-number-of-words-bar {
+			// 	background-color: #f3e5f5;
+			// 	height: 10px;
+			// 	left: 0;
+			// 	overflow: hidden;
+			// 	position: absolute;
+			// 	top: 2px;
+			// 	z-index: -2;
+			// }
 		}
 	}
 }
@@ -312,7 +347,7 @@ hr {
 	}
 
 	ul {
-		list-style: none;
+		// list-style: none;
 		// margin-left: 0;
 
 		li {
