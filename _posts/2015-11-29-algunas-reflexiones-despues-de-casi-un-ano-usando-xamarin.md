@@ -4,11 +4,10 @@ title: "Algunas reflexiones después de casi un año usando Xamarin"
 date: 2015-11-29 14:50:00
 update: 2015-12-11 10:35:00
 author: jonathan
-description: "En un principio de existencia me preguntaba si realmente merece la pena desarrollar apps de forma nativa."
 categories: mobile-software-development
 tags: [xamarin, mobile-app-dev]
 ---
-En un principio de existencia me preguntaba si realmente merece la pena desarrollar aplicaciones móviles de forma nativa, si fuera asi ¿conseguiría aprender a un buen nivel de comprensión dos o tres diferentes lenguajes de programación para hacer la misma tarea a la vez? ¿alcanzaria a mantenerme actualizado? Sería muy abrumador ¿no les parece? ¡Ah! ¿Pero por qué no ir más allá? soñar con una alternativa donde tengamos solamente un proyecto por aplicación, donde haya un único equipo de desarrollo y lo mejor de todo ¡que esté hecho con un solo lenguaje!
+En un principio de existencia me preguntaba si las aplicaciones móviles realmente merecen ser desarrolladas de forma nativa.<!--more--> Si fuera asi ¿conseguiría aprender a un buen nivel de comprensión dos o tres diferentes lenguajes de programación para hacer la misma tarea a la vez? ¿alcanzaria a mantenerme actualizado? Sería muy abrumador ¿no les parece? ¡Ah! ¿Pero por qué no ir más allá? soñar con una alternativa donde tengamos solamente un proyecto por aplicación, donde haya un único equipo de desarrollo y lo mejor de todo ¡que esté hecho con un solo lenguaje!
 
 Mientras seguía preguntándome si aun estoy en un sueño o si hubo una falla en la Matrix, vuelvo a inclinarme sobre el teclado y escribo de nuevo en el buscador. Mi búsqueda me llevó a probar algunas opciones como [PhoneGap][phonegap], [Cordova][cordova], [Appcelerator][appcelerator]… hasta [React Native][react-native], que en ese entonces aún no existía soporte para [Android][android], un factor importante para considerar pero que sin duda éste proyecto luce prometedor. Al final decidí darle una oportunidad seria a [Xamarin][xamarin].
 

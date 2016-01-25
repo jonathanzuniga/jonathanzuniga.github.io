@@ -5,20 +5,24 @@ layout: default
 	<h2>Categories</h2>
 
 	{% capture categories %}
-	  {% for category in site.categories %}
-	    {{ category[0] }}
-	  {% endfor %}
+		{% for category in site.categories %}
+			{{ category[0] }}
+		{% endfor %}
 	{% endcapture %}
 	{% assign sorted_categories = categories | split:' ' | sort %}
 	{% for category in sorted_categories %}
-	  <h3 id="{{ category }}">{{ category }}</h3>
+		<h3 id="{{ category }}">{{ category }}</h3>
 
-	  <ul>
-	  {% for post in site.categories[category] %}
-	    <li>
-	    	<a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
-	    </li>
-	  {% endfor %}
-	  </ul>
+		<ul>
+		{% for post in site.categories[category] %}
+			<li>
+				{% if post.link %}
+					<a class="post-title" href="{{ post.link }}">{{ post.title }}</a>
+				{% else %}
+					<a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+				{% endif %}
+			</li>
+		{% endfor %}
+		</ul>
 	{% endfor %}
 </div>

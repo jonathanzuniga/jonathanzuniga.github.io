@@ -16,7 +16,11 @@ layout: default
 	  <ul>
 	  {% for post in site.tags[tag] %}
 	    <li>
-	    	<a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+				{% if post.link %}
+					<a class="post-title" href="{{ post.link }}">{{ post.title }}</a>
+				{% else %}
+	    		<a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+				{% endif %}
 	    </li>
 	  {% endfor %}
 	  </ul>

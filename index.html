@@ -6,42 +6,43 @@ layout: default
     <h2>Latest posts</h2>
 
     {% for post in site.posts %}
-      <article class="post">
-        <h3 class="post-title">
-          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h3>
+      {% if post.link %}
+        <article class="post link">
+          <h4 class="post-title"><a href="{{ post.link }}">{{ post.title }}</a></h4>
 
-        <div class="post-description">{{ post.description }}</div>
+          <div class="post-description">{{ post.content }}</div>
+        </article>
+      {% else %}
+        <article class="post">
+          <h3 class="post-title">
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h3>
 
-        <div class="post-meta">
-          <div class="post-categories">
-            Categorized
-            {% assign sorted_categories = post.categories | sort %}
-            {% for category in sorted_categories %}
-              <a href="/categories/#{{ category }}">{{ category }}</a>
-            {% endfor %}
-            tagged 
-            {% assign sorted_tags = post.tags | sort %}
-            {% for tag in sorted_tags %}
-              <a href="/tags/#{{ tag }}">{{ tag }}</a>
-            {% endfor %}
+          <div class="post-description">{{ post.excerpt | strip_html | truncatewords: 25 }}</div>
+
+          <div class="post-meta">
+            <div class="post-categories">
+              Posted in
+              {% assign sorted_categories = post.categories | sort %}
+              {% for category in sorted_categories %}
+                <a href="/categories/#{{ category }}">{{ category }}</a>
+              {% endfor %}
+              tagged 
+              {% assign sorted_tags = post.tags | sort %}
+              {% for tag in sorted_tags %}
+                <a href="/tags/#{{ tag }}">{{ tag }}</a>
+              {% endfor %}
+            </div>
+
+            <div class="post-date">
+              on 
+              <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
+                {{ post.date | date: "%a %d %m %Y" }}.
+              </time>
+            </div>
           </div>
-
-          <div class="post-date">
-            on 
-            <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
-              {{ post.date | date: "%a %d %m %Y" }}
-            </time>
-          </div>
-        </div>
-
-        {% assign words = post.content | number_of_words %}
-        {% if words < 360 %}
-          <div class="post-read-time-bar" data-read-time="1" title="Estimated read time: 1 min."><div></div></div>
-        {% else %}
-          <div class="post-read-time-bar" data-read-time="{{ words | divided_by: 180 }}" title="Estimated read time: {{ words | divided_by: 180 }} mins."><div></div></div>
-        {% endif %}
-      </article>
+        </article>
+      {% endif %}
     {% endfor %}
   </section>
 </div>

@@ -2,47 +2,52 @@
 layout: default
 ---
 <div class="post">
-  <header class="post-header">
-    <h2>{{ page.title }}</h2>
+	<header class="post-header">
+		<h2>{{ page.title }}</h2>
 
-    <p class="post-meta">
-    	Published on 
-    	<time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%a %d %m %Y" }}</time>
-    	<!-- Look the author details up from the site config. -->
+		<p class="post-meta">
+			Posted on 
+			<time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%a %d %m %Y" }}</time>
+			<!-- Look the author details up from the site config. -->
 			{% assign author = site.authors[page.author] %}
 			<!-- Output author details if some exist. -->
-  		{% if author %}
-  			by {{ author.name }}.
-  		{% endif %}
-    </p>
-  </header>
+			<span class="post-by">
+				by
+				{% if author %}
+					{{ author.name }}.
+				{% else %}
+					{{ site.authors.jonathan.name }}.
+				{% endif %}
+		</span>
+		</p>
+	</header>
 
-  <article class="post-content">
-    {{ content }}
+	<article class="post-content">
+		{{ content }}
 
-    <div class="post-footer-meta">
-    	<small>
-	    	This entry was posted in
-	    	{% assign joined_categories = page.categories | join: ' ' %}
-	      {% for cat in joined_categories %}
-	    		<a href="/categories/#{{ cat }}">{{ cat }}</a>
-	    	{% endfor %}
-	    	and tagged
-	    	{% assign sorted_tags = page.tags | sort %}
-	      {% for tag in sorted_tags %}
-	        <a href="/tags/#{{ tag }}">{{ tag }}</a>{% endfor %}.
-	    	<br />
-	    	{% if page.update %}
-	    		Last updated
-	    		<!-- Look the author details up from the site config. -->
+		<div class="post-footer-meta">
+			<small>
+				This entry was posted in
+				{% assign joined_categories = page.categories | join: ' ' %}
+				{% for cat in joined_categories %}
+					<a href="/categories/#{{ cat }}">{{ cat }}</a>
+				{% endfor %}
+				and tagged
+				{% assign sorted_tags = page.tags | sort %}
+				{% for tag in sorted_tags %}
+					<a href="/tags/#{{ tag }}">{{ tag }}</a>{% endfor %}.
+				<br />
+				{% if page.update %}
+					Last updated
+					<!-- Look the author details up from the site config. -->
 					{% assign author = site.authors[page.author] %}
 					<!-- Output author details if some exist. -->
-	    		{% if author %}
-	    			by {{ author.name }}
-	    		{% endif %}
-	    		at {{ page.update | date: "%a %d %m %Y" }}.
-	    	{% endif %}
-	    </small>
-	  </div>
-  </article>
+					{% if author %}
+						by {{ author.name }}
+					{% endif %}
+					at {{ page.update | date: "%a %d %m %Y" }}.
+				{% endif %}
+			</small>
+		</div>
+	</article>
 </div>

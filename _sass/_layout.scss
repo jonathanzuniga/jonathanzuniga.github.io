@@ -15,14 +15,14 @@
 	// letter-spacing: -1px;
 	// margin-bottom: $spacing-unit / 2;
 	float: left;
-	text-transform: lowercase;
+	line-height: 1.25;
 
 	&,
 	&:active,
 	&:focus,
 	&:visited,
 	&:hover {
-		color: $text-color;
+		// color: $text-color;
 		text-decoration: none;
 	}
 }
@@ -108,7 +108,10 @@
  */
 .site-footer {
 	padding-bottom: $spacing-unit;
-	text-align: center;
+	
+	p a {
+		margin-right: $spacing-unit / 2;
+	}
 }
 
 .footer-heading {
@@ -137,7 +140,7 @@
 
 	li {
 		display: inline;
-		margin-left: $spacing-unit / 2;
+		margin-right: $spacing-unit / 2;
 	}
 	.li-icon {
 		display: none;
@@ -188,6 +191,10 @@
 }
 
 @include media-query($on-palm) {
+	.site-title {
+		font-size: 8vw;
+	}
+
 	.social-media-list {
 		li:not(.li-icon) {
 			display: none;
@@ -279,10 +286,9 @@ hr {
  */
 .home {
 	.post {
-		margin-bottom: $spacing-unit - 5;
+		margin-bottom: $spacing-unit;
 
 		.post-title {
-			font-weight: normal;
 			margin-bottom: 0;
 			text-transform: capitalize;
 		}
@@ -290,7 +296,7 @@ hr {
 		.post-meta {
 			// color: $color-grey;
 			font-size: $small-font-size;
-			margin-bottom: $spacing-unit - 15;
+			// margin-bottom: $spacing-unit - 15;
 			position: relative;
 			
 			a {
@@ -298,7 +304,7 @@ hr {
 			}
 
 			.post-categories, .post-tags, .post-date {
-				display: inline-block;
+				display: inline;
 			}
 		}
 
@@ -322,6 +328,14 @@ hr {
 	}
 }
 
+
+
+/**
+ * Post.
+ */
+.post-by {
+	display: inline-block;
+}
 
 
 /**
