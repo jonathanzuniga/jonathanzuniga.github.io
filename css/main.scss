@@ -9,12 +9,13 @@
 
 // Our variables.
 $base-font-family: 'Roboto', Helvetica, Arial, sans-serif;
-$title-font-family: 'Ultra', 'Roboto Slab', 'Roboto', sans-serif;
+$title-font-family: 'Ultra', 'Roboto', Helvetica, Arial, sans-serif;
+// $title-font-family: 'Roboto Mono', Consolas, monaco, monospace;
 $heading-font-family: 'Roboto', Helvetica, Arial, sans-serif;
 $mono-font-family: 'Roboto Mono', Consolas, monaco, monospace;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: 1.6;
 $spacing-unit:     20px;
 
 
@@ -29,9 +30,10 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 $color-black: #000;
-$color-blue: #06f;
+$color-blue: #2962ff;
 $color-grey: #828282;
 $color-grey-light: #eee;
+$color-white: #fff;
 
 
 
