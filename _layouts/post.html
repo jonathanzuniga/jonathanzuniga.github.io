@@ -1,53 +1,43 @@
 ---
 layout: default
 ---
-<div class="post">
+<article class="post">
 	<header class="post-header">
-		<h2>{{ page.title }}</h2>
+		<h2 class="post-title">{{ page.title }}</h2>
 
-		<p class="post-meta">
-			Posted on 
-			<time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%a %d %m %Y" }}</time>
-			<!-- Look the author details up from the site config. -->
-			{% assign author = site.authors[page.author] %}
-			<!-- Output author details if some exist. -->
-			<span class="post-by">
-				by
-				{% if author %}
-					{{ author.name }}.
-				{% else %}
-					{{ site.authors.jonathan.name }}.
-				{% endif %}
-		</span>
-		</p>
+		<h3 class="post-date">
+			<time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%a %d %B %Y" }}</time>
+		</h3>
 	</header>
 
-	<article class="post-content">
+	<div class="post-content">
 		{{ content }}
+	</div>
 
-		<div class="post-footer-meta">
-			<small>
-				This entry was posted in
-				{% assign joined_categories = page.categories | join: ' ' %}
-				{% for cat in joined_categories %}
-					<a href="/categories/#{{ cat }}">{{ cat }}</a>
-				{% endfor %}
-				and tagged
-				{% assign sorted_tags = page.tags | sort %}
-				{% for tag in sorted_tags %}
-					<a href="/tags/#{{ tag }}">{{ tag }}</a>{% endfor %}.
-				<br />
-				{% if page.update %}
-					Last updated
-					<!-- Look the author details up from the site config. -->
-					{% assign author = site.authors[page.author] %}
-					<!-- Output author details if some exist. -->
-					{% if author %}
-						by {{ author.name }}
-					{% endif %}
-					at {{ page.update | date: "%a %d %m %Y" }}.
-				{% endif %}
-			</small>
+	<div class="post-meta">
+		<div class="post-tags">
+			This entry was posted in
+			{% assign sorted_categories = page.categories | sort %}
+      {% for category in sorted_categories %}
+        <a href="/categories/#{{ category }}">{{ category | replace: '-',' ' }}</a>
+      {% endfor %}
 		</div>
-	</article>
-</div>
+
+		<div class="post-words">
+      {{ page.content | number_of_words }} words.
+    </div>
+
+		{% if page.update %}
+			<div>
+				Last updated
+				<!-- Look the author details up from the site config. -->
+				{% assign author = site.authors[page.author] %}
+				<!-- Output author details if some exist. -->
+				{% if author %}
+					by {{ author.name }}
+				{% endif %}
+				at {{ page.update | date: "%a %d %B %Y" }}.
+			</div>
+		{% endif %}
+	</div>
+</article>

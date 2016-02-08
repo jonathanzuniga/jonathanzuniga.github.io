@@ -1,48 +1,58 @@
 ---
 layout: default
 ---
-<div class="home">
-  <section id="latest-posts">
-    <h2>Latest posts</h2>
+<section id="latest-posts">
+  {% for post in site.posts %}
+    {% if post.link %}
+      <article class="post link">
+        <span class="icon icon-star">
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
+            <path d="M4 0l-1 3h-3l2.5 2-1 3 2.5-2 2.5 2-1-3 2.5-2h-3l-1-3z" />
+          </svg>
+        </span>
 
-    {% for post in site.posts %}
-      {% if post.link %}
-        <article class="post link">
-          <h4 class="post-title"><a href="{{ post.link }}">{{ post.title }}</a></h4>
-
-          <div class="post-description">{{ post.content }}</div>
-        </article>
-      {% else %}
-        <article class="post">
+        <header class="post-header">
           <h3 class="post-title">
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            <a href="{{ post.link }}">{{ post.title }}</a>
           </h3>
+        </header>
 
-          <div class="post-description">{{ post.excerpt | strip_html | truncatewords: 25 }}</div>
+        <div class="post-description">{{ post.content }}</div>
+      </article>
+    {% else %}
+      <article class="post">
+        <header class="post-header">
+          <h2 class="post-title">
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
 
-          <div class="post-meta">
-            <div class="post-categories">
-              Posted in
-              {% assign sorted_categories = post.categories | sort %}
-              {% for category in sorted_categories %}
-                <a href="/categories/#{{ category }}">{{ category }}</a>
-              {% endfor %}
-              tagged 
-              {% assign sorted_tags = post.tags | sort %}
-              {% for tag in sorted_tags %}
-                <a href="/tags/#{{ tag }}">{{ tag }}</a>
-              {% endfor %}
-            </div>
+          <h3 class="post-date">
+            <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%a %d %B %Y" }}</time>
+          </h3>
+        </header>
 
-            <div class="post-date">
-              on 
-              <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
-                {{ post.date | date: "%a %d %m %Y" }}.
-              </time>
-            </div>
+        <div class="post-description">
+          {{ post.excerpt }}
+        </div>
+
+        <div class="post-meta">
+          <div class="post-tags">
+            Posted in 
+            {% assign sorted_categories = post.categories | sort %}
+            {% for category in sorted_categories %}
+              <a href="/categories/#{{ category }}">{{ category | replace: '-',' ' }}</a>
+            {% endfor %}
           </div>
-        </article>
-      {% endif %}
-    {% endfor %}
-  </section>
-</div>
+
+          <div class="post-words">
+            {{ post.content | number_of_words }} words
+          </div>
+
+          <div class="post-read-more">
+            <a href="{{ post.url | prepend: site.baseurl }}">read more &rightarrow;</a>
+          </div>
+        </div>
+      </article>
+    {% endif %}
+  {% endfor %}
+</section>

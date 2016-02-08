@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 ul, ol, dl, figure,
 %vertical-rhythm {
-	margin-bottom: $spacing-unit;
+	margin-bottom: $spacing-unit / 2;
 }
 
 
@@ -102,13 +102,13 @@ a {
 	color: $color-blue;
 	text-decoration: none;
 
-	&:visited {
-		color: $color-blue;
-	}
-
 	&:hover {
 		color: $color-blue;
 		text-decoration: underline;
+	}
+
+	&:visited {
+		color: $color-blue;
 	}
 }
 
@@ -118,10 +118,10 @@ a {
  * Blockquotes
  */
 blockquote {
-	color: $color-grey;
 	border-left: 4px solid $color-grey-light;
-	padding-left: $spacing-unit / 2;
 	font-style: none;
+	font-weight: 300;
+	padding-left: $spacing-unit / 2;
 
 	> :last-child {
 		margin-bottom: 0;
@@ -137,7 +137,6 @@ pre,
 code {
 	font-family: $mono-font-family;
 	font-weight: normal;
-	// border: 1px solid $grey-color-light;
 	border-radius: 3px;
 	background-color: $color-grey-light;
 }

@@ -5,6 +5,7 @@ date: 2015-11-14 17:39:00
 categories: classical-ciphers
 tags: cryptography
 ---
+
 [ROT13][rot13] is a text encryption method, which consists in moving the 
 letters of the alphabet (English) in 13 locations (ie, "a" corresponds to the 
 "n", "b" to "o" and so on). It is widely used in Usenet articles to publish or 

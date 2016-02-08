@@ -2,31 +2,13 @@
  * Site header
  */
 .site-header {
-	// margin-bottom: $spacing-unit * 2;
-	// min-height: 56px;
-
-	// Positioning context for the mobile navigation icon
-	// position: relative;
-
-	#me {
-		left: 50%;
-		margin-left: -500px;
-		position: absolute;
-	}
+	margin-bottom: $spacing-unit;
+	margin-top: $spacing-unit;
 
 	h1 {
-		// display: inline-block;
-		// margin-top: $spacing-unit;
+		display: block;
 
 		.site-title {
-			// font-size: 26px;
-			// line-height: 56px;
-			// letter-spacing: -1px;
-			// margin-bottom: $spacing-unit / 2;
-			float: left;
-			line-height: 1.25;
-			text-transform: lowercase;
-			
 			&,
 			&:active,
 			&:focus,
@@ -34,6 +16,37 @@
 			&:hover {
 				color: $text-color;
 				text-decoration: none;
+			}
+		}
+	}
+
+	.me {
+		height: 60%;
+		width: 60%;
+	}
+
+	#nav {
+		ul {
+			margin: 0;
+
+			li {
+				display: inline;
+
+				a {
+					color: $text-color;
+					font-weight: bold;
+			    padding-bottom: $spacing-unit / 2;
+			    margin-right: $spacing-unit - 10;
+			    padding-top: $spacing-unit / 2;
+			    text-decoration: none;
+					text-transform: uppercase;
+				}
+
+				&:last-child {
+					a {
+						margin-right: 0;
+					}
+				}
 			}
 		}
 	}
@@ -62,7 +75,7 @@
 		top: 9px;
 		right: 30px;
 		background-color: $background-color;
-		border: 1px solid $grey-color-light;
+		border: 1px solid $color-grey-light;
 		border-radius: 5px;
 		text-align: right;
 
@@ -80,7 +93,7 @@
 				height: 15px;
 
 				path {
-					fill: $grey-color-dark;
+					fill: $color-grey-dark;
 				}
 			}
 		}
@@ -252,14 +265,6 @@
 /**
  * Page content
  */
-.page-content {
-	// padding: $spacing-unit 0;
-
-	// .post-footer-meta {
-	// 	line-height: normal;
-	// }
-}
-
 .post-list {
 	margin-left: 0;
 	list-style: none;
@@ -271,21 +276,8 @@
 
 
 
-/**
- * Posts
- */
-.post-header {
-	margin-bottom: $spacing-unit / 2;
-}
-
-.post-content {
-	margin-bottom: $spacing-unit;
-}
-
-
-
 hr {
-	border-bottom: 1px solid $color-grey-light;
+	border-bottom: 1px solid $color-grey;
 	border-top: none;
 	clear: both;
 	margin: $spacing-unit 0;
@@ -294,48 +286,35 @@ hr {
 
 
 /**
- * Latest posts.
+ * Posts.
  */
-.home {
-	.post {
-		margin-bottom: $spacing-unit;
+.post {
+	margin-bottom: $spacing-unit;
 
+	.post-header {
 		.post-title {
-			margin-bottom: 0;
 			text-transform: capitalize;
-		}
-
-		.post-meta {
-			// color: $color-grey;
-			font-size: $small-font-size;
-			// margin-bottom: $spacing-unit - 15;
-			position: relative;
 			
-			a {
-				// color: $color-blue-light;
-			}
-
-			.post-categories, .post-tags, .post-date {
-				display: inline;
+			a,,
+			a:hover,
+			a:visited {
+				color: $text-color;
+				text-decoration: none;
 			}
 		}
+	}
 
-		.post-read-time-bar {
-			// Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#82b1ff+0,ce93d8+100
-			background: #82b1ff; /* Old browsers */
-			background: -moz-linear-gradient(left,  #82b1ff 0%, #ce93d8 100%); /* FF3.6-15 */
-			background: -webkit-linear-gradient(left,  #82b1ff 0%,#ce93d8 100%); /* Chrome10-25,Safari5.1-6 */
-			background: linear-gradient(to right,  #82b1ff 0%,#ce93d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82b1ff', endColorstr='#ce93d8',GradientType=1 ); /* IE6-9 */
+	.post-content,
+	.post-description,
+	.post-meta {
+		margin-bottom: $spacing-unit / 2;
+	}
 
-			height: 4px;
-			z-index: -1;
+	.post-meta {
+		font-size: $small-font-size;
 
-			div {
-				background-color: $background-color;
-				float: right;
-				height: 4px;
-			}
+		.post-tags, .post-words, .post-read-more {
+			display: inline;
 		}
 	}
 }
@@ -343,10 +322,15 @@ hr {
 
 
 /**
- * Post.
+ * Links.
  */
-.post-by {
-	display: inline-block;
+.icon.icon-star {
+	margin-left: -($spacing-unit - 10);
+	position: absolute;
+
+	path {
+		fill: $color-grey-light;
+	}
 }
 
 
@@ -369,20 +353,35 @@ hr {
 }
 
 
+
 /**
  * Main.
  */
-// #main {
-// 	float: left;
-// 	width: 600px;
-// }
+#main,
+.col-main {
+	float: left;
+	width: 540px;
+}
 
 
 
 /**
  * Sidebar.
  */
-// #sidebar {
-// 	float: left;
-// 	width: 200px;
-// }
+#sidebar,
+.col-side {
+	float: right;
+	width: 160px;
+
+	p {
+		font-size: $small-font-size;
+	}
+}
+
+@media screen and (max-width: 749px) {
+	#main,
+	#sidebar {
+		float: none;
+		width: 100%;
+	}
+}

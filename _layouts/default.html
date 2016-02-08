@@ -7,7 +7,11 @@
 
     <div class="page-content">
       <div class="wrapper">
-        {{ content }}
+        <section id="main">
+          {{ content }}
+        </section>
+
+        {% include sidebar.html %}
       </div>
     </div>
 

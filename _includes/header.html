@@ -1,13 +1,24 @@
 <header class="site-header">
   <div class="wrapper">
-  	<img id="me" src="/images/me.png">
-
     <h1>
-      <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-    </h1>
+      {{ site.description }}
+    </h1> 
 
-	  <div class="clearfix"></div>
+    <!-- <h1>
+      {% if page.path contains 'about' or page.path contains '_posts' %}
+        {{ page.title }}
+      {% else %}
+        {{ site.description }}
+      {% endif %}
+    </h1> -->
 
-	  <hr>
+    <nav id="nav">
+    	<ul>
+    		<li><a href="{{ site.baseurl }}/">Home</a></li>
+    		<li><a href="/about">About</a></li>
+    		<li><a href="/categories">Categories</a></li>
+    		<li><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></li>
+    	</ul>
+    </nav>
   </div>
 </header>
