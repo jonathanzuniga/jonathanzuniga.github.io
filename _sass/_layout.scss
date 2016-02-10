@@ -279,8 +279,7 @@ hr {
 /**
  * Main.
  */
-#main,
-.col-main {
+#main {
 	float: left;
 	width: 640px;
 }
@@ -290,10 +289,13 @@ hr {
 /**
  * Sidebar.
  */
-#sidebar,
-.col-side {
+#sidebar {
 	float: right;
 	width: 160px;
+	
+	h2, h3 {
+		text-transform: capitalize;
+	}
 
 	p, ol, ul {
 		font-size: $small-font-size;
