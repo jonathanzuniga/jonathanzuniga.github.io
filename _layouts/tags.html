@@ -1,8 +1,10 @@
 ---
 layout: default
 ---
-<div class="tags">
-	<h2>Tags</h2>
+<article class="post tags">
+  <header class="post-header">
+		<h1>Tags</h1>
+	</header>
 
 	{% capture tags %}
 	  {% for tag in site.tags %}
@@ -25,4 +27,4 @@ layout: default
 	  {% endfor %}
 	  </ul>
 	{% endfor %}
-</div>
+</article>

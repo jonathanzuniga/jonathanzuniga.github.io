@@ -90,7 +90,6 @@ h1 {
 h2, h3, h4, h5, h6 {
 	font-family: $heading-font-family;
 	font-weight: normal;
-	text-transform: capitalize;
 }
 
 
@@ -99,16 +98,19 @@ h2, h3, h4, h5, h6 {
  * Links
  */
 a {
+	border-bottom: 1px solid $color-blue;
 	color: $color-blue;
 	text-decoration: none;
 
-	&:hover {
+	&:visited {
+		border-bottom: 1px solid $color-blue;
 		color: $color-blue;
-		text-decoration: underline;
 	}
 
-	&:visited {
-		color: $color-blue;
+	&:hover {
+		border-bottom: 1px solid $color-cyan;
+		color: $color-cyan;
+		text-decoration: none;
 	}
 }
 

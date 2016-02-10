@@ -1,15 +1,17 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
 @charset "utf-8";
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,700,700italic|Roboto+Mono:300,300italic,400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Fira+Sans:300,300italic,400,400italic,500,500italic,700,700italic);
+// @import url(https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,700,700italic|Roboto+Mono:300,300italic,400,400italic,700,700italic);
 
 // Our variables.
-$base-font-family: 'Roboto', Helvetica, Arial, sans-serif;
-$title-font-family: 'Roboto', Helvetica, Arial, sans-serif;
-$heading-font-family: 'Roboto', Helvetica, Arial, sans-serif;
-$mono-font-family: 'Roboto Mono', Consolas, monaco, monospace;
+$base-font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+$title-font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+$heading-font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+$mono-font-family: 'Fira Mono', Consolas, monaco, monospace;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -25,17 +27,19 @@ $brand-color:      #2a7ae2;
 $color-grey:       #828282;
 $color-grey-light: lighten($color-grey, 40%);
 $color-grey-dark:  darken($color-grey, 25%);
+$color-grey-semilight: lighten($color-grey, 32%);
 
 $color-black: #000;
-$color-blue: #304ffe;
+$color-blue: #1976d2;
+$color-cyan: #0097a7;
 $color-white: #fff;
 
 
 
 // Width of the content area.
-$content-width:    800px;
+$content-width:    890px;
 $on-palm:          600px;
-$on-laptop:        800px;
+$on-laptop:        890px;
 
 
 

@@ -22,9 +22,9 @@ layout: default
     {% else %}
       <article class="post">
         <header class="post-header">
-          <h2 class="post-title">
+          <h1 class="post-title">
             <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </h2>
+          </h1>
 
           <h3 class="post-date">
             <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%a %d %B %Y" }}</time>
@@ -34,6 +34,8 @@ layout: default
         <div class="post-description">
           {{ post.excerpt }}
         </div>
+
+        <hr>
 
         <div class="post-meta">
           <div class="post-tags">
@@ -52,6 +54,8 @@ layout: default
             <a href="{{ post.url | prepend: site.baseurl }}">read more &rightarrow;</a>
           </div>
         </div>
+
+        <hr>
       </article>
     {% endif %}
   {% endfor %}

@@ -14,15 +14,11 @@
 			&:focus,
 			&:visited,
 			&:hover {
+				border-bottom: none;
 				color: $text-color;
 				text-decoration: none;
 			}
 		}
-	}
-
-	.me {
-		height: 60%;
-		width: 60%;
 	}
 
 	#nav {
@@ -33,6 +29,7 @@
 				display: inline;
 
 				a {
+					border-bottom: none;
 					color: $text-color;
 					font-weight: bold;
 			    padding-bottom: $spacing-unit / 2;
@@ -152,24 +149,6 @@
 		display: inline;
 		margin-right: $spacing-unit / 2;
 	}
-
-	.copyright {
-		margin-right: $spacing-unit;
-	}
-}
-
-.social-media-list {
-	// float: right;
-	list-style: none;
-	margin-left: 0;
-
-	li {
-		display: inline;
-		margin-right: $spacing-unit / 2;
-	}
-	.li-icon {
-		display: none;
-	}
 }
 
 .footer-col-wrapper {
@@ -191,74 +170,12 @@
 .footer-col-2 {
 	width: -webkit-calc(30% - (#{$spacing-unit} / 2));
 	width:         calc(30% - (#{$spacing-unit} / 2));
-
-		// .li-icon {
-		// 	display: none;
-		// }
 }
 
 // .footer-col-3 {
 //     width: -webkit-calc(45% - (#{$spacing-unit} / 2));
 //     width:         calc(45% - (#{$spacing-unit} / 2));
 // }
-
-@include media-query($on-laptop) {
-	.footer-col-1,
-	.footer-col-2 {
-		width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-		width:         calc(50% - (#{$spacing-unit} / 2));
-	}
-
-	// .footer-col-3 {
-	//     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-	//     width:         calc(100% - (#{$spacing-unit} / 2));
-	// }
-}
-
-@include media-query($on-palm) {
-	// .site-title {
-	// 	font-size: 8vw;
-	// }
-
-	.social-media-list {
-		li:not(.li-icon) {
-			display: none;
-		}
-		.li-icon {
-			display: inline;
-
-			a:hover {
-				border-bottom: none;
-			}
-		}
-	}
-
-	.footer-col-1 {
-		width: -webkit-calc(60% - (#{$spacing-unit} / 2));
-		width:         calc(60% - (#{$spacing-unit} / 2));
-	}
-	.footer-col-2 {
-		width: -webkit-calc(40% - (#{$spacing-unit} / 2));
-		width:         calc(40% - (#{$spacing-unit} / 2));
-
-			// li:not(.li-icon) {
-			// 	display: none;
-			// }
-			// .li-icon {
-			// 	display: inline;
-
-			// 	a:hover {
-			// 		border-bottom: none;
-			// 	}
-			// }
-	}
-
-	// .footer-col {
-	//     float: none;
-	//     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-	//     width:         calc(100% - (#{$spacing-unit} / 2));
-	// }
-}
 
 
 
@@ -277,10 +194,10 @@
 
 
 hr {
-	border-bottom: 1px solid $color-grey;
+	border-bottom: 1px solid $color-grey-semilight;
 	border-top: none;
 	clear: both;
-	margin: $spacing-unit 0;
+	margin: ($spacing-unit / 2) 0;
 }
 
 
@@ -292,12 +209,16 @@ hr {
 	margin-bottom: $spacing-unit;
 
 	.post-header {
+		h1 {
+			font-size: 2em;
+		}
 		.post-title {
 			text-transform: capitalize;
 			
-			a,,
-			a:hover,
-			a:visited {
+			a,
+			a:visited,
+			a:hover {
+				border-bottom: none;
 				color: $text-color;
 				text-decoration: none;
 			}
@@ -334,6 +255,7 @@ hr {
 }
 
 
+
 /**
  * Tags.
  */
@@ -360,7 +282,7 @@ hr {
 #main,
 .col-main {
 	float: left;
-	width: 540px;
+	width: 640px;
 }
 
 
@@ -373,15 +295,84 @@ hr {
 	float: right;
 	width: 160px;
 
-	p {
+	p, ol, ul {
 		font-size: $small-font-size;
+	}
+
+	.social-media-list {
+		list-style: none;
+		margin-left: 0;
+
+		li {
+			margin-bottom: $spacing-unit / 3;
+			margin-right: $spacing-unit / 2;
+			
+			a {
+				&:first-child {
+					border-bottom: 0;
+				}
+				&:last-child {
+					display: inline;
+					margin-left: $spacing-unit / 6;
+				}
+			}
+		}
 	}
 }
 
+
+
+/**
+ * Responsive.
+ */
 @media screen and (max-width: 749px) {
 	#main,
 	#sidebar {
 		float: none;
 		width: 100%;
 	}
+}
+
+@include media-query($on-laptop) {
+	.footer-col-1,
+	.footer-col-2 {
+		width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+		width:         calc(50% - (#{$spacing-unit} / 2));
+	}
+
+	// .footer-col-3 {
+	//     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+	//     width:         calc(100% - (#{$spacing-unit} / 2));
+	// }
+}
+
+@include media-query($on-palm) {
+	#sidebar {
+		.social-media-list {
+			li {
+				display: inline;
+				
+				a {
+					&:last-child {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.footer-col-1 {
+		width: -webkit-calc(60% - (#{$spacing-unit} / 2));
+		width:         calc(60% - (#{$spacing-unit} / 2));
+	}
+	.footer-col-2 {
+		width: -webkit-calc(40% - (#{$spacing-unit} / 2));
+		width:         calc(40% - (#{$spacing-unit} / 2));
+	}
+
+	// .footer-col {
+	//     float: none;
+	//     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+	//     width:         calc(100% - (#{$spacing-unit} / 2));
+	// }
 }
