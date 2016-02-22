@@ -1,0 +1,17 @@
+body {
+	font: normal 90%/130% Courier, sans-serif;
+	padding: 20px;
+}
+
+h1, h2 {
+	font-size: 1em;
+	font-weight: normal;
+}
+
+h1 {
+		margin: 0;
+}
+
+h2 {
+		margin: 20px 0 0;
+}

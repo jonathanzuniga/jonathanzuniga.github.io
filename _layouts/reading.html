@@ -1,0 +1,26 @@
+---
+layout: default
+---
+{% for book in site.books %}
+	<article class="post reading">
+		<header class="post-header">
+			<h3>{{ book.author }}</h3>
+
+			<h1 class="post-title">
+				<a href="{{ book.link }}" target="_blank">{{ book.title }}</a>
+			</h1>
+		</header>
+		
+		<div class="post-content">
+			<img class="book-cover image-scaled" src="/images/reading/{{ book.cover }}">
+
+			{{ book.content }}
+		</div>
+
+		<p>
+			<a href="{{ book.link }}" target="_blank">Buy from amazon</a>
+		</p>
+		
+		<hr>
+	</article>
+{% endfor %}

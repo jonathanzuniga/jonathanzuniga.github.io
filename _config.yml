@@ -19,3 +19,7 @@ authors:
     web: http://
 
 excerpt_separator: <!--more-->
+
+# Book collections
+collections:
+  - books

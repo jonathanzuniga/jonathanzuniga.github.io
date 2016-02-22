@@ -3,7 +3,41 @@
  */
 .site-header {
 	margin-bottom: $spacing-unit;
-	margin-top: $spacing-unit;
+	margin-top: $spacing-unit / 2;
+
+	#nav {
+		font-family: $heading-font-family;
+		margin-bottom: $spacing-unit;
+
+		ul {
+			margin: 0;
+
+			li {
+				display: inline;
+
+				a {
+					border-bottom: none;
+					color: $text-color;
+					font-weight: 300;
+			    padding-bottom: $spacing-unit / 2;
+			    margin-right: $spacing-unit - 10;
+			    padding-top: $spacing-unit / 2;
+			    text-decoration: none;
+					text-transform: uppercase;
+
+					&.current {
+						font-weight: 400;
+					}
+				}
+
+				&:last-child {
+					a {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
 
 	h1 {
 		display: block;
@@ -21,30 +55,15 @@
 		}
 	}
 
-	#nav {
-		ul {
-			margin: 0;
+	h2 {
+		font-family: $base-font-family;
+		font-weight: 300;
 
-			li {
-				display: inline;
-
-				a {
-					border-bottom: none;
-					color: $text-color;
-					font-weight: bold;
-			    padding-bottom: $spacing-unit / 2;
-			    margin-right: $spacing-unit - 10;
-			    padding-top: $spacing-unit / 2;
-			    text-decoration: none;
-					text-transform: uppercase;
-				}
-
-				&:last-child {
-					a {
-						margin-right: 0;
-					}
-				}
-			}
+		a {
+			border-bottom: none;
+			color: $text-color;
+			font-weight: normal;
+			text-decoration: none;
 		}
 	}
 }
@@ -225,6 +244,10 @@ hr {
 		}
 	}
 
+	h3 {
+		text-transform: capitalize;
+	}
+
 	.post-content,
 	.post-description,
 	.post-meta {
@@ -237,6 +260,19 @@ hr {
 		.post-tags, .post-words, .post-read-more {
 			display: inline;
 		}
+	}
+}
+
+
+
+/**
+ * Reading.
+ */
+.reading {
+	.book-cover {
+		float: left;
+		height: 128px;
+		margin-right: $spacing-unit / 2;
 	}
 }
 
@@ -312,6 +348,7 @@ hr {
 			a {
 				&:first-child {
 					border-bottom: 0;
+					text-decoration: none;
 				}
 				&:last-child {
 					display: inline;
@@ -325,9 +362,19 @@ hr {
 
 
 /**
+ * Helper classes.
+ */
+.image-scaled {
+	height: 80%;
+	max-width: 80%;
+}
+
+
+
+/**
  * Responsive.
  */
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 859px) {
 	#main,
 	#sidebar {
 		float: none;

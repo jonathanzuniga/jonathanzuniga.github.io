@@ -1,0 +1,62 @@
+---
+layout: default
+---
+<section id="latest-posts">
+  {% for post in site.posts %}
+    {% if post.link %}
+      <article class="post link">
+        <span class="icon icon-star">
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
+            <path d="M4 0l-1 3h-3l2.5 2-1 3 2.5-2 2.5 2-1-3 2.5-2h-3l-1-3z" />
+          </svg>
+        </span>
+
+        <header class="post-header">
+          <h3 class="post-title">
+            <a href="{{ post.link }}" target="_blank">{{ post.title }}</a>
+          </h3>
+        </header>
+
+        <div class="post-description">{{ post.content }}</div>
+      </article>
+    {% else %}
+      <article class="post">
+        <header class="post-header">
+          <h3 class="post-date">
+            <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%a %d %B %Y" }}</time>
+          </h3>
+
+          <h1 class="post-title">
+            <a href="{{ post.url | prepend: site.baseurl }}#post">{{ post.title }}</a>
+          </h1>
+        </header>
+
+        <div class="post-description">
+          {{ post.excerpt }}
+        </div>
+
+        <hr>
+
+        <div class="post-meta">
+          <div class="post-tags">
+            Posted in 
+            {% assign sorted_categories = post.categories | sort %}
+            {% for category in sorted_categories %}
+              <a href="/categories/#{{ category }}">{{ category | replace: '-',' ' }}</a>
+            {% endfor %}
+          </div>
+
+          <div class="post-words">
+            {{ post.content | number_of_words }} words
+          </div>
+
+          <div class="post-read-more">
+            <a href="{{ post.url | prepend: site.baseurl }}">read more &rightarrow;</a>
+          </div>
+        </div>
+
+        <hr>
+      </article>
+    {% endif %}
+  {% endfor %}
+</section>

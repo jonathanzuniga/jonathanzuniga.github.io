@@ -1,25 +1,19 @@
 <header class="site-header">
   <div class="wrapper">
-    <h2>
-      {{ site.description }}
-    </h2> 
-
-    <!-- <h1>
-      {% if page.path contains 'about' or page.path contains '_posts' %}
-        {{ page.title }}
-      {% else %}
-        {{ site.description }}
-      {% endif %}
-    </h1> -->
-
+    {% assign current = page.url | downcase | split: '/' %}
     <nav id="nav">
-    	<ul>
-    		<li><a href="{{ site.baseurl }}/">Home</a></li>
-    		<li><a href="/about">About</a></li>
-    		<li><a href="/categories">Categories</a></li>
-    		<li><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></li>
-    	</ul>
+      <ul>
+        <!-- <li><a href="{{ site.baseurl }}/">Home</a></li> -->
+        <li><a {% if current[1] == 'blog' %}class='current' {% endif %}href="/blog">Home</a></li>
+        <li><a {% if current[1] == 'about' %}class='current' {% endif %}href="/about#page">About</a></li>
+        <li><a {% if current[1] == 'categories' %}class='current' {% endif %}href="/categories#categories">Categories</a></li>
+        <li><a {% if current[1] == 'reading' %}class='current' {% endif %}href="/reading#page">Reading</a></li>
+      </ul>
     </nav>
+
+    <h2>
+      Hi! <a href="/about#page">I'm Jonathan</a>, and I use this space to collect my thoughts about programming and daily life. 
+    </h2>
 
     <hr>
   </div>

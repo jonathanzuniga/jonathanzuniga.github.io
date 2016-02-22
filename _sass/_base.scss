@@ -83,11 +83,7 @@ li {
 /**
  * Headings
  */
-h1 {
-	font-family: $title-font-family;
-	font-weight: normal;
-}
-h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font-family;
 	font-weight: normal;
 }
@@ -98,19 +94,37 @@ h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-	border-bottom: 1px solid $color-blue;
 	color: $color-blue;
-	text-decoration: none;
+	text-decoration: underline;
 
 	&:visited {
-		border-bottom: 1px solid $color-blue;
 		color: $color-blue;
+
+		.icon {
+			> svg {
+				path {
+					fill: $color-blue;
+				}
+			}
+		}
 	}
 
 	&:hover {
-		border-bottom: 1px solid $color-cyan;
-		color: $color-cyan;
-		text-decoration: none;
+		color: $color-blue-light;
+	}
+}
+
+.social-media-list li:hover {
+	a {
+		color: $color-blue-light;
+
+		.icon {
+			> svg {
+				path {
+					fill: $color-blue-light;
+				}
+			}
+		}
 	}
 }
 
@@ -138,7 +152,7 @@ blockquote {
 pre,
 code {
 	font-family: $mono-font-family;
-	font-weight: normal;
+	font-weight: 300;
 	border-radius: 3px;
 	background-color: $color-grey-light;
 }
