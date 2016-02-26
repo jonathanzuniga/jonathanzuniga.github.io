@@ -270,9 +270,7 @@ hr {
  */
 .reading {
 	.book-cover {
-		float: left;
-		height: 128px;
-		margin-right: $spacing-unit / 2;
+		max-width: 180px;
 	}
 }
 
@@ -337,6 +335,10 @@ hr {
 		font-size: $small-font-size;
 	}
 
+	.book-cover {
+		max-width: 128px;
+	}
+
 	.social-media-list {
 		list-style: none;
 		margin-left: 0;
@@ -364,9 +366,13 @@ hr {
 /**
  * Helper classes.
  */
-.image-scaled {
-	height: 80%;
-	max-width: 80%;
+.pull-left {
+	float: left;
+	margin-right: $spacing-unit / 2;
+}
+.pull-right {
+	float: right;
+	margin-left: $spacing-unit / 2;
 }
 
 

@@ -4,14 +4,14 @@
 
 @charset "utf-8";
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,500,500italic,700,700italic|Roboto+Condensed:300,400|Roboto+Mono:300,300italic,400,400italic,500,500italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,500,500italic,700,700italic|Roboto+Condensed:300,400|Roboto+Mono:400,400italic,500,500italic);
 // @import url(https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Fira+Sans:300,300italic,400,400italic,500,500italic,700,700italic);
 
 // Our variables.
 $base-font-family: 'Roboto', Helvetica, Arial, sans-serif;
 $title-font-family: 'Roboto', Helvetica, Arial, sans-serif;
 $heading-font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
-$mono-font-family: 'Roboto Mono', Consolas, monaco, monospace;
+$mono-font-family: 'Roboto Mono', Consolas, Courier, monospace;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -30,8 +30,9 @@ $color-grey-dark:  darken($color-grey, 25%);
 $color-grey-semilight: lighten($color-grey, 32%);
 
 $color-black: #000;
-$color-blue: #2026fd;
-$color-blue-light: darken($color-blue, 25%);
+$color-blue: #3f72d8; // #2026fd;
+$color-blue-dark: darken($color-blue, 25%);
+$color-brown: #9D6043;
 $color-cyan: #0097a7;
 $color-deep-purple: #5e35b1;
 $color-purple: #8037ff;

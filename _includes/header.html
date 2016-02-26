@@ -4,16 +4,22 @@
     <nav id="nav">
       <ul>
         <!-- <li><a href="{{ site.baseurl }}/">Home</a></li> -->
-        <li><a {% if current[1] == 'blog' %}class='current' {% endif %}href="/blog">Home</a></li>
-        <li><a {% if current[1] == 'about' %}class='current' {% endif %}href="/about#page">About</a></li>
-        <li><a {% if current[1] == 'categories' %}class='current' {% endif %}href="/categories#categories">Categories</a></li>
-        <li><a {% if current[1] == 'reading' %}class='current' {% endif %}href="/reading#page">Reading</a></li>
+        <li><a {% if current[1] == 'blog' %}class='current' {% endif %}href="{{ site.baseurl }}/blog">Home</a></li>
+        <li><a {% if current[1] == 'about' %}class='current' {% endif %}href="{{ site.baseurl }}/about">About</a></li>
+        <li><a {% if current[1] == 'categories' %}class='current' {% endif %}href="{{ site.baseurl }}/categories">Categories</a></li>
+        <li><a {% if current[1] == 'reading' %}class='current' {% endif %}href="{{ site.baseurl }}/reading">Reading</a></li>
       </ul>
     </nav>
 
-    <h2>
-      Hi! <a href="/about#page">I'm Jonathan</a>, and I use this space to collect my thoughts about programming and daily life. 
-    </h2>
+    {% if current[1] == 'blog' %}
+      <h2>
+        Hi! <a href="{{ site.baseurl }}/about">I'm Jonathan</a>, and I use this space to collect my thoughts about programming and daily life.
+      </h2>
+    {% elsif current[1] == 'categories' %}
+      
+    {% elsif current[1] == 'reading' %}
+      
+    {% endif %}
 
     <hr>
   </div>

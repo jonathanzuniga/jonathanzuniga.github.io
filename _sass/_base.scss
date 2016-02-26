@@ -110,18 +110,18 @@ a {
 	}
 
 	&:hover {
-		color: $color-blue-light;
+		color: $color-blue-dark;
 	}
 }
 
 .social-media-list li:hover {
 	a {
-		color: $color-blue-light;
+		color: $color-blue-dark;
 
 		.icon {
 			> svg {
 				path {
-					fill: $color-blue-light;
+					fill: $color-blue-dark;
 				}
 			}
 		}
@@ -152,7 +152,7 @@ blockquote {
 pre,
 code {
 	font-family: $mono-font-family;
-	font-weight: 300;
+	font-weight: normal;
 	border-radius: 3px;
 	background-color: $color-grey-light;
 }
