@@ -2,7 +2,7 @@
  * Site header
  */
 .site-header {
-	margin-bottom: $spacing-unit;
+	margin-bottom: $spacing-unit / 2;
 	margin-top: $spacing-unit / 2;
 
 	#nav {
@@ -226,21 +226,24 @@ hr {
  */
 .post {
 	margin-bottom: $spacing-unit;
+	
+	h1 {
+		font-size: 2em;
+		text-transform: capitalize;
+	}
 
 	.post-header {
-		h1 {
-			font-size: 2em;
-		}
 		.post-title {
-			text-transform: capitalize;
-			
 			a,
 			a:visited,
 			a:hover {
 				border-bottom: none;
-				color: $text-color;
 				text-decoration: none;
 			}
+		}
+
+		.post-date {
+			font-weight: 300;
 		}
 	}
 
@@ -284,7 +287,7 @@ hr {
 	position: absolute;
 
 	path {
-		fill: $color-grey-light;
+		fill: $color-grey-semilight;
 	}
 }
 
@@ -364,6 +367,24 @@ hr {
 
 
 /**
+ * Buttons.
+ */
+a.button {
+	background-color: $color-grey-light;
+	border-radius: $spacing-unit;
+	color: $text-color;
+	padding: $spacing-unit / 10 $spacing-unit / 3;
+	text-decoration: none;
+
+	&:hover {
+		background-color: $color-blue;
+		color: rgba(255, 255, 255, 0.85);
+	}
+}
+
+
+
+/**
  * Helper classes.
  */
 .pull-left {
@@ -402,20 +423,6 @@ hr {
 }
 
 @include media-query($on-palm) {
-	#sidebar {
-		.social-media-list {
-			li {
-				display: inline;
-				
-				a {
-					&:last-child {
-						display: none;
-					}
-				}
-			}
-		}
-	}
-
 	.footer-col-1 {
 		width: -webkit-calc(60% - (#{$spacing-unit} / 2));
 		width:         calc(60% - (#{$spacing-unit} / 2));
