@@ -1,33 +1,52 @@
 ---
-layout: index
+layout: default
 ---
-<h1>Jonathan Zúñiga's site.</h1>
+{% for post in site.posts %}
+	{% if post.link %}
+		<article class="post link">
+			<header class="post-header">
+				<h3 class="post-title">
+					<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+					<a class="button post-link" href="{{ post.link }}" target="_blank" title="Go to this link">
+						<small><i class="fa fa-external-link"></i></small>
+					</a>
+				</h3>
+			</header>
 
-<h2>Active things</h2>
+			<div class="post-description">
+				{{ post.content }}
+			</div>
+		</article>
+	{% else %}
+		<article class="post">
+			<header class="post-header">
+				<h2 class="post-title">
+					<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+				</h2>
 
-<ul>
-	<li>
-		<a href="{{ site.baseurl }}/blog/">Personal blog</a>
-	</li>
-	<li>
-		Last.fm: 
-		<a href="http://www.last.fm/user/jonathanzuniga/library" target="_blank">Library</a> | 
-		<a href="http://www.last.fm/user/jonathanzuniga" target="_blank">Profile</a>
-	</li>
-</ul>
+				<h3 class="post-date">
+					<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%a %d %B %Y" }}</time>
+				</h3>
+			</header>
 
-<h2>Inactive <!-- (but still there) -->things</h2>
+			<div class="post-description">
+				{{ post.excerpt }} 
+				<a class="button post-more" href="{{ post.url | prepend: site.baseurl }}" title="Continue reading this post">Continue reading <i class="fa fa-angle-double-right"></i></a>
+			</div>
 
-<ul>
-	<li>
-		--
-	</li>
-</ul>
+			<hr>
 
-<h2>Find me elsewhere</h2>
+			<div class="post-meta">
+				Posted {{ post.content | number_of_words }} words in
+				{% assign sorted_categories = post.categories | sort %}
+				{% for category in sorted_categories %}
+					<a href="/categories/#{{ category }}">{{ category | replace: '-',' ' }}</a>
+				{% endfor %}
+				on {{ post.date | date: "%D" }}, 
+				at {{ post.date | date: "%I:%M %p" }}.
+			</div>
 
-<ul>
-	<li><a href="https://twitter.com/jonathan_zuniga" target="_blank">Follow me on Twitter</a></li>
-	<li><a href="https://www.facebook.com/jonathanzuniga" target="_blank">Find me on Facebook</a></li>
-	<li><a href="https://www.flickr.com/photos/jonathan_zuniga/" target="_blank">My photos on Fickr</a></li>
-</ul>
+			<hr>
+		</article>
+	{% endif %}
+{% endfor %}

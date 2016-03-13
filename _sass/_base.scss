@@ -25,6 +25,10 @@ body {
 	b, strong {
 		font-weight: bold;
 	}
+
+	small {
+		font-size: $small-font-size;
+	}
 }
 
 
@@ -32,7 +36,10 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: $spacing-unit / 3;
+}
 p, blockquote, pre, hr,
 ul, ol, dl, figure,
 %vertical-rhythm {
@@ -85,7 +92,7 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font-family;
-	font-weight: normal;
+	font-weight: bold;
 }
 
 
@@ -96,17 +103,14 @@ h1, h2, h3, h4, h5, h6 {
 a {
 	color: $color-blue;
 	text-decoration: underline;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 
 	&:visited {
 		color: $color-blue;
-
-		.icon {
-			> svg {
-				path {
-					fill: $color-blue;
-				}
-			}
-		}
 	}
 
 	&:hover {
@@ -117,14 +121,6 @@ a {
 .social-media-list li:hover {
 	a {
 		color: $color-blue-dark;
-
-		.icon {
-			> svg {
-				path {
-					fill: $color-blue-dark;
-				}
-			}
-		}
 	}
 }
 
@@ -136,7 +132,6 @@ a {
 blockquote {
 	border-left: 4px solid $color-grey-light;
 	font-style: none;
-	font-weight: 300;
 	padding-left: $spacing-unit / 2;
 
 	> :last-child {
@@ -153,7 +148,7 @@ pre,
 code {
 	font-family: $mono-font-family;
 	font-weight: normal;
-	border-radius: 3px;
+	border-radius: 4px;
 	background-color: $color-grey-light;
 }
 
@@ -205,23 +200,5 @@ pre {
 		content: "";
 		display: table;
 		clear: both;
-	}
-}
-
-
-
-/**
- * Icons
- */
-.icon {
-	> svg {
-		display: inline-block;
-		width: 16px;
-		height: 16px;
-		vertical-align: middle;
-
-		path {
-			fill: $color-blue;
-		}
 	}
 }

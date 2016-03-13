@@ -1,9 +1,8 @@
 ---
 author: "Donald A. Norman"
-categories: recommended-reading
+categories: books
 cover: the-design-of-everyday-things.jpg
 date: 2016-02-21 16:26:00
-layout: reading
 link: http://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/0465067107/
 tags: [design, theory]
 title: "The Design of Everyday Things"

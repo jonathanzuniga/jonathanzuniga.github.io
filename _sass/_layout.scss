@@ -1,3 +1,16 @@
+h1, h2, h3, h4 {
+	text-transform: capitalize;
+}
+
+hr {
+	border-bottom: 1px solid $color-grey-semilight;
+	border-top: none;
+	clear: both;
+	margin: ($spacing-unit / 2) 0;
+}
+
+
+
 /**
  * Site header
  */
@@ -6,8 +19,8 @@
 	margin-top: $spacing-unit / 2;
 
 	#nav {
-		font-family: $heading-font-family;
-		margin-bottom: $spacing-unit;
+		font-family: $base-font-family;
+		font-size: $small-font-size;
 
 		ul {
 			margin: 0;
@@ -18,15 +31,12 @@
 				a {
 					border-bottom: none;
 					color: $text-color;
-					font-weight: 300;
-			    padding-bottom: $spacing-unit / 2;
-			    margin-right: $spacing-unit - 10;
-			    padding-top: $spacing-unit / 2;
-			    text-decoration: none;
+					margin-right: $spacing-unit - 5;
+					text-decoration: none;
 					text-transform: uppercase;
 
 					&.current {
-						font-weight: 400;
+						font-weight: bold;
 					}
 				}
 
@@ -39,184 +49,18 @@
 		}
 	}
 
-	h1 {
-		display: block;
-
-		.site-title {
-			&,
-			&:active,
-			&:focus,
-			&:visited,
-			&:hover {
-				border-bottom: none;
-				color: $text-color;
-				text-decoration: none;
-			}
-		}
-	}
-
-	h2 {
-		font-family: $base-font-family;
-		font-weight: 300;
+	.lead {
+		font-family: $heading-font-family;
+		font-size: 2em;
+		font-weight: normal;
 
 		a {
 			border-bottom: none;
 			color: $text-color;
-			font-weight: normal;
+			font-weight: bold;
 			text-decoration: none;
 		}
 	}
-}
-
-.site-nav {
-	float: right;
-	line-height: 56px;
-
-	.menu-icon {
-		display: none;
-	}
-
-	.page-link {
-		color: $text-color;
-		line-height: $base-line-height;
-
-		// Gaps between nav items, but not on the first one
-		&:not(:first-child) {
-			margin-left: 20px;
-		}
-	}
-
-	@include media-query($on-palm) {
-		position: absolute;
-		top: 9px;
-		right: 30px;
-		background-color: $background-color;
-		border: 1px solid $color-grey-light;
-		border-radius: 5px;
-		text-align: right;
-
-		.menu-icon {
-			display: block;
-			float: right;
-			width: 36px;
-			height: 26px;
-			line-height: 0;
-			padding-top: 10px;
-			text-align: center;
-
-			> svg {
-				width: 18px;
-				height: 15px;
-
-				path {
-					fill: $color-grey-dark;
-				}
-			}
-		}
-
-		.trigger {
-			clear: both;
-			display: none;
-		}
-
-		&:hover .trigger {
-			display: block;
-			padding-bottom: 5px;
-		}
-
-		.page-link {
-			display: block;
-			padding: 5px 10px;
-		}
-	}
-}
-
-.clearfix {
-	&:before,
-	&:after {
-	content: " ";
-	display: table;
-	}
-	&:after {
-	clear: both;
-	}
-}
-
-
-
-/**
- * Site footer
- */
-.site-footer {
-	padding-bottom: $spacing-unit;
-	
-	p a {
-		margin-right: $spacing-unit / 2;
-	}
-}
-
-.footer-heading {
-	font-size: 18px;
-	margin-bottom: $spacing-unit / 2;
-}
-
-.footer-list {
-	list-style: none;
-	margin-left: 0;
-
-	li {
-		display: inline;
-		margin-right: $spacing-unit / 2;
-	}
-}
-
-.footer-col-wrapper {
-	margin-left: -$spacing-unit / 2;
-	@extend %clearfix;
-}
-
-.footer-col {
-	float: left;
-	margin-bottom: $spacing-unit / 2;
-	padding-left: $spacing-unit / 2;
-}
-
-.footer-col-1 {
-	width: -webkit-calc(70% - (#{$spacing-unit} / 2));
-	width:         calc(70% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-	width: -webkit-calc(30% - (#{$spacing-unit} / 2));
-	width:         calc(30% - (#{$spacing-unit} / 2));
-}
-
-// .footer-col-3 {
-//     width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-//     width:         calc(45% - (#{$spacing-unit} / 2));
-// }
-
-
-
-/**
- * Page content
- */
-.post-list {
-	margin-left: 0;
-	list-style: none;
-
-	> li {
-		margin-bottom: $spacing-unit;
-	}
-}
-
-
-
-hr {
-	border-bottom: 1px solid $color-grey-semilight;
-	border-top: none;
-	clear: both;
-	margin: ($spacing-unit / 2) 0;
 }
 
 
@@ -229,7 +73,6 @@ hr {
 	
 	h1 {
 		font-size: 2em;
-		text-transform: capitalize;
 	}
 
 	.post-header {
@@ -238,17 +81,10 @@ hr {
 			a:visited,
 			a:hover {
 				border-bottom: none;
+				color: $text-color;
 				text-decoration: none;
 			}
 		}
-
-		.post-date {
-			font-weight: 300;
-		}
-	}
-
-	h3 {
-		text-transform: capitalize;
 	}
 
 	.post-content,
@@ -257,56 +93,31 @@ hr {
 		margin-bottom: $spacing-unit / 2;
 	}
 
-	.post-meta {
-		font-size: $small-font-size;
+	&:not(.link) {
+		.post-description {
+			p:last-of-type {
+				display: inline;
+			}
 
-		.post-tags, .post-words, .post-read-more {
-			display: inline;
+			.post-more {
+				display: inline-block;
+				font-size: $small-font-size;
+			}
 		}
 	}
-}
 
-
-
-/**
- * Reading.
- */
-.reading {
-	.book-cover {
-		max-width: 180px;
+	.post-meta {
+		font-size: $small-font-size;
 	}
 }
 
-
-
-/**
- * Links.
- */
-.icon.icon-star {
-	margin-left: -($spacing-unit - 10);
-	position: absolute;
-
-	path {
-		fill: $color-grey-semilight;
-	}
-}
-
-
-
-/**
- * Tags.
- */
-.tags {
-	h3 {
-		text-transform: lowercase;
-	}
-
+#categories {
 	ul {
-		// list-style: none;
-		// margin-left: 0;
+		list-style: none;
+		margin-left: 0;
 
-		li {
-			text-transform: capitalize;
+		time {
+			margin-right: $spacing-unit / 3;
 		}
 	}
 }
@@ -327,19 +138,26 @@ hr {
  * Sidebar.
  */
 #sidebar {
+	font-size: $small-font-size;
 	float: right;
-	width: 160px;
-	
-	h2, h3 {
-		text-transform: capitalize;
+	width: 200px;
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: normal;
 	}
 
-	p, ol, ul {
-		font-size: $small-font-size;
-	}
+	.book-cover-container {
+		border-radius: 4px;
+		display: block;
+		height: 150px;
+		max-width: 200px;
+		overflow: hidden;
 
-	.book-cover {
-		max-width: 128px;
+		.book-cover {
+			height: auto;
+			margin-top: -130px;
+			max-width: 100%;
+		}
 	}
 
 	.social-media-list {
@@ -353,11 +171,12 @@ hr {
 			a {
 				&:first-child {
 					border-bottom: 0;
+					display: inline-block;
 					text-decoration: none;
+					width: 20px;
 				}
 				&:last-child {
 					display: inline;
-					margin-left: $spacing-unit / 6;
 				}
 			}
 		}
@@ -369,16 +188,35 @@ hr {
 /**
  * Buttons.
  */
-a.button {
-	background-color: $color-grey-light;
-	border-radius: $spacing-unit;
-	color: $text-color;
-	padding: $spacing-unit / 10 $spacing-unit / 3;
-	text-decoration: none;
+a {
+	&.button {
+		background-color: $color-grey-light;
+		border-radius: $spacing-unit;
+		color: $text-color;
+		padding: 3px 8px;
+		text-decoration: none;
 
-	&:hover {
+		&:hover {
+			background-color: $color-blue;
+			color: $color-white-semilight !important;
+		}
+	}
+
+	&.button-primary {
 		background-color: $color-blue;
-		color: rgba(255, 255, 255, 0.85);
+		color: $color-white-semilight;
+		font-size: $small-font-size;
+		text-transform: uppercase;
+
+		&:hover {
+			background-color: $color-blue-dark;
+		}
+	}
+
+	&.post-link {
+		display: inline-block;
+		line-height: 1.2;
+		padding: 0 8px;
 	}
 }
 
@@ -387,6 +225,16 @@ a.button {
 /**
  * Helper classes.
  */
+.clearfix {
+	&:before,
+	&:after {
+	content: " ";
+	display: table;
+	}
+	&:after {
+	clear: both;
+	}
+}
 .pull-left {
 	float: left;
 	margin-right: $spacing-unit / 2;
@@ -401,7 +249,13 @@ a.button {
 /**
  * Responsive.
  */
-@media screen and (max-width: 859px) {
+@include media-query($on-laptop) {
+}
+
+@include media-query($on-palm) {
+}
+
+@media screen and (max-width: 899px) {
 	#main,
 	#sidebar {
 		float: none;
@@ -409,32 +263,36 @@ a.button {
 	}
 }
 
-@include media-query($on-laptop) {
-	.footer-col-1,
-	.footer-col-2 {
-		width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-		width:         calc(50% - (#{$spacing-unit} / 2));
-	}
+@media screen and (min-width: 640px) and (max-width: 899px) {
+	#sidebar {
+		.block {
+			width: 48%;
 
-	// .footer-col-3 {
-	//     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-	//     width:         calc(100% - (#{$spacing-unit} / 2));
-	// }
+			&:first-child {
+				float: left;
+			}
+			&:last-child {
+				float: right;
+			}
+		}
+	}
 }
 
-@include media-query($on-palm) {
-	.footer-col-1 {
-		width: -webkit-calc(60% - (#{$spacing-unit} / 2));
-		width:         calc(60% - (#{$spacing-unit} / 2));
+@media screen and (max-width: 479px) {
+	.site-header {
+		#nav {
+			ul {
+				li {
+					&:nth-child(4) {
+						a {
+							margin-right: 0;
+						}
+					}
+					&:last-child {
+						display: none;
+					}
+				}
+			}
+		}
 	}
-	.footer-col-2 {
-		width: -webkit-calc(40% - (#{$spacing-unit} / 2));
-		width:         calc(40% - (#{$spacing-unit} / 2));
-	}
-
-	// .footer-col {
-	//     float: none;
-	//     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-	//     width:         calc(100% - (#{$spacing-unit} / 2));
-	// }
 }

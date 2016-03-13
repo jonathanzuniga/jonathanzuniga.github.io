@@ -3,7 +3,11 @@ layout: default
 ---
 <article class="post">
 	<header class="post-header">
-		<h1 class="post-title">{{ page.title }}</h1>
+		{% if page.link %}
+			<h1 class="post-title"><a href="{{ page.link }}">{{ page.title }}</a></h1>
+		{% else %}
+			<h1 class="post-title">{{ page.title }}</h1>
+		{% endif %}
 
 		<h3 class="post-date">
 			<time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%a %d %B %Y" }}</time>
@@ -14,33 +18,34 @@ layout: default
 		{{ content }}
 	</div>
 
-  <hr>
+	<div class="clearfix"></div>
+
+	<hr>
 
 	<div class="post-meta">
-		<div class="post-tags">
-			Posted in
+		<p>
+			If you'd like to keep in touch, I tweet <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">@{{ site.twitter_username }}</a> on Twitter. You can also subscribe via RSS <a href="{{ "/feed.xml" | prepend: site.baseurl }}">here</a> to catch the latest blog posts.
+		</p>
+
+		<p>
+			<!-- Look the author details up from the site config. -->
+			{% assign author = site.authors[page.author] %}
+			<!-- Output author details if some exist. -->
+			{{ author.name }}
+			posted {{ page.content | number_of_words }} words in
 			{% assign sorted_categories = page.categories | sort %}
-      {% for category in sorted_categories %}
-        <a class="button" href="/categories/#{{ category }}">{{ category | replace: '-',' ' }}</a>
-      {% endfor %}
-		</div>
+			{% for category in sorted_categories %}
+				<a href="/categories/#{{ category }}">{{ category | replace: '-',' ' }}</a>
+			{% endfor %}
+			on {{ page.date | date: "%D" }}, 
+			at {{ page.date | date: "%I:%M %p" }}.
 
-		<div class="post-words">
-      {{ page.content | number_of_words }} words.
-    </div>
-
-		{% if page.update %}
-			<div>
+			{% if page.update %}
 				Last updated
-				<!-- Look the author details up from the site config. -->
-				{% assign author = site.authors[page.author] %}
-				<!-- Output author details if some exist. -->
-				{% if author %}
-					by {{ author.name }}
-				{% endif %}
-				at {{ page.update | date: "%a %d %B %Y" }}.
-			</div>
-		{% endif %}
+				on {{ page.update | date: "%D" }}, 
+				at {{ page.date | date: "%I:%M %p" }}.
+			{% endif %}
+		</p>
 	</div>
 
 	<hr>

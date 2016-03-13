@@ -2,11 +2,7 @@
 layout: default
 title: Categories
 ---
-<article class="post categories">
-	<!-- <header class="post-header">
-		<h1 class="post-title">Categories</h1>
-	</header> -->
-
+<div id="categories">
 	{% capture categories %}
 		{% for category in site.categories %}
 			{{ category[0] }}
@@ -14,48 +10,22 @@ title: Categories
 	{% endcapture %}
 	{% assign sorted_categories = categories | split:' ' | sort %}
 	{% for category in sorted_categories %}
-		<h1 id="{{ category }}">
-			{{ category | replace: '-',' ' }}
-		</h1>
+		<h3 id="{{ category }}">{{ category | replace: '-',' ' }}</h3>
 
+		<ul>
 		{% for post in site.categories[category] %}
-			{% if post.link %}
-				<div class="post link">
-					<span class="icon icon-star">
-						<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
-							<path d="M4 0l-1 3h-3l2.5 2-1 3 2.5-2 2.5 2-1-3 2.5-2h-3l-1-3z" />
-						</svg>
-					</span>
-
-					<header class="post-header">
-						<h3 class="post-title">
-							<a href="{{ post.link }}" target="_blank">{{ post.title }}</a>
-						</h3>
-					</header>
-
-					<div class="post-description">
-						{{ post.content | strip_html | truncatewords: 32 }}
-					</div>
-				</div>
-			{% else %}
-				<div class="post">
-					<header class="post-header">
-						<h2 class="post-title">
-							<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-						</h2>
-
-						<h4 class="post-date">
-							<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%a %d %B %Y" }}</time>
-						</h4>
-					</header>
-
-					<div class="post-description">
-						{{ post.excerpt | strip_html | truncatewords: 32 }}
-					</div>
-
-					<hr>
-				</div>
-			{% endif %}
+			<li>
+				<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%D" }}</time>
+				<a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+				{% if post.link %}
+					<a class="button post-link" href="{{ post.link }}" target="_blank" title="Go to this link">
+						<small><i class="fa fa-external-link"></i></small>
+					</a>
+				{% endif %}
+			</li>
 		{% endfor %}
+		</ul>
+
+		<hr>
 	{% endfor %}
-</article>
+</div>

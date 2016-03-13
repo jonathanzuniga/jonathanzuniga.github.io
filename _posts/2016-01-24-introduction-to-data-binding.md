@@ -1,6 +1,8 @@
 ---
+author: jonathan
 categories: mobile-software-development
 date: 2016-01-24 18:55:00
+layout: post
 link: https://blog.xamarin.com/introduction-to-data-binding/
 tags: [xamarin, mobile-app-dev, xamarin.forms]
 title: "Introduction to Data Binding"
