@@ -15,50 +15,98 @@ hr {
  * Site header
  */
 .site-header {
-	margin-bottom: $spacing-unit / 2;
-	margin-top: $spacing-unit / 2;
+	background-color: #bbdefb;
+	height: 120px;
+	margin-bottom: $spacing-unit;
+	position: relative;
 
 	#nav {
+		bottom: 0;
 		font-family: $base-font-family;
-		font-size: $small-font-size;
+		position: absolute;
 
 		ul {
+			float: left;
+			list-style: none;
 			margin: 0;
+			padding: 0;
+			position: relative;
 
 			li {
+				background-color: $color-white;
 				display: inline;
+				float: left;
+				margin: 0;
+				padding: 0;
+				position: relative;
 
 				a {
 					border-bottom: none;
-					color: $text-color;
-					margin-right: $spacing-unit - 5;
+					color: #1c4c78;
+					display: block;
+					font-size: 2.5em;
+					font-weight: bold;
+					padding: 0 $spacing-unit;
 					text-decoration: none;
-					text-transform: uppercase;
+					text-transform: lowercase;
 
 					&.current {
 						font-weight: bold;
 					}
+
+					&:hover {
+						background-color: $color-yellow;
+						color: $text-color;
+					}
 				}
 
-				&:last-child {
-					a {
-						margin-right: 0;
+				&:hover {
+					> ul {
+						display: block;
+					}
+				}
+
+				ul {
+					background-color: $color-white;
+					box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+					display: none;
+					left: 0;
+					padding: 0;
+					position: absolute;
+					top: 100%;
+
+					li {
+						float: none;
+						margin: 0;
+						padding: 0;
+
+						a {
+							color: $text-color;
+							font-size: 1.5em;
+							font-weight: normal;
+							padding: $spacing-unit / 10 $spacing-unit;
+							text-transform: capitalize;
+						}
 					}
 				}
 			}
 		}
-	}
 
-	.lead {
-		font-family: $heading-font-family;
-		font-size: 2em;
-		font-weight: normal;
+		> ul > li {
+			margin-right: $spacing-unit / 2;
 
-		a {
-			border-bottom: none;
-			color: $text-color;
-			font-weight: bold;
-			text-decoration: none;
+			&:last-child {
+				background-color: transparent;
+				margin-right: 0;
+				
+				a {
+					color: $color-white;
+
+					&:hover {
+						color: $text-color;
+					}
+				}
+			}
 		}
 	}
 }
@@ -281,17 +329,18 @@ a {
 @media screen and (max-width: 479px) {
 	.site-header {
 		#nav {
-			ul {
-				li {
-					&:nth-child(4) {
-						a {
-							margin-right: 0;
-						}
-					}
-					&:last-child {
-						display: none;
-					}
-				}
+			> ul > li a {
+				font-size: 2em;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 319px) {
+	.site-header {
+		#nav {
+			> ul > li:last-child {
+				display: none;
 			}
 		}
 	}
