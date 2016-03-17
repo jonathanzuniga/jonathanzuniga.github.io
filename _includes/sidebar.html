@@ -13,18 +13,18 @@
 				{% for category in sorted_categories %}
 					<a href="/categories/#{{ category }}">{{ category | replace: '-',' ' }}</a>
 				{% endfor %}
-				on {{ page.date | date: "%D" }}, 
+				on {{ page.date | date: "%d %b, %Y" }} 
 				at {{ page.date | date: "%I:%M %p" }}.
 
 				{% if page.update %}
 					Last updated
-					on {{ page.update | date: "%D" }}, 
-					at {{ page.date | date: "%I:%M %p" }}.
+					on {{ page.update | date: "%d %b, %Y" }} 
+					at {{ page.update | date: "%I:%M %p" }}.
 				{% endif %}
 			</p>
 
 			<p>
-				<strong>Tags for this post:</strong> 
+				Tags for this post: 
 				{% assign sorted_tags = page.tags | sort %}
 				{% for tag in sorted_tags %}
 					<a href="/tags/#{{ tag }}">{{ tag | replace: '-',' ' }}</a>
@@ -32,9 +32,9 @@
 			</p>
 		{% else %}
 			<h3>About this site</h3>
-		{% endif %}
 
-		<p>Hi! <a href="{{ site.baseurl }}/about">I'm Jonathan</a>, and I use this space to collect my thoughts about programming and daily life. More on the <a href="/about">about page</a>.</p>
+			<p>Hi! <a href="{{ site.baseurl }}/about">I'm Jonathan</a>, and I use this space to collect my thoughts about programming and daily life. More on the <a href="/about">about page</a>.</p>
+		{% endif %}
 
 		<hr>
 
@@ -44,9 +44,13 @@
 
 		<p>
 			<a href="/mobile-software-development/2015/11/29/algunas-reflexiones-despues-de-casi-un-ano-usando-xamarin.html">Algunas reflexiones después de casi un año usando Xamarin</a>
-			<span class="sep-h text-grey">/</span>
+
+			<span class="sep-dot text-grey">•</span>
+
 			<a href="/video-games/2016/01/16/2016-01-16-doom-regresa-con-un-nuevo-nivel-22-anos-despues.html">DOOM regresa con un nuevo nivel 22 años despues</a>
-			<span class="sep-h text-grey">/</span>
+
+			<span class="sep-dot text-grey">•</span>
+
 			<a href="/memories/2016/03/05/the-magical-xamarin.html">The Magical Xamarin</a>
 		</p>
 

@@ -9,7 +9,7 @@ h1, h2, h3, h4 {
 
 hr {
 	border: none;
-	border-bottom: 1px dotted $color-grey-semilight;
+	border-bottom: 1px solid $color-grey-light;
 	clear: both;
 	margin: ($spacing-unit / 2) 0;
 }
@@ -138,13 +138,13 @@ hr {
 }
 #tags {
 	ul li > span:not(:last-child) {
-		margin-right: $spacing-unit / 6;
+		margin-right: $spacing-unit / 10;
 
 		&:after {
 			color: $color-grey-semilight;
-			content: '/';
+			content: '•';
 			font-weight: normal;
-			margin-left: $spacing-unit / 6;
+			margin-left: $spacing-unit / 10;
 		}
 	}
 }
@@ -272,8 +272,8 @@ a {
 	margin-left: $spacing-unit / 2;
 }
 
-.sep-h {
-	margin: 0 $spacing-unit / 6;
+.sep-dot {
+	margin: 0 $spacing-unit / 10;
 }
 
 .text-grey {

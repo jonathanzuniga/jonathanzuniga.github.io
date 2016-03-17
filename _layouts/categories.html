@@ -15,7 +15,7 @@ title: Categories
 		<ul>
 		{% for post in site.categories[category] %}
 			<li>
-				<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%D" }}</time>
+				<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d %b, %Y" }}</time>
 				<a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
 				<!-- {% if post.link %}
 					<a class="button post-link" href="{{ post.link }}" target="_blank" title="Go to this link">
