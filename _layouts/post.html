@@ -20,33 +20,9 @@ layout: default
 
 	<div class="clearfix"></div>
 
-	<hr>
-
 	<div class="post-meta">
 		<p>
 			If you'd like to keep in touch, I tweet <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">@{{ site.twitter_username }}</a> on Twitter. You can also subscribe via RSS <a href="{{ "/feed.xml" | prepend: site.baseurl }}">here</a> to catch the latest blog posts.
 		</p>
-
-		<p>
-			<!-- Look the author details up from the site config. -->
-			{% assign author = site.authors[page.author] %}
-			<!-- Output author details if some exist. -->
-			{{ author.name }}
-			posted {{ page.content | number_of_words }} words in
-			{% assign sorted_categories = page.categories | sort %}
-			{% for category in sorted_categories %}
-				<a href="/categories/#{{ category }}">{{ category | replace: '-',' ' }}</a>
-			{% endfor %}
-			on {{ page.date | date: "%D" }}, 
-			at {{ page.date | date: "%I:%M %p" }}.
-
-			{% if page.update %}
-				Last updated
-				on {{ page.update | date: "%D" }}, 
-				at {{ page.date | date: "%I:%M %p" }}.
-			{% endif %}
-		</p>
 	</div>
-
-	<hr>
 </article>

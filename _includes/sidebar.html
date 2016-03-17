@@ -1,6 +1,38 @@
 <aside id="sidebar">
 	<div class="block">
-		<h3>About this site</h3>
+		{% if page.path contains '_posts' %}
+			<h3>About this post</h3>
+
+			<p>
+				<!-- Look the author details up from the site config. -->
+				{% assign author = site.authors[page.author] %}
+				<!-- Output author details if some exist. -->
+				{{ author.name }}
+				posted {{ page.content | number_of_words }} words in
+				{% assign sorted_categories = page.categories | sort %}
+				{% for category in sorted_categories %}
+					<a href="/categories/#{{ category }}">{{ category | replace: '-',' ' }}</a>
+				{% endfor %}
+				on {{ page.date | date: "%D" }}, 
+				at {{ page.date | date: "%I:%M %p" }}.
+
+				{% if page.update %}
+					Last updated
+					on {{ page.update | date: "%D" }}, 
+					at {{ page.date | date: "%I:%M %p" }}.
+				{% endif %}
+			</p>
+
+			<p>
+				<strong>Tags for this post:</strong> 
+				{% assign sorted_tags = page.tags | sort %}
+				{% for tag in sorted_tags %}
+					<a href="/tags/#{{ tag }}">{{ tag | replace: '-',' ' }}</a>
+				{% endfor %}
+			</p>
+		{% else %}
+			<h3>About this site</h3>
+		{% endif %}
 
 		<p>Hi! <a href="{{ site.baseurl }}/about">I'm Jonathan</a>, and I use this space to collect my thoughts about programming and daily life. More on the <a href="/about">about page</a>.</p>
 
@@ -12,6 +44,10 @@
 
 		<p>
 			<a href="/mobile-software-development/2015/11/29/algunas-reflexiones-despues-de-casi-un-ano-usando-xamarin.html">Algunas reflexiones después de casi un año usando Xamarin</a>
+			<span class="sep-h text-grey">/</span>
+			<a href="/video-games/2016/01/16/2016-01-16-doom-regresa-con-un-nuevo-nivel-22-anos-despues.html">DOOM regresa con un nuevo nivel 22 años despues</a>
+			<span class="sep-h text-grey">/</span>
+			<a href="/memories/2016/03/05/the-magical-xamarin.html">The Magical Xamarin</a>
 		</p>
 
 		<p>
@@ -33,9 +69,9 @@
 
 		<p>
 			<a href="{{ book.link }}" target="_blank">The Design of Everyday Things</a>
+			<br>
+			Donald A. Norman
 		</p>
-
-		<p>Donald A. Norman</p>
 
 		<p>
 			<a class="button" href="{{ book.link }}">Buy from Amazon</a>

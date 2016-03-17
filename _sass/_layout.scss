@@ -1,10 +1,15 @@
+body {
+	margin-bottom: $spacing-unit;
+	margin-top: $spacing-unit;
+}
+
 h1, h2, h3, h4 {
 	text-transform: capitalize;
 }
 
 hr {
-	border-bottom: 1px solid $color-grey-semilight;
-	border-top: none;
+	border: none;
+	border-bottom: 1px dotted $color-grey-semilight;
 	clear: both;
 	margin: ($spacing-unit / 2) 0;
 }
@@ -15,92 +20,53 @@ hr {
  * Site header
  */
 .site-header {
-	background-color: #bbdefb;
-	height: 120px;
-	margin-bottom: $spacing-unit;
-	position: relative;
+	margin-bottom: $spacing-unit / 2;
 
 	#nav {
-		bottom: 0;
-		font-family: $base-font-family;
-		position: absolute;
-
 		ul {
-			float: left;
 			list-style: none;
 			margin: 0;
 			padding: 0;
-			position: relative;
 
 			li {
-				background-color: $color-white;
 				display: inline;
-				float: left;
-				margin: 0;
+				font-size: 1.17em;
+				margin-right: $spacing-unit / 3;
 				padding: 0;
-				position: relative;
 
-				a {
-					border-bottom: none;
-					color: #1c4c78;
-					display: block;
-					font-size: 2.5em;
-					font-weight: bold;
-					padding: 0 $spacing-unit;
-					text-decoration: none;
-					text-transform: lowercase;
+				&:first-child {
+					margin-left: 0;
 
-					&.current {
-						font-weight: bold;
-					}
-
-					&:hover {
-						background-color: $color-yellow;
+					a {
 						color: $text-color;
 					}
 				}
 
-				&:hover {
-					> ul {
-						display: block;
+				&:last-child {
+					margin-right: 0;
+
+					&:after {
+						content: none;
 					}
 				}
 
-				ul {
-					background-color: $color-white;
-					box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-					display: none;
-					left: 0;
-					padding: 0;
-					position: absolute;
-					top: 100%;
-
-					li {
-						float: none;
-						margin: 0;
-						padding: 0;
-
-						a {
-							color: $text-color;
-							font-size: 1.5em;
-							font-weight: normal;
-							padding: $spacing-unit / 10 $spacing-unit;
-							text-transform: capitalize;
-						}
-					}
+				&:after {
+					color: $color-grey-semilight;
+					content: '/';
+					font-weight: normal;
+					margin-left: $spacing-unit / 3;
 				}
-			}
-		}
 
-		> ul > li {
-			margin-right: $spacing-unit / 2;
-
-			&:last-child {
-				background-color: transparent;
-				margin-right: 0;
-				
 				a {
-					color: $color-white;
+					border-bottom: none;
+					color: $color-grey;
+					display: inline-block;
+					text-decoration: none;
+					text-transform: capitalize;
+
+					&.current {
+						color: $text-color;
+					}
 
 					&:hover {
 						color: $text-color;
@@ -117,7 +83,7 @@ hr {
  * Posts.
  */
 .post {
-	margin-bottom: $spacing-unit;
+	margin-bottom: $spacing-unit / 2;
 	
 	h1 {
 		font-size: 2em;
@@ -159,13 +125,26 @@ hr {
 	}
 }
 
-#categories {
+#categories,
+#tags {
 	ul {
 		list-style: none;
 		margin-left: 0;
 
 		time {
 			margin-right: $spacing-unit / 3;
+		}
+	}
+}
+#tags {
+	ul li > span:not(:last-child) {
+		margin-right: $spacing-unit / 6;
+
+		&:after {
+			color: $color-grey-semilight;
+			content: '/';
+			font-weight: normal;
+			margin-left: $spacing-unit / 6;
 		}
 	}
 }
@@ -177,7 +156,7 @@ hr {
  */
 #main {
 	float: left;
-	width: 640px;
+	width: 540px;
 }
 
 
@@ -188,11 +167,11 @@ hr {
 #sidebar {
 	font-size: $small-font-size;
 	float: right;
-	width: 200px;
+	width: 320px;
 
-	h1, h2, h3, h4, h5, h6 {
-		font-weight: normal;
-	}
+	// h1, h2, h3, h4, h5, h6 {
+	// 	font-weight: normal;
+	// }
 
 	.book-cover-container {
 		border-radius: 4px;
@@ -213,7 +192,7 @@ hr {
 		margin-left: 0;
 
 		li {
-			margin-bottom: $spacing-unit / 3;
+			margin-bottom: $spacing-unit / 6;
 			margin-right: $spacing-unit / 2;
 			
 			a {
@@ -283,6 +262,7 @@ a {
 	clear: both;
 	}
 }
+
 .pull-left {
 	float: left;
 	margin-right: $spacing-unit / 2;
@@ -290,6 +270,14 @@ a {
 .pull-right {
 	float: right;
 	margin-left: $spacing-unit / 2;
+}
+
+.sep-h {
+	margin: 0 $spacing-unit / 6;
+}
+
+.text-grey {
+	color: $color-grey-semilight;
 }
 
 
@@ -327,21 +315,9 @@ a {
 }
 
 @media screen and (max-width: 479px) {
-	.site-header {
-		#nav {
-			> ul > li a {
-				font-size: 2em;
-			}
-		}
-	}
+
 }
 
 @media screen and (max-width: 319px) {
-	.site-header {
-		#nav {
-			> ul > li:last-child {
-				display: none;
-			}
-		}
-	}
+
 }

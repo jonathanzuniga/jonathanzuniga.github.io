@@ -1,56 +1,28 @@
 <header class="site-header">
   <div class="wrapper">
-    <!-- <a href="{{ site.baseurl }}/">
-      <img src="/images/jonathanzuniga-org-drawn-header-grey-large.png">
-    </a> -->
-    
     {% assign current = page.url | downcase | split: '/' %}
     <nav id="nav">
       <ul>
         <li>
-          <a href="#">Menu</a>
-          <ul>
-            <li>
-              <a href="{{ site.baseurl }}/">Index</a>
-            </li>
-            <li>
-              <a {% if current[1] == 'about' %}class="current" {% endif %}href="{{ site.baseurl }}/about">About</a>
-            </li>
-            <li>
-              <a {% if current[1] == 'categories' %}class="current" {% endif %}href="{{ site.baseurl }}/categories">Categories</a>
-            </li>
-            <li>
-              <a href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe</a>
-            </li>
-          </ul>
+          <a href="{{ site.baseurl }}/">Jonathan Zúñiga</a>
         </li>
         <li>
-          <a href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="fa fa-rss"></i> RSS</a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- {% assign current = page.url | downcase | split: '/' %}
-    <nav id="nav">
-      <ul>
-        <li>
-          <a {% if page.url == '/index.html' %}class='current' {% endif %}href="{{ site.baseurl }}/">Home</a>
+          <a {% if page.url == '/index.html' %}class="current" {% endif %}href="{{ site.baseurl }}/">Index</a>
         </li>
         <li>
-          <a {% if current[1] == 'about' %}class='current' {% endif %}href="{{ site.baseurl }}/about">About</a>
+          <a {% if current[1] == 'about' %}class="current" {% endif %}href="{{ site.baseurl }}/about">About</a>
         </li>
         <li>
-          <a {% if current[1] == 'categories' %}class='current' {% endif %}href="{{ site.baseurl }}/categories">Categories</a>
+          <a {% if current[1] == 'categories' %}class="current" {% endif %}href="{{ site.baseurl }}/categories">Categories</a>
+        </li>
+        <li>
+          <a {% if current[1] == 'tags' %}class="current" {% endif %}href="{{ site.baseurl }}/tags">Tags</a>
         </li>
         <li>
           <a href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe</a>
         </li>
       </ul>
     </nav>
-
-    <div class="clearfix"></div>
-
-    <hr> -->
 
     <!-- {% if page.url == '/index.html' %}
       <p class="lead">

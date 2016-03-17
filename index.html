@@ -16,6 +16,19 @@ layout: default
 			<div class="post-description">
 				{{ post.content }}
 			</div>
+
+			<div class="post-meta">
+				<a href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-hashtag"></i></a>
+				Posted {{ post.content | number_of_words }} words in
+				{% assign sorted_categories = post.categories | sort %}
+				{% for category in sorted_categories %}
+					<a href="/categories/#{{ category }}">{{ category | replace: '-',' ' }}</a>
+				{% endfor %}
+				on {{ post.date | date: "%D" }}, 
+				at {{ post.date | date: "%I:%M %p" }}.
+			</div>
+
+			<hr>
 		</article>
 	{% else %}
 		<article class="post">
@@ -31,12 +44,11 @@ layout: default
 
 			<div class="post-description">
 				{{ post.excerpt }} 
-				<a class="button post-more" href="{{ post.url | prepend: site.baseurl }}" title="Continue reading this post">Continue reading <i class="fa fa-angle-double-right"></i></a>
+				<a class="post-more" href="{{ post.url | prepend: site.baseurl }}" title="Continue reading this post">…</a>
 			</div>
 
-			<hr>
-
 			<div class="post-meta">
+				<a href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-hashtag"></i></a>
 				Posted {{ post.content | number_of_words }} words in
 				{% assign sorted_categories = post.categories | sort %}
 				{% for category in sorted_categories %}

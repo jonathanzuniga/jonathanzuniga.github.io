@@ -17,11 +17,11 @@ title: Categories
 			<li>
 				<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%D" }}</time>
 				<a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
-				{% if post.link %}
+				<!-- {% if post.link %}
 					<a class="button post-link" href="{{ post.link }}" target="_blank" title="Go to this link">
 						<small><i class="fa fa-external-link"></i></small>
 					</a>
-				{% endif %}
+				{% endif %} -->
 			</li>
 		{% endfor %}
 		</ul>
