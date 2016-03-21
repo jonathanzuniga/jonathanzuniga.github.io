@@ -20,6 +20,8 @@ hr {
  * Site header
  */
 .site-header {
+	margin-bottom: $spacing-unit / 3;
+
 	.site-title {
 		display: block;
 		font-family: $title-font-family;
