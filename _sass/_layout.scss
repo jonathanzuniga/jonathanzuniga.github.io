@@ -1,6 +1,6 @@
 body {
 	margin-bottom: $spacing-unit;
-	margin-top: $spacing-unit;
+	margin-top: $spacing-unit / 2;
 }
 
 h1, h2, h3, h4 {
@@ -20,58 +20,19 @@ hr {
  * Site header
  */
 .site-header {
-	margin-bottom: $spacing-unit / 2;
+	margin-bottom: 0;
 
-	#nav {
-		ul {
-			list-style: none;
-			margin: 0;
-			padding: 0;
+	.site-title {
+		display: block;
+		font-family: $title-font-family;
+		font-weight: normal;
+		text-transform: lowercase;
 
-			li {
-				display: inline;
-				font-size: 1.17em;
-				margin-right: $spacing-unit / 3;
-				padding: 0;
+		a {
+			color: $text-color;
 
-				&:first-child {
-					margin-left: 0;
-
-					a {
-						color: $text-color;
-					}
-				}
-
-				&:last-child {
-					margin-right: 0;
-
-					&:after {
-						content: none;
-					}
-				}
-
-				&:after {
-					color: $color-grey-semilight;
-					content: '/';
-					font-weight: normal;
-					margin-left: $spacing-unit / 3;
-				}
-
-				a {
-					border-bottom: none;
-					color: $color-grey;
-					display: inline-block;
-					text-decoration: none;
-					text-transform: capitalize;
-
-					&.current {
-						color: $text-color;
-					}
-
-					&:hover {
-						color: $text-color;
-					}
-				}
+			&:hover {
+				text-decoration: none;
 			}
 		}
 	}
@@ -83,18 +44,40 @@ hr {
  * Posts.
  */
 .post {
-	margin-bottom: $spacing-unit / 2;
-	
-	h1 {
-		font-size: 2em;
+	.posts {
+		list-style: none;
+		margin-left: 0;
+
+		li {
+			display: block;
+			position: relative;
+			text-transform: capitalize;
+
+			time {
+				font-family: $mono-font-family;
+				position: absolute;
+				width: 120px;
+			}
+
+			.post-title {
+				display: block;
+				padding-left: 120px;
+
+				/* Truncate text. */
+			  overflow: hidden;
+			  text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		}
 	}
 
 	.post-header {
 		.post-title {
+			font-size: 1.5em;
+
 			a,
 			a:visited,
 			a:hover {
-				border-bottom: none;
 				color: $text-color;
 				text-decoration: none;
 			}
@@ -105,19 +88,6 @@ hr {
 	.post-description,
 	.post-meta {
 		margin-bottom: $spacing-unit / 2;
-	}
-
-	&:not(.link) {
-		.post-description {
-			p:last-of-type {
-				display: inline;
-			}
-
-			.post-more {
-				display: inline-block;
-				font-size: $small-font-size;
-			}
-		}
 	}
 
 	.post-meta {
@@ -131,8 +101,24 @@ hr {
 		list-style: none;
 		margin-left: 0;
 
-		time {
-			margin-right: $spacing-unit / 3;
+		li {
+			display: block;
+			position: relative;
+
+			time {
+				position: absolute;
+				width: 120px;
+			}
+
+			.post-title {
+				display: block;
+				padding-left: 120px;
+
+				/* Truncate text. */
+			  overflow: hidden;
+			  text-overflow: ellipsis;
+				white-space: nowrap;
+			}
 		}
 	}
 }
@@ -156,58 +142,16 @@ hr {
  */
 #main {
 	float: left;
-	width: 540px;
+	width: 640px;
 }
 
 
 
-/**
- * Sidebar.
+/*
+ * Footer.
  */
-#sidebar {
+#footer {
 	font-size: $small-font-size;
-	float: right;
-	width: 320px;
-
-	// h1, h2, h3, h4, h5, h6 {
-	// 	font-weight: normal;
-	// }
-
-	.book-cover-container {
-		border-radius: 4px;
-		display: block;
-		height: 150px;
-		max-width: 200px;
-		overflow: hidden;
-
-		.book-cover {
-			height: auto;
-			margin-top: -130px;
-			max-width: 100%;
-		}
-	}
-
-	.social-media-list {
-		list-style: none;
-		margin-left: 0;
-
-		li {
-			margin-bottom: $spacing-unit / 6;
-			margin-right: $spacing-unit / 2;
-			
-			a {
-				&:first-child {
-					border-bottom: 0;
-					display: inline-block;
-					text-decoration: none;
-					width: 20px;
-				}
-				&:last-child {
-					display: inline;
-				}
-			}
-		}
-	}
 }
 
 
@@ -215,35 +159,18 @@ hr {
 /**
  * Buttons.
  */
-a {
-	&.button {
-		background-color: $color-grey-light;
-		border-radius: $spacing-unit;
-		color: $text-color;
-		padding: 3px 8px;
-		text-decoration: none;
+.post .post-meta a.button,
+a.button {
+	border: 1px solid $color-blue;
+	border-radius: $spacing-unit;
+	color: $color-blue;
+	font-size: 1.143em;
+	padding: 4px 20px;
+	text-decoration: none;
 
-		&:hover {
-			background-color: $color-blue;
-			color: $color-white-semilight !important;
-		}
-	}
-
-	&.button-primary {
+	&:hover {
 		background-color: $color-blue;
-		color: $color-white-semilight;
-		font-size: $small-font-size;
-		text-transform: uppercase;
-
-		&:hover {
-			background-color: $color-blue-dark;
-		}
-	}
-
-	&.post-link {
-		display: inline-block;
-		line-height: 1.2;
-		padding: 0 8px;
+		color: $color-white-semilight !important;
 	}
 }
 

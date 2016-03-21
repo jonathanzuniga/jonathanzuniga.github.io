@@ -9,16 +9,14 @@ layout: default
 			<h1 class="post-title">{{ page.title }}</h1>
 		{% endif %}
 
-		<h3 class="post-date">
-			<time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%a %d %B %Y" }}</time>
-		</h3>
+		<p>
+			Published on <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d %b, %Y" }}</time>.
+		</p>
 	</header>
 
 	<div class="post-content">
 		{{ content }}
 	</div>
-
-	<div class="clearfix"></div>
 
 	<div class="post-meta">
 		<p>

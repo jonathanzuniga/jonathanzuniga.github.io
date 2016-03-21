@@ -1,123 +1,37 @@
 <aside id="sidebar">
 	<div class="block">
-		{% if page.path contains '_posts' %}
-			<h3>About this post</h3>
-
-			<p>
-				<!-- Look the author details up from the site config. -->
-				{% assign author = site.authors[page.author] %}
-				<!-- Output author details if some exist. -->
-				{{ author.name }}
-				posted {{ page.content | number_of_words }} words in
-				{% assign sorted_categories = page.categories | sort %}
-				{% for category in sorted_categories %}
-					<a href="/categories/#{{ category }}">{{ category | replace: '-',' ' }}</a>
-				{% endfor %}
-				on {{ page.date | date: "%d %b, %Y" }} 
-				at {{ page.date | date: "%I:%M %p" }}.
-
-				{% if page.update %}
-					Last updated
-					on {{ page.update | date: "%d %b, %Y" }} 
-					at {{ page.update | date: "%I:%M %p" }}.
-				{% endif %}
-			</p>
-
-			<p>
-				Tags for this post: 
-				{% assign sorted_tags = page.tags | sort %}
-				{% for tag in sorted_tags %}
-					<a href="/tags/#{{ tag }}">{{ tag | replace: '-',' ' }}</a>
-				{% endfor %}
-			</p>
-		{% else %}
-			<h3>About this site</h3>
-
-			<p>Hi! <a href="{{ site.baseurl }}/about">I'm Jonathan</a>, and I use this space to collect my thoughts about programming and daily life. More on the <a href="/about">about page</a>.</p>
-		{% endif %}
-
-		<hr>
-
-		<h3>Featured posts</h3>
-
-		<p>Hand-picked, just for you.</p>
-
-		<p>
-			<a href="/mobile-software-development/2015/11/29/algunas-reflexiones-despues-de-casi-un-ano-usando-xamarin.html">Algunas reflexiones después de casi un año usando Xamarin</a>
-
-			<span class="sep-dot text-grey">•</span>
-
-			<a href="/video-games/2016/01/16/2016-01-16-doom-regresa-con-un-nuevo-nivel-22-anos-despues.html">DOOM regresa con un nuevo nivel 22 años despues</a>
-
-			<span class="sep-dot text-grey">•</span>
-
-			<a href="/memories/2016/03/05/the-magical-xamarin.html">The Magical Xamarin</a>
-		</p>
-
-		<p>
-			<a class="button" href="/categories">Browse by category</a>
-		</p>
-
-		<hr>
-	</div>
-
-	<div class="block">
-		<h3>Recommended reading</h3>
-
-		{% assign book = site.books.first %}
-		<p>
-			<a class="book-cover-container" href="{{ book.link }}" target="_blank">
-				<img class="book-cover" src="/images/reading/{{ book.cover }}">
-			</a>
-		</p>
-
-		<p>
-			<a href="{{ book.link }}" target="_blank">The Design of Everyday Things</a>
-			<br>
-			Donald A. Norman
-		</p>
-
-		<p>
-			<a class="button" href="{{ book.link }}">Buy from Amazon</a>
-		</p>
-
-		<hr>
-
-		<h3>Find me elsewhere</h3>
+		<h4>Links</h4>
 
 		<ul class="social-media-list">
 			{% if site.github_username %}
 				<li>
 					<a href="https://github.com/{{ site.github_username }}" target="_blank">
-						<i class="fa fa-lg fa-github-alt"></i>
-					</a>
-					<a href="https://github.com/{{ site.github_username }}" target="_blank">
-						Fork me on GitHub
+						GitHub
 					</a>
 				</li>
 			{% endif %}
 			{% if site.twitter_username %}
 				<li>
 					<a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
-						<i class="fa fa-lg fa-twitter"></i>
-					</a>
-					<a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
-						Follow me on Twitter
+						Twitter
 					</a>
 				</li>
 			{% endif %}
 			<li>
 				<a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-					<i class="fa fa-lg fa-rss"></i>
-				</a>
-				<a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-					Subscribe via RSS Feed
+					Subscribe
 				</a>
 			</li>
 		</ul>
+	</div>
 
-		<hr>
-		
-		<p>This is a personal web page. Things said here do not represent the position of my employer.</p>
+	<div class="block">
+		<h4>Recent posts</h4>
+
+		<ul>
+			<li>
+				<a href=""></a>
+			</li>
+		</ul>
 	</div>
 </aside>

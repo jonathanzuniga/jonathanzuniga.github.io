@@ -1,39 +1,9 @@
 <header class="site-header">
   <div class="wrapper">
-    {% assign current = page.url | downcase | split: '/' %}
-    <nav id="nav">
-      <ul>
-        <li>
-          <a href="{{ site.baseurl }}/">Jonathan Zúñiga</a>
-        </li>
-        <li>
-          <a {% if page.url == '/index.html' %}class="current" {% endif %}href="{{ site.baseurl }}/">Index</a>
-        </li>
-        <li>
-          <a {% if current[1] == 'about' %}class="current" {% endif %}href="{{ site.baseurl }}/about">About</a>
-        </li>
-        <li>
-          <a {% if current[1] == 'categories' %}class="current" {% endif %}href="{{ site.baseurl }}/categories">Categories</a>
-        </li>
-        <li>
-          <a {% if current[1] == 'tags' %}class="current" {% endif %}href="{{ site.baseurl }}/tags">Tags</a>
-        </li>
-        <li>
-          <a href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe</a>
-        </li>
-      </ul>
-    </nav>
+    <h1 class="site-title">
+      <a href="{{ site.baseurl }}/">jonathanzúñiga</a>
+    </h1>
 
     <hr>
-
-    <!-- {% if page.url == '/index.html' %}
-      <p class="lead">
-        Hi! <a href="{{ site.baseurl }}/about">I'm Jonathan</a>, and I use this space to collect my thoughts about programming and daily life.
-      </p>
-    {% elsif current[1] == 'categories' %}
-      
-    {% elsif current[1] == 'reading' %}
-
-    {% endif %} -->
   </div>
 </header>

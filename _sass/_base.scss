@@ -36,14 +36,11 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-
-h1, h2, h3, h4, h5, h6 {
-	margin-bottom: $spacing-unit / 3;
-}
+h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 ul, ol, dl, figure,
 %vertical-rhythm {
-	margin-bottom: $spacing-unit / 2;
+	margin-bottom: $spacing-unit / 3;
 }
 
 
@@ -92,7 +89,7 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font-family;
-	font-weight: bold;
+	font-weight: 500;
 }
 
 
@@ -102,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
 	color: $color-blue;
-	text-decoration: underline;
+	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
@@ -115,6 +112,7 @@ a {
 
 	&:hover {
 		color: $color-blue-dark;
+		text-decoration: underline;
 	}
 }
 
@@ -130,10 +128,9 @@ a {
  * Blockquotes
  */
 blockquote {
-	border-left: 1px solid $color-grey-semilight;
-	font-style: none;
-	margin-left: $spacing-unit / 6;
-	padding-left: $spacing-unit / 3;
+	border-left: 5px solid $color-grey-light;
+	font-style: italic;
+	padding-left: $spacing-unit / 2;
 
 	> :last-child {
 		margin-bottom: 0;
@@ -177,8 +174,8 @@ pre {
 .wrapper {
 	max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
 	max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-	margin-right: auto;
-	margin-left: auto;
+	// margin-right: auto;
+	// margin-left: auto;
 	padding-right: $spacing-unit + 10;
 	padding-left: $spacing-unit + 10;
 	@extend %clearfix;
