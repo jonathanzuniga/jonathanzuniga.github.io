@@ -3,9 +3,7 @@ author: jonathan
 categories: mobile-software-development
 date: 2015-11-29 14:50:00
 layout: post
-tags: [xamarin, mobile-app-dev]
 title: "Algunas reflexiones después de casi un año usando Xamarin"
-update: 2015-12-11 10:35:00
 ---
 En un principio de existencia me preguntaba si las aplicaciones móviles realmente merecen ser desarrolladas de forma nativa. Si fuera asi ¿conseguiría aprender a un buen nivel de comprensión dos o tres diferentes lenguajes de programación para hacer la misma tarea a la vez? ¿alcanzaria a mantenerme actualizado? Sería muy abrumador ¿no les parece? ¡Ah! ¿Pero por qué no ir más allá? soñar con una alternativa donde tengamos solamente un proyecto por aplicación, donde haya un único equipo de desarrollo y lo mejor de todo ¡que esté hecho con un solo lenguaje!
 

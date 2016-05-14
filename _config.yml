@@ -20,6 +20,5 @@ authors:
 
 excerpt_separator: <!--more-->
 
-# Book collections
-collections:
-  - books
+# Custom permalink.
+permalink: /:title

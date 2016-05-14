@@ -9,14 +9,20 @@
   <body>
     {% include header.html %}
 
-    <div class="page-content">
+    <main class="page-content" id="page-content">
       <div class="wrapper">
-        <section id="main">
+        <section>
           {{ content }}
         </section>
       </div>
-    </div>
+    </main>
 
     {% include footer.html %}
+
+    <script
+      src="https://code.jquery.com/jquery-1.12.3.min.js"
+      integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="
+      crossorigin="anonymous"></script>
+    <script src="{{ '/js/scripts.js' | prepend: site.baseurl }}" type="text/javascript"></script>
   </body>
 </html>

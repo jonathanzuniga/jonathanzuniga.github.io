@@ -1,17 +1,50 @@
 ---
 layout: default
 ---
-<article class="post">
-	<header class="post-header">
-		<h2>Recent posts</h2>
-	</header>
+{% for post in site.posts %}
+	<article class="post">
+		<header class="post-header">
+			<p>
+				/
+				<a class="permalink" href="{{ post.url }}">
+					<strong>{{ post.url | remove_first:'/' }}</strong>
+				</a>
+				<time datetime="{{ post.date | date: "%Y-%m-%d" }}">
+					{% assign months = 
+						"Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|Octubre|Noviembre|Diciembre" | 
+						split: "|"
+					%}
+					{% assign m = post.date | date: "%-m" | minus: 1 %}
+					{% assign day = post.date | date: "%d" %}
+					{% assign month = months[m] %}
+					{% assign year = post.date | date: "%Y" %}
+					{{ month }} {{ day }}, {{ year }}
 
-	<ul class="posts">
-		{% for post in site.posts %}
-			<li>
-				<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d %b, %Y" }}</time>
-				<a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
-			</li>
-		{% endfor %}
-	</ul>
-</article>
+					<!-- {% assign m = post.date | date: "%m" %}
+					{% case m %}
+					  {% when '01' %}Enero
+					  {% when '02' %}Febrero
+					  {% when '03' %}Marzo
+					  {% when '04' %}Abril
+					  {% when '05' %}Mayo
+					  {% when '06' %}Junio
+					  {% when '07' %}Julio
+					  {% when '08' %}Agosto
+					  {% when '09' %}Septiembre
+					  {% when '10' %}Octubre
+					  {% when '11' %}Noviembre
+					  {% when '12' %}Diciembre
+					{% endcase %}
+					{{ post.date | date: "%d" }},
+					{{ post.date | date: "%Y" }} -->
+				</time>
+			</p>
+
+			<h2 class="post-title">{{ post.title }}</h2>
+		</header>
+
+		<div class="post-content">
+			{{ post.excerpt }}
+		</div>
+	</article>
+{% endfor %}

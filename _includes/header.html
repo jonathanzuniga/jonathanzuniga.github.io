@@ -1,9 +1,19 @@
-<header class="site-header">
+<header class="site-header{% if page.layout == 'post' %} no-cover{% endif %}">
+<!-- 	<nav id="nav">
+		<a class="button button-ghost" href="{{ site.baseurl }}/">
+			<i class="fa fa-lg fa-angle-left"></i> Inicio
+		</a>
+		<a class="button button-ghost pull-right" href="{{ '/feed.xml' | prepend: site.baseurl }}">
+			<i class="fa fa-rss"></i> Suscribir
+		</a>
+	</nav> -->
   <div class="wrapper">
-    <h1 class="site-title">
-      <a href="{{ site.baseurl }}/">jonathanzúñiga</a>
-    </h1>
+		<div class="site-header-content">
+  		<img class="welcome-image" src="/images/hi.png">
+		</div>
 
-    <hr>
+		<a class="scroll-down" href="#page-content">
+			<i class="fa fa-angle-down"></i>
+		</a>
   </div>
 </header>

@@ -3,24 +3,29 @@ layout: default
 ---
 <article class="post">
 	<header class="post-header">
-		{% if page.link %}
-			<h2 class="post-title"><a href="{{ page.link }}">{{ page.title }}</a></h2>
-		{% else %}
-			<h2 class="post-title">{{ page.title }}</h2>
-		{% endif %}
-
 		<p>
-			Published on <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d %b, %Y" }}</time>.
+			/
+			<a class="permalink" href="{{ page.url }}">
+				<strong>{{ page.url | remove_first:'/' }}</strong>
+			</a>
+
+			<time datetime="{{ post.date | date: "%Y-%m-%d" }}">
+				{% assign months = 
+					"Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|Octubre|Noviembre|Diciembre" | 
+					split: "|"
+				%}
+				{% assign m = page.date | date: "%-m" | minus: 1 %}
+				{% assign day = page.date | date: "%d" %}
+				{% assign month = months[m] %}
+				{% assign year = page.date | date: "%Y" %}
+				{{ month }} {{ day }}, {{ year }}
+			</time>
 		</p>
+
+		<h2 class="post-title">{{ page.title }}</h2>
 	</header>
 
 	<div class="post-content">
 		{{ content }}
-	</div>
-
-	<div class="post-meta">
-		<p>
-			If you'd like to keep in touch, I tweet <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">@{{ site.twitter_username }}</a> on Twitter. You can also subscribe via RSS <a href="{{ "/feed.xml" | prepend: site.baseurl }}">here</a> to catch the latest blog posts.
-		</p>
 	</div>
 </article>
