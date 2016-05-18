@@ -1,12 +1,5 @@
-<header class="site-header{% if page.layout == 'post' %} no-cover{% endif %}">
-<!-- 	<nav id="nav">
-		<a class="button button-ghost" href="{{ site.baseurl }}/">
-			<i class="fa fa-lg fa-angle-left"></i> Inicio
-		</a>
-		<a class="button button-ghost pull-right" href="{{ '/feed.xml' | prepend: site.baseurl }}">
-			<i class="fa fa-rss"></i> Suscribir
-		</a>
-	</nav> -->
+<header class="site-header{% if page.layout == 'post' or 
+	page.layout == 'page' %} no-cover{% endif %}">
   <div class="wrapper">
 		<div class="site-header-content">
   		<img class="welcome-image" src="/images/hi.png">

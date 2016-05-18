@@ -12,8 +12,6 @@ hr {
 	margin: ($spacing-unit / 2) 0;
 }
 
-
-
 /* ==========================================================================
 	 Site header.
 	 ========================================================================== */
@@ -24,10 +22,6 @@ hr {
 	overflow: hidden;
 	position: relative;
 	width: 100%;
-
-	#nav {
-		padding: 35px 40px 0;
-	}
 
 	.wrapper {
 		height: 100%;
@@ -51,7 +45,8 @@ hr {
 		.scroll-down {
 			-webkit-animation: bounce 4s 2s infinite;
 			animation: bounce 4s 2s infinite;
-			bottom: 45px;
+			border-bottom: none;
+			bottom: 32px;
 			color: rgba(255, 255, 255, 0.7);
 			display: block;
 			font-size: 34px;
@@ -90,19 +85,42 @@ hr {
 	}
 }
 
+.site-title {
+	// font-size: 2em;
+	// font-weight: bold;
+	margin-bottom: $spacing-unit * 2;
+	text-transform: lowercase;
+
+	a,
+	a:visited {
+		// border-bottom: none;
+		// color: $text-color;
+		// text-decoration: none;
+	}
+}
+
+.site-description {
+	font-weight: 300;
+	margin-bottom: $spacing-unit;
+}
+
 
 
 /**
  * Posts.
  */
 .page-content {
-	padding-top: $spacing-unit * 2;
+	padding-top: $spacing-unit;
 }
 
 .post {
 	margin-bottom: $spacing-unit * 2;
 
 	.post-header {
+		> p {
+			margin-bottom: 0;
+		}
+
 		.permalink {
 	    margin-right: 1em;
 		}
@@ -133,40 +151,10 @@ hr {
  * Footer.
  */
 #footer {
+	border-top: 1px solid $color-grey-semilight;
 	font-size: $small-font-size;
-}
-
-
-
-
-/* ==========================================================================
-	 Buttons
-	 ========================================================================== */
-a.button {
-	border: 1px solid $color-white-light;
-	border-radius: $spacing-unit / 10;
-	color: $color-blue;
-	font-size: $small-font-size;
-	padding: 4px 20px;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	transition: all 0.2s ease;
-	text-decoration: none;
-	text-transform: uppercase;
-
-	&:hover {
-		border: 1px solid $color-blue;
-	}
-
-	i {
-		padding-right: 5px;
-
-		&.fa-lg.fa-angle-left {
-	    vertical-align: -10%;
-	  }
-	}
+	opacity: 0.6;
+	padding-top: $spacing-unit / 2;
 }
 
 
@@ -196,10 +184,6 @@ a.button {
 
 .sep-dot {
 	margin: 0 $spacing-unit / 10;
-}
-
-.text-grey {
-	color: $color-grey-semilight;
 }
 
 

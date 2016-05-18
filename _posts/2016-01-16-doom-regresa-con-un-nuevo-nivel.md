@@ -13,8 +13,7 @@ La noticia llegó como suele suceder en estos días, a través de [Twitter][twee
 
 id software fue fundada por 4 personas, pero fueron los dos *Johns* quienes siempre atrajeron a los titulares, no solo por el contraste entre Carmack, el brillante programador y Romero, el diseñador *rockstar*.
 
-Desde el principio, el nivel esta bien conseguido como el climax del primer episodio. Apareces en una habitación observando un soldado a la distancia, el enemigo mas debil del juego. En mi primer intento, en una acometida de emoción corrí hacia adelante y fui destripado por dos sargentos armados con escopeta y un demonio camuflado. Veintidós años de elaboración, todo había durado segundos. El mensaje de Romero era claro como el agua: Bienvenido de nuevo.
+Desde el principio, el nivel esta bien conseguido como el climax del primer episodio. Apareces en una habitación observando un soldado a la distancia, el enemigo mas debil del juego. En mi primer intento, en una acometida de emoción corrí hacia adelante y fui destripado por dos sargentos armados con escopeta y un demonio camuflado. Veintidós años de elaboración, todo había durado segundos. El mensaje de Romero era claro como el agua: <a href="https://www.flickr.com/photos/jonathan_zuniga/25541442792/in/album-72157665543500781/" title="Tech Gone Bad">Bienvenido de nuevo</a>.
 
-<a href="https://www.flickr.com/photos/jonathan_zuniga/25541442792/in/album-72157665543500781/" title="Tech Gone Bad"><img src="https://farm2.staticflickr.com/1472/25541442792_596a77bae9_o.png" alt="Tech Gone Bad"></a>
 
 [tweet]: https://twitter.com/romero/status/688054778790834176

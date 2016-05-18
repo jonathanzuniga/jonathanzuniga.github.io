@@ -17,7 +17,7 @@ Si tienes la intención de crear una aplicación con una interfaz de usuario esp
 
 El [costo][xamarin-price] es otro tema, aunque ciertamente no es nada barato esto depende de la cantidad de desarrolladores que tengas en tu equipo y de lo que esperas ahorrarte usandolo.
 
-En general me da la sensacion de que lo que dicen los chicos de Xamarin es cierto, pero también es verdad que no es fácil. Para los más experimentados programadores en .net no va a ser un problema y si, si puedes usar [LINQ][linq], expresiones lambda, programación asíncrona (async y await) y casi todo lo que te gusta de tu *framework* favorito.
+En general me da la sensación de que lo que dicen los chicos de Xamarin es cierto, pero también es verdad que no es fácil. Para los más experimentados programadores en .net no va a ser un problema y si, si puedes usar [LINQ][linq], expresiones lambda, programación asíncrona (async y await) y casi todo lo que te gusta de tu *framework* favorito.
 
 Cada vez hay más desarrolladores que lo ven como una gran alternativa, hay una comunidad activa y en crecimiento, otras empresas han comenzado a unirse y apoyar seriamente el proyecto.
 

@@ -12,6 +12,20 @@
     <main class="page-content" id="page-content">
       <div class="wrapper">
         <section>
+          <h3 class="site-title">
+            <a href="{{ site.baseurl }}/">Jonathan Zúñiga</a>
+            /
+            <a href="{{ site.baseurl }}/about">Autor</a>
+          </h3>
+
+          {% comment %}
+          {% unless page.layout == 'page' or page.layout == 'post' %}
+          <h1 class="site-description">
+            {{ site.description }}
+          </h1>
+          {% endunless %}
+          {% endcomment %}
+
           {{ content }}
         </section>
       </div>
