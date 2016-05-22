@@ -1,6 +1,7 @@
 ---
 layout: page
-permalink: /about/
-title: About
+permalink: /autor
+title: Autor
 ---
-Coming soon.
+
+Próximamente.

@@ -1,12 +1,18 @@
-<header class="site-header{% if page.layout == 'post' or 
-	page.layout == 'page' %} no-cover{% endif %}">
+<header class="site-header">
   <div class="wrapper">
-		<div class="site-header-content">
-  		<img class="welcome-image" src="/images/hi.png">
-		</div>
+  	<h3 class="site-title pull-left">
+			<a href="{{ site.baseurl }}/">{{ site.title }}</a>
+		</h3>
 
-		<a class="scroll-down" href="#page-content">
-			<i class="fa fa-angle-down"></i>
-		</a>
+		<nav class="nav pull-right">
+			<ul>
+				<li>
+					<a href="{{ site.baseurl }}/autor">autor</a>
+				</li>
+				<li>
+					<a href="{{ "/feed.xml" | prepend: site.baseurl }}">rss</a>
+				</li>
+			</ul>
+		</nav>
   </div>
 </header>

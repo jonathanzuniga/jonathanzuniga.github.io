@@ -9,7 +9,7 @@ $base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $title-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $heading-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $mono-font-family: Menlo, Consolas, monospace;
-$base-font-size: 16px;
+$base-font-size: 14px;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.4;
 $spacing-unit: 30px;
@@ -36,9 +36,9 @@ $color-yellow: #ff0;
 
 
 // Width of the content area.
-$content-width:	780px;
+$content-width:	100%;
 $on-palm:				600px;
-$on-laptop:			780px;
+$on-laptop:			960px;
 
 
 

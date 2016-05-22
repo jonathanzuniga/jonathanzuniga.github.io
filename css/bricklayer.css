@@ -1,0 +1,33 @@
+.bricklayer {
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+.bricklayer-column {
+	padding: 0 10px;
+}
+
+@media screen and (max-width: 960px) {
+	.bricklayer {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+  .bricklayer-column-sizer {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bricklayer-column-sizer {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .bricklayer-column-sizer {
+    width: 25%;
+  }
+}

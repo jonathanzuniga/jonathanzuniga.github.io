@@ -1,27 +1,32 @@
 ---
 layout: default
 ---
-<article class="post">
+
+<article class="full post 
+	{% assign words = page.content | number_of_words %}
+	{% if words < 300 or page.categories contains 'programación' %}
+		one-column
+	{% else %}
+		four-columns
+	{% endif %}
+	">
 	<header class="post-header">
-		<p>
-			<a class="permalink" href="{{ page.url }}">
-				<strong>{{ page.url | remove_first:'/' }}</strong>
-			</a>
+		<h1 class="post-title">{{ page.title }}</h1>
 
-			<time datetime="{{ post.date | date: "%Y-%m-%d" }}">
-				{% assign months = 
-					"Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|Octubre|Noviembre|Diciembre" | 
-					split: "|"
-				%}
-				{% assign m = page.date | date: "%-m" | minus: 1 %}
-				{% assign day = page.date | date: "%d" %}
-				{% assign month = months[m] %}
-				{% assign year = page.date | date: "%Y" %}
-				{{ month }} {{ day }}, {{ year }}
-			</time>
+		<p class="post-meta">
+			<small>
+				{% assign sorted_categories = page.categories | sort %}
+				{% for category in sorted_categories %}
+					#{{ category }} / 
+				{% endfor %}
+
+				{% include read_time.html %} / 
+
+				<time datetime="{{ page.date | date: "%Y-%m-%d" }}">
+					{{ page.date | date: "%d-%m-%Y" }}
+				</time>
+			</small>
 		</p>
-
-		<h2 class="post-title">{{ page.title }}</h2>
 	</header>
 
 	<div class="post-content">

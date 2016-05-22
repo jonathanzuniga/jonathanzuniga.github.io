@@ -1,49 +1,53 @@
 ---
 layout: default
 ---
-{% for post in site.posts %}
-	<article class="post">
-		<header class="post-header">
-			<p>
-				<a class="permalink" href="{{ post.url }}">
-					<strong>{{ post.url | remove_first:'/' }}</strong>
-				</a>
-				<time datetime="{{ post.date | date: "%Y-%m-%d" }}">
-					{% assign months = 
-						"Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|Octubre|Noviembre|Diciembre" | 
-						split: "|"
-					%}
-					{% assign m = post.date | date: "%-m" | minus: 1 %}
-					{% assign day = post.date | date: "%d" %}
-					{% assign month = months[m] %}
-					{% assign year = post.date | date: "%Y" %}
-					{{ month }} {{ day }}, {{ year }}
+<div id="posts" class="bricklayer">
+	{% for post in site.posts %}
+		<article class="post">
+			<a href="{{ post.url }}">
+				<header class="post-header">
+					<h2 class="post-title">{{ post.title }}</h2>
 
-					<!-- {% assign m = post.date | date: "%m" %}
-					{% case m %}
-					  {% when '01' %}Enero
-					  {% when '02' %}Febrero
-					  {% when '03' %}Marzo
-					  {% when '04' %}Abril
-					  {% when '05' %}Mayo
-					  {% when '06' %}Junio
-					  {% when '07' %}Julio
-					  {% when '08' %}Agosto
-					  {% when '09' %}Septiembre
-					  {% when '10' %}Octubre
-					  {% when '11' %}Noviembre
-					  {% when '12' %}Diciembre
-					{% endcase %}
-					{{ post.date | date: "%d" }},
-					{{ post.date | date: "%Y" }} -->
-				</time>
-			</p>
+					<p class="post-meta">
+						<small>
+							{% assign sorted_categories = post.categories | sort %}
+							{% for category in sorted_categories %}
+								#{{ category }} / 
+							{% endfor %}
 
-			<h2 class="post-title">{{ post.title }}</h2>
-		</header>
+							<span class="reading-time" title="Tiempo estimado de lectura">
+							  {% assign words = post.content | number_of_words %}
+							  {% if words < 360 %}
+							    1 min.
+							  {% else %}
+							    {{ words | divided_by: 180 }} mins.
+							  {% endif %}
+							</span> / 
 
-		<div class="post-content">
-			{{ post.content }}
-		</div>
-	</article>
-{% endfor %}
+							<time datetime="{{ post.date | date_to_xmlschema }}">
+								{{ post.date | date: "%d-%m-%Y" }}
+							</time>
+						</small>
+					</p>
+				</header>
+
+				{% if post.image %}
+					<img class="post-image" src="{{ post.image }}">
+				{% else %}
+			    {% assign images = post.content | split:"<img " %}
+			    {% for image in images %}
+			      {% if image contains 'src' %}
+			        {% assign html = image | split:"/>" | first %}
+			        <img class="post-image" {{ html }} />
+			        {% break %}
+			      {% endif %}
+			    {% endfor %}
+			  {% endif %}
+
+				<div class="post-content">
+					{{ post.excerpt | strip_html }}
+				</div>
+			</a>
+		</article>
+	{% endfor %}
+</div>
