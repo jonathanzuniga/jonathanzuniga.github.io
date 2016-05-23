@@ -7,6 +7,9 @@ body {
 }
 
 hr {
+	border: none;
+	border-bottom: 1px solid $color-grey-semilight;
+	clear: both;
 	margin: ($spacing-unit / 2) 0;
 }
 
@@ -51,59 +54,64 @@ hr {
 
 
 
-/**
- * Posts.
- */
-#posts {
-	.post {
-		a {
-			color: $text-color;
+
+/* ==========================================================================
+	 Content structure.
+	 ========================================================================== */
+#main {
+	float: left;
+	width: 66.5%;
+}
+
+#sidebar {
+	float: right;
+	width: 32.5%;
+}
+
+
+
+/* ==========================================================================
+	 Main.
+	 ========================================================================== */
+#main {
+	.main-title-container {
+		background-color: $text-color;
+		color: $color-white;
+		margin-bottom: $spacing-unit;
+		padding: ($spacing-unit / 10) ($spacing-unit - 10);
+
+		h2 {
+			display: inline;
+			margin-right: $spacing-unit;
+		}
+	}
+
+	#posts {
+		.post {
+			margin-bottom: $spacing-unit / 2;
+
+			.reading-time {
+				background-color: $color-blue;
+				color: $color-white;
+				float: right;
+				padding: 0 5px;
+			}
+
+			.post-title {
+				margin-bottom: 0;
+			}
 		}
 	}
 }
 
 .post {
-	margin-bottom: $spacing-unit;
-
 	&.full {
-		&.four-columns {
-			-webkit-columns: 4 150px;
-			-moz-columns: 4 150px;
-			columns: 4 150px;
-			-webkit-column-gap: 20px;
-			-moz-column-gap: 20px;
-			column-gap: 20px;
-		}
-
-		&.one-column {
-			max-width: 640px;
-		}
-	}
-
-	.post-image {
-		margin-bottom: $spacing-unit / 2;
 	}
 
 	.post-header {
 		.post-title {
-			font-size: 1.8em;
 			line-height: 1.1;
 			margin-bottom: $spacing-unit / 6;
-
-			a,
-			a:visited,
-			a:hover {
-				color: $text-color;
-				text-decoration: none;
-			}
-
-			b {
-				font-weight: 500;
-			}
-		}
-
-		.post-meta {
-			font-family: $mono-font-family;
 		}
 	}
 
@@ -111,6 +119,22 @@ hr {
 	}
 }
 
+
+
+/* ==========================================================================
+	 Sidebar.
+	 ========================================================================== */
+#sidebar {
+	.sidebar-title-container {
+		background-color: $color-grey-light;
+		padding: ($spacing-unit / 10) ($spacing-unit - 10);
+
+		h2 {
+			display: inline;
+			margin-right: $spacing-unit;
+		}
+	}
+}
 
 
 /*
@@ -141,15 +165,11 @@ hr {
 
 .pull-left {
 	float: left;
-	margin-right: $spacing-unit / 2;
+	margin-right: $spacing-unit / 3;
 }
 .pull-right {
 	float: right;
-	margin-left: $spacing-unit / 2;
-}
-
-.sep-dot {
-	margin: 0 $spacing-unit / 10;
+	margin-left: $spacing-unit / 3;
 }
 
 

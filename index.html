@@ -1,6 +1,64 @@
 ---
 layout: default
 ---
+
+<div class="main-title-container">
+	<h2>Publicaciones</h2>
+
+	<span>Listado de publicaciones recientes</span>
+</div>
+
+<div id="posts">
+	{% for post in site.posts %}
+		<article class="post">
+			<!-- <div class="post-left">
+				{% if post.image %}
+					<img class="post-image" src="{{ post.image }}">
+				{% else %}
+			    {% assign images = post.content | split:"<img " %}
+			    {% for image in images %}
+			      {% if image contains 'src' %}
+			        {% assign html = image | split:"/>" | first %}
+			        <img class="post-image" {{ html }} />
+			        {% break %}
+			      {% endif %}
+			    {% endfor %}
+			  {% endif %}
+			</div> -->
+
+			<span class="reading-time" title="Tiempo estimado de lectura">
+			  {% assign words = post.content | number_of_words %}
+			  {% if words < 360 %}
+			    1 min.
+			  {% else %}
+			    {{ words | divided_by: 180 }} mins.
+			  {% endif %}
+			</span>
+
+			<h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+
+	  	<p class="post-meta">
+				<small>
+					Publicado el 
+					<time datetime="{{ post.date | date_to_xmlschema }}">
+						{{ post.date | date: "%d-%m-%Y" }}
+					</time>
+
+					<span class="post-categories">
+						{% assign sorted_categories = post.categories | sort %}
+						{% for category in sorted_categories %}
+							#{{ category }}
+						{% endfor %}
+					</span>
+				</small>
+			</p>
+		</article>
+
+		<hr>
+	{% endfor %}
+</div>
+
+<!-- 
 <div id="posts" class="bricklayer">
 	{% for post in site.posts %}
 		<article class="post">
@@ -50,4 +108,4 @@ layout: default
 			</a>
 		</article>
 	{% endfor %}
-</div>
+</div> -->

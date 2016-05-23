@@ -1,3 +1,3 @@
-$(document).ready(function() {
-	$('.bricklayer').bricklayer();
-});
+// $(document).ready(function() {
+
+// });

@@ -89,7 +89,7 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font-family;
-	font-weight: normal;
+	font-weight: 500;
 }
 
 
@@ -98,7 +98,6 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-	border-bottom: 1px solid $color-grey-semilight;
 	color: $color-blue;
 	text-decoration: none;
  	-webkit-transition: all 0.2s ease;
@@ -110,8 +109,8 @@ a {
 		color: $color-blue;
 	}
 	&:hover {
-		border-bottom: 1px solid $text-color;
 		color: $text-color;
+		text-decoration: underline;
 	}
 	&:active {
 	}

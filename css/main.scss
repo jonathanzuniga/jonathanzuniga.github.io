@@ -11,7 +11,7 @@ $heading-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $mono-font-family: Menlo, Consolas, monospace;
 $base-font-size: 14px;
 $small-font-size: $base-font-size * 0.875;
-$base-line-height: 1.4;
+$base-line-height: 1.5;
 $spacing-unit: 30px;
 
 
@@ -23,7 +23,8 @@ $brand-color: #2a7ae2;
 
 $color-grey: #828282;
 $color-grey-dark: darken($color-grey, 25%);
-$color-grey-light: lighten($color-grey, 42%);
+$color-grey-light: #eee;
+// $color-grey-light: lighten($color-grey, 42%);
 $color-grey-semilight: #ccc;
 
 $color-black: #000;
@@ -36,7 +37,7 @@ $color-yellow: #ff0;
 
 
 // Width of the content area.
-$content-width:	100%;
+$content-width:	960px;
 $on-palm:				600px;
 $on-laptop:			960px;
 

@@ -9,28 +9,22 @@
   <body>
     {% include header.html %}
 
-    <main>
-      {% if page.layout == 'page' or page.layout == 'post' %}
-        <div class="wrapper">
-          <section>
-            {{ content }}
-          </section>
-        </div>
-      {% else %}
+    <div class="wrapper">
+      <main id="main">
         <section>
           {{ content }}
         </section>
-      {% endif %}
-    </main>
+      </main>
+
+      {% include sidebar.html %}
+    </div>
 
     {% include footer.html %}
 
-    <script
+    <!--<script
       src="https://code.jquery.com/jquery-1.12.3.min.js"
       integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="
       crossorigin="anonymous"></script>
-    <script src="{{ '/js/bricklayer.min.js' | prepend: site.baseurl }}" type="text/javascript"></script>
-    <script src="{{ '/js/bricklayer.jquery.min.js' | prepend: site.baseurl }}" type="text/javascript"></script>
-    <script src="{{ '/js/scripts.js' | prepend: site.baseurl }}" type="text/javascript"></script>
+    <script src="{{ '/js/scripts.js' | prepend: site.baseurl }}" type="text/javascript"></script>-->
   </body>
 </html>
