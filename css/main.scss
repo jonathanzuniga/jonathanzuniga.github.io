@@ -10,7 +10,7 @@ $title-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $heading-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $mono-font-family: Menlo, Consolas, monospace;
 $base-font-size: 14px;
-$small-font-size: $base-font-size * 0.875;
+$small-font-size: $base-font-size * 0.813;
 $base-line-height: 1.5;
 $spacing-unit: 30px;
 
@@ -19,7 +19,7 @@ $spacing-unit: 30px;
 // Colors.
 $text-color: #222;
 $background-color: #fff;
-$brand-color: #2a7ae2;
+// $brand-color: #2a7ae2;
 
 $color-grey: #828282;
 $color-grey-dark: darken($color-grey, 25%);
@@ -28,11 +28,24 @@ $color-grey-light: #eee;
 $color-grey-semilight: #ccc;
 
 $color-black: #000;
-$color-blue: #00f;
-$color-magenta: #609;
-$color-red: #f00;
+$color-blue: #08c;
+$color-cyan: #00acc1;
 $color-white: #fff;
-$color-yellow: #ff0;
+
+// $bg-color-teal: #65ccb8;
+// $bg-color-purple: #b8a2fe;
+// $bg-color-lightred: #f48e7e;
+// $bg-color-cyan: #65b6cc;
+// $bg-color-red: #f75c4f;
+// $bg-color-yellow: #f1d01b;
+// $bg-color-green: #6dcc7a;
+// $bg-color-pink: #ec80af;
+// $bg-color-lightblue: #82c0d0;
+// $bg-color-blue: #81c1f2;
+// $bg-color-lightgreen: #a1d461;
+// $bg-color-deeporange: #f2693e;
+// $bg-color-indigo: #5783c8;
+// $bg-color-amber: #ffb244;
 
 
 

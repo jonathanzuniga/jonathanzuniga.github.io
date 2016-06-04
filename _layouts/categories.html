@@ -1,9 +1,12 @@
 ---
 layout: default
-title: Categories
 ---
 
-<div id="categories">
+<article id="categories" class="post">
+	<header class="page-header">
+		<h1 class="page-title">Categorías</h1>
+	</header>
+
 	{% capture categories %}
 		{% for category in site.categories %}
 			{{ category[0] }}
@@ -11,17 +14,30 @@ title: Categories
 	{% endcapture %}
 	{% assign sorted_categories = categories | split:' ' | sort %}
 	{% for category in sorted_categories %}
-		<h3 id="{{ category }}">{{ category | replace: '-',' ' }}</h3>
+		<div class="posts-under">
+			<h3 id="{{ category }}" class="posts-in">{{ category | replace: '-',' ' }}</h3>
 
-		<ul>
-		{% for post in site.categories[category] %}
-			<li>
-				<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d %b, %Y" }}</time>
-				<a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
-			</li>
-		{% endfor %}
-		</ul>
-
-		<hr>
+			{% for post in site.categories[category] %}
+				<div class="post-header">
+					<h3 class="post-title">
+						<a href="{{ post.url }}">{{ post.title }}</a>
+					</h3>
+					<p class="post-meta">
+						Publicado el 
+						<time datetime="{{ post.date | date_to_xmlschema }}">
+							{% assign months = 
+								"enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre" | 
+								split: "|"
+							%}
+							{% assign m = post.date | date: "%-m" | minus: 1 %}
+							{% assign day = post.date | date: "%d" %}
+							{% assign month = months[m] %}
+							{% assign year = post.date | date: "%Y" %}
+							{{ day }} de {{ month }}, {{ year }}.
+						</time>
+					</p>
+				</div>
+			{% endfor %}
+		</div>
 	{% endfor %}
-</div>
+</article>

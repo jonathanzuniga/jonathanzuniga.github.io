@@ -1,16 +1,18 @@
 <header class="site-header">
   <div class="wrapper">
-  	<h3 class="site-title pull-left">
-			<a href="{{ site.baseurl }}/">{{ site.title }}</a>
-		</h3>
-
-		<nav class="nav pull-right">
+		<nav class="nav">
 			<ul>
 				<li>
-					<a href="{{ site.baseurl }}/autor">autor</a>
+					<a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
 				</li>
 				<li>
-					<a href="{{ "/feed.xml" | prepend: site.baseurl }}">rss</a>
+					<a href="{{ site.baseurl }}/autor">Autor</a>
+				</li>
+				<li>
+					<a href="{{ site.baseurl }}/categorias">Categorías</a>
+				</li>
+				<li>
+					<a href="{{ "/feed.xml" | prepend: site.baseurl }}">Suscribirse</a>
 				</li>
 			</ul>
 		</nav>

@@ -10,6 +10,28 @@
     {% include header.html %}
 
     <div class="wrapper">
+      {% unless page.layout == 'page' or page.layout == 'post' %}
+<!--         <div id="introduction">
+          <div class="introduction-left">
+            <div class="site-description">
+              <span>{{ site.description }}</span>
+            
+              <a href="">leer más...</a>
+            </div>
+          </div>
+
+          <div class="introduction-right">
+            <div class="site-block">
+              <h2>Lorem ipsum</h2>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in condimentum massa.
+              </p>
+            </div>
+          </div>
+        </div> -->
+      {% endunless %}
+
       <main id="main">
         <section>
           {{ content }}
@@ -21,10 +43,10 @@
 
     {% include footer.html %}
 
-    <!--<script
+    <script
       src="https://code.jquery.com/jquery-1.12.3.min.js"
       integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="
       crossorigin="anonymous"></script>
-    <script src="{{ '/js/scripts.js' | prepend: site.baseurl }}" type="text/javascript"></script>-->
+    <script src="{{ '/js/scripts.js' | prepend: site.baseurl }}" type="text/javascript"></script>
   </body>
 </html>

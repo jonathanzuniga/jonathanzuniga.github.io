@@ -2,30 +2,30 @@
 layout: default
 ---
 
-<article class="full post 
-	{% assign words = page.content | number_of_words %}
-	{% if words < 300 or page.categories contains 'programación' %}
-		one-column
-	{% else %}
-		four-columns
-	{% endif %}
-	">
+<article class="full post">
 	<header class="post-header">
 		<h1 class="post-title">{{ page.title }}</h1>
 
-		<p class="post-meta">
-			<small>
+  	<p class="post-meta">
+			Publicado el 
+			<time datetime="{{ page.date | date_to_xmlschema }}">
+				{% assign months = 
+					"enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre" | 
+					split: "|"
+				%}
+				{% assign m = page.date | date: "%-m" | minus: 1 %}
+				{% assign day = page.date | date: "%d" %}
+				{% assign month = months[m] %}
+				{% assign year = page.date | date: "%Y" %}
+				{{ day }} de {{ month }}, {{ year }}.
+			</time>
+
+			<!-- <span class="post-categories">
 				{% assign sorted_categories = page.categories | sort %}
 				{% for category in sorted_categories %}
-					#{{ category }} / 
+					#{{ category }}
 				{% endfor %}
-
-				{% include read_time.html %} / 
-
-				<time datetime="{{ page.date | date: "%Y-%m-%d" }}">
-					{{ page.date | date: "%d-%m-%Y" }}
-				</time>
-			</small>
+			</span> -->
 		</p>
 	</header>
 

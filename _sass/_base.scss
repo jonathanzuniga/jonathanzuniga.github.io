@@ -89,7 +89,7 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font-family;
-	font-weight: 500;
+	font-weight: bold;
 }
 
 
@@ -98,19 +98,20 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-	color: $color-blue;
+	color: $color-cyan;
 	text-decoration: none;
- 	-webkit-transition: all 0.2s ease;
- 	-moz-transition: all 0.2s ease;
- 	-o-transition: all 0.2s ease;
- 	transition: all 0.2s ease;
+ 	-webkit-transition: color 0.2s ease;
+ 	-moz-transition: color 0.2s ease;
+ 	-ms-transition: color 0.2s ease;
+ 	-o-transition: color 0.2s ease;
+ 	transition: color 0.2s ease;
 
 	&:visited {
-		color: $color-blue;
+		color: $color-cyan;
 	}
 	&:hover {
 		color: $text-color;
-		text-decoration: underline;
+		text-decoration: none;
 	}
 	&:active {
 	}
@@ -140,7 +141,7 @@ pre,
 code {
 	font-family: $mono-font-family;
 	font-weight: normal;
-	border-radius: 4px;
+	// border-radius: 4px;
 	background-color: $color-grey-light;
 }
 
