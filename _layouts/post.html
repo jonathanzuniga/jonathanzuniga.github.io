@@ -4,29 +4,13 @@ layout: default
 
 <article class="full post">
 	<header class="post-header">
-		<h1 class="post-title">{{ page.title }}</h1>
+		<h3 class="post-date">
+			{% include date.html %}
+		</h3>
 
-  	<p class="post-meta">
-			Publicado el 
-			<time datetime="{{ page.date | date_to_xmlschema }}">
-				{% assign months = 
-					"enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre" | 
-					split: "|"
-				%}
-				{% assign m = page.date | date: "%-m" | minus: 1 %}
-				{% assign day = page.date | date: "%d" %}
-				{% assign month = months[m] %}
-				{% assign year = page.date | date: "%Y" %}
-				{{ day }} de {{ month }}, {{ year }}.
-			</time>
-
-			<!-- <span class="post-categories">
-				{% assign sorted_categories = page.categories | sort %}
-				{% for category in sorted_categories %}
-					#{{ category }}
-				{% endfor %}
-			</span> -->
-		</p>
+		<h4 class="post-title">
+			{{ page.title }}
+		</h4>
 	</header>
 
 	<div class="post-content">

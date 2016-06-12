@@ -89,7 +89,7 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font-family;
-	font-weight: bold;
+	font-weight: normal;
 }
 
 
@@ -98,8 +98,8 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-	color: $color-cyan;
-	text-decoration: none;
+	color: $color-black-85;
+	text-decoration: underline;
  	-webkit-transition: color 0.2s ease;
  	-moz-transition: color 0.2s ease;
  	-ms-transition: color 0.2s ease;
@@ -107,11 +107,10 @@ a {
  	transition: color 0.2s ease;
 
 	&:visited {
-		color: $color-cyan;
+		color: $color-black-85;
 	}
 	&:hover {
-		color: $text-color;
-		text-decoration: none;
+		color: $color-blue;
 	}
 	&:active {
 	}

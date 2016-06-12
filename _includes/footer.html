@@ -1,9 +1,27 @@
 <footer id="footer">
 	<div class="wrapper">
-		<hr>
-
-		<p>
-			<strong>{{ site.authors.jonathan.name }}</strong> &copy; 2015–{{ site.time | date: '%Y' }}
-		</p>
+		<ul>
+			<li>
+				<a href="{{ site.baseurl }}/autor">Autor</a>
+			</li>
+ 	    <li>
+ 	    	<a href="{{ "/feed.xml" | prepend: site.baseurl }}">Suscribirse</a>
+ 	    </li>
+			{% if site.github_username %}
+				<li>
+					<a href="https://github.com/{{ site.github_username }}/jonathanzuniga.github.io">Código fuente</a>
+				</li>
+			{% endif %}
+			{% if site.facebook_username %}
+				<li>
+					<a href="https://facebook.com/{{ site.facebook_username }}">f</a>
+				</li>
+ 	    {% endif %}
+			{% if site.twitter_username %}
+				<li>
+					<a href="https://twitter.com/{{ site.twitter_username }}">t</a>
+				</li>
+ 	    {% endif %}
+		</ul>
 	</div>
 </footer>

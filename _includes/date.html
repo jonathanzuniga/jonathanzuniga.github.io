@@ -1,0 +1,21 @@
+{% assign months = 
+	"enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre" | 
+	split: "|"
+%}
+{% if page.date %}
+	<time datetime="{{ page.date | date_to_xmlschema }}">
+		{% assign m = page.date | date: "%m" | minus: 1 %}
+		{% assign day = page.date | date: "%d" %}
+		{% assign month = months[m] %}
+		{% assign year = page.date | date: "%Y" %}
+		{{ day }} de {{ month }}, {{ year }}
+	</time>
+{% else %}
+	<time datetime="{{ post.date | date_to_xmlschema }}">
+		{% assign m = post.date | date: "%m" | minus: 1 %}
+		{% assign day = post.date | date: "%d" %}
+		{% assign month = months[m] %}
+		{% assign year = post.date | date: "%Y" %}
+		{{ day }} de {{ month }}, {{ year }}
+	</time>
+{% endif %}

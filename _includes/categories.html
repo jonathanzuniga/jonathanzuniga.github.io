@@ -1,0 +1,23 @@
+<div id="categories">
+	{% capture categories %}
+		{% for category in site.categories %}
+			{{ category[0] }}
+		{% endfor %}
+	{% endcapture %}
+	{% assign sorted_categories = categories | split:' ' | sort: 'date' | reverse %}
+	{% for category in sorted_categories limit: 5 %}
+		<h2 class="category-title">
+			{{ category | replace: '-',' ' }}
+		</h2>
+
+		<ul>
+			{% for post in site.categories[category] %}
+				<li>
+					<a href="{{ post.url }}">
+						{{ post.title }}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	{% endfor %}
+</div>
