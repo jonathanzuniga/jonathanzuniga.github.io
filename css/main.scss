@@ -20,20 +20,19 @@ $spacing-unit: 30px;
 
 // Colors.
 $text-color: #757575;
-$background-color: #ede7f6;
+$background: transparent linear-gradient(180deg, rgba(225, 190, 231, 0.6) 0%, #b2dfdb 100%) no-repeat scroll 0% 0%;
 
 $color-grey: #828282;
 $color-grey-dark: darken($color-grey, 25%);
 $color-grey-light: #eee;
-// $color-grey-light: lighten($color-grey, 42%);
 $color-grey-semilight: #ccc;
 
 $color-black: #000;
-$color-blue: #0258e2;
-$color-deeppurple: #373277;
-$color-deeppurple-dark: #262253;
+$color-black-10: rgba(0, 0, 0, 0.1);
 $color-black-20: rgba(0, 0, 0, 0.2);
 $color-black-85: rgba(0, 0, 0, 0.85);
+$color-blue: #0258e2;
+$color-teal: #4db6ac;
 $color-white: #fff;
 $color-white-20: rgba(255, 255, 255, 0.2);
 $color-white-40: rgba(255, 255, 255, 0.4);
