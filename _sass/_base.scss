@@ -14,12 +14,12 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
+	background-color: $background-color;
+	color: $text-color;
 	font-family: $base-font-family;
 	font-size: $base-font-size;
 	font-weight: normal;
 	line-height: $base-line-height;
-	color: $text-color;
-	background: $background;
 	-webkit-text-size-adjust: 100%;
 
 	b, strong {
@@ -89,7 +89,7 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font-family;
-	font-weight: normal;
+	font-weight: bold;
 }
 
 
@@ -98,8 +98,8 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-	color: $color-black-85;
-	text-decoration: underline;
+	color: $text-color;
+	text-decoration: none;
  	-webkit-transition: color 0.2s ease;
  	-moz-transition: color 0.2s ease;
  	-ms-transition: color 0.2s ease;
@@ -107,10 +107,10 @@ a {
  	transition: color 0.2s ease;
 
 	&:visited {
-		color: $color-black-85;
+		color: $text-color;
 	}
 	&:hover {
-		color: $color-blue;
+		color: $color-grey-600;
 	}
 	&:active {
 	}
@@ -141,7 +141,7 @@ code {
 	font-family: $mono-font-family;
 	font-weight: normal;
 	// border-radius: 4px;
-	background-color: $color-grey-light;
+	background-color: $color-grey-200;
 }
 
 code {

@@ -1,5 +1,33 @@
-<div id="archive">
-	{% assign months = 
+<aside id="sidebar">
+	<div id="sidebar-header">
+		Observaciones
+	</div>
+
+	<ul class="previous-posts">
+		{% assign months = 
+			"enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre" | 
+			split: "|"
+		%}
+		{% for post in site.categories['observaciones'] limit: 5 %}
+			<li>
+				<b>
+					<a href="{{ post.url }}">
+						<time datetime="{{ post.date | date_to_xmlschema }}">
+							{% assign m = post.date | date: "%m" | minus: 1 %}
+							{% assign day = post.date | date: "%d" %}
+							{% assign month = months[m] %}
+							{% assign year = post.date | date: "%Y" %}
+							{{ day }} de {{ month }}, {{ year }}
+						</time>
+					</a>
+				</b>
+				—
+				{{ post.content }}
+			</li>
+		{% endfor %}
+	</ul>
+
+	<!-- {% assign months = 
 		"enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre" | 
 		split: "|"
 	%}
@@ -60,5 +88,5 @@
 	      {% endif %}
 	    {% endif %}
 	  {% endif %}
-	{% endfor %}
-</div>
+	{% endfor %} -->
+</aside>

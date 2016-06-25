@@ -1,10 +1,26 @@
-<header class="site-header">
-  <div class="wrapper">
-  	<h1 class="site-title">
+<header id="site-header">
+  <div class="top wrapper">
+  	<h2 class="site-title">
 	  	<a href="{{ site.baseurl }}/">
 	  		{{ site.title }}
-	  		<em> – {{ site.description }}</em>
 	  	</a>
-  	</h1>
+  	</h2>
+
+  	<nav id="nav">
+  		<ul>
+    		<li>
+    			<a href="{{ site.baseurl }}/">Inicio</a>
+    		</li>
+    		<li>
+    			<a href="{{ site.baseurl }}/autor">Autor</a>
+    		</li>
+    		<li>
+    			<a href="{{ site.baseurl }}/categorias">Categorías</a>
+    		</li>
+    		<li>
+    			<a href="{{ "/feed.xml" | prepend: site.baseurl }}">Suscribirse</a>
+    		</li>
+  		</ul>
+  	</nav>
   </div>
 </header>

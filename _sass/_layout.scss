@@ -5,9 +5,11 @@ html {
 
 body {
 	height: 100%;
+	margin-bottom: $spacing-unit / 2;
+	margin-top: $spacing-unit / 2;
 }
 
-#page-background {
+#site-background {
   bottom: 0;
   left: 0;
   overflow: hidden;
@@ -19,7 +21,7 @@ body {
 
 hr {
 	border: none;
-	border-bottom: 1px solid $color-grey-semilight;
+	border-bottom: 1px solid $color-grey-400;
 	clear: both;
 	margin: ($spacing-unit / 2) 0;
 }
@@ -31,26 +33,64 @@ hr {
 /* ==========================================================================
 	 Site header.
 	 ========================================================================== */
-.site-header {
-	padding-bottom: $spacing-unit / 2;
-	padding-top: $spacing-unit;
+#site-header {
+	.top.wrapper {
+		margin-bottom: $spacing-unit;
+	}
 
 	.site-title {
+		display: inline-block;
 		font-size: 1.5em;
-		line-height: 1.2;
+		margin-bottom: 0;
+		margin-top: 10px;
 
-		a,
-		a:hover {
-			color: $color-black-85;
-			display: block;
-			text-decoration: none;
+		a {
+			font-weight: 800;
+		}
+	}
 
-			em {
-				font-style: normal;
-				opacity: 0.4;
-				text-transform: lowercase;
+	#nav {
+		float: right;
+		margin-top: 22px;
+
+		ul {
+			line-height: 1;
+			list-style: none;
+			margin: 0;
+
+			li {
+				// border-right: 1px solid $color-black-20;
+				display: inline-block;
+				margin-right: 20px;
+				// padding-right: 10px;
+
+				&:last-child {
+					// border-right: none;
+					margin-right: 0;
+					// padding-right: 0;
+				}
+
+				a {
+					font-weight: normal;
+					text-decoration: none;
+				}
 			}
 		}
+	}
+}
+
+
+
+.site-description {
+	color: $color-grey-600;
+	font-family: $base-font-family;
+	font-weight: 300;
+	line-height: 1.3;
+	margin-bottom: $spacing-unit;
+
+	em {
+		color: $text-color;
+		font-style: normal;
 	}
 }
 
@@ -60,44 +100,98 @@ hr {
 	 Main.
 	 ========================================================================== */
 #main {
-	margin-bottom: $spacing-unit - 10;
+	float: right;
+	max-width: 540px;
+	width: 65%;
+
+	#main-header {
+		border-bottom: 1px solid $color-grey-400;
+		color: $color-grey-600;
+		font-size: 0.929em;
+		margin-bottom: $spacing-unit / 2;
+		padding-bottom: $spacing-unit / 6;
+		text-transform: uppercase;
+	}
 
 	.post {
-		background-color: $color-white;
-		border-radius: 6px;
-		box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 		margin-bottom: $spacing-unit / 2;
-		padding: $spacing-unit - 10;
 
-		.post-date {
-			background-color: $color-teal;
-			color: $color-white;
-			float: left;
-			font-size: 0.750em;
-			letter-spacing: 1px;
-			line-height: 1;
-			margin: 0 15px 10px -20px;
-			padding: 6px 10px;
-			text-transform: uppercase;
+		&.observation {
+			font-size: 0.923em;
+			margin-bottom: $spacing-unit / 3;
+			padding: 5px 20px 10px 25px;
+			position: relative;
+
+			&:nth-child(even) {
+				background-color: $color-lightgreen-50;
+			}
+
+			&:before {
+				content: '↳';
+				left: 5px;
+				position: absolute;
+				top: 5px;
+			}
+
+			.post-title,
+			.post-more {
+				display: none;
+			}
+
+			.post-meta {
+				padding-left: 5px;
+
+				.post-categories {
+					display: none;
+				}
+			}
 		}
 
-		.post-title {
-			color: $color-black-85;
-			float: left;
-			font-size: 1.125em;
-			padding: 2px 0;
+		.post-title,
+		.page-title {
+			color: $text-color;
+			font-size: 2.5em;
+			font-weight: 800;
+			line-height: 1.1;
 
 			a {
-				text-decoration: none;
+				font-weight: 800;
+			}
+		}
+
+		&:not(:first-of-type) {
+			.post-title:not(.observation) {
+				margin-top: $spacing-unit;
 			}
 		}
 
 		.post-content {
-			clear: both;
 			padding-bottom: $spacing-unit / 2;
 
 			p:last-of-type {
 				display: inline;
+			}
+
+			a {
+				font-weight: 600;
+			}
+		}
+
+		.post-meta {
+			font-size: 0.929em;
+
+			.post-date {
+				a {
+					border-bottom: none;
+					color: $text-color;
+					text-decoration: none;
+				}
+			}
+
+			.post-categories {
+				a {
+					font-weight: 600;
+				}
 			}
 		}
 	}
@@ -113,55 +207,98 @@ hr {
 	}
 }
 
+#categories {
+	.category {
+		text-transform: capitalize;
+	}
+}
+
+.details {
+	// .site-description {
+	// 	display: none;
+	// }
+
+	// .wrapper:not(.top) {
+	// 	max-width: 565px;
+
+	// 	#main {
+	// 		float: none;
+	// 		max-width: 100%;
+	// 	}
+	// }
+}
+
 
 
 /* ==========================================================================
-	 Archive.
+	 Sidebar.
 	 ========================================================================== */
-#archive {
-	-webkit-column-count: 3;
-  	 -moz-column-count: 3;
-					column-count: 3;
-	-webkit-column-gap: $spacing-unit - 10;
-     -moz-column-gap: $spacing-unit - 10;
-					column-gap: $spacing-unit - 10;
-	-webkit-column-width: 33.33%;
-     -moz-column-width: 33.33%;
-					column-width: 33.33%;
+#sidebar {
+	// -webkit-column-count: 3;
+ //  	 -moz-column-count: 3;
+	// 				column-count: 3;
+	// -webkit-column-gap: $spacing-unit - 10;
+ //     -moz-column-gap: $spacing-unit - 10;
+	// 				column-gap: $spacing-unit - 10;
+	// -webkit-column-width: 33.33%;
+ //     -moz-column-width: 33.33%;
+	// 				column-width: 33.33%;
 
-	font-size: 0.750em;
+	float: left;
+	font-size: 0.929em;
 	margin-bottom: $spacing-unit / 2;
+	max-width: 300px;
+	width: 30%;
 
-	.archive-title,
-	.archive-subtitle {
-		font-size: 1em;
-		letter-spacing: 1px;
-		margin: 0 0 4px 0;
+	#sidebar-header {
+		border-bottom: 1px solid $color-grey-400;
+		color: $color-grey-600;
+		margin-bottom: $spacing-unit / 2;
+		padding-bottom: $spacing-unit / 6;
 		text-transform: uppercase;
 	}
-	.archive-title {
-		background-color: $color-black-15;
-		color: $color-white;
-		line-height: 1;
-		margin-bottom: 10px;
-		padding: 6px 10px;
-	}
-	.archive-subtitle {
-		padding-left: 10px;
+
+	.sidebar-title {
+		font-family: $base-font-family;
+		margin-bottom: $spacing-unit / 6;
+
+		// a,
+		// a:hover,
+		// a:visited {
+		// 	color: $text-color;
+		// }
 	}
 
-	ul {
-    border-bottom: 1px solid $color-black-15;
-    margin: 0 0 ($spacing-unit / 2) 0;
-    padding: 0 0 10px 10px;
+	.previous-posts {
+		list-style: none;
+    margin: 0;
 
 		li {
-			a {
-				display: block;
-				text-decoration: none;
+			margin-bottom: $spacing-unit / 2;
+
+			p {
+				display: inline;
 			}
 		}
 	}
+
+	// .sidebar-title,
+	// .sidebar-subtitle {
+	// 	font-size: 1em;
+	// 	letter-spacing: 1px;
+	// 	margin: 0 0 4px 0;
+	// 	text-transform: uppercase;
+	// }
+	// .sidebar-title {
+	// 	background-color: $color-black-15;
+	// 	color: $color-white;
+	// 	line-height: 1;
+	// 	margin-bottom: 10px;
+	// 	padding: 6px 10px;
+	// }
+	// .sidebar-subtitle {
+	// 	padding-left: 10px;
+	// }
 }
 
 
@@ -169,28 +306,28 @@ hr {
 	 Footer.
 	 ========================================================================== */
 #footer {
-	font-size: 0.750em;
+	font-size: 0.929em;
 	padding-bottom: $spacing-unit;
 
 	ul {
 		line-height: 1;
     list-style: none;
-    margin: 0 0 ($spacing-unit / 2) 0;
-    padding: 0 0 10px 0;
+    margin: 0;
 
 		li {
-			border-right: 1px solid $color-black-20;
-			float: left;
-			margin-right: 10px;
-			padding-right: 10px;
+			// border-right: 1px solid $color-black-20;
+			display: inline-block;
+			margin-right: 20px;
+			// padding-right: 10px;
 
-			&:last-child {
-				border-right: none;
-				margin-right: 0;
-				padding-right: 0;
-			}
+			// &:last-child {
+			// 	border-right: none;
+			// 	margin-right: 0;
+			// 	padding-right: 0;
+			// }
 
 			a {
+				font-weight: normal;
 				text-decoration: none;
 			}
 		}
@@ -234,26 +371,24 @@ hr {
 }
 
 @media screen and (max-width: 767px) {
-	#archive {
-		-webkit-column-count: 2;
-	  	 -moz-column-count: 2;
-						column-count: 2;
-		-webkit-column-width: 50%;
-	     -moz-column-width: 50%;
-						column-width: 50%;
-	}
 }
 
-@media screen and (max-width: 439px) {
-	#archive {
-		-webkit-column-count: 1;
-	  	 -moz-column-count: 1;
-						column-count: 1;
-		-webkit-column-gap: 0;
-	     -moz-column-gap: 0;
-						column-gap: 0;
-		-webkit-column-width: 100%;
-	     -moz-column-width: 100%;
-						column-width: 100%;
+@media screen and (max-width: 639px) {
+	#main,
+	#sidebar {
+		float: none;
+		max-width: 100%;
+		width: 100%;
+	}
+
+	#site-header {
+		.site-title {
+			margin-bottom: 5px;
+		}
+
+		#nav {
+			float: none;
+			margin-top: 0;
+		}
 	}
 }

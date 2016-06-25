@@ -4,16 +4,28 @@ layout: default
 
 <article class="full post">
 	<header class="post-header">
-		<h3 class="post-date">
-			{% include date.html %}
-		</h3>
-
-		<h4 class="post-title">
+		<h3 class="post-title">
 			{{ page.title }}
-		</h4>
+		</h3>
 	</header>
 
 	<div class="post-content">
 		{{ content }}
+	</div>
+
+	<div class="post-meta">
+		<span class="post-date">
+			<a href="{{ page.url }}">≡</a>
+			{% include date.html %}
+		</span>
+
+		<span class="post-categories">
+			+
+			categorías: 
+			{% assign sorted_categories = page.categories | sort %}
+      {% for category in sorted_categories %}
+        <a href="/categorias/#{{ category }}">{{ category | replace: '-', ' ' }}</a>
+      {% endfor %}
+		</span>
 	</div>
 </article>

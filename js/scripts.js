@@ -1,12 +1,18 @@
 $(document).ready(function() {
-	var number_of_posts = 0;
-	$('#archive ul').each(function() {
-		number_of_posts = $(this).children('li').size();
+	// $('.post').each(function() {
+	// 	var post_date = $(this).find('.post-date').children('time').attr('datetime');
 
-		$(this).prevAll('.archive-title:not(:contains("publicaci"))').append(
-			' – publicaciones: ' + number_of_posts
-		);
-	});
+	// 	console.log(post_date);
+	// });
+
+	// var number_of_posts = 0;
+	// $('#archive ul').each(function() {
+	// 	number_of_posts = $(this).children('li').size();
+
+	// 	$(this).prevAll('.archive-title:not(:contains("publicaci"))').append(
+	// 		' – publicaciones: ' + number_of_posts
+	// 	);
+	// });
 
 // 	var array_number_words = [];
 //   $('.post-reading-time').each(function() {

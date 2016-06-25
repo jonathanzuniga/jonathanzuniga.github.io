@@ -6,41 +6,30 @@
 <html>
   {% include head.html %}
 
-  <body>
-    <div id="page-background"></div>
-    
+  <body class="{% if page.layout == 'page' or 
+                     page.layout == 'post' or 
+                     page.layout == 'categories' %}details{% endif %}">
+    <div id="site-background"></div>
+
     {% include header.html %}
-
+    
     <div class="wrapper">
-      {% unless page.layout == 'page' or page.layout == 'post' %}
-<!--         <div id="introduction">
-          <div class="introduction-left">
-            <div class="site-description">
-              <span>{{ site.description }}</span>
-            
-              <a href="">leer más...</a>
-            </div>
-          </div>
-
-          <div class="introduction-right">
-            <div class="site-block">
-              <h2>Lorem ipsum</h2>
-
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in condimentum massa.
-              </p>
-            </div>
-          </div>
-        </div> -->
-      {% endunless %}
-
+      <h1 class="site-description">
+        <em>Bienvenido a mi blog.</em>
+        {{ site.description }}
+      </h1>
+        
       <main id="main">
+        <div id="main-header">
+          Publicaciones
+        </div>
+
         <section>
           {{ content }}
         </section>
       </main>
 
-      {% include archive.html %}
+      {% include sidebar.html %}
     </div>
 
     {% include footer.html %}

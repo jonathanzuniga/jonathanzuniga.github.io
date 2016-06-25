@@ -2,7 +2,7 @@
 title: Blog de Jonathan Zúñiga
 email: jonathanzuniga@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Un espacio para compartir mis pensamientos.
+  Un espacio para compartir pensamientos y observaciones de mi vida diaria.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jonathan_zuniga

@@ -2,20 +2,40 @@
 layout: default
 ---
 
-<article class="post">
-	{% assign post = site.posts.first %}
-	<header class="post-header">
-		<h3 class="post-date">
-			{% include date.html %}
-		</h3>
+{% assign postCounter = 0 %}
+{% assign maxPost = 1 %}
+{% for post in site.posts %}
+	{% unless post.categories contains 'observaciones' %}
+		<article class="post">
+			<header class="post-header">
+				<h3 class="post-title">
+					<a href="{{ post.url }}">{{ post.title }}</a>
+				</h3>
+			</header>
 
-		<h4 class="post-title">
-			<a href="{{ post.url }}">{{ post.title }}</a>
-		</h4>
-	</header>
+			<div class="post-content">
+				{{ post.content }}
+			</div>
 
-	<div class="post-content">
-		{{ post.excerpt }}
-		<a class="post-more" href="{{ post.url }}">...</a>
-	</div>
-</article>
+			<div class="post-meta">
+				<span class="post-date">
+					<a href="{{ post.url }}">≡</a>
+					{% include date.html %}
+				</span>
+
+				<span class="post-categories">
+					+
+					categorías: 
+					{% assign sorted_categories = post.categories | sort %}
+		      {% for category in sorted_categories %}
+		        <a href="/categorias/#{{ category }}">{{ category | replace: '-', ' ' }}</a>
+		      {% endfor %}
+				</span>
+			</div>
+		</article>
+		{% assign postCounter = postCounter | plus: 1 %}
+    {% if postCounter >= maxPost %}
+      {% break %}
+    {% endif %}
+	{% endunless %}
+{% endfor %}
