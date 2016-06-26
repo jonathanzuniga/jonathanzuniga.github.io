@@ -1,5 +1,33 @@
-<aside id="sidebar">
-	<div id="sidebar-header">
+<aside id="sidebar" class="sidebar span-3">
+	<nav id="nav">
+		<ul>
+  		<li>
+  			<a href="{{ site.baseurl }}/">Inicio</a>
+  		</li>
+  		<li>
+  			<a href="">Archivo</a>
+  		</li>
+  		{% if site.github_username %}
+        <li>
+          <a href="https://github.com/{{ site.github_username }}/jonathanzuniga.github.io" target="_blank">
+          	Código fuente
+          </a>
+        </li>
+      {% endif %}
+  		<li>
+  			<a href="{{ "/feed.xml" | prepend: site.baseurl }}">Suscribirse</a>
+  		</li>
+  		<li>
+  			<a href="{{ site.baseurl }}/autor">Autor</a>
+  		</li>
+  		<li class="back-to-top">
+  			<a href="">Volver Arriba</a>
+  		</li>
+		</ul>
+	</nav>
+
+
+<!-- 	<div id="sidebar-header">
 		Observaciones
 	</div>
 
@@ -25,7 +53,7 @@
 				{{ post.content }}
 			</li>
 		{% endfor %}
-	</ul>
+	</ul> -->
 
 	<!-- {% assign months = 
 		"enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre" | 

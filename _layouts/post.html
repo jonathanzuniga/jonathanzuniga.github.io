@@ -3,29 +3,70 @@ layout: default
 ---
 
 <article class="full post">
-	<header class="post-header">
+	<header class="post-header span-8">
+		<h4 class="post-date">
+			{% include date.html %}
+		</h4>
+
 		<h3 class="post-title">
-			{{ page.title }}
+			<a href="{{ page.url }}">{{ page.title }}</a>
 		</h3>
 	</header>
 
-	<div class="post-content">
-		{{ content }}
-	</div>
+	<div class="row">
+		<div class="post-content span-8">
+			{{ page.content }}
+		</div>
 
-	<div class="post-meta">
-		<span class="post-date">
-			<a href="{{ page.url }}">≡</a>
-			{% include date.html %}
-		</span>
+		<footer class="post-footer span-4">
+			<div class="block">
+				{% include read_time.html %}
 
-		<span class="post-categories">
-			+
-			categorías: 
-			{% assign sorted_categories = page.categories | sort %}
-      {% for category in sorted_categories %}
-        <a href="/categorias/#{{ category }}">{{ category | replace: '-', ' ' }}</a>
-      {% endfor %}
-		</span>
+				<div class="post-footer-item post-categories">
+					<div class="post-footer-title">Categorías</div>
+
+					{% assign sorted_categories = page.categories | sort %}
+		      {% for category in sorted_categories %}
+		        <a href="/categorias/#{{ category }}">{{ category | replace: '-', ' ' }}</a>
+		      {% endfor %}
+				</div>
+
+				<div class="post-footer-item post-tags">
+					<div class="post-footer-title">Etiquetas</div>
+
+					{% assign sorted_tags = page.tags | sort %}
+		      {% for tag in sorted_tags %}
+		        <a href="/tags/#{{ tag }}">{{ tag | replace: '-', ' ' }}</a><span class="comma"></span>
+		      {% endfor %}
+				</div>
+
+				<div class="post-footer-item post-share">
+					<div class="post-footer-title">Compartir</div>
+
+					<ul>
+						<li>
+							<a class="link-twitter" href="" title="Twitter">
+								<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li>
+							<a class="link-facebook" href="" title="Facebook">
+            		<i class="fa fa-facebook-f fa-lg" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li>
+							<a class="link-google-plus" href="" title="Google+">
+            		<i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li>
+							<a class="link-linkedin" href="" title="LinkedIn">
+            		<i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
 	</div>
 </article>

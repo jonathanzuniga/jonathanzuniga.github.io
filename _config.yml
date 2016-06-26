@@ -1,13 +1,14 @@
 # Site settings.
-title: Blog de Jonathan Zúñiga
+title: Jonathan Zúñiga
 email: jonathanzuniga@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Un espacio para compartir pensamientos y observaciones de mi vida diaria.
+  Hola, mi nombre es Jonathan, soy un desarrollador viviendo en la ciudad de Tijuana y en este espacio compartire pensamientos así como observaciones de mi vida diaria.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jonathan_zuniga
 github_username: jonathanzuniga
 facebook_username: jonathanzuniga
+googleplus_username: '110998212527855988388'
 
 # Build settings.
 markdown: kramdown

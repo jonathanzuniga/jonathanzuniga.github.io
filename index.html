@@ -2,6 +2,83 @@
 layout: default
 ---
 
+{% for post in site.posts | limit: 5 %}
+	<article class="post">
+		<header class="post-header span-8">
+			<h4 class="post-date">
+				{% include date.html %}
+			</h4>
+
+			<h3 class="post-title">
+				<a href="{{ post.url }}">{{ post.title }}</a>
+			</h3>
+		</header>
+
+		<div class="row">
+			<div class="post-content span-8">
+				{{ post.content }}
+			</div>
+
+			<footer class="post-footer span-4">
+				<div class="block">
+					{% include read_time.html %}
+
+					<div class="post-footer-item post-categories">
+						<div class="post-footer-title">Categorías</div>
+
+						{% assign sorted_categories = post.categories | sort %}
+			      {% for category in sorted_categories %}
+			        <a href="/categorias/#{{ category }}">{{ category | replace: '-', ' ' }}</a>
+			      {% endfor %}
+					</div>
+
+					<div class="post-footer-item post-tags">
+						<div class="post-footer-title">Etiquetas</div>
+
+						{% assign sorted_tags = post.tags | sort %}
+			      {% for tag in sorted_tags %}
+			        <a href="/tags/#{{ tag }}">{{ tag | replace: '-', ' ' }}</a><span class="comma"></span>
+			      {% endfor %}
+					</div>
+
+					<div class="post-footer-item post-share">
+						<div class="post-footer-title">Compartir</div>
+
+						<ul>
+							<li>
+								<a class="link-twitter" href="" title="Twitter">
+									<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li>
+								<a class="link-facebook" href="" title="Facebook">
+              		<i class="fa fa-facebook-f fa-lg" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li>
+								<a class="link-google-plus" href="" title="Google+">
+              		<i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li>
+								<a class="link-linkedin" href="" title="LinkedIn">
+              		<i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</article>
+{% endfor %}
+
+
+
+
+
+
+{% comment %}
 {% assign postCounter = 0 %}
 {% assign maxPost = 1 %}
 {% for post in site.posts %}
@@ -39,3 +116,4 @@ layout: default
     {% endif %}
 	{% endunless %}
 {% endfor %}
+{% endcomment %}

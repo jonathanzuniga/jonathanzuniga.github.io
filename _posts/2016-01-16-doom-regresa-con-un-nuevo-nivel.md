@@ -2,8 +2,8 @@
 author: jonathan
 categories: juegos
 date: 2016-01-16 13:39:00
-image: "https://farm2.staticflickr.com/1472/25541442792_596a77bae9_o.png"
 layout: post
+tags: [juego, doom, fps, nivel, wad]
 title: "DOOM regresa con un nuevo nivel"
 ---
 
@@ -13,7 +13,7 @@ Admirado por los jugadores y demonizado por los defensores morales, es uno de lo
 
 La noticia llegó como suele suceder en estos días, a través de [Twitter][tweet]. Casualmente el día 15 de enero, John anunció que había creado un nuevo nivel. El mapa se titula: *Tech Gone Bad*, y en la descripción John escribe que es: *My Boss level replacement for e1m8…22 years later.*
 
-id software fue fundada por 4 personas, pero fueron los dos Johns quienes siempre atrajeron a los titulares, no solo por el contraste entre Carmack, el brillante programador y Romero, el diseñador rockstar.
+id software fue fundada por 4 personas, pero fueron los dos Johns quienes siempre atrajeron a los titulares, no solo por el contraste entre Carmack, el brillante programador y Romero, el diseñador *rockstar*.
 
 Desde el principio, el nivel está bien conseguido como el clímax del primer episodio. Apareces en una habitación observando un soldado a la distancia, el enemigo más débil del juego. En mi primer intento, en una acometida de emoción corrí hacia adelante y fui destripado por dos sargentos armados con escopeta y un demonio camuflado. Veintidós años de elaboración, todo había durado segundos. El mensaje de Romero era claro como el agua: [Bienvenido de nuevo][game-screenshot].
 
