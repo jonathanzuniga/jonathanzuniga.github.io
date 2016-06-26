@@ -18,7 +18,7 @@ body {
 	color: $text-color;
 	font-family: $base-font-family;
 	font-size: $base-font-size;
-	font-weight: normal;
+	font-weight: 300;
 	line-height: $base-line-height;
 	-webkit-text-size-adjust: 100%;
 
@@ -89,7 +89,7 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font-family;
-	font-weight: bold;
+	font-weight: 900;
 }
 
 
@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-	color: $text-color;
+	color: $link-color;
 	text-decoration: none;
  	-webkit-transition: all 0.2s ease;
  	-moz-transition: all 0.2s ease;
@@ -107,7 +107,7 @@ a {
  	transition: all 0.2s ease;
 
 	&:visited {
-		color: $text-color;
+		color: $link-color;
 	}
 	&:hover {
 		color: $link-color;

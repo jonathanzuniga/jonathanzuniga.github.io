@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	$('.sidebar, .post-footer').stick_in_parent({
-		offset_top: 50
-	});
+	// $('.sidebar, .post-footer').stick_in_parent({
+	// 	offset_top: 50
+	// });
 
 	// $('.post').each(function() {
 	// 	var post_date = $(this).find('.post-date').children('time').attr('datetime');

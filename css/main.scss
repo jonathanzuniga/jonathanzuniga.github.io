@@ -4,15 +4,16 @@
 
 @charset 'utf-8';
 
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900';
+
 // Our variables.
-$brand-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$heading-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$brand-font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$heading-font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $mono-font-family: Menlo, Consolas, monospace;
-$secondary-font-family: 'Times New Roman', Times, serif;
-$base-font-size: 16px;
+$base-font-size: 18px;
 $small-font-size: $base-font-size * 0.813;
-$base-line-height: 1.6;
+$base-line-height: 1.5;
 $spacing-unit: 30px;
 
 
@@ -68,14 +69,14 @@ $color-yellow-50: #fffde7;
 // $bg-color-indigo: #5783c8;
 // $bg-color-amber: #ffb244;
 
-$link-color: $color-blue;
+$link-color: $color-indigo-500;
 
 
 
 // Width of the content area.
-$content-width:	1260px;
+$content-width:	780px;
 $on-palm:				600px;
-$on-laptop:			1260px;
+$on-laptop:			780px;
 
 
 
