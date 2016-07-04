@@ -7,7 +7,7 @@ tags: [algoritmo, rot13]
 title: "Encriptando datos con el algoritmo ROT13"
 ---
 
-[ROT13][rot13] es un método para encriptar texto, que consiste en mover las 
+<span class="run-in">[ROT13][rot13] es un método para encriptar texto</span>, que consiste en mover las 
 letras del alfabeto (inglés) en las 13 posiciones (por ejemplo, "a" corresponde 
 a la letra "n", "b" a la "o" y así sucesivamente. Es ampliamente utilizado 
 en artículos de [Usenet][usenet] para publicar contenido o frases que pueden 

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	// $('.sidebar, .post-footer').stick_in_parent({
+	// $('.sidebar').stick_in_parent({
 	// 	offset_top: 50
 	// });
 

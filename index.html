@@ -5,26 +5,20 @@ layout: default
 {% for post in site.posts | limit: 5 %}
 	<article class="post">
 		<header class="post-header">
+			<h4 class="post-date">
+				{% include date.html %}
+			</h4>
+
 			<h3 class="post-title">
 				<a href="{{ post.url }}">
 					{{ post.title }}
 				</a>
 			</h3>
-			
-			<h4 class="post-meta">
-				{% include date.html %}
-			</h4>
 		</header>
 
 		<div class="post-content">
 			{{ post.excerpt }}
 		</div>
-
-		<footer class="post-footer">
-			<a class="button" href="{{ post.url }}">
-				Continuar leyendo
-			</a>
-		</footer>
 	</article>
 {% endfor %}
 
@@ -33,7 +27,7 @@ layout: default
 
 
 {% comment %}
-{% for post in site.posts | limit: 5 %}
+{% for post in site.posts | limit: 15 %}
 	<article class="post">
 		<header class="post-header span-8">
 			<h4 class="post-date">

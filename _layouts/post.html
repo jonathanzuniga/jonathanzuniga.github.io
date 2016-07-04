@@ -3,70 +3,30 @@ layout: default
 ---
 
 <article class="full post">
-	<header class="post-header span-8">
+	<header class="post-header">
 		<h4 class="post-date">
 			{% include date.html %}
 		</h4>
 
 		<h3 class="post-title">
-			<a href="{{ page.url }}">{{ page.title }}</a>
+			{{ page.title }}
 		</h3>
 	</header>
 
-	<div class="row">
-		<div class="post-content span-8">
-			{{ page.content }}
-		</div>
-
-		<footer class="post-footer span-4">
-			<div class="block">
-				{% include read_time.html %}
-
-				<div class="post-footer-item post-categories">
-					<div class="post-footer-title">Categorías</div>
-
-					{% assign sorted_categories = page.categories | sort %}
-		      {% for category in sorted_categories %}
-		        <a href="/categorias/#{{ category }}">{{ category | replace: '-', ' ' }}</a>
-		      {% endfor %}
-				</div>
-
-				<div class="post-footer-item post-tags">
-					<div class="post-footer-title">Etiquetas</div>
-
-					{% assign sorted_tags = page.tags | sort %}
-		      {% for tag in sorted_tags %}
-		        <a href="/tags/#{{ tag }}">{{ tag | replace: '-', ' ' }}</a><span class="comma"></span>
-		      {% endfor %}
-				</div>
-
-				<div class="post-footer-item post-share">
-					<div class="post-footer-title">Compartir</div>
-
-					<ul>
-						<li>
-							<a class="link-twitter" href="" title="Twitter">
-								<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-							</a>
-						</li>
-						<li>
-							<a class="link-facebook" href="" title="Facebook">
-            		<i class="fa fa-facebook-f fa-lg" aria-hidden="true"></i>
-							</a>
-						</li>
-						<li>
-							<a class="link-google-plus" href="" title="Google+">
-            		<i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
-							</a>
-						</li>
-						<li>
-							<a class="link-linkedin" href="" title="LinkedIn">
-            		<i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</footer>
+	<div class="post-content">
+		{{ page.content }}
 	</div>
+
+	<footer class="post-footer">
+		<p>
+			Si deseas mantenerte en contacto, en Twitter me encontrarás como <a href="https://twitter.com/{{ site.twitter_username }}">@{{ site.twitter_username }}</a>. También eres bienvenido a enviarme un mensaje a <a href="mailto:{{ site.email }}">{{ site.email }}</a>. No siempre tengo la oportunidad de responder, pero el correo electrónico es siempre la mejor manera de ponerse en contacto.
+		</p>
+
+		<p>
+			Actualmente los comentarios en el blog son un experimento. Por favor, trata de ser una buena persona (o serás removido). Esta publicación se archivo en la categoría 
+			{% assign sorted_categories = page.categories | sort %}
+	    {% for category in sorted_categories %}
+	      <a href="/archivo/#{{ category }}">{{ category | replace: '-', ' ' }}</a>{% endfor %}.
+		</p>
+	</footer>
 </article>

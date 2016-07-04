@@ -19,3 +19,15 @@
 		{{ day }} de {{ month }}, {{ year }}
 	</time>
 {% endif %}
+
+{% comment %}
+{% if page.date %}
+	<time datetime="{{ page.date | date_to_xmlschema }}">
+		{{ page.date | date: "%D" }}
+	</time>
+{% else %}
+	<time datetime="{{ post.date | date_to_xmlschema }}">
+		{{ post.date | date: "%D" }}
+	</time>
+{% endif %}
+{% endcomment %}

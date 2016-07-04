@@ -1,5 +1,26 @@
-<aside id="sidebar" class="sidebar span-3">
-	<nav id="nav">
+<aside id="sidebar" class="sidebar">
+	<h3 class="sidebar-title">
+		Anteriores
+	</h3>
+
+	<ul class="previous-posts">
+		{% for post in site.posts | limit: 10 | offset: 1 %}
+			<li>
+				<a class="post-title" href="{{ post.url }}">
+					{{ post.title }}
+				</a>
+				<p class="post-categories">
+					Archivado en 
+					{% assign sorted_categories = post.categories | sort %}
+		      {% for category in sorted_categories %}
+		        <a href="/archivo/#{{ category }}">{{ category | replace: '-', ' ' }}</a>
+		      {% endfor %}
+				</p>
+			</li>
+		{% endfor %}
+	</ul>
+
+<!-- 	<nav id="nav">
 		<ul>
   		<li>
   			<a href="{{ site.baseurl }}/">Inicio</a>
@@ -24,7 +45,7 @@
   			<a href="">Volver Arriba</a>
   		</li>
 		</ul>
-	</nav>
+	</nav> -->
 
 
 <!-- 	<div id="sidebar-header">

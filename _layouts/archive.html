@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<article id="categories" class="post">
+<article id="categories" class="page">
 	<header class="page-header">
 		<h3 class="page-title">
-			Categorías
+			Archivo de publicaciones
 		</h3>
 	</header>
 
@@ -17,7 +17,7 @@ layout: default
 	{% assign sorted_categories = categories | split:' ' | sort %}
 	{% for category in sorted_categories %}
 		<div class="posts-under">
-			<h4 id="{{ category }}" class="category">
+			<h4 id="{{ category }}" class="page-subtitle">
 				{{ category | replace: '-',' ' }}
 			</h4>
 

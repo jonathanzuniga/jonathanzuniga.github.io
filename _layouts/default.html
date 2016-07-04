@@ -15,13 +15,25 @@
     
     <div class="wrapper">
       <main id="main">
+        {% if page.layout == 'default' %}
+          <div class="introduction">
+            <h1>
+              Hola, mi nombre es <a href="{{ site.baseurl }}/autor">Jonathan</a> y en este espacio compartire algunos pensamientos así como observaciones de mi vida diaria.
+            </h1>
+          </div>
+        {% elsif page.layout == 'archive' %}
+          <div class="introduction">
+            <h1>
+              Listado de todas las publicaciones anteriores ordenadas por categoría.
+            </h1>
+          </div>
+        {% endif %}
+
         <section>
           {{ content }}
         </section>
       </main>
     </div>
-
-    <!-- {% include footer.html %} -->
 
     <script
       src="https://code.jquery.com/jquery-1.12.3.min.js"

@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /autor
-title: Autor
+title: Sobre el autor
 ---
 
 Próximamente.

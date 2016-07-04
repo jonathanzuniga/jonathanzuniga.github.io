@@ -1,17 +1,26 @@
 <header id="header">
   <div class="wrapper">
-    <div class="header-brand">
-      <h2>
-        <a href="{{ site.baseurl }}/">
-          {{ site.title }}
-        </a>
-      </h2>
-    </div>
-
-    <div class="header-menu">
-    </div>
-
-    <hr>
+    <nav class="header-menu">
+      <ul>
+        <li>
+          <a href="{{ site.baseurl }}/">Inicio</a>
+        </li>
+        <li>
+          <a href="{{ site.baseurl }}/autor">Autor</a>
+        </li>
+        <li class="header-brand">
+          <a href="{{ site.baseurl }}/">
+            {{ site.title }}
+          </a>
+        </li>
+        <li>
+          <a href="{{ site.baseurl }}/archivo">Archivo</a>
+        </li>
+        <li>
+          <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>
 

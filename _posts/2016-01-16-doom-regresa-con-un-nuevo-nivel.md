@@ -7,9 +7,9 @@ tags: [juego, doom, fps, nivel, wad]
 title: "DOOM regresa con un nuevo nivel"
 ---
 
-En su lanzamiento en 1993, DOOM explotó en el escenario de los videojuegos como nada se había visto antes ni se veria despues. No solo era mas rapido y mas atractivo que cualquier otro juego de disparos en esa época, también introdujo los principios en el diseño de juegos, que aún hoy en día pueden verse en cientos de títulos.
+<span class="run-in">En su lanzamiento en 1993</span>, DOOM explotó en el escenario de los videojuegos como nada se había visto antes ni se veria despues. No solo era mas rapido y mas atractivo que cualquier otro juego de disparos en esa época, también introdujo los principios en el diseño de juegos, que aún hoy en día pueden verse en cientos de títulos.<!--more-->
 
-Admirado por los jugadores y demonizado por los defensores morales, es uno de los videojuegos más importantes que se han hecho. Y ahora, John Romero el co-creador del legendario shooter en primera persona de id software, ha vuelto a su obra maestra creando por primera vez un nuevo nivel para el juego original en más de 20 años.<!--more-->
+Admirado por los jugadores y demonizado por los defensores morales, es uno de los videojuegos más importantes que se han hecho. Y ahora, John Romero el co-creador del legendario shooter en primera persona de id software, ha vuelto a su obra maestra creando por primera vez un nuevo nivel para el juego original en más de 20 años.
 
 La noticia llegó como suele suceder en estos días, a través de [Twitter][tweet]. Casualmente el día 15 de enero, John anunció que había creado un nuevo nivel. El mapa se titula: *Tech Gone Bad*, y en la descripción John escribe que es: *My Boss level replacement for e1m8…22 years later.*
 

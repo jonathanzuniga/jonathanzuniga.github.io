@@ -4,23 +4,25 @@
 
 @charset 'utf-8';
 
-@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900';
+// @import 'https://fonts.googleapis
+// @import 'https://fonts.googleapis.com/css?family=Merriweather:900|Mr+Dafoe|Parisienne|Roboto+Slab:300,400,700|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900';
+@import 'https://fonts.googleapis.com/css?family=Mr+Dafoe|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900';
 
 // Our variables.
-$brand-font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$base-font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$heading-font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$mono-font-family: Menlo, Consolas, monospace;
-$base-font-size: 18px;
+$brand-font-family: 'Mr Dafoe', cursive;
+$base-font-family: Georgia, 'Times New Roman', Times, serif;
+$heading-font-family: 'Source Sans Pro', Verdana, sans-serif;
+$mono-font-family: 'Courier New', courier, monospace;
+$base-font-size: 16px;
 $small-font-size: $base-font-size * 0.813;
-$base-line-height: 1.5;
+$base-line-height: 1.6;
 $spacing-unit: 30px;
 
 
 
 // Colors.
 $text-color: #212121;
-$background-color: #fff;
+$background-color: #f5f6f6;
 
 $color-grey: #828282;
 $color-grey-dark: darken($color-grey, 25%);
@@ -34,7 +36,8 @@ $color-black-85: rgba(0, 0, 0, 0.85);
 $color-blue: #0258e2;
 $color-blue-700: #1976d2;
 $color-cyan-300: #58d1df;
-$color-green-400: #66bb6a;
+$color-green: #00a651;
+$color-green-500: #4caf50;
 $color-grey-200: #eee;
 $color-grey-300: #e0e0e0;
 $color-grey-400: #bdbdbd;
@@ -45,6 +48,7 @@ $color-grey-800: #424242;
 $color-grey-900: #212121;
 $color-indigo-100: #c5cae9;
 $color-indigo-500: #3f51b5;
+$color-lightgreen-700: #689f38;
 $color-red-400: #ef5350;
 $color-teal-700: #00796b;
 $color-white: #fff;
@@ -69,14 +73,14 @@ $color-yellow-50: #fffde7;
 // $bg-color-indigo: #5783c8;
 // $bg-color-amber: #ffb244;
 
-$link-color: $color-indigo-500;
+$link-color: IndianRed;
 
 
 
 // Width of the content area.
-$content-width:	780px;
+$content-width:	760px;
 $on-palm:				600px;
-$on-laptop:			780px;
+$on-laptop:			480px;
 
 
 

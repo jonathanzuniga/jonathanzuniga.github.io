@@ -1,29 +1,72 @@
 <footer id="footer">
 	<div class="wrapper">
-		<hr>
+		<div class="footer-content">
+			<div class="footer-about-author span-3">
+				<h4 class="footer-title">
+					Sobre el autor
+				</h4>
 
-		<ul>
-			<li>
-				<a href="{{ site.baseurl }}/autor">Autor</a>
-			</li>
- 	    <li>
- 	    	<a href="{{ "/feed.xml" | prepend: site.baseurl }}">Suscribirse</a>
- 	    </li>
-			{% if site.github_username %}
-				<li>
-					<a href="https://github.com/{{ site.github_username }}/jonathanzuniga.github.io">Código fuente</a>
-				</li>
-			{% endif %}
-			{% if site.facebook_username %}
-				<li>
-					<a href="https://facebook.com/{{ site.facebook_username }}">f</a>
-				</li>
- 	    {% endif %}
-			{% if site.twitter_username %}
-				<li>
-					<a href="https://twitter.com/{{ site.twitter_username }}">t</a>
-				</li>
- 	    {% endif %}
-		</ul>
+				<p>
+					
+				</p>
+			</div>
+			
+			<div class="footer-about-site span-6">
+				<h4 class="footer-title">
+					Acerca del sitio
+				</h4>
+
+				<p>
+
+				</p>
+			</div>
+			
+			<div class="footer-elsewhere span-3">
+				<h4 class="footer-title">
+					En otra parte
+				</h4>
+
+				<ul>
+		 	   <!--  <li>
+		 	    	<a href="{{ "/feed.xml" | prepend: site.baseurl }}">Suscribirse</a>
+		 	    </li> -->
+					{% if site.twitter_username %}
+						<li>
+							<a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+								<i class="fa fa-twitter-square" aria-hidden="true"></i>
+							</a>
+						</li>
+		 	    {% endif %}
+					{% if site.github_username %}
+						<li>
+							<a href="https://github.com/{{ site.github_username }}" target="_blank">
+								<i class="fa fa-github" aria-hidden="true"></i>
+							</a>
+						</li>
+					{% endif %}
+					{% if site.facebook_username %}
+						<li>
+							<a href="https://facebook.com/{{ site.facebook_username }}" target="_blank">
+								<i class="fa fa-facebook-square" aria-hidden="true"></i>
+							</a>
+						</li>
+		 	    {% endif %}
+					{% if site.instagram_username %}
+						<li>
+							<a href="https://instagram.com/{{ site.instagram_username }}" target="_blank">
+								<i class="fa fa-instagram" aria-hidden="true"></i>
+							</a>
+						</li>
+		 	    {% endif %}
+					{% if site.pinterest_username %}
+						<li>
+							<a href="https://pinterest.com/{{ site.pinterest_username }}" target="_blank">
+								<i class="fa fa-pinterest" aria-hidden="true"></i>
+							</a>
+						</li>
+		 	    {% endif %}
+				</ul>
+			</div>
+		</div>
 	</div>
 </footer>

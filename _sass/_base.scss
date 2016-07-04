@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 ul, ol, dl, figure,
 %vertical-rhythm {
-	margin-bottom: $spacing-unit - 10;
+	margin-bottom: $spacing-unit / 2;
 }
 
 
@@ -88,8 +88,8 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-	font-family: $heading-font-family;
-	font-weight: 900;
+	font-family: $base-font-family;
+	font-weight: normal;
 }
 
 
@@ -98,7 +98,9 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-	color: $link-color;
+	border-bottom: 1px dotted $color-grey-400;
+	color: $text-color;
+	font-weight: normal;
 	text-decoration: none;
  	-webkit-transition: all 0.2s ease;
  	-moz-transition: all 0.2s ease;
@@ -107,7 +109,7 @@ a {
  	transition: all 0.2s ease;
 
 	&:visited {
-		color: $link-color;
+		color: $text-color;
 	}
 	&:hover {
 		color: $link-color;
@@ -139,10 +141,9 @@ blockquote {
 pre,
 code {
 	font-family: $mono-font-family;
-	font-size: 0.875rem;
 	font-weight: normal;
 	border-radius: 4px;
-	background-color: $color-grey-200;
+	background-color: $color-grey-300;
 }
 
 code {
