@@ -61,12 +61,11 @@ hr {
 	 Header.
 	 ========================================================================== */
 #header {
-	margin-bottom: $spacing-unit;
+	margin-bottom: $spacing-unit / 2;
+	margin-top: $spacing-unit / 2;
 
 	.header-menu {
-		border-bottom: 4px double $color-grey-300;
-		padding-bottom: 10px;
-		padding-top: 10px;
+		margin-bottom: $spacing-unit / 2;
 		text-align: center;
 
 		ul {
@@ -80,6 +79,7 @@ hr {
 				list-style: none;
 				margin: 0 15px;
 				text-transform: uppercase;
+				vertical-align: middle;
 
 				a {
 					border-bottom: none;
@@ -87,13 +87,14 @@ hr {
 
 					&:hover {
 						color: $link-color;
+						text-decoration: none;
 					}
 				}
 
 				&.header-brand {
-					font-family: $heading-font-family;
+					font-family: $brand-font-family;
 					font-size: 1.5em;
-					text-transform: none;
+					font-weight: normal;
 
 					a {
 						color: $link-color;
@@ -111,13 +112,25 @@ hr {
 	 ========================================================================== */
 #main {
 	.introduction {
+		border-bottom: 4px double $color-grey-300;
+		border-top: 4px double $color-grey-300;
 		margin-bottom: $spacing-unit;
+		padding-bottom: 12px;
+		padding-top: 12px;
+		text-align: center;
 
 		h1 {
-			font-family: $heading-font-family;
-			font-size: 1.5em;
-			font-weight: 300;
+			font-family: $second-font-family;
+			font-size: 1.125em;
+			font-weight: normal;
 			line-height: 1.3;
+			margin-bottom: 0;
+
+			a {
+				border-bottom: 0;
+				color: $text-color;
+				font-weight: normal;
+			}
 		}
 	}
 
@@ -133,6 +146,11 @@ hr {
 				letter-spacing: 2px;
 				margin-bottom: 0;
 				text-transform: uppercase;
+
+				em {
+					color: $color-grey-600;
+					font-style: normal;
+				}
 			}
 
 			.post-title,
@@ -189,8 +207,7 @@ hr {
 			border-top: 1px solid $color-grey-300;
 			font-size: 0.688em;
 			margin-top: 30px;
-			padding-bottom: 10px;
-			padding-top: 20px;
+			padding-top: 15px;
 		}
 	}
 }

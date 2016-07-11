@@ -6,8 +6,9 @@
 
 // Our variables.
 $base-font-family: Verdana, Helvetica, sans-serif;
+$brand-font-family: Georgia, 'Times New Roman', 'Times Roman', Times, serif;
 $heading-font-family: 'Times New Roman', 'Times Roman', Times, serif;
-$mono-font-family: 'Courier New', courier, monospace;
+$mono-font-family: monospace;
 $second-font-family: Gill Sans, Verdana, Helvetica, sans-serif;
 $base-font-size: 16px;
 $small-font-size: $base-font-size * 0.813;
@@ -18,7 +19,7 @@ $spacing-unit: 30px;
 
 // Colors.
 $text-color: #212121;
-$background-color: #fff;
+$background-color: #f5f6f6;
 
 $color-grey: #828282;
 $color-grey-dark: darken($color-grey, 25%);

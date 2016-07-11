@@ -1,33 +1,31 @@
-{% assign months = 
-	"enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre" | 
-	split: "|"
+{% 
+	assign months = 
+	'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
+	split: '|'
+%}
+{%
+	assign days = 
+		'domingo|lunes|martes|miércoles|jueves|viernes|sábado' | 
+		split: '|'
 %}
 {% if page.date %}
 	<time datetime="{{ page.date | date_to_xmlschema }}">
-		{% assign m = page.date | date: "%m" | minus: 1 %}
-		{% assign day = page.date | date: "%d" %}
+		{% assign d = page.date | date: '%B' | minus: 1 %}
+		{% assign day_name = days[d] %}
+		{% assign day = page.date | date: '%d' %}
+		{% assign m = page.date | date: '%m' | minus: 1 %}
 		{% assign month = months[m] %}
-		{% assign year = page.date | date: "%Y" %}
-		{{ day }} de {{ month }}, {{ year }}
+		{% assign year = page.date | date: '%Y' %}
+		<span class="day-name">{{ day_name }}</span> {{ day }}.º <em>de {{ month }}, {{ year }}</em>
 	</time>
 {% else %}
 	<time datetime="{{ post.date | date_to_xmlschema }}">
-		{% assign m = post.date | date: "%m" | minus: 1 %}
-		{% assign day = post.date | date: "%d" %}
+		{% assign d = post.date | date: '%B' | minus: 1 %}
+		{% assign day_name = days[d] %}
+		{% assign day = post.date | date: '%d' %}
+		{% assign m = post.date | date: '%-m' | minus: 1 %}
 		{% assign month = months[m] %}
-		{% assign year = post.date | date: "%Y" %}
-		{{ day }} de {{ month }}, {{ year }}
+		{% assign year = post.date | date: '%Y' %}
+		<span class="day-name">{{ day_name }}</span> {{ day }}.º <em>de {{ month }}, {{ year }}</em>
 	</time>
 {% endif %}
-
-{% comment %}
-{% if page.date %}
-	<time datetime="{{ page.date | date_to_xmlschema }}">
-		{{ page.date | date: "%D" }}
-	</time>
-{% else %}
-	<time datetime="{{ post.date | date_to_xmlschema }}">
-		{{ post.date | date: "%D" }}
-	</time>
-{% endif %}
-{% endcomment %}
