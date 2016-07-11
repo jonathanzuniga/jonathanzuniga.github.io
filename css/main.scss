@@ -4,15 +4,11 @@
 
 @charset 'utf-8';
 
-// @import 'https://fonts.googleapis
-// @import 'https://fonts.googleapis.com/css?family=Merriweather:900|Mr+Dafoe|Parisienne|Roboto+Slab:300,400,700|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900';
-@import 'https://fonts.googleapis.com/css?family=Mr+Dafoe|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900';
-
 // Our variables.
-$brand-font-family: 'Mr Dafoe', cursive;
-$base-font-family: Georgia, 'Times New Roman', Times, serif;
-$heading-font-family: 'Source Sans Pro', Verdana, sans-serif;
+$base-font-family: Verdana, Helvetica, sans-serif;
+$heading-font-family: 'Times New Roman', 'Times Roman', Times, serif;
 $mono-font-family: 'Courier New', courier, monospace;
+$second-font-family: Gill Sans, Verdana, Helvetica, sans-serif;
 $base-font-size: 16px;
 $small-font-size: $base-font-size * 0.813;
 $base-line-height: 1.6;
@@ -22,7 +18,7 @@ $spacing-unit: 30px;
 
 // Colors.
 $text-color: #212121;
-$background-color: #f5f6f6;
+$background-color: #fff;
 
 $color-grey: #828282;
 $color-grey-dark: darken($color-grey, 25%);
@@ -73,12 +69,12 @@ $color-yellow-50: #fffde7;
 // $bg-color-indigo: #5783c8;
 // $bg-color-amber: #ffb244;
 
-$link-color: IndianRed;
+$link-color: SeaGreen;
 
 
 
 // Width of the content area.
-$content-width:	760px;
+$content-width:	740px;
 $on-palm:				600px;
 $on-laptop:			480px;
 

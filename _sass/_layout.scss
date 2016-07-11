@@ -66,6 +66,7 @@ hr {
 	.header-menu {
 		border-bottom: 4px double $color-grey-300;
 		padding-bottom: 10px;
+		padding-top: 10px;
 		text-align: center;
 
 		ul {
@@ -74,21 +75,24 @@ hr {
 
 			li {
 				display: inline-block;
-				font-size: 0.875em;
-				font-weight: 300;
+				font-family: $second-font-family;
+				font-size: 0.750em;
 				list-style: none;
 				margin: 0 15px;
 				text-transform: uppercase;
 
 				a {
 					border-bottom: none;
+					color: $text-color;
+
+					&:hover {
+						color: $link-color;
+					}
 				}
 
 				&.header-brand {
-					font-family: $brand-font-family;
-					font-size: 2em;
-					// font-weight: bold;
-					letter-spacing: normal;
+					font-family: $heading-font-family;
+					font-size: 1.5em;
 					text-transform: none;
 
 					a {
@@ -124,18 +128,20 @@ hr {
 		.post-header,
 		.page-header {
 			.post-date {
-				color: $color-grey-400;
-				font-size: 0.875em;
-				font-weight: bold;
+				font-family: $second-font-family;
+				font-size: 0.750em;
+				letter-spacing: 2px;
 				margin-bottom: 0;
+				text-transform: uppercase;
 			}
 
 			.post-title,
 			.page-title {
 				border-bottom: 1px solid $color-grey-300;
+				color: $color-grey-800;
 				font-family: $heading-font-family;
-				font-size: 1.5em;
-				font-weight: normal;
+				font-size: 2.125em;
+				letter-spacing: -1px;
 				line-height: 1.3;
 				margin-bottom: 10px;
 				padding-bottom: 10px;
@@ -143,10 +149,11 @@ hr {
 				a,
 				a:visited {
 					border-bottom: none;
-					font-weight: normal;
+					color: $color-grey-800;
 					text-decoration: none;
 				}
 				a:hover {
+					color: $link-color;
 				}
 			}
 		}
@@ -157,29 +164,30 @@ hr {
 		}
 
 		.post-content {
+			font-size: 0.813em;
 			margin-bottom: $spacing-unit / 2;
 
-			.dropcap {
-		    float: left;
-		    font-size: 5.2em;
-		    font-weight: 900;
-		    line-height: 0.8em;
-		    margin-right: 7px;
-		    margin-top: 7px;
-		    position: relative;
-			}
+			// .dropcap {
+		 //    float: left;
+		 //    font-size: 5.2em;
+		 //    font-weight: 900;
+		 //    line-height: 0.8em;
+		 //    margin-right: 7px;
+		 //    margin-top: 7px;
+		 //    position: relative;
+			// }
 
-			.run-in {
-				font-size: 0.938em;
-				letter-spacing: 3px;
-				text-transform: uppercase;
-			}
+			// .run-in {
+			// 	font-size: 0.938em;
+			// 	letter-spacing: 3px;
+			// 	text-transform: uppercase;
+			// }
 		}
 
 		.post-footer {
 			border-bottom: 1px solid $color-grey-300;
 			border-top: 1px solid $color-grey-300;
-			font-size: 0.875em;
+			font-size: 0.688em;
 			margin-top: 30px;
 			padding-bottom: 10px;
 			padding-top: 20px;
