@@ -16,9 +16,9 @@
 		{% assign m = page.date | date: '%m' | minus: 1 %}
 		{% assign month = months[m] %}
 		{% assign year = page.date | date: '%Y' %}
-		<span class="day-name">{{ day_name }}</span> {{ day }}.º <em>de {{ month }}, {{ year }}</em>
+		<span class="day-name">{{ day_name }}</span> {{ day }}.º <em>de</em> {{ month }}, {{ year }}
 	</time>
-{% else %}
+{% elsif post.date %}
 	<time datetime="{{ post.date | date_to_xmlschema }}">
 		{% assign d = post.date | date: '%B' | minus: 1 %}
 		{% assign day_name = days[d] %}
@@ -26,6 +26,14 @@
 		{% assign m = post.date | date: '%-m' | minus: 1 %}
 		{% assign month = months[m] %}
 		{% assign year = post.date | date: '%Y' %}
-		<span class="day-name">{{ day_name }}</span> {{ day }}.º <em>de {{ month }}, {{ year }}</em>
+		<span class="day-name">{{ day_name }}</span> {{ day }}.º <em>de</em> {{ month }}, {{ year }}
+	</time>
+{% else %}
+	<time datetime="{{ observation.date | date_to_xmlschema }}">
+		{% assign day = observation.date | date: '%d' %}
+		{% assign m = observation.date | date: '%-m' | minus: 1 %}
+		{% assign month = months[m] %}
+		{% assign year = observation.date | date: '%Y' %}
+		{{ day }}.º <em>de</em> {{ month }}, {{ year }}
 	</time>
 {% endif %}

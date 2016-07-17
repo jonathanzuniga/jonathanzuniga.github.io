@@ -2,6 +2,74 @@
 layout: default
 ---
 
+<div class="left-column">
+	<div class="column-inner">
+		<h3 class="column-title">Publicación reciente</h3>
+
+		{% assign first_post = site.posts.first %}
+		<dl class="post">
+			<dt class="post-header">
+				<h3 class="post-title">
+					<a href="{{ first_post.url }}">
+						{{ first_post.title }}
+					</a>
+				</h3>
+			</dt>
+
+			<dd class="post-content">
+				{{ first_post.content }}
+			</dd>
+		</dl>
+
+		<p class="column-footer">
+			<a href="{{ site.baseurl }}/publicaciones">
+				— Más publicaciones —
+			</a>
+		</p>
+	</div>
+</div>
+
+<div class="right-column">
+	<h3 class="column-title">Introducción</h3>
+
+	<p>
+		Bienvenido, en este espacio se recopilan publicaciones y observaciones de Jonathan Zúñiga.
+	</p>
+
+	<h3 class="column-title">Observaciones</h3>
+
+	<p class="note">
+		La siguiente es una lista de observaciones que he hecho mientras he estado en los aeropuertos, con los vecinos, en eventos sociales, en mis sueños, o en el supermercado local.
+	</p>
+
+	<div class="column-inner">
+		<ul class="latest-observations">
+			{% for observation in site.categories.observaciones | limit: 6 %}
+				<li>
+					<a class="observation-date" href="{{ observation.url }}">
+						{% include date.html %}
+					</a>
+					—
+					<div class="observation-content">
+						{{ observation.content }}
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+
+	<p class="column-footer">
+		<a href="{{ site.baseurl }}/observaciones">
+			— Más observaciones —
+		</a>
+	</p>
+</div>
+
+<div class="clearfix"></div>
+
+
+
+{% comment %}
 {% for post in site.posts | limit: 5 %}
 	<article class="post">
 		<header class="post-header">
@@ -21,7 +89,7 @@ layout: default
 		</div>
 	</article>
 {% endfor %}
-
+{% endcomment %}
 
 
 

@@ -1,6 +1,30 @@
 <header id="header">
   <div class="wrapper">
-    <nav class="header-menu">
+    <div class="header-box">
+      <div class="header-brand">
+        <h2>
+          <a href="{{ site.baseurl }}/">
+            <span>Jonathan</span> <span>Zúñiga</span>
+          </a>
+        </h2>
+      </div>
+
+      <div class="header-menu">
+        <ul>
+          <li>
+            <a href="{{ site.baseurl }}/autor">Autor</a>
+          </li>
+          <li>
+            <a href="{{ site.baseurl }}/publicaciones">Publicaciones</a>
+          </li>
+          <li>
+            <a href="{{ site.baseurl }}/observaciones">Observaciones</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <nav class="header-menu">
       <ul>
         <li>
           <a href="{{ site.baseurl }}/">Inicio</a>
@@ -20,7 +44,7 @@
           <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
         </li>
       </ul>
-    </nav>
+    </nav> -->
   </div>
 </header>
 

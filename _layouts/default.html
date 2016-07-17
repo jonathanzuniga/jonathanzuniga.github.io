@@ -8,14 +8,15 @@
 
   <body class="{% if page.layout == 'page' or 
                      page.layout == 'post' or 
-                     page.layout == 'categories' %}details{% endif %}">
+                     page.layout == 'publications' or
+                     page.layout == 'observations' %}details{% endif %}">
     <div id="site-background"></div>
 
     {% include header.html %}
     
     <div class="wrapper">
       <main id="main">
-        {% if page.layout == 'default' %}
+        <!-- {% if page.layout == 'default' %}
           <div class="introduction">
             <h1>
               En este espacio se recopilan ensayos e ideas de Jonathan Zúñiga.
@@ -27,12 +28,12 @@
               Listado de las publicaciones anteriores ordenadas por categoría.
             </h1>
           </div>
-        {% endif %}
+        {% endif %} -->
 
-        <section>
-          {{ content }}
-        </section>
+        {{ content }}
       </main>
+
+      {% include footer.html %}
     </div>
 
     <script

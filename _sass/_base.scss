@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-	color: $link-color;
+	color: lighten($link-color, 15%);
 	text-decoration: none;
  	-webkit-transition: all 0.2s ease;
  	-moz-transition: all 0.2s ease;
@@ -107,11 +107,10 @@ a {
  	transition: all 0.2s ease;
 
 	&:visited {
-		color: $link-color;
+		color: lighten($link-color, 15%);
 	}
 	&:hover {
-		color: $text-color;
-		text-decoration: underline;
+		color: $link-color;
 	}
 	&:active {
 	}
@@ -142,7 +141,7 @@ code {
 	font-family: $mono-font-family;
 	font-weight: normal;
 	border-radius: 4px;
-	background-color: $color-grey-300;
+	background-color: #e8e9db;
 }
 
 code {

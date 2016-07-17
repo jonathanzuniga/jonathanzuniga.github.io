@@ -2,31 +2,33 @@
 layout: default
 ---
 
-<article class="full post">
-	<header class="post-header">
-		<h4 class="post-date">
-			{% include date.html %}
-		</h4>
+<section>
+	<article class="full post">
+		<header class="post-header">
+			<h2 class="post-title">
+				{{ page.title }}
+			</h2>
+		</header>
 
-		<h3 class="post-title">
-			{{ page.title }}
-		</h3>
-	</header>
+		<div class="post-content">
+			{{ page.content }}
 
-	<div class="post-content">
-		{{ page.content }}
-	</div>
+	<!-- 		<p>
+				Si deseas mantenerte en contacto, en Twitter me encontrarás como <a href="https://twitter.com/{{ site.twitter_username }}">@{{ site.twitter_username }}</a>. También eres bienvenido a enviarme un mensaje a <a href="mailto:{{ site.email }}">{{ site.email }}</a>. No siempre tengo la oportunidad de responder, pero el correo electrónico es siempre la mejor manera de ponerse en contacto.
+			</p>
 
-	<footer class="post-footer">
-		<p>
-			Si deseas mantenerte en contacto, en Twitter me encontrarás como <a href="https://twitter.com/{{ site.twitter_username }}">@{{ site.twitter_username }}</a>. También eres bienvenido a enviarme un mensaje a <a href="mailto:{{ site.email }}">{{ site.email }}</a>. No siempre tengo la oportunidad de responder, pero el correo electrónico es siempre la mejor manera de ponerse en contacto.
-		</p>
+			<p>
+				Actualmente los comentarios en el blog son un experimento. Por favor, trata de ser una buena persona (o serás removido). Esta publicación se archivo en la categoría 
+				{% assign sorted_categories = page.categories | sort %}
+		    {% for category in sorted_categories %}
+		      <a href="/archivo/#{{ category }}">{{ category | replace: '-', ' ' }}</a>{% endfor %}.
+			</p> -->
+		</div>
 
-		<p>
-			Actualmente los comentarios en el blog son un experimento. Por favor, trata de ser una buena persona (o serás removido). Esta publicación se archivo en la categoría 
-			{% assign sorted_categories = page.categories | sort %}
-	    {% for category in sorted_categories %}
-	      <a href="/archivo/#{{ category }}">{{ category | replace: '-', ' ' }}</a>{% endfor %}.
-		</p>
-	</footer>
-</article>
+		<footer class="post-footer">
+			<p class="post-date">
+				— {% include date.html %} —
+			</p>
+		</footer>
+	</article>
+</section>
