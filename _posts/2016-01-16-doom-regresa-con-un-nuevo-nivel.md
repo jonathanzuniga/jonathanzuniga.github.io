@@ -1,9 +1,8 @@
 ---
 author: jonathan
-categories: juegos
+categories: games
 date: 2016-01-16 13:39:00
 layout: post
-tags: [juego, doom, fps, nivel, wad]
 title: "DOOM regresa con un nuevo nivel"
 ---
 

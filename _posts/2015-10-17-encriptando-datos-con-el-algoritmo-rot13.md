@@ -1,9 +1,8 @@
 ---
 author: jonathan
-categories: criptografía
+categories: criptography
 date: 2015-11-17 17:39:00
 layout: post
-tags: [algoritmo, rot13]
 title: "Encriptando datos con el algoritmo ROT13"
 ---
 

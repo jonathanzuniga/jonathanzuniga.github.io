@@ -7,21 +7,25 @@
 @import 'https://fonts.googleapis.com/css?family=Marko+One';
 
 // Our variables.
-$base-font-family: Verdana, Helvetica, Geneva, sans-serif;
+$base-font-family: 'Helvetica Neue', Helvetica, sans-serif;
 $brand-font-family: 'Marko One', Georgia, 'Times New Roman', 'Times Roman', Times, serif;
 $heading-font-family: 'Marko One', Georgia, 'Times New Roman', 'Times Roman', Times, serif;
 $mono-font-family: Menlo, Consolas, monospace;
 $alternative-font-family: Gill Sans, Verdana, Helvetica, Geneva, sans-serif;
-$base-font-size: 11px;
+$base-font-size: 13px;
 $small-font-size: $base-font-size * 0.909;
-$base-line-height: 1.7;
+$base-line-height: 1.6;
 $spacing-unit: 30px;
 
 
 
 // Colors.
 $text-color: #212121;
-$background-color: #f7f7ef;
+// $background-color: #f7f7ef;
+$background-color: #fdfbf5;
+// $background-color: #f2f2ef;
+// $background-color: #f7f9fd;
+// $background-color: #fff6f2;
 
 $color-grey: #828282;
 $color-grey-dark: darken($color-grey, 25%);
@@ -37,6 +41,7 @@ $color-blue-700: #1976d2;
 $color-cyan-300: #58d1df;
 $color-green: #00a651;
 $color-green-500: #4caf50;
+$color-grey-100: #f5f5f5;
 $color-grey-200: #eee;
 $color-grey-300: #e0e0e0;
 $color-grey-400: #bdbdbd;
@@ -72,12 +77,14 @@ $color-yellow-50: #fffde7;
 // $bg-color-indigo: #5783c8;
 // $bg-color-amber: #ffb244;
 
-$link-color: $color-blue;
+$link-color: #3a7aba;
+// $alternative-link-color: #66005e;
+$alternative-link-color: #3f4e79;
 
 
 
 // Width of the content area.
-$content-width:	920px;
+$content-width:	940px;
 $on-palm:				600px;
 $on-laptop:			640px;
 

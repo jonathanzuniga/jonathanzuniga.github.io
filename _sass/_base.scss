@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-	color: lighten($link-color, 15%);
+	color: $link-color;
 	text-decoration: none;
  	-webkit-transition: all 0.2s ease;
  	-moz-transition: all 0.2s ease;
@@ -107,10 +107,10 @@ a {
  	transition: all 0.2s ease;
 
 	&:visited {
-		color: lighten($link-color, 15%);
+		color: $link-color;
 	}
 	&:hover {
-		color: $link-color;
+		color: darken($link-color, 12%);
 	}
 	&:active {
 	}
@@ -138,10 +138,10 @@ blockquote {
  */
 pre,
 code {
+	background-color: rgba(0, 0, 0, 0.06);
+	border-radius: 4px;
 	font-family: $mono-font-family;
 	font-weight: normal;
-	border-radius: 4px;
-	background-color: #e8e9db;
 }
 
 code {
@@ -153,6 +153,7 @@ pre {
 	overflow-x: auto;
 
 	> code {
+		background-color: transparent;
 		border: 0;
 		padding-right: 0;
 		padding-left: 0;

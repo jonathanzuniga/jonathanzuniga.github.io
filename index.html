@@ -9,11 +9,11 @@ layout: default
 		{% assign first_post = site.posts.first %}
 		<dl class="post">
 			<dt class="post-header">
-				<h3 class="post-title">
+				<h4 class="post-title">
 					<a href="{{ first_post.url }}">
 						{{ first_post.title }}
 					</a>
-				</h3>
+				</h4>
 			</dt>
 
 			<dd class="post-content">
@@ -30,21 +30,21 @@ layout: default
 </div>
 
 <div class="right-column">
-	<h3 class="column-title">Introducción</h3>
-
-	<p>
-		Bienvenido, en este espacio se recopilan publicaciones y observaciones de Jonathan Zúñiga.
-	</p>
-
-	<h3 class="column-title">Observaciones</h3>
-
-	<p class="note">
-		La siguiente es una lista de observaciones que he hecho mientras he estado en los aeropuertos, con los vecinos, en eventos sociales, en mis sueños, o en el supermercado local.
-	</p>
-
 	<div class="column-inner">
+		<h3 class="column-title">Introducción</h3>
+
+		<p>
+			Bienvenido, en este espacio se recopilan publicaciones y observaciones de Jonathan Zúñiga.
+		</p>
+
+		<h3 class="column-title">Observaciones</h3>
+
+		<p class="note">
+			La siguiente es una lista de observaciones que he hecho mientras he estado en los aeropuertos, con los vecinos, en mis sueños, o en el supermercado local.
+		</p>
+
 		<ul class="latest-observations">
-			{% for observation in site.categories.observaciones | limit: 6 %}
+			{% for observation in site.categories.observations | limit: 6 %}
 				<li>
 					<a class="observation-date" href="{{ observation.url }}">
 						{% include date.html %}

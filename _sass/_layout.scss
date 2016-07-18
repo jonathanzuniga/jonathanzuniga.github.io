@@ -60,23 +60,22 @@ hr {
 	 Header.
 	 ========================================================================== */
 #header {
+	// background-color: rgba(51, 0, 47, 0.9);
+	background-color: #3f4e79; // rgb(63, 78, 121);
 	margin-bottom: 20px;
 	z-index: 1000;
 
 	.header-box {
-		background-color: $color-blue;
-		// border-bottom-left-radius: 4px;
-		// border-bottom-right-radius: 4px;
-		overflow: hidden;
-		padding: 10px 15px;
+		padding: 5px 15px;
+		position: relative;
 
 		.header-brand {
 			float: right;
-			margin-top: 10px;
+			margin: 5px 0;
 
 			h2 {	
 				font-family: $brand-font-family;
-				font-size: 1.702em;
+				font-size: 1.538em;
 				font-weight: normal;
 				margin: 0;
 
@@ -98,7 +97,7 @@ hr {
 
 		.header-menu {
 			float: left;
-			margin-top: 15px;
+			margin: 10px 0;
 
 			ul {
 				margin: 0;
@@ -107,7 +106,7 @@ hr {
 				li {
 					display: inline-block;
 					color: $background-color;
-					font-size: 0.909em;
+					font-size: 0.923em;
 
 					&:not(:last-child):after {
 						content: '•';
@@ -121,6 +120,7 @@ hr {
 
 						&:hover {
 							color: $background-color;
+							opacity: 0.7;
 							text-decoration: none;
 						}
 					}
@@ -149,8 +149,7 @@ hr {
 		float: left;
 
 		.column-title {
-			color: $color-grey-800;
-			font-size: 1.455em;
+			font-size: 1.385em;
 		}
 
 		.column-inner {
@@ -160,9 +159,11 @@ hr {
 				.post-header {
 					.post-title {
 						display: inline-block;
-						font-size: 1em;
+						font-size: 1.154em;
 
 						a {
+							color: $alternative-link-color;
+							
 							&:after {
 								content: '¶';
 								opacity: 0.3;
@@ -211,6 +212,10 @@ hr {
 			letter-spacing: 1px;
 			text-align: center;
 			text-transform: uppercase;
+
+			a {
+				color: $alternative-link-color;
+			}
 		}
 	}
 }
@@ -218,117 +223,119 @@ hr {
 .details {
 	.wrapper {
 		max-width: 580px;
+	}
 
-		#main {
-			.full.post,
-			.page {
-				padding-left: 15px;
-				padding-right: 15px;
+	#main {
+		.full.post,
+		.page {
+			padding-left: 15px;
+			padding-right: 15px;
+
+			.post-header {
+				.post-title {
+					// color: $alternative-link-color;
+					font-family: $heading-font-family;
+					font-size: 2.769em;
+					font-weight: normal;
+					line-height: 1.1;
+				}
+			}
+
+			.post-content {
+			}
+
+			.post-footer {
+				font-size: 0.909em;
+				font-weight: bold;
+				letter-spacing: 1px;
+				margin-bottom: $spacing-unit;
+				text-align: center;
+				text-transform: uppercase;
+
+				.post-date {
+					em {
+						text-transform: lowercase;
+					}
+				}
+			}
+		}
+
+		.page {
+			&.publications {
+				.post {
+					.post-content {
+						p:last-child:after {
+							content: '...';
+						}
+					}
+				}
+			}
+
+			.page-header {
+				.page-title {
+					font-size: 1.455em;
+					line-height: 1.1;
+				}
+			}
+
+			.page-content {
+				h3 {
+					font-size: 1.455em;
+				}
+			}
+
+			.post {
+				margin-bottom: $spacing-unit;
 
 				.post-header {
 					.post-title {
-						color: $color-grey-800;
-						font-family: $heading-font-family;
-						font-size: 3.273em;
-						font-weight: normal;
-						line-height: 1.1;
+						display: inline-block;
+						font-family: $base-font-family;
+						font-size: 1.154em;
+						font-weight: bold;
+
+						a {
+							color: $alternative-link-color;
+
+							&:after {
+								content: '¶';
+								opacity: 0.3;
+								padding-left: 2px;
+
+							 	-webkit-transition: all 0.2s ease;
+							 	-moz-transition: all 0.2s ease;
+							 	-ms-transition: all 0.2s ease;
+							 	-o-transition: all 0.2s ease;
+							 	transition: all 0.2s ease;
+							}
+
+							&:hover {
+								&:after {
+									opacity: 0.6;
+								}
+							}
+						}
 					}
 				}
 
 				.post-content {
-				}
-
-				.post-footer {
-					font-size: 0.909em;
-					font-weight: bold;
-					letter-spacing: 1px;
-					text-align: center;
-					text-transform: uppercase;
-
-					.post-date {
-						em {
-							text-transform: lowercase;
-						}
-					}
+					padding-left: 15px;
 				}
 			}
 
-			.page {
-				&.publications {
-					.post {
-						.post-content {
-							p:last-child:after {
-								content: '...';
-							}
-						}
-					}
-				}
-
-				.page-header {
-					.page-title {
-						color: $color-grey-800;
-						font-size: 1.455em;
-					}
-				}
-
-				.page-content {
-					h3 {
-						color: $color-grey-800;
-						font-size: 1.455em;
-					}
-				}
-
-				.post {
-					margin-bottom: $spacing-unit;
-
-					.post-header {
-						.post-title {
-							display: inline-block;
-							font-family: $base-font-family;
-							font-size: 1em;
-							font-weight: bold;
-
-							a {
-								&:after {
-									content: '¶';
-									opacity: 0.3;
-									padding-left: 2px;
-
-								 	-webkit-transition: all 0.2s ease;
-								 	-moz-transition: all 0.2s ease;
-								 	-ms-transition: all 0.2s ease;
-								 	-o-transition: all 0.2s ease;
-								 	transition: all 0.2s ease;
-								}
-
-								&:hover {
-									&:after {
-										opacity: 0.6;
-									}
-								}
-							}
-						}
-					}
-
-					.post-content {
-						padding-left: 15px;
-					}
-				}
-
-				.page-footer {
-					text-align: center;
-				}
+			.page-footer {
+				text-align: center;
 			}
+		}
 
-			.autor.page {
-				.page-header {
-					.page-title {
-						color: $color-grey-800;
-						font-family: $heading-font-family;
-						font-size: 3.273em;
-						font-weight: normal;
-						line-height: 1.15;
-					}
+		.autor.page {
+			.page-header {
+				.page-title {
+					// color: $alternative-link-color;
+					font-family: $heading-font-family;
+					font-size: 2.769em;
+					font-weight: normal;
+					line-height: 1.1;
 				}
 			}
 		}
@@ -341,15 +348,15 @@ hr {
 	 Footer.
 	 ========================================================================== */
 #footer {
-	border-top: 1px solid lighten($text-color, 60%);
-	font-size: 0.909em;
+	font-size: 0.923em;
 	margin-bottom: $spacing-unit;
-	padding-top: 5px;
 	text-align: center;
 
 	ul {
+		border-top: 1px solid lighten($text-color, 60%);
 		margin-left: 0;
 		padding-left: 0;
+		padding-top: 5px;
 
 		li {
 			display: inline-block;
@@ -390,10 +397,13 @@ hr {
 }
 
 .note {
-  background-color: #f2f2e8;
-  border: 1px solid darken(#f2f2e8, 10%);
-  border-left: 0;
-  border-right: 0;
+  background-color: rgba(0, 0, 0, 0.07);
+  // background-color: #f2f2e8;
+  // background-color: #eae9e4;
+  // border: 1px solid rgba(0, 0, 0, 0.06);
+  // border: 1px solid #e8e9db;
+  // border-left: 0;
+  // border-right: 0;
   color: $color-grey-800;
   display: block;
   line-height: 1.7em;
@@ -412,16 +422,47 @@ hr {
 }
 
 @media screen and (max-width: 479px) {
+	#header {
+		.header-box {
+			padding-left: 0;
+			padding-right: 0;
+
+			.header-brand {
+				margin-bottom: 0;
+			}
+
+			.header-menu {
+				margin-top: 0;
+			}
+		}
+	}
+
 	#main {
 		.left-column,
 		.right-column {
 			float: none;
 			width: 100%;
+
+			.column-inner {
+				padding: 0;
+			}
+		}
+	}
+
+	.details {
+		#main {
+			.wrapper {
+				.full.post,
+				.page {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
 		}
 	}
 }
 
-@media screen and (max-width: 439px) {
+@media screen and (max-width: 459px) {
 	#header {
 		.header-box {
 			.header-brand,

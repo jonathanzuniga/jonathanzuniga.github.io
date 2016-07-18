@@ -1,9 +1,8 @@
 ---
 author: jonathan
-categories: experiencias
+categories: opinion
 date: 2015-11-29 14:50:00
 layout: post
-tags: [opinión, xamarin, desarrollo-móvil]
 title: "Reflexiones después de un año usando Xamarin"
 ---
 

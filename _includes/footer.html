@@ -1,25 +1,27 @@
 <footer id="footer">
-	<ul>
-		<li>
-			© 2015–{{ site.time | date: '%Y' }} <a href="{{ site.baseurl }}/autor">Jonathan Zúñiga</a>
-		</li>
-		{% if site.github_username %}
-			<li class="footer-item-source-code">
-				<a href="https://github.com/{{ site.github_username }}/jonathanzuniga.github.io">Código fuente</a>
-			</li>
-		{% endif %}
-		<li>
-			<a href="{{ "/feed.xml" | prepend: site.baseurl }}">Suscribirse</a>
-		</li>
-		{% if site.twitter_username %}
+	<div class="wrapper">
+		<ul>
 			<li>
-				<a href="https://twitter.com/{{ site.twitter_username }}">t</a>
+				© 2015–{{ site.time | date: '%Y' }} <a href="{{ site.baseurl }}/autor">Jonathan Zúñiga</a>
 			</li>
+			{% if site.github_username %}
+				<li class="footer-item-source-code">
+					<a href="https://github.com/{{ site.github_username }}/jonathanzuniga.github.io">Código fuente</a>
+				</li>
 			{% endif %}
-		{% if site.facebook_username %}
 			<li>
-				<a href="https://facebook.com/{{ site.facebook_username }}">f</a>
+				<a href="{{ "/feed.xml" | prepend: site.baseurl }}">Suscribirse</a>
 			</li>
+			{% if site.twitter_username %}
+				<li>
+					<a href="https://twitter.com/{{ site.twitter_username }}">t</a>
+				</li>
+				{% endif %}
+			{% if site.facebook_username %}
+				<li>
+					<a href="https://facebook.com/{{ site.facebook_username }}">f</a>
+				</li>
 			{% endif %}
-	</ul>
+		</ul>
+	</div>
 </footer>

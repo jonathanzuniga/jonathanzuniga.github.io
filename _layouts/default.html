@@ -14,27 +14,13 @@
 
     {% include header.html %}
     
-    <div class="wrapper">
-      <main id="main">
-        <!-- {% if page.layout == 'default' %}
-          <div class="introduction">
-            <h1>
-              En este espacio se recopilan ensayos e ideas de Jonathan Zúñiga.
-            </h1>
-          </div>
-        {% elsif page.layout == 'archive' %}
-          <div class="introduction">
-            <h1>
-              Listado de las publicaciones anteriores ordenadas por categoría.
-            </h1>
-          </div>
-        {% endif %} -->
-
+    <main id="main">
+      <div class="wrapper">
         {{ content }}
-      </main>
+      </div>
+    </main>
 
-      {% include footer.html %}
-    </div>
+    {% include footer.html %}
 
     <script
       src="https://code.jquery.com/jquery-1.12.3.min.js"
