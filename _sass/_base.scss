@@ -110,7 +110,7 @@ a {
 		color: $link-color;
 	}
 	&:hover {
-		color: darken($link-color, 12%);
+		color: $text-color;
 	}
 	&:active {
 	}

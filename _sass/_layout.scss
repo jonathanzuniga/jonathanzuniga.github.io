@@ -139,10 +139,15 @@ hr {
 	margin-bottom: $spacing-unit;
 
 	.left-column {
-		width: 55%;
+		width: 60%;
 	}
 	.right-column {
-		width: 45%;
+		width: 40%;
+
+		p,
+		ul li {
+			font-size: 0.923em;
+		}
 	}
 	.left-column,
 	.right-column {
@@ -221,9 +226,9 @@ hr {
 }
 
 .details {
-	.wrapper {
-		max-width: 580px;
-	}
+	// .wrapper {
+	// 	max-width: 580px;
+	// }
 
 	#main {
 		.full.post,
