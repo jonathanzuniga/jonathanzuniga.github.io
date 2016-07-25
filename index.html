@@ -3,70 +3,113 @@ layout: default
 ---
 
 <div class="left-column">
-	<div class="column-inner">
+  <div class="column-inner">
 		<h3 class="column-title">Publicación reciente</h3>
 
-		{% assign first_post = site.posts.first %}
-		<dl class="post">
-			<dt class="post-header">
-				<h4 class="post-title">
-					<a href="{{ first_post.url }}">
-						{{ first_post.title }}
+		{% assign postCounter = 0 %}
+		{% assign maxPost = 1 %}
+		{% for post in site.posts %}
+			{% unless post.categories contains 'observations' %}
+				<dl class="post">
+					<dt class="post-header">
+						<h4 class="post-title">
+							<a href="{{ post.url }}">
+								{{ post.title }}
+							</a>
+						</h4>
+					</dt>
+
+					<dd class="post-content">
+						{{ post.content }}
+					</dd>
+				</dl>
+
+				<p class="column-footer">
+					<a href="{{ site.baseurl }}/publicaciones">
+						— Más publicaciones —
 					</a>
-				</h4>
-			</dt>
-
-			<dd class="post-content">
-				{{ first_post.content }}
-			</dd>
-		</dl>
-
-		<p class="column-footer">
-			<a href="{{ site.baseurl }}/publicaciones">
-				— Más publicaciones —
-			</a>
-		</p>
-	</div>
+				</p>
+				{% assign postCounter = postCounter | plus: 1 %}
+		    {% if postCounter >= maxPost %}
+		      {% break %}
+		    {% endif %}
+			{% endunless %}
+		{% endfor %}
+  </div>
 </div>
 
 <div class="right-column">
 	<div class="column-inner">
-		<h3 class="column-title">Introducción</h3>
+		{% if page.layout == 'post' %}
+			<h3 class="column-title">Sobre la publicación</h3>
 
-		<p>
-			Bienvenido, en este espacio se recopilan publicaciones y observaciones de Jonathan Zúñiga.
-		</p>
+			<p>
+				Esta entrada fue publicada el día {% include date.html %}
+				{% assign author = site.authors[page.author] %}
+				por {{ author.name }}.
+				<!-- dentro de la categoría 
+				{% assign sorted_categories = page.categories | sort %}
+				{% for category in sorted_categories %}
+	      	<strong>{{ category | replace: '-', ' ' | replace: 'featured', '' }}</strong>{% endfor %}. -->
+			</p>
 
-		<h3 class="column-title">Observaciones</h3>
+			<p>
+				Si deseas mantenerte en contacto, en Twitter me encontrarás como <a href="https://twitter.com/{{ site.twitter_username }}">@{{ site.twitter_username }}</a>. También eres bienvenido a enviarme un mensaje a <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
+			</p>
 
-		<p class="note">
-			La siguiente es una lista de observaciones que he hecho mientras he estado en los aeropuertos, con los vecinos, en mis sueños, o en el supermercado local.
-		</p>
+			<!-- <p>
+				No siempre tengo la oportunidad de responder, pero el correo electrónico es la mejor opción.
+			</p> -->
 
-		<ul class="latest-observations">
-			{% for observation in site.categories.observations | limit: 6 %}
-				<li>
-					<a class="observation-date" href="{{ observation.url }}">
-						{% include date.html %}
-					</a>
-					—
-					<div class="observation-content">
-						{{ observation.content }}
-					</div>
-				</li>
-			{% endfor %}
-		</ul>
+			<!-- <p>
+				El tiempo estimado de lectura es de {% include read_time.html %}
+			</p> -->
+		{% else %}
+			<h3 class="column-title">Introducción</h3>
+
+			<p>
+				Mi nombre es Jonathan Zúñiga; en este espacio recopilo publicaciones y observaciones. Más en la <a href="{{ site.baseurl }}/autor">página autor</a>.
+			</p>
+
+			<h3 class="column-title">Observaciones</h3>
+
+			<p class="note">
+				La siguiente es una lista de observaciones que he hecho mientras he estado en los aeropuertos, con los vecinos, en mis sueños, o en el supermercado local.
+			</p>
+
+			<ul class="latest-observations">
+				{% 
+					assign months = 
+					'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
+					split: '|'
+				%}
+				{% for observation in site.categories.observations | limit: 6 %}
+					<li>
+						<a class="observation-date" href="{{ observation.url }}">
+							<time datetime="{{ observation.date | date_to_xmlschema }}">
+								{% assign day = observation.date | date: '%d' %}
+								{% assign m = observation.date | date: '%-m' | minus: 1 %}
+								{% assign month = months[m] %}
+								{% assign year = observation.date | date: '%Y' %}
+								{{ day }}.º <em>de</em> {{ month }}, {{ year }}
+							</time>
+						</a>
+						—
+						<div class="observation-content">
+							{{ observation.content }}
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+
+			<p class="column-footer">
+				<a href="{{ site.baseurl }}/observaciones">
+					— Más observaciones —
+				</a>
+			</p>
+		{% endif %}
 	</div>
-
-	<p class="column-footer">
-		<a href="{{ site.baseurl }}/observaciones">
-			— Más observaciones —
-		</a>
-	</p>
 </div>
-
-<div class="clearfix"></div>
-
 
 
 {% comment %}

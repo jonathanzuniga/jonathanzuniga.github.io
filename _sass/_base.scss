@@ -111,6 +111,7 @@ a {
 	}
 	&:hover {
 		color: $text-color;
+		text-decoration: none;
 	}
 	&:active {
 	}
@@ -138,7 +139,7 @@ blockquote {
  */
 pre,
 code {
-	background-color: rgba(0, 0, 0, 0.06);
+	background-color: rgba(0, 0, 0, 0.07);
 	border-radius: 4px;
 	font-family: $mono-font-family;
 	font-weight: normal;

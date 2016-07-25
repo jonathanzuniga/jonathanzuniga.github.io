@@ -1,66 +1,27 @@
-$(document).ready(function() {
-	// $('.sidebar').stick_in_parent({
-	// 	offset_top: 50
+jQuery(document).ready(function($) {
+	// $('.filter').filterMe({
+	// 	desaturate: false, // Value from 0 - 1. 1 equals full desaturation (black & white).
+	// 	curves: false, // Object of RGB values in production script, or string name of curves .acv file in development script.
+	// 	vignette: false, // 'true' or 'false'. Add a vignette to the image.
+	// 	folder: 'acv/', // Development script only. Location of the .acv folder, relative to the current file.
+	// 	debug: false // Set to 'true' for script debugging. Logs information along execution in console.
 	// });
 
-	// $('.post').each(function() {
-	// 	var post_date = $(this).find('.post-date').children('time').attr('datetime');
-
-	// 	console.log(post_date);
-	// });
-
-	// var number_of_posts = 0;
-	// $('#archive ul').each(function() {
-	// 	number_of_posts = $(this).children('li').size();
-
-	// 	$(this).prevAll('.archive-title:not(:contains("publicaci"))').append(
-	// 		' – publicaciones: ' + number_of_posts
-	// 	);
-	// });
-
-// 	var array_number_words = [];
-//   $('.post-reading-time').each(function() {
-//     array_number_words.push($(this).attr('data-number-words'));
-//   });
-
-//   function percentCalculation(a, b) {
-//     var c = parseFloat(b) / parseFloat(a);
-//     return c;
-//   }
-
-//   var min_number_words = Math.min.apply(null, array_number_words);
-//   $('.post-reading-time').each(function() {
-//     var percentage_reading_time = percentCalculation($(this).attr('data-number-words'), min_number_words);
-//     $(this).css({
-//       'opacity' : percentage_reading_time
-//     });
-//     // console.log(percentage_reading_time);
-//   });
-
-//   // Category selected.
-//   function remove_classes() {
-//     $('.post-header').removeClass('selected');
-//     $('#posts').removeClass('selected-category');
-//   }
-
-//   $(document).on('click', 'html', function(event) {
-//     if (!$(event.target).closest('.posts-monthly').length) {
-//       remove_classes();
-//     }
-//   });
-
-//   $('.post-category').click(function(event) {
-//     event.preventDefault();
-
-//     var post_category = $(this).text();
-
-//     remove_classes();
-
-//     $('.post-category').each(function() {
-//       if ($(this).text() == post_category) {
-//         $(this).closest('.post-header').addClass('selected')
-//                .closest('#posts').addClass('selected-category');
-//       }
-//     });
-//   });
+	$('.header-menu ul li a').on('mouseover touchstart', function() {
+		var link_title = $(this).attr('title');
+		var alphabet = '!~@#$%^&*(+=_jonathanzúñiga'
+		$('.menu-item-description')
+			.cypher('decode', {
+				alphabet: alphabet,
+				// animate: 'random',
+				digits: '',
+				endText: link_title,
+				scheme: 'offset',
+				speed: 10
+			}
+		);
+	});
+	$('.header-menu ul li a').on('mouseleave touchend', function() {
+		$('.menu-item-description').text('Bienvenido');
+	});
 });

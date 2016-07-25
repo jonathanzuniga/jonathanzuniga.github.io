@@ -1,7 +1,8 @@
 ---
 author: jonathan
-categories: games
+categories: [games, featured]
 date: 2016-01-16 13:39:00
+image: /images/doom-skinface.png
 layout: post
 title: "DOOM regresa con un nuevo nivel"
 ---

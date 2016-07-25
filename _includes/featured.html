@@ -1,0 +1,10 @@
+<div id="featured">
+	<div class="wrapper">
+		{% for post in site.categories.featured | limit: 1 %}
+			<a class="featured-link" href="{{ post.url }}">
+				<!-- <img class="filter" data-filter="Nashville" src="images/doom-skinface.png"> -->
+				<img class="featured-image filter-greyscale" data-pb-greyscale-opacity="1" src="{{ post.image }}">
+			</a>
+		{% endfor %}
+	</div>
+</div>

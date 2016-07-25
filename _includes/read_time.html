@@ -1,17 +1,12 @@
-<div class="post-footer-item post-reading-time" title="Tiempo estimado de lectura">
-	<div class="post-footer-title">Lectura</div>
-
+<span class="post-reading-time" title="Tiempo estimado de lectura">
 	{% if page.date %}
   	{% assign words = page.content | number_of_words %}
 	{% else %}
 		{% assign words = post.content | number_of_words %}
 	{% endif %}
-
-	<a href="{{ post.url }}">
-	  {% if words < 360 %}
-	    1 minuto
-	  {% else %}
-	    {{ words | divided_by: 180 }} minutos
-	  {% endif %}
-  </a>
-</div>
+  {% if words < 360 %}
+    1 minuto.
+  {% else %}
+    {{ words | divided_by: 180 }} minutos.
+  {% endif %}
+</span>
