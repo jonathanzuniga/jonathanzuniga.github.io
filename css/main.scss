@@ -4,12 +4,12 @@
 
 @charset 'utf-8';
 
-@import 'https://fonts.googleapis.com/css?family=Marko+One';
+@import 'https://fonts.googleapis.com/css?family=Playfair+Display:400,700';
 
 // Our variables.
 $base-font-family: 'Helvetica Neue', Helvetica, sans-serif;
-$brand-font-family: 'Marko One', Georgia, 'Times New Roman', 'Times Roman', Times, serif;
-$heading-font-family: 'Marko One', Georgia, 'Times New Roman', 'Times Roman', Times, serif;
+$brand-font-family: 'Playfair Display', 'Times New Roman', 'Times Roman', Times, serif;
+$heading-font-family: 'Playfair Display', 'Times New Roman', 'Times Roman', Times, serif;
 $mono-font-family: Menlo, Consolas, monospace;
 $alternative-font-family: Gill Sans, Verdana, Helvetica, Geneva, sans-serif;
 $base-font-size: 13px;
@@ -20,71 +20,33 @@ $spacing-unit: 30px;
 
 
 // Colors.
-$text-color: #212121;
+$text-color: rgba(0, 0, 0, 0.85);
+// $background-color: #fdfbf5; // this
 // $background-color: #f7f7ef;
-$background-color: #fdfbf5;
 // $background-color: #f2f2ef;
 // $background-color: #f7f9fd;
 // $background-color: #fff6f2;
-
-$color-grey: #828282;
-$color-grey-dark: darken($color-grey, 25%);
-$color-grey-light: #eee;
-$color-grey-semilight: #ccc;
+// $background-color: #f3f3f0;
+// $background-color: #f5efeb;
+// $background-color: #f2f3ec;
+$background-color: #f1f2ed;
 
 $color-black: #000;
-$color-black-15: rgba(0, 0, 0, 0.15);
-$color-black-20: rgba(0, 0, 0, 0.2);
-$color-black-85: rgba(0, 0, 0, 0.85);
 $color-blue: #3f4e79;
-$color-blue-700: #1976d2;
-$color-cyan-300: #58d1df;
-$color-green: #00a651;
-$color-green-500: #4caf50;
-$color-grey-100: #f5f5f5;
+$color-grey: #828282;
 $color-grey-200: #eee;
-$color-grey-300: #e0e0e0;
-$color-grey-400: #bdbdbd;
-$color-grey-500: #919191;
-$color-grey-600: #757575;
-$color-grey-700: #616161;
 $color-grey-800: #424242;
 $color-grey-900: #212121;
-$color-indigo-100: #c5cae9;
-$color-indigo-500: #3f51b5;
-$color-lightgreen-700: #689f38;
-$color-red-400: #ef5350;
-$color-teal-700: #00796b;
 $color-white: #fff;
-$color-white-20: rgba(255, 255, 255, 0.2);
-$color-white-40: rgba(255, 255, 255, 0.4);
-$color-white-60: rgba(255, 255, 255, 0.6);
-$color-white-85: rgba(255, 255, 255, 0.85);
-$color-yellow-50: #fffde7;
-
-// $bg-color-teal: #65ccb8;
-// $bg-color-purple: #b8a2fe;
-// $bg-color-lightred: #f48e7e;
-// $bg-color-cyan: #65b6cc;
-// $bg-color-red: #f75c4f;
-// $bg-color-yellow: #f1d01b;
-// $bg-color-green: #6dcc7a;
-// $bg-color-pink: #ec80af;
-// $bg-color-lightblue: #82c0d0;
-// $bg-color-blue: #81c1f2;
-// $bg-color-lightgreen: #a1d461;
-// $bg-color-deeporange: #f2693e;
-// $bg-color-indigo: #5783c8;
-// $bg-color-amber: #ffb244;
 
 $link-color: #3a7aba;
 // $alternative-link-color: #66005e;
-$alternative-link-color: #3f4e79;
+$link-color-alt: #3f4e79;
 
 
 
 // Width of the content area.
-$content-width:	880px;
+$content-width:	936px;
 $on-palm:				600px;
 $on-laptop:			640px;
 
@@ -109,4 +71,5 @@ $on-laptop:			640px;
 @import 
 	'base', 
 	'layout', 
-	'syntax-highlighting';
+	'syntax-highlighting', 
+	'hugrid';
