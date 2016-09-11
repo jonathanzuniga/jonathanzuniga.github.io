@@ -1,39 +1,39 @@
-#hugrid {
-	cursor: default;
+// #hugrid {
+// 	cursor: default;
 
-	div.mline {
-    border-color: $color-black;
-    border-style: dashed;
-    opacity: 0.06;
-  }
+// 	div.mline {
+//     border-color: $color-black;
+//     border-style: dashed;
+//     opacity: 0.06;
+//   }
 
-  div {
-  	&:hover {
-  		background-color: transparent;
-	    opacity: 0.06;
-  	}
+//   div {
+//   	&:hover {
+//   		background-color: transparent;
+// 	    opacity: 0.06;
+//   	}
 
-	  div {
-	    border-color: $color-black;
-    	border-style: dashed;
-	    opacity: 0.06;
-	  }
-  }
-}
+// 	  div {
+// 	    border-color: $color-black;
+//     	border-style: dashed;
+// 	    opacity: 0.06;
+// 	  }
+//   }
+// }
 
-#hugridRows {
-	border: none;
-	cursor: default;
-  display: none;
+// #hugridRows {
+// 	border: none;
+// 	cursor: default;
+//   display: none;
 
-	div.lineB,
-	div.lineB:hover {
-		border-color: $color-black;
-		border-style: dotted;
-		opacity: 0.06;
-	}
-}
+// 	div.lineB,
+// 	div.lineB:hover {
+// 		border-color: $color-black;
+// 		border-style: dotted;
+// 		opacity: 0.06;
+// 	}
+// }
 
-#hugridUX {
-  display: none;
-}
+// #hugridUX {
+//   display: none;
+// }

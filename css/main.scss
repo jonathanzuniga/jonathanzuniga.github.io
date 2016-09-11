@@ -20,7 +20,8 @@ $spacing-unit: 30px;
 
 
 // Colors.
-$text-color: rgba(0, 0, 0, 0.85);
+$text-color: #383434;
+// $text-color: #4b4b4b;
 // $background-color: #fdfbf5; // this
 // $background-color: #f7f7ef;
 // $background-color: #f2f2ef;
@@ -29,7 +30,8 @@ $text-color: rgba(0, 0, 0, 0.85);
 // $background-color: #f3f3f0;
 // $background-color: #f5efeb;
 // $background-color: #f2f3ec;
-$background-color: #f1f2ed;
+// $background-color: #f1f2ed;
+$background-color: #f9bebd;
 
 $color-black: #000;
 $color-blue: #3f4e79;
@@ -39,14 +41,16 @@ $color-grey-800: #424242;
 $color-grey-900: #212121;
 $color-white: #fff;
 
-$link-color: #3a7aba;
-// $alternative-link-color: #66005e;
+// $link-color: #3a7aba;
+// $link-color: #5fa0c3;
+$link-color: rgba(63, 78, 121, 0.8);
+// $link-color-alt: #66005e;
 $link-color-alt: #3f4e79;
 
 
 
 // Width of the content area.
-$content-width:	936px;
+$content-width:	1056px;
 $on-palm:				600px;
 $on-laptop:			640px;
 
@@ -71,5 +75,4 @@ $on-laptop:			640px;
 @import 
 	'base', 
 	'layout', 
-	'syntax-highlighting', 
-	'hugrid';
+	'syntax-highlighting';

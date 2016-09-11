@@ -71,10 +71,32 @@ layout: default
 				Mi nombre es Jonathan Zúñiga; en este espacio recopilo publicaciones y observaciones. Más en la <a href="{{ site.baseurl }}/autor">página autor</a>.
 			</p>
 
+			<div class="featured sticky">
+				{% for post in site.categories['featured'] limit:1 %}
+					<h4>
+						Lo último destacado
+					</h4>
+
+					<h3>
+						{{ post.title }}
+					</h3>
+
+					{{ post.excerpt }}
+
+					<p>
+				    <a href="{{ post.url }}">
+				    	Leer la publicación completa &raquo;
+				    </a>
+					</p>
+			  {% endfor %}
+
+			  <div class="clearfix"></div>
+			</div>
+
 			<h3 class="column-title">Observaciones</h3>
 
-			<p class="note">
-				La siguiente es una lista de observaciones que he hecho mientras he estado en los aeropuertos, con los vecinos, en mis sueños, o en el supermercado local.
+			<p>
+				La siguiente es una lista de observaciones que he hecho mientras he estado en los aeropuertos, con los vecinos, en los eventos sociales, en mis sueños, o en el supermercado local.
 			</p>
 
 			<ul class="latest-observations">
@@ -110,6 +132,12 @@ layout: default
 		{% endif %}
 	</div>
 </div>
+
+
+
+
+
+
 
 
 {% comment %}

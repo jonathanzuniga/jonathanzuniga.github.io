@@ -1,14 +1,14 @@
 ---
 author: jonathan
-categories: opinion
+categories: [opinion, featured]
 date: 2015-11-29 14:50:00
 layout: post
 title: "Reflexiones después de un año usando Xamarin"
 ---
 
-En un principio de existencia me preguntaba si las aplicaciones móviles realmente merecen ser desarrolladas de forma nativa. Si fuera asi ¿conseguiría aprender a un buen nivel de comprensión dos o tres diferentes lenguajes de programación para hacer la misma tarea a la vez? ¿alcanzaria a mantenerme actualizado? Sería muy abrumador ¿no les parece? ¡Ah! ¿Pero por qué no ir más allá?<!--more--> soñar con una alternativa donde tengamos solamente un proyecto por aplicación, donde haya un único equipo de desarrollo y lo mejor de todo ¡que esté hecho con un solo lenguaje!
+En un principio de existencia me preguntaba si las aplicaciones móviles realmente merecen ser desarrolladas de forma nativa. Si fuera asi ¿conseguiría aprender a un buen nivel de comprensión dos o tres diferentes lenguajes de programación para hacer la misma tarea a la vez? ¿alcanzaria a mantenerme actualizado? Sería muy abrumador ¿no les parece? ¡Ah! ¿Pero por qué no ir más allá? soñar con una alternativa donde tengamos solamente un proyecto por aplicación, donde haya un único equipo de desarrollo y lo mejor de todo ¡que esté hecho con un solo lenguaje!
 
-Mientras seguía preguntándome si aun estoy en un sueño o si hubo una falla en la *Matrix*, vuelvo a inclinarme sobre el teclado y escribo de nuevo en el buscador. Mi búsqueda me llevó a probar algunas opciones como [PhoneGap][phonegap], [Cordova][cordova], [Appcelerator][appcelerator]… hasta [React Native][react-native], que en ese entonces aún no existía soporte para [Android][android], un factor importante para considerar pero que sin duda éste proyecto luce prometedor. Al final decidí darle una oportunidad seria a [Xamarin][xamarin].
+Mientras seguía preguntándome si aun estoy en un sueño o si hubo una falla en la *Matrix*, vuelvo a inclinarme sobre el teclado y escribo de nuevo en el buscador. Mi búsqueda me llevó a probar algunas opciones como [PhoneGap][phonegap], [Cordova][cordova], [Appcelerator][appcelerator]…<!--more--> hasta [React Native][react-native], que en ese entonces aún no existía soporte para [Android][android], un factor importante para considerar pero que sin duda éste proyecto luce prometedor. Al final decidí darle una oportunidad seria a [Xamarin][xamarin].
 
 La razón principal que tuve para elegir Xamarin fue que quería desarrollar aplicaciones móviles lo más cercano posible a una nativa, tenía algo de experiencia con [C#][csharp] y sabía que las bondades de este lenguaje son grandísimas, además de que nos proporciona un sin fin de posibilidades para crear software; conocía el proyecto [Mono][mono-project] desde hace ya bastante tiempo, pero nunca lo tomé muy en serio para mis planes como programador. Y quería comprobar eso que Xamarin dice, que todo lo que puedes hacer en Objective-C, Swift o Java lo puedes hacer en C#.
 

@@ -6,17 +6,17 @@ jQuery(document).ready(function($) {
  //  e.which = 71;
  //  $('body').trigger(e);
 
-	pageUnits = 'px';
-  colUnits = 'px';
-  pagewidth = 840;
-  columns = 6;
-  columnwidth = 125;
-  gutterwidth = 18;
-  pagetopmargin = 0;
-  rowheight = 20;
-  gridonload = 'true';
-  makehugrid();
-  setgridonload();
+	// pageUnits = 'px';
+ //  colUnits = 'px';
+ //  pagewidth = 960;
+ //  columns = 6;
+ //  columnwidth = 145;
+ //  gutterwidth = 18;
+ //  pagetopmargin = 0;
+ //  rowheight = 20;
+ //  gridonload = 'off';
+ //  makehugrid();
+ //  setgridonload();
 
 	// $('.filter').filterMe({
 	// 	desaturate: false, // Value from 0 - 1. 1 equals full desaturation (black & white).

@@ -1,6 +1,6 @@
 ---
 author: jonathan
-categories: [games, featured]
+categories: games
 date: 2016-01-16 13:39:00
 image: /images/doom-skinface.png
 layout: post
@@ -15,7 +15,7 @@ La noticia llegó como suele suceder en estos días, a través de [Twitter][twee
 
 id software fue fundada por 4 personas, pero fueron los dos Johns quienes siempre atrajeron a los titulares, no solo por el contraste entre Carmack, el brillante programador y Romero, el diseñador *rockstar*.
 
-Desde el principio, el nivel está bien conseguido como el clímax del primer episodio. Apareces en una habitación observando un soldado a la distancia, el enemigo más débil del juego. En mi primer intento, en una acometida de emoción corrí hacia adelante y fui destripado por dos sargentos armados con escopeta y un demonio camuflado. Veintidós años de elaboración, todo había durado segundos. El mensaje de Romero era claro como el agua: [Bienvenido de nuevo][game-screenshot].
+Desde el principio, el nivel está bien conseguido como el clímax del primer episodio. Apareces en una habitación observando un soldado a la distancia, el enemigo más débil del juego. En mi primer intento, en una acometida de emoción corrí hacia adelante y fui destripado por dos sargentos armados con escopeta y un demonio camuflado. Veintidós años de elaboración, todo había durado segundos. El mensaje de Romero era claro como el agua: [Bienvenido de nuevo][game-screenshot].<span class="tombstone"><i class="icon"></i></span>
 
 [tweet]: https://twitter.com/romero/status/688054778790834176
 [game-screenshot]: https://www.flickr.com/photos/jonathan_zuniga/25541442792/in/album-72157665543500781/
