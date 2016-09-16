@@ -1,6 +1,55 @@
 <header id="header">
   <div class="wrapper">
     <div class="header-box">
+      <div class="column two-column">
+        <div class="column-inner">
+          <nav class="header-menu">
+            <div class="menu-item-description">
+              Bienvenido
+            </div>
+
+            {% assign current = page.url | downcase | split: '/' %}
+            <ul>
+              <li class="{% if current[1] == 'autor' %}current{% endif %}">
+                <a href="{{ site.baseurl }}/autor" data-title="Conocer más acerca del autor">
+                  Autor
+                </a>
+              </li>
+              <li class="{% if current[1] == 'publicaciones' %}current{% endif %}">
+                <a href="{{ site.baseurl }}/publicaciones" data-title="Publicaciones de temas ordinarios">
+                  Publicaciones
+                </a>
+              </li>
+              <li class="{% if current[1] == 'observaciones' %}current{% endif %}">
+                <a href="{{ site.baseurl }}/observaciones" data-title="Observaciones de momentos extraordinarios">
+                  Observaciones
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <div class="column two-column">
+        <div class="column-inner">
+          <h2 class="header-title text-right">
+            <a href="{{ site.baseurl }}/" title="{{ site.title }}">
+              {{ site.title }}
+            </a>
+          </h2>
+
+          <p class="header-description text-right">
+            Acerca de este sitio
+          </p>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+
+    <!-- <div class="header-box">
       <div class="header-menu">
         <div class="menu-item-description">
           Bienvenido
@@ -44,6 +93,6 @@
       </div>
 
       <div class="clearfix"></div>
-    </div>
+    </div> -->
   </div>
 </header>

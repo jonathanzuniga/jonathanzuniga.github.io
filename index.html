@@ -2,7 +2,42 @@
 layout: default
 ---
 
-<div class="left-column">
+<div class="column std-column">
+	<div class="column-inner">
+		<div class="block">
+			<h3 class="column-title">Introducción</h3>
+
+			<p>
+				Mi nombre es Jonathan Zúñiga; en este espacio recopilo publicaciones y observaciones. Más en la <a href="{{ site.baseurl }}/autor">página autor</a>.
+			</p>
+		</div>
+
+		<div class="block">
+			<h3 class="column-title">Recomendadas</h3>
+
+			<p>
+				¿Nuevo por aquí? Si es así, tal vez estes interesado en leer las siguientes publicaciones manualmente seleccionadas, sólo para ti:
+			</p>
+
+			<ul class="featured-publications">
+				<li>
+					<img class="pull-left" src="http://www.coudal.com/i/shop/redux.jpg">
+
+					<a href="/reflexiones-despues-de-un-a_o-usando-xamarin">
+						Reflexiones después de un año usando Xamarin
+					</a>
+				</li>
+				<li>
+					<a href="/encriptando-datos-con-el-algoritmo-rot13">
+						Encriptando datos con el algoritmo ROT13
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="column two-column">
   <div class="column-inner">
 		<h3 class="column-title">Publicación reciente</h3>
 
@@ -24,11 +59,11 @@ layout: default
 					</dd>
 				</dl>
 
-				<p class="column-footer">
+				<div class="column-footer">
 					<a href="{{ site.baseurl }}/publicaciones">
 						─ Más publicaciones ─
 					</a>
-				</p>
+				</div>
 				{% assign postCounter = postCounter | plus: 1 %}
 		    {% if postCounter >= maxPost %}
 		      {% break %}
@@ -38,7 +73,7 @@ layout: default
   </div>
 </div>
 
-<div class="right-column">
+<div class="column std-column">
 	<div class="column-inner">
 		{% if page.layout == 'post' %}
 			<h3 class="column-title">Sobre la publicación</h3>
@@ -65,13 +100,7 @@ layout: default
 				El tiempo estimado de lectura es de {% include read_time.html %}
 			</p> -->
 		{% else %}
-			<h3 class="column-title">Introducción</h3>
-
-			<p>
-				Mi nombre es Jonathan Zúñiga; en este espacio recopilo publicaciones y observaciones. Más en la <a href="{{ site.baseurl }}/autor">página autor</a>.
-			</p>
-
-			<div class="featured sticky">
+			<!-- <div class="featured sticky">
 				{% for post in site.categories['featured'] limit:1 %}
 					<h4>
 						Lo último destacado
@@ -91,18 +120,18 @@ layout: default
 			  {% endfor %}
 
 			  <div class="clearfix"></div>
-			</div>
+			</div> -->
 
 			<h3 class="column-title">Observaciones</h3>
 
 			<p>
-				La siguiente es una lista de observaciones que he hecho mientras he estado en los aeropuertos, con los vecinos, en los eventos sociales, en mis sueños, o en el supermercado local.
+				La siguiente es una lista de observaciones que he hecho mientras he estado en los aeropuertos, con los vecinos, en mis sueños, o en el supermercado local.
 			</p>
 
 			<ul class="latest-observations">
 				{% 
 					assign months = 
-					'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
+					'ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic' | 
 					split: '|'
 				%}
 				{% for observation in site.categories.observations | limit: 6 %}
@@ -113,7 +142,7 @@ layout: default
 								{% assign m = observation.date | date: '%-m' | minus: 1 %}
 								{% assign month = months[m] %}
 								{% assign year = observation.date | date: '%Y' %}
-								{{ day }}.º <em>de</em> {{ month }}, {{ year }}
+								{{ day }}.º <em>de</em> {{ month }}.
 							</time>
 						</a>
 						—
@@ -124,11 +153,11 @@ layout: default
 				{% endfor %}
 			</ul>
 
-			<p class="column-footer">
+			<div class="column-footer">
 				<a href="{{ site.baseurl }}/observaciones">
-					─ Más observaciones ─
+					─ Más obs. ─
 				</a>
-			</p>
+			</div>
 		{% endif %}
 	</div>
 </div>

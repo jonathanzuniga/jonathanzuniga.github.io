@@ -14,43 +14,30 @@ $mono-font-family: Menlo, Consolas, monospace;
 $alternative-font-family: Gill Sans, Verdana, Helvetica, Geneva, sans-serif;
 $base-font-size: 13px;
 $small-font-size: $base-font-size * 0.909;
-$base-line-height: 1.6;
+$base-line-height: 1.5;
 $spacing-unit: 30px;
 
 
 
 // Colors.
-$text-color: #383434;
-// $text-color: #4b4b4b;
-// $background-color: #fdfbf5; // this
-// $background-color: #f7f7ef;
-// $background-color: #f2f2ef;
-// $background-color: #f7f9fd;
-// $background-color: #fff6f2;
-// $background-color: #f3f3f0;
-// $background-color: #f5efeb;
-// $background-color: #f2f3ec;
-// $background-color: #f1f2ed;
-$background-color: #f9bebd;
+$text-color: #424242;
+$background-color: #fff;
 
 $color-black: #000;
 $color-blue: #3f4e79;
 $color-grey: #828282;
 $color-grey-200: #eee;
+$color-grey-300: #e0e0e0;
 $color-grey-800: #424242;
 $color-grey-900: #212121;
 $color-white: #fff;
 
-// $link-color: #3a7aba;
-// $link-color: #5fa0c3;
-$link-color: rgba(63, 78, 121, 0.8);
-// $link-color-alt: #66005e;
-$link-color-alt: #3f4e79;
+$link-color: #5f9ea0;
 
 
 
 // Width of the content area.
-$content-width:	1056px;
+$content-width:	935px;
 $on-palm:				600px;
 $on-laptop:			640px;
 
