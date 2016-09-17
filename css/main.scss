@@ -12,34 +12,36 @@ $brand-font-family: 'Playfair Display', 'Times New Roman', 'Times Roman', Times,
 $heading-font-family: 'Playfair Display', 'Times New Roman', 'Times Roman', Times, serif;
 $mono-font-family: Menlo, Consolas, monospace;
 $alternative-font-family: Gill Sans, Verdana, Helvetica, Geneva, sans-serif;
-$base-font-size: 13px;
-$small-font-size: $base-font-size * 0.909;
+$base-font-size: 16px;
+$small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
 $spacing-unit: 30px;
 
 
 
 // Colors.
-$text-color: #424242;
+$text-color: #333;
 $background-color: #fff;
 
 $color-black: #000;
 $color-blue: #3f4e79;
-$color-grey: #828282;
+$color-grey: #888;
 $color-grey-200: #eee;
 $color-grey-300: #e0e0e0;
 $color-grey-800: #424242;
 $color-grey-900: #212121;
 $color-white: #fff;
 
-$link-color: #5f9ea0;
+$link-color: #2f79af;
 
 
 
 // Width of the content area.
-$content-width:	935px;
-$on-palm:				600px;
-$on-laptop:			640px;
+$content-width:	1200px;
+// $on-palm:				360px;
+// $on-laptop:			768px;
+$on-tablet-max: 767px;
+$on-tablet-min: 768px;
 
 
 
@@ -50,12 +52,22 @@ $on-laptop:			640px;
 //         padding-left: $spacing-unit / 2;
 //     }
 // }
-@mixin media-query($device) {
+// @mixin media-query($device) {
+// 	@media screen and (max-width: $device) {
+// 		@content;
+// 	}
+// }
+@mixin media-query-max($device) {
 	@media screen and (max-width: $device) {
 		@content;
 	}
 }
 
+@mixin media-query-min($device) {
+	@media screen and (min-width: $device) {
+		@content;
+	}
+}
 
 
 // Import partials from `sass_dir` (defaults to `_sass`).

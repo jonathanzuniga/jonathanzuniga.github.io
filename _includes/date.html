@@ -1,3 +1,20 @@
+{% if page.date %}
+	<time datetime="{{ page.date | date_to_xmlschema }}">
+		{{ page.date | timeago }}
+	</time>
+{% else %}
+	<time datetime="{{ post.date | date_to_xmlschema }}">
+		{{ post.date | timeago }}
+	</time>
+{% endif %}
+
+
+
+
+
+
+
+{% comment %}
 {% 
 	assign months = 
 	'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
@@ -29,3 +46,4 @@
 		<span class="day-name">{{ day_name }}</span> {{ day }}.º <em>de</em> {{ month }}, {{ year }}
 	</time>
 {% endif %}
+{% endcomment %}

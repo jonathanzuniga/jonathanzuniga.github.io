@@ -2,6 +2,42 @@
 layout: default
 ---
 
+{% for post in site.categories.publications | limit: 30 %}
+	<article class="post">
+		{% if post.image %}
+			<div class="post-image">
+				<img src="{{ post.image }}">
+			</div>
+		{% endif %}
+
+		<div class="post-body">
+			<header class="post-header">
+				<h2 class="post-title">
+					{{ post.title }}
+				</h2>
+			</header>
+
+			<div class="post-content">
+				{{ post.excerpt }}
+			</div>
+
+			<footer class="post-footer">
+				<div class="post-date">
+					{% include date.html %}
+				</div>
+			</footer>
+		</div>
+	</article>
+{% endfor %}
+
+
+
+
+
+
+
+
+{% comment %}
 <div class="column std-column">
 	<div class="column-inner">
 		<div class="block">
@@ -161,7 +197,7 @@ layout: default
 		{% endif %}
 	</div>
 </div>
-
+{% endcomment %}
 
 
 

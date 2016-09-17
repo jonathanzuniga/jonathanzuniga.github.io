@@ -1,14 +1,15 @@
 ---
 author: jonathan
-categories: criptography
+categories: publications
 date: 2015-11-17 17:39:00
+image: 'https://bloximages.chicago2.vip.townnews.com/billingsgazette.com/content/tncms/assets/v3/editorial/0/db/0dbdef91-93e3-55c9-b868-dec3eeac5421/57dadead48552.image.jpg?resize=435%2C300'
 layout: post
 title: "Encriptando datos con el algoritmo ROT13"
 ---
 
 [ROT13][rot13] es un método para encriptar texto, que consiste en mover las 
 letras del alfabeto (inglés) en las 13 posiciones (por ejemplo, "a" corresponde 
-a la letra "n", "b" a la "o" y así sucesivamente<!--more-->. Es ampliamente utilizado 
+a la letra "n", "b" a la "o" y así sucesivamente.<!--more--> Es ampliamente utilizado 
 en artículos de [Usenet][usenet] para publicar contenido o frases que pueden 
 ser *spoilers* que son conflictivos o algo así, para que no se puedan leer 
 fácilmente sino que requieran un esfuerzo consciente del lector.

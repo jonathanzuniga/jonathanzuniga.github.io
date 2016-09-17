@@ -18,8 +18,12 @@ body {
 	color: $text-color;
 	font-family: $base-font-family;
 	font-size: $base-font-size;
-	font-weight: normal;
+	font-weight: 400;
 	line-height: $base-line-height;
+	
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+
 	-webkit-text-size-adjust: 100%;
 
 	b, strong {
@@ -48,10 +52,10 @@ ul, ol, dl, figure,
 /**
  * Images
  */
-img {
-	max-width: 100%;
-	vertical-align: middle;
-}
+// img {
+// 	max-width: 100%;
+// 	vertical-align: middle;
+// }
 
 
 
@@ -167,20 +171,24 @@ pre {
  * Wrapper
  */
 .wrapper {
-	max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-	max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: $spacing-unit + 10;
-	padding-left: $spacing-unit + 10;
-	@extend %clearfix;
+	max-width: $content-width;
 
-	@include media-query($on-laptop) {
-		max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-		max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-		padding-right: $spacing-unit / 2;
-		padding-left: $spacing-unit / 2;
-	}
+	// max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+	// max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+	// margin-right: auto;
+	// margin-left: auto;
+	// padding-right: $spacing-unit + 10;
+	// padding-left: $spacing-unit + 10;
+	// @extend %clearfix;
+
+	// @include media-query($on-laptop) {
+	// 	max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+	// 	max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+	// 	padding-right: $spacing-unit / 2;
+	// 	padding-left: $spacing-unit / 2;
+	// }
 }
 
 
