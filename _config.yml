@@ -40,7 +40,7 @@ jekyll_timeago:
   and: 'y'
   # suffix: 'ago'
   suffix: ''
-  prefix: ''
+  prefix: 'Hace'
   suffix_future: ''
   prefix_future: 'en'
   years: 'años'

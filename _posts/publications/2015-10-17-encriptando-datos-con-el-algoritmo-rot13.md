@@ -2,9 +2,10 @@
 author: jonathan
 categories: publications
 date: 2015-11-17 17:39:00
-image: 'https://bloximages.chicago2.vip.townnews.com/billingsgazette.com/content/tncms/assets/v3/editorial/0/db/0dbdef91-93e3-55c9-b868-dec3eeac5421/57dadead48552.image.jpg?resize=435%2C300'
+image: 'https://c6.staticflickr.com/9/8850/18583312125_3395beb82b_o.jpg'
+image_caption: 'En la plaza del CECUT'
 layout: post
-title: "Encriptando datos con el algoritmo ROT13"
+title: 'Encriptando datos con el algoritmo ROT13'
 ---
 
 [ROT13][rot13] es un método para encriptar texto, que consiste en mover las 

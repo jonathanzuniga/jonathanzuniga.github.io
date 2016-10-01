@@ -1,23 +1,26 @@
 <header id="header">
     <div class="header-logo">
-      {{ site.title }}
+      <a href="{{ site.baseurl }}/">
+        {{ site.title }}
+      </a>
     </div>
 
     <div class="header-nav">
       <div class="wrapper">
-        <a class="nav-item active" href="{{ site.baseurl }}/">
+        {% assign current = page.url | downcase | split: '/' %}
+        <a class="nav-item {% if page.url == '/' %}current{% endif %}" href="{{ site.baseurl }}/">
           Publicaciones
         </a>
-        <a class="nav-item" href="{{ site.baseurl }}/opiniones">
+        <a class="nav-item {% if current[1] == 'opiniones' %}current{% endif %}" href="{{ site.baseurl }}/opiniones">
           Opiniones
         </a>
-        <a class="nav-item" href="{{ site.baseurl }}/relatos">
+        <a class="nav-item {% if current[1] == 'relatos' %}current{% endif %}" href="{{ site.baseurl }}/relatos">
           Relatos
         </a>
-        <a class="nav-item" href="{{ site.baseurl }}/observaciones">
+        <a class="nav-item {% if current[1] == 'observaciones' %}current{% endif %}" href="{{ site.baseurl }}/observaciones">
           Observaciones
         </a>
-        <a class="nav-item" href="{{ site.baseurl }}/autor">
+        <a class="nav-item {% if current[1] == 'autor' %}current{% endif %}" href="{{ site.baseurl }}/autor">
           Autor
         </a>
       </div>

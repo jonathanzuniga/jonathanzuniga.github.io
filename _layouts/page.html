@@ -2,7 +2,13 @@
 layout: default
 ---
 
-<article class="post">
+<article class="full post">
+	<header class="post-header">
+		<h2 class="post-title">
+			{{ page.title }}
+		</h2>
+	</header>
+
 	{% if page.image %}
 		<div class="post-image">
 			<img src="{{ page.image }}">
@@ -10,12 +16,6 @@ layout: default
 	{% endif %}
 
 	<div class="post-body">
-		<header class="post-header">
-			<h2 class="post-title">
-				{{ page.title }}
-			</h2>
-		</header>
-
 		<div class="post-content">
 			{{ content }}
 		</div>

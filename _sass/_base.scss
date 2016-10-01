@@ -20,11 +20,12 @@ body {
 	font-size: $base-font-size;
 	font-weight: 400;
 	line-height: $base-line-height;
-	
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-
 	-webkit-text-size-adjust: 100%;
+	
+	// -moz-osx-font-smoothing: grayscale;
+	// -webkit-font-smoothing: antialiased;
+	// font-smoothing: antialiased;
+	// text-rendering: optimizeLegibility;
 
 	b, strong {
 		font-weight: bold;
@@ -44,7 +45,8 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 ul, ol, dl, figure,
 %vertical-rhythm {
-	margin-bottom: $spacing-unit / 2;
+	// margin-bottom: $spacing-unit / 2;
+	margin-bottom: 1.5em;
 }
 
 
@@ -104,20 +106,24 @@ h1, h2, h3, h4, h5, h6 {
 a {
 	color: $link-color;
 	text-decoration: none;
- 	-webkit-transition: all 0.2s ease;
- 	-moz-transition: all 0.2s ease;
- 	-ms-transition: all 0.2s ease;
- 	-o-transition: all 0.2s ease;
- 	transition: all 0.2s ease;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-ms-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+
 
 	&:visited {
-		color: $link-color;
+		color: $link-visited-color;
 	}
-	&:hover {
-		color: $text-color;
-		text-decoration: none;
-	}
+
 	&:active {
+		color: $link-active-color;
+	}
+
+	&:hover {
+		color: $link-hover-color;
+		text-decoration: none;
 	}
 }
 
@@ -144,9 +150,10 @@ blockquote {
 pre,
 code {
 	background-color: rgba(0, 0, 0, 0.07);
-	// border-radius: 4px;
+	border-radius: 4px;
 	font-family: $mono-font-family;
 	font-weight: normal;
+	font-size: 14px;
 }
 
 code {
@@ -154,6 +161,11 @@ code {
 }
 
 pre {
+	background: #f3f6fb;
+	border: solid 1px #e7eaee;
+	border-top: solid 1px #dbdde2;
+	border-left: solid 1px #e2e5e9;
+	
 	padding: 8px 15px;
 	overflow-x: auto;
 

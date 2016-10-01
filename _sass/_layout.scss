@@ -2,28 +2,40 @@
 	 Header
 	 ========================================================================== */
 #header {
-	width: 100%;
-	color: #231f20;
-	background: #76a9e9;
+	background: #e3eeff;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+	color: $text-color;
 	position: fixed;
-	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+	width: 100%;
 	z-index: 100;
 
 	.header-logo {
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: contain;
+		// background-position: center center;
+		// background-repeat: no-repeat;
+		// background-size: contain;
 		cursor: pointer;
-		font-size: 0;
+		// font-size: 0;
 		height: 34px;
 		margin: 8px 10%;
-		text-indent: -9999px;
+		// text-indent: -9999px;
 		width: 80%;
+
+		font-family: $heading-font-family;
+		font-size: 12px;
+		font-weight: 800;
+		letter-spacing: 2px;
+		line-height: 34px;
+		text-align: center;
+		text-transform: uppercase;
+		word-spacing: 5px;
+
+		a {
+			color: $text-color;
+		}
 	}
 
 	.header-nav {
-		background-color: $color-white;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		background: $color-white;
 		height: 44px;
 		margin: 0;
 		max-width: 100%;
@@ -42,13 +54,13 @@
 			display: inline-block;
 			font-size: 13px;
 			height: 41px;
-			letter-spacing: 1px;
+			// letter-spacing: 1px;
 			line-height: 44px;
 			margin-right: 20px;
 			text-decoration: none;
-			text-transform: uppercase;
+			// text-transform: uppercase;
 
-			&.active {
+			&.current {
 				border-color: $text-color;
 				color: $text-color;
 			}
@@ -100,25 +112,46 @@
 			}
 
 			.post-body {
-				padding: 24px;
+				padding: 20px;
 
 				.post-title {
+					// font-family: $heading-font-family;
 					font-size: 5vw;
 					line-height: 1.2em;
 					margin-bottom: $spacing-unit;
 					margin-top: 0;
+
+					a {
+						color: $text-color;
+					}
 				}
 
 				.post-content {
 					display: -webkit-box;
 					-webkit-box-orient: vertical;
 					-webkit-line-clamp: 3;
-					font-size: 16px;
-					line-height: 1.3em;
+					// font-size: 16px;
+					// line-height: 1.3em;
 					overflow: hidden;
 
 					a {
+						border-bottom: 1px solid $color-grey-300;
 						font-weight: 500;
+						padding: 3px 2px 1px 2px;
+
+						&:visited {
+							border-bottom: 1px solid $color-grey-300;
+						}
+
+						&:active {
+							border-bottom: 1px solid $link-active-color;
+						}
+
+						&:hover {
+							background: #f3f6fb;
+							border-bottom: 1px solid $color-grey-400;
+							border-radius: 6px;
+						}
 					}
 				}
 
@@ -127,6 +160,73 @@
 						color: $color-grey;
 						font-size: 13px;
 					}
+				}
+			}
+		}
+
+		.full.post {
+			cursor: inherit;
+
+			.post-header {
+				padding: 1.5em 10%;
+
+				.post-title {
+					// font-family: $heading-font-family;
+					font-size: 7vw;
+					line-height: 1.15em;
+					margin: 0 0 0.5em 0;
+				}
+
+				.post-date {
+					color: $color-grey;
+					// font-size: 16px;
+				}
+			}
+
+			.post-image {
+				&:empty {
+					border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+					margin: 0 6%;
+				}
+
+				img {
+					display: block;
+					float: none;
+					height: auto;
+					margin: 0;
+					width: 100%;
+				}
+
+				figure {
+				  margin: 0;
+
+					figcaption {
+				    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+				    margin: 1em 5% 0;
+				    padding-bottom: 1em;
+					}
+				}
+			}
+
+			figcaption,
+			figcaption p {
+		    font-size: 13px;
+		    line-height: 1.5em;
+		    color: $color-grey;
+		  }
+
+			.post-share {
+				margin: 0 10%;
+				padding-top: 2em;
+			}
+
+			.post-body {
+				margin: 0 10%;
+				padding: 0;
+
+				.post-content {
+					// font-size: 16px;
+					// line-height: 1.5em;
 				}
 			}
 		}
@@ -143,21 +243,27 @@
 #footer {
 	color: $color-grey;
 	font-size: 13px;
+	line-height: 13px;
 	padding: 20px 24px;
 	text-align: center;
 
 	ul {
+		display: inline-block;
 		margin: 0;
 		padding: 0;
 
 		li {
-			display: inline-block;
+			border-right: 1px solid $color-grey-400;
+			display: inline;
+			float: left;
 			list-style: none;
+			margin-right: 12px;
+			padding-right: 10px;
 
-			&:not(:last-child):after {
-				content: '/';
-				opacity: 0.6;
-				padding-right: 1px;
+			&:last-child {
+				border-right: none;
+				margin-right: 0;
+				padding-right: 0;
 			}
 		}
 	}
@@ -256,15 +362,73 @@ img.pull-left {
 	 Responsive
 	 ========================================================================== */
 @include media-query-min($on-tablet-min) {
-	#main .posts .post .post-body .post-title {
-		font-size: 4vw;
-		line-height: 1.15em;
+	#main {
+		.posts {
+			.post {
+				.post-body {
+					.post-title {
+						font-size: 4vw;
+						line-height: 1.15em;
+					}
+				}
+			}
+
+			.full.post {
+				.post-header {
+					.post-title {
+						font-size: 6vw;
+					}
+
+					.post-date {
+						font-size: 16px;
+					}
+				}
+
+				.post-body {
+					.post-content {
+						font-size: 16px;
+					}
+				}
+			}
+		}
 	}
 }
 
 @include media-query-min($content-width) {
-	#main .posts .post .post-body .post-title {
-		font-size: 3vw;
+	#main {
+		.posts {
+			.post {
+				.post-body {
+					.post-title {
+						font-size: 3vw;
+					}
+				}
+			}
+
+			.full.post {
+				.post-header {
+					.post-title {
+						font-size: 4vw;
+						line-height: 1.1em;
+					}
+				}
+
+				.post-image {
+					// margin-left: 10%;
+					// margin-right: 10%;
+
+					figure {
+						figcaption {
+							margin: 1em 0 0;
+						}
+					}
+				}
+
+				.post-body {
+					margin: 0 10%;
+				}
+			}
+		}
 	}
 }
 
@@ -279,9 +443,11 @@ img.pull-left {
 
 						& + .post-body {
 							background-color: rgba(255, 255, 255, 0.9);
+							border-bottom-right-radius: 4px;
+							border-top-right-radius: 4px;
 							bottom: 0;
 							margin: 0 6px 6px 0;
-							padding: 10px 60px 10px 15px;
+							padding: 10px 60px 10px 20px;
 							position: absolute;
 
 							.post-title {
@@ -320,12 +486,21 @@ img.pull-left {
 					}
 				}
 			}
+
+			.full.post {
+				.post-header {
+					.post-date {
+						font-size: 14px;
+					}
+				}
+			}
 		}
 	}
 
 	#footer {
 		ul {
-			li.footer-item-source-code {
+			li.footer-item-source-code,
+			li.footer-item-subscribe {
 				display: none;
 			}
 		}
