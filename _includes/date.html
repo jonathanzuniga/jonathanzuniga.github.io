@@ -1,6 +1,6 @@
 {% if page.date %}
 	<time datetime="{{ page.date | date_to_xmlschema }}">
-		{{ page.date | timeago }}
+		{{ page.date | timeago }}.
 	</time>
 {% else %}
 	<time datetime="{{ post.date | date_to_xmlschema }}">

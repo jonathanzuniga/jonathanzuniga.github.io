@@ -1,9 +1,11 @@
 ---
 author: jonathan
-categories: opinions
+categories: [artículos]
 date: 2015-11-29 14:50:00
+image: 'articles/2015-11-29-reflexiones-despues-de-un-a_o-usando-xamarin.jpg'
 layout: post
-title: "Reflexiones después de un año usando Xamarin"
+tags: [destacado, xamarin, opinion, desarrollo-movil, desarrollo-movil-multiplataforma, c-sharp, .net]
+title: 'Reflexiones después de un año usando Xamarin'
 ---
 
 En un principio de existencia me preguntaba si las aplicaciones móviles realmente merecen ser desarrolladas de forma nativa. Si fuera asi ¿conseguiría aprender a un buen nivel de comprensión dos o tres diferentes lenguajes de programación para hacer la misma tarea a la vez?<!--more--> ¿alcanzaria a mantenerme actualizado? Sería muy abrumador ¿no les parece? ¡Ah! ¿Pero por qué no ir más allá? soñar con una alternativa donde tengamos solamente un proyecto por aplicación, donde haya un único equipo de desarrollo y lo mejor de todo ¡que esté hecho con un solo lenguaje!
@@ -21,6 +23,8 @@ El [costo][xamarin-price] es otro tema, aunque ciertamente no es nada barato est
 En general me da la sensación de que lo que dicen los chicos de Xamarin es cierto, pero también es verdad que no es fácil. Para los más experimentados programadores en .net no va a ser un problema y si, si puedes usar [LINQ][linq], expresiones lambda, programación asíncrona (async y await) y casi todo lo que te gusta de tu *framework* favorito.
 
 Cada vez hay más desarrolladores que lo ven como una gran alternativa, hay una comunidad activa y en crecimiento, otras empresas han comenzado a unirse y apoyar seriamente el proyecto.
+
+## Conclusión
 
 Así que, entonces en resumen ¿vale la pena continuar con Xamarin? Para quien es el autor de cada una de estas palabras... ¡Por supuesto que sí!, es una excelente herramienta pero que de ninguna forma sustituye al desarrollo nativo de una *app*, al menos por ahora no es posible y seguiré siendo feliz si en los próximos proyectos tengo disponible Xamarin.
 

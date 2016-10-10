@@ -10,17 +10,15 @@
                      page.layout == 'post' or 
                      page.layout == 'publications' or
                      page.layout == 'observations' %}single{% endif %}">
-    {% include header.html %}
+    <div class="wrapper">
+      {% include header.html %}
 
-    <main id="main">
-      <div class="wrapper">
-        <section class="posts">
+      <main id="main">
           {{ content }}
-        </section>
-      </div>
-    </main>
+      </main>
 
-    {% include footer.html %}
+      {% include footer.html %}
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-1.12.4.min.js"
@@ -34,9 +32,10 @@
     <!-- <script src="{{ '/js/jquery-filter.me/jquery.filterme.js' | prepend: site.baseurl }}" type="text/javascript"></script> -->
     <!-- End - jQuery filter.me scripts -->
     <!-- PaintbrushJS scripts -->
-    <script src="{{ '/js/common.js' | prepend: site.baseurl }}" type="text/javascript"></script>
-    <script src="{{ '/js/paintbrush.js' | prepend: site.baseurl }}" type="text/javascript"></script>
+    <!-- <script src="{{ '/js/common.js' | prepend: site.baseurl }}" type="text/javascript"></script>
+    <script src="{{ '/js/paintbrush.js' | prepend: site.baseurl }}" type="text/javascript"></script> -->
     <!-- End - PaintbrushJS scripts -->
+    <script src="{{ '/js/salvattore.min.js' | prepend: site.baseurl }}" type="text/javascript"></script>
     <script src="{{ '/js/scripts.js' | prepend: site.baseurl }}" type="text/javascript"></script>
   </body>
 </html>

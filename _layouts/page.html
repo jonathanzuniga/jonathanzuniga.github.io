@@ -2,22 +2,15 @@
 layout: default
 ---
 
-<article class="full post">
-	<header class="post-header">
-		<h2 class="post-title">
+<div class="layout-content layout-content-entry">
+	<article lang="es" role="main">
+		<h1 class="content-title">
 			{{ page.title }}
-		</h2>
-	</header>
+		</h1>
 
-	{% if page.image %}
-		<div class="post-image">
-			<img src="{{ page.image }}">
-		</div>
-	{% endif %}
-
-	<div class="post-body">
-		<div class="post-content">
+		<div class="content">
 			{{ content }}
-		</div>
-	</div>
-</article>
+	</article>
+</div>
+
+{% include sidebar.html %}

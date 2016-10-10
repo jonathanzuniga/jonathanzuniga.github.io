@@ -18,7 +18,7 @@ body {
 	color: $text-color;
 	font-family: $base-font-family;
 	font-size: $base-font-size;
-	font-weight: 400;
+	font-weight: normal;
 	line-height: $base-line-height;
 	-webkit-text-size-adjust: 100%;
 	
@@ -45,8 +45,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 ul, ol, dl, figure,
 %vertical-rhythm {
-	// margin-bottom: $spacing-unit / 2;
-	margin-bottom: 1.5em;
+	margin-bottom: $spacing-unit / 2;
 }
 
 
@@ -106,11 +105,11 @@ h1, h2, h3, h4, h5, h6 {
 a {
 	color: $link-color;
 	text-decoration: none;
-	-webkit-transition: all 0.1s linear;
-	-moz-transition: all 0.1s linear;
-	-ms-transition: all 0.1s linear;
-	-o-transition: all 0.1s linear;
-	transition: all 0.1s linear;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 
 
 	&:visited {
@@ -161,11 +160,7 @@ code {
 }
 
 pre {
-	background: #f3f6fb;
-	border: solid 1px #e7eaee;
-	border-top: solid 1px #dbdde2;
-	border-left: solid 1px #e2e5e9;
-	
+	background-color: rgba(0, 0, 0, 0.07);
 	padding: 8px 15px;
 	overflow-x: auto;
 
@@ -186,6 +181,7 @@ pre {
 	margin-right: auto;
 	margin-left: auto;
 	max-width: $content-width;
+	padding: 0 20px;
 
 	// max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
 	// max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));

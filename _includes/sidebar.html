@@ -1,3 +1,119 @@
+<div class="layout-aside">
+	{% if page.url == '/' %}
+		<section class="moments">
+			<h2 class="moments-title">
+				<a href="{{ site.baseurl }}/momentos">
+					Momentos
+				</a>
+			</h2>
+
+			{% for post in site.categories['momentos'] | limit: 3 %}
+				<article class="teaser teaser-moments">
+					<a class="teaser-link" href="{{ post.url }}">
+						<h3 class="teaser-title">
+							{{ post.title }}
+						</h3>
+					</a>
+
+					<div class="teaser-content">
+						<p class="teaser-meta">
+							Publicado en 
+							{% assign sorted_categories = post.categories | sort %}
+							{% for category in sorted_categories %}
+								<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
+								{% if category == 'artículos' %}
+									<a class="teaser-category" href="{{ site.baseurl }}/articulos">artículos</a>
+								{% elsif category == 'relatos' %}
+									<a class="teaser-category" href="{{ site.baseurl }}/relatos">relatos</a>
+								{% else %}
+									<a class="teaser-category" href="{{ site.baseurl }}/momentos">momentos</a>
+								{% endif %}
+							{% endfor %}
+							{% include date.html %}
+							<!-- por 
+							{% assign author = site.authors[post.author] %}
+							<a class="teaser-author" href="{{ site.baseurl }}/autor">
+								{{ author.name }}
+							</a> -->
+						</p>
+
+						<div class="teaser-intro">
+							{{ post.excerpt }}
+						</div>
+					</div>
+				</article>
+			{% endfor %}
+		</section>
+	{% elsif page.layout == 'post' %}
+		<!-- <p class="authors authors-fixed">
+			<a class="authors-link" href="{{ site.baseurl }}/autor">
+				<img class="authors-image authors-image-rounded" src="{{ site.baseurl }}/images/authors/avatar-flat-jz-512.png" alt="">
+				<span class="authors-name">
+					{% assign author = site.authors[page.author] %}
+					{{ author.name }}
+				</span>
+			</a>
+		</p> -->
+
+		<p class="entry">
+			Publicado en 
+			{% assign sorted_categories = page.categories | sort %}
+			{% for category in sorted_categories %}
+				<a class="entry-category" href="">{{ category | replace: '-', ' ' }}</a> 
+			{% endfor %} 
+			{% include date.html %}
+			{% if site.github_username %}
+				{% assign filename = page.url | replace_first: '/', '' | replace: '/', '-' | replace: '.html', '.md' %}
+				<a href="https://github.com/{{ site.github_username }}/jonathanzuniga.github.io/edit/master/src/_posts/articles/{{ filename }}.md">Edita esta publicación en GitHub</a>. 
+			{% endif %}
+			Esta obra está bajo una licencia 
+			<a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">
+				Creative Commons Atribución 4.0 Internacional</a>.
+		</p>
+
+		<ul class="tags">
+			{% assign sorted_tags = page.tags | sort %}
+			{% for tag in sorted_tags %}
+				<li class="tags-item">
+					<a class="tags-link" href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	{% elsif page.layout == 'articles' or
+					 page.layout == 'stories' or
+					 page.layout == 'moments' or
+					 page.layout == 'tag_page' or
+					 page.url == '/buscar' %}
+		<ul class="tags">
+			{{ site | tag_cloud }}
+		</ul>
+	{% elsif page.url == '/autor' %}
+		<p class="authors">
+			{% assign author = site.authors[jonathan] %}
+			{% if site.twitter_username %}
+				<a class="authors-link" href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+					<img class="authors-image" src="{{ site.baseurl }}/images/authors/avatar-flat-jz-512.png" alt="{{ author.name }}">
+				</a>
+			{% else %}
+				<img class="authors-image" src="{{ site.baseurl }}/images/authors/avatar-flat-jz-512.png" alt="{{ author.name }}">
+			{% endif %}
+		</p>
+	{% endif %}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
 <div id="sidebar">
 	<div class="column-inner">
 		{% if page.layout == 'post' %}
@@ -10,7 +126,7 @@
 				<!-- dentro de la categoría 
 				{% assign sorted_categories = page.categories | sort %}
 				{% for category in sorted_categories %}
-	      	<strong>{{ category | replace: '-', ' ' | replace: 'featured', '' }}</strong>{% endfor %}. -->
+					<strong>{{ category | replace: '-', ' ' | replace: 'featured', '' }}</strong>{% endfor %}. -->
 			</p>
 
 			<p>
@@ -70,3 +186,4 @@
 		{% endif %}
 	</div>
 </div>
+{% endcomment %}

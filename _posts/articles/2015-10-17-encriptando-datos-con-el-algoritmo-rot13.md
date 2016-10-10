@@ -1,10 +1,10 @@
 ---
 author: jonathan
-categories: publications
+categories: [artículos]
 date: 2015-11-17 17:39:00
-image: 'https://c6.staticflickr.com/9/8850/18583312125_3395beb82b_o.jpg'
-image_caption: 'En la plaza del CECUT'
+image: 
 layout: post
+tags: [criptografia, algoritmo, rot13, cifrado]
 title: 'Encriptando datos con el algoritmo ROT13'
 ---
 

@@ -5,13 +5,13 @@ layout: default
 <div class="layout-content">
 	<section class="archive">
 		<h2 class="archive-title">
-			<a href="{{ site.baseurl }}/relatos">
-				Relatos
+			<a href="{{ site.baseurl }}/articulos">
+				Artículos
 			</a>
 		</h2>
 
 		<div class="archive-columns" data-columns>
-			{% for post in site.categories['relatos'] limit: 10 %}
+			{% for post in site.categories['artículos'] limit: 10 %}
 				<article class="teaser">
 					<a class="teaser-link" href="{{ post.url }}">
 						<h3 class="teaser-title">

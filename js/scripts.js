@@ -7,4 +7,10 @@ jQuery(document).ready(function($) {
 	// 	debug: false // Set to 'true' for script debugging. Logs information along execution in console.
 	// });
 	// $('.filter').filterMe();
+
+	$('.layout-aside .tags a').each(function() {
+		$(this).wrap('<li class="tags-item"/>');
+	});
+
+  // $('#search-results:empty').removeClass('archive-columns');
 });

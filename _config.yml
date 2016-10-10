@@ -28,19 +28,19 @@ authors:
 excerpt_separator: <!--more-->
 
 # Custom permalink.
-permalink: /:title
+permalink: /:year/:month/:day/:title
 
-gems: [jekyll-timeago]
+gems: ['jekyll-timeago']
 
 jekyll_timeago:
   depth: 2 # Level of detail
-  today: 'hoy'
-  yesterday: 'ayer'
+  today: 'el día de hoy'
+  yesterday: 'el día de ayer'
   tomorrow: 'mañana'
   and: 'y'
   # suffix: 'ago'
   suffix: ''
-  prefix: 'Hace'
+  prefix: 'hace'
   suffix_future: ''
   prefix_future: 'en'
   years: 'años'
@@ -51,3 +51,7 @@ jekyll_timeago:
   week: 'semana'
   days: 'días'
   day: 'día'
+
+tag_page_layout: tag_page
+tag_page_dir: etiqueta
+tag_permalink_style: pretty

@@ -1,28 +1,37 @@
 <header id="header">
-    <div class="header-logo">
-      <a href="{{ site.baseurl }}/">
-        {{ site.title }}
-      </a>
-    </div>
+  <span class="header-logo">
+    <a class="header-logo-link" href="{{ site.baseurl }}/">
+      {{ site.title }}
+    </a>
+  </span>
 
-    <div class="header-nav">
-      <div class="wrapper">
-        {% assign current = page.url | downcase | split: '/' %}
-        <a class="nav-item {% if page.url == '/' %}current{% endif %}" href="{{ site.baseurl }}/">
-          Publicaciones
+  <nav class="header-nav">
+    <ul>
+      {% assign current = page.url | downcase | split: '/' %}
+      <li class="nav-item {% if page.url == '/' %}current{% endif %}">
+        <a href="{{ site.baseurl }}/articulos">
+          Artículos
         </a>
-        <a class="nav-item {% if current[1] == 'opiniones' %}current{% endif %}" href="{{ site.baseurl }}/opiniones">
-          Opiniones
-        </a>
-        <a class="nav-item {% if current[1] == 'relatos' %}current{% endif %}" href="{{ site.baseurl }}/relatos">
+      </li>
+      <li class="nav-item {% if current[1] == 'relatos' %}current{% endif %}">
+        <a href="{{ site.baseurl }}/relatos">
           Relatos
         </a>
-        <a class="nav-item {% if current[1] == 'observaciones' %}current{% endif %}" href="{{ site.baseurl }}/observaciones">
-          Observaciones
+      </li>
+      <li class="nav-item {% if current[1] == 'momentos' %}current{% endif %}">
+        <a href="{{ site.baseurl }}/momentos">
+          Momentos
         </a>
-        <a class="nav-item {% if current[1] == 'autor' %}current{% endif %}" href="{{ site.baseurl }}/autor">
+      </li>
+      <li class="nav-item {% if current[1] == 'autor' %}current{% endif %}">
+        <a href="{{ site.baseurl }}/autor">
           Autor
         </a>
-      </div>
-    </div>
+      </li>
+    </ul>
+  </nav>
+
+  <form action="/buscar" class="header-search" method="get">
+    <input class="header-search-field" id="search-box" name="consulta" placeholder="Buscar..." required title="Buscar" type="search">
+  </form>
 </header>
