@@ -53,8 +53,12 @@ $content-width:	1200px;
 // $on-tablet-max: 767px;
 // $on-tablet-min: 768px;
 
-$on-1024: 1024px;
-
+$width-1024: 1024px;
+$width-1023: 1023px;
+$width-768: 768px;
+$width-767: 767px;
+$width-569: 569px;
+$width-568: 568px;
 
 
 
@@ -83,8 +87,20 @@ $on-1024: 1024px;
 // 	}
 // }
 
-@mixin media-query-min-width($device) {
-  @media screen and (min-width: $device) {
+@mixin media-query-max-width($max) {
+  @media screen and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin media-query-min-width($min) {
+  @media screen and (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin media-query-min-and-max-width($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
     @content;
   }
 }

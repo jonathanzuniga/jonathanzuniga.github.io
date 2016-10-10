@@ -1,6 +1,6 @@
 (function() {
   function displaySearchResults(results, store) {
-    var searchResultsCount = document.getElementById('search-results-count');
+    var searchResultsTitle = document.getElementById('search-results-title');
     var searchResults = document.getElementById('search-results');
     var noResultsFound = document.getElementById('no-results-found');
 
@@ -16,7 +16,7 @@
         if (item.image)
           item_image = '<img class="teaser-image" src="/images/' + item.image + '" alt="' + item.title + '">';
 
-        if (item.categories == '[artículos]')
+        if (item.categories == 'artículos')
           item_categories = '<a class="teaser-category" href="/articulos">artículos</a>';
         else if (item.categories == 'relatos')
           item_categories = '<a class="teaser-category" href="/relatos">relatos</a>';
@@ -49,11 +49,11 @@
       else if (i > 0)
         appendCount = 'Se encontraron ' + i + ' resultados';
 
-      searchResultsCount.innerHTML = appendCount;
+      searchResultsTitle.innerHTML = appendCount;
       searchResults.innerHTML = appendString;
       noResultsFound.innerHTML = '';
     } else {
-      searchResultsCount.innerHTML = 'No se encontró ningún resultado';
+      searchResultsTitle.innerHTML = 'No se encontró ningún resultado';
       noResultsFound.innerHTML = '<p>Lo sentimos, pero ninguna publicación coincide con tu búsqueda «' + searchTerm + '».</p>';
     }
   }

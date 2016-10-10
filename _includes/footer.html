@@ -1,5 +1,15 @@
 <footer id="footer">
-	<div class="footer-content">
+	<p class="footer-content">
+		© 2015—{{ site.time | date: '%Y' }} {{ site.title }}. 
+		<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">Suscribirse a las publicaciones</a>.
+		{% if site.github_username %}
+			<a href="https://github.com/{{ site.github_username }}/jonathanzuniga.github.io" target="_blank">
+				<i class="fa fa-github fa-lg" aria-hidden="true"></i>
+				Código fuente</a>.
+		{% endif %}
+	</p>
+
+	<!-- <div class="footer-content">
 		<ul>
 			<li>
 				<a href="{{ site.baseurl }}/autor">Jonathan Zúñiga</a>
@@ -26,5 +36,5 @@
 				</li>
 			{% endif %}
 		</ul>
-	</div>
+	</div> -->
 </footer>

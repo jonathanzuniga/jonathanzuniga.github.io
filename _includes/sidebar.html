@@ -59,7 +59,13 @@
 			Publicado en 
 			{% assign sorted_categories = page.categories | sort %}
 			{% for category in sorted_categories %}
-				<a class="entry-category" href="">{{ category | replace: '-', ' ' }}</a> 
+				{% if category == 'artículos' %}
+					<a class="entry-category" href="{{ site.baseurl }}/articulos">artículos</a>
+				{% elsif category == 'relatos' %}
+					<a class="entry-category" href="{{ site.baseurl }}/relatos">relatos</a>
+				{% else %}
+					<a class="entry-category" href="{{ site.baseurl }}/momentos">momentos</a>
+				{% endif %}
 			{% endfor %} 
 			{% include date.html %}
 			{% if site.github_username %}
@@ -75,7 +81,7 @@
 			{% assign sorted_tags = page.tags | sort %}
 			{% for tag in sorted_tags %}
 				<li class="tags-item">
-					<a class="tags-link" href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>
+					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/{{ tag }}">{{ tag }}</a>
 				</li>
 			{% endfor %}
 		</ul>

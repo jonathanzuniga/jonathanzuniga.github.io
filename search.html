@@ -12,7 +12,7 @@ permalink: /buscar
 
 <div class="layout-content">
 	<section class="archive">
-		<h2 class="archive-title" id="search-results-count">
+		<h2 class="search-results-title" id="search-results-title">
 		</h2>
 
 		<div id="no-results-found">
@@ -31,8 +31,7 @@ permalink: /buscar
 			"{{ post.url | slugify }}": {
 				"title": "{{ post.title | xml_escape }}",
 				"author": "{{ post.author | xml_escape }}",
-				// "categories": "{{ post.categories | xml_escape }}",
-				'categories': '{{ post.categories | sort | replace: "-", " " }}',
+				'categories': '{{ post.categories | sort }}',
 				"content": {{ post.content | strip_html | strip_newlines | jsonify }},
 				"url": "{{ post.url | xml_escape }}",
 				'date': "{{ post.date | timeago }}",
