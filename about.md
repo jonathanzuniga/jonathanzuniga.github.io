@@ -27,7 +27,7 @@ El sitio está creado con los mejores sabores de HTML5 y Sass para la parte de C
 
 ## Además
 
-Gracias por leer, quienquiera que seas. Aquí no hay comentarios. No hay cuentas, no hay estadísticas. Sólo yo y muchos archivos de texto en blanco por completar. Ya veremos cómo nos va en esta ocasión.
+Gracias por leerme, quienquiera que seas. Aquí no hay comentarios. No hay cuentas, no hay estadísticas. Sólo yo y muchos archivos de texto en blanco por completar. Ya veremos cómo nos va en esta ocasión.
 
 Actualmente las <a href="https://www.flickr.com/photos/@{{ site.flickr_username }}" target="_blank">fotografías</a> las estoy tomando con mi confiable [Nexus 5][nexus-5].
 
