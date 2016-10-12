@@ -6,10 +6,10 @@ title: Sobre el autor
 
 <!-- [@jonathan_zuniga](https://twitter.com/{{ site.twitter_username }}) -->
 
-Si piensas que eres demasiado pequeño para causar un impacto, intenta dormir con un mosquito.<br>
-– Proverbio del África Occidental
-<!-- Si no defiendes algo, te rendirás por cualquier cosa.<br>
-– Malcolm X -->
+<!-- Si piensas que eres demasiado pequeño para causar un impacto, intenta dormir con un mosquito.<br>
+– Proverbio del África Occidental -->
+Si no defiendes algo, te rendirás por cualquier cosa.<br>
+– Malcolm X
 
 Hola, mi nombre es Jonathan Zúñiga, soy un desarrollador originario de la ciudad de Tijuana, actualmente trabajo como desarrollador web/móvil en Morzan Consulting.
 
@@ -23,13 +23,11 @@ Puedes ponerte en contacto conmigo por <a href="mailto:{{ site.email }}">correo 
 
 Este espacio representa un experimento personal, en el que está en juego mi capacidad de comunicar mis pensamientos e ideas, así como mi predisposición a aprender.
 
-El sitio está creado con los mejores sabores de HTML5 y Sass para la parte de CSS, JavaScript para las búsquedas y utilizo [Jekyll][jekyll] para su publicación. La fuente tipográfica del cuerpo y para los títulos es [Helvética][helvetica] por [Max Miedinger][max-miedinger].
+El sitio está creado con los mejores sabores de HTML5 y Sass para la parte de CSS, JavaScript para las búsquedas y utilizo [Jekyll][jekyll] para su publicación. La fuente tipográfica del cuerpo y para los títulos es [Helvética][helvetica] por [Max Miedinger][max-miedinger]. Actualmente las <a href="https://www.flickr.com/photos/@{{ site.flickr_username }}" target="_blank">fotografías</a> las estoy tomando con mi confiable [Nexus 5][nexus-5].
 
 ## Además
 
-Gracias por leerme, quienquiera que seas. Aquí no hay comentarios. No hay cuentas, no hay estadísticas. Sólo yo y muchos archivos de texto en blanco por completar. Ya veremos cómo nos va en esta ocasión.
-
-Actualmente las <a href="https://www.flickr.com/photos/@{{ site.flickr_username }}" target="_blank">fotografías</a> las estoy tomando con mi confiable [Nexus 5][nexus-5].
+Gracias por leer, quienquiera que seas. Aquí no hay comentarios. No hay cuentas, no hay estadísticas. Sólo yo y muchos archivos de texto en blanco por completar. Ya veremos cómo nos va en esta ocasión.
 
 [alien]: http://www.imdb.com/title/tt0078748/
 [jekyll]: https://jekyllrb.com/
