@@ -4,12 +4,8 @@ permalink: /autor
 title: Sobre el autor
 ---
 
-<!-- [@jonathan_zuniga](https://twitter.com/{{ site.twitter_username }}) -->
-
-<!-- Si piensas que eres demasiado pequeño para causar un impacto, intenta dormir con un mosquito.<br>
-– Proverbio del África Occidental -->
-Si no defiendes algo, te rendirás por cualquier cosa.<br>
-– Malcolm X
+«No intentes cambiar un sistema, construye uno nuevo que haga que el anterior se vuelva obsoleto».<br>
+– Richard Buckminster Fuller
 
 Hola, mi nombre es Jonathan Zúñiga, soy un desarrollador originario de la ciudad de Tijuana, actualmente trabajo como desarrollador web/móvil en Morzan Consulting.
 

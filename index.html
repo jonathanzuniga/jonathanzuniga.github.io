@@ -21,14 +21,14 @@ layout: default
 									{{ post.title }}
 								</h3>
 
-								<img class="teaser-image teaser-image-featured" src="/images/{{ post.image }}" alt="{{ post.title }}">
+								<img class="teaser-image teaser-image-featured" src="{{ post.image }}" alt="{{ post.title }}">
 							</a>
 
 							<div class="teaser-content teaser-content-featured">
 								<p class="teaser-meta">
 									Publicado en 
 									{% assign sorted_categories = post.categories | sort %}
-						      {% for category in sorted_categories %}
+									{% for category in sorted_categories %}
 										<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
 										{% if category == 'artículos' %}
 											<a class="teaser-category" href="{{ site.baseurl }}/articulos">artículos</a>
@@ -37,7 +37,7 @@ layout: default
 										{% else %}
 											<a class="teaser-category" href="{{ site.baseurl }}/momentos">momentos</a>
 										{% endif %}
-						      {% endfor %}
+									{% endfor %}
 									{% include date.html %}
 									<!-- por 
 									<a class="teaser-author" href="{{ site.baseurl }}/autor">
@@ -51,10 +51,10 @@ layout: default
 								</div>
 							</div>
 							{% assign postCounter = postCounter | plus: 1 %}	
-					    {% if postCounter >= maxPost %}
-					      {% break %}
-					    {% endif %}
-				    {% endif %}
+							{% if postCounter >= maxPost %}
+								{% break %}
+							{% endif %}
+						{% endif %}
 					{% endunless %}
 				{% endfor %}
 			</article>
@@ -62,36 +62,18 @@ layout: default
 
 		<div class="featured-tags">
 			<ul class="tags-featured">
-				<li class="tags-item">
-					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/c-sharp">c-sharp</a>
-				</li>
-				<li class="tags-item">
-					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/cifrado">cifrado</a>
-				</li>
-				<li class="tags-item">
-					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/criptografia">criptografia</a>
-				</li>
-				<li class="tags-item">
-					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/desarrollo-movil">desarrollo-movil</a>
-				</li>
-				<li class="tags-item">
-					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/doom">doom</a>
-				</li>
-				<li class="tags-item">
-					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/fps">fps</a>
-				</li>
-				<li class="tags-item">
-					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/nostalgia">nostalgia</a>
-				</li>
-				<li>
-					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/opinion">opinion</a>
-				</li>
-				<li class="tags-item">
-					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/videojuego">videojuego</a>
-				</li>
-				<li class="tags-item">
-					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/xamarin">xamarin</a>
-				</li>
+				{% capture tags %}
+					{% for tag in site.tags %}
+						{{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+					{% endfor %}
+				{% endcapture %}
+				{% assign sorted_tags = tags | split: ' ' | sort | reverse %}
+				{% for tag in sorted_tags limit: 15 %}
+					{% assign tag_items = tag | split: '#' %}
+					<li class="tags-item" data-total-posts="{{ tag_items[2] }}">
+						<a class="tags-link" href="{{ site.baseurl }}/etiqueta/{{ tag_items[1] }}">{{ tag_items[1] }}</a>
+					</li>
+				{% endfor %}
 			</ul>
 		</div>
 	</section>
@@ -105,7 +87,7 @@ layout: default
 
 		<div class="archive-columns" data-columns>
 			{% for post in site.categories['artículos'] limit: 10 %}
-			 	{% unless post.tags.first contains 'destacado' %}
+				{% unless post.tags.first contains 'destacado' %}
 					<article class="teaser">
 						<a class="teaser-link" href="{{ post.url }}">
 							<h3 class="teaser-title">
@@ -113,7 +95,7 @@ layout: default
 							</h3>
 							
 							{% if post.image %}
-								<img class="teaser-image" src="/images/{{ post.image }}" alt="{{ post.title }}">
+								<img class="teaser-image" src="{{ post.image }}" alt="{{ post.title }}">
 							{% endif %}
 						</a>
 
@@ -121,7 +103,7 @@ layout: default
 							<p class="teaser-meta">
 								Publicado en 
 								{% assign sorted_categories = post.categories | sort %}
-					      {% for category in sorted_categories %}
+								{% for category in sorted_categories %}
 									<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
 									{% if category == 'artículos' %}
 										<a class="teaser-category" href="{{ site.baseurl }}/articulos">artículos</a>
@@ -130,7 +112,7 @@ layout: default
 									{% else %}
 										<a class="teaser-category" href="{{ site.baseurl }}/momentos">momentos</a>
 									{% endif %}
-					      {% endfor %}
+								{% endfor %}
 								{% include date.html %}
 								<!-- por 
 								{% assign author = site.authors[post.author] %}
@@ -151,357 +133,3 @@ layout: default
 </div>
 
 {% include sidebar.html %}
-
-
-
-
-
-
-
-{% comment %}
-{% for post in site.categories.publications | limit: 30 %}
-	<article class="post">
-		{% if post.image %}
-			<div class="post-image">
-				<img src="{{ post.image | prepend: site.baseurl }}">
-			</div>
-		{% endif %}
-
-		<div class="post-body">
-			<header class="post-header">
-				<h2 class="post-title">
-					<a href="{{ post.url }}">
-						{{ post.title }}
-					</a>
-				</h2>
-			</header>
-
-			<div class="post-content">
-				{{ post.excerpt }}
-			</div>
-
-			<footer class="post-footer">
-				<div class="post-date">
-					{% include date.html %}
-				</div>
-			</footer>
-		</div>
-	</article>
-{% endfor %}
-{% endcomment %}
-
-
-
-
-
-
-
-{% comment %}
-<div class="column std-column">
-	<div class="column-inner">
-		<div class="block">
-			<h3 class="column-title">Introducción</h3>
-
-			<p>
-				Mi nombre es Jonathan Zúñiga; en este espacio recopilo publicaciones y observaciones. Más en la <a href="{{ site.baseurl }}/autor">página autor</a>.
-			</p>
-		</div>
-
-		<div class="block">
-			<h3 class="column-title">Recomendadas</h3>
-
-			<p>
-				¿Nuevo por aquí? Si es así, tal vez estes interesado en leer las siguientes publicaciones manualmente seleccionadas, sólo para ti:
-			</p>
-
-			<ul class="featured-publications">
-				<li>
-					<img class="pull-left" src="http://www.coudal.com/i/shop/redux.jpg">
-
-					<a href="/reflexiones-despues-de-un-a_o-usando-xamarin">
-						Reflexiones después de un año usando Xamarin
-					</a>
-				</li>
-				<li>
-					<a href="/encriptando-datos-con-el-algoritmo-rot13">
-						Encriptando datos con el algoritmo ROT13
-					</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
-
-<div class="column two-column">
-  <div class="column-inner">
-		<h3 class="column-title">Publicación reciente</h3>
-
-		{% assign postCounter = 0 %}
-		{% assign maxPost = 1 %}
-		{% for post in site.posts %}
-			{% unless post.categories contains 'observations' %}
-				<dl class="post">
-					<dt class="post-header">
-						<h4 class="post-title">
-							<a href="{{ post.url }}">
-								{{ post.title }}
-							</a>
-						</h4>
-					</dt>
-
-					<dd class="post-content">
-						{{ post.content }}
-					</dd>
-				</dl>
-
-				<div class="column-footer">
-					<a href="{{ site.baseurl }}/publicaciones">
-						─ Más publicaciones ─
-					</a>
-				</div>
-				{% assign postCounter = postCounter | plus: 1 %}
-		    {% if postCounter >= maxPost %}
-		      {% break %}
-		    {% endif %}
-			{% endunless %}
-		{% endfor %}
-  </div>
-</div>
-
-<div class="column std-column">
-	<div class="column-inner">
-		{% if page.layout == 'post' %}
-			<h3 class="column-title">Sobre la publicación</h3>
-
-			<p>
-				Esta entrada fue publicada el día {% include date.html %}
-				{% assign author = site.authors[page.author] %}
-				por {{ author.name }}.
-				<!-- dentro de la categoría 
-				{% assign sorted_categories = page.categories | sort %}
-				{% for category in sorted_categories %}
-	      	<strong>{{ category | replace: '-', ' ' | replace: 'featured', '' }}</strong>{% endfor %}. -->
-			</p>
-
-			<p>
-				Si deseas mantenerte en contacto, en Twitter me encontrarás como <a href="https://twitter.com/{{ site.twitter_username }}">@{{ site.twitter_username }}</a>. También eres bienvenido a enviarme un mensaje a <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
-			</p>
-
-			<!-- <p>
-				No siempre tengo la oportunidad de responder, pero el correo electrónico es la mejor opción.
-			</p> -->
-
-			<!-- <p>
-				El tiempo estimado de lectura es de {% include read_time.html %}
-			</p> -->
-		{% else %}
-			<!-- <div class="featured sticky">
-				{% for post in site.categories['featured'] limit:1 %}
-					<h4>
-						Lo último destacado
-					</h4>
-
-					<h3>
-						{{ post.title }}
-					</h3>
-
-					{{ post.excerpt }}
-
-					<p>
-				    <a href="{{ post.url }}">
-				    	Leer la publicación completa &raquo;
-				    </a>
-					</p>
-			  {% endfor %}
-
-			  <div class="clearfix"></div>
-			</div> -->
-
-			<h3 class="column-title">Observaciones</h3>
-
-			<p>
-				La siguiente es una lista de observaciones que he hecho mientras he estado en los aeropuertos, con los vecinos, en mis sueños, o en el supermercado local.
-			</p>
-
-			<ul class="latest-observations">
-				{% 
-					assign months = 
-					'ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic' | 
-					split: '|'
-				%}
-				{% for observation in site.categories.observations | limit: 6 %}
-					<li>
-						<a class="observation-date" href="{{ observation.url }}">
-							<time datetime="{{ observation.date | date_to_xmlschema }}">
-								{% assign day = observation.date | date: '%d' %}
-								{% assign m = observation.date | date: '%-m' | minus: 1 %}
-								{% assign month = months[m] %}
-								{% assign year = observation.date | date: '%Y' %}
-								{{ day }}.º <em>de</em> {{ month }}.
-							</time>
-						</a>
-						—
-						<div class="observation-content">
-							{{ observation.content }}
-						</div>
-					</li>
-				{% endfor %}
-			</ul>
-
-			<div class="column-footer">
-				<a href="{{ site.baseurl }}/observaciones">
-					─ Más obs. ─
-				</a>
-			</div>
-		{% endif %}
-	</div>
-</div>
-{% endcomment %}
-
-
-
-
-
-
-
-{% comment %}
-{% for post in site.posts | limit: 5 %}
-	<article class="post">
-		<header class="post-header">
-			<h4 class="post-date">
-				{% include date.html %}
-			</h4>
-
-			<h3 class="post-title">
-				<a href="{{ post.url }}">
-					{{ post.title }}
-				</a>
-			</h3>
-		</header>
-
-		<div class="post-content">
-			{{ post.excerpt }}
-		</div>
-	</article>
-{% endfor %}
-{% endcomment %}
-
-
-
-
-{% comment %}
-{% for post in site.posts | limit: 15 %}
-	<article class="post">
-		<header class="post-header span-8">
-			<h4 class="post-date">
-				{% include date.html %}
-			</h4>
-
-			<h3 class="post-title">
-				<a href="{{ post.url }}">{{ post.title }}</a>
-			</h3>
-		</header>
-
-		<div class="row">
-			<div class="post-content span-8">
-				{{ post.content }}
-			</div>
-
-			<footer class="post-footer span-4">
-				<div class="block">
-					{% include read_time.html %}
-
-					<div class="post-footer-item post-categories">
-						<div class="post-footer-title">Categorías</div>
-
-						{% assign sorted_categories = post.categories | sort %}
-			      {% for category in sorted_categories %}
-			        <a href="/categorias/#{{ category }}">{{ category | replace: '-', ' ' }}</a>
-			      {% endfor %}
-					</div>
-
-					<div class="post-footer-item post-tags">
-						<div class="post-footer-title">Etiquetas</div>
-
-						{% assign sorted_tags = post.tags | sort %}
-			      {% for tag in sorted_tags %}
-			        <a href="/tags/#{{ tag }}">{{ tag | replace: '-', ' ' }}</a><span class="comma"></span>
-			      {% endfor %}
-					</div>
-
-					<div class="post-footer-item post-share">
-						<div class="post-footer-title">Compartir</div>
-
-						<ul>
-							<li>
-								<a class="link-twitter" href="" title="Twitter">
-									<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-								</a>
-							</li>
-							<li>
-								<a class="link-facebook" href="" title="Facebook">
-              		<i class="fa fa-facebook-f fa-lg" aria-hidden="true"></i>
-								</a>
-							</li>
-							<li>
-								<a class="link-google-plus" href="" title="Google+">
-              		<i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
-								</a>
-							</li>
-							<li>
-								<a class="link-linkedin" href="" title="LinkedIn">
-              		<i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</footer>
-		</div>
-	</article>
-{% endfor %}
-{% endcomment %}
-
-
-
-
-
-{% comment %}
-{% assign postCounter = 0 %}
-{% assign maxPost = 1 %}
-{% for post in site.posts %}
-	{% unless post.categories contains 'observaciones' %}
-		<article class="post">
-			<header class="post-header">
-				<h3 class="post-title">
-					<a href="{{ post.url }}">{{ post.title }}</a>
-				</h3>
-			</header>
-
-			<div class="post-content">
-				{{ post.content }}
-			</div>
-
-			<div class="post-meta">
-				<span class="post-date">
-					<a href="{{ post.url }}">≡</a>
-					{% include date.html %}
-				</span>
-
-				<span class="post-categories">
-					+
-					categorías: 
-					{% assign sorted_categories = post.categories | sort %}
-		      {% for category in sorted_categories %}
-		        <a href="/categorias/#{{ category }}">{{ category | replace: '-', ' ' }}</a>
-		      {% endfor %}
-				</span>
-			</div>
-		</article>
-		{% assign postCounter = postCounter | plus: 1 %}
-    {% if postCounter >= maxPost %}
-      {% break %}
-    {% endif %}
-	{% endunless %}
-{% endfor %}
-{% endcomment %}
