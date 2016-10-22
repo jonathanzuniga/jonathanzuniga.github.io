@@ -4,7 +4,7 @@ categories: [momentos]
 date: 2016-10-16
 image: 
 layout: post
-tags: [luna, planeta, simbologia, intuitivo, espiritualidad, metafisica]
+tags: [luna, planeta, simbologia, noche, metafisica]
 title: 'Luna llena'
 ---
 
