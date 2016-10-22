@@ -4,7 +4,7 @@ categories: [momentos]
 date: 2016-10-21
 image: 
 layout: post
-tags: [persona, casualidad, destino, enlace]
+tags: [persona, casualidad, destino]
 title: 'Amiga de una amiga'
 ---
 
