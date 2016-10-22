@@ -127,7 +127,7 @@ section {
 
 	.header-nav {
 		ul {
-			color: #A2A4A3;
+			color: $color-grey-500;
 			display: -webkit-box;
 			display: -ms-flexbox;
 			display: flex;
@@ -305,7 +305,7 @@ section {
 						display: inline-block;
 
 						&:not(:last-child)::after {
-							color: #A2A4A3;
+							color: $color-grey-500;
 							content: '·';
 						}
 					}
@@ -585,7 +585,7 @@ section {
 				display: inline-block;
 
 				&:not(:last-child)::after {
-					color: $color-grey-600;
+					color: $color-grey-500;
 					content: ' · ';
 				}
 			}
@@ -987,7 +987,7 @@ img.pull-left {
 @include media-query-min-width($width-1024) {
 	#header {
 		padding-top: 50px;
-		padding-bottom: 50px;
+		padding-bottom: 40px;
 
 		.header-logo,
 		.header-nav ul,

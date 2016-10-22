@@ -1,10 +1,10 @@
 ---
 author: jonathan
-categories: [artículos]
+categories: [articulos]
 date: 2016-10-14
 image: 
 layout: post
-tags: [arte-ascii, arte-ansi, retro, internet, doom, nostalgia]
+tags: [arte-ascii, arte-ansi, retro, internet, nostalgia]
 title: 'Arte en modo texto'
 ---
 

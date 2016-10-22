@@ -1,6 +1,6 @@
 ---
 author: jonathan
-categories: [artículos]
+categories: [articulos]
 date: 2015-11-29 14:50:00
 image: 'https://www.dropbox.com/s/0cl15nu43381b0o/cover.jpg?raw=1'
 layout: post

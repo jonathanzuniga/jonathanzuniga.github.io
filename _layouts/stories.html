@@ -33,7 +33,7 @@ layout: default
 							{% assign sorted_categories = post.categories | sort %}
 				      {% for category in sorted_categories %}
 								<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
-								{% if category == 'artículos' %}
+								{% if category == 'articulos' %}
 									<a class="teaser-category" href="{{ site.baseurl }}/articulos">artículos</a>
 								{% elsif category == 'relatos' %}
 									<a class="teaser-category" href="{{ site.baseurl }}/relatos">relatos</a>

@@ -16,7 +16,7 @@
         if (item.image)
           item_image = '<img class="teaser-image" src="' + item.image + '" alt="' + item.title + '">';
 
-        if (item.categories == 'artículos')
+        if (item.categories == 'articulos')
           item_categories = '<a class="teaser-category" href="/articulos">artículos</a>';
         else if (item.categories == 'relatos')
           item_categories = '<a class="teaser-category" href="/relatos">relatos</a>';

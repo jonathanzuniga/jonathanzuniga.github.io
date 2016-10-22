@@ -8,25 +8,41 @@
   <nav class="header-nav">
     <ul>
       {% assign current = page.url | downcase | split: '/' %}
-      <li class="nav-item {% if page.url == '/' %}current{% endif %}">
-        <a href="{{ site.baseurl }}/articulos">
+      <li class="nav-item">
+        {% if current[1] == 'articulos' %}
           Artículos
-        </a>
+        {% else %}
+          <a href="{{ site.baseurl }}/articulos">
+            Artículos
+          </a>
+        {% endif %}
       </li>
-      <li class="nav-item {% if current[1] == 'relatos' %}current{% endif %}">
-        <a href="{{ site.baseurl }}/relatos">
+      <li class="nav-item">
+        {% if current[1] == 'relatos' %}
           Relatos
-        </a>
+        {% else %}
+          <a href="{{ site.baseurl }}/relatos">
+            Relatos
+          </a>
+        {% endif %}
       </li>
-      <li class="nav-item {% if current[1] == 'momentos' %}current{% endif %}">
-        <a href="{{ site.baseurl }}/momentos">
+      <li class="nav-item">
+        {% if current[1] == 'momentos' %}
           Momentos
-        </a>
+        {% else %}
+          <a href="{{ site.baseurl }}/momentos">
+            Momentos
+          </a>
+        {% endif %}
       </li>
-      <li class="nav-item {% if current[1] == 'autor' %}current{% endif %}">
-        <a href="{{ site.baseurl }}/autor">
+      <li class="nav-item">
+        {% if current[1] == 'autor' %}
           Autor
-        </a>
+        {% else %}
+          <a href="{{ site.baseurl }}/autor">
+            Autor
+          </a>
+        {% endif %}
       </li>
     </ul>
   </nav>

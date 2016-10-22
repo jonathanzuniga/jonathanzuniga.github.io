@@ -25,7 +25,7 @@
 							{% assign sorted_categories = post.categories | sort %}
 							{% for category in sorted_categories %}
 								<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
-								{% if category == 'artículos' %}
+								{% if category == 'articulos' %}
 									<a class="teaser-category" href="{{ site.baseurl }}/articulos">artículos</a>
 								{% elsif category == 'relatos' %}
 									<a class="teaser-category" href="{{ site.baseurl }}/relatos">relatos</a>
@@ -65,7 +65,7 @@
 			Publicado en 
 			{% assign sorted_categories = page.categories | sort %}
 			{% for category in sorted_categories %}
-				{% if category == 'artículos' %}
+				{% if category == 'articulos' %}
 					<a class="entry-category" href="{{ site.baseurl }}/articulos">artículos</a>
 				{% elsif category == 'relatos' %}
 					<a class="entry-category" href="{{ site.baseurl }}/relatos">relatos</a>
@@ -102,7 +102,7 @@
 				<!-- The following part extracts all the tags from your posts and sort tags, so that you do not need to manually collect your tags to a place. -->
 			{% endcomment %}
 			{% assign article_tags = '' %}
-			{% for article in site.categories['artículos'] %}
+			{% for article in site.categories['articulos'] %}
 				{% assign ttags = article.tags | join: '|' | append: '|' %}
 				{% assign article_tags = article_tags | append: ttags %}
 			{% endfor %}
