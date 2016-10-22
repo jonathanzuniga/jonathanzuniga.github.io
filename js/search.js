@@ -14,7 +14,7 @@
         var item_categories = '';
 
         if (item.image)
-          item_image = '<img class="teaser-image" src="/images/' + item.image + '" alt="' + item.title + '">';
+          item_image = '<img class="teaser-image" src="' + item.image + '" alt="' + item.title + '">';
 
         if (item.categories == 'artículos')
           item_categories = '<a class="teaser-category" href="/articulos">artículos</a>';

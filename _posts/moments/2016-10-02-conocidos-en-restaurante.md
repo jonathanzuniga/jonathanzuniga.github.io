@@ -4,7 +4,7 @@ categories: [momentos]
 date: 2016-10-02 19:01:00
 image: 
 layout: post
-tags: [restaurante, vecinos, tijuana]
+tags: [restaurante, vecino, tijuana]
 title: 'Conocidos en restaurante'
 ---
 

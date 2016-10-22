@@ -213,6 +213,7 @@ section {
 	-ms-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
+
 	&:visited {
 		color: $text-color;
 	}
@@ -443,7 +444,7 @@ section {
 					// }
 
 					.figure {
-						margin-bottom: 0;
+						margin-bottom: 15px;
 						overflow: auto;
 
 						&.figure-left {
@@ -473,7 +474,6 @@ section {
 						}
 
 						table {
-							margin-bottom: 15px;
 							width: 100%;
 
 							td,
@@ -510,7 +510,7 @@ section {
 
 					.figure-caption {
 						font-weight: 700;
-						margin-bottom: 15px;
+						// margin-bottom: 15px;
 					}
 
 					*+.figure-caption {
@@ -535,14 +535,38 @@ section {
 	.layout-aside {
 		.moments {
 			.moments-title {
-				border: 0;
-				height: 1px;
-				overflow: hidden;
-				position: absolute;
-				width: 1px;
-				clip: rect(0 0 0 0);
-				margin: -1px;
-				padding: 0;
+				// border: 0;
+				// height: 1px;
+				// overflow: hidden;
+				// position: absolute;
+				// width: 1px;
+				// clip: rect(0 0 0 0);
+				// margin: -1px;
+				// padding: 0;
+				margin-top: -5px;
+
+				a {
+					color: $text-color;
+					font-size: 24px;
+					font-weight: normal;
+					-webkit-transition: all 0.2s ease;
+					-moz-transition: all 0.2s ease;
+					-ms-transition: all 0.2s ease;
+					-o-transition: all 0.2s ease;
+					transition: all 0.2s ease;
+
+					&:visited {
+						color: $text-color;
+					}
+
+					&:active {
+						color: $link-active-color;
+					}
+
+					&:hover {
+						color: $link-hover-color;
+					}
+				}
 			}
 
 			.teaser {

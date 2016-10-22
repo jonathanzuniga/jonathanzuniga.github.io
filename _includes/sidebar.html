@@ -7,6 +7,10 @@
 				</a>
 			</h2>
 
+			<p>
+				Observaciones y momentos personales de valor cuestionable.
+			</p>
+
 			{% for post in site.categories['momentos'] | limit: 3 %}
 				<article class="teaser teaser-moments">
 					<a class="teaser-link" href="{{ post.url }}">
@@ -45,6 +49,7 @@
 			{% endfor %}
 		</section>
 	{% elsif page.layout == 'post' %}
+		{% comment %}
 		<!-- <p class="authors authors-fixed">
 			<a class="authors-link" href="{{ site.baseurl }}/autor">
 				<img class="authors-image authors-image-rounded" src="{{ site.baseurl }}/images/authors/avatar-flat-jz-512.png" alt="">
@@ -54,6 +59,7 @@
 				</span>
 			</a>
 		</p> -->
+		{% endcomment %}
 
 		<p class="entry">
 			Publicado en 
@@ -70,7 +76,7 @@
 			{% include date.html %}
 			{% if site.github_username %}
 				{% assign filename = page.url | replace_first: '/', '' | replace: '/', '-' | replace: '.html', '.md' %}
-				<a href="https://github.com/{{ site.github_username }}/jonathanzuniga.github.io/edit/master/src/_posts/articles/{{ filename }}.md">Edita esta publicación en GitHub</a>. 
+				<a href="https://github.com/{{ site.github_username }}/jonathanzuniga.github.io/edit/master/_posts/articles/{{ filename }}.md">Edita esta publicación en GitHub</a>. 
 			{% endif %}
 			Esta obra está bajo una licencia 
 			<a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">
@@ -85,13 +91,109 @@
 				</li>
 			{% endfor %}
 		</ul>
-	{% elsif page.layout == 'articles' or
-					 page.layout == 'stories' or
-					 page.layout == 'moments' or
-					 page.layout == 'tag_page' or
+	{% elsif page.layout == 'tag_page' or
 					 page.url == '/buscar' %}
 		<ul class="tags">
 			{{ site | tag_cloud }}
+		</ul>
+	{% elsif page.layout == 'articles' %}
+		<ul class="tags">
+			{% comment %}
+				<!-- The following part extracts all the tags from your posts and sort tags, so that you do not need to manually collect your tags to a place. -->
+			{% endcomment %}
+			{% assign article_tags = '' %}
+			{% for article in site.categories['artículos'] %}
+				{% assign ttags = article.tags | join: '|' | append: '|' %}
+				{% assign article_tags = article_tags | append: ttags %}
+			{% endfor %}
+			{% assign article_tags = article_tags | split: '|' | sort %}
+
+			{% comment %}
+				<!-- The following part removes dulpicated tags and invalid tags like blank tag. -->
+			{% endcomment %}
+			{% assign tags = '' %}
+			{% for tag in article_tags %}
+				{% if tag != '' %}
+					{% if tags == '' %}
+						{% assign tags = tag | split: '|' %}
+					{% endif %}
+					{% unless tags contains tag %}
+						{% assign tags = tags | join: '|' | append: '|' | append: tag | split: '|' %}
+					{% endunless %}
+				{% endif %}
+			{% endfor %}
+
+			{% for tag in tags %}
+				<li class="tags-item">
+					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/{{ tag }}">{{ tag }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	{% elsif page.layout == 'stories' %}
+		<ul class="tags">
+			{% comment %}
+			<!-- The following part extracts all the tags from your posts and sort tags, so that you do not need to manually collect your tags to a place. -->
+			{% endcomment %}
+			{% assign story_tags = '' %}
+			{% for story in site.categories['relatos'] %}
+				{% assign ttags = story.tags | join: '|' | append: '|' %}
+				{% assign story_tags = story_tags | append: ttags %}
+			{% endfor %}
+			{% assign story_tags = story_tags | split: '|' | sort %}
+
+			{% comment %}
+			<!-- The following part removes dulpicated tags and invalid tags like blank tag. -->
+			{% endcomment %}
+			{% assign tags = '' %}
+			{% for tag in story_tags %}
+				{% if tag != '' %}
+					{% if tags == '' %}
+						{% assign tags = tag | split: '|' %}
+					{% endif %}
+					{% unless tags contains tag %}
+						{% assign tags = tags | join: '|' | append: '|' | append: tag | split: '|' %}
+					{% endunless %}
+				{% endif %}
+			{% endfor %}
+
+			{% for tag in tags %}
+				<li class="tags-item">
+					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/{{ tag }}">{{ tag }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	{% elsif page.layout == 'moments' %}
+		<ul class="tags">
+			{% comment %}
+			<!-- The following part extracts all the tags from your posts and sort tags, so that you do not need to manually collect your tags to a place. -->
+			{% endcomment %}
+			{% assign moment_tags = '' %}
+			{% for moment in site.categories['momentos'] %}
+				{% assign ttags = moment.tags | join: '|' | append: '|' %}
+				{% assign moment_tags = moment_tags | append: ttags %}
+			{% endfor %}
+			{% assign moment_tags = moment_tags | split: '|' | sort %}
+
+			{% comment %}
+			<!-- The following part removes dulpicated tags and invalid tags like blank tag. -->
+			{% endcomment %}
+			{% assign tags = '' %}
+			{% for tag in moment_tags %}
+				{% if tag != '' %}
+					{% if tags == '' %}
+						{% assign tags = tag | split: '|' %}
+					{% endif %}
+					{% unless tags contains tag %}
+						{% assign tags = tags | join: '|' | append: '|' | append: tag | split: '|' %}
+					{% endunless %}
+				{% endif %}
+			{% endfor %}
+
+			{% for tag in tags %}
+				<li class="tags-item">
+					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/{{ tag }}">{{ tag }}</a>
+				</li>
+			{% endfor %}
 		</ul>
 	{% elsif page.url == '/autor' %}
 		<p class="authors">
@@ -106,90 +208,3 @@
 		</p>
 	{% endif %}
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-{% comment %}
-<div id="sidebar">
-	<div class="column-inner">
-		{% if page.layout == 'post' %}
-			<h3 class="column-title">Sobre la publicación</h3>
-
-			<p>
-				Esta entrada fue publicada el día {% include date.html %}
-				{% assign author = site.authors[page.author] %}
-				por {{ author.name }}.
-				<!-- dentro de la categoría 
-				{% assign sorted_categories = page.categories | sort %}
-				{% for category in sorted_categories %}
-					<strong>{{ category | replace: '-', ' ' | replace: 'featured', '' }}</strong>{% endfor %}. -->
-			</p>
-
-			<p>
-				Si deseas mantenerte en contacto, en Twitter me encontrarás como <a href="https://twitter.com/{{ site.twitter_username }}">@{{ site.twitter_username }}</a>. También eres bienvenido a enviarme un mensaje a <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
-			</p>
-
-			<!-- <p>
-				No siempre tengo la oportunidad de responder, pero el correo electrónico es la mejor opción.
-			</p> -->
-
-			<!-- <p>
-				El tiempo estimado de lectura es de {% include read_time.html %}
-			</p> -->
-		{% else %}
-			<h3 class="column-title">Introducción</h3>
-
-			<p>
-				Mi nombre es Jonathan Zúñiga; en este espacio recopilo publicaciones y observaciones. Más en la <a href="{{ site.baseurl }}/autor">página autor</a>.
-			</p>
-
-			<h3 class="column-title">Observaciones</h3>
-
-			<p class="note">
-				La siguiente es una lista de observaciones que he hecho mientras he estado en los aeropuertos, con los vecinos, en mis sueños, o en el supermercado local.
-			</p>
-
-			<ul class="latest-observations">
-				{% 
-					assign months = 
-					'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
-					split: '|'
-				%}
-				{% for observation in site.categories.observations | limit: 6 %}
-					<li>
-						<a class="observation-date" href="{{ observation.url }}">
-							<time datetime="{{ observation.date | date_to_xmlschema }}">
-								{% assign day = observation.date | date: '%d' %}
-								{% assign m = observation.date | date: '%-m' | minus: 1 %}
-								{% assign month = months[m] %}
-								{% assign year = observation.date | date: '%Y' %}
-								{{ day }}.º <em>de</em> {{ month }}, {{ year }}
-							</time>
-						</a>
-						—
-						<div class="observation-content">
-							{{ observation.content }}
-						</div>
-					</li>
-				{% endfor %}
-			</ul>
-
-			<p class="column-footer">
-				<a href="{{ site.baseurl }}/observaciones">
-					— Más observaciones —
-				</a>
-			</p>
-		{% endif %}
-	</div>
-</div>
-{% endcomment %}

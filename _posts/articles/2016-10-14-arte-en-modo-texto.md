@@ -4,7 +4,7 @@ categories: [artículos]
 date: 2016-10-14
 image: 
 layout: post
-tags: [arte-ascii, arte-ansi, retro, internet, arte, historia]
+tags: [arte-ascii, arte-ansi, retro, internet, doom, nostalgia]
 title: 'Arte en modo texto'
 ---
 
