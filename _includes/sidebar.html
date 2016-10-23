@@ -74,15 +74,17 @@
 				{% endif %}
 			{% endfor %} 
 			{% include date.html %}
+			{% comment %}
 			{% if site.github_username %}
 				{% assign filename = page.url | replace_first: '/', '' | replace: '/', '-' | replace: '.html', '.md' %}
-				<a href="https://github.com/{{ site.github_username }}/jonathanzuniga.github.io/edit/master/_posts/articles/{{ filename }}.md">Edita esta publicación en GitHub</a>. 
+				<a href="https://github.com/{{ site.github_username }}/jonathanzuniga.github.io/edit/master/_posts/articles/{{ filename }}.md">Edita esta publicación en GitHub</a>.
 			{% endif %}
 			Esta obra está bajo una licencia 
 			<a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">
 				Creative Commons Atribución 4.0 Internacional</a>.
+			{% endcomment %}
 		</p>
-
+		
 		<ul class="tags">
 			{% assign sorted_tags = page.tags | sort %}
 			{% for tag in sorted_tags %}

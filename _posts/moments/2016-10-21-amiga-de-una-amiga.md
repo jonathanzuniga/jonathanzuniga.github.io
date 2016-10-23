@@ -8,4 +8,4 @@ tags: [persona, casualidad, destino]
 title: 'Amiga de una amiga'
 ---
 
-Quede sorprendido, que la chica que conocí físicamente hace un par de días ya la había visto antes por internet, a la misma hora y el mismo día de la semana.
+La chica que conocí físicamente hace un par de días ya la había contactado antes por internet, a la misma hora y el mismo día de la semana.
