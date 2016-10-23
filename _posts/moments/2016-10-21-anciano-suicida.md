@@ -8,4 +8,4 @@ tags: [anciano, suicida, tijuana]
 title: 'Anciano suicida'
 ---
 
-Al salir para el trabajo, observe a una persona mayor cruzar la calle a escasos centímetros de ser arrollado por un auto blanco.
+Por la mañana, observe a una persona mayor cruzar la calle a escasos centímetros de ser arrollado por un auto blanco.
