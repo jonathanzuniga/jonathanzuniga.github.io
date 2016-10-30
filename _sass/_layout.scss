@@ -362,6 +362,7 @@ section {
 					font-weight: 100;
 					line-height: 1.3;
 					margin-bottom: 15px;
+					// margin-bottom: 20px;
 				}
 
 				.content {
@@ -533,6 +534,21 @@ section {
 	}
 
 	.layout-aside {
+		&.layout-aside-entry {
+			.aside-title {
+				font-size: 18px;
+				font-weight: normal;
+				line-height: 1.3;
+				margin-bottom: 20px;
+				margin-top: 10px;
+			}
+
+			p,
+			ul {
+				font-size: 14px;
+			}
+		}
+
 		.moments {
 			.moments-title {
 				// border: 0;
@@ -824,7 +840,7 @@ img.pull-left {
 				article {
 					.content-title {
 						font-size: 30px;
-						margin-bottom: 30px;
+						// margin-bottom: 30px;
 					}
 
 					.content {
@@ -1103,7 +1119,7 @@ img.pull-left {
 					.content-title {
 						font-size: 36px;
 						margin-top: -10px;
-						margin-bottom: 35px;
+						// margin-bottom: 35px;
 					}
 
 					.content {

@@ -1,4 +1,4 @@
-<div class="layout-aside">
+<div class="layout-aside {% if page.layout == 'post' %}layout-aside-entry{% endif %}">
 	{% if page.url == '/' %}
 		<section class="moments">
 			<h2 class="moments-title">
@@ -60,6 +60,24 @@
 			</a>
 		</p> -->
 		{% endcomment %}
+
+		{% if page.categories contains 'articulos' %}
+			<h3 class="aside-title">
+				Artículos
+			</h3>
+
+			<p>
+				En lugar de mantener un blog tradicional, esta página sirve como hogar para la escritura y como depósito de respuestas a las preguntas más frecuentes acerca de mí y mi trabajo. Para recibir actualizaciones, por favor <a href="https://twitter.com/{{ site.twitter_username }}" target="_target">sígueme en twitter</a> o <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">suscríbete a mi feed RSS</a>. Por favor, siéntate libre de enviarme por correo electrónico tus comentarios o correcciones.
+			</p>
+		{% elsif page.categories contains 'momentos' %}
+			<h3 class="aside-title">
+				Momentos
+			</h3>
+
+			<p>
+				
+			</p>
+		{% endif %}
 
 		<p class="entry">
 			Publicado en 
