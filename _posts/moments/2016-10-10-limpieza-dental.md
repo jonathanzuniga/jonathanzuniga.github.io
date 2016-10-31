@@ -1,8 +1,8 @@
 ---
 author: jonathan
 categories: [momentos]
+cover: 
 date: 2016-10-10
-image: 
 layout: post
 tags: [dentista, salud-dental]
 title: 'Limpieza dental'

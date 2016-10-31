@@ -8,10 +8,11 @@
 <html>
   {% include head.html %}
 
-  <body class="{% if page.layout == 'page' or 
-                     page.layout == 'post' or 
-                     page.layout == 'publications' or
-                     page.layout == 'observations' %}single{% endif %}">
+  <body class="{% if page.layout == 'page' or
+                     page.layout == 'post' or
+                     page.layout == 'articles' or
+                     page.layout == 'stories' or
+                     page.layout == 'moments' %}single{% endif %}">
     <div class="wrapper">
       {% include header.html %}
 

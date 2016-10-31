@@ -1,51 +1,67 @@
-<div class="layout-aside {% if page.layout == 'post' %}layout-aside-entry{% endif %}">
+<div class="layout-aside
+	{% if page.layout == 'page' or
+				page.layout == 'articles' or
+        page.layout == 'stories' or
+        page.layout == 'moments' %}
+    layout-aside-single
+	{% elsif page.layout == 'post' %}
+		layout-aside-entry
+	{% endif %}">
 	{% if page.url == '/' %}
-		<section class="moments">
-			<h2 class="moments-title">
+		<section class="aside-entries">
+			<h2 class="aside-entries-title">
+				<a href="{{ site.baseurl }}/relatos">
+					Relatos
+				</a>
+				y
 				<a href="{{ site.baseurl }}/momentos">
-					Momentos
+					momentos
 				</a>
 			</h2>
 
-			<p>
-				Observaciones y momentos personales de valor cuestionable.
-			</p>
+			{% assign postCounter = 0 %}
+			{% assign maxPost = 3 %}
+			{% for post in site.posts %}
+				{% if post.categories contains 'relatos' or post.categories contains 'momentos' %}
+					<article class="teaser teaser-aside-entries">
+						<a class="teaser-link" href="{{ post.url }}">
+							<h3 class="teaser-title">
+								{{ post.title }}
+							</h3>
+						</a>
 
-			{% for post in site.categories['momentos'] | limit: 3 %}
-				<article class="teaser teaser-moments">
-					<a class="teaser-link" href="{{ post.url }}">
-						<h3 class="teaser-title">
-							{{ post.title }}
-						</h3>
-					</a>
+						<div class="teaser-content">
+							<p class="teaser-meta">
+								Publicado en 
+								{% assign sorted_categories = post.categories | sort %}
+								{% for category in sorted_categories %}
+									<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
+									{% if category == 'articulos' %}
+										<a class="teaser-category" href="{{ site.baseurl }}/articulos">artículos</a>
+									{% elsif category == 'relatos' %}
+										<a class="teaser-category" href="{{ site.baseurl }}/relatos">relatos</a>
+									{% else %}
+										<a class="teaser-category" href="{{ site.baseurl }}/momentos">momentos</a>
+									{% endif %}
+								{% endfor %}
+								{% include date.html %}
+								<!-- por 
+								{% assign author = site.authors[post.author] %}
+								<a class="teaser-author" href="{{ site.baseurl }}/autor">
+									{{ author.name }}
+								</a> -->
+							</p>
 
-					<div class="teaser-content">
-						<p class="teaser-meta">
-							Publicado en 
-							{% assign sorted_categories = post.categories | sort %}
-							{% for category in sorted_categories %}
-								<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
-								{% if category == 'articulos' %}
-									<a class="teaser-category" href="{{ site.baseurl }}/articulos">artículos</a>
-								{% elsif category == 'relatos' %}
-									<a class="teaser-category" href="{{ site.baseurl }}/relatos">relatos</a>
-								{% else %}
-									<a class="teaser-category" href="{{ site.baseurl }}/momentos">momentos</a>
-								{% endif %}
-							{% endfor %}
-							{% include date.html %}
-							<!-- por 
-							{% assign author = site.authors[post.author] %}
-							<a class="teaser-author" href="{{ site.baseurl }}/autor">
-								{{ author.name }}
-							</a> -->
-						</p>
-
-						<div class="teaser-intro">
-							{{ post.excerpt }}
+							<div class="teaser-intro">
+								{{ post.excerpt }}
+							</div>
 						</div>
-					</div>
-				</article>
+					</article>
+					{% assign postCounter = postCounter | plus: 1 %}
+					{% if postCounter >= maxPost %}
+						{% break %}
+					{% endif %}
+				{% endif %}
 			{% endfor %}
 		</section>
 	{% elsif page.layout == 'post' %}
@@ -69,18 +85,33 @@
 			<p>
 				En lugar de mantener un blog tradicional, esta página sirve como hogar para la escritura y como depósito de respuestas a las preguntas más frecuentes acerca de mí y mi trabajo. Para recibir actualizaciones, por favor <a href="https://twitter.com/{{ site.twitter_username }}" target="_target">sígueme en twitter</a> o <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">suscríbete a mi feed RSS</a>. Por favor, siéntate libre de enviarme por correo electrónico tus comentarios o correcciones.
 			</p>
-		{% elsif page.categories contains 'momentos' %}
+		{% elsif page.categories contains 'relatos' %}
 			<h3 class="aside-title">
-				Momentos
+				Relatos
 			</h3>
 
 			<p>
 				
 			</p>
+		{% elsif page.categories contains 'momentos' %}
+			<h3 class="aside-title">
+				Momentos
+			</h3>
+
+			{% comment %}
+			<p>
+				Observaciones que he hecho mientras he estado en los aeropuertos, con los vecinos, en mis sueños, o en el supermercado local.
+			</p>
+			{% endcomment %}
+
+			<p>
+				Observaciones y momentos personales de valor cuestionable.
+			</p>
 		{% endif %}
 
 		<p class="entry">
-			Publicado en 
+			Publicado 
+			{% comment %}en 
 			{% assign sorted_categories = page.categories | sort %}
 			{% for category in sorted_categories %}
 				{% if category == 'articulos' %}
@@ -91,6 +122,7 @@
 					<a class="entry-category" href="{{ site.baseurl }}/momentos">momentos</a>
 				{% endif %}
 			{% endfor %} 
+			{% endcomment %}
 			{% include date.html %}
 			{% comment %}
 			{% if site.github_username %}

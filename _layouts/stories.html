@@ -10,10 +10,6 @@ layout: default
 			</a>
 		</h2>
 
-		<p>
-			Ninguno hasta ahora.
-		</p>
-
 		<div class="archive-columns" data-columns>
 			{% for post in site.categories['relatos'] limit: 10 %}
 				<article class="teaser">
@@ -22,8 +18,8 @@ layout: default
 							{{ post.title }}
 						</h3>
 						
-						{% if post.image %}
-							<img class="teaser-image" src="{{ post.image }}" alt="{{ post.title }}">
+						{% if post.cover %}
+							<img class="teaser-image" src="{{ post.cover }}" alt="{{ post.title }}">
 						{% endif %}
 					</a>
 

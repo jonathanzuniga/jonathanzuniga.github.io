@@ -1,8 +1,8 @@
 ---
 author: jonathan
 categories: [articulos]
+cover: 'https://www.dropbox.com/s/0cl15nu43381b0o/cover.jpg?raw=1'
 date: 2015-11-29 14:50:00
-image: 'https://www.dropbox.com/s/0cl15nu43381b0o/cover.jpg?raw=1'
 layout: post
 tags: [destacado, xamarin, opinion, desarrollo-movil, desarrollo-movil-multiplataforma, c-sharp, .net]
 title: 'Reflexiones después de un año usando Xamarin'

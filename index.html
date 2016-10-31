@@ -21,7 +21,7 @@ layout: default
 									{{ post.title }}
 								</h3>
 
-								<img class="teaser-image teaser-image-featured" src="{{ post.image }}" alt="{{ post.title }}">
+								<img class="teaser-image teaser-image-featured" src="{{ post.cover }}" alt="{{ post.title }}">
 							</a>
 
 							<div class="teaser-content teaser-content-featured">
@@ -96,8 +96,8 @@ layout: default
 								{{ post.title }}
 							</h3>
 							
-							{% if post.image %}
-								<img class="teaser-image" src="{{ post.image }}" alt="{{ post.title }}">
+							{% if post.cover %}
+								<img class="teaser-image" src="{{ post.cover }}" alt="{{ post.title }}">
 							{% endif %}
 						</a>
 

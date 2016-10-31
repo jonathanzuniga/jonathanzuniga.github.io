@@ -1,8 +1,8 @@
 ---
 author: jonathan
 categories: [articulos]
+cover: 
 date: 2016-01-16 13:39:00
-image: 
 layout: post
 tags: [doom, videojuego, fps, nostalgia, retro]
 title: 'DOOM regresa con un nuevo nivel'

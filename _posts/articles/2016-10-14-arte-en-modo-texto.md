@@ -1,8 +1,8 @@
 ---
 author: jonathan
 categories: [articulos]
+cover: 
 date: 2016-10-14
-image: 
 layout: post
 tags: [arte-ascii, arte-ansi, retro, internet, nostalgia]
 title: 'Arte en modo texto'
@@ -12,7 +12,7 @@ Algo que me preguntaron algunas personas cuando publique uno de mis dibujos fue,
 
 ## Introducción
 
-La escena artística subterránea o la escena del arte subterráneo traducido al español, es un conjunto de personas de todo el mundo que dibujan en una variedad de formatos digitales, suministrando tableros de anuncios o [BBS's][bbs] con coloridas pantalla de inicio de sesión, sitios web con gráficos, y solo suelen aportar arte digital en general, incluso si a nadie le interesa.
+La escena artística subterránea —traducido al español—, es un conjunto de personas de todo el mundo que dibujan en una variedad de formatos digitales, suministrando tableros de anuncios o [BBS's][bbs] con coloridas pantalla de inicio de sesión, sitios web con gráficos, y solo suelen aportar arte digital en general, incluso si a nadie le interesa.
 
 Dicen que comenzó mas o menos por 1987. Para algunas personas no está claro cuando inicio realmente, pero la mayoría reconoce al grupo de arte <abbr title="Aces of ANSI Art">AAA</abbr> como el primero dentro de la escena. Poco después de esto surgió un grupo llamado <abbr title="Ansi Creators In Demand">ACiD</abbr> (luego renombrado a ACiD Productions) conformado por ex-miembros de AAA. iCE Productions también es otro grupo que tuvo su origen alrededor de ese tiempo, siendo ACiD el mas viejo de los dos.
 
@@ -64,7 +64,7 @@ Si les interesa conocer más, les comparto unos enlaces de comunidades, artícul
 - [Sixteen Colors ANSI/ASCII Art Archive](http://sixteencolors.net/).
 - [Freestyle: An Oral History](http://daily.redbullmusicacademy.com/specials/freestyle-oral-history/).
 
-Portadas de discos.
+Portadas de discos:
 
 - <http://bym.deviantart.com/art/Out-of-It-142468746>
 - <https://www.instagram.com/p/7hCvilnayk/>

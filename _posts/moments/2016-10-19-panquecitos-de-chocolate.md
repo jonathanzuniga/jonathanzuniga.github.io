@@ -1,8 +1,8 @@
 ---
 author: jonathan
 categories: [momentos]
+cover: 
 date: 2016-10-19
-image: 
 layout: post
 tags: [panquecito, chocolate, oficina]
 title: 'Panquecitos de chocolate'
