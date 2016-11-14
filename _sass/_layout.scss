@@ -144,11 +144,11 @@ section {
 
 			a {
 				color: $text-color;
-				-webkit-transition: color 0.2s ease;
-				-moz-transition: color 0.2s ease;
-				-ms-transition: color 0.2s ease;
-				-o-transition: color 0.2s ease;
-				transition: color 0.2s ease;
+				-webkit-transition: all 0.2s ease;
+				-moz-transition: all 0.2s ease;
+				-ms-transition: all 0.2s ease;
+				-o-transition: all 0.2s ease;
+				transition: all 0.2s ease;
 
 				&:visited {
 					color: $text-color;
@@ -343,6 +343,7 @@ section {
 
 				&:hover {
 					background-color: $color-grey-50;
+					border-bottom: none;
 				}
 			}
 		}
@@ -480,46 +481,49 @@ section {
 					}
 
 					h3 {
-						font-size: 18px;
-						font-weight: 700;
+						font-size: 21px;
+						font-weight: 100;
 						line-height: 1.3;
-						margin-bottom: 20px;
 					}
 
 					ul {
 						li {
+							margin-bottom: 10px;
+
 							&:last-child {
 								.description {
 									border-bottom: none;
 								}
 							}
 
-							a {
-								color: $text-color;
-								display: block;
-								// font-size: 21px;
-								font-size: 18px;
-								font-weight: 100;
-								line-height: 1.3;
-								margin-bottom: 15px;
-								-webkit-transition: all 0.2s ease;
-								-moz-transition: all 0.2s ease;
-								-ms-transition: all 0.2s ease;
-								-o-transition: all 0.2s ease;
-								transition: all 0.2s ease;
+							// a {
+							// 	border-bottom: 1px solid transparent;
+							// 	color: $text-color;
+							// 	display: inline-block;
+							// 	// font-size: 21px;
+							// 	font-size: 18px;
+							// 	font-weight: 100;
+							// 	line-height: 1.3;
+							// 	margin-bottom: 14px;
+							// 	-webkit-transition: all 0.2s ease;
+							// 	-moz-transition: all 0.2s ease;
+							// 	-ms-transition: all 0.2s ease;
+							// 	-o-transition: all 0.2s ease;
+							// 	transition: all 0.2s ease;
 
-								&:visited {
-									color: $text-color;
-								}
+							// 	&:visited {
+							// 		color: $text-color;
+							// 	}
 
-								&:active {
-									color: $link-active-color;
-								}
+							// 	&:active {
+							// 		color: $link-active-color;
+							// 	}
 
-								&:hover {
-									color: $link-hover-color;
-								}
-							}
+							// 	&:hover {
+							// 		border-bottom: 1px solid $text-color;
+							// 		color: $link-hover-color;
+							// 	}
+							// }
 
 							.description {
 								border-bottom: 1px solid $border-color;
@@ -719,8 +723,6 @@ section {
 				font-size: 21px;
 				font-weight: 100;
 				line-height: 1.3;
-				margin-bottom: 20px;
-				margin-top: 12px;
 			}
 
 			p,
@@ -731,7 +733,8 @@ section {
 
 		.aside-entries {
 			background-color: $color-grey-50;
-			padding: 15px 15px 5px;
+			margin: 0 -20px 15px;
+			padding: 20px 20px 5px;
 
 			.aside-entries-title {
 				border: 0;
@@ -995,6 +998,16 @@ img.pull-left {
 			// .moments {
 			// 	margin-right: 0;
 			// }
+
+			.aside-entries {
+				margin-right: 0;
+			}
+
+			&.layout-aside-entry {
+				.aside-title {
+					margin-top: 5px;
+				}
+			}
 		}
 	}
 
@@ -1008,6 +1021,10 @@ img.pull-left {
 	// 		}
 	// 	}
 	// }
+
+	.sidebar {
+		margin-top: 3px;
+	}
 }
 
 @include media-query-min-width($width-768) {
@@ -1090,7 +1107,23 @@ img.pull-left {
 			// .links {
 			// 	padding: 0 15px;
 			// }
+
+			.aside-entries {
+				margin-left: 0;
+				margin-right: 0;
+				padding: 15px 15px 5px;
+			}
+
+			&.layout-aside-entry {
+				.aside-title {
+					margin-top: 8px;
+				}
+			}
 		}
+	}
+
+	.sidebar {
+		margin-top: 3px;
 	}
 }
 
@@ -1372,6 +1405,12 @@ img.pull-left {
 			margin-left: 0;
 			margin-right: -100%;
 			width: 23.72881%;
+
+			&.layout-aside-entry {
+				.aside-title {
+					margin-top: 16px;
+				}
+			}
 		}
 	}
 

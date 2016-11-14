@@ -113,6 +113,7 @@ a {
 	}
 
 	&:hover {
+		border-bottom: 1px solid $text-color;
 		color: $link-hover-color;
 		text-decoration: none;
 	}
