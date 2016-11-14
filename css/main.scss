@@ -40,9 +40,9 @@ $color-white: #fff;
 $link-color: #e57373;
 $link-visited-color: #e57373;
 $link-active-color: $color-grey-600;
-$link-hover-color: darken($link-color, 20%);
-// $link-hover-color: lighten($link-color, 10%);
-// $link-hover-color: $text-color;
+// $link-hover-color: darken($link-color, 20%);
+// $link-hover-color: lighten($link-color, 9%);
+$link-hover-color: $text-color;
 
 $border-color: rgba(0, 0, 0, 0.1);
 
