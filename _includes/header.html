@@ -18,20 +18,20 @@
         {% endif %}
       </li>
       <li class="nav-item">
-        {% if current[1] == 'relatos' %}
-          Relatos
+        {% if current[1] == 'historias' %}
+          Historias
         {% else %}
-          <a href="{{ site.baseurl }}/relatos">
-            Relatos
+          <a href="{{ site.baseurl }}/historias">
+            Historias
           </a>
         {% endif %}
       </li>
       <li class="nav-item">
-        {% if current[1] == 'momentos' %}
-          Momentos
+        {% if current[1] == 'recursos' %}
+          Recursos
         {% else %}
-          <a href="{{ site.baseurl }}/momentos">
-            Momentos
+          <a href="{{ site.baseurl }}/recursos">
+            Recursos
           </a>
         {% endif %}
       </li>
@@ -48,6 +48,9 @@
   </nav>
 
   <form action="/buscar" class="header-search" method="get">
-    <input class="header-search-field" id="search-box" name="consulta" placeholder="Buscar..." required title="Buscar" type="search">
+    <div class="icon input">
+      <input class="header-search-field" id="search-box" name="consulta" placeholder="Buscar artículo..." required title="Buscar" type="search">
+      <i class="fa fa-search icon" aria-hidden="true"></i>
+    </div>
   </form>
 </header>

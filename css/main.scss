@@ -6,10 +6,8 @@
 
 // Our variables
 $base-font-family: Helvetica, sans-serif;
-$brand-font-family: 'Playfair Display', 'Times New Roman', 'Times Roman', Times, serif;
 $heading-font-family: Helvetica, sans-serif;
 $mono-font-family: Menlo, Monaco, Consolas, monospace;
-$alternative-font-family: Gill Sans, Verdana, Helvetica, Geneva, sans-serif;
 $base-font-size: 16px;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -18,8 +16,10 @@ $spacing-unit: 30px;
 
 
 // Colors
-$text-color: #212121;
-$background-color: #fff;
+$text-color: #111;
+// $background-color: #fff;
+// $background-color: #ffe9e3;
+$background-color: #efe9ea;
 
 $color-black: #000;
 $color-blue: #3f4e79;
@@ -35,15 +35,15 @@ $color-grey-900: #212121;
 $color-red: #ba3925;
 $color-white: #fff;
 
-$link-color: #2f79af;
-$link-visited-color: #2f79af;
+// $link-color: #2f79af;
+// $link-visited-color: #2f79af;
+$link-color: #e57373;
+$link-visited-color: #e57373;
 $link-active-color: $color-grey-600;
-$link-hover-color: lighten($link-color, 15%);
+$link-hover-color: lighten($link-color, 12%);
+// $link-hover-color: #111;
 
-$link-alt-color: $text-color; // #9cc7bd;
-$link-alt-visited-color: $text-color;
-$link-alt-active-color: $color-grey-600;
-$link-alt-hover-color: lighten($link-alt-color, 35%);
+$border-color: rgba(0, 0, 0, 0.1);
 
 
 

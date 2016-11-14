@@ -1,0 +1,83 @@
+---
+layout: default
+---
+
+<div class="layout-content">
+	<div class="resources">
+		<h2 class="resources-title">
+			<a href="{{ site.baseurl }}/recursos">
+				Recursos
+			</a>
+		</h2>
+
+		<div class="resources-columns">
+			<div class="resource-list">
+				<h3>
+					General
+				</h3>
+
+				<ul>
+					{% assign sorted_resources = site.data.resources.general | sort: 'title' %}
+					{% for resource in sorted_resources %}
+					  <li>
+					    <a href="{{ resource.url }}" target="_blank">
+					      {{ resource.title }}
+					    </a>
+					    {% if resource.description %}
+					    	<p class="description">
+									{{resource.description }}
+								</p>
+					    {% endif %}
+					  </li>
+					{% endfor %}
+				</ul>
+			</div>
+
+			<div class="resource-list">
+				<h3>
+					Letras
+				</h3>
+
+				<ul>
+					{% assign sorted_resources = site.data.resources.type | sort: 'title' %}
+					{% for resource in sorted_resources %}
+					  <li>
+					    <a href="{{ resource.url }}" target="_blank">
+					      {{ resource.title }}
+					    </a>
+					    {% if resource.description %}
+					    	<p class="description">
+									{{resource.description }}
+								</p>
+					    {% endif %}
+					  </li>
+					{% endfor %}
+				</ul>
+			</div>
+
+			<div class="resource-list">
+				<h3>
+					Programación
+				</h3>
+
+				<ul>
+					{% assign sorted_resources = site.data.resources.programming | sort: 'title' %}
+					{% for resource in sorted_resources %}
+					  <li>
+					    <a href="{{ resource.url }}" target="_blank">
+					      {{ resource.title }}
+					    </a>
+					    {% if resource.description %}
+					    	<p class="description">
+									{{resource.description }}
+								</p>
+					    {% endif %}
+					  </li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% include sidebar.html %}

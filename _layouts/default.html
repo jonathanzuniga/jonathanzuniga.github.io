@@ -12,7 +12,13 @@
                      page.layout == 'post' or
                      page.layout == 'articles' or
                      page.layout == 'stories' or
-                     page.layout == 'moments' %}single{% endif %}">
+                     page.layout == 'resources' %}body-single{% endif %}
+               {% if page.layout == 'page' %} body-page
+               {% elsif page.layout == 'post' %} body-post
+               {% elsif page.layout == 'articles' %} body-articles
+               {% elsif page.layout == 'stories' %} body-stories
+               {% elsif page.layout == 'resources' %} body-resources
+               {% endif %}">
     <div class="wrapper">
       {% include header.html %}
 

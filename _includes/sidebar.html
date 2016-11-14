@@ -1,8 +1,7 @@
 <div class="layout-aside
 	{% if page.layout == 'page' or
 				page.layout == 'articles' or
-        page.layout == 'stories' or
-        page.layout == 'moments' %}
+        page.layout == 'stories' %}
     layout-aside-single
 	{% elsif page.layout == 'post' %}
 		layout-aside-entry
@@ -10,19 +9,15 @@
 	{% if page.url == '/' %}
 		<section class="aside-entries">
 			<h2 class="aside-entries-title">
-				<a href="{{ site.baseurl }}/relatos">
-					Relatos
-				</a>
-				y
-				<a href="{{ site.baseurl }}/momentos">
-					momentos
+				<a href="{{ site.baseurl }}/historias">
+					Historias
 				</a>
 			</h2>
 
 			{% assign postCounter = 0 %}
 			{% assign maxPost = 3 %}
 			{% for post in site.posts %}
-				{% if post.categories contains 'relatos' or post.categories contains 'momentos' %}
+				{% if post.categories contains 'historias' %}
 					<article class="teaser teaser-aside-entries">
 						<a class="teaser-link" href="{{ post.url }}">
 							<h3 class="teaser-title">
@@ -38,10 +33,8 @@
 									<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
 									{% if category == 'articulos' %}
 										<a class="teaser-category" href="{{ site.baseurl }}/articulos">artículos</a>
-									{% elsif category == 'relatos' %}
-										<a class="teaser-category" href="{{ site.baseurl }}/relatos">relatos</a>
-									{% else %}
-										<a class="teaser-category" href="{{ site.baseurl }}/momentos">momentos</a>
+									{% elsif category == 'historias' %}
+										<a class="teaser-category" href="{{ site.baseurl }}/historias">historias</a>
 									{% endif %}
 								{% endfor %}
 								{% include date.html %}
@@ -83,29 +76,15 @@
 			</h3>
 
 			<p>
-				En lugar de mantener un blog tradicional, esta página sirve como hogar para la escritura y como depósito de respuestas a las preguntas más frecuentes acerca de mí y mi trabajo. Para recibir actualizaciones, por favor <a href="https://twitter.com/{{ site.twitter_username }}" target="_target">sígueme en twitter</a> o <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">suscríbete a mi feed RSS</a>. Por favor, siéntate libre de enviarme por correo electrónico tus comentarios o correcciones.
+				En lugar de mantener un blog tradicional, esta página sirve como hogar para la escritura y como depósito de respuestas a las preguntas más frecuentes acerca de mis gustos y mi trabajo. Para recibir actualizaciones, puedes <a href="https://twitter.com/{{ site.twitter_username }}" target="_target">seguirme en twitter</a> o <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">suscríbete a mi feed RSS</a>. Por favor, siéntate libre de enviarme por correo electrónico tus comentarios o correcciones.
 			</p>
-		{% elsif page.categories contains 'relatos' %}
+		{% elsif page.categories contains 'historias' %}
 			<h3 class="aside-title">
-				Relatos
+				Historias
 			</h3>
 
 			<p>
-				
-			</p>
-		{% elsif page.categories contains 'momentos' %}
-			<h3 class="aside-title">
-				Momentos
-			</h3>
-
-			{% comment %}
-			<p>
-				Observaciones que he hecho mientras he estado en los aeropuertos, con los vecinos, en mis sueños, o en el supermercado local.
-			</p>
-			{% endcomment %}
-
-			<p>
-				Observaciones y momentos personales de valor cuestionable.
+				Por otra parte, en esta página encontrarás una colección de experiencias del pasado relatadas desde este inmejorable presente. Para recibir actualizaciones, puedes <a href="https://twitter.com/{{ site.twitter_username }}" target="_target">seguirme en twitter</a> o <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">suscríbete a mi feed RSS</a>. Por favor, siéntate libre de enviarme por correo electrónico tus comentarios o correcciones.
 			</p>
 		{% endif %}
 
@@ -187,7 +166,7 @@
 			<!-- The following part extracts all the tags from your posts and sort tags, so that you do not need to manually collect your tags to a place. -->
 			{% endcomment %}
 			{% assign story_tags = '' %}
-			{% for story in site.categories['relatos'] %}
+			{% for story in site.categories['historias'] %}
 				{% assign ttags = story.tags | join: '|' | append: '|' %}
 				{% assign story_tags = story_tags | append: ttags %}
 			{% endfor %}
@@ -214,49 +193,63 @@
 				</li>
 			{% endfor %}
 		</ul>
-	{% elsif page.layout == 'moments' %}
-		<ul class="tags">
-			{% comment %}
-			<!-- The following part extracts all the tags from your posts and sort tags, so that you do not need to manually collect your tags to a place. -->
-			{% endcomment %}
-			{% assign moment_tags = '' %}
-			{% for moment in site.categories['momentos'] %}
-				{% assign ttags = moment.tags | join: '|' | append: '|' %}
-				{% assign moment_tags = moment_tags | append: ttags %}
-			{% endfor %}
-			{% assign moment_tags = moment_tags | split: '|' | sort %}
+	{% elsif page.url == '/recursos' %}
+		<ul class="sidebar">
+			<li>
+				<h3 class="sidebar-title">
+					Documentación
+				</h3>
 
-			{% comment %}
-			<!-- The following part removes dulpicated tags and invalid tags like blank tag. -->
-			{% endcomment %}
-			{% assign tags = '' %}
-			{% for tag in moment_tags %}
-				{% if tag != '' %}
-					{% if tags == '' %}
-						{% assign tags = tag | split: '|' %}
-					{% endif %}
-					{% unless tags contains tag %}
-						{% assign tags = tags | join: '|' | append: '|' | append: tag | split: '|' %}
-					{% endunless %}
-				{% endif %}
-			{% endfor %}
+				<ul class="sidebar-links">
+					{% assign sorted_resources = site.data.resources.documentation | sort: 'title' %}
+					{% for resource in sorted_resources %}
+						<li>
+							<a class="sidebar-link" href="{{ resource.url }}" target="_blank">
+								{{ resource.title }}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</li>
 
-			{% for tag in tags %}
-				<li class="tags-item">
-					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/{{ tag }}">{{ tag }}</a>
-				</li>
-			{% endfor %}
+			<li>
+				<h3 class="sidebar-title">
+					Guías y Ejemplos
+				</h3>
+
+				<ul class="sidebar-links">
+					{% assign sorted_resources = site.data.resources.guides | sort: 'title' %}
+					{% for resource in sorted_resources %}
+						<li>
+							<a class="sidebar-link" href="{{ resource.url }}" target="_blank">
+								{{ resource.title }}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</li>
+
+			<li>
+				<h3 class="sidebar-title">
+					Herramientas
+				</h3>
+
+				<ul class="sidebar-links">
+					{% assign sorted_resources = site.data.resources.tools | sort: 'title' %}
+					{% for resource in sorted_resources %}
+						<li>
+							<a class="sidebar-link" href="{{ resource.url }}" target="_blank">
+								{{ resource.title }}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</li>
 		</ul>
 	{% elsif page.url == '/autor' %}
 		<p class="authors">
 			{% assign author = site.authors[jonathan] %}
-			{% if site.twitter_username %}
-				<a class="authors-link" href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
-					<img class="authors-image" src="{{ site.baseurl }}/images/authors/avatar-flat-jz-512.png" alt="{{ author.name }}">
-				</a>
-			{% else %}
-				<img class="authors-image" src="{{ site.baseurl }}/images/authors/avatar-flat-jz-512.png" alt="{{ author.name }}">
-			{% endif %}
+			<img class="authors-image" src="{{ site.baseurl }}/images/authors/avatar-flat-jz-512.png" alt="{{ author.name }}">
 		</p>
 	{% endif %}
 </div>

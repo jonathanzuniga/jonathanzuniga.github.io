@@ -29,7 +29,7 @@ Desde ese instante, una brecha que abarca casi treinta años, grupos de arte han
 	</figcaption>
 </figure>
 
-Este es sin duda el medio más antiguo para trabajar en el *artscene*. Ha existido desde hace mucho tiempo. <abbr title="American Standard Code for Information Interchange">ASCII</abbr> siempre ha sido el conjunto de caracteres estándar de las <abbr title="Personal Computer">PC's</abbr> y a alguien se le ocurrió crear arte con esto. Hay dos formas principales de *ASCII art*, la de la vieja y la de la nueva escuela.
+Este es sin duda el medio más antiguo para trabajar en el *artscene*. Ha existido desde hace mucho tiempo. <abbr title="American Standard Code for Information Interchange">ASCII</abbr> siempre ha sido el conjunto de caracteres estándar de las <abbr title="Personal Computers">PC's</abbr> y a alguien se le ocurrió crear arte con esto. Hay dos formas principales de *ASCII art*, la de la vieja y la de la nueva escuela.
 
 Los artistas de la vieja escuela utilizan los caracteres `/ \ | : ;` y similares para crear logotipos sencillos, por lo general para agregarlos en los archivos `file_id.diz`, archivos que todavía son  utilizados por la comunidad [*warez*][warez] en sus lanzamientos de software sin licencia.
 
@@ -37,16 +37,9 @@ Hoy en día la forma de arte ASCII de la nueva escuela es la más popular. Esta 
 
 ## Arte ANSI
 
-<abbr title="American National Standards Institute">ANSI</abbr> fue desarrollado para ofrecer un formato común para la visualización de gráficos en los BBS's. Esto fue lo que realmente hizo que la comunidad comenzara, con AAA siendo los primeros.
+<abbr title="American National Standards Institute">ANSI</abbr> fue desarrollado para ofrecer un formato común para la visualización de gráficos en los BBS's. Esto fue lo que realmente hizo que la comunidad comenzara.
 
 Al principio los artistas dibujaban logos y simples letras. Pero a medida que pasaba el tiempo, los artistas comenzaron a hacer dibujos más complejos, aventurandose en largas pantallas de un detalle asombroso. Los artistas se inspiraban de los cómics o muchas veces creaban arte original.
-
-<figure class="figure">
-	<iframe class="figure-media" width="560" height="315" src="https://www.youtube.com/embed/cmaK57M7ZV8?start=254" frameborder="0" allowfullscreen></iframe>
-	<figcaption class="figure-caption">
-		Grabación del proceso en la parte final y <a href="http://blocktronics.org/tcf-x-ans/">acá</a> puedes ver el desenlace
-	</figcaption>
-</figure>
 
 Para crear estos dibujos, al igual que en el *pixel art* se requiere de una paciencia brutal y que normalmente se hace caracter por caracter a mano usando algún editor de textos, que es como se valora más.
 

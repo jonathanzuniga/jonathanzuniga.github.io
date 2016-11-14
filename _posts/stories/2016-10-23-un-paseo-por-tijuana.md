@@ -1,6 +1,6 @@
 ---
 author: jonathan
-categories: [relatos]
+categories: [historias]
 cover: 
 date: 2016-10-23
 layout: post
