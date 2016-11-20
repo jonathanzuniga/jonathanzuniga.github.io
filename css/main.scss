@@ -17,9 +17,7 @@ $spacing-unit: 30px;
 
 // Colors
 $text-color: #111;
-// $background-color: #fff;
-// $background-color: #ffe9e3;
-$background-color: #efe9ea;
+$background-color: #fff;
 
 $color-black: #000;
 $color-blue: #3f4e79;
@@ -35,14 +33,15 @@ $color-grey-900: #212121;
 $color-red: #ba3925;
 $color-white: #fff;
 
-// $link-color: #2f79af;
-// $link-visited-color: #2f79af;
-$link-color: #e57373;
-$link-visited-color: #e57373;
+$link-color: #2f79af;
+$link-visited-color: #2f79af;
 $link-active-color: $color-grey-600;
-// $link-hover-color: darken($link-color, 20%);
-// $link-hover-color: lighten($link-color, 9%);
-$link-hover-color: $text-color;
+$link-hover-color: lighten($link-color, 15%);
+
+$link-category-color: SeaGreen;
+$link-category-visited-color: SeaGreen;
+$link-category-active-color: $color-grey-600;
+$link-category-hover-color: lighten($link-category-color, 15%);
 
 $border-color: rgba(0, 0, 0, 0.1);
 
@@ -55,6 +54,7 @@ $content-width:	1200px;
 // $on-tablet-max: 767px;
 // $on-tablet-min: 768px;
 
+$width-479: 479px;
 $width-568: 568px;
 $width-569: 569px;
 $width-767: 767px;

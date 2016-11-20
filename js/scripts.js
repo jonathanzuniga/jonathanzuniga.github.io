@@ -18,5 +18,11 @@ jQuery(document).ready(function($) {
 		$(this).parent().removeClass('focus');
 	});
 
+	var teaser_title_featured = $('.teaser-title-featured').text().trim();
+	$('.archive-columns .teaser-title').each(function() {
+		if ($(this).text().trim() == teaser_title_featured)
+			$(this).closest('.teaser').remove();
+	});
+
   // $('#search-results:empty').removeClass('archive-columns');
 });

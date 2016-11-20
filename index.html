@@ -70,11 +70,14 @@ layout: default
 					{% endfor %}
 				{% endcapture %}
 				{% assign sorted_tags = tags | split: ' ' | sort | reverse %}
-				{% for tag in sorted_tags limit: 14 %}
+				{% for tag in sorted_tags limit: 15 %}
 					{% assign tag_items = tag | split: '#' %}
-					<li class="tags-item" data-total-posts="{{ tag_items[2] }}">
-						<a class="tags-link" href="{{ site.baseurl }}/etiqueta/{{ tag_items[1] }}">{{ tag_items[1] }}</a>
-					</li>
+					{% unless tag_items[1] == 'destacado' %}
+						<li class="tags-item" data-total-posts="{{ tag_items[2] }}">
+							<a class="tags-link" href="{{ site.baseurl }}/etiqueta/{{ tag_items[1] }}">{{ tag_items[1] }}</a>
+							<!-- <span class="total-posts">({{ tag_items[2] }})</span> -->
+						</li>
+					{% endunless %}
 				{% endfor %}
 			</ul>
 		</div>
@@ -89,48 +92,46 @@ layout: default
 
 		<div class="archive-columns" data-columns>
 			{% for post in site.categories['articulos'] limit: 10 %}
-				{% unless post.tags.first contains 'destacado' %}
-					<article class="teaser">
-						<a class="teaser-link" href="{{ post.url }}">
-							<h3 class="teaser-title">
-								{{ post.title }}
-							</h3>
-							
-							{% if post.cover %}
-								<img class="teaser-image" src="{{ post.cover }}" alt="{{ post.title }}">
-							{% endif %}
-						</a>
+				<article class="teaser">
+					<a class="teaser-link" href="{{ post.url }}">
+						<h3 class="teaser-title">
+							{{ post.title }}
+						</h3>
+						
+						{% if post.cover %}
+							<img class="teaser-image" src="{{ post.cover }}" alt="{{ post.title }}">
+						{% endif %}
+					</a>
 
-						<div class="teaser-content">
-							<p class="teaser-meta">
-								Publicado en 
-								{% assign sorted_categories = post.categories | sort %}
-								{% for category in sorted_categories %}
-									<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
-									{% if category == 'articulos' %}
-										<a class="teaser-category" href="{{ site.baseurl }}/articulos">artículos</a>
-									{% elsif category == 'relatos' %}
-										<a class="teaser-category" href="{{ site.baseurl }}/relatos">relatos</a>
-									{% else %}
-										<a class="teaser-category" href="{{ site.baseurl }}/momentos">momentos</a>
-									{% endif %}
-								{% endfor %}
-								{% include date.html %}
-								{% comment %}
-								<!-- por 
-								{% assign author = site.authors[post.author] %}
-								<a class="teaser-author" href="{{ site.baseurl }}/autor">
-									{{ author.name }}
-								</a> -->
-								{% endcomment %}
-							</p>
+					<div class="teaser-content">
+						<p class="teaser-meta">
+							Publicado en 
+							{% assign sorted_categories = post.categories | sort %}
+							{% for category in sorted_categories %}
+								<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
+								{% if category == 'articulos' %}
+									<a class="teaser-category" href="{{ site.baseurl }}/articulos">artículos</a>
+								{% elsif category == 'relatos' %}
+									<a class="teaser-category" href="{{ site.baseurl }}/relatos">relatos</a>
+								{% else %}
+									<a class="teaser-category" href="{{ site.baseurl }}/momentos">momentos</a>
+								{% endif %}
+							{% endfor %}
+							{% include date.html %}
+							{% comment %}
+							<!-- por 
+							{% assign author = site.authors[post.author] %}
+							<a class="teaser-author" href="{{ site.baseurl }}/autor">
+								{{ author.name }}
+							</a> -->
+							{% endcomment %}
+						</p>
 
-							<div class="teaser-intro">
-								{{ post.excerpt }}
-							</div>
+						<div class="teaser-intro">
+							{{ post.excerpt }}
 						</div>
-					</article>
-				{% endunless %}
+					</div>
+				</article>
 			{% endfor %}
 		</div>
 	</section>

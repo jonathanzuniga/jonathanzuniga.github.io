@@ -85,7 +85,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-	font-family: $base-font-family;
+	font-family: $heading-font-family;
 	font-weight: bold;
 }
 
@@ -103,7 +103,6 @@ a {
 	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 
-
 	&:visited {
 		color: $link-visited-color;
 	}
@@ -113,7 +112,6 @@ a {
 	}
 
 	&:hover {
-		border-bottom: 1px solid $text-color;
 		color: $link-hover-color;
 		text-decoration: none;
 	}

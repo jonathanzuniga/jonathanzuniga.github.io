@@ -142,24 +142,26 @@ section {
 			-ms-flex-pack: justify;
 			justify-content: space-between;
 
-			a {
-				color: $text-color;
-				-webkit-transition: all 0.2s ease;
-				-moz-transition: all 0.2s ease;
-				-ms-transition: all 0.2s ease;
-				-o-transition: all 0.2s ease;
-				transition: all 0.2s ease;
-
-				&:visited {
+			li {
+				a {
 					color: $text-color;
-				}
+					-webkit-transition: all 0.2s ease;
+					-moz-transition: all 0.2s ease;
+					-ms-transition: all 0.2s ease;
+					-o-transition: all 0.2s ease;
+					transition: all 0.2s ease;
 
-				&:active {
-					color: $link-active-color;
-				}
+					&:visited {
+						color: $text-color;
+					}
 
-				&:hover {
-					color: $link-hover-color;
+					&:active {
+						color: $link-active-color;
+					}
+
+					&:hover {
+						color: $link-hover-color;
+					}
 				}
 			}
 		}
@@ -167,16 +169,19 @@ section {
 
 	.header-search {
 		div.icon.input {
+			border: 1px solid $color-grey-200;
+			border-radius: 15px;
+			padding: 1px;
 			position: relative;
 
 			.header-search-field {
 				-webkit-appearance: none;
 				-moz-appearance: none;
-				// background: $color-grey-200;
-				background: rgba(0, 0, 0, 0.06);
+				background: rgba(0, 0, 0, 0.03);
 				border: none;
 				border-radius: 13px;
-				box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+				box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 
+										inset 0 0 0 1px rgba(0, 0, 0, 0.04);
 				font-size: 14px;
 				height: 26px;
 				outline: 0;
@@ -204,8 +209,9 @@ section {
 				}
 
 				&:focus {
-					box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.15), 
-											inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+					background: rgba(0, 0, 0, 0.06);
+					box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2), 
+											inset 0 0 0 1px rgba(0, 0, 0, 0.04);
 					outline: 0;
 				}
 			}
@@ -286,7 +292,7 @@ section {
 		margin-bottom: 5px;
 		margin-top: 5px;
 		max-width: 100%;
-		opacity: 1;
+		// opacity: 1;
 		-webkit-transition: all 0.2s ease;
 		-moz-transition: all 0.2s ease;
 		-ms-transition: all 0.2s ease;
@@ -295,11 +301,11 @@ section {
 		width: 100%;
 	}
 
-	&:hover {
-		.teaser-image {
-			opacity: 0.8;
-		}
-	}
+	// &:hover {
+	// 	.teaser-image {
+	// 		opacity: 0.8;
+	// 	}
+	// }
 }
 
 .teaser-content {
@@ -307,19 +313,55 @@ section {
 		color: $color-grey-600;
 		font-size: 12px;
 		margin-bottom: 20px;
-
-		.teaser-category {
-			text-transform: capitalize;
-		}
+		
+		// .teaser-category {
+		// 	text-transform: capitalize;
+		// }
 	}
 
 	.teaser-intro {
 		margin-bottom: 15px;
+
+		img {
+			display: none;
+		}
+	}
+}
+
+.teaser-category,
+.entry-category {
+	text-transform: capitalize;
+	
+	// color: $link-category-color;
+	// text-decoration: none;
+	// -webkit-transition: all 0.2s ease;
+	// -moz-transition: all 0.2s ease;
+	// -ms-transition: all 0.2s ease;
+	// -o-transition: all 0.2s ease;
+	// transition: all 0.2s ease;
+
+	// &:visited {
+	// 	color: $link-category-visited-color;
+	// }
+
+	// &:active {
+	// 	color: $link-category-active-color;
+	// }
+
+	// &:hover {
+	// 	color: $link-category-hover-color;
+	// 	text-decoration: none;
+	// }
+}
+
+.tags-item {
+	.total-posts {
+		font-size: 50%;
 	}
 }
 
 .sidebar {
-	line-height: 1.2;
+	// line-height: 1.2;
 	list-style: none;
 	margin-bottom: 20px;
 
@@ -337,15 +379,19 @@ section {
 		.sidebar-links {
 			margin-bottom: 20px;
 
-			.sidebar-link {
-				display: block;
-				margin-left: -10px;
-				padding: 7px 10px;
+			// .sidebar-link {
+			// 	display: block;
+			// 	margin-left: -10px;
+			// 	// padding: 7px 10px;
 
-				&:hover {
-					background-color: $color-grey-50;
-					border-bottom: none;
-				}
+			// 	&:hover {
+			// 		background-color: $color-grey-50;
+			// 		border-bottom: none;
+			// 	}
+			// }
+
+			li {
+				margin-bottom: 10px;
 			}
 		}
 	}
@@ -421,7 +467,7 @@ section {
 
 			.search-results-title {
 				font-size: 20px;
-				font-weight: 500;
+				font-weight: normal;
 				line-height: 1.3;
 			}
 
@@ -552,7 +598,7 @@ section {
 				.content {
 					h2 {
 						font-size: 20px;
-						font-weight: 500;
+						font-weight: normal;
 						line-height: 1.3;
 						padding-top: 15px;
 					}
@@ -726,16 +772,16 @@ section {
 				line-height: 1.3;
 			}
 
-			p,
-			ul {
-				font-size: 14px;
-			}
+			// p,
+			// ul {
+			// 	font-size: 14px;
+			// }
 		}
 
 		.aside-entries {
-			background-color: $color-grey-50;
-			margin: 0 -20px 15px;
-			padding: 20px 20px 5px;
+			// background-color: $color-grey-50;
+			// margin: 0 -20px 15px;
+			// padding: 20px 20px 5px;
 
 			.aside-entries-title {
 				border: 0;
@@ -828,10 +874,10 @@ section {
 			// 	text-transform: lowercase;
 			// }
 
-			.entry-category {
-				// font-weight: bold;
-				text-transform: capitalize;
-			}
+			// .entry-category {
+			// 	// font-weight: bold;
+			// 	text-transform: capitalize;
+			// }
 		}
 	}
 }
@@ -917,11 +963,33 @@ img.pull-left {
 	border-radius: 0.3125em;
 }
 
+.responsive-image {
+	height: auto;
+	max-width: 100%;
+}
+
 
 
 /* ==========================================================================
 	 Responsive
 	 ========================================================================== */
+@include media-query-max-width($width-479) {
+	#main {
+		.layout-content {
+			.resources {
+				.resources-columns {
+					.resource-list,
+					.resource-list:first-child {
+						margin-left: 0;
+						// text-align: center;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
 @include media-query-max-width($width-568) {
 	#header {
 		margin-bottom: 25px;
@@ -1000,15 +1068,15 @@ img.pull-left {
 			// 	margin-right: 0;
 			// }
 
-			.aside-entries {
-				margin-right: 0;
-			}
+			// .aside-entries {
+			// 	margin-right: 0;
+			// }
 
-			&.layout-aside-entry {
-				.aside-title {
-					margin-top: 5px;
-				}
-			}
+			// &.layout-aside-entry {
+			// 	.aside-title {
+			// 		margin-top: 5px;
+			// 	}
+			// }
 		}
 	}
 
@@ -1109,17 +1177,17 @@ img.pull-left {
 			// 	padding: 0 15px;
 			// }
 
-			.aside-entries {
-				margin-left: 0;
-				margin-right: 0;
-				padding: 15px 15px 5px;
-			}
+			// .aside-entries {
+			// 	margin-left: 0;
+			// 	margin-right: 0;
+			// 	padding: 15px 15px 5px;
+			// }
 
-			&.layout-aside-entry {
-				.aside-title {
-					margin-top: 8px;
-				}
-			}
+			// &.layout-aside-entry {
+			// 	.aside-title {
+			// 		margin-top: 8px;
+			// 	}
+			// }
 		}
 	}
 
@@ -1407,11 +1475,11 @@ img.pull-left {
 			margin-right: -100%;
 			width: 23.72881%;
 
-			&.layout-aside-entry {
-				.aside-title {
-					margin-top: 16px;
-				}
-			}
+			// &.layout-aside-entry {
+			// 	.aside-title {
+			// 		margin-top: 16px;
+			// 	}
+			// }
 		}
 	}
 
