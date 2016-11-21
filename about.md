@@ -8,9 +8,10 @@ title: Sobre el autor
 
 Mi interés por el arte cambió gradualmente al diseño y desarrollo web. <!--, antes de asentarme finalmente en el diseño y desarrollo de videojuegos.--> He trabajado en diferentes campos del desarrollo web desde lo más visible del *front-end* hasta lo más oscuro del *back-end*. Me enfoco en dar al usuario la experiencia más fácil en todos sus dispositivos.
 
-Cuando no estoy leyendo mis *feeds*, disfruto mirar películas como [Alien][alien], dibujar letras o saborear una deliciosa gelatina. También me gusta la libertad de información, una internet que respeta y permita, observar interfaces gráficas, en ocasiones [jugar algún videojuego][jugar-algun-videojuego], criptografía, diseño, arte, ciencia ficción y terror, la velocidad, experimentar con prototipos y nuevas tendencias.
+Cuando no estoy leyendo mis *feeds*, disfruto mirar películas como [Alien][alien], dibujar letras o saborear una deliciosa gelatina. También me gusta la libertad de información, una internet que respeta y permita, observar interfaces gráficas, en ocasiones [jugar algún videojuego][jugar-algun-videojuego], criptografía, diseño, arte, temas de ciencia ficción y terror, [música][musica], la velocidad, experimentar con prototipos y nuevas tendencias.
 
-Puedes ponerte en contacto conmigo por <a href="mailto:{{ site.email }}">correo electrónico</a>, seguirme en <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">Twitter</a> o <a href="https://www.instagram.com/{{ site.instagram_username }}" target="_blank">Instagram</a>, ¿por qué no en <a href="https://open.spotify.com/user/{{ site.spotify_username }}" target="_blank">Spotify</a>? o en mi cuenta desactualizada de <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">LinkedIn</a> y mi rincón en <a href="https://medium.com/@{{ site.medium_username }}" target="_blank">Medium</a> esta vacío en este momento.
+{% assign author_items = site.authors['jonathan'] %}
+Puedes ponerte en contacto conmigo por <a href="mailto:{{ author_items.email }}">correo electrónico</a>. No siempre tengo la oportunidad de responder, pero el correo electrónico es siempre la mejor manera de ponerse en contacto. Asimismo puedes seguirme en <a href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">Twitter</a> o <a href="https://www.instagram.com/{{ author_items.instagram_username }}" target="_blank">Instagram</a>, ¿por qué no en <a href="https://open.spotify.com/user/{{ author_items.spotify_username }}" target="_blank">Spotify</a>? o en mi cuenta desactualizada de <a href="https://www.linkedin.com/in/{{ author_items.linkedin_username }}" target="_blank">LinkedIn</a> y mi rincón en <a href="https://medium.com/@{{ author_items.medium_username }}" target="_blank">Medium</a> esta vacío en este momento.
 
 ## Acerca del sitio
 
@@ -24,6 +25,7 @@ Gracias por leer, quienquiera que seas. Aquí no hay comentarios. No hay cuentas
 
 [alien]: /2016/11/19/la-tipografia-de-alien
 [jugar-algun-videojuego]: http://steamcommunity.com/id/jonathanzuniga/
+[musica]: http://www.last.fm/user/jonathanzuniga
 [jekyll]: https://jekyllrb.com/
 [helvetica]: https://es.wikipedia.org/wiki/Helvética
 [max-miedinger]: https://es.wikipedia.org/wiki/Max_Miedinger

@@ -2,8 +2,9 @@
 	<p class="footer-content">
 		<strong>{{ site.title }}</strong> © 2015—{{ site.time | date: '%Y' }}. 
 		<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">Suscribirse a las publicaciones</a>.
-		{% if site.github_username %}
-			<a href="https://github.com/{{ site.github_username }}/jonathanzuniga.github.io" target="_blank">
+		{% assign author_items = site.authors['jonathan'] %}
+		{% if author_items.github_username %}
+			<a href="https://github.com/{{ author_items.github_username }}/jonathanzuniga.github.io" target="_blank">
 				<i class="fa fa-github fa-lg" aria-hidden="true"></i>
 				Código fuente</a>.
 		{% endif %}

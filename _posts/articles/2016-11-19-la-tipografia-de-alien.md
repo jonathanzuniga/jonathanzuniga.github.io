@@ -1,5 +1,5 @@
 ---
-author: jonathan
+authors: [jonathan]
 categories: [articulos]
 cover: https://www.dropbox.com/s/1bb9o2311b44v2d/cover.jpg?raw=1
 date: 2016-11-19

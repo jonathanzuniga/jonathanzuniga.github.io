@@ -1,5 +1,5 @@
 ---
-author: jonathan
+authors: [jonathan]
 categories: [articulos]
 cover: 
 date: 2016-01-16 13:39:00

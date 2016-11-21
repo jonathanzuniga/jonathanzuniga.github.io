@@ -27,7 +27,21 @@
 
 						<div class="teaser-content">
 							<p class="teaser-meta">
-								Publicado en 
+								{% include date.html %}
+								por 
+								{% assign sorted_authors = post.authors | sort %}
+								{% for author in sorted_authors %}<!--
+									-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %} 
+									{% assign author_items = site.authors[author] %}
+									{% if author == 'jonathan' %}
+										<a class="teaser-author" href="{{ site.baseurl }}/autor">
+									{% else %}
+										<a class="teaser-author" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
+									{% endif %}
+										{{ author_items.name }}<!--
+									--></a><!--
+								-->{% endfor %}
+								en 
 								{% assign sorted_categories = post.categories | sort %}
 								{% for category in sorted_categories %}
 									<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
@@ -37,12 +51,6 @@
 										<a class="teaser-category" href="{{ site.baseurl }}/historias">historias</a>
 									{% endif %}
 								{% endfor %}
-								{% include date.html %}
-								<!-- por 
-								{% assign author = site.authors[post.author] %}
-								<a class="teaser-author" href="{{ site.baseurl }}/autor">
-									{{ author.name }}
-								</a> -->
 							</p>
 
 							<div class="teaser-intro">
@@ -59,13 +67,20 @@
 		</section>
 	{% elsif page.layout == 'post' %}		
 		<p class="authors authors-fixed">
-			<a class="authors-link" href="{{ site.baseurl }}/autor">
-				{% assign author = site.authors[page.author] %}
-				<img class="authors-image authors-image-rounded" src="{{ site.baseurl }}/images/authors/{{ author.avatar }}" alt="{{ author.name }}">
-				<span class="authors-name">
-					{{ author.name }}
-				</span>
-			</a>
+			{% assign sorted_authors = page.authors | sort %}
+			{% for author in sorted_authors %}
+				{% assign author_items = site.authors[author] %}
+				{% if author == 'jonathan' %}
+					<a class="authors-link" href="{{ site.baseurl }}/autor">
+				{% else %}
+					<a class="authors-link" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
+				{% endif %}
+					<img class="authors-image authors-image-rounded" src="{{ site.baseurl }}/images/authors/{{ author_items.avatar }}" alt="{{ author_items.name }}">
+					<span class="authors-name">
+						{{ author_items.name }} {{ author_items.lastname }}
+					</span>
+				</a>
+			{% endfor %}
 		</p>
 		
 		{% comment %}
@@ -89,18 +104,19 @@
 		{% endcomment %}
 
 		<p class="entry">
-			Publicado en 
+			Publicado el
+			{% include date.html %}
+			en 
 			{% assign sorted_categories = page.categories | sort %}
 			{% for category in sorted_categories %}
 				{% if category == 'articulos' %}
-					<a class="entry-category" href="{{ site.baseurl }}/articulos">artículos</a>
+					<a class="entry-category" href="{{ site.baseurl }}/articulos">artículos</a>.
 				{% elsif category == 'historias' %}
-					<a class="entry-category" href="{{ site.baseurl }}/historias">historias</a>
+					<a class="entry-category" href="{{ site.baseurl }}/historias">historias</a>.
 				{% else %}
-					<a class="entry-category" href="{{ site.baseurl }}/momentos">momentos</a>
+					<a class="entry-category" href="{{ site.baseurl }}/momentos">momentos</a>.
 				{% endif %}
 			{% endfor %}
-			{% include date.html %}
 			{% if site.github_username %}
 				{% assign filename = page.url | replace_first: '/', '' | replace: '/', '-' | replace: '.html', '.md' %}
 				<a href="https://github.com/{{ site.github_username }}/jonathanzuniga.github.io/edit/master/_posts/articles/{{ filename }}.md">
@@ -117,7 +133,7 @@
 			{% endif %}
 			Esta obra está bajo una licencia 
 			<a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">
-				Creative Commons Atribución 4.0 Int</a>.
+				Creative Commons Atribución 4.0 Internacional</a>.
 		</p>
 		
 		<ul class="tags">

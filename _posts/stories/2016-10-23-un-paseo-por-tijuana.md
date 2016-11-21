@@ -1,5 +1,5 @@
 ---
-author: jonathan
+authors: [jonathan]
 categories: [historias]
 cover: 
 date: 2016-10-23

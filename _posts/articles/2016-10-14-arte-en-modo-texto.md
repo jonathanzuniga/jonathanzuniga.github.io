@@ -1,5 +1,5 @@
 ---
-author: jonathan
+authors: [jonathan]
 categories: [articulos]
 cover: 
 date: 2016-10-14
@@ -39,7 +39,7 @@ Hoy en día la forma de arte ASCII de la nueva escuela es la más popular. Esta 
 
 <abbr title="American National Standards Institute">ANSI</abbr> fue desarrollado para ofrecer un formato común para la visualización de gráficos en los BBS's. Esto fue lo que realmente hizo que la comunidad comenzara.
 
-Al principio los artistas dibujaban logos y simples letras. Pero a medida que pasaba el tiempo, los artistas comenzaron a hacer dibujos más complejos, aventurandose en largas pantallas de un detalle asombroso. Los artistas se inspiraban de los cómics o muchas veces creaban arte original.
+Al principio los artistas dibujaban logos y simples letras. Pero a medida que pasaba el tiempo, los artistas comenzaron a hacer [dibujos más complejos][dibujos-mas-complejos], aventurandose en largas pantallas de un detalle asombroso. Los artistas se inspiraban de los cómics o muchas veces creaban arte original.
 
 Para crear estos dibujos, al igual que en el *pixel art* se requiere de una paciencia brutal y que normalmente se hace caracter por caracter a mano usando algún editor de textos, que es como se valora más.
 
@@ -64,3 +64,4 @@ Portadas de discos:
 
 [bbs]: https://es.wikipedia.org/wiki/Bulletin_Board_System
 [warez]: https://es.wikipedia.org/wiki/Warez
+[dibujos-mas-complejos]: https://www.youtube.com/watch?v=cmaK57M7ZV8&start=254

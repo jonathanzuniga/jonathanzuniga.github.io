@@ -37,30 +37,30 @@ ul {
 /*** Works on common browsers ***/
 ::selection {
 		background-color: $selection-bg-color;
-		color: $text-color;
+		// color: $text-color;
 }
 
 /*** Mozilla based browsers ***/
 ::-moz-selection {
 		background-color: $selection-bg-color;
-		color: $text-color;
+		// color: $text-color;
 }
 
 /***For Other Browsers ***/
 ::-o-selection {
 		background-color: $selection-bg-color;
-		color: $text-color;
+		// color: $text-color;
 }
 
 ::-ms-selection {
 		background-color: $selection-bg-color;
-		color: $text-color;
+		// color: $text-color;
 }
 
 /*** For Webkit ***/
 ::-webkit-selection {
 		background-color: $selection-bg-color;
-		color: $text-color;
+		// color: $text-color;
 }
 
 #footer::after,
@@ -206,7 +206,7 @@ section {
 			.header-search-field {
 				-webkit-appearance: none;
 				-moz-appearance: none;
-				background: rgba(0, 0, 0, 0.03);
+				background: $color-grey-100;
 				border: none;
 				border-radius: 13px;
 				box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 
@@ -238,7 +238,7 @@ section {
 				}
 
 				&:focus {
-					background: rgba(0, 0, 0, 0.06);
+					background: $color-grey-200;
 					box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2), 
 											inset 0 0 0 1px rgba(0, 0, 0, 0.04);
 					outline: 0;
@@ -312,7 +312,7 @@ section {
 
 	.teaser-title {
 		font-size: 21px;
-		// font-weight: 100;
+		font-weight: 100;
 		line-height: 1.3;
 		margin-bottom: 5px;
 	}
@@ -339,7 +339,7 @@ section {
 
 .teaser-content {
 	.teaser-meta {
-		color: $color-grey-600;
+		color: $color-grey-500;
 		font-size: 12px;
 		margin-bottom: 20px;
 		
@@ -398,7 +398,7 @@ section {
 		.sidebar-title {
 			color: $color-grey-500;
 			font-size: 12px;
-			// font-weight: normal;
+			font-weight: normal;
 			letter-spacing: 0.1em;
 			margin-bottom: 10px;
 			padding: 5px 0;
@@ -495,9 +495,8 @@ section {
 			}
 
 			.search-results-title {
-				color: #ba3925;
 				font-size: 20px;
-				// font-weight: normal;
+				font-weight: normal;
 				line-height: 1.3;
 			}
 
@@ -559,7 +558,7 @@ section {
 
 					h3 {
 						font-size: 21px;
-						// font-weight: 100;
+						font-weight: 100;
 						line-height: 1.3;
 					}
 
@@ -619,7 +618,7 @@ section {
 			article {
 				.content-title {
 					font-size: 24px;
-					// font-weight: 100;
+					font-weight: 100;
 					line-height: 1.3;
 					margin-bottom: 15px;
 					// margin-bottom: 20px;
@@ -627,9 +626,8 @@ section {
 
 				.content {
 					h2 {
-						color: #ba3925;
-						font-size: 20px;
-						// font-weight: normal;
+						font-size: 21px;
+						font-weight: normal;
 						line-height: 1.3;
 						padding-top: 15px;
 					}
@@ -637,8 +635,6 @@ section {
 					h3 {
 						font-size: 18px;
 						line-height: 1.3;
-						margin-bottom: 20px;
-						text-transform: uppercase;
 					}
 
 					h3, 
@@ -799,8 +795,8 @@ section {
 		&.layout-aside-single,
 		&.layout-aside-entry {
 			.aside-title {
-				font-size: 18px;
-				// font-weight: 100;
+				font-size: 21px;
+				font-weight: 100;
 				line-height: 1.3;
 				padding-top: 15px;
 			}
@@ -887,6 +883,10 @@ section {
 
 			.authors-link {
 				display: block;
+
+				+ .authors-link {
+					margin-top: 15px;
+				}
 			}
 
 			.authors-image {
@@ -894,7 +894,7 @@ section {
 				width: 100%;
 
 				&.authors-image-rounded {
-					border: 0.5em solid $color-grey-50;
+					// border: 0.5em solid $color-grey-50;
 					border-radius: 50%;
 					max-width: 100%;
 				}
@@ -924,13 +924,13 @@ section {
 	 Footer
 	 ========================================================================== */
 #footer {
-	color: $color-grey-600;
+	color: $color-grey-500;
 	font-size: 14px;
 	padding-bottom: 15px;
 
 	.footer-content {
 		a {
-			color: $color-grey-600;
+			color: $color-grey-500;
 			-webkit-transition: all 0.2s ease;
 			-moz-transition: all 0.2s ease;
 			-ms-transition: all 0.2s ease;
@@ -938,7 +938,7 @@ section {
 			transition: all 0.2s ease;
 
 			&:visited {
-				color: $color-grey-600;
+				color: $color-grey-500;
 			}
 
 			&:active {
@@ -993,7 +993,7 @@ img.pull-left {
 	opacity: 0.6;
 }
 
-.image-rounded {
+.rounded-corners {
 	border-radius: 0.3125em;
 }
 
