@@ -22,6 +22,7 @@ markdown: kramdown
 # Author details.
 authors:
   jonathan:
+    avatar: jonathan.jpg
     name: Jonathan Zúñiga
     email: jonathanzuniga@gmail.com
     web: http://

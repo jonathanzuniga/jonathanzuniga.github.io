@@ -60,9 +60,9 @@
 	{% elsif page.layout == 'post' %}		
 		<p class="authors authors-fixed">
 			<a class="authors-link" href="{{ site.baseurl }}/autor">
-				<img class="authors-image authors-image-rounded" src="{{ site.baseurl }}/images/authors/avatar-flat-jz-512.png" alt="">
+				{% assign author = site.authors[page.author] %}
+				<img class="authors-image authors-image-rounded" src="{{ site.baseurl }}/images/authors/{{ author.avatar }}" alt="{{ author.name }}">
 				<span class="authors-name">
-					{% assign author = site.authors[page.author] %}
 					{{ author.name }}
 				</span>
 			</a>
@@ -254,8 +254,29 @@
 		</ul>
 	{% elsif page.url == '/autor' %}
 		<p class="authors">
-			{% assign author = site.authors[jonathan] %}
-			<img class="authors-image" src="{{ site.baseurl }}/images/authors/avatar-flat-jz-512.png" alt="{{ author.name }}">
+			{% assign author = site.authors['jonathan'] %}
+			<img class="authors-image" src="{{ site.baseurl }}/images/authors/{{ author.avatar }}" alt="{{ author.name }}">
+		</p>
+
+		<p>
+			No intentes cambiar un sistema, construye uno nuevo que haga que el anterior se vuelva obsoleto.<br>
+			– Richard Buckminster Fuller
+		</p>
+
+		<h3 class="aside-title">
+			Habilidades
+		</h3>
+
+		<p>
+			Conocimientos avanzados de HTML y CSS. Comprensión del desarrollo móvil, tecnologías web y diseño responsivo. Destrezas malabares.
+		</p>
+
+		<h3 class="aside-title">
+			Fortalezas
+		</h3>
+
+		<p>
+			Aprendiz, autodidacta, constancia, curiosidad, individualización, intelección, perseverancia.
 		</p>
 	{% endif %}
 </div>

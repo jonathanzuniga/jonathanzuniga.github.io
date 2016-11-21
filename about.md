@@ -4,14 +4,11 @@ permalink: /autor
 title: Sobre el autor
 ---
 
-«No intentes cambiar un sistema, construye uno nuevo que haga que el anterior se vuelva obsoleto».<br>
-– Richard Buckminster Fuller
+<p class="lead">Mi nombre es Jonathan, soy un desarrollador originario de la ciudad de Tijuana. Actualmente trabajo como desarrollador web/móvil en Morzan Co.</p>
 
-Hola, mi nombre es Jonathan Zúñiga, soy un desarrollador originario de la ciudad de Tijuana, actualmente trabajo como desarrollador web/móvil en Morzan Consulting.
+Mi interés por el arte cambió gradualmente al diseño y desarrollo web. <!--, antes de asentarme finalmente en el diseño y desarrollo de videojuegos.--> He trabajado en diferentes campos del desarrollo web desde lo más visible del *front-end* hasta lo más oscuro del *back-end*. Me enfoco en dar al usuario la experiencia más fácil en todos sus dispositivos.
 
-Mi interés por el arte cambió gradualmente al diseño y desarrollo web. <!--, antes de asentarme finalmente en el diseño y desarrollo de videojuegos.--> He trabajado en diferentes campos del desarrollo web desde lo más visible del *front-end* hasta lo más oscuro del *back-end*. Me enfoco en dar al usuario la experiencia más fácil en todos sus dispositivos. <!-- El conocimiento y la experiencia que he acumulado son el resultado de la constante necesidad por aprender y experimentar con prototipos y nuevas tendencias. -->
-
-Cuando no estoy leyendo mis *feeds*, disfruto mirar películas como [Alien][alien], dibujar letras o saborear una deliciosa gelatina.
+Cuando no estoy leyendo mis *feeds*, disfruto mirar películas como [Alien][alien], dibujar letras o saborear una deliciosa gelatina. También me gusta la libertad de información, una internet que respeta y permita, observar interfaces gráficas, en ocasiones [jugar algún videojuego][jugar-algun-videojuego], criptografía, diseño, arte, ciencia ficción y terror, la velocidad, experimentar con prototipos y nuevas tendencias.
 
 Puedes ponerte en contacto conmigo por <a href="mailto:{{ site.email }}">correo electrónico</a>, seguirme en <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">Twitter</a> o <a href="https://www.instagram.com/{{ site.instagram_username }}" target="_blank">Instagram</a>, ¿por qué no en <a href="https://open.spotify.com/user/{{ site.spotify_username }}" target="_blank">Spotify</a>? o en mi cuenta desactualizada de <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">LinkedIn</a> y mi rincón en <a href="https://medium.com/@{{ site.medium_username }}" target="_blank">Medium</a> esta vacío en este momento.
 
@@ -25,7 +22,8 @@ El sitio está creado con los mejores sabores de HTML5 y Sass para la parte de C
 
 Gracias por leer, quienquiera que seas. Aquí no hay comentarios. No hay cuentas, no hay estadísticas. Sólo yo y muchos archivos de texto en blanco por completar. Ya veremos cómo nos va en esta ocasión.
 
-[alien]: http://www.imdb.com/title/tt0078748/
+[alien]: /2016/11/19/la-tipografia-de-alien
+[jugar-algun-videojuego]: http://steamcommunity.com/id/jonathanzuniga/
 [jekyll]: https://jekyllrb.com/
 [helvetica]: https://es.wikipedia.org/wiki/Helvética
 [max-miedinger]: https://es.wikipedia.org/wiki/Max_Miedinger
