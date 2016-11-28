@@ -4,10 +4,32 @@
 
 @charset 'utf-8';
 
+
+
+// Fonts
+@font-face {
+  font-family: 'CP437';
+  src: url('../fonts/cp437/cp437.eot');
+  src: url('../fonts/cp437/cp437.woff') format('woff'), url('../fonts/cp437/cp437.ttf') format('truetype'), url('../fonts/cp437/cp437.svg#webfontpVS4iJcr') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CP437 8x8';
+  src: url('../fonts/cp437/cp437-8x8.eot');
+  src: url('../fonts/cp437/cp437-8x8.woff') format('woff'), url('../fonts/cp437/cp437-8x8.ttf') format('truetype'), url('../fonts/cp437/cp437-8x8.svg#webfontpVS4iJcr') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 // Our variables
 $base-font-family: Helvetica, sans-serif;
 $heading-font-family: Helvetica, sans-serif;
 $mono-font-family: Monaco, Consolas, monospace;
+$ansi-font-family: 'CP437', Monaco, Consolas, monospace;
 $base-font-size: 16px;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -69,6 +91,7 @@ $content-width:	1200px;
 // $on-tablet-min: 768px;
 
 $width-479: 479px;
+$width-480: 480px;
 $width-568: 568px;
 $width-569: 569px;
 $width-767: 767px;
