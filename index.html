@@ -76,7 +76,7 @@ layout: default
 					{% endfor %}
 				{% endcapture %}
 				{% assign sorted_tags = tags | split: ' ' | sort | reverse %}
-				{% for tag in sorted_tags limit: 15 %}
+				{% for tag in sorted_tags limit: 9 %}
 					{% assign tag_items = tag | split: '#' %}
 					{% unless tag_items[1] == 'destacado' %}
 						<li class="tags-item" data-total-posts="{{ tag_items[2] }}">

@@ -8,20 +8,22 @@
       var appendString = '';
       var appendCount = '';
 
-      for (var i = 0; i < results.length; i++) {  // Iterate over the results
+      for (var i = 0; i < results.length; i++) { // Iterate over the results
         var item = store[results[i].ref];
         var item_image = '';
+        var item_authors = '';
         var item_categories = '';
 
         if (item.image)
           item_image = '<img class="teaser-image" src="' + item.image + '" alt="' + item.title + '">';
 
+        if (item.authors == 'jonathan')
+          item_authors = '<a class="teaser-author" href="/autor">Jonathan</a>';
+
         if (item.categories == 'articulos')
           item_categories = '<a class="teaser-category" href="/articulos">artículos</a>';
-        else if (item.categories == 'relatos')
-          item_categories = '<a class="teaser-category" href="/relatos">relatos</a>';
-        else if (item.categories == 'momentos')
-          item_categories = '<a class="teaser-category" href="/momentos">momentos</a>';
+        else if (item.categories == 'historias')
+          item_categories = '<a class="teaser-category" href="/relatos">historias</a>';
 
         // appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
         // appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
@@ -33,10 +35,10 @@
             </a>\
             \
             <div class="teaser-content">\
-              <p class="teaser-meta">\
-                Publicado en ' + 
-                item_categories + ' ' + 
-                item.date + '\
+              <p class="teaser-meta">' + 
+                item.date + ' por ' + 
+                item_authors + ' en ' + 
+                item_categories + '\
               </p>\
               \
               <div class="teaser-intro">' + item.content.split(' ').splice(0, 32).join(' ') + '...</div>\
@@ -72,7 +74,6 @@
   }
 
   var searchTerm = getQueryVariable('consulta');
-
   if (searchTerm) {
     document.getElementById('search-box').setAttribute('value', searchTerm);
 
@@ -81,7 +82,7 @@
     var idx = lunr(function () {
       this.field('id');
       this.field('title', { boost: 10 });
-      this.field('author');
+      this.field('authors');
       this.field('categories');
       this.field('content');
       this.field('tags');
@@ -91,7 +92,7 @@
       idx.add({
         'id': key,
         'title': window.store[key].title,
-        'author': window.store[key].author,
+        'authors': window.store[key].authors,
         'categories': window.store[key].categories,
         'content': window.store[key].content,
         'tags': window.store[key].tags

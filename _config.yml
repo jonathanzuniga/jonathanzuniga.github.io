@@ -56,6 +56,8 @@ permalink: /:year/:month/:day/:title
 #   days: 'días'
 #   day: 'día'
 
+# gems: ['emoji_for_jekyll']
+
 tag_page_layout: tag_page
 tag_page_dir: etiqueta
 tag_permalink_style: pretty

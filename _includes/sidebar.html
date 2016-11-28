@@ -65,23 +65,39 @@
 				{% endif %}
 			{% endfor %}
 		</section>
-	{% elsif page.layout == 'post' %}		
-		<p class="authors authors-fixed">
+	{% elsif page.layout == 'post' %}
+		<div class="authors authors-fixed">
 			{% assign sorted_authors = page.authors | sort %}
 			{% for author in sorted_authors %}
-				{% assign author_items = site.authors[author] %}
-				{% if author == 'jonathan' %}
-					<a class="authors-link" href="{{ site.baseurl }}/autor">
-				{% else %}
-					<a class="authors-link" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
-				{% endif %}
-					<img class="authors-image authors-image-rounded" src="{{ site.baseurl }}/images/authors/{{ author_items.avatar }}" alt="{{ author_items.name }}">
-					<span class="authors-name">
-						{{ author_items.name }} {{ author_items.lastname }}
-					</span>
-				</a>
+				<div class="authors-link-wrap">
+					{% assign author_items = site.authors[author] %}
+					{% if author == 'jonathan' %}
+						<a class="authors-link" href="{{ site.baseurl }}/autor">
+					{% else %}
+						<a class="authors-link" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
+					{% endif %}
+						<img class="authors-image authors-image-rounded" src="{{ site.baseurl }}/images/authors/{{ author_items.avatar }}" alt="{{ author_items.name }}">
+					</a>
+
+					<div class="authors-title">
+						{% if author == 'jonathan' %}
+							<a class="authors-link" href="{{ site.baseurl }}/autor">
+						{% else %}
+							<a class="authors-link" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
+						{% endif %}
+							<span class="authors-name">
+								Por {{ author_items.name }}
+							</span>
+						</a>
+						{% if author_items.twitter_username %}
+							<a class="authors-twitter" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
+								<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+							</a>
+						{% endif %}
+					</div>
+				</div>
 			{% endfor %}
-		</p>
+		</div>
 		
 		{% comment %}
 		{% if page.categories contains 'articulos' %}
@@ -117,16 +133,17 @@
 					<a class="entry-category" href="{{ site.baseurl }}/momentos">momentos</a>.
 				{% endif %}
 			{% endfor %}
-			{% if site.github_username %}
+			{% assign author_items = site.authors['jonathan'] %}
+			{% if author_items.github_username %}
 				{% assign filename = page.url | replace_first: '/', '' | replace: '/', '-' | replace: '.html', '.md' %}
-				<a href="https://github.com/{{ site.github_username }}/jonathanzuniga.github.io/edit/master/_posts/articles/{{ filename }}.md">
-					Edita este
+				<a href="https://github.com/{{ author_items.github_username }}/jonathanzuniga.github.io/edit/master/_posts/articles/{{ filename }}.md">
+					Mejora 
 					{% assign sorted_categories = page.categories | sort %}
 					{% for category in sorted_categories %}
 						{% if category == 'historias' %}
-							historia
+							esta historia
 						{% else %}
-							artículo
+							este artículo
 						{% endif %}
 					{% endfor %}
 				 	en GitHub</a>.

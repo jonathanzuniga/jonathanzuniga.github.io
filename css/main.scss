@@ -7,7 +7,7 @@
 // Our variables
 $base-font-family: Helvetica, sans-serif;
 $heading-font-family: Helvetica, sans-serif;
-$mono-font-family: Menlo, Monaco, Consolas, monospace;
+$mono-font-family: Monaco, Consolas, monospace;
 $base-font-size: 16px;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -18,8 +18,9 @@ $spacing-unit: 30px;
 // Colors
 // $text-color: #111;
 // $background-color: #fff;
-$text-color: #fff;
-$background-color: #222;
+$text-color: #999;
+$heading-color: #ccc;
+$background-color: #1e1e1e;
 
 $color-black: #000;
 $color-blue: #3f4e79;
@@ -39,18 +40,23 @@ $color-white: #fff;
 
 // $link-color: #398fd1;
 // $link-visited-color: #398fd1;
-$link-color: #ff5252;
-$link-visited-color: #ff5252;
-$link-active-color: $color-grey-600;
-$link-hover-color: lighten($link-color, 15%);
+$link-color: #2f83c4;
+$link-visited-color: #0098a6;
+$link-active-color: #bf360c;
+$link-hover-color: #ccc;
+
+$link-heading-color: #ccc;
+$link-heading-visited-color: #ccc;
+$link-heading-active-color: $color-grey-600;
+$link-heading-hover-color: lighten($link-color, 15%);
 
 $link-category-color: SeaGreen;
 $link-category-visited-color: SeaGreen;
 $link-category-active-color: $color-grey-600;
-$link-category-hover-color: lighten($link-category-color, 15%);
+$link-category-hover-color: lighten($link-color, 15%);
 
-// $border-color: rgba(0, 0, 0, 0.1);
-$border-color: $color-grey-600;
+// $border-color: $color-grey-200;
+$border-color: #333;
 $selection-bg-color: Cornsilk;
 
 
@@ -107,5 +113,5 @@ $width-1024: 1024px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import 
 	'base', 
-	'layout', 
+	'layout',
 	'syntax-highlighting';

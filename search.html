@@ -27,14 +27,23 @@ permalink: /buscar
 
 <script>
 	window.store = {
+		{% 
+			assign months = 
+			'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
+			split: '|'
+		%}
 		{% for post in site.posts %}
+			{% assign day = post.date | date: '%-d' %}
+			{% assign m = post.date | date: '%-m' | minus: 1 %}
+			{% assign month = months[m] %}
+			{% assign year = post.date | date: '%Y' %}
 			"{{ post.url | slugify }}": {
 				"title": "{{ post.title | xml_escape }}",
-				"author": "{{ post.author | xml_escape }}",
+				"authors": "{{ post.authors | sort }}",
 				'categories': '{{ post.categories | sort }}',
 				"content": {{ post.content | strip_html | strip_newlines | jsonify }},
 				"url": "{{ post.url | xml_escape }}",
-				'date': "{{ post.date | timeago }}",
+				'date': "{{ day }} de {{ month }}, {{ year }}",
 				'image': '{{ post.image }}',
 				'tags': '{{ post.tags | sort | replace: "-", " " }}'
 			}

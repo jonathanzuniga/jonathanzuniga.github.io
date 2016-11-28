@@ -1,7 +1,9 @@
 <footer id="footer">
 	<p class="footer-content">
 		<strong>{{ site.title }}</strong> © 2015—{{ site.time | date: '%Y' }}. 
-		<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">Suscribirse a las publicaciones</a>.
+		<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
+			<i class="fa fa-rss fa-lg" aria-hidden="true"></i>
+			Suscribirse a las publicaciones</a>.
 		{% assign author_items = site.authors['jonathan'] %}
 		{% if author_items.github_username %}
 			<a href="https://github.com/{{ author_items.github_username }}/jonathanzuniga.github.io" target="_blank">

@@ -15,7 +15,7 @@ en artículos de [Usenet][usenet] para publicar contenido o frases que pueden
 ser *spoilers* que son conflictivos o algo así, para que no se puedan leer 
 fácilmente sino que requieran un esfuerzo consciente del lector.
 
-<div class="figure">
+<div class="figure figure-responsive">
 	<table>
 		<thead>
 			<tr>

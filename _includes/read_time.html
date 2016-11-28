@@ -5,8 +5,8 @@
 		{% assign words = post.content | number_of_words %}
 	{% endif %}
   {% if words < 360 %}
-    1 minuto.
+    1 minuto
   {% else %}
-    {{ words | divided_by: 180 }} minutos.
+    {{ words | divided_by: 180 }} minutos
   {% endif %}
 </span>
