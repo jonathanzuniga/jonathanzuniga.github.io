@@ -4,7 +4,7 @@
 
 @charset 'utf-8';
 
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i');
 
 // Fonts
 @font-face {
@@ -26,8 +26,8 @@
 
 
 // Our variables
-$base-font-family: Helvetica, sans-serif;
-$heading-font-family: Helvetica, sans-serif;
+$base-font-family: 'Roboto', Helvetica, sans-serif;
+$heading-font-family: 'Roboto', Helvetica, sans-serif;
 $mono-font-family: Monaco, Consolas, monospace;
 $ansi-font-family: 'CP437', Monaco, Consolas, monospace;
 $base-font-size: 16px;
@@ -40,9 +40,9 @@ $spacing-unit: 30px;
 // Colors
 // $text-color: #111;
 // $background-color: #fff;
-$text-color: #999;
-$heading-color: #ccc;
-$background-color: #1e1e1e;
+$text-color: #ddd;
+$heading-color: #fafafa;
+$background-color: #1c1c1c;
 
 $color-black: #000;
 $color-blue: #3f4e79;
@@ -62,15 +62,15 @@ $color-white: #fff;
 
 // $link-color: #398fd1;
 // $link-visited-color: #398fd1;
-$link-color: #2f83c4;
-$link-visited-color: #0098a6;
-$link-active-color: #bf360c;
-$link-hover-color: #ccc;
+$link-color: #ff5252;
+$link-visited-color: #ff5252;
+$link-active-color: $color-grey-600;
+$link-hover-color: #ff5252;
 
-$link-heading-color: #ccc;
-$link-heading-visited-color: #ccc;
+$link-heading-color: #fafafa;
+$link-heading-visited-color: #fafafa;
 $link-heading-active-color: $color-grey-600;
-$link-heading-hover-color: lighten($link-color, 15%);
+$link-heading-hover-color: #fafafa;
 
 $link-category-color: SeaGreen;
 $link-category-visited-color: SeaGreen;
@@ -78,7 +78,7 @@ $link-category-active-color: $color-grey-600;
 $link-category-hover-color: lighten($link-color, 15%);
 
 // $border-color: $color-grey-200;
-$border-color: #333;
+$border-color: $color-grey-800;
 $selection-bg-color: Cornsilk;
 
 
