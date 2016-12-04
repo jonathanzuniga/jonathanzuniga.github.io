@@ -54,8 +54,10 @@ $heading-color: #222;
 $background-color: #fff;
 
 $color-black: #000;
-$color-blue: #4166ff;
+// $color-blue: #4166ff;
 // $color-blue-light: #6682ff;
+$color-blue: #005bff;
+$color-cyan: #0ff;
 $color-grey: #888;
 $color-grey-50: #fafafa;
 $color-grey-100: #f5f5f5;
@@ -78,8 +80,10 @@ $color-yellow: #fed134;
 
 $color-gold: #e19e29;
 
-$link-color: #00f;
-$link-visited-color: lighten($link-color, 15%);
+
+
+$link-color: $color-blue;
+$link-visited-color: lighten($link-color, 12%);
 $link-active-color: $color-grey-600;
 $link-hover-color: $text-color;
 
@@ -119,7 +123,7 @@ $link-category-active-color: $color-grey-600;
 $link-category-hover-color: $text-color;
 
 $border-color: $color-grey-300;
-$selection-bg-color: Cornsilk;
+$selection-bg-color: $color-blue;
 
 
 
