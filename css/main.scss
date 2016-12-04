@@ -60,8 +60,13 @@ $color-yellow: #fff;
 
 $color-gold: #e19e29;
 
-$link-color: #398fd1;
-$link-visited-color: #62a6db;
+// $link-color: #398fd1;
+// $link-visited-color: #62a6db;
+// $link-active-color: $color-grey-600;
+// $link-hover-color: $text-color;
+
+$link-color: #2f79af;
+$link-visited-color: lighten($link-color, 12%);
 $link-active-color: $color-grey-600;
 $link-hover-color: $text-color;
 
