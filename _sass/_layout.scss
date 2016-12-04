@@ -163,7 +163,7 @@ section {
 
 	.header-nav {
 		ul {
-			color: $color-grey-500;
+			color: $color-orange;
 			display: -webkit-box;
 			display: -ms-flexbox;
 			display: flex;
@@ -446,7 +446,7 @@ section {
 
 	li {
 		.sidebar-title {
-			color: $color-grey-500;
+			color: $color-grey-600;
 			font-size: 12px;
 			font-weight: normal;
 			letter-spacing: 0.1em;
@@ -944,7 +944,7 @@ section {
 			
 			&.aside-entries-post {
 				.aside-entries-title {
-					color: $color-grey-500;
+					color: $color-grey-600;
 					display: inline-block;
 					font-size: 12px;
 					font-weight: normal;

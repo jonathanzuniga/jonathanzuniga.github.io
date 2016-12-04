@@ -14,6 +14,11 @@
 // @font-face {font-family: 'GloberSemiBoldItalic';src: url('../fonts/glober/2F0124_3_0.eot');src: url('../fonts/glober/2F0124_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/glober/2F0124_3_0.woff2') format('woff2'),url('../fonts/glober/2F0124_3_0.woff') format('woff'),url('../fonts/glober/2F0124_3_0.ttf') format('truetype');}
 
 @font-face {
+  font-family: 'Futura PT';
+  src: url('../fonts/futura-pt/Futura PT Bold.otf') format('opentype');
+}
+
+@font-face {
   font-family: 'CP437';
   src: url('../fonts/cp437/cp437.eot');
   src: url('../fonts/cp437/cp437.woff') format('woff'), url('../fonts/cp437/cp437.ttf') format('truetype'), url('../fonts/cp437/cp437.svg#webfontpVS4iJcr') format('svg');
@@ -50,6 +55,7 @@ $background-color: #fff;
 
 $color-black: #000;
 $color-blue: #4166ff;
+// $color-blue-light: #6682ff;
 $color-grey: #888;
 $color-grey-50: #fafafa;
 $color-grey-100: #f5f5f5;
@@ -61,22 +67,31 @@ $color-grey-600: #757575;
 $color-grey-700: #616161;
 $color-grey-800: #424242;
 $color-grey-900: #212121;
-$color-orange: #fe713e;
-$color-purple: #60f;
-$color-red: #ff4538;
-$color-yellow: #fff;
+// $color-orange: #fe713e;
+$color-orange: #ff764d;
+// $color-purple: #60f;
+$color-purple: #7600e2;
+// $color-red: #ff4538;
+$color-red: #fd5948;
+// $color-yellow: #fff;
+$color-yellow: #fed134;
 
 $color-gold: #e19e29;
+
+$link-color: #00f;
+$link-visited-color: lighten($link-color, 15%);
+$link-active-color: $color-grey-600;
+$link-hover-color: $text-color;
 
 // $link-color: #398fd1;
 // $link-visited-color: #62a6db;
 // $link-active-color: $color-grey-600;
 // $link-hover-color: $text-color;
 
-$link-color: #2f79af;
-$link-visited-color: lighten($link-color, 12%);
-$link-active-color: $color-grey-600;
-$link-hover-color: $text-color;
+// $link-color: #2f79af;
+// $link-visited-color: lighten($link-color, 12%);
+// $link-active-color: $color-grey-600;
+// $link-hover-color: $text-color;
 
 // $link-color: #0b79e5;
 // $link-visited-color: lighten($link-color, 10%);
@@ -98,17 +113,17 @@ $link-heading-visited-color: $heading-color;
 $link-heading-active-color: $color-grey-600;
 $link-heading-hover-color: $link-hover-color;
 
-$link-category-color: SeaGreen;
-$link-category-visited-color: SeaGreen;
+$link-category-color: $color-orange;
+$link-category-visited-color: lighten($link-category-color, 12%);
 $link-category-active-color: $color-grey-600;
-$link-category-hover-color: lighten($link-color, 15%);
+$link-category-hover-color: $text-color;
 
 $border-color: $color-grey-300;
 $selection-bg-color: Cornsilk;
 
 
 
-$heading-weight: 300;
+$heading-weight: 500;
 
 
 

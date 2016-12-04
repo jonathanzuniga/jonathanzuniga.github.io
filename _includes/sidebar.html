@@ -69,7 +69,11 @@
 					 page.url == '/autor' %}
 		<section class="aside-entries aside-entries-post">
 			<h2 class="aside-entries-title">
-				Publicaciones recientes
+				{% if page.layout == 'post' %}
+					Más publicaciones
+				{% else %}
+					Publicaciones recientes
+				{% endif %}
 			</h2>
 
 			{% assign postCounter = 0 %}
@@ -80,6 +84,10 @@
 						<h3 class="teaser-title">
 							{{ post.title }}
 						</h3>
+
+						{% if post.cover %}
+							<img class="teaser-image" src="{{ post.cover }}" alt="{{ post.title }}">
+						{% endif %}
 					</a>
 
 					<div class="teaser-content">
@@ -111,7 +119,7 @@
 						</p>
 
 						<div class="teaser-intro">
-							{{ post.excerpt | strip_html | truncatewords: 20  }}
+							{{ post.excerpt | strip_html | truncatewords: 15  }}
 						</div>
 					</div>
 				</article>
