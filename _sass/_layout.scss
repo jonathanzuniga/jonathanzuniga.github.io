@@ -12,11 +12,13 @@ html {
 em,
 h4,
 i {
+	// font-family: 'GloberRegularItalic', $base-font-family;
 	font-style: italic;
 }
 
 b,
 strong {
+	// base-font-family: 'GloberSemiBold', $base-font-family;
 	font-weight: 700;
 }
 
@@ -355,7 +357,7 @@ section {
 
 .teaser-content {
 	.teaser-meta {
-		color: $color-grey-600;
+		color: $color-grey-700;
 		font-size: 12px;
 		margin-bottom: 20px;
 		
@@ -384,7 +386,8 @@ section {
 // .tags,
 // .layout-aside,
 // .resource-list ul li {
-// 	a:not(.teaser-link):hover {
+// 	a:not(.teaser-link) {
+// 		font-family: 'GloberSemiBold', $base-font-family;
 // 	}
 // }
 
@@ -711,7 +714,7 @@ section {
 					}
 
 					blockquote {
-						color: $color-grey-600;
+						color: $color-grey-700;
 						// font-style: italic;
 					}
 
@@ -840,7 +843,7 @@ section {
 
 					* + .figure-caption {
 						margin-top: 15px;
-						color: $color-grey-600;
+						color: $color-grey-700;
 						font-size: 14px;
 						font-weight: 400;
 					}
@@ -863,7 +866,7 @@ section {
 		.entry {
 			border-bottom: 1px solid $border-color;
 			border-top: 1px solid $border-color;
-			color: $color-grey-600;
+			color: $color-grey-700;
 			margin-bottom: 15px;
 			padding-top: 15px;
 		}
