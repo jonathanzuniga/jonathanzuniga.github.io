@@ -11,6 +11,68 @@ layout: default
 		<div class="content">
 			{{ content }}
 		</div>
+
+		<div class="entry">
+			<p>
+				{% assign author_items = site.authors['jonathan'] %}
+				Si deseas mantenerte en contacto, en Twitter me encontrarás como <a href="https://twitter.com/{{ author_items.twitter_username }}">@{{ author_items.twitter_username }}</a>. También eres bienvenido a enviarme un mensaje a la dirección <a href="mailto:{{ author_items.email }}">{{ author_items.email }}</a>. No siempre tengo la oportunidad de responder, pero el correo electrónico es siempre la mejor manera de contactar.
+			</p>
+
+			<p>
+				Publicado el
+				{% include date.html %}
+				por
+				{% assign sorted_authors = page.authors | sort %}
+				{% for author in sorted_authors %}<!--
+					-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %} 
+					{% assign author_items = site.authors[author] %}
+					{% if author == 'jonathan' %}
+						<a class="teaser-author" href="{{ site.baseurl }}/autor">
+					{% else %}
+						<a class="teaser-author" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
+					{% endif %}
+						{{ author_items.name }}<!--
+					--></a><!--
+				-->{% endfor %}
+				en 
+				{% assign sorted_categories = page.categories | sort %}
+				{% for category in sorted_categories %}
+					{% if category == 'articulos' %}
+						<a class="entry-category" href="{{ site.baseurl }}/articulos">artículos</a>.
+					{% elsif category == 'historias' %}
+						<a class="entry-category" href="{{ site.baseurl }}/historias">historias</a>.
+					{% else %}
+						<a class="entry-category" href="{{ site.baseurl }}/momentos">momentos</a>.
+					{% endif %}
+				{% endfor %}
+				{% assign author_items = site.authors['jonathan'] %}
+				{% if author_items.github_username %}
+					{% assign filename = page.url | replace_first: '/', '' | replace: '/', '-' | replace: '.html', '.md' %}
+					<a href="https://github.com/{{ author_items.github_username }}/jonathanzuniga.github.io/edit/master/_posts/articles/{{ filename }}.md">
+						Mejora 
+						{% assign sorted_categories = page.categories | sort %}
+						{% for category in sorted_categories %}
+							{% if category == 'historias' %}
+								esta historia
+							{% else %}
+								este artículo
+							{% endif %}
+						{% endfor %}
+					 	en GitHub</a>.
+				{% endif %}
+				Esta obra está bajo una licencia 
+				<a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">Creative Commons Atribución 4.0 Internacional</a>.
+			</p>
+		</div>
+		
+		<ul class="tags">
+			{% assign sorted_tags = page.tags | sort %}
+			{% for tag in sorted_tags %}
+				<li class="tags-item">
+					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/{{ tag }}">{{ tag }}</a>
+				</li>
+			{% endfor %}
+		</ul>
 	</article>
 </div>
 

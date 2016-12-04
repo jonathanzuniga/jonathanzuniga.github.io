@@ -1,13 +1,4 @@
 jQuery(document).ready(function($) {
-	// $('.filter').filterMe({
-	// 	desaturate: false, // Value from 0 - 1. 1 equals full desaturation (black & white).
-	// 	curves: false, // Object of RGB values in production script, or string name of curves .acv file in development script.
-	// 	vignette: false, // 'true' or 'false'. Add a vignette to the image.
-	// 	folder: 'acv/', // Development script only. Location of the .acv folder, relative to the current file.
-	// 	debug: false // Set to 'true' for script debugging. Logs information along execution in console.
-	// });
-	// $('.filter').filterMe();
-
 	$('.layout-aside .tags a').each(function() {
 		$(this).wrap('<li class="tags-item"/>');
 	});
@@ -18,11 +9,19 @@ jQuery(document).ready(function($) {
 		$(this).parent().removeClass('focus');
 	});
 
+	$('.aside-entries-post .teaser-aside-entries:last-child').hide();
+	$('.aside-entries-post .teaser-aside-entries:visible:last').css('border-bottom', 'none');
+
 	var teaser_title_featured = $('.teaser-title-featured').text().trim();
-	$('.archive-columns .teaser-title').each(function() {
-		if ($(this).text().trim() == teaser_title_featured)
+	var content_title = $('.layout-content-entry').find('.content-title').text().trim();
+	$('.teaser-title:not(.teaser-title-featured)').each(function() {
+		if ($(this).text().trim() == teaser_title_featured) {
 			$(this).closest('.teaser').remove();
+		} else if ($(this).text().trim() == content_title) {
+			$(this).closest('.teaser').remove();
+			$('.aside-entries-post').find('.teaser-aside-entries:last-child').show();
+		}
 	});
 
-  // $('#search-results:empty').removeClass('archive-columns');
+	$('.teaser-content .teaser-intro figure:hidden').remove();
 });

@@ -65,7 +65,66 @@
 				{% endif %}
 			{% endfor %}
 		</section>
-	{% elsif page.layout == 'post' %}
+	{% elsif page.layout == 'post' or 
+					 page.url == '/autor' %}
+		<section class="aside-entries aside-entries-post">
+			<h2 class="aside-entries-title">
+				Publicaciones recientes
+			</h2>
+
+			{% assign postCounter = 0 %}
+			{% assign maxPost = 6 %}
+			{% for post in site.posts %}
+				<article class="teaser teaser-aside-entries">
+					<a class="teaser-link" href="{{ post.url }}">
+						<h3 class="teaser-title">
+							{{ post.title }}
+						</h3>
+					</a>
+
+					<div class="teaser-content">
+						<p class="teaser-meta">
+							{% include date.html %}
+							por 
+							{% assign sorted_authors = post.authors | sort %}
+							{% for author in sorted_authors %}<!--
+								-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %} 
+								{% assign author_items = site.authors[author] %}
+								{% if author == 'jonathan' %}
+									<a class="teaser-author" href="{{ site.baseurl }}/autor">
+								{% else %}
+									<a class="teaser-author" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
+								{% endif %}
+									{{ author_items.name }}<!--
+								--></a><!--
+							-->{% endfor %}
+							en 
+							{% assign sorted_categories = post.categories | sort %}
+							{% for category in sorted_categories %}
+								<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
+								{% if category == 'articulos' %}
+									<a class="teaser-category" href="{{ site.baseurl }}/articulos">artículos</a>
+								{% elsif category == 'historias' %}
+									<a class="teaser-category" href="{{ site.baseurl }}/historias">historias</a>
+								{% endif %}
+							{% endfor %}
+						</p>
+
+						<div class="teaser-intro">
+							{{ post.excerpt | strip_html | truncatewords: 20  }}
+						</div>
+					</div>
+				</article>
+				{% assign postCounter = postCounter | plus: 1 %}
+				{% if postCounter >= maxPost %}
+					{% break %}
+				{% endif %}
+			{% endfor %}
+		</section>
+
+
+
+		{% comment %}
 		<div class="authors authors-fixed">
 			{% assign sorted_authors = page.authors | sort %}
 			{% for author in sorted_authors %}
@@ -98,6 +157,7 @@
 				</div>
 			{% endfor %}
 		</div>
+		{% endcomment %}
 		
 		{% comment %}
 		{% if page.categories contains 'articulos' %}
@@ -119,6 +179,7 @@
 		{% endif %}
 		{% endcomment %}
 
+		{% comment %}
 		<p class="entry">
 			Publicado el
 			{% include date.html %}
@@ -161,6 +222,7 @@
 				</li>
 			{% endfor %}
 		</ul>
+		{% endcomment %}
 	{% elsif page.layout == 'tag_page' or
 					 page.url == '/buscar' %}
 		<ul class="tags">
@@ -285,7 +347,7 @@
 				</ul>
 			</li>
 		</ul>
-	{% elsif page.url == '/autor' %}
+	{% comment %}
 		<p class="authors">
 			{% assign author = site.authors['jonathan'] %}
 			<img class="authors-image" src="{{ site.baseurl }}/images/authors/{{ author.avatar }}" alt="{{ author.name }}">
@@ -311,5 +373,6 @@
 		<p>
 			Aprendiz, autodidacta, constancia, curiosidad, individualización, intelección, perseverancia.
 		</p>
+	{% endcomment %}
 	{% endif %}
 </div>
