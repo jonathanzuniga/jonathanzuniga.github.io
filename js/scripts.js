@@ -19,6 +19,7 @@ jQuery(document).ready(function($) {
 			$(this).closest('.teaser').remove();
 		} else if ($(this).text().trim() == content_title) {
 			$(this).closest('.teaser').remove();
+			$('.aside-entries-post .teaser-aside-entries:visible:last').removeAttr('style');
 			$('.aside-entries-post').find('.teaser-aside-entries:last-child').show();
 		}
 	});
