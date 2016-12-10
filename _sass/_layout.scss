@@ -1207,7 +1207,9 @@ img.pull-left {
 	#main {
 		.layout-aside {
 			.aside-entries-post {
-				padding-right: 10px;
+				.teaser-aside-entries {
+					padding-right: 10px;
+				}
 			}
 		}
 	}

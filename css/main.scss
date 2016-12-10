@@ -52,7 +52,7 @@ $color-black: #000;
 // $color-blue: #4166ff;
 // $color-blue-light: #6682ff;
 // $color-blue: #005bff;
-$color-blue: #00f;
+$color-blue: #398fd1;
 $color-cyan: #0ff;
 $color-grey: #888;
 $color-grey-50: #fafafa;
@@ -78,7 +78,7 @@ $color-gold: #e19e29;
 
 
 
-$link-color: #8787c1;
+$link-color: $color-blue;
 $link-visited-color: lighten($link-color, 5%);
 $link-active-color: $color-grey-600;
 $link-hover-color: $text-color;
@@ -123,7 +123,7 @@ $selection-bg-color: $color-blue;
 
 
 
-$heading-weight: 500;
+$heading-weight: 100;
 
 
 
