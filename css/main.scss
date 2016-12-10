@@ -14,11 +14,6 @@
 // @font-face {font-family: 'GloberSemiBoldItalic';src: url('../fonts/glober/2F0124_3_0.eot');src: url('../fonts/glober/2F0124_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/glober/2F0124_3_0.woff2') format('woff2'),url('../fonts/glober/2F0124_3_0.woff') format('woff'),url('../fonts/glober/2F0124_3_0.ttf') format('truetype');}
 
 @font-face {
-  font-family: 'Futura PT';
-  src: url('../fonts/futura-pt/Futura PT Bold.otf') format('opentype');
-}
-
-@font-face {
   font-family: 'CP437';
   src: url('../fonts/cp437/cp437.eot');
   src: url('../fonts/cp437/cp437.woff') format('woff'), url('../fonts/cp437/cp437.ttf') format('truetype'), url('../fonts/cp437/cp437.svg#webfontpVS4iJcr') format('svg');
@@ -49,14 +44,15 @@ $spacing-unit: 30px;
 
 
 // Colors
-$text-color: #222;
-$heading-color: #222;
+$text-color: #333;
+$heading-color: #333;
 $background-color: #fff;
 
 $color-black: #000;
 // $color-blue: #4166ff;
 // $color-blue-light: #6682ff;
-$color-blue: #005bff;
+// $color-blue: #005bff;
+$color-blue: #00f;
 $color-cyan: #0ff;
 $color-grey: #888;
 $color-grey-50: #fafafa;
@@ -82,8 +78,8 @@ $color-gold: #e19e29;
 
 
 
-$link-color: $color-blue;
-$link-visited-color: lighten($link-color, 12%);
+$link-color: #8787c1;
+$link-visited-color: lighten($link-color, 5%);
 $link-active-color: $color-grey-600;
 $link-hover-color: $text-color;
 

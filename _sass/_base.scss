@@ -96,12 +96,13 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
 	color: $link-color;
+	font-weight: bold;
 	text-decoration: none;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
+	-webkit-transition: all 0.1s ease;
+	-moz-transition: all 0.1s ease;
+	-ms-transition: all 0.1s ease;
+	-o-transition: all 0.1s ease;
+	transition: all 0.1s ease;
 
 	&:visited {
 		color: $link-visited-color;

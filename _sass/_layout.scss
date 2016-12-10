@@ -36,34 +36,34 @@ ul {
 	list-style: none;
 }
 
-/*** Works on common browsers ***/
-::selection {
-		background-color: $selection-bg-color;
-		color: $background-color;
-}
+// /*** Works on common browsers ***/
+// ::selection {
+// 		background-color: $selection-bg-color;
+// 		color: $background-color;
+// }
 
-/*** Mozilla based browsers ***/
-::-moz-selection {
-		background-color: $selection-bg-color;
-		color: $background-color;
-}
+// /*** Mozilla based browsers ***/
+// ::-moz-selection {
+// 		background-color: $selection-bg-color;
+// 		color: $background-color;
+// }
 
-/***For Other Browsers ***/
-::-o-selection {
-		background-color: $selection-bg-color;
-		color: $background-color;
-}
+// /***For Other Browsers ***/
+// ::-o-selection {
+// 		background-color: $selection-bg-color;
+// 		color: $background-color;
+// }
 
-::-ms-selection {
-		background-color: $selection-bg-color;
-		color: $background-color;
-}
+// ::-ms-selection {
+// 		background-color: $selection-bg-color;
+// 		color: $background-color;
+// }
 
-/*** For Webkit ***/
-::-webkit-selection {
-		background-color: $selection-bg-color;
-		color: $background-color;
-}
+// /*** For Webkit ***/
+// ::-webkit-selection {
+// 		background-color: $selection-bg-color;
+// 		color: $background-color;
+// }
 
 #footer::after,
 #header::after,
@@ -148,6 +148,7 @@ section {
 
 		.header-logo-link {
 			color: $heading-color;
+			font-weight: 700;
 			line-height: 48px;
 			// padding-left: 50px;
 
@@ -163,7 +164,7 @@ section {
 
 	.header-nav {
 		ul {
-			color: $color-orange;
+			color: $color-grey-500;
 			display: -webkit-box;
 			display: -ms-flexbox;
 			display: flex;
@@ -176,6 +177,7 @@ section {
 			li {
 				a {
 					color: $text-color;
+					font-weight: normal;
 					-webkit-transition: all 0.2s ease;
 					-moz-transition: all 0.2s ease;
 					-ms-transition: all 0.2s ease;
@@ -236,7 +238,7 @@ section {
 				}
 
 				&:focus {
-					border-color: $color-grey-500;
+					border-color: $color-grey-600;
 					// box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2), 
 					// 						inset 0 0 0 1px rgba(0, 0, 0, 0.04);
 					box-shadow: none;
