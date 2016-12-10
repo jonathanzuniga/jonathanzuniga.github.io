@@ -5,6 +5,8 @@
 @charset 'utf-8';
 
 // Fonts
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+
 // @font-face {font-family: 'GloberRegular';src: url('../fonts/glober/2F0124_0_0.eot');src: url('../fonts/glober/2F0124_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/glober/2F0124_0_0.woff2') format('woff2'),url('../fonts/glober/2F0124_0_0.woff') format('woff'),url('../fonts/glober/2F0124_0_0.ttf') format('truetype');}
 
 // @font-face {font-family: 'GloberRegularItalic';src: url('../fonts/glober/2F0124_1_0.eot');src: url('../fonts/glober/2F0124_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/glober/2F0124_1_0.woff2') format('woff2'),url('../fonts/glober/2F0124_1_0.woff') format('woff'),url('../fonts/glober/2F0124_1_0.ttf') format('truetype');}
@@ -32,21 +34,21 @@
 
 
 // Our variables
-$base-font-family: Helvetica, sans-serif;
+$base-font-family: 'Inconsolata', monospace;
 $heading-font-family: Helvetica, sans-serif;
 $mono-font-family: Monaco, Consolas, monospace;
 $ansi-font-family: 'CP437', Monaco, Consolas, monospace;
-$base-font-size: 16px;
+$base-font-size: 12px;
 $small-font-size: $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: 1.6;
 $spacing-unit: 30px;
 
 
 
 // Colors
-$text-color: #333;
+$text-color: #7c7c7c;
 $heading-color: #333;
-$background-color: #fff;
+$background-color: #111;
 
 $color-black: #000;
 // $color-blue: #4166ff;
@@ -78,10 +80,10 @@ $color-gold: #e19e29;
 
 
 
-$link-color: #8787c1;
-$link-visited-color: lighten($link-color, 5%);
+$link-color: $text-color;
+$link-visited-color: $text-color;
 $link-active-color: $color-grey-600;
-$link-hover-color: $text-color;
+$link-hover-color: $color-orange;
 
 // $link-color: #398fd1;
 // $link-visited-color: #62a6db;

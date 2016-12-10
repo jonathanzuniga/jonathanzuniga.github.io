@@ -1,4 +1,35 @@
 <header id="header">
+  <div id="header-navigation">
+    <div class="left">
+      <a class="nav-item site-title" href="{{ site.baseurl }}/">
+        {{ site.title }}
+      </a>
+      <a class="nav-item featured-posts" href="">
+        + Destacado
+      </a>
+      <a class="nav-item author" href="">
+        Autor
+      </a>
+      <a class="nav-item" href="">
+        Twitter
+      </a>
+      <a class="nav-item" href="">
+        Instagram
+      </a>
+      <a class="nav-item" href="">
+        GitHub
+      </a>
+    </div>
+
+    <div class="right">
+    </div>
+  </div>
+</header>
+
+
+
+{% comment %}
+<header id="header">
   <span class="header-logo">
     <a class="header-logo-link" href="{{ site.baseurl }}/">
       {{ site.title }}
@@ -54,3 +85,4 @@
     </div>
   </form>
 </header>
+{% endcomment %}
