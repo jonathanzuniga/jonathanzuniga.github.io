@@ -1,10 +1,8 @@
 ---
 authors: [jonathan]
 categories: [historias]
-cover: 
 date: 2016-10-23
 layout: post
-tags: [tijuana, paseo, cultura, arte]
 title: 'Un paseo por Tijuana'
 ---
 

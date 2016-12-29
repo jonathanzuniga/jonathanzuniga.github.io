@@ -2,6 +2,100 @@
 layout: default
 ---
 
+<div class="row">
+	<div class="col-sm-12 offset-sm-0 col-md-10">
+		{% for post in site.posts %}
+			<article class="post">
+				<h2 class="post-title">
+					<small class="post-date">
+						{% include date.html %}
+					</small>
+					<a href="{{ post.url }}">
+						{{ post.title }}
+					</a>
+				</h2>
+			</article>
+		{% endfor %}
+	</div>
+</div>
+
+
+
+
+
+
+
+
+{% comment %}
+{% for post in site.posts limit: 3 %}
+	<article class="post">
+		<header class="post-header">
+			<p class="post-date">
+				{% include date.html %}
+			</p>
+
+			<h2 class="post-title">
+				<a href="{{ post.url }}">
+					{{ post.title }}
+				</a>
+			</h2>
+		</header>
+
+		<div class="post-content">
+			{{ post.content }}
+		</div>
+	</article>
+{% endfor %}
+{% endcomment %}
+
+
+
+
+
+
+
+{% comment %}
+<section id="grid" data-columns>
+	{% for post in site.posts limit: 16 %}
+		<article class="post">
+			<header class="post-header">
+				<p class="post-date">
+					{% include date.html %}
+				</p>
+
+				<h2 class="post-title">
+					<a href="{{ post.url }}">
+						{{ post.title }}
+					</a>
+				</h2>
+
+				{% if post.cover %}
+					<img class="post-cover" src="{{ post.cover }}" alt="{{ post.title }}">
+				{% endif %}
+			</header>
+
+			<div class="post-excerpt">
+				{{ post.excerpt }}
+			</div>
+		</article>
+	{% endfor %}
+</section>
+{% endcomment %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
 <div class="layout-content">
 	<section class="featured">
 		<h2 class="featured-title">
@@ -150,3 +244,4 @@ layout: default
 </div>
 
 {% include sidebar.html %}
+{% endcomment %}

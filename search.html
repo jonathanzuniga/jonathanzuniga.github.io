@@ -10,7 +10,7 @@ permalink: /buscar
 
 <ul id="search-results"></ul> -->
 
-<div class="layout-content">
+<!-- <div class="layout-content">
 	<section class="archive">
 		<h2 class="search-results-title" id="search-results-title">
 		</h2>
@@ -21,15 +21,25 @@ permalink: /buscar
 		<div class="archive-columns" data-columns id="search-results">
 		</div>
 	</section>
-</div>
+</div> -->
 
-{% include sidebar.html %}
+<div class="row">
+	<div class="col-sm-12 offset-sm-0 col-md-10">
+		<h3 id="search-results-title"></h3>
+
+		<div id="no-results-found">
+		</div>
+
+		<div id="search-results">
+		</div>
+	</div>
+</div>
 
 <script>
 	window.store = {
 		{% 
 			assign months = 
-			'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
+			'ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic' | 
 			split: '|'
 		%}
 		{% for post in site.posts %}
@@ -43,9 +53,7 @@ permalink: /buscar
 				'categories': '{{ post.categories | sort }}',
 				"content": {{ post.content | strip_html | strip_newlines | jsonify }},
 				"url": "{{ post.url | xml_escape }}",
-				'date': "{{ day }} de {{ month }}, {{ year }}",
-				'image': '{{ post.image }}',
-				'tags': '{{ post.tags | sort | replace: "-", " " }}'
+				'date': "{{ day }} {{ month }} {{ year }}"
 			}
 			{% unless forloop.last %},{% endunless %}
 		{% endfor %}

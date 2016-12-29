@@ -18,7 +18,7 @@ body {
 	color: $text-color;
 	font-family: $base-font-family;
 	font-size: $base-font-size;
-	font-weight: normal;
+	font-weight: 400;
 	line-height: $base-line-height;
 	-webkit-text-size-adjust: 100%;
 	
@@ -96,25 +96,36 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
 	color: $link-color;
-	font-weight: normal;
-	text-decoration: none;
-	-webkit-transition: all 0.1s ease;
-	-moz-transition: all 0.1s ease;
-	-ms-transition: all 0.1s ease;
-	-o-transition: all 0.1s ease;
-	transition: all 0.1s ease;
+	font-weight: 600;
+	outline: none;
+	text-decoration: underline;
+	-webkit-transition: all 0.75s ease-out;
+	-moz-transition: all 0.75s ease-out;
+	-ms-transition: all 0.75s ease-out;
+	-o-transition: all 0.75s ease-out;
+	transition: all 0.75s ease-out;
 
 	&:visited {
 		color: $link-visited-color;
+		outline: none;
 	}
 
 	&:active {
 		color: $link-active-color;
+		-webkit-transition-duration: 0s;
+		-moz-transition-duration: 0s;
+		-ms-transition-duration: 0s;
+		-o-transition-duration: 0s;
+		transition-duration: 0s;
 	}
 
 	&:hover {
 		color: $link-hover-color;
-		text-decoration: none;
+		-webkit-transition-duration: 0s;
+		-moz-transition-duration: 0s;
+		-ms-transition-duration: 0s;
+		-o-transition-duration: 0s;
+		transition-duration: 0s;
 	}
 }
 
@@ -125,7 +136,7 @@ a {
  */
 blockquote {
 	// border-left: 5px solid $color-grey-200;
-	font-style: italic;
+	font-style: none;
 	// padding-left: $spacing-unit / 2;
 
 	> :last-child {
@@ -153,7 +164,7 @@ code {
 
 pre {
 	// background-color: $color-grey-100;
-	// padding: 8px 15px;
+	// padding: 10px 0;
 	overflow-x: auto;
 
 	// > code {

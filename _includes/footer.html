@@ -1,4 +1,255 @@
 <footer id="footer">
+	<hr>
+
+	{% assign author = site.authors['jonathan'] %}
+	<div id="footer-info">
+		<p>
+			<span class="copyright">Copyright © 2015–{{ site.time | date: '%Y' }}</span>
+			<a href="{{ site.baseurl }}/autor" title="Más acerca de mí">{{ site.title }}</a>.
+			Esta obra está bajo una licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">Creative Commons Atribución 4.0 Internacional</a>.
+			<!-- +
+			{% if author.twitter_username %}
+				<a href="https://twitter.com/{{ author.twitter_username }}" target="_blank">
+					<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+					Sígueme
+				</a>
+				+
+				<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank" title="">
+					<i class="fa fa-rss fa-lg" aria-hidden="true"></i>
+				  RSS
+				</a>
+				+
+				<a href="https://github.com/{{ author.github_username }}/jonathanzuniga.github.io" target="_blank" title="Ver el código fuente de este blog">
+					<i class="fa fa-github fa-lg" aria-hidden="true"></i>
+					Código fuente
+				</a>
+			{% endif %} -->
+		</p>
+	</div>
+</footer>
+
+
+
+
+
+
+
+{% comment %}
+{% assign author = site.authors['jonathan'] %}
+<footer id="footer">
+	<div class="wrapper">
+		<div class="column">
+			<div class="group me">
+				<h2>Sobre el autor del blog</h2>
+
+				<a href="{{ site.baseurl }}/autor" title="Más acerca de mí">
+					<img class="author-image pull-left" src="{{ site.baseurl }}/images/authors/{{ author.avatar }}" alt="{{ author.name }}">
+				</a>
+
+				<p>
+					{{ author.short_about }}
+					<a href="{{ site.baseurl }}/autor" class="more">Además</a>
+				</p>
+			</div>
+
+			<div class="subcolumn left">
+				<div class="group projects">
+					<h2>Proyectos recientes</h2>
+				</div>
+			</div>
+
+			<div class="subcolumn right">
+				<div class="group elsewhere">
+					<h2>En otra parte</h2>
+
+					<ul>
+						<li class="twitter">
+							<a href="https://twitter.com/{{ author.twitter_username }}" target="_blank">Sígueme en Twitter</a>
+						</li>
+						<li class="pinterest">
+							<a href="https://pinterest.com/{{ author.pinterest_username }}" target="_blank">Mis pins en Pinterest</a>
+						</li>
+						<li class="flickr">
+							<a href="https://www.flickr.com/photos/{{ author.flickr_username }}" target="_blank">Mis fotos en Flickr</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="column">
+			<div class="group reading-ongoing">
+				<h2>Lectura en curso</h2>
+
+				{% assign reading_ongoing = site.data.reading_ongoing.first %}
+				<dl>
+					<a href="{{ reading_ongoing.url }}" target="_blank">
+						<dt>
+							<img class="cover pull-left" src="{{ reading_ongoing.cover }}">
+							{{ reading_ongoing.synopsis | truncatewords: 22 }}
+						</dt>
+
+						<!-- <dd class="by">
+							{{ reading_ongoing.author }}
+						</dd> -->
+					</a>
+
+					<dd>
+						<a class="more" href="{{ reading_ongoing.url }}" target="_blank">Ordenar</a>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="group recommended-reading">
+				<h2>Lectura recomendada</h2>
+
+				{% assign recommended_reading = site.data.recommended_reading.first %}
+				<dl>
+					<a href="{{ recommended_reading.url }}" target="_blank">
+						<dt>
+							<img class="cover pull-left" src="{{ recommended_reading.cover }}">
+							{{ recommended_reading.synopsis | truncatewords: 23 }}
+						</dt>
+
+						<!-- <dd class="by">
+							{{ recommended_reading.author }}
+						</dd> -->
+					</a>
+
+					<dd>
+						<a class="more" href="https://shelf.com/{{ author.shelf_username }}/s/recommended" target="_blank">Ver todo</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+		<div class="column">
+			<div class="group search">
+				<h2>Buscar artículo</h2>
+
+				<form action="/buscar" class="search" method="get">
+			    <div class="icon input">
+			      <input class="search-field" id="search-box" name="consulta" placeholder="Buscar..." required title="Buscar" type="search">
+			      <i class="fa fa-search icon" aria-hidden="true"></i>
+			    </div>
+			  </form>
+			</div>
+
+			<div class="group track">
+				<h2>Track escuchado</h2>
+			</div>
+		</div>
+
+		<div id="footer-info">
+			<p>
+				<span class="copyright">Copyright © 2001–{{ site.time | date: '%Y' }}</span>
+				<a href="{{ site.baseurl }}/autor" title="Más acerca de mí">{{ site.title }}</a>
+				•
+				{% if author.github_username %}
+					<a href="mailto:{{ author.email }}">
+						Contactarme
+					</a>
+					•
+					<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank" title="">
+						<i class="fa fa-rss fa-lg" aria-hidden="true"></i>
+						Suscribirse al RSS
+					</a>
+					•
+					<a href="https://github.com/{{ author.github_username }}/jonathanzuniga.github.io" target="_blank" title="Ver el código fuente de este blog">
+						<i class="fa fa-github fa-lg" aria-hidden="true"></i>
+						Código fuente
+					</a>
+				{% endif %}
+			</p>
+		</div>
+	</div>
+</footer>
+{% endcomment %}
+
+
+
+
+{% comment %}
+<footer id="footer">
+	<h2 class="footer-logo">
+		<a href="{{ site.baseurl }}/">{{ site.title }}</a>
+	</h2>
+
+  <h3 class="footer-heading">
+  	Handcrafted pixels &amp; text
+  </h3>
+
+  <p class="footer-info">
+  	<span class="copyright">Copyright © 2001–{{ site.time | date: '%Y' }}</span>
+		<a href="{{ site.baseurl }}/autor" title="Más acerca de mí">{{ site.title }}</a>
+		•
+		{% assign author = site.authors['jonathan'] %}
+		{% if author.github_username %}
+			<a href="mailto:{{ author.email }}">
+				Contactarme
+			</a>
+			•
+			<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank" title="">
+				Suscribirse al RSS
+			</a>
+			•
+			<a href="https://github.com/{{ author.github_username }}/jonathanzuniga.github.io" target="_blank" title="Ver el código fuente de este blog">
+				Código fuente
+			</a>
+		{% endif %}
+  </p>
+
+  <ul class="icons">
+    <li>
+    	<a href="/feed.xml">
+    		<i class="fa fa-rss" aria-hidden="true"></i>
+    	</a>
+    </li>
+    <li>
+    	<a href="/feed.xml">
+    		<i class="fa fa-twitter" aria-hidden="true"></i>
+    	</a>
+    </li>
+    <li>
+    	<a href="/feed.xml">
+    		<i class="fa fa-facebook-square" aria-hidden="true"></i>
+    	</a>
+    </li>
+    <li>
+    	<a href="/feed.xml">
+    		<i class="fa fa-github" aria-hidden="true"></i>
+    	</a>
+    </li>
+    <li>
+    	<a href="/feed.xml">
+    		<i class="fa fa-flickr" aria-hidden="true"></i>
+    	</a>
+    </li>
+    <li>
+    	<a href="/feed.xml">
+    		<i class="fa fa-pinterest" aria-hidden="true"></i>
+    	</a>
+    </li>
+    <li>
+    	<a href="/feed.xml">
+    		<i class="fa fa-instagram" aria-hidden="true"></i>
+    	</a>
+    </li>
+  </ul>
+</footer>
+{% endcomment %}
+
+
+
+
+
+
+
+
+
+
+{% comment %}
+<footer id="footer">
 	<p class="footer-content">
 		<strong>{{ site.title }}</strong> © 2015—{{ site.time | date: '%Y' }}. 
 		<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
@@ -12,3 +263,4 @@
 		{% endif %}
 	</p>
 </footer>
+{% endcomment %}

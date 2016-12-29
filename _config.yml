@@ -12,7 +12,7 @@ markdown: kramdown
 # Author details
 authors:
   jonathan:
-    avatar: jonathan-bw.jpg
+    avatar: jonathan.jpg
     name: Jonathan
     lastname: Zúñiga
     email: jonathanzuniga@gmail.com
@@ -27,6 +27,7 @@ authors:
     medium_username: jonathanzuniga
     pinterest_username: jonathanzuniga
     spotify_username: jonathanzuniga
+    shelf_username: jonathan
     twitter_username: jonathan_zuniga
 
 excerpt_separator: <!--more-->

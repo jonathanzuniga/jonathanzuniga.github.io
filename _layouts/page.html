@@ -2,16 +2,16 @@
 layout: default
 ---
 
-<div class="layout-content layout-content-entry">
-	<article lang="es" role="main">
-		<h1 class="content-title">
-			{{ page.title }}
-		</h1>
+<div class="row">
+	<div class="col-sm-12 offset-sm-0 col-md-10">
+		<article class="full post">
+			<h2 class="post-title">
+				{{ page.title }}
+			</h2>
 
-		<div class="content">
-			{{ content }}
-		</div>
-	</article>
+			<div class="post-content">
+				{{ content }}
+			</div>
+		</article>
+	</div>
 </div>
-
-{% include sidebar.html %}
