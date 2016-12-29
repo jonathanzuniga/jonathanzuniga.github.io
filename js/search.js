@@ -36,7 +36,7 @@
       noResultsFound.innerHTML = '';
     } else {
       searchResultsTitle.innerHTML = 'No se encontró ningún resultado';
-      noResultsFound.innerHTML = '<p>Lo siento, pero ninguna publicación coincide con tu búsqueda «' + searchTerm + '».</p>';
+      noResultsFound.innerHTML = 'Lo siento, pero ninguna publicación coincide con tu búsqueda «' + searchTerm + '».';
     }
   }
 
