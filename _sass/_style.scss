@@ -254,6 +254,12 @@ hr {
 			width: 20px;
 			z-index: 1;
 		}
+
+		.post-title {
+			small {
+				color: inherit;
+			}
+		}
 	}
 }
 
