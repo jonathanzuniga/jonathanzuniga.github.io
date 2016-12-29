@@ -1,5 +1,43 @@
 {% 
 	assign months = 
+	'ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic' | 
+	split: '|'
+%}
+{%
+	assign days = 
+		'dom|lun|mar|mié|jue|vie|sáb' | 
+		split: '|'
+%}
+{% if page.date %}
+	<time datetime="{{ page.date | date_to_xmlschema }}">
+		{% assign d = page.date | date: '%B' | minus: 1 %}
+		{% assign day_name = days[d] %}
+		{% assign day = page.date | date: '%d' %}
+		{% assign m = page.date | date: '%m' | minus: 1 %}
+		{% assign month = months[m] %}
+		{% assign year = page.date | date: '%Y' %}
+		{{ day }} {{ month }} {{ year }}
+	</time>
+{% else %}
+	<time datetime="{{ post.date | date_to_xmlschema }}">
+		{% assign d = post.date | date: '%B' | minus: 1 %}
+		{% assign day_name = days[d] %}
+		{% assign day = post.date | date: '%d' %}
+		{% assign m = post.date | date: '%-m' | minus: 1 %}
+		{% assign month = months[m] %}
+		{% assign year = post.date | date: '%Y' %}
+		{{ day }} {{ month }} {{ year }}
+	</time>
+{% endif %}
+
+
+
+
+
+
+{% comment %}
+{% 
+	assign months = 
 	'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
 	split: '|'
 %}
@@ -20,7 +58,7 @@
 		{{ day }} de {{ month }}, {{ year }}
 	</time>
 {% endif %}
-
+{% endcomment %}
 
 
 

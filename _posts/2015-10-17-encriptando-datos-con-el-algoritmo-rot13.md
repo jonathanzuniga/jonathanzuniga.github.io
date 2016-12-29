@@ -1,10 +1,8 @@
 ---
 authors: [jonathan]
 categories: [articulos]
-cover: 
-date: 2015-11-17 17:39:00
+date: 2015-10-17 17:39:00
 layout: post
-tags: [criptografia, algoritmo, rot13, cifrado]
 title: 'Encriptando datos con el algoritmo ROT13'
 ---
 
@@ -15,8 +13,8 @@ en artículos de [Usenet][usenet] para publicar contenido o frases que pueden
 ser *spoilers* que son conflictivos o algo así, para que no se puedan leer 
 fácilmente sino que requieran un esfuerzo consciente del lector.
 
-<div class="figure figure-responsive">
-	<table>
+<div class="table-responsive">
+	<table class="table">
 		<thead>
 			<tr>
 				<th>Piensas:</th>

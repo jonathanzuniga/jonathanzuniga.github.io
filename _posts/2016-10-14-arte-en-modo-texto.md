@@ -1,16 +1,14 @@
 ---
 authors: [jonathan]
 categories: [articulos]
-cover: 
 date: 2016-10-14
 layout: post
-tags: [arte-ascii, arte-ansi, retro, internet, nostalgia]
 title: 'Arte en modo texto'
 ---
 
 Algo que me preguntaron algunas personas cuando publique uno de mis dibujos fue, ¿que es el *ANSI art*? Tratare de explicarlo, pero para entenderlo mejor explicare antes lo que es el *underground artscene*.<!--more-->
 
-## Introducción
+### Introducción
 
 La escena artística subterránea —traducido al español—, es un conjunto de personas de todo el mundo que dibujan en una variedad de formatos digitales, suministrando tableros de anuncios o [BBS's][bbs] con coloridas pantalla de inicio de sesión, sitios web con gráficos, y solo suelen aportar arte digital en general, incluso si a nadie le interesa.
 
@@ -18,16 +16,11 @@ Dicen que comenzó mas o menos por 1987. Para algunas personas no está claro cu
 
 Desde ese instante, una brecha que abarca casi treinta años, grupos de arte han llegado y se han ido, los cuales ofrecieron al mundo el color de su arte ANSI y los grises de su arte ASCII. Enlistarlos me llevaría una eternidad.
 
-## Arte ASCII
+### Arte ASCII
 
-<figure class="figure figure-right">
-	<a href="https://www.instagram.com/p/BHc9sH8BAPh/">
-		<img class="figure-media" src="https://www.dropbox.com/s/te3scdrxsn5955t/astral-projection.jpg?raw=1" alt="Astral projection">
-	</a>
-	<figcaption class="figure-caption">
-		Astral projection por <a href="https://www.instagram.com/p/BHc9sH8BAPh/">mattmatthew67</a>
-	</figcaption>
-</figure>
+<a href="https://www.instagram.com/p/BHc9sH8BAPh/">
+	<img class="rounded img-fluid float-xs-left" src="https://www.dropbox.com/s/te3scdrxsn5955t/astral-projection.jpg?raw=1" alt="Astral projection">
+</a>
 
 Este es sin duda el medio más antiguo para trabajar en el *artscene*. Ha existido desde hace mucho tiempo. <abbr title="American Standard Code for Information Interchange">ASCII</abbr> siempre ha sido el conjunto de caracteres estándar de las <abbr title="Personal Computers">PC's</abbr> y a alguien se le ocurrió crear arte con esto. Hay dos formas principales de *ASCII art*, la de la vieja y la de la nueva escuela.
 
@@ -35,19 +28,13 @@ Los artistas de la vieja escuela utilizan los caracteres `/ \ | : ;` y similares
 
 Hoy en día la forma de arte ASCII de la nueva escuela es la más popular. Esta técnica utiliza principalmente el símbolo `$` en las formas y para las partes circulares `n o | ° º` u otros caracteres con curvas. La mayoría de los artistas tienen su propio estilo.
 
-## Arte ANSI
+### Arte ANSI
+
+<a href="http://blocktronics.org/thomas-carli-jarlier/" target="_blank">
+	<img class="rounded img-fluid float-xs-right" src="https://www.dropbox.com/s/n8abh6yoj8tsiar/thomas-carli-jarlier.ans_640x960.png?raw=1">
+</a>
 
 Nació a finales de 1980 y fue desarrollado para ofrecer un formato común para la visualización de gráficos en los BBS's. Esto fue lo que realmente hizo que la comunidad comenzara. Utilizandose para decorar los programas de MS-DOS y BBSes. La popularidad del arte ANSI creció cuando en 1986 Ian E. Davis lanzó la aplicación [TheDraw](https://en.wikipedia.org/wiki/TheDraw), que no sólo facilitó enormemente la edición de arte ANSI, sino que también contenía una amplia variedad de fuentes y configuraciones.
-
-<figure class="figure figure-left figure-240">
-	<a href="http://blocktronics.org/thomas-carli-jarlier/" target="_blank">
-		<img class="figure-media" src="https://www.dropbox.com/s/n8abh6yoj8tsiar/thomas-carli-jarlier.ans_640x960.png?raw=1">
-	</a>
-
-	<figcaption class="figure-caption">
-		<i class="fa fa-picture-o" aria-hidden="true"></i> thomas-carli-jarlier
-	</figcaption>
-</figure>
 
 El <abbr title="American National Standards Institute">ANSI</abbr> *art* es similar al ASCII *art*, pero esta construido por un conjunto de 256 caracteres. La fuente más utilizada es la [IBM Code Page 437](https://es.wikipedia.org/wiki/P%C3%A1gina_de_c%C3%B3digos_437) en modo texto 80x25, también denominada fuente OEM o [ASCII extendido](https://es.wikipedia.org/wiki/ASCII_extendido). El conjunto de caracteres extendido permite a los artistas crear «bloques de arte» con caracteres como <span class="ansi-text">Ü ß Û Ý</span>. Los caracteres <span class="ansi-text">° ± ² Û</span> regularmente se usan para crear efectos de sombreado, ya que permite al artista mezclar los colores del primer y segundo plano.
 
@@ -110,7 +97,7 @@ Una típica paleta consiste de 16 colores y 8 colores de fondo. Debido a que muc
 
 Al principio los artistas dibujaban logos y simples letras. Pero a medida que pasaba el tiempo, los artistas comenzaron a hacer [dibujos más complejos][dibujos-mas-complejos], aventurandose en largas pantallas de un detalle asombroso. Los artistas se inspiraban de los cómics o muchas veces creaban arte original. Para crear estos dibujos, al igual que en el *pixel art* se requiere de una paciencia brutal y que normalmente se hace caracter por caracter a mano usando algún editor de textos, que es como se valora más.
 
-## Enlaces interesantes
+### Enlaces interesantes
 
 Si les interesa conocer más, les comparto unos enlaces de comunidades, artículos y de obras fascinantes:
 

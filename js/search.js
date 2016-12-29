@@ -10,39 +10,17 @@
 
       for (var i = 0; i < results.length; i++) { // Iterate over the results
         var item = store[results[i].ref];
-        var item_image = '';
-        var item_authors = '';
-        var item_categories = '';
 
-        if (item.image)
-          item_image = '<img class="teaser-image" src="' + item.image + '" alt="' + item.title + '">';
-
-        if (item.authors == 'jonathan')
-          item_authors = '<a class="teaser-author" href="/autor">Jonathan</a>';
-
-        if (item.categories == 'articulos')
-          item_categories = '<a class="teaser-category" href="/articulos">artículos</a>';
-        else if (item.categories == 'historias')
-          item_categories = '<a class="teaser-category" href="/relatos">historias</a>';
-
-        // appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
-        // appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
         appendString += 
-          '<article class="teaser">\
-            <a class="teaser-link" href="' + item.url + '">\
-              <h3 class="teaser-title">' + item.title + '</h3>' +
-              item_image + '\
-            </a>\
-            \
-            <div class="teaser-content">\
-              <p class="teaser-meta">' + 
-                item.date + ' por ' + 
-                item_authors + ' en ' + 
-                item_categories + '\
-              </p>\
-              \
-              <div class="teaser-intro">' + item.content.split(' ').splice(0, 32).join(' ') + '...</div>\
-            </div>\
+          '<article class="post">\
+            <h2 class="post-title">\
+              <small class="post-date">' +
+                item.date +
+              '</small>\
+              <a href="' + item.url + '">' +
+                item.title + 
+              '</a>\
+            </h2>\
           </article>';
       }
       
@@ -56,7 +34,7 @@
       noResultsFound.innerHTML = '';
     } else {
       searchResultsTitle.innerHTML = 'No se encontró ningún resultado';
-      noResultsFound.innerHTML = '<p>Lo sentimos, pero ninguna publicación coincide con tu búsqueda «' + searchTerm + '».</p>';
+      noResultsFound.innerHTML = '<p>Lo siento, pero ninguna publicación coincide con tu búsqueda «' + searchTerm + '».</p>';
     }
   }
 
@@ -85,7 +63,6 @@
       this.field('authors');
       this.field('categories');
       this.field('content');
-      this.field('tags');
     });
 
     for (var key in window.store) { // Add the data to lunr
@@ -94,8 +71,7 @@
         'title': window.store[key].title,
         'authors': window.store[key].authors,
         'categories': window.store[key].categories,
-        'content': window.store[key].content,
-        'tags': window.store[key].tags
+        'content': window.store[key].content
       });
 
       var results = idx.search(searchTerm); // Get lunr to perform a search

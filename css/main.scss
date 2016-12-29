@@ -5,20 +5,45 @@
 @charset 'utf-8';
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+// @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
+// @import url('https://fonts.googleapis.com/css?family=Ultra');
 
-// @font-face {font-family: 'GloberRegular';src: url('../fonts/glober/2F0124_0_0.eot');src: url('../fonts/glober/2F0124_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/glober/2F0124_0_0.woff2') format('woff2'),url('../fonts/glober/2F0124_0_0.woff') format('woff'),url('../fonts/glober/2F0124_0_0.ttf') format('truetype');}
+// @font-face {
+//   font-family: 'DINNextRoundedLTPro_Medium';
+//   src: url('../fonts/DINNextRoundedLTPro-Medium.eot');
+//   src: url('../fonts/DINNextRoundedLTPro-Medium.eot?#iefix') format('embedded-opentype'),
+//        url('../fonts/DINNextRoundedLTPro-Medium.woff')       format('woff'),
+//        url('../fonts/DINNextRoundedLTPro-Medium.ttf')        format('truetype');
+//   font-weight: 500;
+//   font-style: normal;
+// }
 
-// @font-face {font-family: 'GloberRegularItalic';src: url('../fonts/glober/2F0124_1_0.eot');src: url('../fonts/glober/2F0124_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/glober/2F0124_1_0.woff2') format('woff2'),url('../fonts/glober/2F0124_1_0.woff') format('woff'),url('../fonts/glober/2F0124_1_0.ttf') format('truetype');}
+// @font-face {
+//   font-family: 'DINNextRoundedLTPro_Light';
+//   src: url('../fonts/DINNextRoundedLTPro-Light.eot');
+//   src: url('../fonts/DINNextRoundedLTPro-Light.eot?#iefix') format('embedded-opentype'),
+//        url('../fonts/DINNextRoundedLTPro-Light.woff')       format('woff'),
+//        url('../fonts/DINNextRoundedLTPro-Light.ttf')        format('truetype');
+//   font-weight: 300;
+//   font-style: normal;
+// }
 
-// @font-face {font-family: 'GloberSemiBold';src: url('../fonts/glober/2F0124_2_0.eot');src: url('../fonts/glober/2F0124_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/glober/2F0124_2_0.woff2') format('woff2'),url('../fonts/glober/2F0124_2_0.woff') format('woff'),url('../fonts/glober/2F0124_2_0.ttf') format('truetype');}
-
-// @font-face {font-family: 'GloberSemiBoldItalic';src: url('../fonts/glober/2F0124_3_0.eot');src: url('../fonts/glober/2F0124_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/glober/2F0124_3_0.woff2') format('woff2'),url('../fonts/glober/2F0124_3_0.woff') format('woff'),url('../fonts/glober/2F0124_3_0.ttf') format('truetype');}
+// @font-face {
+//   font-family: 'DINNextRoundedLTPro_Bold';
+//   src: url('../fonts/DINNextRoundedLTPro-Bold.eot');
+//   src: url('../fonts/DINNextRoundedLTPro-Bold.eot?#iefix') format('embedded-opentype'),
+//        url('../fonts/DINNextRoundedLTPro-Bold.woff')       format('woff'),
+//        url('../fonts/DINNextRoundedLTPro-Bold.ttf')        format('truetype');
+//   font-weight: bold;
+//   font-style: normal;
+// }
 
 @font-face {
   font-family: 'CP437';
   src: url('../fonts/cp437/cp437.eot');
-  src: url('../fonts/cp437/cp437.woff') format('woff'), url('../fonts/cp437/cp437.ttf') format('truetype'), url('../fonts/cp437/cp437.svg#webfontpVS4iJcr') format('svg');
+  src: url('../fonts/cp437/cp437.woff') format('woff'), 
+       url('../fonts/cp437/cp437.ttf') format('truetype'), 
+       url('../fonts/cp437/cp437.svg#webfontpVS4iJcr') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,7 +51,9 @@
 @font-face {
   font-family: 'CP437 8x8';
   src: url('../fonts/cp437/cp437-8x8.eot');
-  src: url('../fonts/cp437/cp437-8x8.woff') format('woff'), url('../fonts/cp437/cp437-8x8.ttf') format('truetype'), url('../fonts/cp437/cp437-8x8.svg#webfontpVS4iJcr') format('svg');
+  src: url('../fonts/cp437/cp437-8x8.woff') format('woff'), 
+       url('../fonts/cp437/cp437-8x8.ttf') format('truetype'), 
+       url('../fonts/cp437/cp437-8x8.svg#webfontpVS4iJcr') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -34,29 +61,28 @@
 
 
 // Our variables
-$base-font-family: 'Inconsolata', monospace;
-$heading-font-family: Helvetica, sans-serif;
+$base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// $heading-font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $mono-font-family: Monaco, Consolas, monospace;
 $ansi-font-family: 'CP437', Monaco, Consolas, monospace;
-$base-font-size: 12px;
+$base-font-size: 14px;
 $small-font-size: $base-font-size * 0.875;
-$base-line-height: 1.6;
+$base-line-height: 1.42857143;
 $spacing-unit: 30px;
 
 
 
 // Colors
-$text-color: #7c7c7c;
+$text-color: #333;
 $heading-color: #333;
-$background-color: #111;
+$background-color: #fff;
 
 $color-black: #000;
 // $color-blue: #4166ff;
 // $color-blue-light: #6682ff;
 // $color-blue: #005bff;
 $color-blue: #00f;
-$color-cyan: #0ff;
-$color-grey: #888;
+$color-cyan: #088;
 $color-grey-50: #fafafa;
 $color-grey-100: #f5f5f5;
 $color-grey-200: #eee;
@@ -67,16 +93,18 @@ $color-grey-600: #757575;
 $color-grey-700: #616161;
 $color-grey-800: #424242;
 $color-grey-900: #212121;
+
 // $color-orange: #fe713e;
-$color-orange: #ff764d;
+// $color-orange: #ff764d;
+// $color-orange: #ffb870;
+$color-orange: #f07834;
 // $color-purple: #60f;
 $color-purple: #7600e2;
 // $color-red: #ff4538;
-$color-red: #fd5948;
-// $color-yellow: #fff;
-$color-yellow: #fed134;
-
-$color-gold: #e19e29;
+// $color-red: #fd5948;
+$color-red: #f35a4e;
+// $color-yellow: #fed134;
+$color-yellow: #e19e29;
 
 
 
@@ -84,6 +112,11 @@ $link-color: $text-color;
 $link-visited-color: $text-color;
 $link-active-color: $color-grey-600;
 $link-hover-color: $color-orange;
+
+$heading-link-color: $color-red;
+$heading-link-visited-color: $color-red;
+$heading-link-active-color: $color-grey-600;
+$heading-link-hover-color: $text-color;
 
 // $link-color: #398fd1;
 // $link-visited-color: #62a6db;
@@ -124,13 +157,12 @@ $border-color: $color-grey-300;
 $selection-bg-color: $color-blue;
 
 
-
-$heading-weight: 500;
+$heading-weight: 700;
 
 
 
 // Width of the content area
-$content-width:	1200px;
+$content-width:	1100px;
 // $on-palm:				360px;
 // $on-laptop:			768px;
 // $on-tablet-max: 767px;
@@ -181,6 +213,10 @@ $width-1024: 1024px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import 
-	'base', 
-	'layout',
-	'syntax-highlighting';
+  'style',
+  'syntax-highlighting';
+
+	// 'base', 
+	// 'layout',
+	// 'syntax-highlighting';
+
