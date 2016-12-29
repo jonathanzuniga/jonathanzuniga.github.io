@@ -316,11 +316,11 @@ hr {
 
 	.post-content {
 		h3 {
-			font-size: 1.714em;
+			font-size: 1.714em; // 24px
 		}
 
 		h4 {
-			font-size: 1.429em;
+			font-size: 1.429em; // 20px
 		}
 
 		p,
@@ -355,6 +355,10 @@ hr {
 					max-width: 100%;
 				}
 			}
+		}
+
+		blockquote {
+			line-height: 1.5;
 		}
 		
 		// pre {
