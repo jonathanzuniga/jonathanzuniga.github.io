@@ -247,7 +247,8 @@ hr {
 		font-size: 35px;
 		font-weight: normal;
 
-		.post-date {
+		.post-date,
+		span:first-child {
 			display: inline-block;
 			font-weight: lighter;
 			text-transform: capitalize;
