@@ -43,7 +43,7 @@ permalink: /buscar
 			split: '|'
 		%}
 		{% for post in site.posts %}
-			{% assign day = post.date | date: '%-d' %}
+			{% assign day = post.date | date: '%d' %}
 			{% assign m = post.date | date: '%-m' | minus: 1 %}
 			{% assign month = months[m] %}
 			{% assign year = post.date | date: '%Y' %}

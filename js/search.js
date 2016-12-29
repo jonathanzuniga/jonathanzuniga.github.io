@@ -13,14 +13,16 @@
 
         appendString += 
           '<article class="post">\
-            <h2 class="post-title">\
-              <small class="post-date">' +
-                item.date +
-              '</small>\
-              <a href="' + item.url + '">' +
-                item.title + 
-              '</a>\
-            </h2>\
+            <a class="post-link" href="' + item.url + '">\
+              <h2 class="post-title">\
+                <span class="post-date">' +
+                  item.date +
+                '</span>\
+                <small>' +
+                  item.title + 
+                '</small>\
+              </h2>\
+            </a>\
           </article>';
       }
       
