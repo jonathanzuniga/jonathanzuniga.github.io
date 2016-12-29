@@ -238,6 +238,25 @@ hr {
 // 	}
 // }
 
+.posts {
+	.post {
+		margin-bottom: 30px;
+		position: relative;
+
+		&:not(:last-child):after {
+			border-bottom: 1px solid #d7d7d7;
+			bottom: -16px;
+			content: '\00a0';
+			height: 1px;
+			left: 0;
+			line-height: 1px;
+			position: absolute;
+			width: 20px;
+			z-index: 1;
+		}
+	}
+}
+
 .post {
 	.post-link {
 		text-decoration: none;
