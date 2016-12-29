@@ -17,7 +17,7 @@ Puedes ponerte en contacto conmigo por <a href="mailto:{{ author_items.email }}"
 
 Este espacio representa un experimento personal, en el que está en juego mi capacidad de comunicar mis pensamientos e ideas, así como mi predisposición a aprender.
 
-El sitio está creado con los mejores sabores de HTML5 y Sass para la parte de CSS, JavaScript para las búsquedas y utilizo [Jekyll][jekyll] para su publicación. La fuente tipográfica del cuerpo y para los títulos es [Helvética Neue][helvetica-neue] por [Max Miedinger][max-miedinger]. Actualmente las <a href="https://www.flickr.com/photos/@{{ site.flickr_username }}" target="_blank">fotografías</a> las estoy tomando con mi confiable [Nexus 5][nexus-5].
+El sitio está creado con los mejores sabores de HTML5 y Sass para la parte de CSS, JavaScript para las búsquedas y utilizo [Jekyll][jekyll] para su publicación. La fuente tipográfica del cuerpo es [Libre Baskerville](http://www.impallari.com/projects/overview/libre-baskerville) de **Impallari Type** y para los títulos es [Helvética Neue][helvetica-neue] por [Max Miedinger][max-miedinger]. Actualmente las <a href="https://www.flickr.com/photos/@{{ site.flickr_username }}" target="_blank">fotografías</a> las estoy tomando con mi confiable [Nexus 5][nexus-5].
 
 ### Además
 
