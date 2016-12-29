@@ -24,5 +24,5 @@ jQuery(document).ready(function($) {
 // 		}
 // 	});
 
-	// $('#grid .post-excerpt figure:hidden').remove();
+	$('.posts .post-excerpt img:hidden').remove();
 });

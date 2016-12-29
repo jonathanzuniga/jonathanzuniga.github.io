@@ -1,6 +1,6 @@
 <header id="header">
   <div class="row">
-    <div class="col-sm-12 offset-sm-0 col-md-10">
+    <div class="col-xs-10 offset-xs-0 col-lg-6 offset-lg-2">
       <h1>
         <a href="{{ site.baseurl }}/">
           <!-- <img class="logo" src="{{ site.baseurl }}/images/logo.png"> -->
@@ -18,10 +18,28 @@
         </h2>
       </div>
     </div>
+
+    <div class="col-xs-2">
+      {% assign author = site.authors['jonathan'] %}
+      <ul class="icons list-unstyled pull-right">
+        {% if author.twitter_username %}
+          <li>
+            <a href="https://twitter.com/{{ author.twitter_username }}" target="_blank" title="Sígueme en Twitter">
+              <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+            </a>
+          </li>
+        {% endif %}
+        <li>
+          <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank" title="RSS">
+            <i class="fa fa-rss fa-lg" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div class="row">
-    <div class="col-sm-12 offset-sm-0">
+    <div class="col-sm-12 offset-sm-0 col-lg-8 offset-lg-2">
       <div class="search">
         <form action="/buscar" method="get">
           <div class="icon input">
@@ -31,29 +49,9 @@
         </form>
       </div>
 
-        <!-- <nav id="navigation">
-          <ul>
-            <li>
-               <a href="/subscribe" title="Contáctame vía correo electrónico">
-               <i class="fa fa-envelope"></i> Contáctame</a>
-            </li>
-            <li>
-               <a href="/feed.xml" title="Subscribete vía RSS">
-               <i class="fa fa-lg fa-rss"></i> RSS</a>
-            </li>
-            <li>
-               <a href="https://twitter.com/swiftlybrief" title="Sígueme en Twitter" target="_blank">
-               <i class="fa fa-lg fa-twitter"></i> Sígueme</a>
-            </li>
-               <li><a href="https://github.com/SwiftWeekly/swiftweekly.github.io" title="Mejorame en GitHub" target="_blank">
-               <i class="fa fa-lg fa-github"></i> Mejorame</a>
-            </li>
-          </ul>
-        </nav> -->
-     </div>
+      <hr>
+    </div>
   </div>
-
-  <hr>
 </header>
 
 

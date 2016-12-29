@@ -17,12 +17,14 @@
               <h2 class="post-title">\
                 <span class="post-date">' +
                   item.date +
-                '</span>\
-                <small>' +
-                  item.title + 
-                '</small>\
-              </h2>\
+                '</span>' +
+                item.title + 
+              '</h2>\
             </a>\
+            \
+            <div class="post-excerpt">' +
+              item.excerpt +
+            '</div>\
           </article>';
       }
       

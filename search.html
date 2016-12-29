@@ -2,29 +2,9 @@
 layout: default
 permalink: /buscar
 ---
-<!-- <form action="/buscar" method="get">
-	<label for="search-box">Search</label>
-	<input type="search" id="search-box" name="consulta" required>
-	<input type="submit" value="search">
-</form>
-
-<ul id="search-results"></ul> -->
-
-<!-- <div class="layout-content">
-	<section class="archive">
-		<h2 class="search-results-title" id="search-results-title">
-		</h2>
-
-		<div id="no-results-found">
-		</div>
-
-		<div class="archive-columns" data-columns id="search-results">
-		</div>
-	</section>
-</div> -->
 
 <div class="row">
-	<div class="posts col-sm-12 offset-sm-0 col-md-10">
+	<div class="posts col-sm-12 offset-sm-0 col-lg-8 offset-lg-2">
 		<h5 id="search-results-title"></h5>
 
 		<div id="no-results-found">
@@ -39,23 +19,25 @@ permalink: /buscar
 	window.store = {
 		{% 
 			assign months = 
-			'ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic' | 
-			split: '|'
+				'ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic' | 
+				split: '|'
 		%}
 		{% for post in site.posts %}
 			{% assign day = post.date | date: '%d' %}
 			{% assign m = post.date | date: '%-m' | minus: 1 %}
 			{% assign month = months[m] %}
 			{% assign year = post.date | date: '%Y' %}
-			"{{ post.url | slugify }}": {
-				"title": "{{ post.title | xml_escape }}",
-				"authors": "{{ post.authors | sort }}",
+			{% assign time = post.date | date: '%R %p' %}
+			'{{ post.url | slugify }}': {
+				'title': '{{ post.title | xml_escape }}',
+				'authors': '{{ post.authors | sort }}',
 				'categories': '{{ post.categories | sort }}',
-				"content": {{ post.content | strip_html | strip_newlines | jsonify }},
-				"url": "{{ post.url | xml_escape }}",
-				'date': "{{ day }} {{ month }} {{ year }}"
+				'excerpt': '{{ post.excerpt | strip_newlines }}',
+				'content': {{ post.content | strip_html | strip_newlines | jsonify }},
+				'url': '{{ post.url | xml_escape }}',
+				'date': '<span class="date">{{ day }} {{ month }} {{ year }}</span><span class="time">{{ time }}</span>'
 			}
-			{% unless forloop.last %},{% endunless %}
+			{% unless forloop.last %}, {% endunless %}
 		{% endfor %}
 	};
 </script>
