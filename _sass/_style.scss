@@ -58,7 +58,14 @@ hr {
 #header {
 	h1 {
 		// font-family: $heading-font-family;
-		font-size: 50px;
+		@media (max-width: 767px) {
+			font-size: 35px;
+		}
+
+		@media (min-width: 768px) {
+			font-size: 50px;
+		}
+
 		font-weight: normal;
 
 		a {
