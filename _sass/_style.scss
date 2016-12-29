@@ -188,21 +188,21 @@ hr {
 // Justified button groups.
 .btn-group-justified {
 	@media (max-width: 640px) {
-	  display: flex;
-	  width: 100%;
+		display: flex;
+		width: 100%;
 
-	  .btn,
-	  .btn-group {
-	    flex: 1;
+		.btn,
+		.btn-group {
+			flex: 1;
 
-	    .btn {
-	      width: 100%;
-	    }
+			.btn {
+				width: 100%;
+			}
 
-	    .dropdown-menu {
-	      left: auto;
-	    }
-	  }
+			.dropdown-menu {
+				left: auto;
+			}
+		}
 	}
 }
 
@@ -239,25 +239,34 @@ hr {
 // }
 
 .post {
-  .post-title {
-    font-size: 32px;
-    font-weight: lighter;
+	.post-link {
+		text-decoration: none;
+	}
 
-    a {
-    	font-weight: lighter;
-	    text-decoration: none;
-    }
+	.post-title {
+		font-size: 35px;
+		font-weight: normal;
 
-    small {
-    	font-size: 65%;
-    }
-
-    .post-date {
-			color: #666;
+		.post-date {
 			display: inline-block;
-    	font-weight: normal;
-    	text-transform: capitalize;
-    }
+			font-weight: lighter;
+			text-transform: capitalize;
+		}
+
+		small {
+			color: #666;
+			// font-size: 65%;
+		}
+
+		@media (max-width: 768px) {
+			.post-date {
+				margin-bottom: 5px;
+			}
+
+			small {
+				display: block;
+			}
+		}
 	}
 
 	.post-content {
