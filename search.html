@@ -22,7 +22,14 @@ permalink: /buscar
 				'ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic' | 
 				split: '|'
 		%}
+		{%
+			assign days = 
+				'dom|lun|mar|mié|jue|vie|sáb' | 
+				split: '|'
+		%}
 		{% for post in site.posts %}
+			{% assign d = post.date | date: '%B' | minus: 1 %}
+			{% assign day_name = days[d] %}
 			{% assign day = post.date | date: '%d' %}
 			{% assign m = post.date | date: '%-m' | minus: 1 %}
 			{% assign month = months[m] %}
@@ -35,7 +42,7 @@ permalink: /buscar
 				'excerpt': '{{ post.excerpt | strip_newlines }}',
 				'content': {{ post.content | strip_html | strip_newlines | jsonify }},
 				'url': '{{ post.url | xml_escape }}',
-				'date': '<span class="date">{{ day }} {{ month }} {{ year }}</span><span class="time">{{ time }}</span>'
+				'date': '<span class="date"><span class="day-name">{{ day_name }}</span> <span class="day">{{ day }}</span> <span class="month">{{ month }}</span> <span class="year">{{ year }}</span></span> <span class="time">{{ time }}</span>'
 			}
 			{% unless forloop.last %}, {% endunless %}
 		{% endfor %}

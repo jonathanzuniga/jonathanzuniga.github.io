@@ -17,7 +17,12 @@
 		{% assign month = months[m] %}
 		{% assign year = page.date | date: '%Y' %}
 		{% assign time = page.date | date: '%R %p' %}
-		<span class="date">{{ day }} {{ month }} {{ year }}</span>
+		<span class="date">
+			<span class="day-name">{{ day_name }}</span>
+			<span class="day">{{ day }}</span>
+			<span class="month">{{ month }}</span>
+			<span class="year">{{ year }}</span>
+		</span>
 		<span class="time">{{ time }}</span>
 	</time>
 {% else %}
@@ -29,7 +34,12 @@
 		{% assign month = months[m] %}
 		{% assign year = post.date | date: '%Y' %}
 		{% assign time = post.date | date: '%R %p' %}
-		<span class="date">{{ day }} {{ month }} {{ year }}</span>
+		<span class="date">
+			<span class="day-name">{{ day_name }}</span>
+			<span class="day">{{ day }}</span>
+			<span class="month">{{ month }}</span>
+			<span class="year">{{ year }}</span>
+		</span>
 		<span class="time">{{ time }}</span>
 	</time>
 {% endif %}

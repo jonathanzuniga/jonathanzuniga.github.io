@@ -3,7 +3,7 @@ authors: [jonathan]
 categories: [articulos]
 date: 2016-11-26
 layout: post
-title: 'Data Bindings y Value Converters'
+title: 'Xamarin: Data Bindings y Value Converters'
 ---
 
 ### Data Bindings
