@@ -1,6 +1,6 @@
 ---
 authors: [jonathan]
-categories: [articulos]
+categories: [tutoriales]
 date: 2016-11-26
 layout: post
 title: 'Xamarin: Data Bindings y Value Converters'

@@ -69,7 +69,9 @@ $mono-font-family: Monaco, Consolas, monospace;
 $ansi-font-family: 'CP437', Monaco, Consolas, monospace;
 $base-font-size: 14px;
 $small-font-size: $base-font-size * 0.875;
-$base-line-height: 1.7;
+// $base-line-height: 1.733;
+// $base-line-height: 1.42857143;
+$base-line-height: 1.5;
 $spacing-unit: 30px;
 
 
@@ -83,7 +85,7 @@ $color-black: #000;
 // $color-blue: #4166ff;
 // $color-blue-light: #6682ff;
 // $color-blue: #005bff;
-$color-blue: #00f;
+$color-blue: #71c5d9;
 $color-cyan: #088;
 $color-grey-50: #fafafa;
 $color-grey-100: #f5f5f5;
@@ -99,12 +101,17 @@ $color-grey-900: #212121;
 // $color-orange: #fe713e;
 // $color-orange: #ff764d;
 // $color-orange: #ffb870;
-$color-orange: #f07834;
+// $color-orange: #f07834; // fav.
+// $color-orange: #f87945;
+// $color-orange: #fa974b;
+// $color-orange: #f57f17;
+$color-orange: #f17a16;
 // $color-purple: #60f;
 $color-purple: #7600e2;
 // $color-red: #ff4538;
 // $color-red: #fd5948;
-$color-red: #f35a4e;
+// $color-red: #f35a4e;
+$color-red: #df4747;
 // $color-yellow: #fed134;
 $color-yellow: #e19e29;
 

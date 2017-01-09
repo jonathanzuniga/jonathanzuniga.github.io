@@ -24,5 +24,18 @@ jQuery(document).ready(function($) {
 // 		}
 // 	});
 
-	$('.posts .post-excerpt img:hidden').remove();
+	$('.posts .post-excerpt figure:hidden').remove();
+
+	var configProfile = {
+	'domId': 'latest-tweets',
+	'enableLinks': true, 
+	'lang': 'es',
+	'maxTweets': 10,
+	'profile': {'screenName': 'jonathan_zuniga'},
+	'showImages': false,
+	// 'showRetweet': false,
+	'showTime': true,
+	'showUser': true
+};
+twitterFetcher.fetch(configProfile);
 });

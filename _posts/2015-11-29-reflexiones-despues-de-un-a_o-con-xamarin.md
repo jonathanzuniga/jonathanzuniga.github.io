@@ -1,6 +1,6 @@
 ---
 authors: [jonathan]
-categories: [articulos]
+categories: [reseñas]
 date: 2015-11-29 14:50:00
 layout: post
 title: 'Reflexiones después de un año con Xamarin'

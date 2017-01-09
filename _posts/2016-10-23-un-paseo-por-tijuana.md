@@ -1,6 +1,6 @@
 ---
 authors: [jonathan]
-categories: [historias]
+categories: [personal]
 date: 2016-10-23
 layout: post
 title: 'Un paseo por Tijuana'

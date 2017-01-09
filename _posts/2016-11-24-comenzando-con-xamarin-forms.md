@@ -1,6 +1,6 @@
 ---
 authors: [jonathan]
-categories: [articulos]
+categories: [tutoriales]
 date: 2016-11-24
 layout: post
 title: 'Comenzando con Xamarin.Forms'

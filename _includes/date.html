@@ -18,12 +18,12 @@
 		{% assign year = page.date | date: '%Y' %}
 		{% assign time = page.date | date: '%R %p' %}
 		<span class="date">
-			<span class="day-name">{{ day_name }}</span>
+			{% comment %}<span class="day-name">{{ day_name }}</span>{% endcomment %}
 			<span class="day">{{ day }}</span>
 			<span class="month">{{ month }}</span>
 			<span class="year">{{ year }}</span>
 		</span>
-		<span class="time">{{ time }}</span>
+		{% comment %}<span class="time">{{ time }}</span>{% endcomment %}
 	</time>
 {% else %}
 	<time datetime="{{ post.date | date_to_xmlschema }}">
@@ -35,12 +35,12 @@
 		{% assign year = post.date | date: '%Y' %}
 		{% assign time = post.date | date: '%R %p' %}
 		<span class="date">
-			<span class="day-name">{{ day_name }}</span>
+			{% comment %}<span class="day-name">{{ day_name }}</span>{% endcomment %}
 			<span class="day">{{ day }}</span>
 			<span class="month">{{ month }}</span>
 			<span class="year">{{ year }}</span>
 		</span>
-		<span class="time">{{ time }}</span>
+		{% comment %}<span class="time">{{ time }}</span>{% endcomment %}
 	</time>
 {% endif %}
 

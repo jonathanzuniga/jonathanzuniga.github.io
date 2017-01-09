@@ -1,6 +1,6 @@
 ---
 authors: [jonathan]
-categories: [articulos]
+categories: [seguridad]
 date: 2015-10-17 17:39:00
 layout: post
 title: 'Encriptando datos con el algoritmo ROT13'

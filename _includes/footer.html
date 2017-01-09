@@ -1,32 +1,45 @@
 <footer id="footer">
 	<div class="row">
-		<div class="col-sm-12 offset-sm-0 col-lg-8 offset-lg-2">
+		<div class="col-xs-12 col-lg-10 offset-lg-1">
 			<hr>
-			
-			{% assign author = site.authors['jonathan'] %}
-			<div id="footer-info">
-				<p>
-					<span class="copyright">Copyright © 2015–{{ site.time | date: '%Y' }}</span>
-					<a href="{{ site.baseurl }}/autor" title="Más acerca de mí">{{ site.title }}</a>.
-					Esta obra está bajo una licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">Creative Commons Atribución 4.0 Internacional</a>.
-					<!-- +
-					{% if author.twitter_username %}
-						<a href="https://twitter.com/{{ author.twitter_username }}" target="_blank">
-							<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-							Sígueme
-						</a>
-						+
-						<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank" title="">
-							<i class="fa fa-rss fa-lg" aria-hidden="true"></i>
-						  RSS
-						</a>
-						+
-						<a href="https://github.com/{{ author.github_username }}/jonathanzuniga.github.io" target="_blank" title="Ver el código fuente de este blog">
-							<i class="fa fa-github fa-lg" aria-hidden="true"></i>
-							Código fuente
-						</a>
-					{% endif %} -->
-				</p>
+				
+			<div class="row">
+				<div class="col-lg-8">
+					{% assign author = site.authors['jonathan'] %}
+					<div id="footer-info">
+						<p>
+							<span class="copyright">Copyright © 2015–{{ site.time | date: '%Y' }}</span>
+							<a href="{{ site.baseurl }}/autor" title="Más acerca de mí">{{ site.title }}</a>.
+							Esta obra está bajo una licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">Creative Commons Atribución 4.0 Internacional</a>.
+							<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank" title="RSS">
+								<i class="fa fa-rss fa-lg" aria-hidden="true"></i>
+							  RSS de los artículos</a>.
+							{% if author.github_username %}
+								<a href="https://github.com/{{ author.github_username }}/jonathanzuniga.github.io" target="_blank" title="Ver el código fuente de este blog">
+									<i class="fa fa-github fa-lg" aria-hidden="true"></i>
+									Código fuente</a>.
+							{% endif %}
+
+							<!-- +
+							{% if author.twitter_username %}
+								<a href="https://twitter.com/{{ author.twitter_username }}" target="_blank">
+									<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+									Sígueme
+								</a>
+								+
+								<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank" title="">
+									<i class="fa fa-rss fa-lg" aria-hidden="true"></i>
+								  RSS
+								</a>
+								+
+								<a href="https://github.com/{{ author.github_username }}/jonathanzuniga.github.io" target="_blank" title="Ver el código fuente de este blog">
+									<i class="fa fa-github fa-lg" aria-hidden="true"></i>
+									Código fuente
+								</a>
+							{% endif %} -->
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

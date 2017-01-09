@@ -1,12 +1,14 @@
 ---
 authors: [jonathan]
-categories: [articulos]
+categories: [inspiracion]
 date: 2016-11-19
 layout: post
 title: 'La tipografía de Alien'
 ---
 
-<img class="img-fluid rounded" src="https://www.dropbox.com/s/b72s4gfysauwb70/alien_0_08_24_full.jpg?raw=1">
+<figure>
+	<img class="img-fluid" src="https://www.dropbox.com/s/b72s4gfysauwb70/alien_0_08_24_full.jpg?raw=1">
+</figure>
 
 Dave Addey es el autor de [Typeset in the Future][typeset-in-the-future], un blog sobre tipografías en las peliculas de ciencia ficción. El elaboró un fascinante estudio sobre la [tipografía de Alien][tipografia-de-alien], un artículo bien documentado y muy disfrutable.<!--more--> Tipografía, interfaces retro-futuristas, ciencia ficción... aborda todos mis temas favoritos.
 

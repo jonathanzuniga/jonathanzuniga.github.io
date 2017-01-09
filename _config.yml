@@ -37,6 +37,7 @@ permalink: /:year/:month/:day/:title
 
 timezone: America/Tijuana
 
+# gems: ['jekyll-twitter-plugin']
 # gems: ['jekyll-timeago']
 
 # jekyll_timeago:

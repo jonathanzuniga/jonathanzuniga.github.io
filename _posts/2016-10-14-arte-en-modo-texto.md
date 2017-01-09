@@ -1,6 +1,6 @@
 ---
 authors: [jonathan]
-categories: [articulos]
+categories: [arte]
 date: 2016-10-14
 layout: post
 title: 'Arte en modo texto'
@@ -19,7 +19,7 @@ Desde ese instante, una brecha que abarca casi treinta años, grupos de arte han
 ### Arte ASCII
 
 <a href="https://www.instagram.com/p/BHc9sH8BAPh/">
-	<img class="rounded img-fluid float-xs-left" src="https://www.dropbox.com/s/te3scdrxsn5955t/astral-projection.jpg?raw=1" alt="Astral projection">
+	<img class="img-fluid float-xs-left" src="https://www.dropbox.com/s/te3scdrxsn5955t/astral-projection.jpg?raw=1" alt="Astral projection">
 </a>
 
 Este es sin duda el medio más antiguo para trabajar en el *artscene*. Ha existido desde hace mucho tiempo. <abbr title="American Standard Code for Information Interchange">ASCII</abbr> siempre ha sido el conjunto de caracteres estándar de las <abbr title="Personal Computers">PC's</abbr> y a alguien se le ocurrió crear arte con esto. Hay dos formas principales de *ASCII art*, la de la vieja y la de la nueva escuela.
@@ -31,7 +31,7 @@ Hoy en día la forma de arte ASCII de la nueva escuela es la más popular. Esta 
 ### Arte ANSI
 
 <a href="http://blocktronics.org/thomas-carli-jarlier/" target="_blank">
-	<img class="rounded img-fluid float-xs-right" src="https://www.dropbox.com/s/n8abh6yoj8tsiar/thomas-carli-jarlier.ans_640x960.png?raw=1">
+	<img class="img-fluid float-xs-right" src="https://www.dropbox.com/s/n8abh6yoj8tsiar/thomas-carli-jarlier.ans_640x960.png?raw=1">
 </a>
 
 Nació a finales de 1980 y fue desarrollado para ofrecer un formato común para la visualización de gráficos en los BBS's. Esto fue lo que realmente hizo que la comunidad comenzara. Utilizandose para decorar los programas de MS-DOS y BBSes. La popularidad del arte ANSI creció cuando en 1986 Ian E. Davis lanzó la aplicación [TheDraw](https://en.wikipedia.org/wiki/TheDraw), que no sólo facilitó enormemente la edición de arte ANSI, sino que también contenía una amplia variedad de fuentes y configuraciones.

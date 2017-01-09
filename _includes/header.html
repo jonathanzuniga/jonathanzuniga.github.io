@@ -1,43 +1,48 @@
 <header id="header">
   <div class="row">
-    <div class="col-xs-10 col-md-9 col-lg-6 offset-lg-2 col-xl-7 offset-xl-2">
+    <div class="posts col-xs-10 col-lg-7 offset-lg-1">
       <h1>
         <a href="{{ site.baseurl }}/">
           {{ site.title }}
         </a>
       </h1>
 
-      <div class="intro">
-        <h2>
-          Jonathan Zúñiga es un desarrollador web viviendo y trabajando en la cambiante ciudad de Tijuana, BC.
+      <!-- <div class="intro">
+        <h2 class="lead">
+          Jonathan es un desarrollador web viviendo y trabajando en la cambiante ciudad de Tijuana, BC.
           <a href="{{ site.baseurl }}/autor" class="more">
             Además
             <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
           </a>
         </h2>
-      </div>
+      </div> -->
     </div>
 
-    <div class="col-xs-2 col-md-3 col-lg-2 col-xl-1">
-      {% assign author = site.authors['jonathan'] %}
-      <ul class="icons list-unstyled pull-right">
-        {% if author.twitter_username %}
-          <li>
-            <a href="https://twitter.com/{{ author.twitter_username }}" target="_blank" title="Sígueme en Twitter">
-              <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-            </a>
-          </li>
-        {% endif %}
-        <li>
-          <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank" title="RSS">
-            <i class="fa fa-rss fa-lg" aria-hidden="true"></i>
-          </a>
+    <div class="col-xs-2 col-lg-3">
+      <ul id="navigation" class="list-inline">
+        <li class="list-inline-item">
+          <a href="{{ site.baseurl }}/">Artículos</a>
         </li>
-      </ul>  
+        <li class="list-inline-item">
+          <a href="{{ site.baseurl }}/archivo">Archivo</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="{{ site.baseurl }}/autor">Autor</a>
+        </li>
+      </ul>
     </div>
   </div>
 
-  <div class="row">
+  {% if page.url == '/' %}
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="recommended-posts">
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <!-- <div class="row">
     <div class="col-xs-12 col-lg-8 offset-lg-2">
       <div class="search">
         <form action="/buscar" method="get">
@@ -47,10 +52,8 @@
           </div>
         </form>
       </div>
-
-      <hr>
     </div>
-  </div>
+  </div> -->
 </header>
 
 
