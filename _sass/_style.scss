@@ -21,6 +21,7 @@ h6 {
 }
 
 a {
+	border-bottom: 1px solid rgba(71, 130, 172, 0.3);
 	color: $link-color;
 	outline: none;
 	text-decoration: none;
@@ -41,8 +42,9 @@ a {
 	}
 
 	&:hover {
+		border-bottom: 2px solid $color-blue;
 		color: $link-hover-color;
-		text-decoration: underline;
+		text-decoration: none;
 	}
 
 	&:hover,
@@ -68,10 +70,12 @@ hr {
 	h1 {
 		a {
 			color: $text-color;
+		}
 
-			&:hover {
-				text-decoration: none;
-			}
+		a,
+		a:hover {
+			border-bottom: none;
+			text-decoration: none;
 		}
 	}
 }
@@ -80,6 +84,10 @@ hr {
 	.post-header {
 		.post-title {
 			font-weight: bold;
+
+			.post-link {
+				border-bottom: none;
+			}
 		}
 	}
 
