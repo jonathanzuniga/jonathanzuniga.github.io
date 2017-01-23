@@ -1,9 +1,41 @@
 ---
 layout: default
 ---
+
+{% for post in site.posts limit: 10 %}
+	<article class="post">
+		<header class="post-header">
+			<div class="post-date text-capitalize">
+				<small>{% include date.html %}</small>
+			</div>
+
+			<h2 class="post-title">
+				<a class="post-link" href="{{ post.url }}">
+					{{ post.title }}
+				</a>
+			</h2>
+		</header>
+
+		<div class="post-content">
+			{{ post.content }}
+		</div>
+	</article>
+	
+	<hr>
+{% endfor %}
+
+
+
+
+
+
+
+
+
+{% comment %}
 <div class="row">
 	<div id="posts" class="col-xs-12 col-lg-7 offset-lg-1">
-		{% for post in site.posts %}
+		{% for post in site.posts limit: 5 %}
 			<div class="post">
 				<a class="post-link" href="{{ post.url }}">
 					<div class="row">
@@ -21,8 +53,8 @@ layout: default
 					</div>
 				</a>
 
-				<div class="post-excerpt">
-					{{ post.excerpt }}
+				<div class="post-content">
+					{{ post.content }}
 				</div>
 			</div>
 		{% endfor %}
@@ -32,7 +64,7 @@ layout: default
 		{% include sidebar.html %}
 	</div>
 </div>
-
+{% endcomment %}
 
 
 
@@ -138,7 +170,7 @@ layout: default
 									por 
 									{% assign sorted_authors = post.authors | sort %}
 									{% for author in sorted_authors %}<!--
-  									-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %} 
+										-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %} 
 										{% assign author_items = site.authors[author] %}
 										{% if author == 'jonathan' %}
 											<a class="teaser-author" href="{{ site.baseurl }}/autor">
@@ -146,8 +178,8 @@ layout: default
 											<a class="teaser-author" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
 										{% endif %}
 											{{ author_items.name }}<!--
-  									--></a><!--
-  								-->{% endfor %}
+										--></a><!--
+									-->{% endfor %}
 									en 
 									{% assign sorted_categories = post.categories | sort %}
 									{% for category in sorted_categories %}
@@ -223,7 +255,7 @@ layout: default
 							por 
 							{% assign sorted_authors = post.authors | sort %}
 							{% for author in sorted_authors %}<!--
-  							-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %} 
+								-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %} 
 								{% assign author_items = site.authors[author] %}
 								{% if author == 'jonathan' %}
 									<a class="teaser-author" href="{{ site.baseurl }}/autor">
@@ -231,8 +263,8 @@ layout: default
 									<a class="teaser-author" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
 								{% endif %}
 								{{ author_items.name }}<!--
-  							--></a><!--
-  						-->{% endfor %}
+								--></a><!--
+							-->{% endfor %}
 							en 
 							{% assign sorted_categories = post.categories | sort %}
 							{% for category in sorted_categories %}

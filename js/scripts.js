@@ -26,16 +26,33 @@ jQuery(document).ready(function($) {
 
 	$('.posts .post-excerpt figure:hidden').remove();
 
-	var configProfile = {
-	'domId': 'latest-tweets',
-	'enableLinks': true, 
-	'lang': 'es',
-	'maxTweets': 10,
-	'profile': {'screenName': 'jonathan_zuniga'},
-	'showImages': false,
-	// 'showRetweet': false,
-	'showTime': true,
-	'showUser': true
-};
-twitterFetcher.fetch(configProfile);
+	// var configProfile = {
+	// 	'domId': 'latest-tweets',
+	// 	'enableLinks': true, 
+	// 	'lang': 'es',
+	// 	'maxTweets': 10,
+	// 	'profile': {'screenName': 'jonathan_zuniga'},
+	// 	'showImages': false,
+	// 	// 'showRetweet': false,
+	// 	'showTime': true,
+	// 	'showUser': true
+	// };
+	// twitterFetcher.fetch(configProfile);
+
+	// $('.social-feed-container').socialfeed({
+ //    // TWITTER
+ //    twitter:{
+ //        accounts: ['@jonathan_zuniga'],                      //Array: Specify a list of accounts from which to pull tweets
+ //        limit: 10,                                   //Integer: max number of tweets to load
+ //        consumer_key: 'EMTdI9qBiWfj0qqvL0SzCgrG1',          //String: consumer key. make sure to have your app read-only
+ //        consumer_secret: 'UHMvETMhXBYoxYEmVQlw9gn7uOHhHtCRh0naV0lpb0xrv3DV9L' //String: consumer secret key. make sure to have your app read-only
+ //     },
+ //     rss:{
+ //        urls: ['http://jonathanzuniga.github.io/feed'], //Array: Specifiy a list of rss feed from which to pull posts
+ //        limit: 2                                      //Integer: max number of posts to load for each url
+ //    },
+
+ //            // GENERAL SETTINGS
+ //            length: 300                                      //Integer: For posts with text longer than this length, show an ellipsis.
+ //        });
 });

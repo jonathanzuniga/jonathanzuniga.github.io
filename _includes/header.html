@@ -1,4 +1,43 @@
 <header id="header">
+  {% assign author = site.authors['jonathan'] %}
+  <h1>
+    <a href="{{ site.baseurl }}/">
+     {{ author.name }} {{ author.lastname }}
+    </a>
+  </h1>
+
+  <ul class="list-inline">
+    <li class="list-inline-item">
+      <a href="{{ site.baseurl }}/autor">
+        Autor
+      </a>
+    </li>
+    {% if author.github_username %}
+      <li class="list-inline-item">
+        <a href="https://github.com/{{ author.github_username }}" target="_blank">
+          GitHub
+        </a>
+      </li>
+    {% endif %}
+    {% if author.twitter_username %}
+      <li class="list-inline-item">
+        <a href="https://twitter.com/{{ author.twitter_username }}" target="_blank">
+          Twitter
+        </a>
+      </li>
+    {% endif %}
+  </ul>
+</header>
+
+<hr>
+
+
+
+
+
+
+{% comment %}
+<header id="header">
   <div class="row">
     <div class="posts col-xs-10 col-lg-7 offset-lg-1">
       <h1>
@@ -55,7 +94,7 @@
     </div>
   </div> -->
 </header>
-
+{% endcomment %}
 
 
 

@@ -5,69 +5,70 @@
 @charset 'utf-8';
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700');
-// @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
-// @import url('https://fonts.googleapis.com/css?family=Ultra');
 
-// @font-face {
-//   font-family: 'DINNextRoundedLTPro_Medium';
-//   src: url('../fonts/DINNextRoundedLTPro-Medium.eot');
-//   src: url('../fonts/DINNextRoundedLTPro-Medium.eot?#iefix') format('embedded-opentype'),
-//        url('../fonts/DINNextRoundedLTPro-Medium.woff')       format('woff'),
-//        url('../fonts/DINNextRoundedLTPro-Medium.ttf')        format('truetype');
-//   font-weight: 500;
-//   font-style: normal;
-// }
+@import url('https://fonts.googleapis.com/css?family=Ultra');
+@import url('https://fonts.googleapis.com/css?family=Rokkitt:400,700');
 
-// @font-face {
-//   font-family: 'DINNextRoundedLTPro_Light';
-//   src: url('../fonts/DINNextRoundedLTPro-Light.eot');
-//   src: url('../fonts/DINNextRoundedLTPro-Light.eot?#iefix') format('embedded-opentype'),
-//        url('../fonts/DINNextRoundedLTPro-Light.woff')       format('woff'),
-//        url('../fonts/DINNextRoundedLTPro-Light.ttf')        format('truetype');
-//   font-weight: 300;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: 'DINNextRoundedLTPro_Bold';
-//   src: url('../fonts/DINNextRoundedLTPro-Bold.eot');
-//   src: url('../fonts/DINNextRoundedLTPro-Bold.eot?#iefix') format('embedded-opentype'),
-//        url('../fonts/DINNextRoundedLTPro-Bold.woff')       format('woff'),
-//        url('../fonts/DINNextRoundedLTPro-Bold.ttf')        format('truetype');
-//   font-weight: bold;
-//   font-style: normal;
-// }
+// Quadraat
 
 @font-face {
-  font-family: 'CP437';
-  src: url('../fonts/cp437/cp437.eot');
-  src: url('../fonts/cp437/cp437.woff') format('woff'), 
-       url('../fonts/cp437/cp437.ttf') format('truetype'), 
-       url('../fonts/cp437/cp437.svg#webfontpVS4iJcr') format('svg');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Quadraat';
+  src: url('../fonts/Quadraat/Quadraat.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/Quadraat/Quadraat.woff') format('woff'), 
+       url('../fonts/Quadraat/Quadraat.ttf') format('truetype'),
+       url('../fonts/Quadraat/Quadraat.svg#Quadraat') format('svg');
+      font-weight: 400;
+      font-style: normal;
 }
 
 @font-face {
-  font-family: 'CP437 8x8';
-  src: url('../fonts/cp437/cp437-8x8.eot');
-  src: url('../fonts/cp437/cp437-8x8.woff') format('woff'), 
-       url('../fonts/cp437/cp437-8x8.ttf') format('truetype'), 
-       url('../fonts/cp437/cp437-8x8.svg#webfontpVS4iJcr') format('svg');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Quadraat';
+  src: url('../fonts/Quadraat/Quadraat-Bold.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/Quadraat/Quadraat-Bold.woff') format('woff'), 
+       url('../fonts/Quadraat/Quadraat-Bold.ttf') format('truetype'),
+       url('../fonts/Quadraat/Quadraat-Bold.svg#Quadraat-Bold') format('svg');
+      font-weight: 700;
+      font-style: normal;
 }
 
+// Quadraat Sans
 
+@font-face {
+  font-family: 'Quadraat Sans';
+  src: url('../fonts/Quadraat/quadraatsanspro-light-webfont.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/Quadraat/quadraatsanspro-light-webfont.woff') format('woff'), 
+       url('../fonts/Quadraat/quadraatsanspro-light-webfont.ttf') format('truetype'),
+       url('../fonts/Quadraat/quadraatsanspro-light-webfont.svg#quadraatsanspro-light-webfont') format('svg');
+      font-weight: 300;
+      font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quadraat Sans';
+  src: url('../fonts/Quadraat/quadraatsanspro-ita-webfont.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/Quadraat/quadraatsanspro-ita-webfont.woff') format('woff'), 
+       url('../fonts/Quadraat/quadraatsanspro-ita-webfont.ttf') format('truetype'),
+       url('../fonts/Quadraat/quadraatsanspro-ita-webfont.svg#quadraatsanspro-ita-webfont') format('svg');
+      font-weight: 400;
+      font-style: italic;
+}
+
+@font-face {
+  font-family: 'Quadraat Sans';
+  src: url('../fonts/Quadraat/quadraatsanspro-demibold-webfont.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/Quadraat/quadraatsanspro-demibold-webfont.woff') format('woff'), 
+       url('../fonts/Quadraat/quadraatsanspro-demibold-webfont.ttf') format('truetype'),
+       url('../fonts/Quadraat/quadraatsanspro-demibold-webfont.svg#quadraatsanspro-demibold-webfont') format('svg');
+      font-weight: 600;
+      font-style: normal;
+}
 
 // Our variables
 $base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-// $heading-font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$serif-font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
+$site-title-font-family: 'Ultra', $base-font-family;
+$heading-font-family: 'Rokkitt', $base-font-family;
 $mono-font-family: Monaco, Consolas, monospace;
-$ansi-font-family: 'CP437', Monaco, Consolas, monospace;
-$base-font-size: 14px;
+$base-font-size: 15px;
 $small-font-size: $base-font-size * 0.875;
 // $base-line-height: 1.733;
 // $base-line-height: 1.42857143;
@@ -77,15 +78,15 @@ $spacing-unit: 30px;
 
 
 // Colors
-$text-color: #333;
-$heading-color: #333;
+$text-color: #121212;
+$heading-color: #121212;
 $background-color: #fff;
 
 $color-black: #000;
 // $color-blue: #4166ff;
 // $color-blue-light: #6682ff;
 // $color-blue: #005bff;
-$color-blue: #71c5d9;
+$color-blue: #4782ac;
 $color-cyan: #088;
 $color-grey-50: #fafafa;
 $color-grey-100: #f5f5f5;
@@ -115,17 +116,52 @@ $color-red: #df4747;
 // $color-yellow: #fed134;
 $color-yellow: #e19e29;
 
+$color-amber-500: #ffc107;
+$color-amber-600: #ffb300;
+
+$color-blue-500: #2196f3;
+
+$color-cyan-300: #4dd0e1;
+$color-cyan-400: #26c6da;
+$color-cyan-500: #00bcd4;
+$color-cyan-600: #00acc1;
+$color-cyan-700: #0097a7;
+
+$color-light-blue-300: #4fc3f7;
+$color-light-blue-400: #29b6f6;
+$color-light-blue-500: #03a9f4;
+$color-light-blue-600: #039be5;
+$color-light-blue-700: #0288d1;
+
+$color-orange-600: #fb8c00;
+
+$color-teal-600: #00897b;
+
+$link-color: $color-blue;
+$link-visited-color: $color-blue;
+$link-active-color: $color-blue;
+$link-hover-color: $color-blue;
+
+$rf-link-color: $color-orange-600;
+$rf-link-visited-color: $color-orange-600;
+$rf-link-active-color: $color-orange-600;
+$rf-link-hover-color: $color-orange-600;
+
+$tw-link-color: $color-light-blue-600;
+$tw-link-visited-color: $color-light-blue-600;
+$tw-link-active-color: $color-light-blue-600;
+$tw-link-hover-color: $color-light-blue-600;
 
 
-$link-color: $text-color;
-$link-visited-color: $text-color;
-$link-active-color: $color-grey-600;
-$link-hover-color: $color-orange;
+// $link-color: $text-color;
+// $link-visited-color: $text-color;
+// $link-active-color: $color-grey-600;
+// $link-hover-color: $color-orange;
 
-$heading-link-color: $color-red;
-$heading-link-visited-color: $color-red;
-$heading-link-active-color: $color-grey-600;
-$heading-link-hover-color: $text-color;
+// $heading-link-color: $color-red;
+// $heading-link-visited-color: $color-red;
+// $heading-link-active-color: $color-grey-600;
+// $heading-link-hover-color: $text-color;
 
 // $link-color: #398fd1;
 // $link-visited-color: #62a6db;
@@ -162,7 +198,7 @@ $link-category-visited-color: lighten($link-category-color, 12%);
 $link-category-active-color: $color-grey-600;
 $link-category-hover-color: $text-color;
 
-$border-color: $color-grey-300;
+$border-color: #ccc;
 $selection-bg-color: $color-blue;
 
 
@@ -223,7 +259,8 @@ $width-1024: 1024px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import 
   'style',
-  'syntax-highlighting';
+  'syntax-highlighting',
+  'font';
 
   // 'base', 
   // 'layout',
