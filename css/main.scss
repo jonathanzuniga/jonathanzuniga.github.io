@@ -56,6 +56,11 @@ $body-text-color: #000;
 $footer-bg-color: #000;
 $footer-text-color: #888;
 
+$link-color: #6c95cf;
+$link-visited-color: #6c95cf;
+$link-active-color: #666;
+$link-hover-color: $body-text-color;
+
 $border-color: #e0e0e0;
 // $selection-bg-color: $color-blue;
 
@@ -114,10 +119,6 @@ $color-orange-600: #fb8c00;
 
 $color-teal-600: #00897b;
 
-$link-color: $header-bg-color;
-$link-visited-color: $header-bg-color;
-$link-active-color: $header-bg-color;
-$link-hover-color: $body-text-color;
 
 // $rf-link-color: $color-orange-600;
 // $rf-link-visited-color: $color-orange-600;
