@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /autor
-title: Sobre el autor
+title: Hola y bienvenido
 ---
 
 <p class="lead">Mi nombre es Jonathan, soy un desarrollador originario de la ciudad de Tijuana. Actualmente trabajo como desarrollador web en Morzan Co.</p>
