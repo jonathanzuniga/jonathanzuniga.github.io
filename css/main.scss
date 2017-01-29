@@ -6,69 +6,37 @@
 
 // Fonts
 
-@import url('https://fonts.googleapis.com/css?family=Ultra');
-@import url('https://fonts.googleapis.com/css?family=Rokkitt:400,700');
-
-// Quadraat
-
 @font-face {
-  font-family: 'Quadraat';
-  src: url('../fonts/Quadraat/Quadraat.eot?#iefix') format('embedded-opentype');
-  src: url('../fonts/Quadraat/Quadraat.woff') format('woff'), 
-       url('../fonts/Quadraat/Quadraat.ttf') format('truetype'),
-       url('../fonts/Quadraat/Quadraat.svg#Quadraat') format('svg');
-      font-weight: 400;
-      font-style: normal;
+    font-family: 'ET Book';
+    src: url('../fonts/etbookot-roman-webfont.woff2') format('woff2'),
+         url('../fonts/etbookot-roman-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
-
 @font-face {
-  font-family: 'Quadraat';
-  src: url('../fonts/Quadraat/Quadraat-Bold.eot?#iefix') format('embedded-opentype');
-  src: url('../fonts/Quadraat/Quadraat-Bold.woff') format('woff'), 
-       url('../fonts/Quadraat/Quadraat-Bold.ttf') format('truetype'),
-       url('../fonts/Quadraat/Quadraat-Bold.svg#Quadraat-Bold') format('svg');
-      font-weight: 700;
-      font-style: normal;
+    font-family: 'ET Book';
+    src: url('../fonts/etbookot-italic-webfont.woff2') format('woff2'),
+         url('../fonts/etbookot-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
 }
-
-// Quadraat Sans
-
 @font-face {
-  font-family: 'Quadraat Sans';
-  src: url('../fonts/Quadraat/quadraatsanspro-light-webfont.eot?#iefix') format('embedded-opentype');
-  src: url('../fonts/Quadraat/quadraatsanspro-light-webfont.woff') format('woff'), 
-       url('../fonts/Quadraat/quadraatsanspro-light-webfont.ttf') format('truetype'),
-       url('../fonts/Quadraat/quadraatsanspro-light-webfont.svg#quadraatsanspro-light-webfont') format('svg');
-      font-weight: 300;
-      font-style: normal;
-}
-
-@font-face {
-  font-family: 'Quadraat Sans';
-  src: url('../fonts/Quadraat/quadraatsanspro-ita-webfont.eot?#iefix') format('embedded-opentype');
-  src: url('../fonts/Quadraat/quadraatsanspro-ita-webfont.woff') format('woff'), 
-       url('../fonts/Quadraat/quadraatsanspro-ita-webfont.ttf') format('truetype'),
-       url('../fonts/Quadraat/quadraatsanspro-ita-webfont.svg#quadraatsanspro-ita-webfont') format('svg');
-      font-weight: 400;
-      font-style: italic;
-}
-
-@font-face {
-  font-family: 'Quadraat Sans';
-  src: url('../fonts/Quadraat/quadraatsanspro-demibold-webfont.eot?#iefix') format('embedded-opentype');
-  src: url('../fonts/Quadraat/quadraatsanspro-demibold-webfont.woff') format('woff'), 
-       url('../fonts/Quadraat/quadraatsanspro-demibold-webfont.ttf') format('truetype'),
-       url('../fonts/Quadraat/quadraatsanspro-demibold-webfont.svg#quadraatsanspro-demibold-webfont') format('svg');
-      font-weight: 600;
-      font-style: normal;
+    font-family: 'ET Book';
+    src: url('../fonts/etbookot-bold-webfont.woff2') format('woff2'),
+         url('../fonts/etbookot-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 // Our variables
-$base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-family: 'ET Book', Georgia, serif;
 $site-title-font-family: 'Ultra', $base-font-family;
 $heading-font-family: 'Rokkitt', $base-font-family;
 $mono-font-family: Monaco, Consolas, monospace;
-$base-font-size: 15px;
+$base-font-size: 16px;
 $small-font-size: $base-font-size * 0.875;
 // $base-line-height: 1.733;
 // $base-line-height: 1.42857143;
@@ -78,9 +46,18 @@ $spacing-unit: 30px;
 
 
 // Colors
-$text-color: #121212;
-$heading-color: #121212;
-$background-color: #fff;
+// $header-bg-color: #7f7fb5;
+$header-bg-color: #76a9e9;
+$header-text-color: #fff;
+
+$body-bg-color: #fff;
+$body-text-color: #000;
+
+$footer-bg-color: #000;
+$footer-text-color: #888;
+
+$border-color: #e0e0e0;
+// $selection-bg-color: $color-blue;
 
 $color-black: #000;
 // $color-blue: #4166ff;
@@ -137,20 +114,20 @@ $color-orange-600: #fb8c00;
 
 $color-teal-600: #00897b;
 
-$link-color: $color-blue;
-$link-visited-color: $color-blue;
-$link-active-color: $color-blue;
-$link-hover-color: $color-blue;
+$link-color: $header-bg-color;
+$link-visited-color: $header-bg-color;
+$link-active-color: $header-bg-color;
+$link-hover-color: $body-text-color;
 
-$rf-link-color: $color-orange-600;
-$rf-link-visited-color: $color-orange-600;
-$rf-link-active-color: $color-orange-600;
-$rf-link-hover-color: $color-orange-600;
+// $rf-link-color: $color-orange-600;
+// $rf-link-visited-color: $color-orange-600;
+// $rf-link-active-color: $color-orange-600;
+// $rf-link-hover-color: $color-orange-600;
 
-$tw-link-color: $color-light-blue-600;
-$tw-link-visited-color: $color-light-blue-600;
-$tw-link-active-color: $color-light-blue-600;
-$tw-link-hover-color: $color-light-blue-600;
+// $tw-link-color: $color-light-blue-600;
+// $tw-link-visited-color: $color-light-blue-600;
+// $tw-link-active-color: $color-light-blue-600;
+// $tw-link-hover-color: $color-light-blue-600;
 
 
 // $link-color: $text-color;
@@ -188,18 +165,17 @@ $tw-link-hover-color: $color-light-blue-600;
 // $link-active-color: $color-grey-600;
 // $link-hover-color: $text-color;
 
-$link-heading-color: $heading-color;
-$link-heading-visited-color: $heading-color;
-$link-heading-active-color: $color-grey-600;
-$link-heading-hover-color: $link-hover-color;
+// $link-heading-color: $heading-color;
+// $link-heading-visited-color: $heading-color;
+// $link-heading-active-color: $color-grey-600;
+// $link-heading-hover-color: $link-hover-color;
 
-$link-category-color: $color-orange;
-$link-category-visited-color: lighten($link-category-color, 12%);
-$link-category-active-color: $color-grey-600;
-$link-category-hover-color: $text-color;
+// $link-category-color: $color-orange;
+// $link-category-visited-color: lighten($link-category-color, 12%);
+// $link-category-active-color: $color-grey-600;
+// $link-category-hover-color: $text-color;
 
-$border-color: #ccc;
-$selection-bg-color: $color-blue;
+
 
 
 $heading-weight: 700;

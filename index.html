@@ -2,6 +2,34 @@
 layout: default
 ---
 
+<div class="section">
+	<div class="wrap">
+		<h2>Publicaciones recientes</h2>
+	</div>
+</div>
+
+<ul id="posts">
+	{% for post in site.posts limit: 10 %}
+		<li class="post">
+			<a class="post-link" href="{{ post.url }}">
+				<div class="wrap">
+						<span class="post-date">
+							{% include date.html %}
+						</span>
+						
+						<span class="post-title">
+								{{ post.title }}
+						</span>
+				</div>
+			</a>
+		</li>
+	{% endfor %}
+</ul>
+
+
+
+
+{% comment %}
 {% for post in site.posts limit: 10 %}
 	<article class="post">
 		<header class="post-header">
@@ -23,7 +51,7 @@ layout: default
 	
 	<hr>
 {% endfor %}
-
+{% endcomment %}
 
 
 

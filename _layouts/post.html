@@ -2,23 +2,51 @@
 layout: default
 ---
 
-<article class="post">
-	<header class="post-header">
-		<div class="post-date text-capitalize">
-			<small>{% include date.html %}</small>
+<article class="full post">
+	<div class="wrap">
+		<header class="post-header">
+			<h1 class="post-title">
+				<span class="post-date">
+					{% include date.html %}
+				</span>
+
+				{{ page.title }}
+			</h1>
+		</header>
+
+		<div class="post-content">
+			{{ page.content }}
 		</div>
-
-		<h2 class="post-title">
-			{{ page.title }}
-		</h2>
-	</header>
-
-	<div class="post-content">
-		{{ page.content }}
 	</div>
 </article>
 
-<hr>
+<div class="page-nav">
+	<div class="wrap">
+		<ul>
+			{% if page.previous.url %}
+				<li class="page-prev">
+					<a href="{{ page.previous.url }}" title="{{ page.previous.title }}">
+						<i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+						{{ page.previous.title }}
+					</a>
+				</li>
+			{% endif %}
+			<li class="page-top">
+				<a href="#header">
+					Volver arriba
+				</a>
+			</li>
+			{% if page.next.url %}
+				<li class="page-next">
+					<a href="{{ page.next.url }}" title="{{ page.next.title }}">
+						{{ page.next.title }}
+						<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+					</a>
+				</li>
+			{% endif %}
+		</ul>
+	</div>
+</div>
 
 
 
