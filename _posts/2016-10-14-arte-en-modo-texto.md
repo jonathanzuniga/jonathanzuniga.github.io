@@ -1,6 +1,6 @@
 ---
 authors: [jonathan]
-categories: [arte]
+categories: [arte-y-diseno]
 date: 2016-10-14
 layout: post
 title: 'Arte en modo texto'

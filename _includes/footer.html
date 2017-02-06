@@ -1,16 +1,7 @@
+
+{% comment %}
 <footer id="footer">
-	<div class="wrap">
-		<h2>Sobre el autor</h2>
-
-		<p>
-			{% assign author = site.authors['jonathan'] %}
-			{{ author.name }} es un desarrollador web viviendo y trabajando en la cambiante ciudad de Tijuana, BC.
-	    <a href="{{ site.baseurl }}/autor" class="more">
-	      Además
-	      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-	    </a>
-		</p>
-
+	<div class="wrapper">
 		<p>
 			<small>
 				Esta obra está bajo una licencia
@@ -18,8 +9,57 @@
 					Creative Commons Atribución 4.0 Internacional</a>.
 			</small>
 		</p>
+
+		{% comment %}
+		<ul class="social-media">
+			{% assign author = site.authors['jonathan'] %}
+	    {% if author.twitter_username %}
+	    	<li>
+		      <a class="twitter" href="https://twitter.com/{{ author.twitter_username }}" target="_blank">
+		        <i class="fa fa-twitter" aria-hidden="true"></i>
+		      </a>
+	    	</li>
+	    {% endif %}
+			{% if author.github_username %}
+				<li>
+					<a href="https://github.com/{{ author.github_username }}/jonathanzuniga.github.io" target="_blank" title="Ver el código fuente de este blog">
+						<i class="fa fa-github" aria-hidden="true"></i>
+					</a>
+				</li>
+			{% endif %}
+			{% if author.instagram_username %}
+		    <li>
+		    	<a href="https://www.instagram.com/{{ author.instagram_username }}" target="_blank" 
+		    		<i class="fa fa-instagram" aria-hidden="true"></i>
+		    	</a>
+		    </li>
+			{% endif %}
+			{% if author.spotify_username %}
+		    <li>
+		    	<a href="https://open.spotify.com/user/{{ author.spotify_username }}" target="_blank" 
+		    		<i class="fa fa-spotify" aria-hidden="true"></i>
+		    	</a>
+		    </li>
+			{% endif %}
+			{% if author.lastfm_username %}
+		    <li>
+		    	<a href="http://www.last.fm/user/{{ author.lastfm_username }}" target="_blank" 
+		    		<i class="fa fa-lastfm" aria-hidden="true"></i>
+		    	</a>
+		    </li>
+			{% endif %}
+<!-- 			<li>
+				<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
+					<i class="fa fa-rss" aria-hidden="true"></i>
+				</a>
+			</li> -->
+		</lu>
+		{% endcomment %}
 	</div>
 </footer>
+{% endcomment %}
+
+
 
 
 

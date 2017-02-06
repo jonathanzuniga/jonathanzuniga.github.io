@@ -1,12 +1,12 @@
 ---
 authors: [jonathan]
-categories: [tutoriales]
+categories: [desarrollo-movil]
 date: 2016-11-24
 layout: post
 title: 'Comenzando con Xamarin.Forms'
 ---
 
-Xamarin.Forms es un *framework* multi-plataforma para crear aplicaciones con [XAML](https://msdn.microsoft.com/en-us/library/cc295302.aspx) —se pronuncia «xammel»— y C# —principalmente, porque también [existe cierto soporte para usar F#](http://www.charlespetzold.com/blog/2015/10/Writing-Xamarin-Forms-Apps-in-FSharp.html)—. Esto nos permite crear desde una misma base de código fuente común  aplicaciones que sean capaces de funcionar en plataformas Android, iOS, Windows Phone 8+ y más recientemente [Universal Windows Platform](https://msdn.microsoft.com/en-us/windows/uwp/get-started/whats-a-uwp) (UWP).<!--more-->
+Xamarin.Forms es un *framework* multi-plataforma para crear aplicaciones con [XAML](https://msdn.microsoft.com/en-us/library/cc295302.aspx) —se pronuncia «xammel»— y C# —también [existe cierto soporte para F#](http://www.charlespetzold.com/blog/2015/10/Writing-Xamarin-Forms-Apps-in-FSharp.html)—. Esto nos permite crear desde una misma base de código fuente común  aplicaciones que sean capaces de funcionar en plataformas Android, iOS, Windows Phone 8+ y más recientemente [Universal Windows Platform](https://msdn.microsoft.com/en-us/windows/uwp/get-started/whats-a-uwp) (UWP).<!--more-->
 
 ## Funcionamiento
 

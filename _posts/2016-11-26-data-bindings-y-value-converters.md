@@ -1,13 +1,12 @@
 ---
 authors: [jonathan]
-categories: [tutoriales]
+categories: [desarrollo-movil]
 date: 2016-11-26
 layout: post
 title: 'Data Bindings y Value Converters'
 ---
 
 ## Data Bindings
-
 En el modelo <abbr title="Model–View–ViewModel">MVVM</abbr> la forma de comunicar la [vista][vista] con el [modelo de vista][modelo-de-vista] es a través de *[data bindings][data-bindings]*. La idea es muy simple, primero tenemos un [objeto][objeto] que expone una propiedad pública. Este objeto puede ser el modelo de vista o algún otro objeto dentro de este.<!--more-->
 
 {% highlight c# %}

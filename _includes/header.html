@@ -1,17 +1,23 @@
 <header id="header">
   {% assign author = site.authors['jonathan'] %}
-  {% if page.url == '/' %}
-    <div class="wrap">
-      <a href="{{ site.baseurl }}/">
-        <h1>Notas de <br> {{ author.name }} {{ author.lastname }}</h1>
-        <h2>por {{ author.name }} {{ author.lastname }}</h2>
-      </a>
-    </div>
-  {% else %}
-    <a class="wrap" href="{{ site.baseurl }}/">
-      Notas de {{ author.name }} {{ author.lastname }}
-    </a>
-  {% endif %}
+  <a class="site-title" href="{{ site.baseurl }}/">
+    {{ author.name }} {{ author.lastname }}
+  </a>
+
+  <nav id="nav">
+    <ul>
+      <li>
+        <a class="author" href="{{ site.baseurl }}/autor" class="more">
+          Autor
+        </a>
+      </li>
+      <li>
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
+          RSS
+        </a>
+      </li>
+    </ul>
+  </nav>
 </header>
 
 

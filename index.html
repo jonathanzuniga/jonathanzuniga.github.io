@@ -2,6 +2,56 @@
 layout: default
 ---
 
+<div id="posts">
+	<h1>
+		Artículos recientes
+	</h1>
+
+	{% for post in site.posts %}
+		<a class="post post-link" href="{{ post.url }}">
+			<div class="post-category">
+				{% assign sorted_categories = post.categories | sort %}
+				{% for category in sorted_categories %}
+					<span>{{ category | replace: '-', ' ' }}</span>
+				{% endfor %}
+			</div>
+
+			<h2 class="post-title">
+				{{ post.title }}
+			</h2>
+			
+			<div class="post-excerpt">
+				{{ post.excerpt | strip_html | truncatewords: 32 }}
+			</div>
+
+			{% comment %}
+			{% if post.cover %}
+				<img class="post-cover" src="{{ post.cover }}">
+			{% else %}
+				<div class="post-excerpt">
+					{{ post.excerpt | strip_html | truncatewords: 32 }}
+				</div>
+			{% endif %}
+			{% endcomment %}
+
+			<p class="post-date">
+				{% include date.html %}
+			</p>
+		</a>
+	{% endfor %}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
 <div class="section">
 	<div class="wrap">
 		<h2>Publicaciones recientes</h2>
@@ -25,6 +75,13 @@ layout: default
 		</li>
 	{% endfor %}
 </ul>
+{% endcomment %}
+
+
+
+
+
+
 
 
 
