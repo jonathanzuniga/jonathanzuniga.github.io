@@ -1,15 +1,15 @@
-{% comment %}
 {% 
 	assign months = 
 	'ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic' | 
 	split: '|'
 %}
-{% endcomment %}
+{% comment %}
 {% 
 	assign months = 
 	'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
 	split: '|'
 %}
+{% endcomment %}
 {%
 	assign days = 
 		'dom|lun|mar|mié|jue|vie|sáb' | 
@@ -26,8 +26,8 @@
 		{% assign time = page.date | date: '%R %p' %}
 		<span class="date">
 			{% comment %}<span class="day-name">{{ day_name }}</span>{% endcomment %}
-			<span class="day">{{ day }}</span> de 
-			<span class="month">{{ month }}</span>, 
+			<span class="day">{{ day }}</span>
+			<span class="month">{{ month }}</span>
 			<span class="year">{{ year }}</span>
 		</span>
 		{% comment %}<span class="time">{{ time }}</span>{% endcomment %}
@@ -43,8 +43,8 @@
 		{% assign time = post.date | date: '%R %p' %}
 		<span class="date">
 			{% comment %}<span class="day-name">{{ day_name }}</span>{% endcomment %}
-			<span class="day">{{ day }}</span> de 
-			<span class="month">{{ month }}</span>, 
+			<span class="day">{{ day }}</span>
+			<span class="month">{{ month }}</span>
 			<span class="year">{{ year }}</span>
 		</span>
 		{% comment %}<span class="time">{{ time }}</span>{% endcomment %}

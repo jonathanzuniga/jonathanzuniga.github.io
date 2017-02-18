@@ -32,10 +32,11 @@ authors:
     shelf_username: jonathan
     twitter_username: jonathan_zuniga
 
-# excerpt_separator: <!--more-->
+excerpt_separator: <!--more-->
 
 # Custom permalink
-permalink: /:year/:month/:day/:title
+# permalink: /:year/:month/:day/:title
+permalink: /:title
 
 timezone: America/Tijuana
 

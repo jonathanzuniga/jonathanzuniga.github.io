@@ -10,24 +10,21 @@
 
 	<body class="{% if page.layout == 'page' or
 										 page.layout == 'post' or
-										 page.layout == 'articles' or
-										 page.layout == 'stories' or
-										 page.layout == 'resources' %}body-single{% endif %}
+										 page.layout == 'articles' %}body-single{% endif %}
 							 {% if page.layout == 'page' %} body-page
 							 {% elsif page.layout == 'post' %} body-post
 							 {% elsif page.layout == 'articles' %} body-articles
-							 {% elsif page.layout == 'stories' %} body-stories
-							 {% elsif page.layout == 'resources' %} body-resources
 							 {% endif %}">
-		{% include header.html %}
+							 
+		<div class="wrapper">
+			{% include header.html %}
 
-		<main id="main">
-			<div class="wrapper">
-				{{ content }}
-			</div>
-		</main>
+			<main id="main">
+					{{ content }}
+			</main>
 
-		{% include footer.html %}
+			{% include footer.html %}
+		</div>
 
 		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>-->
 		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>

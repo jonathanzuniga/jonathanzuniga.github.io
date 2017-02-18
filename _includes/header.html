@@ -1,5 +1,37 @@
 <header id="header">
   {% assign author = site.authors['jonathan'] %}
+  <h2 class="logo">
+    <a class="site-title" href="{{ site.baseurl }}/">
+      <img src="images/logo.svg">
+    </a>
+  </h2>
+
+  <ul id="nav">
+    <li class="list-inline-item">
+      <a href="{{ site.baseurl }}/archivo">
+        Archivo
+      </a>
+    </li>
+    <li>
+      <a class="author" href="{{ site.baseurl }}/autor" class="more">
+        Autor
+      </a>
+    </li>
+    <li>
+      <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
+        RSS
+      </a>
+    </li>
+  </ul>
+</header>
+
+
+
+
+
+{% comment %}
+<header id="header">
+  {% assign author = site.authors['jonathan'] %}
   <a class="site-title" href="{{ site.baseurl }}/">
     {{ author.name }} {{ author.lastname }}
   </a>
@@ -19,7 +51,7 @@
     </ul>
   </nav>
 </header>
-
+{% endcomment %}
 
 
 

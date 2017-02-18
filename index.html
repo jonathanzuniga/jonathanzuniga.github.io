@@ -3,6 +3,58 @@ layout: default
 ---
 
 <div id="posts">
+	{% for post in site.posts %}
+		{% if post.cover %}
+			<a class="post-link post-hasCover post-{{ post.url | remove_first:'/' }}" href="{{ post.url }}">
+				<div class="post">
+					<h3 class="post-title">
+							{{ post.title }}
+					</h3>
+					
+					<div class="post-cover" style="background-image: url('{{ post.cover }}')"></div>
+				</div>
+			</a>
+		{% else %}
+			<a class="post-link" href="{{ post.url }}">
+				<div class="post">
+					<h3 class="post-title">
+							{{ post.title }}
+					</h3>
+					
+					<div class="post-excerpt">
+						{{ post.excerpt | strip_html }}
+
+						{% comment %}
+						{{ post.content | strip_html | truncatewords: 40 }}
+						{% endcomment %}
+						<span class="post-date">
+							{% include date.html %}
+						</span>
+					</div>
+				</div>
+			</a>
+		{% endif %}
+	{% endfor %}
+</div>
+
+<div id="more-posts">
+  <a href="{{ site.baseurl }}/archivo">
+    Previamente en el blog...
+  </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
+<div id="posts">
 	<h1>
 		Artículos recientes
 	</h1>
@@ -24,7 +76,7 @@ layout: default
 				{{ post.excerpt | strip_html | truncatewords: 32 }}
 			</div>
 
-			{% comment %}
+			
 			{% if post.cover %}
 				<img class="post-cover" src="{{ post.cover }}">
 			{% else %}
@@ -32,7 +84,7 @@ layout: default
 					{{ post.excerpt | strip_html | truncatewords: 32 }}
 				</div>
 			{% endif %}
-			{% endcomment %}
+			
 
 			<p class="post-date">
 				{% include date.html %}
@@ -40,7 +92,7 @@ layout: default
 		</a>
 	{% endfor %}
 </div>
-
+{% endcomment %}
 
 
 

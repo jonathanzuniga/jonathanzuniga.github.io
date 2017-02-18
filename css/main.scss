@@ -6,83 +6,35 @@
 
 // Fonts
 
-@import url('https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i,900,900i');
-
-@font-face {
-  font-family: 'Soleil';
-  font-style: none;
-  font-weight: 100;
-  src: url('../fonts/Soleil-Light.otf');
-}
-
-@font-face {
-  font-family: 'Soleil';
-  font-style: italic;
-  font-weight: 100;
-  src: url('../fonts/Soleil-Light-Italic.otf');
-}
-
-@font-face {
-  font-family: 'Soleil';
-  font-style: none;
-  font-weight: normal;
-  src: url('../fonts/Soleil-Regular.otf');
-}
-
-@font-face {
-  font-family: 'Soleil';
-  font-style: italic;
-  font-weight: normal;
-  src: url('../fonts/Soleil-Italic.otf');
-}
-
-@font-face {
-  font-family: 'Soleil';
-  font-style: none;
-  font-weight: 500;
-  src: url('../fonts/Soleil-Semibold.otf');
-}
-
-@font-face {
-  font-family: 'Soleil';
-  font-style: italic;
-  font-weight: 500;
-  src: url('../fonts/Soleil-Semibold-Italic.otf');
-}
-
-@font-face {
-  font-family: 'Soleil';
-  font-style: none;
-  font-weight: bold;
-  src: url('../fonts/Soleil-Bold.otf');
-}
-
-@font-face {
-  font-family: 'Soleil';
-  font-style: italic;
-  font-weight: bold;
-  src: url('../fonts/Soleil-Bold-Italic.otf');
-}
-
-@font-face {
-  font-family: 'Soleil';
-  font-style: none;
-  font-weight: 700;
-  src: url('../fonts/Soleil-Extrabold.otf');
-}
-
-@font-face {
-  font-family: 'Soleil';
-  font-style: italic;
-  font-weight: 700;
-  src: url('../fonts/Soleil-Extrabold-Italic.otf');
-}
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700|Roboto+Condensed:400,400i,700,700i');
 
 // Our variables
-$base-font-family: 'Helvetica Neue', Helvetica, sans-serif;
-$serif-font-family: clavo, Georgia, Times, serif;
-$site-title-font-family: 'Ultra', $base-font-family;
-$heading-font-family: 'Rokkitt', $base-font-family;
+$base-font-family: 
+	'Inconsolata', 
+	Consolas, 
+	'Liberation Mono', 
+	Menlo, 
+	Courier, 
+	monospace;
+$header-font-family: 
+	-apple-system,
+	BlinkMacSystemFont,
+	'Segoe UI',
+	Roboto,
+	Oxygen,
+	Ubuntu,
+	Cantarell,
+	'Open Sans',
+	'Helvetica Neue',
+	sans-serif,
+	'Apple Color Emoji',
+	'Segoe UI Emoji',
+	'Segoe UI Symbol';
+$heading-font-family: 
+	'Roboto Condensed', 
+	'Helvetica Neue', 
+	Helvetica, 
+	sans-serif;
 $mono-font-family: Monaco, Consolas, monospace;
 $base-font-size: 16px;
 $small-font-size: $base-font-size * 0.875;
@@ -94,10 +46,8 @@ $spacing-unit: 30px;
 
 
 // Colors
-$background-color: #5f7995;
-// $background-color: #222;
-$background-gradient: linear-gradient(45deg, #68E9B0, #99EEF7);
-$text-color: #000;
+$background-color: #fff;
+$text-color: #222;
 
 // $footer-bg-color: #d5ceca;
 // $footer-bg-color: #5f7995;
@@ -179,68 +129,6 @@ $color-orange-600: #fb8c00;
 $color-teal-600: #00897b;
 
 
-// $rf-link-color: $color-orange-600;
-// $rf-link-visited-color: $color-orange-600;
-// $rf-link-active-color: $color-orange-600;
-// $rf-link-hover-color: $color-orange-600;
-
-// $tw-link-color: $color-light-blue-600;
-// $tw-link-visited-color: $color-light-blue-600;
-// $tw-link-active-color: $color-light-blue-600;
-// $tw-link-hover-color: $color-light-blue-600;
-
-
-// $link-color: $text-color;
-// $link-visited-color: $text-color;
-// $link-active-color: $color-grey-600;
-// $link-hover-color: $color-orange;
-
-// $heading-link-color: $color-red;
-// $heading-link-visited-color: $color-red;
-// $heading-link-active-color: $color-grey-600;
-// $heading-link-hover-color: $text-color;
-
-// $link-color: #398fd1;
-// $link-visited-color: #62a6db;
-// $link-active-color: $color-grey-600;
-// $link-hover-color: $text-color;
-
-// $link-color: #2f79af;
-// $link-visited-color: lighten($link-color, 12%);
-// $link-active-color: $color-grey-600;
-// $link-hover-color: $text-color;
-
-// $link-color: #0b79e5;
-// $link-visited-color: lighten($link-color, 10%);
-// $link-active-color: $color-grey-600;
-// $link-hover-color: $text-color;
-
-// $link-color: #b97048;
-// $link-visited-color: #9d8376;
-// $link-active-color: $color-grey-600;
-// $link-hover-color: $text-color;
-
-// $link-color: #c37000;
-// $link-visited-color: #d29440;
-// $link-active-color: $color-grey-600;
-// $link-hover-color: $text-color;
-
-// $link-heading-color: $heading-color;
-// $link-heading-visited-color: $heading-color;
-// $link-heading-active-color: $color-grey-600;
-// $link-heading-hover-color: $link-hover-color;
-
-// $link-category-color: $color-orange;
-// $link-category-visited-color: lighten($link-category-color, 12%);
-// $link-category-active-color: $color-grey-600;
-// $link-category-hover-color: $text-color;
-
-
-
-
-$heading-weight: 700;
-
-
 
 // Width of the content area
 $content-width: 1100px;
@@ -274,30 +162,30 @@ $width-1024: 1024px;
 // }
 
 @mixin media-query-max-width($max) {
-  @media screen and (max-width: $max) {
-    @content;
-  }
+	@media screen and (max-width: $max) {
+		@content;
+	}
 }
 
 @mixin media-query-min-width($min) {
-  @media screen and (min-width: $min) {
-    @content;
-  }
+	@media screen and (min-width: $min) {
+		@content;
+	}
 }
 
 @mixin media-query-min-and-max-width($min, $max) {
-  @media screen and (min-width: $min) and (max-width: $max) {
-    @content;
-  }
+	@media screen and (min-width: $min) and (max-width: $max) {
+		@content;
+	}
 }
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import 
-  'style',
-  'syntax-highlighting',
-  'font';
+	'style',
+	'syntax-highlighting',
+	'font';
 
-  // 'base', 
-  // 'layout',
-  // 'syntax-highlighting';
+	// 'base', 
+	// 'layout',
+	// 'syntax-highlighting';
