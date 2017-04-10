@@ -1,8 +1,10 @@
 ---
 authors: [jonathan]
-categories: [arte-y-diseno]
+categories: [arte]
+cover: https://www.dropbox.com/s/te3scdrxsn5955t/astral-projection.jpg?raw=1
 date: 2016-10-14
 layout: post
+tags: [destacado]
 title: 'Arte en modo texto'
 ---
 
@@ -20,12 +22,24 @@ Desde ese instante, una brecha que abarca casi treinta años, grupos de arte han
 
 Este es sin duda el medio más antiguo para trabajar en el *artscene*. Ha existido desde hace mucho tiempo. <abbr title="American Standard Code for Information Interchange">ASCII</abbr> siempre ha sido el conjunto de caracteres estándar de las <abbr title="Personal Computers">PC's</abbr> y a alguien se le ocurrió crear arte con esto. Hay dos formas principales de *ASCII art*, la de la vieja y la de la nueva escuela.
 
-<figure>
-	<a href="https://www.instagram.com/p/BHc9sH8BAPh/">
-		<img src="https://www.dropbox.com/s/te3scdrxsn5955t/astral-projection.jpg?raw=1" alt="Astral projection">
-	</a>
-	<figcaption>Astral projection por mattmatthew67</figcaption>
-</figure>
+<ul class="gallery gallery-2up">
+	<li class="gallery-item">
+		<figure>
+			<a href="https://www.instagram.com/p/BHc9sH8BAPh/" target="_blank">
+				<img src="https://www.dropbox.com/s/te3scdrxsn5955t/astral-projection.jpg?raw=1" alt="ASCII art: Astral projection">
+			</a>
+			<figcaption>ASCII art «Astral projection» por mattmatthew</figcaption>
+		</figure>
+	</li>
+	<li class="gallery-item">
+		<figure>
+			<a href="http://blocktronics.org/thomas-carli-jarlier/" target="_blank">
+				<img src="https://www.dropbox.com/s/0snxtzwdiqik6zn/thomas-carli-jarlier.ans_-612x764.png?raw=1" alt="ANSI art: thomas-carli-jarlier">
+			</a>
+			<figcaption>ANSI art «thomas-carli-jarlier»</figcaption>
+		</figure>
+	</li>
+</ul>
 
 Los artistas de la vieja escuela utilizan los caracteres `/ \ | : ;` y similares para crear logotipos sencillos, por lo general para agregarlos en los archivos `file_id.diz`, archivos que todavía son  utilizados por la comunidad [*warez*][warez] en sus lanzamientos de software sin licencia.
 
@@ -33,9 +47,9 @@ Hoy en día la forma de arte ASCII de la nueva escuela es la más popular. Esta 
 
 ## Arte ANSI
 
-Nació a finales de 1980 y fue desarrollado para ofrecer un formato común para la visualización de gráficos en los BBS's. Esto fue lo que realmente hizo que la comunidad comenzara. Utilizandose para decorar los programas de MS-DOS y BBSes. La popularidad del arte ANSI creció cuando en 1986 Ian E. Davis lanzó la aplicación [TheDraw](https://en.wikipedia.org/wiki/TheDraw), que no sólo facilitó enormemente la edición de arte ANSI, sino que también contenía una amplia variedad de fuentes y configuraciones.
+Nació a finales de 1980 y fue desarrollado para ofrecer un formato común para la visualización de gráficos en los BBS's. Esto fue lo que realmente hizo que la comunidad comenzara. Utilizandose para decorar los programas de MS-DOS y BBSes. La popularidad del arte <abbr title="American National Standards Institute">ANSI</abbr> creció cuando en 1986 Ian E. Davis lanzó la aplicación [TheDraw](https://en.wikipedia.org/wiki/TheDraw), que no sólo facilitó enormemente la edición de arte ANSI, sino que también contenía una amplia variedad de fuentes y configuraciones.
 
-El <abbr title="American National Standards Institute">ANSI</abbr> *art* es similar al ASCII *art*, pero esta construido por un conjunto de 256 caracteres. La fuente más utilizada es la [IBM Code Page 437](https://es.wikipedia.org/wiki/P%C3%A1gina_de_c%C3%B3digos_437) en modo texto 80x25, también denominada fuente OEM o [ASCII extendido](https://es.wikipedia.org/wiki/ASCII_extendido). El conjunto de caracteres extendido permite a los artistas crear «bloques de arte» con caracteres. Algunos de estos caracteres regularmente se usan para crear efectos de sombreado, ya que permite al artista mezclar los colores del primer y segundo plano.
+El ANSI *art* es similar al ASCII *art*, pero esta construido por un conjunto de 256 caracteres. La fuente más utilizada es la [IBM Code Page 437](https://es.wikipedia.org/wiki/P%C3%A1gina_de_c%C3%B3digos_437) en modo texto 80x25, también denominada fuente OEM o [ASCII extendido](https://es.wikipedia.org/wiki/ASCII_extendido). El conjunto de caracteres extendido permite a los artistas crear «bloques de arte» con caracteres. Algunos de estos caracteres regularmente se usan para crear efectos de sombreado, ya que permite al artista mezclar los colores del primer y segundo plano.
 
 Una típica paleta consiste de 16 colores y 8 colores de fondo. Debido a que muchos artistas encontraron los 8 colores de fondo demasiado limitados, ampliaron el espectro de colores de fondo para que coincidan con los colores de primer plano, son conocidos como «colores iCE».
 
@@ -50,7 +64,6 @@ Si les interesa conocer más, les comparto unos enlaces de comunidades, artícul
 - <http://blocktronics.org/2m-drewmaster-xb/>
 - <http://blocktronics.org/avg-blockfonttobym-ans/>
 - <http://blocktronics.org/tcf-mina/>
-- <http://blocktronics.org/thomas-carli-jarlier/>
 - [GETV: ANSI Art for the Masses](https://www.youtube.com/watch?v=r_cYOi3pnhA) - Reportaje de una exposición.
 - [Mistigris](http://mistigris.org/) - Outlier computer arts since 1994.
 - [Sixteen Colors ANSI/ASCII Art Archive](http://sixteencolors.net/).

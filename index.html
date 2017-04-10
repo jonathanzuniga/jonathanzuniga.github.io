@@ -2,6 +2,213 @@
 layout: default
 ---
 
+{% for post in site.posts limit: 5 %}
+	<article class="post">
+		<header class="post-header">
+			<h2 class="post-title">
+				<a class="post-link" href="{{ post.url }}">
+					{{ post.title }}
+				</a>
+			</h2>
+
+			<p class="post-meta">
+				<span class="post-date">
+					<i class="fa fa-clock-o" aria-hidden="true"></i>
+					<a class="post-dateLink" href="{{ post.url }}">
+						{% include date.html %}
+					</a>
+				</span>
+				<span class="post-categories">
+					<i class="fa fa-folder-o" aria-hidden="true"></i>
+					{% assign sorted_categories = post.categories | sort %}
+					{% for category in sorted_categories %}
+						{% if category == 'codigo' %}<a class="post-categoryLink" href="{{ site.baseurl }}/categoria/{{ category }}">código
+						{% elsif category == 'diseno' %}<a class="post-categoryLink" href="{{ site.baseurl }}/categoria/{{ category }}">diseño
+						{% else %}<a class="post-categoryLink" href="{{ site.baseurl }}/categoria/{{ category }}">{{ category | replace: '-', ' ' }}
+						{% endif %}</a>{% if forloop.last == false %}, {% endif %}
+					{% endfor %}
+				</span>
+			</p>
+		</header>
+
+		<section class="post-content">
+			{{ post.content }}
+		</section>
+	</article>
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
+<article class="post">
+	{% for post in site.posts limit: 1 %}
+		<header class="post-header">
+			<h2 class="post-title">
+				{{ post.title }}
+			</h2>
+
+			<div>
+				—
+				<a class="post-date" href="{{ post.url }}">
+					{% include date.html %}
+				</a>
+				—
+			</div>
+		</header>
+
+		<section class="post-content">
+			{{ post.content }}
+		</section>
+	{% endfor %}
+</article>
+{% endcomment %}
+
+
+
+
+
+
+
+
+
+{% comment %}
+<div class="calendar">
+	<div class="calendar-headerDayNames">
+		<div class="day-monday">Lun.</div>
+		<div class="day-tuesday">Mar.</div>
+		<div class="day-wednesday">Mié.</div>
+		<div class="day-thursday">Jue.</div>
+		<div class="day-friday">Vie.</div>
+		<div class="day-saturday">Sáb.</div>
+		<div class="day-sunday">Dom.</div>
+	</div>
+	<div class="calendar-days">
+	</div>
+</div>
+{% endcomment %}
+
+
+
+
+
+
+
+
+
+{% comment %}
+<h2>
+	Publicaciones recientes
+</h2>
+
+{% for post in site.posts %}
+	{% assign current_date = post.date | date: '%Y' %}
+	{% if current_date != date %}
+		{% unless forloop.first %}</ul>{% endunless %}
+		<p>
+			{{ current_date }}
+		</p>
+		<ul>
+		{% assign date = current_date %}
+	{% endif %}
+		<li>
+			<a href="{{ post.url }}">
+				{{ post.title }}
+			</a>
+		</li>
+	{% if forloop.last %}</ul>{% endif %}
+{% endfor %}
+
+<p>
+	Sobre el autor
+</p>
+
+<p>
+	Jonathan es un desarrollador web viviendo y trabajando en la cambiante ciudad de Tijuana, BC.
+	<a href="{{ site.baseurl }}/autor" class="more">
+	  Además
+	  <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+	</a>
+</p>
+{% endcomment %}
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
+{% for post in site.posts limit: 10 %}
+	{% if post.categories contains 'observaciones' %}
+		<div class="post post-observation">
+			<div class="post-content">
+				{{ post.content }}
+			</div>
+
+			<p class="post-date">
+				<a class="post-link" href="{{ post.url }}">
+					≡
+				</a>
+				{% include date.html %}
+			</p>
+		</div>
+	{% else %}
+		<div class="post">
+			<h2 class="post-title">
+				<a class="post-link" href="{{ post.url }}">
+					{{ post.title }}
+				</a>
+			</h2>
+
+			<div class="post-content">
+				{{ post.content }}
+			</div>
+
+			<p class="post-date">
+				<a class="post-link" href="{{ post.url }}">
+					≡
+				</a>
+				{% include date.html %}
+			</p>
+		</div>
+	{% endif %}
+{% endfor %}
+{% endcomment %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
 <div id="posts">
 	{% for post in site.posts %}
 		{% if post.cover %}
@@ -38,11 +245,11 @@ layout: default
 </div>
 
 <div id="more-posts">
-  <a href="{{ site.baseurl }}/archivo">
-    Previamente en el blog...
-  </a>
+	<a href="{{ site.baseurl }}/archivo">
+		Previamente en el blog...
+	</a>
 </div>
-
+{% endcomment %}
 
 
 

@@ -1,10 +1,8 @@
 ---
-author: jonathan
-categories: [momentos]
-cover: 
+authors: [jonathan]
+categories: [observaciones]
 date: 2016-10-16
 layout: post
-tags: [luna, planeta, simbologia, noche, metafisica]
 title: 'Luna llena'
 ---
 

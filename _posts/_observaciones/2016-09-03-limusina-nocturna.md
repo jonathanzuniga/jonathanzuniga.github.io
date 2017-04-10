@@ -1,10 +1,8 @@
 ---
-author: jonathan
-categories: [momentos]
-cover: 
+authors: [jonathan]
+categories: [observaciones]
 date: 2016-09-03 16:59:00
 layout: post
-tags: [limusina, tijuana, vida-nocturna, noche]
 title: 'Limusina nocturna'
 ---
 

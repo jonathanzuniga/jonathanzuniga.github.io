@@ -1,55 +1,141 @@
-<header id="header">
-  {% assign author = site.authors['jonathan'] %}
-  <h2 class="logo">
-    <a class="site-title" href="{{ site.baseurl }}/">
-      <img src="images/logo.svg">
-    </a>
-  </h2>
+<header class="header">
+	<div class="topBar">
+		<div class="wrapper">
+			<div class="header-leftColumn">
+				<div class="inner">
+					{% assign author = site.authors['jonathan'] %}
+					<a class="header-title" href="{{ site.baseurl }}/">
+						{{ author.name }} {{ author.lastname }}
+					</a>
+				</div>
+			</div>
 
-  <ul id="nav">
-    <li class="list-inline-item">
-      <a href="{{ site.baseurl }}/archivo">
-        Archivo
-      </a>
-    </li>
-    <li>
-      <a class="author" href="{{ site.baseurl }}/autor" class="more">
-        Autor
-      </a>
-    </li>
-    <li>
-      <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
-        RSS
-      </a>
-    </li>
-  </ul>
+			<div class="header-rightColumn">
+				<div class="inner">
+					<div class="search">
+						<form action="/buscar" method="get">
+							<div class="search-group">
+								<input class="search-field" id="search-box" name="consulta" placeholder="" required title="Buscar" type="search">
+								<i class="fa fa-search icon" aria-hidden="true"></i>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% if page.url == '/' %}
+		<div class="subBar">
+			<div class="wrapper">
+				<div class="introduction">
+					{{ site.description }}
+					<a href="{{ site.baseurl }}/autor" class="more">
+						Además
+						<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+					</a>
+				</div>
+
+				<hr>
+			</div>
+		</div>
+	{% endif %}
+
+{% comment %}
+	{% if page.url == '/' %}
+		<div class="featuredGrid">
+			<div class="wrapper">
+				<div class="featuredGrid-cells">
+					{% for post in site.tags['destacado'] limit 6 %}
+						<div class="featuredGrid-cell featuredGrid-cell{{ forloop.index }}">
+							<a class="featuredGrid-postLink" href="{{ post.url }}">
+								{% assign sorted_categories = post.categories | sort %}
+								<div class="featuredGrid-post {% for category in sorted_categories %} category-{{ category }} {% endfor %}" style="background-image: url({{ post.cover }});">
+								</div>
+								<div class="featuredGrid-postData">
+									<h2 class="featuredGrid-postTitle">
+										{{ post.title }}
+									</h2>
+									<div class="featuredGrid-postDate">
+										{% include date.html %}
+									</div>
+								</div>
+							</a>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	{% endif %}
+{% endcomment %}
 </header>
 
 
 
 
 
+
+
+
+
+{% comment %}
+<header class="header">
+	{% assign author = site.authors['jonathan'] %}
+	<h1 class="header-title">
+		<a class="header-titleLink" href="{{ site.baseurl }}/">
+			Notas de {{ author.name }} {{ author.lastname }}
+		</a>
+	</h1>
+
+	<ul class="header-nav">
+		<li class="header-navItem">
+			<a href="{{ site.baseurl }}/">
+				Inicio
+			</a>
+		</li>
+		<li class="header-navItem">
+			<a href="{{ site.baseurl }}/archivo">
+				Archivo
+			</a>
+		</li>
+		<li class="header-navItem">
+			<a href="{{ site.baseurl }}/autor" class="more">
+				Autor
+			</a>
+		</li>
+		<li class="header-navItem">
+			<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
+				RSS
+			</a>
+		</li>
+	</ul>
+</header>
+{% endcomment %}
+
+
+
+
 {% comment %}
 <header id="header">
-  {% assign author = site.authors['jonathan'] %}
-  <a class="site-title" href="{{ site.baseurl }}/">
-    {{ author.name }} {{ author.lastname }}
-  </a>
+	{% assign author = site.authors['jonathan'] %}
+	<a class="site-title" href="{{ site.baseurl }}/">
+		{{ author.name }} {{ author.lastname }}
+	</a>
 
-  <nav id="nav">
-    <ul>
-      <li>
-        <a class="author" href="{{ site.baseurl }}/autor" class="more">
-          Autor
-        </a>
-      </li>
-      <li>
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
-          RSS
-        </a>
-      </li>
-    </ul>
-  </nav>
+	<nav id="nav">
+		<ul>
+			<li>
+				<a class="author" href="{{ site.baseurl }}/autor" class="more">
+					Autor
+				</a>
+			</li>
+			<li>
+				<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
+					RSS
+				</a>
+			</li>
+		</ul>
+	</nav>
 </header>
 {% endcomment %}
 
@@ -65,34 +151,34 @@
 
 {% comment %}
 <header id="header" class="text-xs-center">
-  {% assign author = site.authors['jonathan'] %}
-  <h1>
-    <a href="{{ site.baseurl }}/">
-     {{ author.name }} {{ author.lastname }}
-    </a>
-  </h1>
+	{% assign author = site.authors['jonathan'] %}
+	<h1>
+		<a href="{{ site.baseurl }}/">
+		 {{ author.name }} {{ author.lastname }}
+		</a>
+	</h1>
 
-  <ul class="list-inline">
-    <li class="list-inline-item">
-      <a href="{{ site.baseurl }}/autor">
-        Autor
-      </a>
-    </li>
-    {% if author.github_username %}
-      <li class="list-inline-item">
-        <a href="https://github.com/{{ author.github_username }}" target="_blank">
-          GitHub
-        </a>
-      </li>
-    {% endif %}
-    {% if author.twitter_username %}
-      <li class="list-inline-item">
-        <a href="https://twitter.com/{{ author.twitter_username }}" target="_blank">
-          Twitter
-        </a>
-      </li>
-    {% endif %}
-  </ul>
+	<ul class="list-inline">
+		<li class="list-inline-item">
+			<a href="{{ site.baseurl }}/autor">
+				Autor
+			</a>
+		</li>
+		{% if author.github_username %}
+			<li class="list-inline-item">
+				<a href="https://github.com/{{ author.github_username }}" target="_blank">
+					GitHub
+				</a>
+			</li>
+		{% endif %}
+		{% if author.twitter_username %}
+			<li class="list-inline-item">
+				<a href="https://twitter.com/{{ author.twitter_username }}" target="_blank">
+					Twitter
+				</a>
+			</li>
+		{% endif %}
+	</ul>
 </header>
 
 <hr>
@@ -104,61 +190,61 @@
 
 {% comment %}
 <header id="header">
-  <div class="row">
-    <div class="posts col-xs-10 col-lg-7 offset-lg-1">
-      <h1>
-        <a href="{{ site.baseurl }}/">
-          {{ site.title }}
-        </a>
-      </h1>
+	<div class="row">
+		<div class="posts col-xs-10 col-lg-7 offset-lg-1">
+			<h1>
+				<a href="{{ site.baseurl }}/">
+					{{ site.title }}
+				</a>
+			</h1>
 
-      <!-- <div class="intro">
-        <h2 class="lead">
-          Jonathan es un desarrollador web viviendo y trabajando en la cambiante ciudad de Tijuana, BC.
-          <a href="{{ site.baseurl }}/autor" class="more">
-            Además
-            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-          </a>
-        </h2>
-      </div> -->
-    </div>
+			<!-- <div class="intro">
+				<h2 class="lead">
+					Jonathan es un desarrollador web viviendo y trabajando en la cambiante ciudad de Tijuana, BC.
+					<a href="{{ site.baseurl }}/autor" class="more">
+						Además
+						<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+					</a>
+				</h2>
+			</div> -->
+		</div>
 
-    <div class="col-xs-2 col-lg-3">
-      <ul id="navigation" class="list-inline">
-        <li class="list-inline-item">
-          <a href="{{ site.baseurl }}/">Artículos</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="{{ site.baseurl }}/archivo">Archivo</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="{{ site.baseurl }}/autor">Autor</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+		<div class="col-xs-2 col-lg-3">
+			<ul id="navigation" class="list-inline">
+				<li class="list-inline-item">
+					<a href="{{ site.baseurl }}/">Artículos</a>
+				</li>
+				<li class="list-inline-item">
+					<a href="{{ site.baseurl }}/archivo">Archivo</a>
+				</li>
+				<li class="list-inline-item">
+					<a href="{{ site.baseurl }}/autor">Autor</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 
-  {% if page.url == '/' %}
-    <div class="row">
-      <div class="col-xs-12">
-        <div id="recommended-posts">
-        </div>
-      </div>
-    </div>
-  {% endif %}
+	{% if page.url == '/' %}
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="recommended-posts">
+				</div>
+			</div>
+		</div>
+	{% endif %}
 
-  <!-- <div class="row">
-    <div class="col-xs-12 col-lg-8 offset-lg-2">
-      <div class="search">
-        <form action="/buscar" method="get">
-          <div class="icon input">
-            <input class="search-field" id="search-box" name="consulta" placeholder="Buscar una publicación" required title="Buscar" type="search">
-            <i class="fa fa-search icon" aria-hidden="true"></i>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div> -->
+	<!-- <div class="row">
+		<div class="col-xs-12 col-lg-8 offset-lg-2">
+			<div class="search">
+				<form action="/buscar" method="get">
+					<div class="icon input">
+						<input class="search-field" id="search-box" name="consulta" placeholder="Buscar una publicación" required title="Buscar" type="search">
+						<i class="fa fa-search icon" aria-hidden="true"></i>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div> -->
 </header>
 {% endcomment %}
 
@@ -168,28 +254,28 @@
 
 {% comment %}
 <header id="header">
-  <div id="logo">
-    <a href="{{ site.baseurl }}/">
-      <img src="{{ site.baseurl }}/images/logo.png">
-    </a>
-  </div>
+	<div id="logo">
+		<a href="{{ site.baseurl }}/">
+			<img src="{{ site.baseurl }}/images/logo.png">
+		</a>
+	</div>
 
-  <nav id="navigation">
-    <ul>
-      <li class="active">
-        <a href="{{ site.baseurl }}/">Artículos recientes</a>
-      </li>
-      <li>
-        <a href="">Artículo al azar</a>
-      </li>
-      <li>
-        <a href="{{ site.baseurl }}/archivos">Archivo</a>
-      </li>
-      <li>
-        <a href="{{ site.baseurl }}/autor">Autor</a>
-      </li>
-    </ul>
-  </nav>
+	<nav id="navigation">
+		<ul>
+			<li class="active">
+				<a href="{{ site.baseurl }}/">Artículos recientes</a>
+			</li>
+			<li>
+				<a href="">Artículo al azar</a>
+			</li>
+			<li>
+				<a href="{{ site.baseurl }}/archivos">Archivo</a>
+			</li>
+			<li>
+				<a href="{{ site.baseurl }}/autor">Autor</a>
+			</li>
+		</ul>
+	</nav>
 </header>
 {% endcomment %}
 
@@ -197,59 +283,59 @@
 
 {% comment %}
 <header id="header">
-  <span class="header-logo">
-    <a class="header-logo-link" href="{{ site.baseurl }}/">
-      {{ site.title }}
-    </a>
-  </span>
+	<span class="header-logo">
+		<a class="header-logo-link" href="{{ site.baseurl }}/">
+			{{ site.title }}
+		</a>
+	</span>
 
-  <nav class="header-nav">
-    <ul>
-      {% assign current = page.url | downcase | split: '/' %}
-      <li class="nav-item">
-        {% if current[1] == 'articulos' %}
-          Artículos
-        {% else %}
-          <a href="{{ site.baseurl }}/articulos">
-            Artículos
-          </a>
-        {% endif %}
-      </li>
-      <li class="nav-item">
-        {% if current[1] == 'historias' %}
-          Historias
-        {% else %}
-          <a href="{{ site.baseurl }}/historias">
-            Historias
-          </a>
-        {% endif %}
-      </li>
-      <li class="nav-item">
-        {% if current[1] == 'recursos' %}
-          Recursos
-        {% else %}
-          <a href="{{ site.baseurl }}/recursos">
-            Recursos
-          </a>
-        {% endif %}
-      </li>
-      <li class="nav-item">
-        {% if current[1] == 'autor' %}
-          Autor
-        {% else %}
-          <a href="{{ site.baseurl }}/autor">
-            Autor
-          </a>
-        {% endif %}
-      </li>
-    </ul>
-  </nav>
+	<nav class="header-nav">
+		<ul>
+			{% assign current = page.url | downcase | split: '/' %}
+			<li class="nav-item">
+				{% if current[1] == 'articulos' %}
+					Artículos
+				{% else %}
+					<a href="{{ site.baseurl }}/articulos">
+						Artículos
+					</a>
+				{% endif %}
+			</li>
+			<li class="nav-item">
+				{% if current[1] == 'historias' %}
+					Historias
+				{% else %}
+					<a href="{{ site.baseurl }}/historias">
+						Historias
+					</a>
+				{% endif %}
+			</li>
+			<li class="nav-item">
+				{% if current[1] == 'recursos' %}
+					Recursos
+				{% else %}
+					<a href="{{ site.baseurl }}/recursos">
+						Recursos
+					</a>
+				{% endif %}
+			</li>
+			<li class="nav-item">
+				{% if current[1] == 'autor' %}
+					Autor
+				{% else %}
+					<a href="{{ site.baseurl }}/autor">
+						Autor
+					</a>
+				{% endif %}
+			</li>
+		</ul>
+	</nav>
 
-  <form action="/buscar" class="header-search" method="get">
-    <div class="icon input">
-      <input class="header-search-field" id="search-box" name="consulta" placeholder="Buscar publicación..." required title="Buscar" type="search">
-      <i class="fa fa-search icon" aria-hidden="true"></i>
-    </div>
-  </form>
+	<form action="/buscar" class="header-search" method="get">
+		<div class="icon input">
+			<input class="header-search-field" id="search-box" name="consulta" placeholder="Buscar publicación..." required title="Buscar" type="search">
+			<i class="fa fa-search icon" aria-hidden="true"></i>
+		</div>
+	</form>
 </header>
 {% endcomment %}

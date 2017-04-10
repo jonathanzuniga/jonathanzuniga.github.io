@@ -1,6 +1,6 @@
 ---
 authors: [jonathan]
-categories: [entretenimiento]
+categories: [juegos]
 date: 2016-01-16 13:39:00
 layout: post
 title: 'DOOM regresa con un nuevo nivel'

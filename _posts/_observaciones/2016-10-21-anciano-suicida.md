@@ -1,10 +1,8 @@
 ---
-author: jonathan
-categories: [momentos]
-cover: 
+authors: [jonathan]
+categories: [observaciones]
 date: 2016-10-21
 layout: post
-tags: [anciano, suicida, tijuana]
 title: 'Anciano suicida'
 ---
 

@@ -1,10 +1,10 @@
 ---
 layout: page
 permalink: /autor
-title: Hola y bienvenido
+title: Sobre el autor
 ---
 
-<p class="lead">Mi nombre es Jonathan, soy un desarrollador originario de la ciudad de Tijuana. Actualmente trabajo como desarrollador web en Morzan Co.</p>
+Hola, mi nombre es Jonathan Zúñiga, soy un desarrollador web viviendo y trabajando en la cambiante ciudad de Tijuana, BC.
 
 Mi interés por el arte cambió gradualmente al diseño y desarrollo web. <!--, antes de asentarme finalmente en el diseño y desarrollo de videojuegos.--> He trabajado en diferentes campos del desarrollo web desde lo más visible del *front-end* hasta lo más oscuro del *back-end*. Me enfoco en dar al usuario la experiencia más fácil en todos sus dispositivos.
 

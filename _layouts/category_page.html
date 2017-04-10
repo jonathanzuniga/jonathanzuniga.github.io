@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<h1 class="basic-title">
+	Categoría: 
+	<span class="capitalize">
+		{% if page.category == 'codigo' %}
+			código
+		{% else %}
+			{{ page.category | capitalize }}
+		{% endif %}
+	</span>
+</h1>
+
+<p class="category-description">
+	{{ page.description }}
+</p>
+
+<div class="postsByCategory">
+	{% for post in site.categories[page.category] %}
+		<article class="post">
+			<header class="post-header">
+				<h3 class="post-title">
+					<a class="post-link" href="{{ post.url }}">
+						{{ post.title }}
+					</a>
+				</h3>
+
+				<p class="post-meta">
+					<span class="post-date">
+						<i class="fa fa-clock-o" aria-hidden="true"></i>
+						<a class="post-dateLink" href="{{ post.url }}">
+							{% include date.html %}
+						</a>
+					</span>
+					<span class="post-categories">
+						<i class="fa fa-folder-o" aria-hidden="true"></i>
+						{% assign sorted_categories = post.categories | sort %}
+						{% for category in sorted_categories %}
+							{% if category == 'codigo' %}<a class="post-categoryLink" href="{{ site.baseurl }}/categoria/{{ category }}">código
+							{% elsif category == 'desarrollo-movil' %}<a class="post-categoryLink" href="{{ site.baseurl }}/categoria/{{ category }}">desarrollo móvil
+							{% elsif category == 'fuentes-y-tipografias' %}<a class="post-categoryLink" href="{{ site.baseurl }}/categoria/{{ category }}">fuentes y tipografías
+							{% else %}<a class="post-categoryLink" href="{{ site.baseurl }}/categoria/{{ category }}">{{ category | replace: '-', ' ' }}
+							{% endif %}</a>{% if forloop.last == false %}, {% endif %}
+						{% endfor %}
+					</span>
+				</p>
+			</header>
+
+			<section class="post-content">
+				{{ post.content | markdownify | strip_html | truncatewords: 45 }}
+			</section>
+		</article>
+	{% endfor %}
+</div>

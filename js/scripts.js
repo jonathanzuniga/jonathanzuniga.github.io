@@ -3,11 +3,99 @@ jQuery(document).ready(function($) {
 // 		$(this).wrap('<li class="tags-item"/>');
 // 	});
 
-	$('.search .search-field').focusin(function() {
+	// var posts = [
+	// 	['1', 'title 1', 'images/test.gif']
+	// ];
+
+	// var days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+	// var month = 11;
+	// var year = 2017;
+	// var first_day = getFirstDayOfMonth(year, month);
+	// var month_days = getMonthDays(year, month);
+
+	// // Append the first empty days in the calendar.
+	// if (first_day == 0)
+	// 	first_day = 7;
+	// for(i = 0; i < first_day - 1; i++) {
+	// 	$('.calendar-days').append('<div class="emptyDay day-' + days[i + 1] + '"><div class="inner"><img class="emptyDay-image" src="images/empty-day.png"><div class="day-number">—</div></div></div>');
+	// }
+
+	// // Append all the month days.
+	// for(i = 0; i < month_days; i++) {
+	// 	var d = i;
+	// 	d = d + 1;
+	// 	$('.calendar-days').append('<div class="day-' + d +' day-' + getDayName(year, month, d) + '" data-post-date-day="' + d + '"><div class="inner"><img class="emptyDay-image" src="images/empty-day.png"><div class="day-number">' + d + '</div></div></div>');
+	// }
+
+	// // Append the posts.
+	// var length = posts.length;
+	// for(i = 0; i < length; i++) {
+	// 	// console.log(posts[i][0]);
+	// 	// $('div[data-post-date-day="' + posts[i][0] + '"]').append('<div class="post-title">' + posts[i][1] + '</div><img class="post-cover" src="' + posts[i][2] + '">');
+	// 	$('.day-' + posts[i][0]).children('.inner').prepend('<img class="post-cover" src="' + posts[i][2] + '">').find('.emptyDay-image').remove();
+	// }
+
+	// Get the first day name of the month.
+	// function getFirstDayNameOfMonth(year, month) {
+	// 	var days = ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'];
+	// 	var firstOfMonth = new Date(year, month, 1);
+	// 	return days[firstOfMonth.getDay()];
+	// }
+
+	// // Get the first day (number) of the month.
+	// function getFirstDayOfMonth(year, month) {
+	// 	var firstOfMonth = new Date(year, month, 1);
+	// 	return firstOfMonth.getDay();
+	// }
+
+	// // Note that month is 0-based, like in the Date object. Adjust if necessary.
+	// function getMonthDays(year, month) {
+	// 	var isLeap = ((year % 4) == 0 && ((year % 100) != 0 || (year % 400) == 0));
+	// 	return [31, (isLeap ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
+	// }
+
+	// // Get the day name of the month day.
+	// function getDayName(year, month, day) {
+	// 	var date = new Date(year, month, day);
+	// 	return days[date.getDay()];
+	// }
+
+	// $('.search').stick_in_parent({
+	// 	parent: 'body',
+	// 	offset_top: 50
+	// });
+
+	// $('.sidebar').stick_in_parent({
+	// 	parent: 'body',
+	// 	offset_top: 137
+	// });
+
+	$('.search-field').focusin(function() {
 		$(this).parent().addClass('focus');
 	}).focusout(function() {
 		$(this).parent().removeClass('focus');
 	});
+
+	// $('.featuredGrid-post').each(function() {
+	// 	if ($(this).hasClass('category-diseno')) {
+	// 		$(this).css({
+	// 			'background-blend-mode': 'lighten, normal',
+	// 			'background-image': 
+	// 				'linear-gradient(to bottom, rgba(0, 112, 224, 0.3) 0%, rgba(0, 112, 224, 0.3) 100%), \
+	// 				 url(' + $(this).data('post-cover') + ')'
+	// 		});
+	// 	}
+	// });
+
+	// $('.post-categoryLink').each(function() {
+	// 	var postCategory = $(this).data('post-category');
+	// 	var menuCategory = $('.category-link').data('menu-category');
+
+	// 	console.log('postCategory: ' + postCategory + ', menuCategory: ' + menuCategory);
+
+	// 	if (postCategory == menuCategory)
+	// 		$('.category-link[data-menu-category="' + postCategory + '"]').addClass('category-active');
+	// });
 
 // 	$('.aside-entries-post .teaser-aside-entries:last-child').hide();
 // 	$('.aside-entries-post .teaser-aside-entries:visible:last').css('border-bottom', 'none');
@@ -24,7 +112,7 @@ jQuery(document).ready(function($) {
 // 		}
 // 	});
 
-	$('.posts .post-excerpt figure:hidden').remove();
+	// $('.posts .post-excerpt figure:hidden').remove();
 
 	// var configProfile = {
 	// 	'domId': 'latest-tweets',

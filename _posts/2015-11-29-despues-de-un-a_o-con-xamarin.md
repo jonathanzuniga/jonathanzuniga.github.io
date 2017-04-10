@@ -1,9 +1,10 @@
 ---
 authors: [jonathan]
-categories: [desarrollo-movil]
+categories: [codigo]
 cover: https://www.dropbox.com/s/vf2izk773g5aj6r/cover.jpg?raw=1
 date: 2015-11-29 14:50:00
 layout: post
+tags: [destacado]
 title: 'Después de un año con Xamarin'
 ---
 

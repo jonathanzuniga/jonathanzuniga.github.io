@@ -1,6 +1,6 @@
 ---
 authors: [jonathan]
-categories: [desarrollo-movil]
+categories: [codigo]
 date: 2016-11-24
 layout: post
 title: 'Comenzando con Xamarin.Forms'
@@ -19,7 +19,7 @@ Xamarin.Forms contiene un conjunto de elementos de [más de 40 controles y pági
 La instalación y configuración del hardware y software dependerá de las plataformas móviles sobre las cuales estemos pensando desarrollar. Además, dependerá de la plataforma de cómputo sobre la cual nos sintamos más agusto, una Mac o una PC.
 
 <div class="table-responsive">
-	<table class="table">
+	<table>
 		<thead>
 			<tr>
 				<th>

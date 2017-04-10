@@ -1,10 +1,8 @@
 ---
-author: jonathan
-categories: [momentos]
-cover: 
+authors: [jonathan]
+categories: [observaciones]
 date: 2016-10-02 19:01:00
 layout: post
-tags: [restaurante, vecino, tijuana, persona, casualidad]
 title: 'Conocidos en restaurante'
 ---
 

@@ -1,10 +1,8 @@
 ---
-author: jonathan
-categories: [momentos]
-cover: 
+authors: [jonathan]
+categories: [observaciones]
 date: 2016-10-19
 layout: post
-tags: [panquecito, chocolate, oficina]
 title: 'Panquecitos de chocolate'
 ---
 
