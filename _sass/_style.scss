@@ -19,10 +19,11 @@ body {
 }
 
 body {
-	background-color: #ededed;
+	background-color: $background-color;
 	color: $text-color;
 	font-family: $base-font-family;
 	font-size: $base-font-size;
+	font-weight: normal;
 	line-height: $base-line-height;
 }
 
@@ -67,7 +68,7 @@ a {
 hr {
 	background-color: $border-color;
 	border: none;
-	height: 0.25em;
+	height: 2px;
 	margin: 1.5rem 0;
 }
 
@@ -105,6 +106,20 @@ hr {
 	clear: both;
 }
 
+.header {
+	background-color: #fff;
+	margin-bottom: 1.5rem;
+	width: 100%;
+}
+
+@media (max-width: 640px) {
+	.header {
+		box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.15);
+		margin-bottom: 0;
+		position: fixed;
+	}
+}
+
 @media (max-width: 799px) {
 	.header-rightColumn {
 		display: none;
@@ -115,30 +130,22 @@ hr {
 	.header-leftColumn,
 	.main-leftColumn {
 		float: left;
-		width: 75%;
+		width: 77%;
 
 		.inner {
-			margin-right: 1.2rem;
+			margin-right: 3rem;
 		}
 	}
 
 	.header-rightColumn,
 	.main-rightColumn {
 		float: right;
-		width: 25%;
+		width: 23%;
 
 		.inner {
-			margin-left: 0.8rem;
+			// margin-left: 1rem;
 		}
 	}
-}
-
-.header {
-}
-
-.header,
-.main {
-	background-color: $background-color;
 }
 
 .header-title {
@@ -162,15 +169,14 @@ hr {
 
 .topBar {
 	border-bottom: 1px solid $border-color;
-	margin-bottom: 2rem;
 	padding: 0.5rem 0;
 }
 
 .search {
 	.search-group {
-		background-color: #f3f3f3;
-		border: 1px solid #f3f3f3;
-		border-radius: 4px;
+		background-color: #efefef;
+		border: 1px solid #efefef;
+		border-radius: $border-radius;
 		// box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
 		position: relative;
 
@@ -240,135 +246,72 @@ hr {
 }
 
 .subBar {
-	margin-bottom: 1rem;
+	border-bottom: 1px solid $border-color;
+	overflow-x: auto;
 	padding: 0;
+	max-width: 100%;
+	white-space: nowrap;
 }
 
-.introduction {
-	font-size: 2rem;
-	// font-weight: 300;
-	line-height: 1.25;
-}
-
-.more {
+.subBar-categoryLink {
+	border-bottom: 3px solid transparent;
+	display: inline-block;
 	font-size: 0.875rem;
-	font-weight: normal;
+	padding: calc(1rem - 3px) 1rem;
+
+	&:link,
+	&:active,
+	&:visited {
+		color: $color-grey-600;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:first-letter {
+		text-transform: capitalize;
+	}
+
+	&.selected {
+		border-color: #af6400;
+		color: inherit;
+	}
 }
 
-// .featuredGrid {
-// 	border-bottom: 1px solid $border-color;
-// 	margin-bottom: 1.5rem;
-// 	padding-bottom: 1.5rem;
-// }
-
-// /* Repeat a 1fr row 2 times and a 1fr column 4 times. */
-// /* Map names to each grid cell. */
-// .featuredGrid-cells {
-// 	display: grid;
-// 	grid-template: repeat(2, 1fr) / repeat(4, 1fr);
-// 	grid-gap: 1rem;
-// 	grid-template-areas:
-// 		'cell1 cell2 cell3 cell4'
-// 		'cell1 cell5 cell6 cell7';
-
-// 	.featuredGrid-cell {
-// 	}
-
-// 	.featuredGrid-cell1 {
-// 		grid-area: cell1;
-// 	}
-
-// 	.featuredGrid-cell2 {
-// 		grid-area: cell2;
-// 	}
-
-// 	.featuredGrid-cell3 {
-// 		grid-area: cell3;
-// 	}
-
-// 	.featuredGrid-cell4 {
-// 		grid-area: cell4;
-// 	}
-
-// 	.featuredGrid-cell5 {
-// 		grid-area: cell5;
-// 	}
-
-// 	.featuredGrid-cell6 {
-// 		grid-area: cell6;
-// 	}
-// }
-
-// .featuredGrid-postLink {
-// 	border-radius: 4px;
-// 	display: block;
-// 	overflow: hidden;
-// 	position: relative;
-// }
-
-// .featuredGrid-postLink,
-// .featuredGrid-post {
-// 	height: 200px;
-// }
-
-// .featuredGrid-postLink {
-// 	&:hover {
-// 		.featuredGrid-post {
-// 			transform: scale(1.15);
-// 		}
-// 	}
-// }
-
-// .featuredGrid-post {
-// 	background-position: center;
-// 	background-repeat: no-repeat;
-// 	background-size: cover;
-// 	-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
-//   filter: grayscale(100%);
-// 	transition: all 0.3s ease-out;
-// }
-
-// .featuredGrid-cell1 {
-// 	.featuredGrid-postLink,
-// 	.featuredGrid-post {
-// 		height: 100%;
-// 	}
-// }
-
-// .featuredGrid-postData {
-// 	bottom: 1rem;
-// 	position: absolute;
-// }
-
-// .featuredGrid-postTitle,
-// .featuredGrid-postDate {
-// 	color: #fff;
-// 	padding: 0 1rem;
-// 	text-shadow: rgba(0, 0, 0, 0.25) 0 5px 5px;
-// }
-
-// .featuredGrid-postTitle {
-// 	font-size: 1.250rem;
-// 	line-height: 1.4;
-// 	margin-bottom: 0.5rem;
-// }
-
-// .featuredGrid-postDate {
-// 	font-size: 0.875rem;
-// }
+.subBar-categoryCount {
+	background-color: #efefef;
+	border-radius: 50%;
+	color: $color-grey-600;
+	display: inline-block;
+	font-size: 0.750rem;
+	font-weight: bold;
+	line-height: 1;
+	margin-left: 0.25rem;
+	padding: 2px 5px;
+}
 
 .main {
 	padding-bottom: 1.5rem;
 }
 
+@media (max-width: 640px) {
+	.main {
+		padding-top: 8rem;
+	}
+}
+
 .post {
-	margin-bottom: 3rem;
+	margin-bottom: 4rem;
+}
+
+.post-header {
+	margin: 0 0 1.5rem;
 }
 
 .post-title {
 	font-size: 2rem;
-	// font-weight: 500;
-	font-weight: bold;
+	font-weight: 500;
 	line-height: 1.25;
 	margin: 0 0 0.5rem;
 }
@@ -382,17 +325,21 @@ hr {
 .post-meta {
 	color: $color-grey-600;
 	font-size: 0.875rem;
-	margin: 0 0 1.5rem;
+}
+
+.post-author {
+	margin-right: 0.7rem;
 }
 
 .post-date {
-	margin-right: 0.5rem;
+	margin-right: 0.7rem;
 
 	.month {
 		text-transform: capitalize;
 	}
 }
 
+.post-authorLink,
 .post-categoryLink,
 .post-dateLink {
 	color: $color-grey-600;
@@ -414,17 +361,21 @@ hr {
 }
 
 .post-content {
-	font-size: 1.125rem;
-
 	h2 {
 		border-bottom: 1px solid $border-color;
+		font-size: 1.25rem;
 		padding-bottom: 0.3em;
 	}
 
 	h2,
 	h3 {
+		font-weight: 500;
 		line-height: 1.25;
 		margin: 1.5rem 0 1rem;
+	}
+
+	h3 {
+		font-size: 1.125rem;
 	}
 
 	figure,
@@ -443,7 +394,7 @@ hr {
 
 	img {
 		border: none;
-		border-radius: 4px;
+		border-radius: $border-radius;
 		max-width: 100%;
 	}
 
@@ -462,19 +413,19 @@ hr {
 
 	pre,
 	code {
-		border-radius: 4px;
+		border-radius: $border-radius;
 		font-family: $mono-font-family;
 		font-weight: normal;
 	}
 
 	code {
-		background-color: #f3f3f3;
+		background-color: #efefef;
 		font-size: 0.9em;
 		padding: 0.2em;
 	}
 
 	pre {
-		background-color: #f3f3f3;
+		background-color: lighten(#eceff1, 3.5%);
 		overflow-x: auto;
 		padding: 1rem;
 
@@ -552,7 +503,7 @@ hr {
 	@media screen and (max-width: 767px) {
 		.table-responsive {
 			border: 1px solid $border-color;
-			border-radius: 4px;
+			border-radius: $border-radius;
 			margin: 2rem 0;
 			overflow-y: hidden;
 			-ms-overflow-style: -ms-autohiding-scrollbar;
@@ -581,7 +532,7 @@ hr {
 
 .menu {
 	border: 1px solid $border-color;
-	border-radius: 4px;
+	border-radius: $border-radius;
 	margin-bottom: 1.5rem;
 }
 
@@ -639,8 +590,7 @@ hr {
 
 .basic-title {
 	font-size: 2rem;
-	// font-weight: 500;
-	font-weight: bold;
+	font-weight: 500;
 	line-height: 1.25;
 	margin-bottom: 1.5rem;
 }
@@ -659,6 +609,11 @@ hr {
 .postsByCategory {
 	.post {
 		margin-bottom: 1.5rem;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid $border-color;
+			padding-bottom: 1.5rem;
+		}
 	}
 
 	.post-title {
@@ -689,7 +644,7 @@ hr {
 }
 
 .categories-link {
-	border-radius: 4px;
+	border-radius: $border-radius;
 	display: block;
 	margin-bottom: 2px;
 	padding: 0.25rem 0.625rem;
@@ -751,6 +706,7 @@ hr {
 }
 
 .footer {
+	font-size: 0.875rem;
 	padding: 1rem 0 3rem;
 }
 
@@ -768,7 +724,9 @@ hr {
 	}
 }
 
-
+.text-large {
+	font-size: 1.25rem;
+}
 
 
 

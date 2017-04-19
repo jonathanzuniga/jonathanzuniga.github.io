@@ -5,7 +5,7 @@
 @charset 'utf-8';
 
 // Our variables
-$base-font-family: 'Soleil', -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
+$base-font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
 $mono-font-family: Menlo, Courier, monospace;
 $base-font-size: 16px;
 $small-font-size: $base-font-size * 0.875;
@@ -13,12 +13,12 @@ $small-font-size: $base-font-size * 0.875;
 // $base-line-height: 1.42857143;
 $base-line-height: 1.6;
 $spacing-unit: 30px;
-
+$border-radius: 4px;
 
 
 // Colors
 $background-color: #fff;
-$text-color: #222;
+$text-color: #333;
 
 // $footer-bg-color: #d5ceca;
 // $footer-bg-color: #5f7995;
@@ -41,12 +41,15 @@ $footer-bg-color: #a5b9ba;
 // $link-color: #2555c3; // *
 // $link-color: #005bff;
 // $link-color: #4166ff;
-$link-color: #0070e0;
+$link-color: #0070e0; // *
+// $link-color: #3652d3;
+// $link-color: #0071b2; // *
+// $link-color: #3459d0;
 $link-visited-color: $link-color;
 $link-active-color: $link-color;
 $link-hover-color: $link-color;
 
-$border-color: #e0e0e0;
+$border-color: lighten(#cfd8dc, 3.5%);
 // $selection-bg-color: $color-blue;
 
 $color-black: #000;

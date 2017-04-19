@@ -25,49 +25,53 @@
 		</div>
 	</div>
 
-	{% if page.url == '/' %}
-		<div class="subBar">
-			<div class="wrapper">
-				<div class="introduction">
-					{{ site.description }}
-					<a href="{{ site.baseurl }}/autor" class="more">
-						Además
-						<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-					</a>
-				</div>
-
-				<hr>
-			</div>
-		</div>
-	{% endif %}
-
-{% comment %}
-	{% if page.url == '/' %}
-		<div class="featuredGrid">
-			<div class="wrapper">
-				<div class="featuredGrid-cells">
-					{% for post in site.tags['destacado'] limit 6 %}
-						<div class="featuredGrid-cell featuredGrid-cell{{ forloop.index }}">
-							<a class="featuredGrid-postLink" href="{{ post.url }}">
-								{% assign sorted_categories = post.categories | sort %}
-								<div class="featuredGrid-post {% for category in sorted_categories %} category-{{ category }} {% endfor %}" style="background-image: url({{ post.cover }});">
-								</div>
-								<div class="featuredGrid-postData">
-									<h2 class="featuredGrid-postTitle">
-										{{ post.title }}
-									</h2>
-									<div class="featuredGrid-postDate">
-										{% include date.html %}
-									</div>
-								</div>
-							</a>
-						</div>
+	<div class="subBar">
+		<div class="wrapper">
+			<div class="subBar-categories">
+				<a class="subBar-categoryLink {% if page.url == '/' %}selected{% endif %}" href="{{ site.baseurl }}/">
+					reciente
+				</a>
+				{% assign current_page = page.url | downcase | split: '/' %}
+				{% assign categories_list = site.categories | sort %}
+				{% if categories_list.first[0] == null %}
+					{% for category in categories_list %}
+						{% if category == 'codigo' %}
+							<a class="subBar-categoryLink {% if current_page[2] == category %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
+								código
+						{% elsif category == 'diseno' %}
+							<a class="subBar-categoryLink {% if current_page[2] == category %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
+								diseño
+						{% else %}
+							<a class="subBar-categoryLink {% if current_page[2] == category %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
+								{{ category | replace: '-', ' ' }}
+						{% endif %}
+							<span class="subBar-categoryCount">
+								{{ site.categories[category].size }}
+							</span>
+						</a>
 					{% endfor %}
-				</div>
+				{% else %}
+					{% for category in categories_list %}
+						{% if category[0] == 'codigo' %}
+							<a class="subBar-categoryLink {% if current_page[2] == category[0] %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
+								código
+						{% elsif category[0] == 'diseno' %}
+							<a class="subBar-categoryLink {% if current_page[2] == category[0] %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
+								diseño
+						{% else %}
+							<a class="subBar-categoryLink {% if current_page[2] == category[0] %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
+								{{ category[0] | replace: '-', ' ' }}
+						{% endif %}
+							<span class="subBar-categoryCount">
+								{{ category[1].size }}
+							</span>
+						</a>
+					{% endfor %}
+				{% endif %}
+				{% assign categories_list = nil %}
 			</div>
 		</div>
-	{% endif %}
-{% endcomment %}
+	</div>
 </header>
 
 

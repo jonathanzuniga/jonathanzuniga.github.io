@@ -9,6 +9,13 @@ layout: default
 		</h2>
 
 		<p class="post-meta">
+			<span class="post-author">
+				por 
+				{% assign author = site.authors['jonathan'] %}
+				<a class="post-authorLink" href="{{ site.baseurl }}/autor">
+					{{ author.name }}
+				</a>
+			</span>
 			<span class="post-date">
 				<i class="fa fa-clock-o" aria-hidden="true"></i>
 				{% include date.html %}
