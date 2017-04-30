@@ -1,8 +1,8 @@
 (function() {
   function displaySearchResults(results, store) {
-    var searchResultsTitle = document.getElementById('search-results-title');
-    var searchResults = document.getElementById('search-results');
-    var noResultsFound = document.getElementById('no-results-found');
+    var searchResultsTitle = document.getElementById('search-results__title');
+    var searchResults = document.getElementById('search-results__posts');
+    var noResultsFound = document.getElementById('search-results__message');
 
     if (results.length) { // Are there any results?
       var appendString = '';
@@ -11,18 +11,45 @@
       for (var i = 0; i < results.length; i++) { // Iterate over the results
         var item = store[results[i].ref];
 
+        var post_categories = '';
+        if (item.categories == 'codigo') {
+          post_categories += '<a class="post-categoryLink" href="/categoria/' + item.categories + '">código</a>';
+        } else if (item.categories == 'diseno') {
+          post_categories += '<a class="post-categoryLink" href="/categoria/' + item.categories + '">diseño</a>';
+        } else {
+          post_categories += '<a class="post-categoryLink" href="/categoria/' + item.categories + '">' + item.categories + '</a>';
+        }
+
         appendString += 
           '<article class="post">\
-            <a class="post-link" href="' + item.url + '">\
+            <header class="post-header">\
               <h2 class="post-title">\
-                <span class="post-date">' +
-                  item.date +
-                '</span>' +
-                item.title + 
-              '</h2>\
-            </a>\
+                <a class="post-link" href="' + item.url + '">' +
+                  item.title + 
+                '</a>\
+              </h2>\
+              \
+              <p class="post-meta">\
+                <span class="post-author">\
+                  por \
+                  <a class="post-authorLink" href="/autor">' +
+                  item.authors +
+                  '</a>\
+                </span>\
+                <span class="post-date">\
+                  <i class="fa fa-clock-o" aria-hidden="true"></i>\
+                  <a class="post-dateLink" href="' + item.url + '">' +
+                    item.date +
+                  '</a>\
+                </span>\
+                <span class="post-categories">\
+                  <i class="fa fa-folder-o" aria-hidden="true"></i> ' +
+                  post_categories +
+                '</span>\
+              </p>\
+            </header>\
             \
-            <div class="post-excerpt">' +
+            <div class="post-content">' +
               item.excerpt +
             '</div>\
           </article>';

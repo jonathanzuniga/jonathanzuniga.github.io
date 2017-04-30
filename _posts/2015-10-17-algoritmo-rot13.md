@@ -1,6 +1,6 @@
 ---
 authors: [jonathan]
-categories: [seguridad]
+categories: [codigo]
 date: 2015-10-17 17:39:00
 layout: post
 title: 'Algoritmo ROT13'

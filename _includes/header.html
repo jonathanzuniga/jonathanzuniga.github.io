@@ -12,23 +12,41 @@
 
 			<div class="header-rightColumn">
 				<div class="inner">
-					<div class="search">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a class="menu__link" href="{{ site.baseurl }}/archivo">
+								Archivo
+							</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="{{ site.baseurl }}/autor">
+								Autor
+							</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="{{ site.baseurl }}/autor">
+								<i class="fa fa-search icon" aria-hidden="true"></i>
+							</a>
+						</li>
+					</ul>
+
+					<!-- <div class="search">
 						<form action="/buscar" method="get">
 							<div class="search-group">
 								<input class="search-field" id="search-box" name="consulta" placeholder="" required title="Buscar" type="search">
 								<i class="fa fa-search icon" aria-hidden="true"></i>
 							</div>
 						</form>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="subBar">
+	<div class="subbar">
 		<div class="wrapper">
-			<div class="subBar-categories">
-				<a class="subBar-categoryLink {% if page.url == '/' %}selected{% endif %}" href="{{ site.baseurl }}/">
+			<div class="subbar-categories">
+				<a class="subbar-categoryLink {% if page.url == '/' %}selected{% endif %}" href="{{ site.baseurl }}/">
 					reciente
 				</a>
 				{% assign current_page = page.url | downcase | split: '/' %}
@@ -36,16 +54,16 @@
 				{% if categories_list.first[0] == null %}
 					{% for category in categories_list %}
 						{% if category == 'codigo' %}
-							<a class="subBar-categoryLink {% if current_page[2] == category %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
+							<a class="subbar-categoryLink {% if current_page[2] == category %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
 								código
 						{% elsif category == 'diseno' %}
-							<a class="subBar-categoryLink {% if current_page[2] == category %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
+							<a class="subbar-categoryLink {% if current_page[2] == category %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
 								diseño
 						{% else %}
-							<a class="subBar-categoryLink {% if current_page[2] == category %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
+							<a class="subbar-categoryLink {% if current_page[2] == category %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
 								{{ category | replace: '-', ' ' }}
 						{% endif %}
-							<span class="subBar-categoryCount">
+							<span class="subbar-categoryCount">
 								{{ site.categories[category].size }}
 							</span>
 						</a>
@@ -53,16 +71,16 @@
 				{% else %}
 					{% for category in categories_list %}
 						{% if category[0] == 'codigo' %}
-							<a class="subBar-categoryLink {% if current_page[2] == category[0] %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
+							<a class="subbar-categoryLink {% if current_page[2] == category[0] %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
 								código
 						{% elsif category[0] == 'diseno' %}
-							<a class="subBar-categoryLink {% if current_page[2] == category[0] %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
+							<a class="subbar-categoryLink {% if current_page[2] == category[0] %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
 								diseño
 						{% else %}
-							<a class="subBar-categoryLink {% if current_page[2] == category[0] %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
+							<a class="subbar-categoryLink {% if current_page[2] == category[0] %}selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
 								{{ category[0] | replace: '-', ' ' }}
 						{% endif %}
-							<span class="subBar-categoryCount">
+							<span class="subbar-categoryCount">
 								{{ category[1].size }}
 							</span>
 						</a>

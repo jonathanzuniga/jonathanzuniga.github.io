@@ -10,7 +10,7 @@ title: Sobre el autor
 
 Mi interés por el arte cambió gradualmente al diseño y desarrollo web. <!--, antes de asentarme finalmente en el diseño y desarrollo de videojuegos.--> He trabajado en diferentes campos del desarrollo web desde lo más visible del *front-end* hasta lo más oscuro del *back-end*. Me enfoco en dar al usuario la experiencia más fácil en todos sus dispositivos.
 
-Me encanta saborear una deliciosa gelatina, Alien, Macross, Star Wars, el *lettering*, la libertad de información, una internet que respete y permita, buen diseño, Doom, pastel de fruta seca, el *skate*, El Mac, Rembrandt, y James Horner, pero no necesariamente en este orden.
+Me encanta la gelatina, el chocolate semiamargo, Alien, Macross, Star Wars, el *lettering*, la libertad de información, una internet que respete y permita, buen diseño, Doom, pastel de fruta seca, el *skate*, El Mac, Rembrandt, y James Horner, pero no necesariamente en este orden.
 
 ## Acerca del sitio
 

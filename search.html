@@ -3,15 +3,13 @@ layout: default
 permalink: /buscar
 ---
 
-<div class="row">
-	<div class="posts col-xs-12 col-lg-8 offset-lg-2">
-		<h5 id="search-results-title"></h5>
+<div class="search-results">
+	<h3 id="search-results__title" class="search-results__title"></h3>
 
-		<div id="no-results-found">
-		</div>
+	<div id="search-results__message" class="search-results__message">
+	</div>
 
-		<div id="search-results">
-		</div>
+	<div id="search-results__posts" class="search-results__posts">
 	</div>
 </div>
 
@@ -19,30 +17,22 @@ permalink: /buscar
 	window.store = {
 		{% 
 			assign months = 
-				'ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic' | 
-				split: '|'
-		%}
-		{%
-			assign days = 
-				'dom|lun|mar|mié|jue|vie|sáb' | 
-				split: '|'
+			'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
+			split: '|'
 		%}
 		{% for post in site.posts %}
-			{% assign d = post.date | date: '%B' | minus: 1 %}
-			{% assign day_name = days[d] %}
-			{% assign day = post.date | date: '%d' %}
+			{% assign day = post.date | date: '%-d' %}
 			{% assign m = post.date | date: '%-m' | minus: 1 %}
 			{% assign month = months[m] %}
 			{% assign year = post.date | date: '%Y' %}
-			{% assign time = post.date | date: '%R %p' %}
 			'{{ post.url | slugify }}': {
 				'title': '{{ post.title | xml_escape }}',
 				'authors': '{{ post.authors | sort }}',
 				'categories': '{{ post.categories | sort }}',
-				'excerpt': '{{ post.excerpt | strip_newlines }}',
+				'excerpt': '{{ post.excerpt | strip_html | strip_newlines | truncatewords: 30 }}',
 				'content': {{ post.content | strip_html | strip_newlines | jsonify }},
 				'url': '{{ post.url | xml_escape }}',
-				'date': '<span class="date"><span class="day-name">{{ day_name }}</span> <span class="day">{{ day }}</span> <span class="month">{{ month }}</span> <span class="year">{{ year }}</span></span> <span class="time">{{ time }}</span>'
+				'date': '<time datetime="{{ post.date | date_to_xmlschema }}"><span class="date"><span class="day">{{ day }}</span> <span class="month">{{ month }}</span> <span class="year">{{ year }}</span></span></time>'
 			}
 			{% unless forloop.last %}, {% endunless %}
 		{% endfor %}

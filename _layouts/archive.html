@@ -1,40 +1,37 @@
 ---
 layout: default
 ---
-<div class="row">
-	<div id="archive" class="col-xs-12 col-lg-7 offset-lg-1">
-		<div class="post">
-			<div class="post-content">
-				{% capture categories %}
-					{% for category in site.categories %}
-						{{ category[0] }}
-					{% endfor %}
-				{% endcapture %}
-				{% assign sorted_categories = categories | split:' ' | sort %}
-				{% for category in sorted_categories %}
-					<h3 id="{{ category }}" class="text-capitalize">
-						{% if category == 'articulos' %}
-							artículos
-						{% elsif category == 'inspiracion' %}
-							inspiración
-						{% else %}
-							{{ category | replace: '-',' ' }}
-						{% endif %}
-					</h3>
 
-					<ul class="list-inline">
-						{% for post in site.categories[category] %}<li class="list-inline-item"><a href="{{ post.url }}">{{ post.title }}<!--  <small>{% include date.html %}</small> --></a></li>{% endfor %}
-					</ul>
-				{% endfor %}
-			</div>
-		</div>
-	</div>
+<article class="archive">
+	{% assign counter = 0 %}
+	{% for post in site.posts %}
+		{% assign current_date = post.date | date: '%B %Y' %}
+		{% assign previous_date = post.previous.date | date: '%B %Y' %}
+		{% assign counter = counter | plus: 1 %}
+		{% if current_date != date %}
+			{% unless forloop.first %}</ul>{% endunless %}
 
-	<div class="col-lg-3">
-		{% include sidebar.html %}
-	</div>
-</div>
+			<h3 class="archive-title">
+				{{ current_date }}
+				<span class="archive-totalPosts">
+					{{ counter }} artículo{% if counter > 1 %}s{% endif %}
+					{% assign counter = 0 %}
+				</span>
+			</h3>
+			
+			<ul class="archive-list">
+			{% assign date = current_date %}
+		{% endif %}
 
+		<li class="archive-item">
+			<a href="{{ post.url }}">
+				{{ post.title }}
+			</a>
+		</li>
+
+		{% if forloop.last %}</ul>{% endif %}
+	{% endfor %}
+</article>
 
 
 

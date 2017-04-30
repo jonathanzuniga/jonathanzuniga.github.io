@@ -1,151 +1,148 @@
-<div class="menu">
-	{% if page.layout == 'category_page' %}
-		<div class="categories">
-			<h3 class="categories-title">
-				Categorías
-			</h3>
+<ul class="sidebar__list">
+	{% assign postCounter = 0 %}
+	{% assign maxPost = 1 %}
+	{% for post in site.tags['destacado'] %}
+		{% unless post.title == page.title %}
+			<li class="sidebar__item sidebar__item--first">
+				<h3 class="sidebar__title">
+					Artículo recomendado
+				</h3>
 
-			<ul class="categories-list">
-				{% assign current_page = page.url | downcase | split: '/' %}
-				{% assign categories_list = site.categories | sort %}
-				{% if categories_list.first[0] == null %}
-					{% for category in categories_list %}
-						<li class="categories-item">
-							{% if category == 'codigo' %}
-								<a class="categories-link {% if current_page[2] == category %}isActive{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
-									código
-							{% elsif category == 'diseno' %}
-								<a class="categories-link {% if current_page[2] == category %}isActive{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
-									diseño
-							{% else %}
-								<a class="categories-link {% if current_page[2] == category %}isActive{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
-									{{ category | replace: '-', ' ' }}
-							{% endif %}
-								<span class="categories-count">
-									{{ site.categories[category].size }}
-								</span>
-							</a>
-						</li>
-					{% endfor %}
-				{% else %}
-					{% for category in categories_list %}
-						<li class="categories-item">
-							{% if category[0] == 'codigo' %}
-								<a class="categories-link {% if current_page[2] == category[0] %}isActive{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
-									código
-							{% elsif category[0] == 'diseno' %}
-								<a class="categories-link {% if current_page[2] == category[0] %}isActive{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
-									diseño
-							{% else %}
-								<a class="categories-link {% if current_page[2] == category[0] %}isActive{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
-									{{ category[0] | replace: '-', ' ' }}
-							{% endif %}
-								<span class="categories-count">
-									{{ category[1].size }}
-								</span>
-							</a>
-						</li>
-					{% endfor %}
-				{% endif %}
-				{% assign categories_list = nil %}
-			</ul>
-		</div>
-	{% else %}
-		<div class='featured'>
-			<ul class="featured-list">
-				{% assign postCounter = 0 %}
-				{% assign maxPost = 1 %}
-				{% for post in site.tags['destacado'] %}
-					{% unless post.title == page.title %}
-						<li class="featured-item featured-firstItem">
-							<h3 class="featured-title">
-								Artículo recomendado
-							</h3>
-							<h4 class="featured-postTitle">
-								<a href="{{ post.url }}">
-									{{ post.title }}
-								</a>
-							</h4>
+				<h4 class="sidebar__post-title">
+					<a href="{{ post.url }}">
+						{{ post.title }}
+					</a>
+				</h4>
 
-							<p class="featured-postExcerpt">
-								{{ post.content | markdownify | strip_html | truncatewords: 10 }}
-							</p>
-						</li>
-						{% assign postCounter = postCounter | plus: 1 %}
-					{% endunless %}
-					{% if postCounter >= maxPost %}
-						{% break %}
+				<p class="sidebar__post-excerpt">
+					{{ post.content | markdownify | strip_html | truncatewords: 10 }}
+				</p>
+			</li>
+			{% assign postCounter = postCounter | plus: 1 %}
+		{% endunless %}
+		{% if postCounter >= maxPost %}
+			{% break %}
+		{% endif %}
+	{% endfor %}
+	{% if page.layout == 'post' %}
+		<li class="sidebar__item">
+			<h3 class="sidebar__title">
+				Lectura adicional sobre
+				{% assign sorted_categories = page.categories | sort %}
+				{% for category in sorted_categories %}
+					{% if category == 'codigo' %}
+						<a href="{{ site.baseurl }}/categoria/{{ category }}">
+							código
+					{% elsif category == 'diseno' %}
+						<a href="{{ site.baseurl }}/categoria/{{ category }}">
+							diseño
+					{% else %}
+						<a href="{{ site.baseurl }}/categoria/{{ category }}">
+							{{ category | replace: '-', ' ' }}
 					{% endif %}
+					</a>
 				{% endfor %}
-				{% if page.layout == 'post' %}
-					<li class="similarPosts-item">
-						<h3 class="similarPosts-title">
-							Lectura adicional sobre
-							{% assign sorted_categories = page.categories | sort %}
-							{% for category in sorted_categories %}
-								{% if category == 'codigo' %}
-									<a href="{{ site.baseurl }}/categoria/{{ category }}">
-										código
-								{% elsif category == 'diseno' %}
-									<a href="{{ site.baseurl }}/categoria/{{ category }}">
-										diseño
-								{% else %}
-									<a href="{{ site.baseurl }}/categoria/{{ category }}">
-										{{ category | replace: '-', ' ' }}
-								{% endif %}
-								</a>
-							{% endfor %}
-						</h3>
-					</li>
-					{% assign sorted_categories = page.categories | sort %}
-					{% for category in sorted_categories %}
-						{% for post in site.categories[category] limit: 2 %}
-							{% unless post.title == page.title %}
-								<li class="similarPosts-item">
-									<h4 class="similarPosts-postTitle">
-										<a href="{{ post.url }}">
-											{{ post.title }}
-										</a>
-									</h4>
-
-									<p class="similarPosts-postExcerpt">
-										{{ post.content | markdownify | strip_html | truncatewords: 15 }}
-									</p>
-								</li>
-							{% endunless %}
-						{% endfor %}
-					{% endfor %}
-				{% else %}
-					<li class="featured-item">
-						<h3 class="featured-title">
-							Otras publicaciones del 
-							<a href="{{ site.baseurl }}/archivo">
-								archivo
+			</h3>
+		</li>
+		{% assign sorted_categories = page.categories | sort %}
+		{% for category in sorted_categories %}
+			{% for post in site.categories[category] limit: 2 %}
+				{% unless post.title == page.title %}
+					<li class="sidebar__item">
+						<h4 class="sidebar__post-title">
+							<a href="{{ post.url }}">
+								{{ post.title }}
 							</a>
-						</h3>
+						</h4>
+
+						<p class="sidebar__post-excerpt">
+							{{ post.content | markdownify | strip_html | truncatewords: 10 }}
+						</p>
 					</li>
-					{% for post in site.tags['destacado'] offset:1 limit:2 %}
-						<li class="featured-item">
-							<h4 class="featured-postTitle">
-								<a href="{{ post.url }}">
-									{{ post.title }}
-								</a>
-							</h4>
+				{% endunless %}
+			{% endfor %}
+		{% endfor %}
+	{% else %}
+		<li class="sidebar__item">
+			<h3 class="sidebar__title">
+				Otras publicaciones
+			</h3>
+		</li>
+		{% for post in site.tags['destacado'] offset:1 limit:2 %}
+			<li class="sidebar__item">
+				<h4 class="sidebar__post-title">
+					<a href="{{ post.url }}">
+						{{ post.title }}
+					</a>
+				</h4>
 
-							<p class="featured-postExcerpt">
-								{{ post.content | markdownify | strip_html | truncatewords: 15 }}
-							</p>
-						</li>
-					{% endfor %}
-				{% endif %}
-			</div>
-		</div>
+				<p class="sidebar__post-excerpt">
+					{{ post.content | markdownify | strip_html | truncatewords: 10 }}
+				</p>
+			</li>
+		{% endfor %}
 	{% endif %}
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
+<div class="categories">
+	<ul class="categories__list">
+		{% assign current_page = page.url | downcase | split: '/' %}
+		{% assign categories_list = site.categories | sort %}
+		{% if categories_list.first[0] == null %}
+			{% for category in categories_list %}
+				<li class="categories__item">
+					{% if category == 'codigo' %}
+						<a class="categories__link {% if current_page[2] == category %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
+							código
+					{% elsif category == 'diseno' %}
+						<a class="categories__link {% if current_page[2] == category %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
+							diseño
+					{% else %}
+						<a class="categories__link {% if current_page[2] == category %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
+							{{ category | replace: '-', ' ' }}
+					{% endif %}
+						<span class="categories__count">
+							{{ site.categories[category].size }}
+						</span>
+					</a>
+				</li>
+			{% endfor %}
+		{% else %}
+			{% for category in categories_list %}
+				<li class="categories__item">
+					{% if category[0] == 'codigo' %}
+						<a class="categories__link {% if current_page[2] == category[0] %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
+							código
+					{% elsif category[0] == 'diseno' %}
+						<a class="categories__link {% if current_page[2] == category[0] %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
+							diseño
+					{% else %}
+						<a class="categories__link {% if current_page[2] == category[0] %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
+							{{ category[0] | replace: '-', ' ' }}
+					{% endif %}
+						<span class="categories__count">
+							{{ category[1].size }}
+						</span>
+					</a>
+				</li>
+			{% endfor %}
+		{% endif %}
+		{% assign categories_list = nil %}
+	</ul>
 </div>
-
-
-
-
+{% endcomment %}
 
 
 

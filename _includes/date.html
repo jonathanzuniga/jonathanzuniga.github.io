@@ -23,7 +23,7 @@
 		{% assign m = page.date | date: '%-m' | minus: 1 %}
 		{% assign month = months[m] %}
 		{% assign year = page.date | date: '%Y' %}
-		{% assign time = page.date | date: '%-I%P' %}
+		{% comment %}{% assign time = page.date | date: '%-I%P' %}{% endcomment %}
 		<span class="date">
 			{% comment %}<span class="day-name">{{ day_name }}</span>{% endcomment %}
 			<span class="day">{{ day }}</span>
@@ -40,7 +40,7 @@
 		{% assign m = post.date | date: '%-m' | minus: 1 %}
 		{% assign month = months[m] %}
 		{% assign year = post.date | date: '%Y' %}
-		{% assign time = post.date | date: '%-I%P' %}
+		{% comment %}{% assign time = post.date | date: '%-I%P' %}{% endcomment %}
 		<span class="date">
 			{% comment %}<span class="day-name">{{ day_name }}</span>{% endcomment %}
 			<span class="day">{{ day }}</span>

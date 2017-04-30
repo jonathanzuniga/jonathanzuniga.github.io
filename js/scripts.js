@@ -76,6 +76,9 @@ jQuery(document).ready(function($) {
 		$(this).parent().removeClass('focus');
 	});
 
+	var post_category = $('.post-categoryLink').text().trim();
+	$('.body-post').find('.subbar-categoryLink:contains(' + post_category + ')').addClass('selected');
+
 	// $('.featuredGrid-post').each(function() {
 	// 	if ($(this).hasClass('category-diseno')) {
 	// 		$(this).css({

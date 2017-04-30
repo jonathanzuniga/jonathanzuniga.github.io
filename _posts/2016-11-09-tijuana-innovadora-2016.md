@@ -1,6 +1,6 @@
 ---
 authors: [jonathan]
-categories: [personal]
+categories: [momentos]
 date: 2016-11-09
 layout: post
 title: 'Tijuana Innovadora 2016'
