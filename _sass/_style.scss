@@ -1,6 +1,7 @@
 * {
 	box-sizing: border-box;
 	font-family: inherit;
+	outline: none;
 	margin: 0;
 	padding: 0;
 }
@@ -307,13 +308,6 @@ a {
 	width: 100%;
 	z-index: 2;
 
-    -webkit-appearance: textfield;
-
-	&:-webkit-search-decoration,
-	&:-webkit-search-cancel-button {
-	    -webkit-appearance: none;
-	}
-
 	&:-moz-placeholder {
 		color: #9e9e9e;
 		opacity: 1;
@@ -322,6 +316,15 @@ a {
 	&:hover {
 		border-color: darken($border-color, 20%);
 	}
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+	-webkit-appearance: none;
 }
 
 .input__group-button {
@@ -397,6 +400,7 @@ a {
 .post__link {
 	color: $text-color;
 
+	&:hover,
 	&:visited {
 		color: $text-color;
 	}
