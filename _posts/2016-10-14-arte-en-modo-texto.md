@@ -43,7 +43,7 @@ Este es sin duda el medio más antiguo para trabajar en el *artscene*. Ha existi
 
 Los artistas de la vieja escuela utilizan los caracteres `/ \ | : ;` y similares para crear logotipos sencillos, por lo general para agregarlos en los archivos `file_id.diz`, archivos que todavía son  utilizados por la comunidad [*warez*][warez] en sus lanzamientos de software sin licencia.
 
-Hoy en día la forma de arte ASCII de la nueva escuela es la más popular. Esta técnica utiliza principalmente el símbolo `$` en las formas y para las partes circulares `n o | ° º` u otros caracteres con curvas. La mayoría de los artistas tienen su propio estilo.
+Hoy en día la forma de arte ASCII de la nueva escuela es la más popular. Esta técnica utiliza principalmente el símbolo `$` en las formas y para las partes circulares `n o ° º` u otros caracteres con curvas. La mayoría de los artistas tienen su propio estilo.
 
 ## Arte ANSI
 

@@ -2,6 +2,42 @@
 layout: default
 ---
 
+<div class="posts">
+	{% for post in site.posts limit: 25 %}
+		<article class="post">
+			<header class="post__header">
+				<h2 class="post__title">
+					<a class="post__link" href="{{ post.url }}">
+						{{ post.title }}
+					</a>
+				</h2>
+
+				<p class="post__meta">
+					{% if post.description %}
+						<span class="post__description">
+							{{ post.description }}
+						</span>
+					{% endif %}
+
+					<span class="post__read-time">{% include read_time.html %}</span>, 
+
+					<span class="post__date">{% include date.html %}</span>
+				</p>
+			</header>
+		</article>
+	{% endfor %}
+</div>
+
+
+
+
+
+
+
+
+
+
+{% comment %}
 {% for post in site.posts limit: 6 %}
 	<article class="post">
 		<header class="post-header">
@@ -43,7 +79,7 @@ layout: default
 		</section>
 	</article>
 {% endfor %}
-
+{% endcomment %}
 
 
 

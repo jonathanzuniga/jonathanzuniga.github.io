@@ -3,6 +3,7 @@ authors: [jonathan]
 categories: [diseno]
 cover: https://www.dropbox.com/s/b72s4gfysauwb70/alien_0_08_24_full.jpg?raw=1
 date: 2016-11-19
+description: 'Una revisión profunda de su iconografía y tipografía.'
 layout: post
 tags: [destacado]
 title: 'La tipografía de Alien'

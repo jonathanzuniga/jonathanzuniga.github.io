@@ -2,6 +2,7 @@
 authors: [jonathan]
 categories: [codigo]
 date: 2016-11-24
+description: 'Herramienta para agilizar el desarrollo multiplataforma.'
 layout: post
 title: 'Comenzando con Xamarin.Forms'
 ---

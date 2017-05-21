@@ -2,6 +2,7 @@
 authors: [jonathan]
 categories: [momentos]
 date: 2016-11-09
+description: 'Día de visita al evento.'
 layout: post
 title: 'Tijuana Innovadora 2016'
 ---

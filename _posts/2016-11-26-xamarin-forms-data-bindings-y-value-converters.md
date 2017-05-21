@@ -2,6 +2,7 @@
 authors: [jonathan]
 categories: [codigo]
 date: 2016-11-26
+description: 'Utilizandolos se simplifica mucho el desarrollo de una app.'
 layout: post
 title: 'Xamarin.Forms: Data Bindings y Value Converters'
 ---

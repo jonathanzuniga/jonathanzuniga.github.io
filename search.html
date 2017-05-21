@@ -9,7 +9,7 @@ permalink: /buscar
 	<div id="search-results__message" class="search-results__message">
 	</div>
 
-	<div id="search-results__posts" class="search-results__posts">
+	<div id="search-results__posts" class="search-results__posts posts">
 	</div>
 </div>
 
@@ -25,11 +25,14 @@ permalink: /buscar
 			{% assign m = post.date | date: '%-m' | minus: 1 %}
 			{% assign month = months[m] %}
 			{% assign year = post.date | date: '%Y' %}
+			{% assign words = post.content | number_of_words %}
+
 			'{{ post.url | slugify }}': {
 				'title': '{{ post.title | xml_escape }}',
-				'authors': '{{ post.authors | sort }}',
+				'description': '{{ post.description }}',
+				'read_time': {{ words }},
 				'categories': '{{ post.categories | sort }}',
-				'excerpt': '{{ post.excerpt | strip_html | strip_newlines | truncatewords: 30 }}',
+				// 'excerpt': '{{ post.excerpt | strip_html | strip_newlines | truncatewords: 30 }}',
 				'content': {{ post.content | strip_html | strip_newlines | jsonify }},
 				'url': '{{ post.url | xml_escape }}',
 				'date': '<time datetime="{{ post.date | date_to_xmlschema }}"><span class="date"><span class="day">{{ day }}</span> <span class="month">{{ month }}</span> <span class="year">{{ year }}</span></span></time>'

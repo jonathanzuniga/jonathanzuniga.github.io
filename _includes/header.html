@@ -1,4 +1,52 @@
 <header class="header">
+	<div class="wrapper">
+		<div class="navbar">
+			<div class="navbar__brand">
+				{% assign author = site.authors['jonathan'] %}
+				<a class="header__title" href="{{ site.baseurl }}/">
+					{{ author.name }} {{ author.lastname }}
+				</a>
+			</div>
+
+			<div class="navbar__menu">
+				<ul class="navbar__list">
+					<li class="navbar__item navbar__item-autor">
+						<a class="navbar__link navbar__link_autor" href="{{ site.baseurl }}/autor">
+							Autor
+						</a>
+					</li>
+					<li class="navbar__item navbar__item-search">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</li>
+				</ul>
+			</div>
+
+			<div class="navbar__search">
+				<div class="search">
+					<form class="search__form" action="/buscar" method="get">
+						<input class="search__box" id="search__box" name="consulta" placeholder="" required title="Buscar" type="search">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
+<header class="header">
 	<div class="topBar">
 		<div class="wrapper">
 			<div class="header-leftColumn">
@@ -91,7 +139,7 @@
 		</div>
 	</div>
 </header>
-
+{% endcomment %}
 
 
 

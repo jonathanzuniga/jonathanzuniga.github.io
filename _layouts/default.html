@@ -17,45 +17,26 @@
 							 {% endif %}">
 		{% include header.html %}
 
-		<div class="main">
-			<div class="wrapper">
-				<div class="main-leftColumn">
-					<div class="inner">
-						<div class="content">
-							{{ content }}
-						</div>
-					</div>
+		<div class="wrapper">
+			<div class="main">
+				<div class="main__content">
+					{{ content }}
 				</div>
+			</div>
 
-				<div class="main-rightColumn">
-					<div class="inner">
-						<div class="sidebar">
-							{% include sidebar.html %}
-						</div>
-					</div>
+			<div class="sidebar">
+				<div class="sidebar__content">
+					{% include sidebar.html %}
 				</div>
 			</div>
 		</div>
 
-		{% include footer.html %}
+		<!-- {% include footer.html %} -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>-->
-		<!--<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-		<script src="{{ '/js/customize-twitter-1.1.min.js' | prepend: site.baseurl }}" type="text/javascript"></script>-->
-		<!--<script src="{{ '/js/twitterFetcher.js' | prepend: site.baseurl }}" type="text/javascript"></script>-->
-
-		<!--<script src="{{ '/js/codebird.js' | prepend: site.baseurl }}" type="text/javascript"></script>
-		<script src="{{ '/js/doT.min.js' | prepend: site.baseurl }}" type="text/javascript"></script>
-		<script src="{{ '/js/moment.min.js' | prepend: site.baseurl }}" type="text/javascript"></script>
-		<script src="{{ '/js/jquery.socialfeed.js' | prepend: site.baseurl }}" type="text/javascript"></script>-->
-		<!-- <script src="{{ '/js/jquery.collapse.js' | prepend: site.baseurl }}"></script>
-		<script src="{{ '/js/jquery.collapse_storage.js' | prepend: site.baseurl }}"></script> -->
 		<script src="{{ '/js/jquery.sticky-kit.min.js' | prepend: site.baseurl }}" type="text/javascript"></script>
 		<script src="{{ '/js/scripts.js' | prepend: site.baseurl }}" type="text/javascript"></script>
-		{% if page.layout == 'post' %}
+		<!-- {% if page.layout == 'post' %}
 			<script>
 				$(function() {
 					var posts = [];
@@ -67,6 +48,6 @@
 					$('.pageNav-randomPostLink').attr('href', random_post_url);
 				});
 			</script>
-		{% endif %}
+		{% endif %} -->
 	</body>
 </html>

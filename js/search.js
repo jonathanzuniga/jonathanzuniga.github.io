@@ -11,47 +11,35 @@
       for (var i = 0; i < results.length; i++) { // Iterate over the results
         var item = store[results[i].ref];
 
-        var post_categories = '';
-        if (item.categories == 'codigo') {
-          post_categories += '<a class="post-categoryLink" href="/categoria/' + item.categories + '">código</a>';
-        } else if (item.categories == 'diseno') {
-          post_categories += '<a class="post-categoryLink" href="/categoria/' + item.categories + '">diseño</a>';
-        } else {
-          post_categories += '<a class="post-categoryLink" href="/categoria/' + item.categories + '">' + item.categories + '</a>';
-        }
+        var post_description = '';
+        if (item.description)
+          post_description = '<span class="post__description">' + item.description + '</span>';
+
+        var read_time = '';
+        if (item.read_time < 360)
+          read_time = '1 min';
+        else
+          read_time = (item.read_time / 180 | 0) + ' mins'
 
         appendString += 
           '<article class="post">\
-            <header class="post-header">\
-              <h2 class="post-title">\
-                <a class="post-link" href="' + item.url + '">' +
+            <header class="post__header">\
+              <h2 class="post__title">\
+                <a class="post__link" href="' + item.url + '">' +
                   item.title + 
                 '</a>\
               </h2>\
               \
-              <p class="post-meta">\
-                <span class="post-author">\
-                  por \
-                  <a class="post-authorLink" href="/autor">' +
-                  item.authors +
-                  '</a>\
-                </span>\
-                <span class="post-date">\
-                  <i class="fa fa-clock-o" aria-hidden="true"></i>\
-                  <a class="post-dateLink" href="' + item.url + '">' +
+              <p class="post__meta">' +
+                post_description +
+                '<span class="post__read-time">\
+                  <span class="post-reading-time" title="Tiempo estimado de lectura">' +
+                    read_time + '. de lectura</span></span>, \
+                <span class="post__date">' +
                     item.date +
-                  '</a>\
-                </span>\
-                <span class="post-categories">\
-                  <i class="fa fa-folder-o" aria-hidden="true"></i> ' +
-                  post_categories +
                 '</span>\
               </p>\
             </header>\
-            \
-            <div class="post-content">' +
-              item.excerpt +
-            '</div>\
           </article>';
       }
       
@@ -84,14 +72,14 @@
 
   var searchTerm = getQueryVariable('consulta');
   if (searchTerm) {
-    document.getElementById('search-box').setAttribute('value', searchTerm);
+    document.getElementById('search__box').setAttribute('value', searchTerm);
 
     // Initalize lunr with the fields it will be searching on. I've given title
     // a boost of 10 to indicate matches on this field are more important.
     var idx = lunr(function () {
       this.field('id');
       this.field('title', { boost: 10 });
-      this.field('authors');
+      this.field('description');
       this.field('categories');
       this.field('content');
     });
@@ -100,7 +88,7 @@
       idx.add({
         'id': key,
         'title': window.store[key].title,
-        'authors': window.store[key].authors,
+        'description': window.store[key].description,
         'categories': window.store[key].categories,
         'content': window.store[key].content
       });

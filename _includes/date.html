@@ -1,15 +1,15 @@
-{% comment %}
 {% 
 	assign months = 
 	'ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic' | 
 	split: '|'
 %}
-{% endcomment %}
+{% comment %}
 {% 
 	assign months = 
 	'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
 	split: '|'
 %}
+{% endcomment %}
 {%
 	assign days = 
 		'dom|lun|mar|mié|jue|vie|sáb' | 
@@ -50,7 +50,6 @@
 		{% comment %}<span class="time">{{ time }}</span>{% endcomment %}
 	</time>
 {% endif %}
-
 
 
 

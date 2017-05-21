@@ -2,6 +2,60 @@
 layout: default
 ---
 
+<article class="post">
+	<header class="post__header">
+		<h1 class="post__title">
+			{{ page.title }}
+		</h1>
+
+		<p class="post__meta">
+			<span class="post__date">{% include date.html %}</span>, 
+
+			{% if page.description %}
+				<span class="post__description">
+					{{ page.description }}
+				</span>
+			{% else %}
+				<span class="post__read-time">{% include read_time.html %}</span>
+			{% endif %}
+		</p>
+	</header>
+
+	<section class="post__content">
+		{{ page.content }}
+	</section>
+
+	<!-- <div class="share">
+		<div class="share__twitter">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-lang="es" data-text="{{ page.title }}" data-url="{{ site.baseurl }}{{ post.url }}" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+		<div class="share__facebook">
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.9&appId=105857299967608";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+
+			<div class="fb-share-button" data-href="{{ site.baseurl }}{{ post.url }}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+		</div>
+	</div> -->
+</article>
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
 <article class="full post">
 	<header class="post-header">
 		<h2 class="post-title">
@@ -44,7 +98,7 @@ layout: default
 		</p>
 	</section>
 </article>
-
+{% endcomment %}
 
 
 
@@ -164,7 +218,7 @@ layout: default
 								este artículo
 							{% endif %}
 						{% endfor %}
-					 	en GitHub</a>.
+						en GitHub</a>.
 				{% endif %}
 				Esta obra está bajo una licencia 
 				<a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">Creative Commons Atribución 4.0 Internacional</a>.
