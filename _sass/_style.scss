@@ -107,7 +107,7 @@ a {
 .header__title {
 	display: block;
 	font-size: 1.5rem; // 24px
-	font-weight: normal;
+	font-weight: bold;
 	line-height: 1.2;
 	padding: 1rem 0;
 }
@@ -181,7 +181,7 @@ a {
 		width: 100%;
 
 		font-size: 1.5rem; // 24px
-		// font-weight: bold;
+		font-weight: bold;
 		line-height: 1.2;
 	}
 }
@@ -261,7 +261,7 @@ a {
 	color: $text-color;
 	display: block;
 	font-size: 1.5rem; // 24px
-	font-weight: normal;
+	font-weight: bold;
 	line-height: 1.2;
 	margin-bottom: 40px;
 
@@ -396,7 +396,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .post__title {
 	font-size: 1.5rem; // 24px
-	font-weight: normal;
+	font-weight: bold;
 	line-height: 1.2;
 	margin-bottom: 0.3rem;
 }
