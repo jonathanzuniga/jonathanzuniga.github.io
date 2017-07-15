@@ -2,6 +2,58 @@
 layout: default
 ---
 
+<div class="archive">
+	<h1 class="archive__title">
+		Previamente en...
+	</h1>
+
+	<div class="archive__years">
+		Explora los artículos por año: <br>
+		<a href="#2015">2015</a>, 
+		<a href="#2016">2016</a>
+	</div>
+
+	{% for post in site.posts %}
+		{% assign current_date = post.date | date: "%Y" %}
+		{% if current_date != date %}
+			{% unless forloop.first %}
+				</ul>
+			{% endunless %}
+			
+			<h2 id="{{ post.date | date: '%Y' }}" class="archive__year">
+				{{ current_date }}
+			</h2>
+
+			<ul class="archive__list">
+			{% assign date = current_date %}
+		{% endif %}
+
+		<li class="archive__item">
+			<div class="post">
+				<h3 class="post__title">
+					<a class="post__link" href="{{ post.url }}">
+						{{ post.title }}
+					</a>
+				</h3>
+
+				<p class="post__content">
+					<span class="post__date">{% include date.html %}</span> ...
+					{{ post.content | markdownify | strip_html | truncatewords: 15 }}
+				</p>
+			</div>
+		</li>
+
+		{% if forloop.last %}
+			</ul>
+		{% endif %}
+	{% endfor %}
+</div>
+
+
+
+
+
+{% comment %}
 <article class="archive">
 	{% assign counter = 0 %}
 	{% for post in site.posts %}
@@ -32,7 +84,7 @@ layout: default
 		{% if forloop.last %}</ul>{% endif %}
 	{% endfor %}
 </article>
-
+{% endcomment %}
 
 
 

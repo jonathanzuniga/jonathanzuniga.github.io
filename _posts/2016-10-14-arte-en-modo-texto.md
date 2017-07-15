@@ -22,24 +22,24 @@ Desde ese instante, una brecha que abarca casi treinta años, grupos de arte han
 
 Este es sin duda el medio más antiguo para trabajar en el *artscene*. Ha existido desde hace mucho tiempo. <abbr title="American Standard Code for Information Interchange">ASCII</abbr> siempre ha sido el conjunto de caracteres estándar de las <abbr title="Personal Computers">PC's</abbr> y a alguien se le ocurrió crear arte con esto. Hay dos formas principales de *ASCII art*, la de la vieja y la de la nueva escuela.
 
-<ul class="gallery gallery-2up">
-	<li class="gallery-item">
+<div class="row cols-2up">
+	<div class="col">
 		<figure>
 			<a href="https://www.instagram.com/p/BHc9sH8BAPh/" target="_blank">
 				<img src="https://www.dropbox.com/s/te3scdrxsn5955t/astral-projection.jpg?raw=1" alt="ASCII art: Astral projection">
 			</a>
 			<figcaption>ASCII art «Astral projection» por mattmatthew</figcaption>
 		</figure>
-	</li>
-	<li class="gallery-item">
+	</div>
+	<div class="col">
 		<figure>
 			<a href="http://blocktronics.org/thomas-carli-jarlier/" target="_blank">
 				<img src="https://www.dropbox.com/s/0snxtzwdiqik6zn/thomas-carli-jarlier.ans_-612x764.png?raw=1" alt="ANSI art: thomas-carli-jarlier">
 			</a>
 			<figcaption>ANSI art «thomas-carli-jarlier»</figcaption>
 		</figure>
-	</li>
-</ul>
+	</div>
+</div>
 
 Los artistas de la vieja escuela utilizan los caracteres `/ \ | : ;` y similares para crear logotipos sencillos, por lo general para agregarlos en los archivos `file_id.diz`, archivos que todavía son  utilizados por la comunidad [*warez*][warez] en sus lanzamientos de software sin licencia.
 
@@ -59,20 +59,21 @@ Al principio los artistas dibujaban logos y simples letras. Pero a medida que pa
 
 Si les interesa conocer más, les comparto unos enlaces de comunidades, artículos y de obras fascinantes:
 
-- [Blocktronics](http://blocktronics.org/) - Textmode Art Collective.
-- <http://blocktronics.org/2m-blocktronics-amiga-shirt/>
-- <http://blocktronics.org/2m-drewmaster-xb/>
-- <http://blocktronics.org/avg-blockfonttobym-ans/>
-- <http://blocktronics.org/tcf-mina/>
-- [GETV: ANSI Art for the Masses](https://www.youtube.com/watch?v=r_cYOi3pnhA) - Reportaje de una exposición.
-- [Mistigris](http://mistigris.org/) - Outlier computer arts since 1994.
-- [Sixteen Colors ANSI/ASCII Art Archive](http://sixteencolors.net/).
-- [Freestyle: An Oral History](http://daily.redbullmusicacademy.com/specials/freestyle-oral-history/).
+- **[Blocktronics](http://blocktronics.org/)**
+	Textmode Art Collective.
+- **[GETV: ANSI Art for the Masses](https://www.youtube.com/watch?v=r_cYOi3pnhA)**
+	Reportaje de una exposición.
+- **[Sixteen Colors ANSI/ASCII Art Archive](http://sixteencolors.net/)**
+	Sixteen Colors ANSI Art and ASCII Art Archive.
+- **[Freestyle: An Oral History](http://daily.redbullmusicacademy.com/specials/freestyle-oral-history/)**
+	Arte ANSI creado para el encabezado del artículo.
 
 Algunas portadas de discos:
 
-- <http://bym.deviantart.com/art/Out-of-It-142468746>
-- <https://www.instagram.com/p/7hCvilnayk/>
+- **[Out of It](http://bym.deviantart.com/art/Out-of-It-142468746)**
+	Artwork for Brad Sucks new album Out of It. 
+- **[Ambush EP](https://www.instagram.com/p/7hCvilnayk/)**
+	Album cover for the Ambush EP digital pre-release by 2A0X.
 
 [bbs]: https://es.wikipedia.org/wiki/Bulletin_Board_System
 [warez]: https://es.wikipedia.org/wiki/Warez

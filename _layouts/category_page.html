@@ -2,44 +2,47 @@
 layout: default
 ---
 
-{% for post in site.categories[page.category] %}
-	<article class="post">
-		<header class="post-header">
-			<h2 class="post-title">
-				<a class="post-link" href="{{ post.url }}">
-					{{ post.title }}
-				</a>
-			</h2>
+<div class="category-posts">
+	<h2 class="category-posts__title">
+		Estas leyendo todos los artículos publicados en la categoría «{{ page.category_es }}»
+	</h2>
 
-			<p class="post-meta">
-				<span class="post-author">
-					por 
-					{% assign author = site.authors['jonathan'] %}
-					<a class="post-authorLink" href="{{ site.baseurl }}/autor">
-						{{ author.name }}
+	{% for post in site.categories[page.category] %}
+		<article class="post">
+			<header class="post__header">
+				<h2 class="post__title">
+					<a class="post__link" href="{{ post.url }}">
+						{{ post.title }}
 					</a>
-				</span>
-				<span class="post-date">
-					<i class="fa fa-clock-o" aria-hidden="true"></i>
-					<a class="post-dateLink" href="{{ post.url }}">
+				</h2>
+
+				<div class="post__meta">
+					<!-- <span class="post__author">
+						por 
+						{% assign author = site.authors['jonathan'] %}
+						<a class="author-link" href="{{ site.baseurl }}/autor">
+							{{ author.name }}
+						</a>
+					</span> -->
+					<span class="post__date">
 						{% include date.html %}
-					</a>
-				</span>
-				<span class="post-categories">
-					<i class="fa fa-folder-o" aria-hidden="true"></i>
-					{% assign sorted_categories = post.categories | sort %}
-					{% for category in sorted_categories %}
-						{% if category == 'codigo' %}<a class="post-categoryLink" href="{{ site.baseurl }}/categoria/{{ category }}">código
-						{% elsif category == 'diseno' %}<a class="post-categoryLink" href="{{ site.baseurl }}/categoria/{{ category }}">diseño
-						{% else %}<a class="post-categoryLink" href="{{ site.baseurl }}/categoria/{{ category }}">{{ category | replace: '-', ' ' }}
-						{% endif %}</a>{% if forloop.last == false %}, {% endif %}
-					{% endfor %}
-				</span>
-			</p>
-		</header>
+					</span>
+					<span class="post__category">
+						en
+						{% assign sorted_categories = post.categories | sort %}
+						{% for category in sorted_categories %}
+							{% if category == 'codigo' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">código
+							{% elsif category == 'diseno' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">diseño
+							{% else %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">{{ category | replace: '-', ' ' }}
+							{% endif %}</a>{% if forloop.last == false %}, {% endif %}
+						{% endfor %}
+					</span>
+				</div>
+			</header>
 
-		<section class="post-content">
-			{{ post.content }}
-		</section>
-	</article>
-{% endfor %}
+			<section class="post__content">
+				{{ post.content }}
+			</section>
+		</article>
+	{% endfor %}
+</div>

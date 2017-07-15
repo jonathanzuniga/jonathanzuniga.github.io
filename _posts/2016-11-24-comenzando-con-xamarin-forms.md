@@ -1,6 +1,7 @@
 ---
 authors: [jonathan]
 categories: [codigo]
+cover: https://www.dropbox.com/s/jvex4w9ulnnniul/DeepLinkFlow.jpg?raw=1
 date: 2016-11-24
 description: 'Herramienta para agilizar el desarrollo multiplataforma.'
 layout: post
@@ -14,6 +15,13 @@ Xamarin.Forms es un *framework* multi-plataforma para crear aplicaciones con [XA
 Funciona añadiendo una capa de abstracción sobre los controles que podamos tener en el transcurso de nuestras aplicaciones, a estos se les llama *standard controls* o  controles estandard. También podemos acomodarlos según nuestro diseño con diferentes controles o contenedores llamados *layout controls*. Adicionalmente Xamarin.Forms provee elementos para el despliegue nativo de mapas en cada uno de los sistemas operativos móviles. Ademas Xamarin.Forms nos permite conectar cada una de nuestras pantallas a través del elemento de navegación, el cual nos permite mantener una misma consistencia y navegación a lo largo de nuestra *app*. 
 
 Xamarin.Forms contiene un conjunto de elementos de [más de 40 controles y páginas](https://developer.xamarin.com/guides/xamarin-forms/controls/), puede haber casos que nuestros controles requieren agregar apariencia o una funcionalidad extra. En este caso los *custom controls* son de gran ayuda. Para esto podemos utilizar XAML —que es un lenguaje de marcado como el XML— que nos permitirá construir interfaces gráficas. XAML incluye elementos de *data binding* que nos sirven para mantener una sincronía de datos entre nuestras pantallas y los modelos. Por último Xamarin.Forms contiene el elemento *styles* y *triggers* que nos ayudan a tener una misma apariencia a lo largo del desarrollo de nuestra aplicación y que nuestras interfaces de usuario reaccionen en determinados estados de los datos.
+
+<!-- <figure>
+	<a href="https://github.com/xamarinhq/app-evolve" target="_blank">
+		<img src="https://www.dropbox.com/s/jvex4w9ulnnniul/DeepLinkFlow.jpg?raw=1" alt="Xamarin Evolve 2016 Mobile App">
+	</a>
+	<figcaption>Xamarin Evolve 2016 Mobile App: Demostración de una aplicación hecha con Xamarin.Forms</figcaption>
+</figure> -->
 
 ## Requisitos
 

@@ -8,46 +8,31 @@
 <html>
 	{% include head.html %}
 
-	<body class="{% if page.layout == 'page' or
-										 page.layout == 'post' or
-										 page.layout == 'articles' %}body-single{% endif %}
-							 {% if page.layout == 'page' %} body-page
-							 {% elsif page.layout == 'post' %} body-post
-							 {% elsif page.layout == 'articles' %} body-articles
-							 {% endif %}">
-		{% include header.html %}
+	<body>
+		<div class="main">
+			<div class="wrapper">
+				{% include header.html %}
 
-		<div class="wrapper">
-			<div class="main">
-				<div class="main__content">
-					{{ content }}
-				</div>
-			</div>
-
-			<div class="sidebar">
-				<div class="sidebar__content">
-					{% include sidebar.html %}
-				</div>
+				{{ content }}
 			</div>
 		</div>
 
-		<!-- {% include footer.html %} -->
+		{% include footer.html %}
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="{{ '/js/jquery.sticky-kit.min.js' | prepend: site.baseurl }}" type="text/javascript"></script>
-		<script src="{{ '/js/scripts.js' | prepend: site.baseurl }}" type="text/javascript"></script>
-		<!-- {% if page.layout == 'post' %}
-			<script>
-				$(function() {
-					var posts = [];
-					{% for post in site.posts %}
-						posts.push('{{ post.url }}');
-					{% endfor %}
+		<script src="{{ '/js/lunr.min.js' | prepend: site.baseurl }}"></script>
+		<script src="{{ '/js/search.js' | prepend: site.baseurl }}"></script>
+		<script src="{{ '/js/scripts.js' | prepend: site.baseurl }}"></script>
+		<script>
+			$(function() {
+				var posts = [];
+				{% for post in site.posts %}
+					posts.push('{{ post.url }}');
+				{% endfor %}
 
-					var random_post_url = posts[Math.floor(Math.random() * posts.length)];
-					$('.pageNav-randomPostLink').attr('href', random_post_url);
-				});
-			</script>
-		{% endif %} -->
+				var random_post_url = posts[Math.floor(Math.random() * posts.length)];
+				$('.page-nav__link-random').attr('href', random_post_url);
+			});
+		</script>
 	</body>
 </html>

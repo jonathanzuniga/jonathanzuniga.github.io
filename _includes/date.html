@@ -24,12 +24,10 @@
 		{% assign month = months[m] %}
 		{% assign year = page.date | date: '%Y' %}
 		{% comment %}{% assign time = page.date | date: '%-I%P' %}{% endcomment %}
-		<span class="date">
-			{% comment %}<span class="day-name">{{ day_name }}</span>{% endcomment %}
-			<span class="day">{{ day }}</span>
-			<span class="month">{{ month }}</span>
-			<span class="year">{{ year }}</span>
-		</span>
+		{% comment %}<span class="day-name">{{ day_name }}</span>{% endcomment %}
+		<span class="day">{{ day }}</span>
+		<span class="month">{{ month }}</span>
+		<span class="year">{{ year }}</span>
 		{% comment %}<span class="time">{{ time }}</span>{% endcomment %}
 	</time>
 {% else %}
@@ -41,12 +39,10 @@
 		{% assign month = months[m] %}
 		{% assign year = post.date | date: '%Y' %}
 		{% comment %}{% assign time = post.date | date: '%-I%P' %}{% endcomment %}
-		<span class="date">
-			{% comment %}<span class="day-name">{{ day_name }}</span>{% endcomment %}
-			<span class="day">{{ day }}</span>
-			<span class="month">{{ month }}</span>
-			<span class="year">{{ year }}</span>
-		</span>
+		{% comment %}<span class="day-name">{{ day_name }}</span>{% endcomment %}
+		<span class="day">{{ day }}</span>
+		<span class="month">{{ month }}</span>
+		<span class="year">{{ year }}</span>
 		{% comment %}<span class="time">{{ time }}</span>{% endcomment %}
 	</time>
 {% endif %}

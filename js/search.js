@@ -1,8 +1,8 @@
 (function() {
   function displaySearchResults(results, store) {
     var searchResultsTitle = document.getElementById('search-results__title');
-    var searchResults = document.getElementById('search-results__posts');
-    var noResultsFound = document.getElementById('search-results__message');
+    var searchResultsMessage = document.getElementById('search-results__message');
+    var searchResultsPosts = document.getElementById('search-results__posts');
 
     if (results.length) { // Are there any results?
       var appendString = '';
@@ -48,12 +48,12 @@
       else if (i > 0)
         appendCount = 'Se encontraron ' + i + ' resultados';
 
-      searchResultsTitle.innerHTML = appendCount;
-      searchResults.innerHTML = appendString;
-      noResultsFound.innerHTML = '';
+      searchResultsTitle.innerHTML = 'Resultados de tu búsqueda';
+      searchResultsMessage.innerHTML = appendCount + ' de «' + searchTerm + '».';
+      searchResultsPosts.innerHTML = appendString;
     } else {
       searchResultsTitle.innerHTML = 'No se encontró ningún resultado';
-      noResultsFound.innerHTML = 'Lo siento, pero ninguna publicación coincide con tu búsqueda «' + searchTerm + '».';
+      searchResultsMessage.innerHTML = 'Lo siento, pero ninguna publicación coincide con tu búsqueda «' + searchTerm + '».';
     }
   }
 
@@ -72,7 +72,7 @@
 
   var searchTerm = getQueryVariable('consulta');
   if (searchTerm) {
-    document.getElementById('search__box').setAttribute('value', searchTerm);
+    document.getElementById('search__input').setAttribute('value', searchTerm);
 
     // Initalize lunr with the fields it will be searching on. I've given title
     // a boost of 10 to indicate matches on this field are more important.

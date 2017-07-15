@@ -1,3 +1,46 @@
+{% assign author = site.authors['jonathan'] %}
+
+<header class="header">
+	<div class="navbar">
+		<div class="navbar__brand">
+			<a class="navbar__title" href="{{ site.baseurl }}/">
+				{{ author.name }} {{ author.lastname }}
+			</a>
+		</div>
+
+		{% assign current = page.url | downcase | split: '/' %}
+		
+		<div class="navbar__menu">
+			<ul class="navbar__list">
+				<li class="navbar__item {% if page.url == '/' %}selected{% endif %}">
+					<a class="navbar__link" href="{{ site.baseurl }}/">
+						Inicio
+					</a>
+				</li>
+				<li class="navbar__item {% if current[1] == 'archivo' %}selected{% endif %}">
+					<a class="navbar__link" href="{{ site.baseurl }}/archivo">
+						Archivo
+					</a>
+				</li>
+				<li class="navbar__item {% if current[1] == 'autor' %}selected{% endif %}">
+					<a class="navbar__link" href="{{ site.baseurl }}/autor">
+						Autor
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+
+
+
+
+
+
+
+
+
+{% comment %}
 <header class="header">
 	<div class="wrapper">
 		<div class="navbar">
@@ -31,7 +74,7 @@
 		</div>
 	</div>
 </header>
-
+{% endcomment %}
 
 
 

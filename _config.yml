@@ -2,7 +2,7 @@
 title: Jonathan Zúñiga
 email: jonathanzuniga@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Hola, mi nombre es Jonathan, soy un desarrollador web viviendo y trabajando en la cambiante ciudad de Tijuana.
+    Jonathan Zúñiga es un desarrollador web viviendo y trabajando en la cambiante ciudad de Tijuana.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://jonathanzuniga.github.io" # the base hostname & protocol for your site
 

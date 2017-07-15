@@ -7,30 +7,33 @@ layout: post
 title: 'Xamarin.Forms: Data Bindings y Value Converters'
 ---
 
-En el modelo <abbr title="Model–View–ViewModel">MVVM</abbr> la forma de comunicar la [vista][vista] con el [modelo de vista][modelo-de-vista] es a través de *[data bindings][data-bindings]*. La idea es muy simple, primero tenemos un [objeto][objeto] que expone una propiedad pública. Este objeto puede ser el modelo de vista o algún otro objeto dentro de este.<!--more-->
+En el modelo <abbr title="Model–View–ViewModel">MVVM</abbr> la forma de comunicar la [vista][vista] con el [modelo de vista][modelo-de-vista] es a través de *[data bindings][data-bindings]*. La idea es muy simple, primero tenemos un [objeto][objeto] que expone una propiedad pública (origen). Este objeto puede ser el modelo de vista o algún otro objeto dentro de este.<!--more-->
 
 {% highlight c# %}
-// Origen: Objeto exponiendo una propiedad pública.
-Entry nameEntry = new Entry();
-
 Binding nameBinding = new Binding();
 nameBinding.Source = person;
 nameBinding.Path = "Name";
 
+Entry nameEntry = new Entry();
 nameEntry.SetBinding(Entry.TextProperty, nameBinding);
 {% endhighlight %}
 
-Dentro de la [interfaz gráfica][interfaz-grafica] tendremos otro objeto que tienen una propiedad, la cual recibirá el valor de la propiedad del objeto origen. El mecanismo para lograr esta comunicación se conoce como *data binding*. Este se encarga de informar a los objetos cada que ocurre un cambio en cualquiera de los extremos.
+Dentro de la [interfaz gráfica][interfaz-grafica] tendremos otro objeto que tienen una propiedad, la cual recibirá el valor de la propiedad del objeto origen (destino). El mecanismo para lograr esta comunicación se conoce como *data binding*. Este se encarga de informar a los objetos cada que ocurre un cambio en cualquiera de los extremos.
 
+<div class="row cols-2up">
+	<div class="col">
 {% highlight c# %}
-// Destino: Propiedad del objeto que va a recibir el valor de la propiedad del objeto origen.
+// C#
 BindingContext = person;
 {% endhighlight %}
-
+	</div>
+	<div class="col">
 {% highlight xml %}
-<!-- Con XAML. -->
+<!-- XAML -->
 <Entry Text="{Binding Name}" />
 {% endhighlight %}
+	</div>
+</div>
 
 ### Tipos de Data Bindings
 
@@ -52,7 +55,6 @@ Para lograr el enlace de datos mediante *data bindings*, se requiere que un obje
 Otro concepto es el de *value converters*. Estos nos ayudaran a poder enlazar propiedades del objeto origen a las propiedades del elemento gráfico que espera otro tipo de dato.
 
 {% highlight xml %}
-<!-- Enlazando la propiedad 'PasswordStrength' al texto y a 'TextColor', que espera dos tipos de datos diferentes. -->
 <Label Text="{Binding PasswordStrength}"
        TextColor="{Binding PasswordStrength}"
        FontSize="24" />

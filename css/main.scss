@@ -4,166 +4,42 @@
 
 @charset 'utf-8';
 
-@import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i');
+// @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,700');
 
 // Our variables
-$base-font-family: 'Karla', 'Helvetica Neue', Helvetica, sans-serif;
-$mono-font-family: Menlo, Courier, monospace;
-$base-font-size: 15px;
-$small-font-size: $base-font-size * 0.875;
-// $base-line-height: 1.733;
-// $base-line-height: 1.42857143;
-$base-line-height: 1.5;
-$spacing-unit: 30px;
+$font-family-base: 'Work Sans', 'Soleil', Helvetica, sans-serif;
+$font-family-serif: Georgia, 'Times New Roman', Times, Serif;
+$font-family-mono: Menlo, Courier, monospace;
+
+$font-size-base: 16px;
+$font-size-small: $font-size-base * 0.875;
+// $font-size-small: $font-size-base * 0.813;
+$font-size-large: 118%;
+$font-size-large-screen: 18px;
+
+$line-height-base: 1.6;
 $border-radius: 4px;
 
 
 // Colors
-$background-color: #fff;
-$text-color: #1B2733;
+$color-background: #fff;
+// $color-main-background: #fff;
+$color-text: #333;
 
-// $footer-bg-color: #d5ceca;
-// $footer-bg-color: #5f7995;
-// $footer-bg-color: #cfe7ea;
-// $footer-bg-color: #efe9ea;
-$footer-bg-color: #a5b9ba;
+$color-cyan-600: #00acc1;
 
-// $header-bg-color: #7f7fb5;
-// $header-bg-color: #76a9e9;
-// $header-text-color: #fff;
-
-// $body-bg-color: #fff;
-// $body-text-color: #000;
-
-// $footer-bg-color: #000;
-// $footer-text-color: #888;
-
-// $link-color: #0366d6;
-// $link-color: #2455c3;
-// $link-color: #2555c3; // *
-// $link-color: #005bff;
-// $link-color: #4166ff;
-// $link-color: #3652d3;
-// $link-color: #0071b2; // *
-// $link-color: #3459d0;
-$link-color: #007ee5; // *
-// $link-color: #0070E0;
-// $link-color: $text-color;
-$link-visited-color: $link-color;
-$link-active-color: $link-color;
-$link-hover-color: $link-color;
-
-$border-color: #E6E8EB;
-// $selection-bg-color: $color-blue;
-
-$color-black: #000;
-// $color-blue: #4166ff;
-// $color-blue-light: #6682ff;
-// $color-blue: #005bff;
-$color-blue: #5076b8;
-$color-blue-grey-50: #eceff1;
-$color-blue-grey-200: #b0bec5;
-$color-cyan: #088;
-$color-grey-50: #fafafa;
 $color-grey-100: #f5f5f5;
 $color-grey-200: #eee;
 $color-grey-300: #e0e0e0;
 $color-grey-400: #bdbdbd;
-$color-grey-500: #9e9e9e;
-$color-grey-600: #757575;
-$color-grey-700: #616161;
-$color-grey-800: #424242;
-$color-grey-900: #212121;
 
-// $color-orange: #fe713e;
-// $color-orange: #ff764d;
-// $color-orange: #ffb870;
-// $color-orange: #f07834; // fav.
-// $color-orange: #f87945;
-// $color-orange: #fa974b;
-// $color-orange: #f57f17;
-// $color-orange: #f17a16;
-$color-orange: #f2992e;
-// $color-purple: #60f;
-$color-purple: #7600e2;
-// $color-red: #ff4538;
-// $color-red: #fd5948;
-// $color-red: #f35a4e;
-$color-red: #df4747;
-// $color-yellow: #fed134;
-$color-yellow: #e19e29;
+$color-border: $color-grey-300;
 
-$color-amber-500: #ffc107;
-$color-amber-600: #ffb300;
-
-$color-blue-500: #2196f3;
-
-$color-cyan-300: #4dd0e1;
-$color-cyan-400: #26c6da;
-$color-cyan-500: #00bcd4;
-$color-cyan-600: #00acc1;
-$color-cyan-700: #0097a7;
-
-$color-light-blue-300: #4fc3f7;
-$color-light-blue-400: #29b6f6;
-$color-light-blue-500: #03a9f4;
-$color-light-blue-600: #039be5;
-$color-light-blue-700: #0288d1;
-
-$color-orange-600: #fb8c00;
-
-$color-teal-600: #00897b;
-
-
-
-// Width of the content area
-$content-width: 1100px;
-// $on-palm:        360px;
-// $on-laptop:      768px;
-// $on-tablet-max: 767px;
-// $on-tablet-min: 768px;
-
-$width-479: 479px;
-$width-480: 480px;
-$width-568: 568px;
-$width-569: 569px;
-$width-767: 767px;
-$width-768: 768px;
-$width-1023: 1023px;
-$width-1024: 1024px;
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-// @mixin media-query($device) {
-//  @media screen and (max-width: $device) {
-//    @content;
-//  }
-// }
-
-@mixin media-query-max-width($max) {
-	@media screen and (max-width: $max) {
-		@content;
-	}
-}
-
-@mixin media-query-min-width($min) {
-	@media screen and (min-width: $min) {
-		@content;
-	}
-}
-
-@mixin media-query-min-and-max-width($min, $max) {
-	@media screen and (min-width: $min) and (max-width: $max) {
-		@content;
-	}
-}
+// $color-link: #007ee5;
+$color-link: $color-cyan-600;
+$color-link-visited: $color-link;
+$color-link-active: $color-link;
+$color-link-hover: $color-text;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
@@ -171,7 +47,3 @@ $width-1024: 1024px;
 	'style',
 	'syntax-highlighting',
 	'font';
-
-	// 'base', 
-	// 'layout',
-	// 'syntax-highlighting';
