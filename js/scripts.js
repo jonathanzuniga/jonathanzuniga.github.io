@@ -1,4 +1,17 @@
 jQuery(document).ready(function($) {
+	var header = $('.header');
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll > 0) {
+            header.addClass('shadow');
+        } else {
+            header.removeClass('shadow');
+        }
+    });
+
+
+
 // 	$('.layout-aside .tags a').each(function() {
 // 		$(this).wrap('<li class="tags-item"/>');
 // 	});

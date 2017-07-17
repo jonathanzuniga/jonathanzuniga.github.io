@@ -2,14 +2,18 @@
 layout: default
 ---
 
-<article class="post">
-	<header class="post__header">
-		<h1 class="post__title">
-			{{ page.title }}
-		</h1>
-	</header>
+<div class="row cols-center">
+	<div class="col-md-9 col-xl-7">
+		<article class="post">
+			<header class="post__header">
+				<h1 class="post__title">
+					{{ page.title }}
+				</h1>
+			</header>
 
-	<section class="post__content">
-		{{ content }}
-	</section>
-</article>
+			<section class="post__content">
+				{{ content }}
+			</section>
+		</article>
+	</div>
+</div>

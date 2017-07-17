@@ -1,7 +1,6 @@
 ---
 authors: [jonathan]
 categories: [codigo]
-cover: https://www.dropbox.com/s/jvex4w9ulnnniul/DeepLinkFlow.jpg?raw=1
 date: 2016-11-24
 description: 'Herramienta para agilizar el desarrollo multiplataforma.'
 layout: post

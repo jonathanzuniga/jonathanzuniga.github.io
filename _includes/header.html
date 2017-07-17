@@ -1,35 +1,50 @@
 {% assign author = site.authors['jonathan'] %}
-
 <header class="header">
-	<div class="navbar">
-		<div class="navbar__brand">
-			<a class="navbar__title" href="{{ site.baseurl }}/">
-				{{ author.name }} {{ author.lastname }}
-			</a>
+	<!-- <div class="container"> -->
+		<div class="row cols-center">
+			<div class="col-xs-12 col-md-11 col-xl-12">
+				<div class="row">
+					<div class="col-md-3">
+						<a class="header__title" href="{{ site.baseurl }}/">
+							{{ author.name }} {{ author.lastname }}
+						</a>
+					</div>
+					<div class="col-md-9">
+						{% assign current = page.url | downcase | split: '/' %}
+						<nav class="nav">
+							<ul class="nav__list">
+								<li class="nav__item">
+									<a class="nav__link {% if page.url == '/' %}selected{% endif %}" href="{{ site.baseurl }}/">
+										Inicio
+									</a>
+								</li>
+								<li class="nav__item">
+									<a class="nav__link {% if current[1] == 'archivo' %}selected{% endif %}" href="{{ site.baseurl }}/archivo">
+										Archivo
+									</a>
+								</li>
+								<li class="nav__item">
+									<a class="nav__link {% if current[1] == 'autor' %}selected{% endif %}" href="{{ site.baseurl }}/autor">
+										Autor
+									</a>
+								</li>
+								<li class="nav__item">
+									<a class="nav__link" href="#">
+										<i class="fa fa-search" aria-hidden="true"></i>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
 		</div>
+	<!-- </div> -->
 
-		{% assign current = page.url | downcase | split: '/' %}
-		
-		<div class="navbar__menu">
-			<ul class="navbar__list">
-				<li class="navbar__item {% if page.url == '/' %}selected{% endif %}">
-					<a class="navbar__link" href="{{ site.baseurl }}/">
-						Inicio
-					</a>
-				</li>
-				<li class="navbar__item {% if current[1] == 'archivo' %}selected{% endif %}">
-					<a class="navbar__link" href="{{ site.baseurl }}/archivo">
-						Archivo
-					</a>
-				</li>
-				<li class="navbar__item {% if current[1] == 'autor' %}selected{% endif %}">
-					<a class="navbar__link" href="{{ site.baseurl }}/autor">
-						Autor
-					</a>
-				</li>
-			</ul>
+	<!-- <div class="navbar">
+		<div class="navbar__brand">
 		</div>
-	</div>
+	</div> -->
 </header>
 
 

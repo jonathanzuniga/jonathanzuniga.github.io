@@ -4,7 +4,7 @@ permalink: /autor
 title: Sobre el autor
 ---
 
-<p class="text-large">
+<p class="fnt-large">
 	Hola, mi nombre es Jonathan y soy un desarrollador web viviendo y trabajando como desarrollador front-end en la cambiante ciudad de Tijuana, BC.
 </p>
 

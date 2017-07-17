@@ -20,7 +20,7 @@ nameEntry.SetBinding(Entry.TextProperty, nameBinding);
 
 Dentro de la [interfaz gráfica][interfaz-grafica] tendremos otro objeto que tienen una propiedad, la cual recibirá el valor de la propiedad del objeto origen (destino). El mecanismo para lograr esta comunicación se conoce como *data binding*. Este se encarga de informar a los objetos cada que ocurre un cambio en cualquiera de los extremos.
 
-<div class="row cols-2up">
+<div class="row">
 	<div class="col">
 {% highlight c# %}
 // C#

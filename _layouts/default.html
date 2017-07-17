@@ -9,22 +9,28 @@
 	{% include head.html %}
 
 	<body>
-		<div class="main">
-			<div class="wrapper">
-				{% include header.html %}
+		{% include header.html %}
 
-				{{ content }}
+		<!-- <div class="container"> -->
+			<div class="row cols-center">
+				<div class="col-xs-12 col-md-11 col-xl-10">
+
+					{{ content }}
+
+					{% include footer.html %}
+				</div>
 			</div>
-		</div>
-
-		{% include footer.html %}
+		<!-- </div> -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bricklayer/0.4.2/bricklayer.min.js"></script>
 		<script src="{{ '/js/lunr.min.js' | prepend: site.baseurl }}"></script>
 		<script src="{{ '/js/search.js' | prepend: site.baseurl }}"></script>
 		<script src="{{ '/js/scripts.js' | prepend: site.baseurl }}"></script>
 		<script>
 			$(function() {
+				var bricklayer = new Bricklayer(document.querySelector('.bricklayer'))
+
 				var posts = [];
 				{% for post in site.posts %}
 					posts.push('{{ post.url }}');
