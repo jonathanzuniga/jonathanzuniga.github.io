@@ -2,24 +2,16 @@
 layout: default
 ---
 
-<h2>
-	Artículos recientes
-</h2>
-
-<div class="posts bricklayer">
-	{% for post in site.posts limit: 32 %}
-		<div class="post post-{{ forloop.index }}">
-			<a class="post__link" href="{{ post.url }}">
-				{% if post.cover %}
-					<div class="post__cover" style="background-image: url('{{ post.cover }}');"></div>
-				{% endif %}
-
-				<h3 class="post__title">
+<div class="posts">
+	{% for post in site.posts limit: 6 %}
+		<div id="post-{{ forloop.index }}" class="post post-{{ forloop.index }}">
+			<h2 class="post__title custom-title">
+				<a class="post__link ac-txtc" href="{{ post.url }}">
 					{{ post.title }}
-				</h3>
-			</a>
+				</a>
+			</h2>
 
-			<div class="post__meta">
+			<!-- <div class="post__meta">
 				<span class="post__date">
 					{% include date.html %}
 				</span>
@@ -33,16 +25,17 @@ layout: default
 						{% endif %}</a>{% if forloop.last == false %}, {% endif %}
 					{% endfor %}
 				</span>
-			</div>
+			</div> -->
 
-			<div class="post__content">
-				{{ post.excerpt }}
+			<div class="post__content txt-indent">
+				{{ post.content }}
 				<!-- {{ post.content | markdownify | strip_html | truncatewords: 21 }} -->
 			</div>
 		</div>
 	{% endfor %}
 </div>
 
+{% include form_search.html %}
 
 
 

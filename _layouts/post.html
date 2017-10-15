@@ -2,44 +2,48 @@
 layout: default
 ---
 
-<div class="row cols-center">
-	<div class="col-md-9 col-xl-7">
-		<article class="full post">
-			<header class="post__header">
-				<h1 class="post__title">
-					{{ page.title }}
-				</h1>
+<article class="full post">
+	<header class="post__header">
+		<h1 class="post__title custom-title h2">
+			{{ page.title }}
+		</h1>
 
-				<div class="post__meta">
-					<!-- <span class="post__author">
-						por 
-						{% assign author = site.authors['jonathan'] %}
-						<a class="author-link" href="{{ site.baseurl }}/autor">
-							{{ author.name }}
-						</a>
-					</span> -->
-					<span class="post__date">
-						{% include date.html %}
-					</span>
-					<span class="post__category">
-						en
-						{% assign sorted_categories = page.categories | sort %}
-						{% for category in sorted_categories %}
-							{% if category == 'codigo' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">código
-							{% elsif category == 'diseno' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">diseño
-							{% else %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">{{ category | replace: '-', ' ' }}
-							{% endif %}</a>{% if forloop.last == false %}, {% endif %}
-						{% endfor %}
-					</span>
-				</div>
-			</header>
+		{% comment %}
+		<div class="post__meta">
+			<!-- <span class="post__author">
+				por 
+				{% assign author = site.authors['jonathan'] %}
+				<a class="author-link" href="{{ site.baseurl }}/autor">
+					{{ author.name }}
+				</a>
+			</span> -->
+			<span class="post__date">
+				{% include date.html %}
+			</span>
+			<span class="post__category">
+				en
+				{% assign sorted_categories = page.categories | sort %}
+				{% for category in sorted_categories %}
+					{% if category == 'codigo' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">código
+					{% elsif category == 'diseno' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">diseño
+					{% else %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">{{ category | replace: '-', ' ' }}
+					{% endif %}</a>{% if forloop.last == false %}, {% endif %}
+				{% endfor %}
+			</span>
+		</div>
+		{% endcomment %}
+	</header>
 
-			<section class="post__content">
-				{{ page.content }}
-			</section>
-		</article>
-	</div>
-</div>
+	<section class="post__content txt-indent">
+		{{ page.content }}
+	</section>
+</article>
+
+{% include form_search.html %}
+
+
+
+		
 
 <!-- <div class="page-nav">
 	<div class="row cols-2up">

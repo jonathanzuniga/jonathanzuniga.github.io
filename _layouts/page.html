@@ -2,18 +2,16 @@
 layout: default
 ---
 
-<div class="row cols-center">
-	<div class="col-md-9 col-xl-7">
-		<article class="post">
-			<header class="post__header">
-				<h1 class="post__title">
-					{{ page.title }}
-				</h1>
-			</header>
+<article class="full post">
+	{% if page.title %}
+		<header class="post__header">
+			<h1 class="post__title custom-title">
+				{{ page.title }}
+			</h1>
+		</header>
+	{% endif %}
 
-			<section class="post__content">
-				{{ content }}
-			</section>
-		</article>
-	</div>
-</div>
+	<section class="post__content txt-indent">
+		{{ content }}
+	</section>
+</article>

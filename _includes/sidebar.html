@@ -1,45 +1,171 @@
 {% assign author = site.authors['jonathan'] %}
-<a class="sidebar__title" href="{{ site.baseurl }}/">
-	{{ author.name }} {{ author.lastname }}
-</a>
+{% if page.url == '/' or page.layout == 'post' %}
+	<div class="sidebar__content txt-sm" id="sidebar__content--fixed">
+		<h5 class="sidebar__title custom-title mobile-header">
+			Momentos
+		</h5>
 
-<div class="sidebar__module sidebar__module-about">
-	Soy un desarrollador web viviendo y trabajando en la siempre cambiante ciudad de Tijuana.
-	<a href="{{ site.baseurl }}/autor" class="more">Además...</a>
-</div>
+		<p>
+			En este espacio encontrarás una colección de pensamientos y experiencias de mi vida diaria. Para recibir actualizaciones, puedes <a href="https://twitter.com/{{ author.twitter_username }}" target="_target">seguirme en twitter</a> o <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">suscríbirte a mi feed RSS</a>. Por favor, siéntete libre de enviarme por correo electrónico tus comentarios o correcciones.
+		</p>
 
-<div class="sidebar__module sidebar__module-contact">
-	Puedes seguirme en 
-	<a href="https://twitter.com/{{ author.twitter_username }}" target="_blank">Twitter</a> 
-	o enviarme un mensaje por 
-	<a href="mailto:{{ author.email }}">correo electrónico</a>.
-</div>
+		<div data-gumshoe-header>
+			<ul class="ls-unstyled" data-gumshoe>
+				{% for post in site.posts limit: 6 %}
+					<li>
+						<h6>
+							<a class="ac-txtc" href="{{ post.url }}#post-{{ forloop.index }}">
+								{{ post.title }}
+							</a>
+						</h6>
 
-<div class="sidebar__module sidebar__module-subscribe">
-	Suscribete al 
-	<a href="{{ '/feed.xml' | prepend: site.baseurl }}" target="_blank">RSS feed</a> 
-	o busca una publicación anterior:
-</div>
+						<p>
+							<span class="post__date">
+								{% include date.html %}
+							</span>
+							<span class="post__category">
+								en
+								{% assign sorted_categories = post.categories | sort %}
+								{% for category in sorted_categories %}
+									{% if category == 'codigo' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">código
+									{% elsif category == 'diseno' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">diseño
+									{% else %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">{{ category | replace: '-', ' ' }}
+									{% endif %}</a>{% if forloop.last == false %}, {% endif %}
+								{% endfor %}
+							</span>
+						</p>
+					</li>
+				{% endfor %}
+				<li>
+					En la sección <a href="{{ site.baseurl }}/archivo">archivo</a> encontrarás todos los artículos.
+				</li>
+			</ul>
+		</div>
+	</div>
+{% elsif page.url == '/buscar' %}
+	<div class="sidebar__content txt-sm" id="sidebar__content--fixed">
+		<div id="sidebar__search-results" class="sidebar__search-results">
+		</div>
+	</div>
+{% elsif page.url == '/autor' %}
+	<div class="sidebar__content txt-sm">
+		<h5 class="sidebar__title custom-title">
+			Info. de contacto
+		</h5>
 
-<div class="sidebar__module sidebar__module-search">
-	<div class="search">
-		<form class="search__form" action="/buscar" method="get">
-			<div class="input__group">
-				<input class="search__box" id="sidebar__search-box" name="consulta" placeholder="Buscar..." required title="Buscar" type="search">
-				<span class="input__group-button">
-					<button class="button" type="submit">
-						<i class="fa fa-search icon" aria-hidden="true"></i>
-					</button>
-				</span>
-			</div>
-		</form>
+		<p class="maxsm-txt-center">
+			Escríbeme al <a href="mailto:{{ author.email }}">correo electrónico</a> para consultas o simplemente para saludarme.
+		</p>
+
+		<h5 class="sidebar__title custom-title">
+			Proyectos selectos
+		</h5>
+
+		<ul class="ls-unstyled">
+			{% assign selected_projects = site.data.selected_projects | sort: 'title' %}
+			{% for sp in selected_projects | limit: 6 %}
+			  <li>
+			  	<h6>
+					<a class="ac-txtc" href="{{ sp.url }}" target="_blank">
+					  {{ sp.title }}
+					</a>
+				</h6>
+
+				{% if sp.description %}
+					<p class="maxsm-txt-center">
+						{{ sp.description }}
+					</p>
+				{% endif %}
+			  </li>
+			{% endfor %}
+		</ul>
+
+		<h5 class="sidebar__title custom-title">
+			Lectura recomendada
+		</h5>
+
+		<ul class="ls-unstyled">
+			{% assign recommended_reading = site.data.recommended_reading | sort: 'title' %}
+			{% for rr in recommended_reading | limit: 3 %}
+			  <li>
+			  	<h6>
+					<a class="ac-txtc" href="{{ rr.url }}" target="_blank">
+					  {{ rr.title }}
+					</a>
+				</h6>
+
+				<p class="maxsm-txt-center">
+					<i>por {{ rr.author }}</i>
+				</p>
+			  </li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+{% comment %}
+<div class="sidebar txt-sm">
+	<h3 class="sidebar__title">
+		Pensamientos
+	</h3>
+
+	{% assign author = site.authors['jonathan'] %}
+	<a class="" href="{{ site.baseurl }}/">
+		{{ author.name }} {{ author.lastname }}
+	</a>
+
+	<div class="sidebar__module sidebar__module-about">
+		Soy un desarrollador web viviendo y trabajando en la siempre cambiante ciudad de Tijuana.
+		<a href="{{ site.baseurl }}/autor" class="more">Además...</a>
+	</div>
+
+	<div class="sidebar__module sidebar__module-contact">
+		Puedes seguirme en 
+		<a href="https://twitter.com/{{ author.twitter_username }}" target="_blank">Twitter</a> 
+		o enviarme un mensaje por 
+		<a href="mailto:{{ author.email }}">correo electrónico</a>.
+	</div>
+
+	<div class="sidebar__module sidebar__module-subscribe">
+		Suscribete al 
+		<a href="{{ '/feed.xml' | prepend: site.baseurl }}" target="_blank">RSS feed</a> 
+		o busca una publicación anterior:
+	</div>
+
+	<div class="sidebar__module sidebar__module-search">
+		<div class="search">
+			<form class="search__form" action="/buscar" method="get">
+				<div class="input__group">
+					<input class="search__box" id="sidebar__search-box" name="consulta" placeholder="Buscar..." required title="Buscar" type="search">
+					<span class="input__group-button">
+						<button class="button" type="submit">
+							<i class="fa fa-search icon" aria-hidden="true"></i>
+						</button>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="sidebar__module">
+		Este contenido está bajo una licencia
+		<a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license" target="_blank">CC BY 4.0</a>.
 	</div>
 </div>
+{% endcomment %}
 
-<div class="sidebar__module">
-	Este contenido está bajo una licencia
-	<a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license" target="_blank">CC BY 4.0</a>.
-</div>
+
+
+
 
 
 

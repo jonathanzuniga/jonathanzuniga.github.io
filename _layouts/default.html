@@ -8,37 +8,43 @@
 <html>
 	{% include head.html %}
 
-	<body>
-		{% include header.html %}
-
-		<!-- <div class="container"> -->
-			<div class="row cols-center">
-				<div class="col-xs-12 col-md-11 col-xl-10">
-
+	{% assign current = page.url | downcase | split: '/' %}
+	<body class="body {% if page.url == '/' %}body--home 
+				 {% elsif current[1] == 'archivo' %}body--archive 
+				 {% elsif current[1] == 'autor' %}body--author 
+				 {% elsif page.url == '/buscar' %}body--search{% endif %}">
+		<div class="container">
+			{% include header.html %}
+			
+			<div class="row md-gutters-15">
+				<div class="xs-col-12 sm-col-9 main">
 					{{ content }}
-
-					{% include footer.html %}
+				</div>
+				<div class="xs-col-12 sm-col-3 sidebar">
+					{% include sidebar.html %}
 				</div>
 			</div>
+
+			{% include footer.html %}
+		</div>
 		<!-- </div> -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/bricklayer/0.4.2/bricklayer.min.js"></script>
 		<script src="{{ '/js/lunr.min.js' | prepend: site.baseurl }}"></script>
 		<script src="{{ '/js/search.js' | prepend: site.baseurl }}"></script>
+		<script src="{{ '/js/jquery.sticky-kit.min.js' | prepend: site.baseurl }}"></script>
+		<script src="{{ '/js/gumshoe.min.js' | prepend: site.baseurl }}"></script>
 		<script src="{{ '/js/scripts.js' | prepend: site.baseurl }}"></script>
 		<script>
-			$(function() {
-				var bricklayer = new Bricklayer(document.querySelector('.bricklayer'))
+			// $(function() {
+			// 	var posts = [];
+			// 	{% for post in site.posts %}
+			// 		posts.push('{{ post.url }}');
+			// 	{% endfor %}
 
-				var posts = [];
-				{% for post in site.posts %}
-					posts.push('{{ post.url }}');
-				{% endfor %}
-
-				var random_post_url = posts[Math.floor(Math.random() * posts.length)];
-				$('.page-nav__link-random').attr('href', random_post_url);
-			});
+			// 	var random_post_url = posts[Math.floor(Math.random() * posts.length)];
+			// 	$('.page-nav__link-random').attr('href', random_post_url);
+			// });
 		</script>
 	</body>
 </html>

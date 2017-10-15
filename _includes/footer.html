@@ -1,11 +1,61 @@
-{% assign author = site.authors['jonathan'] %}
 <footer class="footer">
-	<p>
-		<small>
-			Este contenido está bajo una licencia Atribución 4.0 Internacional <a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">CC BY 4.0</a>.
-		</small>
-	</p>
+	<div class="row md-gutters-15">
+		<div class="col">
+			<p class="bd-top p-top-4 txt-sm">
+				Este contenido está bajo una licencia Atribución 4.0 Internacional <a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">CC BY 4.0</a>.
+			</p>
+		</div>
+	</div>
 </footer>
+
+
+
+
+
+
+
+
+
+
+{% comment %}
+{% assign author = site.authors['jonathan'] %}
+<div class="row md-gutters-15">
+	<div class="col">
+		{% if page.url == '/autor' %}
+			<div class="row">
+				<div class="col">
+					<div class="block-awesome">
+						<div class="row">
+							<div class="xs-col-12 sm-col-3">
+								<h3 class="custom-title h6 smcaps">Lectura recomendada</h3>
+							</div>
+							<div class="xs-col-12 sm-col-3">
+								<h3 class="custom-title h6 smcaps">Encuéntrame en</h3>
+							</div>
+							<div class="xs-col-12 sm-col-6">
+								<h3 class="custom-title h6 smcaps">Acerca del sitio</h3>
+
+								<p class="txt-sm">
+									Este espacio representa un experimento personal, en el que está en juego mi capacidad de comunicar mis pensamientos e ideas, así como mi predisposición a aprender. El sitio está creado con los mejores sabores de HTML5 y Sass para la parte de CSS, JavaScript para las búsquedas y utilizo [Jekyll][jekyll] para su publicación. La fuente tipográfica de los títulos y del cuerpo es [Soleil][soleil] diseñada por [Wolfgang Homola][wolfgang-homola]. Actualmente las <a href="https://www.flickr.com/photos/@{{ site.flickr_username }}" target="_blank">fotografías</a> las estoy tomando con mi [Nexus 5][nexus-5].
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+		<div class="row">
+			<div class="col">
+				<footer class="footer">
+					<p class="txt-sm">
+						Este contenido está bajo una licencia Atribución 4.0 Internacional <a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">CC BY 4.0</a>.
+					</p>
+				</footer>
+			</div>
+		</div>
+	</div>
+</div>
+{% endcomment %}
 
 
 

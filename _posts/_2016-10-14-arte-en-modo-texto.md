@@ -10,7 +10,7 @@ title: 'Arte en modo texto'
 
 Algo que me preguntaron algunas personas cuando publique uno de mis dibujos fue, ¿que es el *ANSI art*? Tratare de explicarlo, pero para entenderlo mejor explicare antes lo que es el *underground artscene*.<!--more-->
 
-## Introducción
+### Introducción
 
 La escena artística subterránea —traducido al español—, es un conjunto de personas de todo el mundo que dibujan en una variedad de formatos digitales, suministrando tableros de anuncios o [BBS's][bbs] con coloridas pantalla de inicio de sesión, sitios web con gráficos, y solo suelen aportar arte digital en general, incluso si a nadie le interesa.
 
@@ -18,11 +18,18 @@ Dicen que comenzó mas o menos por 1987. Para algunas personas no está claro cu
 
 Desde ese instante, una brecha que abarca casi treinta años, grupos de arte han llegado y se han ido, los cuales ofrecieron al mundo el color de su arte ANSI y los grises de su arte ASCII. Enlistarlos me llevaría una eternidad.
 
-## Arte ASCII
+### Arte ASCII
 
 Este es sin duda el medio más antiguo para trabajar en el *artscene*. Ha existido desde hace mucho tiempo. <abbr title="American Standard Code for Information Interchange">ASCII</abbr> siempre ha sido el conjunto de caracteres estándar de las <abbr title="Personal Computers">PC's</abbr> y a alguien se le ocurrió crear arte con esto. Hay dos formas principales de *ASCII art*, la de la vieja y la de la nueva escuela.
 
-<div class="row">
+<figure class="media-right-xs-6 media-right-sm-4">
+	<a href="https://www.instagram.com/p/BHc9sH8BAPh/" target="_blank">
+		<img src="https://www.dropbox.com/s/te3scdrxsn5955t/astral-projection.jpg?raw=1" alt="ASCII art: Astral projection">
+	</a>
+	<figcaption>ASCII art «Astral projection» por mattmatthew</figcaption>
+</figure>
+
+<!-- <div class="row gutters-half">
 	<div class="col">
 		<figure>
 			<a href="https://www.instagram.com/p/BHc9sH8BAPh/" target="_blank">
@@ -39,13 +46,13 @@ Este es sin duda el medio más antiguo para trabajar en el *artscene*. Ha existi
 			<figcaption>ANSI art «thomas-carli-jarlier»</figcaption>
 		</figure>
 	</div>
-</div>
+</div> -->
 
 Los artistas de la vieja escuela utilizan los caracteres `/ \ | : ;` y similares para crear logotipos sencillos, por lo general para agregarlos en los archivos `file_id.diz`, archivos que todavía son  utilizados por la comunidad [*warez*][warez] en sus lanzamientos de software sin licencia.
 
 Hoy en día la forma de arte ASCII de la nueva escuela es la más popular. Esta técnica utiliza principalmente el símbolo `$` en las formas y para las partes circulares `n o ° º` u otros caracteres con curvas. La mayoría de los artistas tienen su propio estilo.
 
-## Arte ANSI
+### Arte ANSI
 
 Nació a finales de 1980 y fue desarrollado para ofrecer un formato común para la visualización de gráficos en los BBS's. Esto fue lo que realmente hizo que la comunidad comenzara. Utilizandose para decorar los programas de MS-DOS y BBSes. La popularidad del arte <abbr title="American National Standards Institute">ANSI</abbr> creció cuando en 1986 Ian E. Davis lanzó la aplicación [TheDraw](https://en.wikipedia.org/wiki/TheDraw), que no sólo facilitó enormemente la edición de arte ANSI, sino que también contenía una amplia variedad de fuentes y configuraciones.
 
@@ -55,24 +62,24 @@ Una típica paleta consiste de 16 colores y 8 colores de fondo. Debido a que muc
 
 Al principio los artistas dibujaban logos y simples letras. Pero a medida que pasaba el tiempo, los artistas comenzaron a hacer [dibujos más complejos][dibujos-mas-complejos], aventurandose en largas pantallas de un detalle asombroso. Los artistas se inspiraban de los cómics o muchas veces creaban arte original. Para crear estos dibujos, al igual que en el *pixel art* se requiere de una paciencia brutal y que normalmente se hace caracter por caracter a mano usando algún editor de textos, que es como se valora más.
 
-## Enlaces interesantes
+### Enlaces interesantes
 
-Si les interesa conocer más, les comparto unos enlaces de comunidades, artículos y de obras fascinantes:
+Si les interesa conocer más, les comparto unos enlaces de comunidades, artículos y de algunas obras de arte fascinantes:
 
-- **[Blocktronics](http://blocktronics.org/)**
-	<small>Textmode Art Collective.</small>
-- **[GETV: ANSI Art for the Masses](https://www.youtube.com/watch?v=r_cYOi3pnhA)**
-	<small>Reportaje de una exposición.</small>
-- **[Sixteen Colors ANSI/ASCII Art Archive](http://sixteencolors.net/)**
-	<small>Sixteen Colors ANSI Art and ASCII Art Archive.</small>
-- **[Freestyle: An Oral History](http://daily.redbullmusicacademy.com/specials/freestyle-oral-history/)**
-	<small>Arte ANSI creado para el encabezado del artículo.</small>
+- #### [Blocktronics](http://blocktronics.org/)
+	<p class="txt-sm">Fundado en 2008, este grupo está compuesto por más de 70 artistas independientes de 12 diferentes países que todavía crean este arte retro digital llamado «arte ANSi».</p>
+- #### [GETV: ANSI Art for the Masses](https://www.youtube.com/watch?v=r_cYOi3pnhA)
+	<p class="txt-sm">Reportaje de una exposición: «Back before there was the Internet, early caveman dialed into computer bulletin board systems or BBSes to get their online fix. Many of these boards distinguished themselves with ANSI art, an early form of electronic cave paintings. ANSI was an extension to the even earlier form of caveman communication known as ASCII used in MS-DOS based computers. It is with great pleasure that we happened upon the San Francisco hacker art gallery "20 goto 10″ where an ANSI art exhibition was in progress. Irina Slutsky talks to curator Kevin Olson who takes us on a tour of some of the amazing early work of two ANSI artists, lordjazz and somms.»</p>
+- #### [Sixteen Colors ANSI/ASCII Art Archive](http://sixteencolors.net/)
+	<p class="txt-sm">«...In the early days of personal computing, these artforms were used to decorate the online communities of the time, BBSes. The undeground ANSI and ASCII art scene formed from these communities and brought you the collections of art you see here, referred to by the members of the scene as "packs".»</p>
+- #### [Freestyle: An Oral History](http://daily.redbullmusicacademy.com/specials/freestyle-oral-history/)
+	<p class="txt-sm">El encabezado de este interesante artículo sobre la música <i>freestyle</i> está hecho con este tipo de arte.</p>
 
 Algunas portadas de discos:
 
-- **[Out of It](http://bym.deviantart.com/art/Out-of-It-142468746)**
+- #### [Out of It](http://bym.deviantart.com/art/Out-of-It-142468746)
 	<small>Artwork for Brad Sucks new album Out of It.</small>
-- **[Ambush EP](https://www.instagram.com/p/7hCvilnayk/)**
+- #### [Ambush EP](https://www.instagram.com/p/7hCvilnayk/)
 	<small>Album cover for the Ambush EP digital pre-release by 2A0X.</small>
 
 [bbs]: https://es.wikipedia.org/wiki/Bulletin_Board_System

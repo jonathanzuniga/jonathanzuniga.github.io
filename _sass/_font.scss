@@ -1,72 +1,104 @@
 @font-face {
-    font-family: 'Soleil';
-    src: url(../fonts/Soleil-Extrabold.otf);
-    font-weight: 800;
-    font-style: normal;
+	font-family: 'ET Book';
+	src: url('../fonts/etbookot-roman-webfont.woff2') format('woff2'),
+		 url('../fonts/etbookot-roman-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Soleil';
-    src: url(../fonts/Soleil-Extrabold-Italic.otf);
-    font-weight: 800;
-    font-style: italic;
+	font-family: 'ET Book';
+	src: url('../fonts/etbookot-italic-webfont.woff2') format('woff2'),
+		 url('../fonts/etbookot-italic-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Soleil';
-    src: url(../fonts/Soleil-Bold.otf);
-    font-weight: bold;
-    font-style: normal;
+	font-family: 'ET Book';
+	src: url('../fonts/etbookot-bold-webfont.woff2') format('woff2'),
+		 url('../fonts/etbookot-bold-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
 }
 
-@font-face {
-    font-family: 'Soleil';
-    src: url(../fonts/Soleil-Bold-Italic.otf);
-    font-weight: bold;
-    font-style: italic;
-}
 
-@font-face {
-    font-family: 'Soleil';
-    src: url(../fonts/Soleil-Semibold.otf);
-    font-weight: 500;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'Soleil';
-    src: url(../fonts/Soleil-Semibold-Italic.otf);
-    font-weight: 500;
-    font-style: italic;
-}
 
-@font-face {
-    font-family: 'Soleil';
-    src: url(../fonts/Soleil-Regular.otf);
-    font-weight: normal;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'Soleil';
-    src: url(../fonts/Soleil-Italic.otf);
-    font-weight: normal;
-    font-style: italic;
-}
 
-@font-face {
-    font-family: 'Soleil';
-    src: url(../fonts/Soleil-Light.otf);
-    font-weight: 300;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'Soleil';
+//     src: url(../fonts/Soleil-Extrabold.otf);
+//     font-weight: 800;
+//     font-style: normal;
+// }
 
-@font-face {
-    font-family: 'Soleil';
-    src: url(../fonts/Soleil-Light-Italic.otf);
-    font-weight: 300;
-    font-style: italic;
-}
+// @font-face {
+//     font-family: 'Soleil';
+//     src: url(../fonts/Soleil-Extrabold-Italic.otf);
+//     font-weight: 800;
+//     font-style: italic;
+// }
+
+// @font-face {
+//     font-family: 'Soleil';
+//     src: url(../fonts/Soleil-Bold.otf);
+//     font-weight: bold;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Soleil';
+//     src: url(../fonts/Soleil-Bold-Italic.otf);
+//     font-weight: bold;
+//     font-style: italic;
+// }
+
+// @font-face {
+//     font-family: 'Soleil';
+//     src: url(../fonts/Soleil-Semibold.otf);
+//     font-weight: 500;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Soleil';
+//     src: url(../fonts/Soleil-Semibold-Italic.otf);
+//     font-weight: 500;
+//     font-style: italic;
+// }
+
+// @font-face {
+//     font-family: 'Soleil';
+//     src: url(../fonts/Soleil-Regular.otf);
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Soleil';
+//     src: url(../fonts/Soleil-Italic.otf);
+//     font-weight: normal;
+//     font-style: italic;
+// }
+
+// @font-face {
+//     font-family: 'Soleil';
+//     src: url(../fonts/Soleil-Light.otf);
+//     font-weight: 300;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Soleil';
+//     src: url(../fonts/Soleil-Light-Italic.otf);
+//     font-weight: 300;
+//     font-style: italic;
+// }
 
 
 
@@ -184,34 +216,6 @@
 
 
 
-
-
-
-
-// @font-face {
-// 	font-family: 'ET Book';
-// 	src: url('../fonts/etbookot-roman-webfont.woff2') format('woff2'),
-// 		 	 url('../fonts/etbookot-roman-webfont.woff') format('woff');
-// 	font-weight: normal;
-// 	font-style: normal;
-// 	font-display: swap;
-// }
-// @font-face {
-// 	font-family: 'ET Book';
-// 	src: url('../fonts/etbookot-italic-webfont.woff2') format('woff2'),
-// 		   url('../fonts/etbookot-italic-webfont.woff') format('woff');
-// 	font-weight: normal;
-// 	font-style: italic;
-// 	font-display: swap;
-// }
-// @font-face {
-// 	font-family: 'ET Book';
-// 	src: url('../fonts/etbookot-bold-webfont.woff2') format('woff2'),
-// 		   url('../fonts/etbookot-bold-webfont.woff') format('woff');
-// 	font-weight: bold;
-// 	font-style: normal;
-// 	font-display: swap;
-// }
 
 
 /**

@@ -1,31 +1,20 @@
 ---
 layout: page
 permalink: /autor
-title: Sobre el autor
+title:
 ---
 
-<p class="fnt-large">
-	Hola, mi nombre es Jonathan y soy un desarrollador web viviendo y trabajando como desarrollador front-end en la cambiante ciudad de Tijuana, BC.
+{% assign author = site.authors['jonathan'] %}
+<p class="dcap">
+	Soy un desarrollador web viviendo y trabajando en la cambiante ciudad de Tijuana, BC. Todo sucede por alguna razón. Pasé la mayor parte de mi vida entre gente creativa, escuchándoles debatir sobre si este tono de azul era mejor que este otro tono ligeramente más oscuro de azul. Mis comienzos fueron como autodidacta, ansioso por nuevos retos y por aprender tanto como sea posible. Si no me encontraba haciendo <a href="https://www.instagram.com/p/BGBJROJR1sV/?taken-by={{ author.instagram_username }}" target="_blank">dibujos hechos con caracteres</a> o escribiendo un <i>script</i> para <a href="https://www.youtube.com/watch?v=V0ZWcELrkbQ" target="_blank">agilizar las tareas</a>, me pasaba el tiempo hojeando libros y revistas de diversos temas, desde ficción hasta poesía o tecnología entre otros. Si tuviera que elegir un lema de vida, sería este: Manténgase hambriento de conocimiento. Prefiero estar en el lado lógico y práctico de las cosas, escribir código y convertir listas de funcionalidades en aplicaciones increíbles. La mayor parte de <a href="https://github.com/{{ author.github_username }}?tab=repositories" target="_blank">mis proyectos</a> son de código abierto y los puedes encontrar en GitHub.
 </p>
 
-Mi interés por el arte cambió gradualmente al diseño y desarrollo web. <!--, antes de asentarme finalmente en el diseño y desarrollo de videojuegos.--> He trabajado en diferentes campos del desarrollo web desde lo más visible del *front-end* hasta lo más oscuro del *back-end*. Me enfoco en dar al usuario la experiencia más fácil en todos sus dispositivos.
+En algún momento diseñé temas de interfaz de usuario para reproductores de música y video. Las [interfaces](http://www.rasterman.com/bl-content/uploads/images/Random/desk11.jpg){:target='_blank'} [graficas](https://web.archive.org/web/20020402082659/http://tigert.gimp.org:80/screenshot.png){:target='_blank'} es un tema que siempre me ha fascinado. Ese interes hizo que acabara [colaborando](https://www.flickr.com/photos/{{ author.flickr_username }}/albums/72157630231348676){:target='_blank'} a un [proyecto](https://en.wikipedia.org/wiki/Tango_Desktop_Project){:target='_blank'} de la [freedesktop.org](https://www.freedesktop.org){:target='_blank'} iniciado por [uno de mis diseñadores favoritos](http://jimmac.musichall.cz/){:target='_blank'}. Antes de estar expuesto a los microprocesadores, tenía la intención de estudiar diseño gráfico. Sin embargo, hacer cosas con los *bits* y los *bytes* es mucho más divertido que con los materiales tradicionales. Durante el transcurso de la carrera, el interés que tenía por el arte cambió gradualmente al diseño y desarrollo web. Llevo muchos años haciendo desarrollo web, aproximadamente en el 2000 hice mi primera página web en el extinto Geocities y de allí hice páginas por entretenimiento hasta que en el 2004, con mi sitio –antes de ser un blog– y otros para diversos clientes he estado involucrado en el maravilloso y desordenado mundo web.
 
-Me encanta la gelatina, el chocolate semiamargo, Alien, Macross, Star Wars, el *lettering*, la libertad de información, una internet que respete y permita, un buen diseño, Doom, los *fruitcakes*, el *skate*, El Mac, Rembrandt, y James Horner, pero no necesariamente en este orden.
+Algunas de las cosas que más me gustan son la libertad de información, la subcultura informática, [las interfaces retro-futuristas](https://www.youtube.com/watch?v=2ywWFvjE-yU){:target='_blank'}, una internet que respete y permita, [el arte urbano](https://www.youtube.com/watch?v=gmu_RByhlGw){:target='_blank'}, el chocolate semiamargo, [la música electrónica](https://www.youtube.com/watch?v=RbxZmcQWWgE){:target='_blank'}, el pastel de fruta seca, el té, y dibujar letras, pero no necesariamente en este orden. Ahora además de saborear una deliciosa gelatina, me centro en la codificación cuidadosa de las interacciones y la construcción de interfaces accesibles. Con la intención de superar nuevos retos y encontrar soluciones, mi objetivo es garantizar una experiencia de usuario impecable en todas las plataformas. Considero que con el concepto correcto, la diversión sin fin es posible. Gracias por leer, quienquiera que seas. Aquí no hay comentarios. No hay cuentas, no hay estadísticas. Sólo yo y muchos archivos de texto en blanco por completar. Ya veremos cómo nos va en esta ocasión.
 
-## Acerca del sitio
+<div class="smcaps m-top-4 m-bottom-4 txt-center">Acerca del Sitio</div>
 
-Este espacio representa un experimento personal, en el que está en juego mi capacidad de comunicar mis pensamientos e ideas, así como mi predisposición a aprender.
-
-El sitio está creado con los mejores sabores de HTML5 y Sass para la parte de CSS, JavaScript para las búsquedas y utilizo [Jekyll][jekyll] para su publicación. La fuente tipográfica de los títulos y del cuerpo es [Soleil][soleil] diseñada por [Wolfgang Homola][wolfgang-homola]. Actualmente las <a href="https://www.flickr.com/photos/@{{ site.flickr_username }}" target="_blank">fotografías</a> las estoy tomando con mi [Nexus 5][nexus-5].
-
-## Además
-
-Gracias por leer, quienquiera que seas. Aquí no hay comentarios. No hay cuentas, no hay estadísticas. Sólo yo y muchos archivos de texto en blanco por completar. Ya veremos cómo nos va en esta ocasión.
-
-[alien]: /2016/11/19/la-tipografia-de-alien
-[jugar-algun-videojuego]: http://steamcommunity.com/id/jonathanzuniga/
-[musica]: http://www.last.fm/user/jonathanzuniga
-[jekyll]: https://jekyllrb.com/
-[soleil]: http://typedia.com/explore/typeface/soleil/
-[wolfgang-homola]: https://www.google.com.mx/search?q=Wolfgang+Homola&ie=utf-8&oe=utf-8&gws_rd=cr&ei=K_1XWbjnKuuM0wLa2ZSQBA
-[nexus-5]: https://web.archive.org/web/20150905053915/http://www.google.com/nexus/5/
+<p class="md-cols-2 txt-sm">
+	El sitio está creado con los mejores sabores de HTML5 y Sass para la parte de CSS, JavaScript para las búsquedas, y utilizo <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> para su publicación. La fuente tipográfica de los títulos es <a href="http://weiweihuanghuang.github.io/Work-Sans/" target="_blank">Work Sans</a> diseñada por <a href="https://twitter.com/w__h_" target="_blank">Wei Huang</a> y la del cuerpo es <a href="http://edwardtufte.github.io/et-book/" target="_blank">ET Book</a> por Dmitry Krasny, Bonnie Scranton, y <a href="http://www.edwardtufte.com/" target="_blank">Edward Tufte</a>. Para hacer los dibujos utilizo un lapiz no. ... sobre una pequeña libreta de hojas..., los escaneo con la aplicación PhotoScan y los edito en Adobe Photoshop CS6. Actualmente las <a href="https://www.flickr.com/photos/{{ author.flickr_username }}" target="_blank">fotografías</a> las estoy tomando con mi <a href="https://web.archive.org/web/20150905053915/http://www.google.com/nexus/5/" target="_blank">Nexus 5</a> que se niega a morir.
+</p>

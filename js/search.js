@@ -3,6 +3,7 @@
     var searchResultsTitle = document.getElementById('search-results__title');
     var searchResultsMessage = document.getElementById('search-results__message');
     var searchResultsPosts = document.getElementById('search-results__posts');
+    var sidebarSearchResults = document.getElementById('sidebar__search-results');
 
     if (results.length) { // Are there any results?
       var appendString = '';
@@ -11,9 +12,9 @@
       for (var i = 0; i < results.length; i++) { // Iterate over the results
         var item = store[results[i].ref];
 
-        var post_description = '';
-        if (item.description)
-          post_description = '<span class="post__description">' + item.description + '</span>';
+        // var post_description = '';
+        // if (item.description)
+        //   post_description = '<span class="post__description">' + item.description + '</span>';
 
         var read_time = '';
         if (item.read_time < 360)
@@ -22,25 +23,19 @@
           read_time = (item.read_time / 180 | 0) + ' mins'
 
         appendString += 
-          '<article class="post">\
-            <header class="post__header">\
-              <h2 class="post__title">\
-                <a class="post__link" href="' + item.url + '">' +
+          '<li>\
+            <div class="post">\
+              <h4 class="post__title">\
+                <a class="post__link ac-txtc" href="' + item.url + '">' +
                   item.title + 
                 '</a>\
-              </h2>\
+              </h4>\
               \
-              <p class="post__meta">' +
-                post_description +
-                '<span class="post__read-time">\
-                  <span class="post-reading-time" title="Tiempo estimado de lectura">' +
-                    read_time + '. de lectura</span></span>, \
-                <span class="post__date">' +
-                    item.date +
-                '</span>\
-              </p>\
-            </header>\
-          </article>';
+              <div class="post__excerpt txt-sm">' +
+                item.excerpt +
+              '</div>\
+            </div>\
+          </li>';
       }
       
       if (i == 1)
@@ -53,7 +48,8 @@
       searchResultsPosts.innerHTML = appendString;
     } else {
       searchResultsTitle.innerHTML = 'No se encontró ningún resultado';
-      searchResultsMessage.innerHTML = 'Lo siento, pero ninguna publicación coincide con tu búsqueda «' + searchTerm + '».';
+      searchResultsMessage.innerHTML = '<p>Lo siento, pero ninguna publicación coincide con tu búsqueda «' + searchTerm + '». Trata de buscar algo un poco menos específico o si solo estas aburrido y buscas una delicia para la vista, busca «Lettering».</p>';
+      sidebarSearchResults.innerHTML = '--';
     }
   }
 
