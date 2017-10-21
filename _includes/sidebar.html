@@ -21,8 +21,23 @@
 
 						<p>
 							<span class="post__date">
-								{% include date.html %}
+								<time datetime="{{ post.date | date_to_xmlschema }}" data-post-date-to-string="{{ post.date | date_to_string }}">
+									{% 
+										assign months = 
+										'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
+										split: '|'
+									%}
+									{% assign day = post.date | date: '%-d' %}
+									{% assign m = post.date | date: '%-m' | minus: 1 %}
+									{% assign month = months[m] %}
+									{% assign year = post.date | date: '%Y' %}
+									<span class="day">{{ day }}</span>.º de 
+									<span class="month">{{ month }}</span> de 
+									<span class="year">{{ year }}</span>.
+								</time>
 							</span>
+
+							{% comment %}
 							<span class="post__category">
 								en
 								{% assign sorted_categories = post.categories | sort %}
@@ -33,11 +48,16 @@
 									{% endif %}</a>{% if forloop.last == false %}, {% endif %}
 								{% endfor %}
 							</span>
+							{% endcomment %}
 						</p>
 					</li>
 				{% endfor %}
 				<li>
-					En la sección <a href="{{ site.baseurl }}/archivo">archivo</a> encontrarás todos los artículos.
+					<h6>
+						<a class="ac-txtc txt-i" href="{{ site.baseurl }}/archivo">
+							Leer más publicaciones
+						</a>
+					</h6>
 				</li>
 			</ul>
 		</div>
@@ -54,7 +74,7 @@
 		</h5>
 
 		<p class="maxsm-txt-center">
-			Escríbeme al <a href="mailto:{{ author.email }}">correo electrónico</a> para consultas o simplemente para saludarme.
+			Escríbeme a mí <a href="mailto:{{ author.email }}">correo electrónico</a> para consultas o simplemente para saludarme.
 		</p>
 
 		<h5 class="sidebar__title custom-title">

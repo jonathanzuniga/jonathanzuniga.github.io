@@ -4,39 +4,48 @@
 		<div class="col">
 			{% assign current = page.url | downcase | split: '/' %}
 			<nav class="navbar maxsm-navbar-responsive">
-				<ul class="navbar__menu maxsm-hide">
-					{% if author.twitter_username %}
-						<li class="navbar__item">
-							<a class="navbar__link" href="https://twitter.com/{{ author.twitter_username }}" target="_blank">
-								Sígueme en Twitter
+				<a href="#!" class="navbar__toggler">Menu</a>
+				<div class="navbar__collapse">
+					<ul class="navbar__menu maxsm-txt-center">
+						{% if author.twitter_username %}
+							<li class="navbar__item maxsm-bd-top">
+								<a class="navbar__link" href="https://twitter.com/{{ author.twitter_username }}" target="_blank">
+									Twitter
+								</a>
+							</li>
+						{% endif %}
+						{% if author.github_username %}
+							<li class="navbar__item maxsm-bd-top">
+								<a class="navbar__link" href="https://github.com/{{ author.github_username }}" target="_blank">
+									GitHub
+								</a>
+							</li>
+						{% endif %}
+						<li class="navbar__item maxsm-bd-top">
+							<a class="navbar__link" href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
+								RSS
 							</a>
 						</li>
-					{% endif %}
-					<li class="navbar__item">
-						<a class="navbar__link" href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
-							RSS feed
-						</a>
-					</li>
-				</ul>
+					</ul>
+				</div>
 				<div class="navbar__brand">
 					<a class="navbar__link" href="{{ site.baseurl }}/">
 						{{ author.name }} {{ author.lastname }}
 					</a>
 				</div>
-				<a href="#!" class="navbar__toggler">Menu</a>
 				<div class="navbar__collapse">
-					<ul class="navbar__menu navbar__menu--right">
-						<li class="navbar__item {% if page.url == '/' %}navbar__item--active{% endif %}">
+					<ul class="navbar__menu navbar__menu--right maxsm-txt-center">
+						<li class="navbar__item maxsm-bd-top {% if page.url == '/' %}navbar__item--active{% endif %}">
 							<a class="navbar__link" href="{{ site.baseurl }}/">
 								Momentos
 							</a>
 						</li>
-						<li class="navbar__item {% if current[1] == 'archivo' %}navbar__item--active{% endif %}">
+						<li class="navbar__item maxsm-bd-top {% if current[1] == 'archivo' %}navbar__item--active{% endif %}">
 							<a class="navbar__link" href="{{ site.baseurl }}/archivo">
 								Archivo
 							</a>
 						</li>
-						<li class="navbar__item {% if current[1] == 'autor' %}navbar__item--active{% endif %}">
+						<li class="navbar__item maxsm-bd-top {% if current[1] == 'autor' %}navbar__item--active{% endif %}">
 							<a class="navbar__link" href="{{ site.baseurl }}/autor">
 								Autor
 							</a>

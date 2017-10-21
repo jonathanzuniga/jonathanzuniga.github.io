@@ -37,6 +37,12 @@ layout: default
 	<section class="post__content txt-indent">
 		{{ page.content }}
 	</section>
+
+	<div class="post__meta m-top-4 txt-i">
+		<span class="post__date">
+			Publicado el {% include date.html %}
+		</span>
+	</div>
 </article>
 
 {% include form_search.html %}

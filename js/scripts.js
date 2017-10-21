@@ -1,4 +1,6 @@
 jQuery(document).ready(function($) {
+	// Sidebar fijo.
+
 	function ActivateScripts() {
 		if ($(this).width() > 767) {
 			$('#sidebar__content--fixed').stick_in_parent({
@@ -18,6 +20,8 @@ jQuery(document).ready(function($) {
 		ActivateScripts();
 	});
 
+	// No permitir buscar si el input esta vacio.
+
 	$('#search__form').submit(function() {
 		var is_form_valid = true;
 
@@ -26,6 +30,19 @@ jQuery(document).ready(function($) {
 
 		return is_form_valid;
 	});
+
+	// // Convertir las fechas al calendario fijo internacional.
+
+	// $('.post__date time').each(function() {
+	// 	var post_date_to_string = $(this).data('post-date-to-string');
+	// 	var post_date = new Date(post_date_to_string);
+	// 	var IFCdate = new IFCDate(post_date);
+
+	// 	IFCdate.setMonthsList('cotsworth_es');
+	// 	IFCdate.setDaysList('iso-8601-es');
+
+	// 	$(this).html('').append(IFCdate.toDateString() + '.');
+	// });
 
 	// $('.lst-recent-posts').scrollspy();
 

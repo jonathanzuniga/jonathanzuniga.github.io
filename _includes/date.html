@@ -1,12 +1,12 @@
 {% 
 	assign months = 
-	'ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic' | 
+	'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
 	split: '|'
 %}
 {% comment %}
 {% 
 	assign months = 
-	'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
+	'ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic' | 
 	split: '|'
 %}
 {% endcomment %}
@@ -16,7 +16,7 @@
 		split: '|'
 %}
 {% if page.date %}
-	<time datetime="{{ page.date | date_to_xmlschema }}">
+	<time datetime="{{ page.date | date_to_xmlschema }}" data-post-date-to-string="{{ page.date | date_to_string }}">
 		{% comment %}{% assign d = page.date | date: '%B' | minus: 1 %}
 		{% assign day_name = days[d] %}{% endcomment %}
 		{% assign day = page.date | date: '%-d' %}
@@ -25,13 +25,13 @@
 		{% assign year = page.date | date: '%Y' %}
 		{% comment %}{% assign time = page.date | date: '%-I%P' %}{% endcomment %}
 		{% comment %}<span class="day-name">{{ day_name }}</span>{% endcomment %}
-		<span class="day">{{ day }}.º</span>
-		<span class="month">{{ month }}</span>
-		<span class="year">{{ year }}</span>
+		<span class="day">{{ day }}</span>.º de 
+		<span class="month">{{ month }}</span> de 
+		<span class="year">{{ year }}</span>.
 		{% comment %}<span class="time">{{ time }}</span>{% endcomment %}
 	</time>
 {% else %}
-	<time datetime="{{ post.date | date_to_xmlschema }}">
+	<time datetime="{{ post.date | date_to_xmlschema }}" data-post-date-to-string="{{ post.date | date_to_string }}">
 		{% comment %}{% assign d = post.date | date: '%B' | minus: 1 %}
 		{% assign day_name = days[d] %}{% endcomment %}
 		{% assign day = post.date | date: '%-d' %}
@@ -40,9 +40,9 @@
 		{% assign year = post.date | date: '%Y' %}
 		{% comment %}{% assign time = post.date | date: '%-I%P' %}{% endcomment %}
 		{% comment %}<span class="day-name">{{ day_name }}</span>{% endcomment %}
-		<span class="day">{{ day }}.º</span>
-		<span class="month">{{ month }}</span>
-		<span class="year">{{ year }}</span>
+		<span class="day">{{ day }}</span>.º de 
+		<span class="month">{{ month }}</span> de 
+		<span class="year">{{ year }}</span>.
 		{% comment %}<span class="time">{{ time }}</span>{% endcomment %}
 	</time>
 {% endif %}

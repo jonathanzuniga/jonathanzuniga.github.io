@@ -2,6 +2,10 @@ body {
 	background-color: $site-background-color;
 	font-family: $base-font-family;
 	font-size: $base-font-size-sm;
+
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
 
 @media (min-width: 768px) {
@@ -46,11 +50,18 @@ code {
 .post__content h2, 
 .post__content h4 {
 	border-bottom: 1px solid $border-color;
-	padding-bottom: 1rem;
+	margin-bottom: 0.750rem;
+	padding-bottom: 0.750rem;
 }
 
 .header {
 	padding: 1.5rem 0 2.5rem;
+}
+
+@media (max-width: 767px) {
+	.header {
+		padding-top: 0;
+	}
 }
 
 .header__title {
@@ -127,13 +138,13 @@ code {
 
 @media (min-width: 641px) {
 	.sidebar__content {
-		padding-top: 1.2rem;
+		padding-top: 1.263rem;
 	}
 }
 
 @media (min-width: 1280px) {
 	.sidebar__content {
-		padding-top: 1.35rem;
+		padding-top: 1.5rem;
 	}
 
 	.body--author {
@@ -159,7 +170,8 @@ code {
 			font-family: $secondary-font-family;
 			font-size: inherit;
 			font-weight: normal;
-			margin-bottom: 0.5rem;
+			line-height: inherit;
+			margin-bottom: 0;
 		}
 
 		.active {
@@ -189,12 +201,10 @@ code {
 }
 
 .post__meta {
-	color: #737373;
-	margin-bottom: 16px;
 }
 
 .post__date {
-	text-transform: capitalize;
+	// text-transform: capitalize;
 }
 
 .category-link {
