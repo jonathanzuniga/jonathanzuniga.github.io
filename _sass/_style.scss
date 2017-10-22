@@ -291,3 +291,9 @@ code {
 .footer {
 	padding-bottom: 1.5rem;
 }
+
+@media (max-width: 767px) {
+	.txt-sm {
+		font-size: 0.813em; // 13px
+	}
+}
