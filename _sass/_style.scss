@@ -142,15 +142,17 @@ code {
 	}
 }
 
-@media (min-width: 1280px) {
-	.sidebar__content {
-		padding-top: 1.5rem;
-	}
-
+@media (min-width: 768px) {
 	.body--author {
 		.sidebar__content {
 			padding-top: 0;
 		}
+	}
+}
+
+@media (min-width: 1280px) {
+	.sidebar__content {
+		padding-top: 1.5rem;
 	}
 
 	// .sidebar__content {
@@ -204,7 +206,6 @@ code {
 }
 
 .post__date {
-	// text-transform: capitalize;
 }
 
 .category-link {
