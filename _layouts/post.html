@@ -39,8 +39,17 @@ layout: default
 	</section>
 
 	<div class="post__meta m-top-4">
-		<span class="post__date txt-i">
-			Publicado el {% include date.html %}
+		{% for post_author in page.authors %}
+			{% assign author = site.authors[post_author] %}
+			{% if author.twitter_username %}
+				<a class="post__author" href="https://twitter.com/{{ author.twitter_username }}" target="_blank">
+					@{{ author.twitter_username }}
+				</a>
+			—
+			{% endif %}
+		{% endfor %}
+		<span class="post__date">
+			{% include date.html %}
 		</span>
 	</div>
 </article>
