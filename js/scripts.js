@@ -31,6 +31,8 @@ jQuery(document).ready(function($) {
 		return is_form_valid;
 	});
 
+	navbarMenuToggle();
+
 	// // Convertir las fechas al calendario fijo internacional.
 
 	// $('.post__date time').each(function() {
@@ -218,3 +220,20 @@ jQuery(document).ready(function($) {
  //            length: 300                                      //Integer: For posts with text longer than this length, show an ellipsis.
  //        });
 });
+
+function navbarMenuToggle() {
+	$('#open-menu').click(function() {
+		if (!$('.navbar__collapse').hasClass('open')) {
+			$('.navbar__collapse').addClass('open').removeClass('close');
+			$(this).text('Cerrar');
+		}
+		else {
+			navbarMenuClose();
+		}
+	});
+}
+
+function navbarMenuClose() {
+	$('.navbar__collapse').addClass('close').removeClass('open');
+	$('.navbar__toggler').text('Menú');
+}

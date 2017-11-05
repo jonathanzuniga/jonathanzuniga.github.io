@@ -9,10 +9,11 @@
 	{% include head.html %}
 
 	{% assign current = page.url | downcase | split: '/' %}
-	<body class="body {% if page.url == '/' %}body--home 
-				 {% elsif current[1] == 'archivo' %}body--archive 
-				 {% elsif current[1] == 'autor' %}body--author 
-				 {% elsif page.url == '/buscar' %}body--search{% endif %}">
+	<body class="body txt-smooth 
+				{% if page.url == '/' %}body--home 
+				{% elsif current[1] == 'archivo' %}body--archive 
+				{% elsif current[1] == 'autor' %}body--author 
+				{% elsif page.url == '/buscar' %}body--search{% endif %}">
 		<div class="container">
 			{% include header.html %}
 			
