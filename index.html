@@ -5,8 +5,8 @@ layout: default
 <div class="posts">
 	{% for post in site.posts limit: 6 %}
 		<div id="post-{{ forloop.index }}" class="post post-{{ forloop.index }}">
-			<h2 class="post__title bd-bottom m-bottom-3 p-bottom-3 txt-lt">
-				<a class="post__link ac-txtc" href="{{ post.url }}">
+			<h2 class="post__title bd-bottom m-bottom-3 p-bottom-3 txt-lt ac-txtc">
+				<a class="post__link" href="{{ post.url }}">
 					{{ post.title }}
 				</a>
 			</h2>
@@ -27,7 +27,7 @@ layout: default
 				</span>
 			</div> -->
 
-			<div class="post__content txt-indent a-uline">
+			<div class="post__content txt-indent">
 				{{ post.content }}
 				<!-- {{ post.content | markdownify | strip_html | truncatewords: 21 }} -->
 			</div>

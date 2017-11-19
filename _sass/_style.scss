@@ -2,10 +2,6 @@ body {
 	background-color: $site-background-color;
 	font-family: $base-font-family;
 	font-size: $base-font-size-sm;
-
-	// -moz-osx-font-smoothing: grayscale;
-	// -webkit-font-smoothing: antialiased;
-	// text-rendering: optimizeLegibility;
 }
 
 @media (min-width: 768px) {

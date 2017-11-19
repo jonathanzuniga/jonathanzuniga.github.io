@@ -33,6 +33,12 @@ jQuery(document).ready(function($) {
 
 	navbarMenuToggle();
 
+	$('#search__input, #search__btn-submit').on('focus', function() {
+		$(this).parent().addClass('focus');
+	}).blur(function() {
+		$(this).parent().removeClass('focus');
+	});
+
 	// // Convertir las fechas al calendario fijo internacional.
 
 	// $('.post__date time').each(function() {

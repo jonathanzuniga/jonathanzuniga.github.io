@@ -17,7 +17,7 @@ layout: default
 		Explorar por año: 
 	</div> -->
 
-	<ul class="ls-unstyled">
+	<ul class="ls-unstyled ac-txtc">
 		{% for post in site.posts %}
 			{% assign m = post.date | date: '%-m' | minus: 1 %}
 			{% assign month = months[m] %}
@@ -36,7 +36,7 @@ layout: default
 			<li>
 				<div class="post">
 					<h4 class="post__title">
-						<a class="post__link ac-txtc" href="{{ post.url }}">{{ post.title }}</a>
+						<a class="post__link" href="{{ post.url }}">{{ post.title }}</a>
 					</h4>
 
 					<div class="post__excerpt txt-sm">
