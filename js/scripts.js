@@ -1,25 +1,4 @@
 jQuery(document).ready(function($) {
-	// Sidebar fijo.
-
-	function ActivateScripts() {
-		if ($(this).width() > 767) {
-			$('#sidebar__content--fixed').stick_in_parent({
-				parent: 'body',
-				offset_top: 20
-			});
-
-			gumshoe.init();
-		} else {
-			$('#sidebar__content--fixed').trigger('sticky_kit:detach');
-			gumshoe.destroy();
-		}
-	}
-	ActivateScripts();
-
-	$(window).resize(function() {
-		ActivateScripts();
-	});
-
 	// No permitir buscar si el input esta vacio.
 
 	$('#search__form').submit(function() {
@@ -31,215 +10,109 @@ jQuery(document).ready(function($) {
 		return is_form_valid;
 	});
 
-	navbarMenuToggle();
+	// $('#search__input, #search__btn-submit').on('focus', function() {
+	// 	$(this).parent().addClass('focus');
+	// }).blur(function() {
+	// 	$(this).parent().removeClass('focus');
+	// });
 
-	$('#search__input, #search__btn-submit').on('focus', function() {
-		$(this).parent().addClass('focus');
-	}).blur(function() {
-		$(this).parent().removeClass('focus');
+
+	// Mobile nav.
+
+	var mobile_nav_height = 270;
+	if ($(window).width() > 768)
+		mobile_nav_height = 78;
+
+	$('body').prepend(`
+		<div id="mobile-nav" class="mobile-nav pos-abs md-hide">
+			<div class="container">
+				<ul class="mobile-nav__menu ls-unstyled xs-grid-1 sm-grid-6 txt-center gutters-0 ac-txtc">
+	`);
+
+	$('#mobile-nav').css('transform', 'matrix(1, 0, 0, 1, 0, -' + mobile_nav_height + ')');
+	$('.body-content').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
+
+	$(window).resize(function() {
+		mobile_nav_height = 270;
+		if ($(this).width() > 768)
+			mobile_nav_height = 78;
+
+		$('#mobile-nav').css('transform', 'matrix(1, 0, 0, 1, 0, -' + mobile_nav_height + ')');
+		$('.body-content').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
+
+		$('#mobile-nav').removeClass('open');
+
+		$('#mobile-nav ul li').css({
+			'opacity'   : 0,
+			'visibility': 'hidden'
+		});
 	});
 
-	// // Convertir las fechas al calendario fijo internacional.
+	$($('.navbar__collapse').get().reverse()).each(function() {
+		$($(this).find('.navbar__item')).each(function() {
+			var navbar_item_link = $(this).children('a').prop('href');
+			var navbar_item_text = $(this).text();
+			var navbar_item_active = '';
+			if ($(this).hasClass('active'))
+				navbar_item_active = 'active';
 
-	// $('.post__date time').each(function() {
-	// 	var post_date_to_string = $(this).data('post-date-to-string');
-	// 	var post_date = new Date(post_date_to_string);
-	// 	var IFCdate = new IFCDate(post_date);
+			$('#mobile-nav ul')
+				.append('<li class="mobile-nav__item bd-top txt-uc ' + navbar_item_active + '"><a class="mobile-nav__link d-bl p-x-4 p-y-2" href="' + navbar_item_link + '">' + navbar_item_text + '</a></li>')
+				.children()
+				.css({
+					'opacity'   : 0,
+					'visibility': 'hidden'
+				});
+		});
+	});
 
-	// 	IFCdate.setMonthsList('cotsworth_es');
-	// 	IFCdate.setDaysList('iso-8601-es');
+	$('.navbar__toggler').click(function() {
+		if (!$('#mobile-nav').hasClass('open')) {
+			$('#mobile-nav').addClass('open');
 
-	// 	$(this).html('').append(IFCdate.toDateString() + '.');
-	// });
+			AnimateDirectionY('#mobile-nav', -mobile_nav_height, 0);
+			AnimateDirectionY('.body-content', 0, mobile_nav_height);
 
-	// $('.lst-recent-posts').scrollspy();
+			$('#mobile-nav ul li').each(function(index) {
+				$(this).css('visibility', 'visible');
+				$(this).delay(100 * index).animate({
+					'opacity': 1
+				}, 100);
+			});
+		} else {
+			AnimateDirectionY('#mobile-nav', 0, -mobile_nav_height);
+			AnimateDirectionY('.body-content', mobile_nav_height, 0);
 
-	// var header = $('.header');
- //    $(window).scroll(function() {    
- //        var scroll = $(window).scrollTop();
-    
- //        if (scroll > 0) {
- //            header.addClass('shadow');
- //        } else {
- //            header.removeClass('shadow');
- //        }
- //    });
+			$($('#mobile-nav ul li').get().reverse()).each(function(index) {
+				$(this).delay(100 * index).animate({
+					'opacity' : 0,
+					'duration': 100,
+					'complete': function() {
+						$(this).css('visibility', 'hidden');
+					}
+				});
+			});
 
-
-
-// 	$('.layout-aside .tags a').each(function() {
-// 		$(this).wrap('<li class="tags-item"/>');
-// 	});
-
-	// var posts = [
-	// 	['1', 'title 1', 'images/test.gif']
-	// ];
-
-	// var days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
-	// var month = 11;
-	// var year = 2017;
-	// var first_day = getFirstDayOfMonth(year, month);
-	// var month_days = getMonthDays(year, month);
-
-	// // Append the first empty days in the calendar.
-	// if (first_day == 0)
-	// 	first_day = 7;
-	// for(i = 0; i < first_day - 1; i++) {
-	// 	$('.calendar-days').append('<div class="emptyDay day-' + days[i + 1] + '"><div class="inner"><img class="emptyDay-image" src="images/empty-day.png"><div class="day-number">—</div></div></div>');
-	// }
-
-	// // Append all the month days.
-	// for(i = 0; i < month_days; i++) {
-	// 	var d = i;
-	// 	d = d + 1;
-	// 	$('.calendar-days').append('<div class="day-' + d +' day-' + getDayName(year, month, d) + '" data-post-date-day="' + d + '"><div class="inner"><img class="emptyDay-image" src="images/empty-day.png"><div class="day-number">' + d + '</div></div></div>');
-	// }
-
-	// // Append the posts.
-	// var length = posts.length;
-	// for(i = 0; i < length; i++) {
-	// 	// console.log(posts[i][0]);
-	// 	// $('div[data-post-date-day="' + posts[i][0] + '"]').append('<div class="post-title">' + posts[i][1] + '</div><img class="post-cover" src="' + posts[i][2] + '">');
-	// 	$('.day-' + posts[i][0]).children('.inner').prepend('<img class="post-cover" src="' + posts[i][2] + '">').find('.emptyDay-image').remove();
-	// }
-
-	// Get the first day name of the month.
-	// function getFirstDayNameOfMonth(year, month) {
-	// 	var days = ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'];
-	// 	var firstOfMonth = new Date(year, month, 1);
-	// 	return days[firstOfMonth.getDay()];
-	// }
-
-	// // Get the first day (number) of the month.
-	// function getFirstDayOfMonth(year, month) {
-	// 	var firstOfMonth = new Date(year, month, 1);
-	// 	return firstOfMonth.getDay();
-	// }
-
-	// // Note that month is 0-based, like in the Date object. Adjust if necessary.
-	// function getMonthDays(year, month) {
-	// 	var isLeap = ((year % 4) == 0 && ((year % 100) != 0 || (year % 400) == 0));
-	// 	return [31, (isLeap ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
-	// }
-
-	// // Get the day name of the month day.
-	// function getDayName(year, month, day) {
-	// 	var date = new Date(year, month, day);
-	// 	return days[date.getDay()];
-	// }
-
-	// $('.search').stick_in_parent({
-	// 	parent: 'body',
-	// 	offset_top: 50
-	// });
-
-	// $('.navbar__item-search').click(function() {
-	// 	$('.navbar').toggleClass('navbar_search-active');
-	// 	$('.navbar__search').toggleClass('navbar__search_visible');
-	// 	$('.navbar__search .search__box').focus();
-
-	// 	if ($('.navbar').hasClass('navbar_search-active')) {
-	// 		var left = $('.navbar_search-active .navbar__item-search').offset().left;  // Get the calculated left position.
-	// 		$('.navbar_search-active .navbar__item-search').css({left: left})  // Set the left to its calculated position.
-	// 			.animate({'left' : '0'}, 300);
-	// 	} else {
-	// 		$('.navbar').hide().fadeIn('fast');
-	// 	}
-	// });
-
-	// $('#sidebar__search-box').val($('#search__box').val());
-
-	// $('#search__input').focusin(function() {
-	// 	$(this).parent().addClass('is-focused');
-	// }).focusout(function() {
-	// 	$(this).parent().removeClass('is-focused');
-	// });
-
-	// var post_category = $('.post-categoryLink').text().trim();
-	// $('.body-post').find('.subbar-categoryLink:contains(' + post_category + ')').addClass('selected');
-
-	// $('.featuredGrid-post').each(function() {
-	// 	if ($(this).hasClass('category-diseno')) {
-	// 		$(this).css({
-	// 			'background-blend-mode': 'lighten, normal',
-	// 			'background-image': 
-	// 				'linear-gradient(to bottom, rgba(0, 112, 224, 0.3) 0%, rgba(0, 112, 224, 0.3) 100%), \
-	// 				 url(' + $(this).data('post-cover') + ')'
-	// 		});
-	// 	}
-	// });
-
-	// $('.post-categoryLink').each(function() {
-	// 	var postCategory = $(this).data('post-category');
-	// 	var menuCategory = $('.category-link').data('menu-category');
-
-	// 	console.log('postCategory: ' + postCategory + ', menuCategory: ' + menuCategory);
-
-	// 	if (postCategory == menuCategory)
-	// 		$('.category-link[data-menu-category="' + postCategory + '"]').addClass('category-active');
-	// });
-
-// 	$('.aside-entries-post .teaser-aside-entries:last-child').hide();
-// 	$('.aside-entries-post .teaser-aside-entries:visible:last').css('border-bottom', 'none');
-
-// 	var teaser_title_featured = $('.teaser-title-featured').text().trim();
-// 	var content_title = $('.layout-content-entry').find('.content-title').text().trim();
-// 	$('.teaser-title:not(.teaser-title-featured)').each(function() {
-// 		if ($(this).text().trim() == teaser_title_featured) {
-// 			$(this).closest('.teaser').remove();
-// 		} else if ($(this).text().trim() == content_title) {
-// 			$(this).closest('.teaser').remove();
-// 			$('.aside-entries-post .teaser-aside-entries:visible:last').removeAttr('style');
-// 			$('.aside-entries-post').find('.teaser-aside-entries:last-child').show();
-// 		}
-// 	});
-
-	// $('.posts .post-excerpt figure:hidden').remove();
-
-	// var configProfile = {
-	// 	'domId': 'latest-tweets',
-	// 	'enableLinks': true, 
-	// 	'lang': 'es',
-	// 	'maxTweets': 10,
-	// 	'profile': {'screenName': 'jonathan_zuniga'},
-	// 	'showImages': false,
-	// 	// 'showRetweet': false,
-	// 	'showTime': true,
-	// 	'showUser': true
-	// };
-	// twitterFetcher.fetch(configProfile);
-
-	// $('.social-feed-container').socialfeed({
- //    // TWITTER
- //    twitter:{
- //        accounts: ['@jonathan_zuniga'],                      //Array: Specify a list of accounts from which to pull tweets
- //        limit: 10,                                   //Integer: max number of tweets to load
- //        consumer_key: 'EMTdI9qBiWfj0qqvL0SzCgrG1',          //String: consumer key. make sure to have your app read-only
- //        consumer_secret: 'UHMvETMhXBYoxYEmVQlw9gn7uOHhHtCRh0naV0lpb0xrv3DV9L' //String: consumer secret key. make sure to have your app read-only
- //     },
- //     rss:{
- //        urls: ['http://jonathanzuniga.github.io/feed'], //Array: Specifiy a list of rss feed from which to pull posts
- //        limit: 2                                      //Integer: max number of posts to load for each url
- //    },
-
- //            // GENERAL SETTINGS
- //            length: 300                                      //Integer: For posts with text longer than this length, show an ellipsis.
- //        });
+			$('#mobile-nav').removeClass('open');
+		}
+	});
 });
 
-function navbarMenuToggle() {
-	$('#open-menu').click(function() {
-		if (!$('.navbar__collapse').hasClass('open')) {
-			$('.navbar__collapse').addClass('open').removeClass('close');
-			$(this).text('Cerrar');
-		}
-		else {
-			navbarMenuClose();
+function AnimateDirectionY(element, position_start, position_end) {
+	// Caching the object for performance reasons.
+	var $elem = $(element);
+
+	// We use a pseudo object for the animation
+	// (starts from `distance_start` to `distance_end`), you can name it as you want
+	$({pos: position_start}).animate({pos: position_end}, {
+		duration: 25,
+		step: function(now) {
+			// in the step-callback (that is fired each step of the animation),
+			// you can use the `now` parameter which contains the current
+			// animation-position (`distance_start` up to `distance_end`).
+			$elem.css({
+				'transform': 'matrix(1, 0, 0, 1, 0, ' + now + ')'
+			});
 		}
 	});
-}
-
-function navbarMenuClose() {
-	$('.navbar__collapse').addClass('close').removeClass('open');
-	$('.navbar__toggler').text('Menú');
 }

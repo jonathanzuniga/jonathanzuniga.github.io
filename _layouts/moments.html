@@ -2,57 +2,21 @@
 layout: default
 ---
 
-<div class="layout-content">
-	<section class="archive">
-		<h2 class="archive-title">
-			<a href="{{ site.baseurl }}/momentos">
-				Momentos
-			</a>
-		</h2>
-
-		<div class="archive-columns" data-columns>
-			{% for post in site.categories['momentos'] limit: 10 %}
-				<article class="teaser">
-					<a class="teaser-link" href="{{ post.url }}">
-						<h3 class="teaser-title">
-							{{ post.title }}
-						</h3>
-						
-						{% if post.cover %}
-							<img class="teaser-image" src="{{ post.cover }}" alt="{{ post.title }}">
-						{% endif %}
-					</a>
-
-					<div class="teaser-content">
-						<p class="teaser-meta">
-							Publicado en 
-							{% assign sorted_categories = post.categories | sort %}
-				      {% for category in sorted_categories %}
-								<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
-								{% if category == 'articulos' %}
-									<a class="teaser-category" href="{{ site.baseurl }}/articulos">artículos</a>
-								{% elsif category == 'relatos' %}
-									<a class="teaser-category" href="{{ site.baseurl }}/relatos">relatos</a>
-								{% else %}
-									<a class="teaser-category" href="{{ site.baseurl }}/momentos">momentos</a>
-								{% endif %}
-				      {% endfor %}
-							{% include date.html %}
-							<!-- por 
-							{% assign author = site.authors[post.author] %}
-							<a class="teaser-author" href="{{ site.baseurl }}/autor">
-								{{ author.name }}
-							</a> -->
-						</p>
-
-						<div class="teaser-intro">
-							{{ post.excerpt }}
-						</div>
-					</div>
-				</article>
-			{% endfor %}
+<div class="posts">
+	{% for post in site.posts limit: 6 %}
+		<div id="post-{{ forloop.index }}" class="post post-{{ forloop.index }}">
+			<h2 class="post__title bd-bottom m-bottom-3 p-bottom-3 txt-lt ac-txtc">
+				<a class="post__link" href="{{ post.url }}">
+					{{ post.title }}
+				</a>
+			</h2>
+			
+			<div class="post__content txt-indent">
+				{{ post.content }}
+				<!-- {{ post.content | markdownify | strip_html | truncatewords: 21 }} -->
+			</div>
 		</div>
-	</section>
+	{% endfor %}
 </div>
 
-{% include sidebar.html %}
+{% include form_search.html %}

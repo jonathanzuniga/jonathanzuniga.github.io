@@ -20,22 +20,22 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 }
 
-// a {
-// 	-webkit-transition: all 0.3s ease-out;
-// 	-moz-transition: all 0.3s ease-out;
-// 	-ms-transition: all 0.3s ease-out;
-// 	-o-transition: all 0.3s ease-out;
-// 	transition: all 0.3s ease-out;
+a {
+	-webkit-transition: all 0.3s ease-out;
+	   -moz-transition: all 0.3s ease-out;
+		-ms-transition: all 0.3s ease-out;
+		 -o-transition: all 0.3s ease-out;
+			transition: all 0.3s ease-out;
 
-// 	&:active,
-// 	&:hover {
-// 		-webkit-transition-duration: 0s;
-// 		-moz-transition-duration: 0s;
-// 		-ms-transition-duration: 0s;
-// 		-o-transition-duration: 0s;
-// 		transition-duration: 0s;
-// 	}
-// }
+	&:hover,
+	&:active {
+		-webkit-transition-duration: 0s;
+		   -moz-transition-duration: 0s;
+			-ms-transition-duration: 0s;
+			 -o-transition-duration: 0s;
+				transition-duration: 0s;
+	}
+}
 
 code {
 	font-family: $code-font-family;
@@ -47,6 +47,10 @@ code {
 	border-bottom: 1px solid $border-color;
 	margin-bottom: 0.75rem;
 	padding-bottom: 0.75rem;
+}
+
+.mobile-nav {
+	font-family: $secondary-font-family;
 }
 
 .header {
@@ -165,15 +169,10 @@ code {
 		
 		h1, h2, h3, h4, h5, h6 {
 			font-family: $secondary-font-family;
-			font-size: inherit;
+			// font-size: inherit;
 			font-weight: normal;
 			line-height: inherit;
 			margin-bottom: 0;
-		}
-
-		.active {
-			font-weight: 500;
-			transition: all 0.16s ease-in-out;
 		}
 	}
 }

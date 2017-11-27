@@ -1,5 +1,7 @@
 {% assign author = site.authors['jonathan'] %}
-{% if page.url == '/' or page.layout == 'post' %}
+{% if page.url == '/' 
+	or page.layout == 'post'
+	or page.layout == 'moments' %}
 	<div class="sidebar__content txt-sm" id="sidebar__content--fixed">
 		<h5 class="sidebar__title bd-bottom m-bottom-3 p-bottom-3 mobile-header">
 			Momentos

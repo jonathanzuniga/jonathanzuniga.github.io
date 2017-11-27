@@ -1,58 +1,60 @@
 {% assign author = site.authors['jonathan'] %}
 <header class="header">
-	<div class="row md-gutters-15">
-		<div class="col">
-			{% assign current = page.url | downcase | split: '/' %}
-			<nav class="navbar maxsm-navbar-responsive ac-txtc">
-				<a href="#!" class="navbar__toggler" id="open-menu">Menú</a>
-				<div class="navbar__collapse">
-					<ul class="navbar__menu maxsm-txt-center">
-						{% if author.twitter_username %}
+	<div class="container">
+		<div class="row md-gutters-15">
+			<div class="col">
+				{% assign current = page.url | downcase | split: '/' %}
+				<nav class="navbar navbar-responsive--top maxsm-navbar-responsive ac-txtc">
+					<a href="#!" class="navbar__toggler" id="open-menu">Menú</a>
+					<div class="navbar__collapse maxsm-hide">
+						<ul class="navbar__menu maxsm-txt-center">
+							{% if author.twitter_username %}
+								<li class="navbar__item maxsm-bd-top">
+									<a class="navbar__link" href="https://twitter.com/{{ author.twitter_username }}" target="_blank">
+										Twitter
+									</a>
+								</li>
+							{% endif %}
+							{% if author.github_username %}
+								<li class="navbar__item maxsm-bd-top">
+									<a class="navbar__link" href="https://github.com/{{ author.github_username }}" target="_blank">
+										GitHub
+									</a>
+								</li>
+							{% endif %}
 							<li class="navbar__item maxsm-bd-top">
-								<a class="navbar__link" href="https://twitter.com/{{ author.twitter_username }}" target="_blank">
-									Twitter
+								<a class="navbar__link" href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
+									RSS
 								</a>
 							</li>
-						{% endif %}
-						{% if author.github_username %}
-							<li class="navbar__item maxsm-bd-top">
-								<a class="navbar__link" href="https://github.com/{{ author.github_username }}" target="_blank">
-									GitHub
+						</ul>
+					</div>
+					<div class="navbar__brand">
+						<a class="navbar__link" href="{{ site.baseurl }}/">
+							{{ author.name }} {{ author.lastname }}
+						</a>
+					</div>
+					<div class="navbar__collapse maxsm-hide">
+						<ul class="navbar__menu navbar__menu--right maxsm-txt-center">
+							<li class="navbar__item maxsm-bd-top {% if current[1] == 'momentos' %}active{% endif %}">
+								<a class="navbar__link" href="{{ site.baseurl }}/momentos">
+									Momentos
 								</a>
 							</li>
-						{% endif %}
-						<li class="navbar__item maxsm-bd-top">
-							<a class="navbar__link" href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
-								RSS
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="navbar__brand">
-					<a class="navbar__link" href="{{ site.baseurl }}/">
-						{{ author.name }} {{ author.lastname }}
-					</a>
-				</div>
-				<div class="navbar__collapse">
-					<ul class="navbar__menu navbar__menu--right maxsm-txt-center">
-						<li class="navbar__item maxsm-bd-top {% if page.url == '/' %}active{% endif %}">
-							<a class="navbar__link" href="{{ site.baseurl }}/">
-								Momentos
-							</a>
-						</li>
-						<li class="navbar__item maxsm-bd-top {% if current[1] == 'archivo' %}active{% endif %}">
-							<a class="navbar__link" href="{{ site.baseurl }}/archivo">
-								Archivo
-							</a>
-						</li>
-						<li class="navbar__item maxsm-bd-top {% if current[1] == 'autor' %}active{% endif %}">
-							<a class="navbar__link" href="{{ site.baseurl }}/autor">
-								Autor
-							</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
+							<li class="navbar__item maxsm-bd-top {% if current[1] == 'archivo' %}active{% endif %}">
+								<a class="navbar__link" href="{{ site.baseurl }}/archivo">
+									Archivo
+								</a>
+							</li>
+							<li class="navbar__item maxsm-bd-top {% if current[1] == 'autor' %}active{% endif %}">
+								<a class="navbar__link" href="{{ site.baseurl }}/autor">
+									Autor
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
 		</div>
 	</div>
 </header>

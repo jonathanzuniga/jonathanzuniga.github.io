@@ -9,7 +9,7 @@ permalink: /buscar
 	<div id="search-results__message" class="search-results__message hide">
 	</div>
 
-	<ul id="search-results__posts" class="search-results__posts ls-unstyled">
+	<ul id="search-results__posts" class="search-results__posts ls-unstyled ac-txtc">
 	</ul>
 </div>
 
@@ -34,7 +34,7 @@ permalink: /buscar
 				'description': '{{ post.description }}',
 				'read_time': {{ words }},
 				'categories': '{{ post.categories | sort }}',
-				'excerpt': '{{ post.content | markdownify | strip_html | strip_newlines | truncatewords: 60 }}',
+				'excerpt': '{{ post.content | markdownify | strip_html | strip_newlines | truncatewords: 30 }}',
 				'content': {{ post.content | strip_html | strip_newlines | jsonify }},
 				'url': '{{ post.url | xml_escape }}',
 				'date': '<time datetime="{{ post.date | date_to_xmlschema }}"><span class="date"><span class="day">{{ day }}</span> <span class="month">{{ month }}</span> <span class="year">{{ year }}</span></span></time>'

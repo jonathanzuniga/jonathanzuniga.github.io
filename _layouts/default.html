@@ -14,39 +14,28 @@
 				{% elsif current[1] == 'archivo' %}body--archive 
 				{% elsif current[1] == 'autor' %}body--author 
 				{% elsif page.url == '/buscar' %}body--search{% endif %}">
-		<div class="container">
+		<div class="body-content">
 			{% include header.html %}
-			
-			<div class="row md-gutters-15">
-				<div class="xs-col-12 sm-col-9 main">
-					{{ content }}
-				</div>
-				<div class="xs-col-12 sm-col-3 sidebar">
-					{% include sidebar.html %}
+
+			<div class="main">
+				<div class="container">
+					<div class="row md-gutters-15">
+						<div class="xs-col-12 sm-col-9 main">
+							{{ content }}
+						</div>
+						<div class="xs-col-12 sm-col-3 sidebar">
+							{% include sidebar.html %}
+						</div>
+					</div>
 				</div>
 			</div>
 
 			{% include footer.html %}
 		</div>
-		<!-- </div> -->
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="{{ '/js/ifc-custom.js' | prepend: site.baseurl }}"></script>
 		<script src="{{ '/js/lunr.min.js' | prepend: site.baseurl }}"></script>
 		<script src="{{ '/js/search.js' | prepend: site.baseurl }}"></script>
-		<script src="{{ '/js/jquery.sticky-kit.min.js' | prepend: site.baseurl }}"></script>
-		<script src="{{ '/js/gumshoe.min.js' | prepend: site.baseurl }}"></script>
 		<script src="{{ '/js/scripts.js' | prepend: site.baseurl }}"></script>
-		<script>
-			// $(function() {
-			// 	var posts = [];
-			// 	{% for post in site.posts %}
-			// 		posts.push('{{ post.url }}');
-			// 	{% endfor %}
-
-			// 	var random_post_url = posts[Math.floor(Math.random() * posts.length)];
-			// 	$('.page-nav__link-random').attr('href', random_post_url);
-			// });
-		</script>
 	</body>
 </html>
