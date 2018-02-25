@@ -1,65 +1,137 @@
 {% assign author = site.authors['jonathan'] %}
 <header class="header">
-	<div class="container">
-		<div class="row md-gutters-15">
-			<div class="col">
+<!-- 	<div class="container-fluid">
+		<div class="cols">
+			<div class="col-12"> -->
 				{% assign current = page.url | downcase | split: '/' %}
-				<nav class="navbar navbar-responsive--top maxsm-navbar-responsive ac-txtc">
-					<a href="#!" class="navbar__toggler" id="open-menu">Menú</a>
-					<div class="navbar__collapse maxsm-hide">
-						<ul class="navbar__menu maxsm-txt-center">
-							{% if author.twitter_username %}
-								<li class="navbar__item maxsm-bd-top">
-									<a class="navbar__link" href="https://twitter.com/{{ author.twitter_username }}" target="_blank">
-										Twitter
-									</a>
-								</li>
-							{% endif %}
-							{% if author.github_username %}
-								<li class="navbar__item maxsm-bd-top">
-									<a class="navbar__link" href="https://github.com/{{ author.github_username }}" target="_blank">
-										GitHub
-									</a>
-								</li>
-							{% endif %}
-							<li class="navbar__item maxsm-bd-top">
-								<a class="navbar__link" href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
+				<nav class="navbar maxsm-navbar-responsive">
+					<!-- <input type="checkbox" id="navbar-menu-toggle" class="collapse-toggle" />
+					<label for="navbar-menu-toggle" class="navbar__toggler">Menú</label> -->
+					
+					<div class="navbar__no-collapse maxsm-order-4">
+						<ul class="navbar__menu">
+							<li class="navbar__item {% if current[1] == 'momentos' %}active{% endif %}">
+								<a class="navbar__link" href="{{ site.baseurl }}/momentos">
+									Momentos
+								</a>
+							</li>
+							<li class="navbar__item {% if current[1] == 'archivo' %}active{% endif %}">
+								<a class="navbar__link" href="{{ site.baseurl }}/archivo">
+									Archivo
+								</a>
+							</li>
+							<li class="navbar__item {% if current[1] == 'autor' %}active{% endif %}">
+								<a class="navbar__link" href="{{ site.baseurl }}/autor">
+									Autor
+								</a>
+							</li>
+							<li class="navbar__item sm-d-none">
+								<a class="navbar__link" href="">
+									GitHub
+								</a>
+							</li>
+							<li class="navbar__item sm-d-none">
+								<a class="navbar__link" href="">
 									RSS
 								</a>
 							</li>
 						</ul>
 					</div>
+
+					<a href="#!" class="navbar__link txt-lg sm-d-none"><span class="ion-navicon-round"></span></a>
+
 					<div class="navbar__brand">
-						<a class="navbar__link" href="{{ site.baseurl }}/">
+						<a class="navbar__link m-0" href="{{ site.baseurl }}/">
 							{{ author.name }} {{ author.lastname }}
 						</a>
 					</div>
-					<div class="navbar__collapse maxsm-hide">
-						<ul class="navbar__menu navbar__menu--right maxsm-txt-center">
-							<li class="navbar__item maxsm-bd-top {% if current[1] == 'momentos' %}active{% endif %}">
-								<a class="navbar__link" href="{{ site.baseurl }}/momentos">
-									Momentos
+
+					<a href="#!" class="navbar__link txt-lg sm-d-none"><span class="ion-social-twitter"></span></a>
+					
+					<div class="navbar__no-collapse maxsm-d-none">
+						<ul class="navbar__menu navbar__menu--right">
+							<li class="navbar__item">
+								<a class="navbar__link" href="">
+									Twitter
 								</a>
 							</li>
-							<li class="navbar__item maxsm-bd-top {% if current[1] == 'archivo' %}active{% endif %}">
-								<a class="navbar__link" href="{{ site.baseurl }}/archivo">
-									Archivo
+							<li class="navbar__item">
+								<a class="navbar__link" href="">
+									GitHub
 								</a>
 							</li>
-							<li class="navbar__item maxsm-bd-top {% if current[1] == 'autor' %}active{% endif %}">
-								<a class="navbar__link" href="{{ site.baseurl }}/autor">
-									Autor
+							<li class="navbar__item">
+								<a class="navbar__link" href="">
+									RSS
 								</a>
 							</li>
 						</ul>
 					</div>
 				</nav>
+<!-- 			</div>
+		</div>
+	</div> -->
+</header>
+
+
+
+
+
+
+
+
+
+
+{% comment %}
+{% assign author = site.authors['jonathan'] %}
+<header class="header">
+	<div class="container-fluid">
+		<div class="cols">
+			<div class="col">
+				{% assign current = page.url | downcase | split: '/' %}
+				<nav class="navbar navbar--dark maxsm-navbar-responsive fixed">
+					<input type="checkbox" id="navbar-menu-toggle" class="collapse-toggle" />
+					<div class="navbar__brand">
+						<a class="navbar__link" href="{{ site.baseurl }}/">
+							{{ author.name }} {{ author.lastname }}
+						</a>
+					</div>
+					<label for="navbar-menu-toggle" class="navbar__toggler">Menú</label>
+					<!-- <div class="navbar__collapse collapse maxsm-hide"> -->
+						<ul class="navbar__menu navbar__menu--right maxsm-txt-center">
+							<li class="navbar__item {% if current[1] == 'momentos' %}active{% endif %} maxsm-hide">
+								<a class="navbar__link" href="{{ site.baseurl }}/momentos">
+									Momentos
+								</a>
+							</li>
+							<li class="navbar__item {% if current[1] == 'archivo' %}active{% endif %} maxsm-hide">
+								<a class="navbar__link" href="{{ site.baseurl }}/archivo">
+									Archivo
+								</a>
+							</li>
+							<li class="navbar__item {% if current[1] == 'autor' %}active{% endif %} maxsm-hide">
+								<a class="navbar__link" href="{{ site.baseurl }}/autor">
+									Autor
+								</a>
+							</li>
+							<li class="navbar__item">
+								<button id="close-right-drawer" class="navbar__link close-right-drawer">
+									<i class="ion-ios-arrow-right"></i>
+								</button>
+							</li>
+							<li class="navbar__item">
+								<button id="open-right-drawer" class="navbar__link open-right-drawer">
+									<i class="ion-ios-search"></i>
+								</button>
+							</li>
+						</ul>
+					<!-- </div> -->
+				</nav>
 			</div>
 		</div>
 	</div>
 </header>
-
-
+{% endcomment %}
 
 
 

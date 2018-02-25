@@ -9,29 +9,92 @@
 	{% include head.html %}
 
 	{% assign current = page.url | downcase | split: '/' %}
-	<body class="body txt-smooth 
+	<body class="body 
 				{% if page.url == '/' %}body--home 
 				{% elsif current[1] == 'archivo' %}body--archive 
 				{% elsif current[1] == 'autor' %}body--author 
-				{% elsif page.url == '/buscar' %}body--search{% endif %}">
-		<div class="body-content">
-			{% include header.html %}
+				{% elsif page.url == '/buscar' %}body--search{% endif %}
+				drawer-is-open">
+		{% include header.html %}
 
-			<div class="main">
-				<div class="container">
-					<div class="row md-gutters-15">
-						<div class="xs-col-12 sm-col-9 main">
-							{{ content }}
-						</div>
-						<div class="xs-col-12 sm-col-3 sidebar">
-							{% include sidebar.html %}
+		<div class="container-fluid">
+			<div class="cols">
+				<div id="sidebar" class="md-col-3 lg-col-2 xl-col-2 sidebar">
+					{% include sidebar.html %}
+				</div>
+				<div class="lg-col-2 xl-col-2 order-3 oc ac-c maxmd-d-none">
+					<div class="oc__body">
+						<ul class="ls-unstyled bd-left">
+							<li class="toc-entry toc-h2"><a href="#examples">Examples</a></li>
+							<li class="toc-entry toc-h2"><a href="#button-tags">Button tags</a></li>
+							<li class="toc-entry toc-h2"><a href="#outline-buttons">Outline buttons</a></li>
+							<li class="toc-entry toc-h2"><a href="#sizes">Sizes</a></li>
+							<li class="toc-entry toc-h2"><a href="#active-state">Active state</a></li>
+							<li class="toc-entry toc-h2"><a href="#disabled-state">Disabled state</a></li>
+							<li class="toc-entry toc-h2"><a href="#button-plugin">Button plugin</a>
+							<ul>
+								<li class="toc-entry toc-h3"><a href="#toggle-states">Toggle states</a></li>
+								<li class="toc-entry toc-h3"><a href="#checkbox-and-radio-buttons">Checkbox and radio buttons</a></li>
+								<li class="toc-entry toc-h3"><a href="#methods">Methods</a></li>
+							</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="md-col-9 lg-col-8 xl-col-8 content">
+					{{ content }}
+				</div>
+			</div>
+		</div>
+
+
+
+{% comment %}
+		<!-- <div class="body-content"> -->
+
+		<div class="drawer-wrapper">
+			<input type="checkbox" id="eg-drawer-right" class="drawer-toggle drawer-toggle--right" />
+			<div class="drawer drawer--right open bd-left">
+				{% include sidebar.html %}
+			</div>
+			<div class="drawer-outside">
+				{% include header.html %}
+
+				<div class="main">
+					<div class="container">
+						<div class="cols">
+							<div class="xs-col-12 md-col-3 xl-col-2 left-col ac-txtc maxmd-hide">
+								<div class="left-col__body">
+									<ul class="ls-unstyled bd-top p-top-4 m-top-4">
+										<li class="toc-entry toc-h2"><a href="#examples">Examples</a></li>
+										<li class="toc-entry toc-h2"><a href="#button-tags">Button tags</a></li>
+										<li class="toc-entry toc-h2"><a href="#outline-buttons">Outline buttons</a></li>
+										<li class="toc-entry toc-h2"><a href="#sizes">Sizes</a></li>
+										<li class="toc-entry toc-h2"><a href="#active-state">Active state</a></li>
+										<li class="toc-entry toc-h2"><a href="#disabled-state">Disabled state</a></li>
+										<li class="toc-entry toc-h2"><a href="#button-plugin">Button plugin</a>
+										<ul>
+											<li class="toc-entry toc-h3"><a href="#toggle-states">Toggle states</a></li>
+											<li class="toc-entry toc-h3"><a href="#checkbox-and-radio-buttons">Checkbox and radio buttons</a></li>
+											<li class="toc-entry toc-h3"><a href="#methods">Methods</a></li>
+										</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="xs-col-12 md-col-9 xl-col-8 p-y-4">
+								<div class="bd-top m-top-4 p-top-4"></div>
+
+								{{ content }}
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			{% include footer.html %}
-		</div>
+				{% include footer.html %}
+			</div>
+		<!-- </div> -->
+{% endcomment %}
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="{{ '/js/lunr.min.js' | prepend: site.baseurl }}"></script>

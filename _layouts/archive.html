@@ -24,12 +24,12 @@ layout: default
 			{% assign year = post.date | date: '%Y' %}
 
 			{% unless post.next %}
-				<h3 class="archive__month-year txt-cp txt-lt bd-bottom m-bottom-3 p-bottom-3 h5 maxsm-txt-center">{{ month }} {{ year }}</h3>
+				<h3 class="archive__month-year txt-cap bd-bottom m-bottom-3 p-bottom-3 h5 maxsm-txt-center">{{ month }} {{ year }}</h3>
 			{% else %}
 				{% capture ym %}{{ post.date | date: '%Y%m' }}{% endcapture %}
 				{% capture next_ym %}{{ post.next.date | date: '%Y%m' }}{% endcapture %}
 				{% if ym != next_ym %}
-					<h3 class="archive__month-year txt-cp txt-lt bd-bottom m-bottom-3 p-bottom-3 h5 maxsm-txt-center">{{ month }} {{ year }}</h3>
+					<h3 class="archive__month-year txt-cap bd-bottom m-bottom-3 p-bottom-3 h5 maxsm-txt-center">{{ month }} {{ year }}</h3>
 				{% endif %}
 			{% endunless %}
 

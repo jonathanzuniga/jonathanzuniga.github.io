@@ -2,40 +2,60 @@
 layout: default
 ---
 
-<div class="posts">
-	{% for post in site.posts limit: 6 %}
-		<div id="post-{{ forloop.index }}" class="post post-{{ forloop.index }}">
-			<h2 class="post__title bd-bottom m-bottom-3 p-bottom-3 txt-lt ac-txtc">
-				<a class="post__link" href="{{ post.url }}">
-					{{ post.title }}
-				</a>
-			</h2>
+<div class="cols cols--center">
+	<div class="lg-col-11 xl-col-10">
+		<div class="posts">
+			{% for post in site.posts limit: 4 %}
+				<div id="post-{{ forloop.index }}" class="post post-{{ forloop.index }}">
+					<header class="post__header">
+						<div class="post__meta fw-700">
+							<span class="post__date">
+								{% include date.html %}
+							</span>
+						</div>
 
-			<!-- <div class="post__meta">
-				<span class="post__date">
-					{% include date.html %}
-				</span>
-				<span class="post__category">
-					en
-					{% assign sorted_categories = post.categories | sort %}
-					{% for category in sorted_categories %}
-						{% if category == 'codigo' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">código
-						{% elsif category == 'diseno' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">diseño
-						{% else %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">{{ category | replace: '-', ' ' }}
-						{% endif %}</a>{% if forloop.last == false %}, {% endif %}
-					{% endfor %}
-				</span>
-			</div> -->
+						<h2 class="post__title ac-c h1 m-top-16 m-bottom-16">
+							<a class="post__link" href="{{ post.url }}">
+								{{ post.title }}
+							</a>
+						</h2>
 
-			<div class="post__content txt-indent">
-				{{ post.content }}
-				<!-- {{ post.content | markdownify | strip_html | truncatewords: 21 }} -->
-			</div>
+						{% if post.description %}
+							<p class="post__description fs-lg fw-300">
+								{{ post.description }}
+							</p>
+						{% endif %}
+
+						<!-- <div class="post__meta">
+							<span class="post__date">
+								{% include date.html %}
+							</span>
+							<span class="post__category">
+								en
+								{% assign sorted_categories = post.categories | sort %}
+								{% for category in sorted_categories %}
+									{% if category == 'codigo' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">código
+									{% elsif category == 'diseno' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">diseño
+									{% else %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">{{ category | replace: '-', ' ' }}
+									{% endif %}</a>{% if forloop.last == false %}, {% endif %}
+								{% endfor %}
+							</span>
+						</div> -->
+					</header>
+
+					<div class="post__content">
+						{{ post.content }}
+						<!-- {{ post.content | markdownify | strip_html | truncatewords: 21 }} -->
+					</div>
+				</div>
+			{% endfor %}
 		</div>
-	{% endfor %}
+	</div>
 </div>
 
+{% comment %}
 {% include form_search.html %}
+{% endcomment %}
 
 
 

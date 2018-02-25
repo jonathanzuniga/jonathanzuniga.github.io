@@ -4,18 +4,17 @@
 
 @charset 'utf-8';
 
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500'); // |Old+Standard+TT:400,400i,700|Cardo:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400');
+// @import url('https://fonts.googleapis.com/css?family=Fanwood+Text:400,400i|Work+Sans:300,400,500|Raleway:400,400i,500,500i');
 
-$site-background-color: #fff;
-// $page-content-background-color: #fff;
+$font-family-sans-serif: 'Roboto', sans-serif;
 
-$base-font-family: 'ET Book', Georgia, 'Times New Roman', Times, Serif;
-$secondary-font-family: 'Work Sans', 'Helvetica Neue', Helvetica, sans-serif;
-$code-font-family: monospace;
+// $base-font-family: 'Fanwood Text', Georgia, 'Times New Roman', Times, Serif;
+// $sans-font-family: 'Work Sans', 'Helvetica Neue', Helvetica, sans-serif;
 
-$base-font-size-sm: 1.063em; // 17px
-$base-font-size-md: 1.063em; // 17px
-$base-font-size-lg: 1.250em; // 20px
+$base-font-size-sm: 1em;
+$base-font-size-md: 1em;
+$base-font-size-lg: 1em;
 
 $border-color: transparentize(#333, 0.87);
 $border-radius: 4px;
