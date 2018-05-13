@@ -4,20 +4,53 @@
 
 @charset 'utf-8';
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,400');
-// @import url('https://fonts.googleapis.com/css?family=Fanwood+Text:400,400i|Work+Sans:300,400,500|Raleway:400,400i,500,500i');
-
-$font-family-sans-serif: 'Roboto', sans-serif;
-
-// $base-font-family: 'Fanwood Text', Georgia, 'Times New Roman', Times, Serif;
-// $sans-font-family: 'Work Sans', 'Helvetica Neue', Helvetica, sans-serif;
+$font-family-sans-serif:    -apple-system, 
+						     BlinkMacSystemFont, 
+						     'Segoe UI', 
+						     'Roboto', 
+						     'Noto Sans', 
+						     'Ubuntu', 
+						     'Droid Sans', 
+						     'Helvetica Neue', 
+						     sans-serif !default;
+$font-family-serif:          'Mort Modern Text', serif;
+$font-family-serif-lg:       'Mort Modern Large', serif;
 
 $base-font-size-sm: 1em;
 $base-font-size-md: 1em;
 $base-font-size-lg: 1em;
 
-$border-color: transparentize(#333, 0.87);
-$border-radius: 4px;
+$day__navbar-bg-color:    #8790c9;
+$navbar-link-font-weight: 400;
+$navbar-height:           64px;
+
+$day__body-bg-color: #fff;
+$day__body-color:    rgba(#000, 0.85);
+
+$day__a-color:         $day__navbar-bg-color;
+$a-font-weight:        500;
+$day__a-visited-color: $day__a-color;
+$day__a-hover-color:   darken($day__a-color, 15%);
+
+$a-border-bottom-width:            0.063rem;
+$a-border-bottom-style:            solid;
+$day__a-border-bottom-color:       $day__a-color;
+$day__a-hover-border-bottom-color: $day__a-hover-color;
+
+$day__navbar__input-placeholder-color:       rgba(#fff, 0.5);
+$day__navbar__input-focus-border-color:      $day__navbar__input-placeholder-color;
+$day__navbar__input-focus-box-shadow:        inset 0 0 0 0.063rem $day__navbar__input-focus-border-color;
+$day__navbar__input-focus-placeholder-color: $day__navbar__input-placeholder-color;
+$day__navbar__input-active-border-color:     $day__navbar__input-focus-border-color;
+
+$day__input-placeholder-color:       rgba(#000, 0.25);
+$day__input-focus-border-color:      $day__a-color;
+$day__input-focus-box-shadow:        inset 0 0 0 0.063rem $day__input-focus-border-color;
+$day__input-focus-placeholder-color: lighten($day__input-focus-border-color, 10%);
+$day__input-active-border-color:     $day__input-focus-border-color;
+
+$container-max-width: 1680px;
+
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import 

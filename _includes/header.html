@@ -1,79 +1,61 @@
 {% assign author = site.authors['jonathan'] %}
 <header class="header">
-<!-- 	<div class="container-fluid">
-		<div class="cols">
-			<div class="col-12"> -->
+	<div class="container p-x-0">
+		<div class="cols gutters-0">
+			<div class="col-12">
 				{% assign current = page.url | downcase | split: '/' %}
-				<nav class="navbar maxsm-navbar-responsive">
+				<nav class="navbar navbar--dark maxsm-navbar-responsive">
 					<!-- <input type="checkbox" id="navbar-menu-toggle" class="collapse-toggle" />
 					<label for="navbar-menu-toggle" class="navbar__toggler">Menú</label> -->
 					
-					<div class="navbar__no-collapse maxsm-order-4">
-						<ul class="navbar__menu">
-							<li class="navbar__item {% if current[1] == 'momentos' %}active{% endif %}">
-								<a class="navbar__link" href="{{ site.baseurl }}/momentos">
-									Momentos
-								</a>
-							</li>
-							<li class="navbar__item {% if current[1] == 'archivo' %}active{% endif %}">
-								<a class="navbar__link" href="{{ site.baseurl }}/archivo">
-									Archivo
-								</a>
-							</li>
-							<li class="navbar__item {% if current[1] == 'autor' %}active{% endif %}">
-								<a class="navbar__link" href="{{ site.baseurl }}/autor">
-									Autor
-								</a>
-							</li>
-							<li class="navbar__item sm-d-none">
-								<a class="navbar__link" href="">
-									GitHub
-								</a>
-							</li>
-							<li class="navbar__item sm-d-none">
-								<a class="navbar__link" href="">
-									RSS
-								</a>
-							</li>
-						</ul>
-					</div>
-
-					<a href="#!" class="navbar__link txt-lg sm-d-none"><span class="ion-navicon-round"></span></a>
-
-					<div class="navbar__brand">
-						<a class="navbar__link m-0" href="{{ site.baseurl }}/">
+					<div class="navbar__brand maxsm-d-block maxsm-ta-center">
+						<a class="navbar__a m-0 maxsm-d-block maxsm-p-bottom-0" href="{{ site.baseurl }}/">
 							{{ author.name }} {{ author.lastname }}
 						</a>
 					</div>
 
-					<a href="#!" class="navbar__link txt-lg sm-d-none"><span class="ion-social-twitter"></span></a>
-					
-					<div class="navbar__no-collapse maxsm-d-none">
-						<ul class="navbar__menu navbar__menu--right">
-							<li class="navbar__item">
-								<a class="navbar__link" href="">
-									Twitter
+					<div class="navbar__no-collapse maxsm-order-4 fxg-1 jc-space-between">
+						<ul class="navbar__menu">
+							<li class="navbar__item {% if page.url == '/' %}active{% endif %}">
+								<a class="navbar__a" href="{{ site.baseurl }}/">
+									Inicio
 								</a>
 							</li>
-							<li class="navbar__item">
-								<a class="navbar__link" href="">
-									GitHub
+							<li class="navbar__item {% if current[1] == 'archivo' %}active{% endif %}">
+								<a class="navbar__a" href="{{ site.baseurl }}/archivo">
+									Archivo
 								</a>
 							</li>
-							<li class="navbar__item">
-								<a class="navbar__link" href="">
-									RSS
+							<li class="navbar__item {% if current[1] == 'autor' %}active{% endif %}">
+								<a class="navbar__a" href="{{ site.baseurl }}/autor">
+									Autor
 								</a>
 							</li>
+							{% if author.twitter_username %}
+								<li class="navbar__item">
+									<a class="navbar__a" href="https://twitter.com/{{ author.twitter_username }}">
+										Twitter
+									</a>
+								</li>
+							{% endif %}
+							{% if author.github_username %}
+								<li class="navbar__item">
+									<a class="navbar__a" href="https://github.com/{{ author.github_username }}">
+										GitHub
+									</a>
+								</li>
+							{% endif %}
 						</ul>
+
+						<form id="" class="navbar__form maxsm-d-none" action="/buscar" method="get">
+							<input id="" type="search" placeholder="Buscar..." class="input input--pill" />
+						</form>
 					</div>
 				</nav>
-<!-- 			</div>
+			</div>
 		</div>
-	</div> -->
+	</div>
 </header>
-
-
 
 
 
@@ -92,7 +74,7 @@
 				<nav class="navbar navbar--dark maxsm-navbar-responsive fixed">
 					<input type="checkbox" id="navbar-menu-toggle" class="collapse-toggle" />
 					<div class="navbar__brand">
-						<a class="navbar__link" href="{{ site.baseurl }}/">
+						<a class="navbar__a" href="{{ site.baseurl }}/">
 							{{ author.name }} {{ author.lastname }}
 						</a>
 					</div>
@@ -100,27 +82,27 @@
 					<!-- <div class="navbar__collapse collapse maxsm-hide"> -->
 						<ul class="navbar__menu navbar__menu--right maxsm-txt-center">
 							<li class="navbar__item {% if current[1] == 'momentos' %}active{% endif %} maxsm-hide">
-								<a class="navbar__link" href="{{ site.baseurl }}/momentos">
+								<a class="navbar__a" href="{{ site.baseurl }}/momentos">
 									Momentos
 								</a>
 							</li>
 							<li class="navbar__item {% if current[1] == 'archivo' %}active{% endif %} maxsm-hide">
-								<a class="navbar__link" href="{{ site.baseurl }}/archivo">
+								<a class="navbar__a" href="{{ site.baseurl }}/archivo">
 									Archivo
 								</a>
 							</li>
 							<li class="navbar__item {% if current[1] == 'autor' %}active{% endif %} maxsm-hide">
-								<a class="navbar__link" href="{{ site.baseurl }}/autor">
+								<a class="navbar__a" href="{{ site.baseurl }}/autor">
 									Autor
 								</a>
 							</li>
 							<li class="navbar__item">
-								<button id="close-right-drawer" class="navbar__link close-right-drawer">
+								<button id="close-right-drawer" class="navbar__a close-right-drawer">
 									<i class="ion-ios-arrow-right"></i>
 								</button>
 							</li>
 							<li class="navbar__item">
-								<button id="open-right-drawer" class="navbar__link open-right-drawer">
+								<button id="open-right-drawer" class="navbar__a open-right-drawer">
 									<i class="ion-ios-search"></i>
 								</button>
 							</li>
@@ -208,7 +190,7 @@
 			<div class="navbar__menu">
 				<ul class="navbar__list">
 					<li class="navbar__item navbar__item-autor">
-						<a class="navbar__link navbar__link_autor" href="{{ site.baseurl }}/autor">
+						<a class="navbar__a navbar__a_autor" href="{{ site.baseurl }}/autor">
 							Autor
 						</a>
 					</li>

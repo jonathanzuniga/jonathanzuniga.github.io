@@ -1,290 +1,52 @@
-@font-face {
-	font-family: 'ET Book';
-	src: url('../fonts/etbookot-roman-webfont.woff2') format('woff2'),
-		 url('../fonts/etbookot-roman-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+
+$fonts: (
+	'Mort Modern' 'Large' (
+		// '01' 'Light'    300, 
+		// '02' 'Regular'  400, 
+		// '03' 'Medium'   500, 
+		// '04' 'SemiBold' 600, 
+		'05' 'Bold'     700, 
+		// '06' 'Black'    800,
+	),
+	'Mort Modern' 'Text' (
+		// '23' 'Light'    300, 
+		'24' 'Regular'  400, 
+		'25' 'Medium'   500, 
+		// '26' 'SemiBold' 600, 
+		'27' 'Bold'     700, 
+		// '28' 'Black'    800
+	)
+);
+
+@function str_replace($string, $search, $replace: '') {
+	$index: str_index($string, $search);
+	@if $index {
+		@return str_slice($string, 1, $index - 1) + 
+			$replace + 
+			str_replace(
+				str_slice($string, $index + str_length($search)
+			), $search, $replace);
+	}
+	@return $string;
 }
 
-@font-face {
-	font-family: 'ET Book';
-	src: url('../fonts/etbookot-italic-webfont.woff2') format('woff2'),
-		 url('../fonts/etbookot-italic-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: italic;
-	font-display: swap;
+@each $font-family, $optical-size, $weights in $fonts {
+	@each $number, $weight, $weight-num in $weights {
+		$font-family-r: str_replace($font-family, ' ', '');
+
+		@font-face {
+			font-family: '#{$font-family} #{$optical-size}';
+			font-weight: #{$weight-num};
+			src: url('../fonts/#{$font-family-r}Pro/#{$font-family-r}-#{$number}#{$optical-size}#{$weight}.otf') 
+			     format('opentype');
+		}
+
+		@font-face {
+			font-family: '#{$font-family} #{$optical-size}';
+			font-style: italic;
+			font-weight: #{$weight-num};
+			src: url('../fonts/#{$font-family-r}Pro/#{$font-family-r}-#{$number}#{$optical-size}#{$weight}Italic.otf') 
+			     format('opentype');
+		}
+	}
 }
-
-@font-face {
-	font-family: 'ET Book';
-	src: url('../fonts/etbookot-bold-webfont.woff2') format('woff2'),
-		 url('../fonts/etbookot-bold-webfont.woff') format('woff');
-	font-weight: bold;
-	font-style: normal;
-	font-display: swap;
-}
-
-
-
-
-
-
-// @font-face {
-//     font-family: 'Soleil';
-//     src: url(../fonts/Soleil-Extrabold.otf);
-//     font-weight: 800;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'Soleil';
-//     src: url(../fonts/Soleil-Extrabold-Italic.otf);
-//     font-weight: 800;
-//     font-style: italic;
-// }
-
-// @font-face {
-//     font-family: 'Soleil';
-//     src: url(../fonts/Soleil-Bold.otf);
-//     font-weight: bold;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'Soleil';
-//     src: url(../fonts/Soleil-Bold-Italic.otf);
-//     font-weight: bold;
-//     font-style: italic;
-// }
-
-// @font-face {
-//     font-family: 'Soleil';
-//     src: url(../fonts/Soleil-Semibold.otf);
-//     font-weight: 500;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'Soleil';
-//     src: url(../fonts/Soleil-Semibold-Italic.otf);
-//     font-weight: 500;
-//     font-style: italic;
-// }
-
-// @font-face {
-//     font-family: 'Soleil';
-//     src: url(../fonts/Soleil-Regular.otf);
-//     font-weight: normal;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'Soleil';
-//     src: url(../fonts/Soleil-Italic.otf);
-//     font-weight: normal;
-//     font-style: italic;
-// }
-
-// @font-face {
-//     font-family: 'Soleil';
-//     src: url(../fonts/Soleil-Light.otf);
-//     font-weight: 300;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'Soleil';
-//     src: url(../fonts/Soleil-Light-Italic.otf);
-//     font-weight: 300;
-//     font-style: italic;
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// @font-face {
-//     font-family: 'Marr Sans Web';
-//     src: url(../fonts/MarrSans-UltraBlack-Web.woff);
-//     font-weight: 800;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'Marr Sans Web';
-//     src: url(../fonts/MarrSans-UltraBlackItalic-Web.woff);
-//     font-weight: 800;
-//     font-style: italic;
-// }
-
-// @font-face {
-//     font-family: 'Marr Sans Web';
-//     src: url(../fonts/MarrSans-Bold-Web.woff);
-//     font-weight: 700;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'Marr Sans Web';
-//     src: url(../fonts/MarrSans-BoldItalic-Web.woff);
-//     font-weight: 700;
-//     font-style: italic;
-// }
-
-// @font-face {
-//     font-family: 'Marr Sans Web';
-//     src: url(../fonts/MarrSans-Semibold-Web.woff);
-//     font-weight: 600;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'Marr Sans Web';
-//     src: url(../fonts/MarrSans-Semibold-Web.woff);
-//     font-weight: 600;
-//     font-style: italic;
-// }
-
-// @font-face {
-//     font-family: 'Marr Sans Web';
-//     src: url(../fonts/MarrSans-Medium-Web.woff);
-//     font-weight: 500;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'Marr Sans Web';
-//     src: url(../fonts/MarrSans-MediumItalic-Web.woff);
-//     font-weight: 500;
-//     font-style: italic;
-// }
-
-// @font-face {
-//     font-family: 'Marr Sans Web';
-//     src: url(../fonts/MarrSans-Regular-Web.woff);
-//     font-weight: 400;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'Marr Sans Web';
-//     src: url(../fonts/MarrSans-RegularItalic-Web.woff);
-//     font-weight: 400;
-//     font-style: italic;
-// }
-
-// @font-face {
-//     font-family: 'Marr Sans Web';
-//     src: url(../fonts/MarrSans-Light-Web.woff);
-//     font-weight: 300;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'Marr Sans Web';
-//     src: url(../fonts/MarrSans-LightItalic-Web.woff);
-//     font-weight: 300;
-//     font-style: italic;
-// }
-
-// @font-face {
-//     font-family: 'Marr Sans Web';
-//     src: url(../fonts/MarrSans-Thin-Web.woff);
-//     font-weight: 200;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'Marr Sans Web';
-//     src: url(../fonts/MarrSans-ThinItalic-Web.woff);
-//     font-weight: 200;
-//     font-style: italic;
-// }
-
-
-
-
-
-
-
-
-/**
- * Museo Slab
- */
-// @font-face {
-//   font-family: "Museo Slab";
-//   font-weight: 100;
-//   src: url('../fonts/MuseoSlab/MuseoSlab_100.otf') format('opentype');
-// }
-// @font-face {
-//   font-family: "Museo Slab";
-//   font-weight: 100;
-//   font-style: italic;
-//   src: url('../fonts/MuseoSlab/MuseoSlab_100italic.otf') format('opentype');
-// }
-
-// @font-face {
-//   font-family: "Museo Slab";
-//   font-weight: 300;
-//   src: url('../fonts/MuseoSlab/MuseoSlab_300.otf') format('opentype');
-// }
-// @font-face {
-//   font-family: "Museo Slab";
-//   font-weight: 300;
-//   font-style: italic;
-//   src: url('../fonts/MuseoSlab/MuseoSlab_300_Italic.otf') format('opentype');
-// }
-// @font-face {
-//   font-family: "Museo Slab";
-//   font-weight: 500;
-//   src: url('../fonts/MuseoSlab/MuseoSlab_500.otf') format('opentype');
-// }
-// @font-face {
-//   font-family: "Museo Slab";
-//   font-weight: 500;
-//   font-style: italic;
-//   src: url('../fonts/MuseoSlab/MuseoSlab_500_Italic.otf') format('opentype');
-// }
-// @font-face {
-//   font-family: "Museo Slab";
-//   font-weight: 700;
-//   src: url('../fonts/MuseoSlab/MuseoSlab_700.otf') format('opentype');
-// }
-// @font-face {
-//   font-family: "Museo Slab";
-//   font-weight: 700;
-//   font-style: italic;
-//   src: url('../fonts/MuseoSlab/MuseoSlab_700_Italic.otf') format('opentype');
-// }
-// @font-face {
-//   font-family: "Museo Slab";
-//   font-weight: 900;
-//   src: url('../fonts/MuseoSlab/MuseoSlab_900.otf') format('opentype');
-// }
-// @font-face {
-//   font-family: "Museo Slab";
-//   font-weight: 900;
-//   font-style: italic;
-//   src: url('../fonts/MuseoSlab/MuseoSlab_900_Italic.otf') format('opentype');
-// }
-// @font-face {
-//   font-family: "Museo Slab";
-//   font-weight: 1000;
-//   src: url('../fonts/MuseoSlab/MuseoSlab_1000.otf') format('opentype');
-// }
-// @font-face {
-//   font-family: "Museo Slab";
-//   font-weight: 1000;
-//   font-style: italic;
-//   src: url('../fonts/MuseoSlab/MuseoSlab_1000_Italic.otf') format('opentype');
-// }

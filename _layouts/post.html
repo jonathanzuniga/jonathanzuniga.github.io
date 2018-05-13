@@ -2,6 +2,40 @@
 layout: default
 ---
 
+<div class="posts">
+	<div id="post-{{ forloop.index }}" class="post post-{{ forloop.index }}">
+		<header class="post__header maxsm-ta-center">
+			<div class="post__meta">
+				<span class="post__date">
+					{% include date.html %}
+				</span>
+			</div>
+
+			<h1 class="post__title ac-c m-top-16 m-bottom-16">
+				{{ page.title }}
+			</h1>
+
+			{% if page.description %}
+				<p class="post__description fs-lg fw-300">
+					{{ page.description }}
+				</p>
+			{% endif %}
+		</header>
+
+		<div class="post__content">
+			{{ page.content }}
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+{% comment %}
 <article class="full post">
 	<header class="post__header">
 		<h1 class="post__title h2">
@@ -55,7 +89,7 @@ layout: default
 </article>
 
 {% include form_search.html %}
-
+{% endcomment %}
 
 
 		

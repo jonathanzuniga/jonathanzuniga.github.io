@@ -2,16 +2,28 @@
 layout: default
 ---
 
-<article class="full post">
-	{% if page.title %}
-		<header class="post__header">
-			<h1 class="post__title h2">
+<div class="posts">
+	<div id="post-{{ forloop.index }}" class="post post-{{ forloop.index }}">
+		<header class="post__header maxsm-ta-center">
+			<div class="post__meta">
+				<span class="post__date">
+					Última actualización: {% include date.html %}
+				</span>
+			</div>
+
+			<h1 class="post__title ac-c m-top-16 m-bottom-16">
 				{{ page.title }}
 			</h1>
-		</header>
-	{% endif %}
 
-	<section class="post__content">
-		{{ content }}
-	</section>
-</article>
+			{% if page.description %}
+				<p class="post__description fs-lg fw-300">
+					{{ page.description }}
+				</p>
+			{% endif %}
+		</header>
+
+		<div class="post__content">
+			{{ content }}
+		</div>
+	</div>
+</div>

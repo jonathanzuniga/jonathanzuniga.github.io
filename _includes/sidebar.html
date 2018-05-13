@@ -1,119 +1,14 @@
-<form class="sidebar__form p-y-16 bd-bottom-1">
-	<input type="search" placeholder="Buscar..." class="input input--pill" />
-</form>
+<div>
+	<form id="search__form" class="sidebar__form p-y-16 bd-bottom-1 sm-d-none" action="/buscar" method="get">
+		<input id="search__input" type="search" placeholder="Buscar..." class="input input--pill" />
+	</form>
 
-<div id="sidebar__body" class="sidebar__body">
-	<div id="sidebar__body-content" class="sidebar__body-content p-y-16">
-		<h6>Recientemente</h6>
+	<div id="sidebar__body" class="sidebar__body maxsm-d-none">
+		<h5>Recientemente</h5>
 
 		<ul class="ls-unstyled ac-c">
 			{% for post in site.posts limit: 6 %}
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-				<li class="m-bottom-16">
+				<li>
 					<a href="{{ post.url }}#post-{{ forloop.index }}">
 						{{ post.title }}
 					</a>
@@ -125,18 +20,18 @@
 				</a>
 			</li>
 		</ul>
-	</div>
 
-{% comment %}
-	<p class="">
-		<input id="switch-night-mode" class="switch switch--sm" type="checkbox">
-		<label for="switch-night-mode" id="lbl-night-mode">
-			<span>
-				<i id="icon-night-mode" class="ion-ios-moon-outline" title="Modo nocturno"></i>
-			</span>
-		</label>
-	</p>
-{% endcomment %}
+	{% comment %}
+		<p class="">
+			<input id="switch-night-mode" class="switch switch--sm" type="checkbox">
+			<label for="switch-night-mode" id="lbl-night-mode">
+				<span>
+					<i id="icon-night-mode" class="ion-ios-moon-outline" title="Modo nocturno"></i>
+				</span>
+			</label>
+		</p>
+	{% endcomment %}
+	</div>
 </div>
 
 
