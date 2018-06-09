@@ -18,17 +18,17 @@
 						<ul class="navbar__menu">
 							<li class="navbar__item {% if page.url == '/' %}active{% endif %}">
 								<a class="navbar__a" href="{{ site.baseurl }}/">
-									Inicio
+									Home
 								</a>
 							</li>
-							<li class="navbar__item {% if current[1] == 'archivo' %}active{% endif %}">
-								<a class="navbar__a" href="{{ site.baseurl }}/archivo">
-									Archivo
+							<li class="navbar__item {% if current[1] == 'articles' %}active{% endif %}">
+								<a class="navbar__a" href="{{ site.baseurl }}/articles">
+									Articles
 								</a>
 							</li>
-							<li class="navbar__item {% if current[1] == 'autor' %}active{% endif %}">
-								<a class="navbar__a" href="{{ site.baseurl }}/autor">
-									Autor
+							<li class="navbar__item {% if current[1] == 'about' %}active{% endif %}">
+								<a class="navbar__a" href="{{ site.baseurl }}/about">
+									About
 								</a>
 							</li>
 							{% if author.twitter_username %}
@@ -48,7 +48,7 @@
 						</ul>
 
 						<form id="" class="navbar__form maxsm-d-none" action="/buscar" method="get">
-							<input id="" type="search" placeholder="Buscar..." class="input input--pill" />
+							<input id="" type="search" placeholder="Search" class="input input--pill" />
 						</form>
 					</div>
 				</nav>

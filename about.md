@@ -2,7 +2,7 @@
 date: 2018-05-12
 description: 'Este es el espacio en el que compartiré pensamientos y experiencias de mi vida diaria. Si quieres saber por qué hice este blog puedes leer <a href="#!">el primer post</a> y si te preguntas quién soy, ahí va algo de información.'
 layout: page
-permalink: /autor
+permalink: /about
 title: 'Sobre el autor'
 ---
 
