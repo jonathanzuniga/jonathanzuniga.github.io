@@ -1,20 +1,21 @@
 ---
-date: 2018-05-12
-description: 'Este es el espacio en el que compartiré pensamientos y experiencias de mi vida diaria. Si quieres saber por qué hice este blog puedes leer <a href="#!">el primer post</a> y si te preguntas quién soy, ahí va algo de información.'
+date: 2018-05-09
+description: 'Here I will share thoughts and experiences from my daily life. If you want to know why I made this blog you can read <a href="#!">the first post</a> and if you ask who I am, there goes some information.'
 layout: page
 permalink: /about
-title: 'Sobre el autor'
+title: 'Nice to meet you, my name is Jonathan Zúñiga.'
 ---
 
 {% assign author = site.authors['jonathan'] %}
-Mi nombre es Jonathan Zúñiga. Soy un desarrollador web viviendo y trabajando en Tijuana, Baja California, una de las ciudades fronterizas más transitadas y vibrantes del mundo.
 
-Antes de estar expuesto a los microprocesadores, tenía la intención de estudiar diseño gráfico. Sin embargo, hacer cosas con los *bits* y los *bytes* es mucho más divertido que con los materiales tradicionales. Durante el transcurso de la carrera, el interés que tenía por el arte cambió gradualmente al diseño y desarrollo de sitios de internet. Aproximadamente en el año 2000 hice mi primera página web en el extinto Geocities y de allí hice páginas por entretenimiento hasta que en el 2004, con mi sitio —antes de ser un blog— y otros para diversos clientes he estado involucrado en el maravilloso y desordenado mundo web.
+I am a front-end developer with experience using  
 
-Algunas de las cosas que más me gustan son la libertad de información, la subcultura informática, [las interfaces retro-futuristas](https://www.youtube.com/watch?v=2ywWFvjE-yU){:target='_blank'}, una internet que respete y permita, [el arte urbano](https://www.youtube.com/watch?v=gmu_RByhlGw){:target='_blank'}, el chocolate semiamargo, [la música electrónica](https://www.youtube.com/watch?v=RbxZmcQWWgE){:target='_blank'}, el pastel de fruta seca, el té, y dibujar letras, pero no necesariamente en este orden. La mayor parte de <a href="https://github.com/{{ author.github_username }}?tab=repositories" target="_blank">mis proyectos</a> son de código abierto y los puedes encontrar en GitHub. Gracias por leer, quienquiera que seas. Por el momento no hay comentarios, no hay cuentas, no hay estadísticas. Sólo yo y muchos archivos de texto en blanco por completar. Ya veremos cómo nos va en esta ocasión.
+Before being exposed to the microprocessors, I had the intention of studying graphic design. However, doing things with bits and bytes is much more fun than with traditional materials. The interest I had in art gradually changed to web design/development. Approximately in the year 2000, I made my first website in the extinct Geocities and from there I made pages for entertainment until in 2004, with my site —before it was a blog— and others for various clients I have been involved in the wonderful and messy web world.
 
-<div class="smcaps m-top-16 m-bottom-4 ta-center">Acerca del Sitio</div>
+Some of the things I like are information freedom, hacker subculture, [retro-futuristic interfaces](https://www.youtube.com/watch?v=2ywWFvjE-yU){:target='_blank'}, an internet that respects humans, [urban art](https://www.youtube.com/watch?v=gmu_RByhlGw){:target='_blank'}, dark chocolate, [electronic music](https://www.youtube.com/watch?v=RbxZmcQWWgE){:target='_blank'}, fruitcake, tea, and drawing letters, but not necessarily in this order. Most of [my projects](https://github.com/{{ author.github_username }}?tab=repositories){:target='_blank'} is open source and you can find them on GitHub. Thanks for reading, whoever you are. At this moment there are no comments, there are no accounts, there are no statistics. Only me and many blank text files to complete. We'll see how it goes this time.
+
+<div class="smcaps m-top-16 m-bottom-4 ta-center">About this Site</div>
 
 <p class="md-cols-2 fs-sm">
-	El sitio está creado con los mejores sabores de HTML5 y Sass para la parte de CSS, JavaScript para las búsquedas, y utilizo <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> para su publicación. La fuente tipográfica para la barra de navegación es <a href="https://developer.apple.com/fonts/">San Francisco</a> diseñada por <a href="https://www.apple.com/">Apple</a> y para el cuerpo es <a href="https://mort-modern.losttype.com/" target="_blank">Mort Modern</a> diseñada por <a href="http://rileycran.com/" target="_blank">Riley Cran</a>. Para hacer los dibujos utilizo un lapiz no. ... sobre una pequeña libreta de hojas..., los escaneo con la aplicación PhotoScan y los edito en Adobe Photoshop CS6. Actualmente las <a href="https://www.flickr.com/photos/{{ author.flickr_username }}" target="_blank">fotografías</a> las estoy tomando con mi <a href="https://web.archive.org/web/20150905053915/http://www.google.com/nexus/5/" target="_blank">Nexus 5</a> que se niega a morir.
+	The site is created with the best flavors of HTML5 and Sass for the CSS code, JavaScript for the search functionality, and uses <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> for publishing. The body typeface is <a href="https://mort-modern.losttype.com/" target="_blank">Mort Modern</a> designed by <a href="http://rileycran.com/" target="_blank">Riley Cran</a>, and <a href="https://developer.apple.com/fonts/">San Francisco</a> by <a href="https://www.apple.com/">Apple</a> is used for the navigation bar and subheads. Currently I'm taking <a href="https://www.flickr.com/photos/{{ author.flickr_username }}" target="_blank">the pictures</a> with my <a href="https://web.archive.org/web/20150905053915/http://www.google.com/nexus/5/" target="_blank">Nexus 5</a> that refuses to die.
 </p>

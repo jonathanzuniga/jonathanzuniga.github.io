@@ -1,3 +1,48 @@
+
+{% if page.date %}
+
+	<time datetime="{{ page.date | date_to_xmlschema }}">
+		
+		{% comment %}{% assign day_name = page.date | date: '%A' %}{% endcomment %}
+		{% assign month_name = page.date | date: '%B' %}
+		{% assign day = page.date | date: '%-d' %}
+		{% assign year = page.date | date: '%Y' %}
+
+		{% comment %}<span class="day-name">{{ day_name }}</span>,{% endcomment %}
+		<span class="month-name">{{ month_name }}</span>
+		<span class="day">
+			{% case day %}
+
+				{% when '1' or '21' or '31' %}{{ day }}st{% when '2' or '22' %}{{ day }}nd{% when '3' or '23' %}{{ day }}rd{% else %}{{ day }}th{% endcase %}</span>,
+		<span class="year">{{ year }}</span>
+	</time>
+
+{% else %}
+
+	<time datetime="{{ post.date | date_to_xmlschema }}">
+		
+		{% comment %}{% assign day_name = post.date | date: '%A' %}{% endcomment %}
+		{% assign month_name = post.date | date: '%B' %}
+		{% assign day = post.date | date: '%-d' %}
+		{% assign year = post.date | date: '%Y' %}
+
+		{% comment %}<span class="day-name">{{ day_name }}</span>,{% endcomment %}
+		<span class="month-name">{{ month_name }}</span>
+		<span class="day">
+			{% case day %}
+
+				{% when '1' or '21' or '31' %}{{ day }}st{% when '2' or '22' %}{{ day }}nd{% when '3' or '23' %}{{ day }}rd{% else %}{{ day }}th{% endcase %}</span>,
+		<span class="year">{{ year }}</span>
+	</time>
+
+{% endif %}
+
+
+
+
+
+{% comment %}
+
 {% 
 	assign months = 
 	'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
@@ -47,85 +92,4 @@
 	</time>
 {% endif %}
 
-
-
-
-
-{% comment %}
-{% 
-	assign months = 
-	'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
-	split: '|'
-%}
-{% if page.date %}
-	<time datetime="{{ page.date | date_to_xmlschema }}">
-		{% assign day = page.date | date: '%-d' %}
-		{% assign m = page.date | date: '%-m' | minus: 1 %}
-		{% assign month = months[m] %}
-		{% assign year = page.date | date: '%Y' %}
-		{{ day }} de {{ month }} de {{ year }}
-	</time>
-{% else %}
-	<time datetime="{{ post.date | date_to_xmlschema }}">
-		{% assign day = post.date | date: '%-d' %}
-		{% assign m = post.date | date: '%-m' | minus: 1 %}
-		{% assign month = months[m] %}
-		{% assign year = post.date | date: '%Y' %}
-		{{ day }} de {{ month }}, {{ year }}
-	</time>
-{% endif %}
-{% endcomment %}
-
-
-
-
-{% comment %}
-{% if page.date %}
-	<time datetime="{{ page.date | date_to_xmlschema }}">
-		{{ page.date | timeago }}.
-	</time>
-{% else %}
-	<time datetime="{{ post.date | date_to_xmlschema }}">
-		{{ post.date | timeago }}
-	</time>
-{% endif %}
-{% endcomment %}
-
-
-
-
-
-
-{% comment %}
-{% 
-	assign months = 
-	'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
-	split: '|'
-%}
-{%
-	assign days = 
-		'domingo|lunes|martes|miércoles|jueves|viernes|sábado' | 
-		split: '|'
-%}
-{% if page.date %}
-	<time datetime="{{ page.date | date_to_xmlschema }}">
-		{% assign d = page.date | date: '%B' | minus: 1 %}
-		{% assign day_name = days[d] %}
-		{% assign day = page.date | date: '%d' %}
-		{% assign m = page.date | date: '%m' | minus: 1 %}
-		{% assign month = months[m] %}
-		{% assign year = page.date | date: '%Y' %}
-		<span class="day-name">{{ day_name }}</span> {{ day }}.º <em>de</em> {{ month }}, {{ year }}
-	</time>
-{% else %}
-	<time datetime="{{ post.date | date_to_xmlschema }}">
-		{% assign d = post.date | date: '%B' | minus: 1 %}
-		{% assign day_name = days[d] %}
-		{% assign day = post.date | date: '%d' %}
-		{% assign m = post.date | date: '%-m' | minus: 1 %}
-		{% assign month = months[m] %}
-		{% assign year = post.date | date: '%Y' %}
-		<span class="day-name">{{ day_name }}</span> {{ day }}.º <em>de</em> {{ month }}, {{ year }}
-	</time>
-{% endif %}
 {% endcomment %}

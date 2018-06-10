@@ -1,5 +1,21 @@
 <div class="col-3th__body hyp-auto">
-	{% if page.layout == 'post' %}
+
+	{% if page.url == '/' %}
+
+		<h5>
+			Tourist information
+		</h5>
+
+		<p>
+			This blog is run by <a href="{{ site.baseurl }}/about">Jonathan Zúñiga</a> about stories and personal thoughts on his daily life.
+		</p>
+
+		<p>
+			<i>I hope you enjoy the articles and demos posted here. Most of what I write about, I taught myself from the web and books. Here's a few I would recommend if you want to deepen your knowledge.</i>
+		</p>
+
+	{% elsif page.layout == 'post' %}
+
 		<ul class="ls-unstyled ac-c">
 			<li class="toc-entry toc-h2"><a href="#examples">Examples</a></li>
 			<li class="toc-entry toc-h2"><a href="#button-tags">Button tags</a></li>
@@ -15,17 +31,19 @@
 				</ul>
 			</li>
 		</ul>
+
 	{% elsif page.url == '/about' %}
+
 		<h5>
-			Contactarme
+			Contact information
 		</h5>
 
 		<p>
-			Escríbeme a mí <a href="mailto:{{ author.email }}">correo electrónico</a> para consultas o simplemente para saludarme.
+			Write me an <a href="mailto:{{ author.email }}">email</a> for work inquiries or just to say hello.
 		</p>
 
 		<h5>
-			Proyectos selectos
+			Selected projects
 		</h5>
 
 		<ul class="ls-unstyled ac-c">
@@ -48,7 +66,7 @@
 		</ul>
 
 		<h5>
-			Lectura recomendada
+			Recommended reading
 		</h5>
 
 		<ul class="ls-unstyled ac-c">
@@ -62,10 +80,12 @@
 				</h6>
 
 				<p class="fs-sm">
-					<i>por {{ rr.author }}</i>
+					<i>by {{ rr.author }}</i>
 				</p>
 			  </li>
 			{% endfor %}
 		</ul>
+
 	{% endif %}
+
 </div>
