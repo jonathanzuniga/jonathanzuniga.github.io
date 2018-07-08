@@ -1,41 +1,43 @@
 jQuery( document ).ready( function ( $ ) {
 
-	function toggleSearchInputId () {
-
-		if ( $( window ).width < 768 ) {
-
-			$( '.navbar__form' ).attr( 'id', '' );
-			$( '.navbar__form .input' ).attr( 'id', '' );
-
-			$( '.sidebar__form' ).attr( 'id', 'search__form' );
-			$( '.sidebar__form .input' ).attr( 'id', 'search__input' );
-
-		} else {
-
-			$( '.navbar__form').attr( 'id', 'search__form' );
-			$( '.navbar__form .input' ).attr('id', 'search__input' );
-			
-			$( '.sidebar__form' ).attr( 'id', '' );
-			$( '.sidebar__form .input' ).attr('id', '' );
-
-		}
-	}
-
-	toggleSearchInputId();
-
-	$( '#search__form' ).submit( function () {
+	$( '#header__search-form' ).submit( function () {
 
 		var is_form_valid = true;
 
 		// No permitir buscar si el input esta vacio.
 		
-		if ( $.trim( $( '#search__input' ).val() ).length == 0 )
+		if ( $.trim( $( '#header__search-input' ).val() ).length == 0 )
 			is_form_valid = false;
 
 		return is_form_valid;
 
 	} );
 
+	$( '#header__search-btn' ).click( function () {
+
+		let _this = $( this );
+
+		$( '#header__search-input' ).val( '' );
+
+		if ( ! $( '.navbar' ).hasClass( 'active-search' ) ) {
+
+			_this.closest( '.navbar' ).removeClass( 'inactive-search' ).addClass( 'active-search' );
+
+			$( '#header__search-input' ).focus();
+
+			$( '.header__search-btn' ).html( '<small>Cancel</small>' );
+
+		} else {
+
+			_this.closest( '.navbar' ).removeClass( 'active-search' ).addClass( 'inactive-search' );
+
+			$( '#header__search-input' ).blur();
+
+			$( '.header__search-btn' ).html( 'Search' );
+
+		}
+
+	} );
 
 	// iscroll
 

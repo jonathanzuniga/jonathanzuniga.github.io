@@ -1,14 +1,14 @@
 {% assign author = site.authors['jonathan'] %}
 <header class="header">
-	<div class="container p-x-0">
-		<div class="cols gutters-0">
+	<div class="cntr p-x-0">
+		<div class="row gutters-0">
 			<div class="col-12">
 				{% assign current = page.url | downcase | split: '/' %}
 				<nav class="navbar navbar--dark maxsm-navbar-responsive">
 					<!-- <input type="checkbox" id="navbar-menu-toggle" class="collapse-toggle" />
 					<label for="navbar-menu-toggle" class="navbar__toggler">Menú</label> -->
 					
-					<div class="navbar__brand maxsm-d-block maxsm-ta-center">
+					<div class="navbar__brand">
 						<a class="navbar__a m-0 maxsm-d-block maxsm-p-bottom-0" href="{{ site.baseurl }}/">
 							{{ author.name }} {{ author.lastname }}
 						</a>
@@ -46,10 +46,18 @@
 								</li>
 							{% endif %}
 						</ul>
+					</div>
 
-						<form id="" class="navbar__form maxsm-d-none" action="/buscar" method="get">
-							<input id="" type="search" placeholder="Search" class="input input--pill" />
-						</form>
+					<div class="navbar__form">
+						<div class="header__search-wrap anim-slide-in-out">
+							<form id="header__search-form" class="header__search-form" action="/buscar" method="get">
+								<input id="header__search-input" type="search" placeholder="Search in the archives" class="header__search-input input input--pill" />
+							</form>
+						</div>
+
+						<button id="header__search-btn" class="header__search-btn sm-d-none btn btn--link">
+							Search
+						</button>
 					</div>
 				</nav>
 			</div>
