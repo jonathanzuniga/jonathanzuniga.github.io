@@ -1,5 +1,11 @@
 # jonathanzuniga.github.io
 
-Jonathan Zúñiga's blog.
+> Blog under construction.
 
-http://jonathanzuniga.github.io/
+## ToDo
+
+- [ ] Articles page.
+- [ ] Fix search functionality.
+- [ ] Write more articles.
+- [ ] Clean the code.
+- [ ] Logotype?
