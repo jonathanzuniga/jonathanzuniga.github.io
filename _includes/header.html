@@ -4,17 +4,17 @@
 		<div class="row gutters-0">
 			<div class="col-12">
 				{% assign current = page.url | downcase | split: '/' %}
-				<nav class="navbar navbar--dark maxsm-navbar-responsive">
+				<nav class="navbar navbar--dark maxsm-navbar-responsive maxsm-p-top-8">
 					<!-- <input type="checkbox" id="navbar-menu-toggle" class="collapse-toggle" />
 					<label for="navbar-menu-toggle" class="navbar__toggler">Menú</label> -->
 					
 					<div class="navbar__brand">
-						<a class="navbar__a m-0 maxsm-d-block maxsm-p-bottom-0" href="{{ site.baseurl }}/">
-							{{ author.name }} {{ author.lastname }}
+						<a class="navbar__a m-0 maxsm-d-block" href="{{ site.baseurl }}/">
+							<span class="header__title anim-slide-out-in">{{ author.name }} {{ author.lastname }}</span>
 						</a>
 					</div>
 
-					<div class="navbar__no-collapse maxsm-order-4 fxg-1 jc-space-between">
+					<div class="navbar__no-collapse maxsm-order-4 fxg-1 jc-space-between maxsm-p-bottom-8">
 						<ul class="navbar__menu">
 							<li class="navbar__item {% if page.url == '/' %}active{% endif %}">
 								<a class="navbar__a" href="{{ site.baseurl }}/">

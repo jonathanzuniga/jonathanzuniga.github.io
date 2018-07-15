@@ -51,7 +51,7 @@ jQuery( document ).ready( function ( $ ) {
 		interactiveScrollbars: true,
 		mouseWheel: true,
 		probeType: 2,
-		scrollbars: true
+		scrollbars: false
 	};
 
 	var myScroll1 = new IScroll( '#sidebar', iScrollOptions );
