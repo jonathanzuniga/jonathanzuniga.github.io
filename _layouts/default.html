@@ -10,11 +10,15 @@
 
 	{% assign current = page.url | downcase | split: '/' %}
 	<body class="body 
-				{% if page.url == '/' %}body--home 
-				{% elsif current[1] == 'archivo' %}body--archive 
-				{% elsif current[1] == 'autor' %}body--author 
-				{% elsif page.url == '/buscar' %}body--search{% endif %}
-				drawer-is-open">
+				{% if page.url == '/' %}
+					body--home 
+				{% elsif current[1] == 'articles' %}
+					body--archive 
+				{% elsif current[1] == 'about' %}
+					body--author 
+				{% elsif page.url == '/search' %}
+					body--search
+				{% endif %}">
 		{% include header.html %}
 
 		<div class="cntr">
@@ -39,8 +43,8 @@
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="{{ '/js/lunr.min.js' | prepend: site.baseurl }}"></script>
-		<script src="{{ '/js/search.js' | prepend: site.baseurl }}"></script>
-		<script src="{{ '/js/iscroll.js' | prepend: site.baseurl }}"></script>
-		<script src="{{ '/js/scripts.js' | prepend: site.baseurl }}"></script>
+		<script src="{{ '/js/search.js'   | prepend: site.baseurl }}"></script>
+		<script src="{{ '/js/iscroll.js'  | prepend: site.baseurl }}"></script>
+		<script src="{{ '/js/scripts.js'  | prepend: site.baseurl }}"></script>
 	</body>
 </html>

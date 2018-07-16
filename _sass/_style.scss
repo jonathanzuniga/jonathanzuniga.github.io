@@ -6,12 +6,26 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-family-sans-serif;
-	font-weight: 400;
+}
+
+h1 {
+	font-weight: 700;
+}
+
+h1, h1 a, h2, h2 a {
+	font-family: $font-family-serif-lg;
+	font-weight: 700;
+}
+
+h3, h3 a {
+	font-family: $font-family-serif;
+	font-weight: 700;
 }
 
 h5,
 .post__meta {
 	font-family: $font-family-sans-serif;
+	font-weight: 400;
 }
 
 a {
@@ -135,17 +149,8 @@ p.ac-c a:not(.btn) {
 @media ( max-width: 767px ) {
 	.navbar__brand {
 		opacity: 1;
-		transition: opacity 0.1s ease-in-out;
+		transition: opacity 0.2s cubic-bezier( 0.645, 0.045, 0.355, 1 );
 		// width: 100%;
-	}
-}
-
-@media ( min-width: 768px ) {
-	.sidebar {
-		height: calc(100vh - #{$navbar-height});
-		overflow-y: auto;
-		position: sticky;
-		top: $navbar-height;
 	}
 }
 
@@ -160,7 +165,7 @@ p.ac-c a:not(.btn) {
 	padding: 0;
 	
 	position: absolute;
-	top: 1rem;
+	top: 1.125rem;
 	right: 1rem;
 
 	transition: all 0.1s ease-in-out;
@@ -174,11 +179,11 @@ p.ac-c a:not(.btn) {
 		background-image: url( '../images/ionicons_svg_ios-search.svg' );
 		background-position: right center;
 		background-repeat: no-repeat;
-		background-size: 1.5em 1.5em;
+		background-size: 1.75em 1.75em;
 		display: block;
 		opacity: 1;
 		position: relative;
-		transition: opacity 0.1s ease-in-out;
+		transition: opacity 0.2s cubic-bezier( 0.645, 0.045, 0.355, 1 );
 
 		width: 2em;
 		height: 2em;
@@ -210,7 +215,7 @@ p.ac-c a:not(.btn) {
 
 	.header__search-form {
 		margin-top: 1rem;
-		margin-right: 4rem;
+		margin-right: 3rem;
 		margin-left: 1rem;
 	}
 
@@ -228,21 +233,16 @@ p.ac-c a:not(.btn) {
 		}
 
 		.header__search-btn {
-			width: 3em;
+			width: 2em;
 			height: auto;
 
 			&::before {
-				content: '';
 				background-image: none;
+
 				opacity: 0;
 
 				width: 0;
 				height: 0;
-			}
-
-			small {
-				display: block;
-				padding: 0.6em;
 			}
 		}
 	}
@@ -266,27 +266,42 @@ p.ac-c a:not(.btn) {
 }
 
 @keyframes slide-in {
+
 	0% {
-	    opacity: 0;
-	    transform: translateY( 100% );
+		opacity: 0;
+		transform: translateY( 100% );
 	}
 
 	100% {
-	    opacity: 1;
-	    transform: translateY( 0 );
+		opacity: 1;
+		transform: translateY( 0 );
 	}
+
 }
 
 @keyframes slide-out {
+
 	0% {
-	    opacity: 1;
-	    transform: translateY( 0 );
+		opacity: 1;
+		transform: translateY( 0 );
 	}
 
 	100% {
-	    opacity: 0;
-	    transform: translateY( -100% );
+		opacity: 0;
+		transform: translateY( -100% );
 	}
+
+}
+
+@media ( min-width: 768px ) {
+
+	.sidebar {
+		height: calc(100vh - #{$navbar-height});
+		overflow-y: auto;
+		position: sticky;
+		top: $navbar-height;
+	}
+
 }
 
 .sidebar__body {
@@ -357,17 +372,6 @@ p.ac-c a:not(.btn) {
 .content {
 	padding-top: 22px;
 	padding-bottom: 22px;
-
-	h1, h2,
-	h1 a, h2 a {
-		font-family: $font-family-serif-lg;
-		font-weight: 700;
-	}
-
-	h3 {
-		font-family: $font-family-serif;
-		font-weight: 700;
-	}
 }
 
 @media (min-width: 1024px) {
@@ -380,11 +384,12 @@ p.ac-c a:not(.btn) {
 	margin-bottom: 3rem;
 }
 
-.post__header {
+.posts:not(.search-results__posts) .post__header,
+.search-results__title {
 	&:after {
 		content: '';
 		display: block;
-		margin: 1.5em 0;
+		margin: 1.5rem 0;
 		height: 0.125rem;
 		width: 5rem;
 		background-color: $day__body-color;
@@ -392,10 +397,18 @@ p.ac-c a:not(.btn) {
 }
 
 @media (max-width: 767px) {
-	.post__header {
+	.posts:not(.search-results__posts) .post__header,
+	.search-results__title {
 		&:after {
 			margin-right: auto;
 			margin-left: auto;
 		}
 	}
+}
+
+.search-results__posts .post {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+
+	padding-bottom: 1.5rem;
 }
