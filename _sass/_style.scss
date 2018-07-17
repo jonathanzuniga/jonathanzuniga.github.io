@@ -211,6 +211,7 @@ p.ac-c a:not(.btn) {
 		left: 0;
 
 		width: 100%;
+		z-index: -1;
 	}
 
 	.header__search-form {
@@ -226,6 +227,7 @@ p.ac-c a:not(.btn) {
 
 		.header__search-wrap {
 			opacity: 1;
+			z-index: 10;
 		}
 
 		.header__search-input {
@@ -235,6 +237,7 @@ p.ac-c a:not(.btn) {
 		.header__search-btn {
 			width: 2em;
 			height: auto;
+			z-index: 11;
 
 			&::before {
 				background-image: none;
