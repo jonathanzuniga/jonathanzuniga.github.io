@@ -319,7 +319,7 @@ p.ac-c a:not(.btn) {
 @media ( min-width: 768px ) {
 
 	.sidebar {
-		height: calc( 100vh - #{ $navbar-height } );
+		height: calc( 100vh - #{ $navbar-height } + 16px );
 		overflow-y: auto;
 		position: -webkit-sticky;
 		position: sticky;
@@ -352,7 +352,7 @@ p.ac-c a:not(.btn) {
 @media ( min-width: 1024px ) {
 
 	.third-col {
-		height: calc( 100vh - #{ $navbar-height } );
+		height: calc( 100vh - #{ $navbar-height } + 16px );
 		overflow-y: auto;
 		position: -webkit-sticky;
 		position: sticky;
