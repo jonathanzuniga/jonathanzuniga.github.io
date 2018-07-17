@@ -429,6 +429,16 @@ p.ac-c a:not(.btn) {
 	line-height: 1.2;
 }
 
+@media ( max-width: 767px ) {
+	
+	.post__content {
+		h3, h4, h5, h6 {
+			text-align: center;
+		}
+	}
+
+}
+
 .search-results__posts .post {
 	margin-top: 1.5rem;
 	margin-bottom: 1.5rem;
