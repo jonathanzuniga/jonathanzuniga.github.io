@@ -4,21 +4,11 @@
 
 @charset 'utf-8';
 
-$font-family-sans-serif:    -apple-system, 
-						     BlinkMacSystemFont, 
-						     'Segoe UI', 
-						     'Roboto', 
-						     'Noto Sans', 
-						     'Ubuntu', 
-						     'Droid Sans', 
-						     'Helvetica Neue', 
-						     sans-serif !default;
-$font-family-serif:          'Mort Modern Text', serif;
-$font-family-serif-lg:       'Mort Modern Large', serif;
+$font-family-sans-serif: 'Faune';
 
-$base-font-size-sm: 1em;
-$base-font-size-md: 1em;
-$base-font-size-lg: 1em;
+$base-font-size-sm: 16px;
+$base-font-size-md: 16px;
+$base-font-size-lg: 17px;
 
 $day__navbar-bg-color:    #8790c9;
 $navbar-link-font-weight: 400;
@@ -51,8 +41,8 @@ $day__navbar__input-active-border-color:     $day__navbar__input-focus-border-co
 
 $container-max-width: 1680px;
 
-
 // Import partials from `sass_dir` (defaults to `_sass`)
+
 @import 
 	'style',
 	'syntax-highlighting',

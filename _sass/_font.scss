@@ -1,52 +1,83 @@
 
 $fonts: (
-	'Mort Modern' 'Large' (
-		// '01' 'Light'    300, 
-		// '02' 'Regular'  400, 
-		// '03' 'Medium'   500, 
-		// '04' 'SemiBold' 600, 
-		'05' 'Bold'     700, 
-		// '06' 'Black'    800,
+	'Faune' 'Display' (
+		// 'Thin'        100 'normal', 
+		'Bold_Italic' 700 'italic', 
+		// 'Black'       900 'normal'
 	),
-	'Mort Modern' 'Text' (
-		// '23' 'Light'    300, 
-		'24' 'Regular'  400, 
-		'25' 'Medium'   500, 
-		// '26' 'SemiBold' 600, 
-		'27' 'Bold'     700, 
-		// '28' 'Black'    800
+	'Faune' 'Text' (
+		'Regular'     400 'normal',
+		'Italic'      400 'italic',
+		'Bold'        700 'normal'
 	)
 );
 
-@function str_replace($string, $search, $replace: '') {
-	$index: str_index($string, $search);
-	@if $index {
-		@return str_slice($string, 1, $index - 1) + 
-			$replace + 
-			str_replace(
-				str_slice($string, $index + str_length($search)
-			), $search, $replace);
-	}
-	@return $string;
-}
+$fonts-dir: '../fonts/Faune_Fonts/Webfonts/';
 
-@each $font-family, $optical-size, $weights in $fonts {
-	@each $number, $weight, $weight-num in $weights {
-		$font-family-r: str_replace($font-family, ' ', '');
-
+@each $font-family, $optical-size, $props in $fonts {
+	@each $weight, $weight-num, $style in $props {
 		@font-face {
-			font-family: '#{$font-family} #{$optical-size}';
-			font-weight: #{$weight-num};
-			src: url('../fonts/#{$font-family-r}Pro/#{$font-family-r}-#{$number}#{$optical-size}#{$weight}.otf') 
-			     format('opentype');
-		}
-
-		@font-face {
-			font-family: '#{$font-family} #{$optical-size}';
-			font-style: italic;
-			font-weight: #{$weight-num};
-			src: url('../fonts/#{$font-family-r}Pro/#{$font-family-r}-#{$number}#{$optical-size}#{$weight}Italic.otf') 
-			     format('opentype');
+			font-family: '#{ $font-family }';
+			src: url('#{ $fonts-dir }eot/#{ $font-family }-#{ $optical-size }_#{ $weight }.eot');
+			src: url('#{ $fonts-dir }eot/#{ $font-family }-#{ $optical-size }_#{ $weight }.eot?#iefix') format('embedded-opentype'),
+				 url('#{ $fonts-dir }woff/#{ $font-family }-#{ $optical-size }_#{ $weight }.woff') format('woff'),
+				 url('#{ $fonts-dir }woff2/#{ $font-family }-#{ $optical-size }_#{ $weight }.woff2') format('woff2'),
+				 url('#{ $fonts-dir }ttf/#{ $font-family }-#{ $optical-size }_#{ $weight }.ttf') format('truetype'),
+				 url('#{ $fonts-dir }svg/#{ $font-family }-#{ $optical-size }_#{ $weight }.svg#svgFontName') format('svg');
+			font-weight: #{ $weight-num };
+			font-style: #{ $style };
 		}
 	}
 }
+
+// $fonts: (
+// 	'Mort Modern' 'Large' (
+// 		// '01' 'Light'    300, 
+// 		// '02' 'Regular'  400, 
+// 		// '03' 'Medium'   500, 
+// 		// '04' 'SemiBold' 600, 
+// 		'05' 'Bold'     700, 
+// 		// '06' 'Black'    800,
+// 	),
+// 	'Mort Modern' 'Text' (
+// 		// '23' 'Light'    300, 
+// 		'24' 'Regular'  400, 
+// 		'25' 'Medium'   500, 
+// 		// '26' 'SemiBold' 600, 
+// 		'27' 'Bold'     700, 
+// 		// '28' 'Black'    800
+// 	)
+// );
+
+// @function str_replace($string, $search, $replace: '') {
+// 	$index: str_index($string, $search);
+// 	@if $index {
+// 		@return str_slice($string, 1, $index - 1) + 
+// 			$replace + 
+// 			str_replace(
+// 				str_slice($string, $index + str_length($search)
+// 			), $search, $replace);
+// 	}
+// 	@return $string;
+// }
+
+// @each $font-family, $optical-size, $weights in $fonts {
+// 	@each $number, $weight, $weight-num in $weights {
+// 		$font-family-r: str_replace($font-family, ' ', '');
+
+// 		@font-face {
+// 			font-family: '#{$font-family} #{$optical-size}';
+// 			font-weight: #{$weight-num};
+// 			src: url('../fonts/#{$font-family-r}Pro/#{$font-family-r}-#{$number}#{$optical-size}#{$weight}.otf') 
+// 			     format('opentype');
+// 		}
+
+// 		@font-face {
+// 			font-family: '#{$font-family} #{$optical-size}';
+// 			font-style: italic;
+// 			font-weight: #{$weight-num};
+// 			src: url('../fonts/#{$font-family-r}Pro/#{$font-family-r}-#{$number}#{$optical-size}#{$weight}Italic.otf') 
+// 			     format('opentype');
+// 		}
+// 	}
+// }

@@ -1,11 +1,32 @@
+
 body {
 	background-color: $day__body-bg-color;
 	color: $day__body-color;
-	font-family: $font-family-serif;
+	font-family: $font-family-sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: $font-family-sans-serif;
+@media ( min-width: 768px ) {
+
+	body {
+		font-size: $base-font-size-sm;
+	}
+
+}
+
+@media ( min-width: 1024px ) {
+
+	body {
+		font-size: $base-font-size-md;
+	}
+
+}
+
+@media ( min-width: 1280px ) {
+
+	body {
+		font-size: $base-font-size-lg;
+	}
+
 }
 
 h1 {
@@ -13,18 +34,15 @@ h1 {
 }
 
 h1, h1 a, h2, h2 a {
-	font-family: $font-family-serif-lg;
 	font-weight: 700;
 }
 
 h3, h3 a {
-	font-family: $font-family-serif;
 	font-weight: 700;
 }
 
 h5,
 .post__meta {
-	font-family: $font-family-sans-serif;
 	font-weight: 400;
 }
 
@@ -71,6 +89,10 @@ p.ac-c a:not(.btn) {
 	}
 }
 
+.fs-sm {
+	font-size: 0.813em;
+}
+
 // .input {
 // 	&::placeholder {
 // 		color: $day__input-placeholder-color;
@@ -111,10 +133,6 @@ p.ac-c a:not(.btn) {
 	}
 }
 
-.fs-sm {
-	font-size: 12px;
-}
-
 .container {
 	max-width: $container-max-width;
 }
@@ -133,7 +151,6 @@ p.ac-c a:not(.btn) {
 }
 
 .navbar {
-	font-family: $font-family-sans-serif;
 	min-height: $navbar-height;
 }
 
@@ -156,6 +173,10 @@ p.ac-c a:not(.btn) {
 
 .header__title {
 	display: inline-flex;
+}
+
+.header__search-input {
+	font-family: $font-family-sans-serif;
 }
 
 .header__search-btn {
@@ -299,7 +320,7 @@ p.ac-c a:not(.btn) {
 .sidebar,
 .third-col,
 .post__meta {
-	font-size: 13px;
+	font-size: 0.875em;
 }
 
 @media ( min-width: 768px ) {
@@ -365,7 +386,7 @@ p.ac-c a:not(.btn) {
 
 	h5:not(:first-child) {
 		border-top: 0.063rem solid rgba(#000, 0.1);
-		padding-top: 1rem;
+		padding-top: 1.5rem;
 		// position: relative;
 
 		// &:before {
