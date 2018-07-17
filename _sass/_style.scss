@@ -135,6 +135,7 @@ p.ac-c a:not(.btn) {
 
 @media (min-width: 768px) {
 	.header {
+		position: -webkit-sticky;
 		position: sticky;
 		top: 0;
 		z-index: 10000;
@@ -320,6 +321,7 @@ p.ac-c a:not(.btn) {
 	.sidebar {
 		height: calc( 100vh - #{ $navbar-height } );
 		overflow-y: auto;
+		position: -webkit-sticky;
 		position: sticky;
 		top: $navbar-height;
 	}
@@ -352,6 +354,7 @@ p.ac-c a:not(.btn) {
 	.third-col {
 		height: calc( 100vh - #{ $navbar-height } );
 		overflow-y: auto;
+		position: -webkit-sticky;
 		position: sticky;
 		top: $navbar-height;
 	}
