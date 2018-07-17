@@ -293,6 +293,12 @@ p.ac-c a:not(.btn) {
 
 }
 
+.sidebar,
+.third-col,
+.post__meta {
+	font-size: 13px;
+}
+
 @media ( min-width: 768px ) {
 
 	.sidebar {
@@ -302,11 +308,6 @@ p.ac-c a:not(.btn) {
 		top: $navbar-height;
 	}
 
-}
-
-.sidebar__body,
-.third-col {
-	font-size: 13px;
 }
 
 .sidebar__body {
@@ -321,10 +322,13 @@ p.ac-c a:not(.btn) {
 	}
 }
 
-.sidebar__body,
-.third-col__body {
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
+@media ( min-width: 768px ) {
+
+	.sidebar__body {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+
 }
 
 @media ( min-width: 1024px ) {
@@ -339,6 +343,8 @@ p.ac-c a:not(.btn) {
 }
 
 .third-col__body {
+	padding-bottom: 1.5rem;
+
 	// margin: 0 -1rem;
 	// padding: 1.5rem 1rem;
 
@@ -374,9 +380,16 @@ p.ac-c a:not(.btn) {
 	}
 }
 
+@media ( min-width: 1024px ) {
+
+	.third-col__body {
+		padding-top: 1.5rem;
+	}
+
+}
+
 .content {
-	padding-top: 22px;
-	padding-bottom: 22px;
+	padding-top: 1.5rem;
 }
 
 // @media (min-width: 1024px) {
@@ -409,6 +422,11 @@ p.ac-c a:not(.btn) {
 			margin-left: auto;
 		}
 	}
+}
+
+.post__date {
+	font-size: 1.25em;
+	line-height: 1.2;
 }
 
 .search-results__posts .post {
