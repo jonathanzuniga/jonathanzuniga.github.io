@@ -1,4 +1,4 @@
-<div class="col-3th__body hyp-auto">
+<div class="third-col__body">
 
 	{% if page.url == '/' %}
 
@@ -51,7 +51,7 @@
 			{% assign selected_projects = site.data.selected_projects | sort: 'title' %}
 			{% for sp in selected_projects | limit: 6 %}
 			  <li>
-				<h6 class="m-bottom-0">
+				<h6 class="m-bottom-0 hyp-auto">
 					<a href="{{ sp.url }}" target="_blank">
 					  {{ sp.title }}
 					</a>

@@ -41,7 +41,7 @@ jQuery( document ).ready( function ( $ ) {
 
 	// iscroll
 
-	$( '#sidebar, #col-3th' ).css( {
+	$( '#sidebar, #third-col' ).css( {
 		'overflow-y': 'hidden'
 	} );
 
@@ -54,8 +54,51 @@ jQuery( document ).ready( function ( $ ) {
 		scrollbars: false
 	};
 
-	var myScroll1 = new IScroll( '#sidebar', iScrollOptions );
-	var myScroll2 = new IScroll( '#col-3th', iScrollOptions );
+	let myScroll1 = new IScroll( '#sidebar', iScrollOptions );
+	let myScroll2 = new IScroll( '#third-col', iScrollOptions );
+
+	$( window ).resize( function () {
+
+		if ( $( this ).width() < 768 ) {
+
+			if ( myScroll1 != null ) {
+
+				myScroll1.destroy();
+				myScroll1 = null;
+
+			}
+
+		} else {
+
+			if ( myScroll1 == null ) {
+
+				myScroll1 = new IScroll( '#sidebar', iScrollOptions );
+
+			}
+
+		}
+
+		if ( $( this ).width() < 1024 ) {
+
+			if ( myScroll2 != null ) {
+
+				myScroll2.scrollTo( 0, 0 );
+				myScroll2.destroy();
+				myScroll2 = null;
+
+			}
+
+		} else {
+
+			if ( myScroll2 == null ) {
+
+				myScroll2 = new IScroll( '#third-col', iScrollOptions );
+
+			}
+
+		}
+
+	} );
 
 
 	// $('#search__input, #search__btn-submit').on('focus', function() {

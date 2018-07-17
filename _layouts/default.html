@@ -12,9 +12,9 @@
 	<body class="body 
 				{% if page.url == '/' %}
 					body--home 
-				{% elsif current[1] == 'articles' %}
+				{% elsif current[ 1 ] == 'articles' %}
 					body--archive 
-				{% elsif current[1] == 'about' %}
+				{% elsif current[ 1 ] == 'about' %}
 					body--author 
 				{% elsif page.url == '/search' %}
 					body--search
@@ -22,17 +22,17 @@
 		{% include header.html %}
 
 		<div class="cntr">
-			<div class="row">
-				<div id="sidebar" class="sidebar sm-col-3 md-col-2">
+			<div class="row jc-flex-end">
+				<div id="sidebar" class="sidebar sm-col-3 md-col-2 maxsm-d-none">
 					{% include sidebar.html %}
 				</div>
 
-				<div id="col-3th" class="col-3th md-col-2 order-3 maxmd-d-none">
-					{% include col-3th.html %}
+				<div id="third-col" class="third-col md-col-2 order-3 sm-col-9 maxmd-col-9 maxmd-ta-center">
+					{% include third-col.html %}
 				</div>
 
 				<div class="content sm-col-9 md-col-8 a-bd-bottom">
-					<div class="row">
+					<div class="row jc-center">
 						<div class="lg-col-11">
 							{{ content }}
 						</div>

@@ -1,33 +1,32 @@
-<div>
-	<div id="sidebar__body" class="sidebar__body maxsm-d-none">
-		<h5>Recent articles</h5>
 
-		<ul class="ls-unstyled ac-c">
-			{% for post in site.posts limit: 6 %}
-				<li>
-					<a href="{{ post.url }}#post-{{ forloop.index }}">
-						{{ post.title }}
-					</a>
-				</li>
-			{% endfor %}
+<div id="sidebar__body" class="sidebar__body">
+	<h5>Recent articles</h5>
+
+	<ul class="ls-unstyled ac-c">
+		{% for post in site.posts limit: 6 %}
 			<li>
-				<a href="{{ site.baseurl }}/archivo">
-					<i>Read more publications</i>
+				<a href="{{ post.url }}#post-{{ forloop.index }}">
+					{{ post.title }}
 				</a>
 			</li>
-		</ul>
+		{% endfor %}
+		<li>
+			<a href="{{ site.baseurl }}/articles">
+				<i>Read more publications</i>
+			</a>
+		</li>
+	</ul>
 
-	{% comment %}
-		<p class="">
-			<input id="switch-night-mode" class="switch switch--sm" type="checkbox">
-			<label for="switch-night-mode" id="lbl-night-mode">
-				<span>
-					<i id="icon-night-mode" class="ion-ios-moon-outline" title="Modo nocturno"></i>
-				</span>
-			</label>
-		</p>
-	{% endcomment %}
-	</div>
+{% comment %}
+	<p class="">
+		<input id="switch-night-mode" class="switch switch--sm" type="checkbox">
+		<label for="switch-night-mode" id="lbl-night-mode">
+			<span>
+				<i id="icon-night-mode" class="ion-ios-moon-outline" title="Modo nocturno"></i>
+			</span>
+		</label>
+	</p>
+{% endcomment %}
 </div>
 
 

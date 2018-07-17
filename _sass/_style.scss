@@ -296,7 +296,7 @@ p.ac-c a:not(.btn) {
 @media ( min-width: 768px ) {
 
 	.sidebar {
-		height: calc(100vh - #{$navbar-height});
+		height: calc( 100vh - #{ $navbar-height } );
 		overflow-y: auto;
 		position: sticky;
 		top: $navbar-height;
@@ -304,12 +304,12 @@ p.ac-c a:not(.btn) {
 
 }
 
-.sidebar__body {
+.sidebar__body,
+.third-col {
 	font-size: 13px;
+}
 
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
-
+.sidebar__body {
 	// margin: 0 -1rem;
 	// padding: 1.5rem 1rem;
 
@@ -321,19 +321,24 @@ p.ac-c a:not(.btn) {
 	}
 }
 
-.col-3th {
-	font-size: 13px;
-
-	height: calc(100vh - #{$navbar-height});
-	overflow-y: auto;
-	position: sticky;
-	top: $navbar-height;
-}
-
-.col-3th__body {
+.sidebar__body,
+.third-col__body {
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
+}
 
+@media ( min-width: 1024px ) {
+
+	.third-col {
+		height: calc( 100vh - #{ $navbar-height } );
+		overflow-y: auto;
+		position: sticky;
+		top: $navbar-height;
+	}
+
+}
+
+.third-col__body {
 	// margin: 0 -1rem;
 	// padding: 1.5rem 1rem;
 
@@ -374,11 +379,11 @@ p.ac-c a:not(.btn) {
 	padding-bottom: 22px;
 }
 
-@media (min-width: 1024px) {
-	.content {
-		padding-left: 3rem;
-	}
-}
+// @media (min-width: 1024px) {
+// 	.content {
+// 		padding-left: 3rem;
+// 	}
+// }
 
 .post {
 	margin-bottom: 3rem;

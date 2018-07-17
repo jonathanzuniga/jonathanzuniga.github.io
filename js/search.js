@@ -36,7 +36,7 @@
 					</div>`;
 			}
 
-			searchResultsTitle.innerHTML = 'Search Results for \'' + searchTerm + '\'';
+			searchResultsTitle.innerHTML = 'Search Results for ‘' + searchTerm + '’';
 			searchResultsMessage.innerHTML = '';
 			searchResultsPosts.innerHTML = appendString;
 		} else {
