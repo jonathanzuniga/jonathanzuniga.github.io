@@ -41,10 +41,6 @@ jQuery( document ).ready( function ( $ ) {
 
 	// iscroll
 
-	$( '#sidebar, #third-col' ).css( {
-		'overflow-y': 'hidden'
-	} );
-
 	iScrollOptions = {
 		click: true,
 		fadeScrollbars: true,
@@ -54,12 +50,14 @@ jQuery( document ).ready( function ( $ ) {
 		scrollbars: false
 	};
 
-	let myScroll1 = new IScroll( '#sidebar', iScrollOptions );
-	let myScroll2 = new IScroll( '#third-col', iScrollOptions );
+	let myScroll1 = null;
+	let myScroll2 = null;
 
-	$( window ).resize( function () {
+	function startIScroll() {
 
-		if ( $( this ).width() < 768 ) {
+		if ( $( window ).width() < 768 ) {
+
+			$( '#third-col' ).css( 'overflow-y', '' );
 
 			if ( myScroll1 != null ) {
 
@@ -74,11 +72,15 @@ jQuery( document ).ready( function ( $ ) {
 
 				myScroll1 = new IScroll( '#sidebar', iScrollOptions );
 
+				$( '#sidebar' ).css( 'overflow-y', 'hidden' );
+
 			}
 
 		}
 
-		if ( $( this ).width() < 1024 ) {
+		if ( $( window ).width() < 1024 ) {
+
+			$( '#third-col' ).css( 'overflow-y', '' );
 
 			if ( myScroll2 != null ) {
 
@@ -94,12 +96,17 @@ jQuery( document ).ready( function ( $ ) {
 
 				myScroll2 = new IScroll( '#third-col', iScrollOptions );
 
+				$( '#third-col' ).css( 'overflow-y', 'hidden' );
+
 			}
 
 		}
 
-	} );
+	};
 
+	startIScroll();
+
+	$( window ).resize( startIScroll );
 
 	// $('#search__input, #search__btn-submit').on('focus', function() {
 	// 	$(this).parent().addClass('focus');
