@@ -2,7 +2,6 @@
 body {
 	background-color: $day__body-bg-color;
 	color: $day__body-color;
-	font-family: $font-family-sans-serif;
 }
 
 @media ( min-width: 768px ) {
@@ -29,21 +28,18 @@ body {
 
 }
 
-h1 {
-	font-weight: 700;
-}
-
 h1, h1 a, h2, h2 a {
-	font-weight: 700;
+	font-family: $font-family-sans-serif;
+	font-weight: 300;
 }
 
 h3, h3 a {
-	font-weight: 700;
+	font-weight: 500;
 }
 
 h5,
 .post__meta {
-	font-weight: 400;
+	font-weight: 500;
 }
 
 a {
@@ -175,9 +171,9 @@ p.ac-c a:not(.btn) {
 	display: inline-flex;
 }
 
-.header__search-input {
-	font-family: $font-family-sans-serif;
-}
+// .header__search-input {
+// 	font-family: $font-family-sans-serif;
+// }
 
 .header__search-btn {
 	color: #fff;
