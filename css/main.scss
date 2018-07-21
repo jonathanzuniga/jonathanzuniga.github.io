@@ -4,35 +4,25 @@
 
 @charset 'utf-8';
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300');
-
-$font-family-sans-serif: 'Roboto';
-
 $base-font-size-sm: 1rem;
 $base-font-size-md: 1rem;
 $base-font-size-lg: 1rem;
 
-$day__navbar-bg-color: #29ce91;
+$day__navbar-bg-color: #518098;
 $navbar-a-font-weight: 400;
 $navbar-height:        64px;
 
-$day__body-bg-color: #fff;
-$day__body-color:    rgba( #000, 0.9 );
+$day__navbar__input-bg-color:                transparent;
+$day__navbar__input-border-color:            rgba( #fff, 0.125 ) !important;
+$day__navbar__input-placeholder-color:       rgba( #fff, 0.5 );
 
-$day__a-color:         $day__navbar-bg-color;
-$a-font-weight:        500;
-$day__a-visited-color: $day__a-color;
-$day__a-hover-color:   darken($day__a-color, 15%);
+$day__navbar__input-hover-bg-color:          transparent;
 
-$a-border-bottom-width:            0.063rem;
-$a-border-bottom-style:            solid;
-$day__a-border-bottom-color:       $day__a-color;
-$day__a-hover-border-bottom-color: $day__a-hover-color;
-
-$day__navbar__input-placeholder-color:       rgba(#fff, 0.5);
-$day__navbar__input-focus-border-color:      $day__navbar__input-placeholder-color;
+$day__navbar__input-focus-bg-color:          transparent;
+$day__navbar__input-focus-border-color:      rgba( #fff, 0.5 ) !important;
 $day__navbar__input-focus-box-shadow:        inset 0 0 0 0.063rem $day__navbar__input-focus-border-color;
-$day__navbar__input-focus-placeholder-color: $day__navbar__input-placeholder-color;
+$day__navbar__input-focus-placeholder-color: rgba( #fff, 0.25 );
+
 $day__navbar__input-active-border-color:     $day__navbar__input-focus-border-color;
 
 // $day__input-placeholder-color:       rgba(#000, 0.25);
@@ -41,7 +31,20 @@ $day__navbar__input-active-border-color:     $day__navbar__input-focus-border-co
 // $day__input-focus-placeholder-color: lighten($day__input-focus-border-color, 10%);
 // $day__input-active-border-color:     $day__input-focus-border-color;
 
-$container-max-width: 1680px;
+$day__body-bg-color: #fff;
+$day__body-color:    rgba( #000, 0.9 );
+
+$day__a-color:         #518098;
+$a-font-weight:        500;
+$day__a-visited-color: $day__a-color;
+$day__a-hover-color:   darken( $day__a-color, 15% );
+
+$a-border-bottom-width:            0.063rem;
+$a-border-bottom-style:            solid;
+$day__a-border-bottom-color:       $day__a-color;
+$day__a-hover-border-bottom-color: $day__a-hover-color;
+
+$container-max-width: 2800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 

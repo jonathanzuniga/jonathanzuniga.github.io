@@ -4,7 +4,7 @@ categories: ['mobile development']
 date: 2015-11-29 14:50:00
 description: '¿Las aplicaciones móviles solo convienen ser desarrolladas de forma nativa? Si así fuera ¿es posible mantener un buen nivel en dos o tres diferentes lenguajes de programación para hacer la misma tarea?'
 layout: post
-title: 'Después de un año con Xamarin'
+title: 'Mi experiencia después de un año con Xamarin'
 ---
 
 ¿No será mucha la carga mantener una *app* que está disponible para distintas plataformas? Sería muy abrumador ¿no les parece? Pero... ¿por qué no ir más allá? Soñar con una alternativa donde tengamos solamente un proyecto por aplicación, donde haya un único equipo de desarrollo y lo mejor de todo ¡que esté hecho con un solo lenguaje!

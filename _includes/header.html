@@ -1,10 +1,10 @@
 {% assign author = site.authors['jonathan'] %}
 <header class="header">
-	<div class="cntr p-x-0">
+	<div class="cntr">
 		<div class="row gutters-0">
 			<div class="col-12">
 				{% assign current = page.url | downcase | split: '/' %}
-				<nav class="navbar navbar--dark maxsm-navbar-responsive maxsm-p-top-8">
+				<nav class="navbar navbar--dark maxsm-navbar-responsive maxsm-p-top-05">
 					<!-- <input type="checkbox" id="navbar-menu-toggle" class="collapse-toggle" />
 					<label for="navbar-menu-toggle" class="navbar__toggler">Menú</label> -->
 					
@@ -14,7 +14,7 @@
 						</a>
 					</div>
 
-					<div class="navbar__no-collapse maxsm-order-4 fxg-1 jc-space-between maxsm-p-bottom-8">
+					<div class="navbar__no-collapse maxsm-order-4 fxg-1 jc-space-between maxsm-p-bottom-05">
 						<ul class="navbar__menu">
 							<li class="navbar__item {% if page.url == '/' %}active{% endif %}">
 								<a class="navbar__a" href="{{ site.baseurl }}/">
@@ -51,7 +51,7 @@
 					<div class="navbar__form">
 						<div class="header__search-wrap anim-slide-in-out">
 							<form id="header__search-form" class="header__search-form" action="/search" method="get">
-								<input id="header__search-input" name="query" placeholder="Search in the archives" class="header__search-input input input--pill" type="text">
+								<input id="header__search-input" class="header__search-input input input--pill" name="query" placeholder="Search in the archives" type="text">
 							</form>
 						</div>
 
