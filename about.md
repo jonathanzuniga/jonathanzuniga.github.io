@@ -3,7 +3,7 @@ date: 2018-05-09
 description: 'Here I will share thoughts and experiences from my daily life. If you want to know why I made this blog you can read <a href="#!">the first post</a> and if you ask who I am, there goes some information.'
 layout: page
 permalink: /about
-title: 'Hello, my name is Jonathan Zúñiga.'
+title: 'Nice to meet you, my name is Jonathan Zúñiga'
 ---
 
 {% assign author = site.authors['jonathan'] %}
@@ -14,8 +14,8 @@ Before being exposed to the microprocessors, I had the intention of studying gra
 
 Some of the things I like are information freedom, hacker subculture, [retro-futuristic interfaces](https://www.youtube.com/watch?v=2ywWFvjE-yU){:target='_blank'}, an internet that respects humans, [urban art](https://www.youtube.com/watch?v=gmu_RByhlGw){:target='_blank'}, dark chocolate, [electronic music](https://www.youtube.com/watch?v=RbxZmcQWWgE){:target='_blank'}, cryptography, tea, and drawing letters, but not necessarily in this order. Most of [my projects](https://github.com/{{ author.github_username }}?tab=repositories){:target='_blank'} is open source and you can find them on GitHub. Thank you for reading, whoever you are. At this moment there are no comments, no accounts, and no statistics. Only me and many blank text files to complete. We'll see how it goes this time.
 
-<div class="smcaps tt-uppercase m-top-16 m-bottom-4 ta-center">About this Site</div>
+<h2 class="h6 smcaps tt-uppercase ta-center">About this Site</h2>
 
 <p class="md-cols-2 fs-sm">
-	The site is created with the best flavors of HTML5 and Sass for the CSS code, JavaScript for the search functionality, and uses <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> for publishing. The body typeface is <a href="https://developer.apple.com/fonts/" target="_blank">San Francisco</a> by <a href="https://www.apple.com/" target="_blank">Apple</a>, and <a href="https://fonts.google.com/specimen/Roboto" target="_blank">Roboto</a> designed by <a href="http://christianrobertson.com/" target="_blank">Christian Robertson</a> is used for the heads. Currently I'm taking <a href="https://www.flickr.com/photos/{{ author.flickr_username }}" target="_blank">the pictures</a> with my <a href="https://web.archive.org/web/20150905053915/http://www.google.com/nexus/5/" target="_blank">Nexus 5</a> that refuses to die.
+	The site is created with the best flavors of HTML5 and Sass for the CSS code, JavaScript for the search functionality, and uses <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> for publishing. The primary typeface is <a href="https://developer.apple.com/fonts/" target="_blank">San Francisco</a> by <a href="https://www.apple.com/" target="_blank">Apple</a>, and <a href="https://fonts.google.com/specimen/Roboto" target="_blank">Roboto</a> designed by <a href="http://christianrobertson.com/" target="_blank">Christian Robertson</a> is the secondary typeface used. Currently I'm taking <a href="https://www.flickr.com/photos/{{ author.flickr_username }}" target="_blank">the pictures</a> with my <a href="https://web.archive.org/web/20150905053915/http://www.google.com/nexus/5/" target="_blank">Nexus 5</a> that refuses to die.
 </p>

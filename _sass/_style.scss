@@ -158,6 +158,13 @@ p.ac-c a:not(.btn) {
 	min-height: $navbar-height;
 }
 
+.navbar__toggler {
+	img {
+		width: 1.75em;
+		height: 1.75em;
+	}
+}
+
 .navbar__menu .navbar__a {
 	padding-right: 0.625rem;
 	padding-left: 0.625rem;
@@ -198,7 +205,7 @@ p.ac-c a:not(.btn) {
 		content: '';
 
 		background-image: url( '../images/ionicons_svg_ios-search.svg' );
-		background-position: right center;
+		background-position: right top;
 		background-repeat: no-repeat;
 		background-size: 1.75em 1.75em;
 		display: block;
@@ -238,7 +245,7 @@ p.ac-c a:not(.btn) {
 	.header__search-form {
 		margin-top: 1rem;
 		margin-right: 3rem;
-		margin-left: 1rem;
+		margin-left: 3rem;
 	}
 
 	.active-search {

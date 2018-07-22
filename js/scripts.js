@@ -25,7 +25,7 @@ jQuery( document ).ready( function ( $ ) {
 
 			$( '#header__search-input' ).focus();
 
-			$( '.header__search-btn' ).html( '<img src="../images/ionicons_svg_ios-close.svg">' );
+			$( '.header__search-btn' ).html( '<img src="../images/ionicons_svg_ios-close.svg" alt="Cancel icon">' );
 
 		} else {
 
