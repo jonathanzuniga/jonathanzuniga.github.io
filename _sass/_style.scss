@@ -158,10 +158,32 @@ p.ac-c a:not(.btn) {
 	min-height: $navbar-height;
 }
 
-.navbar__toggler {
+.navbar__toggler,
+.header__search-btn {
+	color: #fff;
+	opacity: 0.6;
+
+	padding-right: 1rem;
+	padding-left: 1rem;
+
+	transition: all 0.16s ease-in-out;
+
+	&:hover {
+		opacity: 0.9;
+	}
+
+	&:hover,
+	&:active {
+		color: #fff;
+	}
+
+	&:active {
+		opacity: 1;
+	}
+
 	img {
-		width: 1.75em;
-		height: 1.75em;
+		width: 1.5rem;
+		height: 1.5rem;
 	}
 }
 
@@ -186,51 +208,6 @@ p.ac-c a:not(.btn) {
 	display: inline-flex;
 }
 
-.header__search-btn {
-	color: #fff;
-	opacity: 0.6;
-	overflow: hidden;
-	padding: 0;
-	
-	position: absolute;
-	top: 1.125rem;
-	right: 1rem;
-
-	transition: all 0.1s ease-in-out;
-
-	width: 2em;
-	height: 2em;
-
-	&::before {
-		content: '';
-
-		background-image: url( '../images/ionicons_svg_ios-search.svg' );
-		background-position: right top;
-		background-repeat: no-repeat;
-		background-size: 1.75em 1.75em;
-		display: block;
-		opacity: 1;
-		position: relative;
-		transition: opacity 0.2s cubic-bezier( 0.645, 0.045, 0.355, 1 );
-
-		width: 2em;
-		height: 2em;
-	}
-
-	&:hover {
-		opacity: 0.9;
-	}
-
-	&:hover,
-	&:active {
-		color: #fff;
-	}
-
-	&:active {
-		opacity: 1;
-	}
-}
-
 @media ( max-width: 767px ) {
 	.header__search-wrap {
 		opacity: 0;
@@ -244,8 +221,8 @@ p.ac-c a:not(.btn) {
 
 	.header__search-form {
 		margin-top: 1rem;
-		margin-right: 3rem;
-		margin-left: 3rem;
+		margin-right: 3.5rem;
+		margin-left: 3.5rem;
 	}
 
 	.active-search {
@@ -257,23 +234,8 @@ p.ac-c a:not(.btn) {
 			opacity: 1;
 		}
 
-		.header__search-input {
-			padding-right: 4em;
-		}
-
 		.header__search-btn {
-			width: 2em;
-			height: auto;
 			z-index: 11;
-
-			&::before {
-				background-image: none;
-
-				opacity: 0;
-
-				width: 0;
-				height: 0;
-			}
 		}
 	}
 
@@ -485,4 +447,12 @@ p.ac-c a:not(.btn) {
 	margin-bottom: 1.5rem;
 
 	padding-bottom: 1.5rem;
+}
+
+.drawer.open {
+	box-shadow: 0  8px 10px -5px rgba( 0, 0, 0, 0.2 ),
+				0 16px 24px  2px rgba( 0, 0, 0, 0.14 ),
+				0  6px 30px  5px rgba( 0, 0, 0, 0.12 );
+
+	transition: all 0.3s ease-out;
 }

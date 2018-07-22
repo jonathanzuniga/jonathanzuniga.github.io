@@ -25,7 +25,7 @@ jQuery( document ).ready( function ( $ ) {
 
 			$( '#header__search-input' ).focus();
 
-			$( '.header__search-btn' ).html( '<img src="../images/ionicons_svg_ios-close.svg" alt="Cancel icon">' );
+			$( '.header__search-btn' ).html( '<img src="../images/ionicons_svg_md-close.svg" alt="Cancel icon">' );
 
 		} else {
 
@@ -33,7 +33,7 @@ jQuery( document ).ready( function ( $ ) {
 
 			$( '#header__search-input' ).blur();
 
-			$( '.header__search-btn' ).html( 'Search' );
+			$( '.header__search-btn' ).html( '<img src="../images/ionicons_svg_md-search.svg" alt="Search icon">' );
 
 		}
 
@@ -108,6 +108,22 @@ jQuery( document ).ready( function ( $ ) {
 
 	$( window ).resize( startIScroll );
 
+	// Drawer
+
+	$( '#navbar__toggler' ).click(function () {
+
+		$( '.drawer--left' ).addClass( 'open' );
+		$( 'body' ).addClass( 'drawer-is-open' );
+
+	});
+
+	$( '#drawer-overlay' ).click( function () {
+
+		$( '.drawer--left' ).removeClass( 'open' );
+		$( 'body' ).removeClass( 'drawer-is-open' );
+
+	});
+
 	// $('#search__input, #search__btn-submit').on('focus', function() {
 	// 	$(this).parent().addClass('focus');
 	// }).blur(function() {
@@ -121,18 +137,6 @@ jQuery( document ).ready( function ( $ ) {
 	// $(window).resize(function() {
 	// 	sb_width = child.offsetWidth - child.clientWidth;
 	// 	child.style.width = 'calc(100% + ' + sb_width + 'px)';
-	// });
-
-	// Drawer.
-
-	// $('#close-right-drawer').click(function() {
-	// 	$('.drawer--right').removeClass('open');
-	// 	$('body').removeClass('drawer-is-open');
-	// });
-
-	// $('#open-right-drawer').click(function() {
-	// 	$('.drawer--right').addClass('open');
-	// 	$('body').addClass('drawer-is-open');
 	// });
 
 	// switchNightMode();

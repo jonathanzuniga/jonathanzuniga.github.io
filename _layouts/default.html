@@ -19,22 +19,32 @@
 				{% elsif page.url == '/search' %}
 					body--search
 				{% endif %}">
-		{% include header.html %}
+		<div class="drawer-wrap">
+			<div class="drawer drawer--left drawer--overlap">
+				
+			</div>
 
-		<div class="cntr">
-			<div class="row jc-flex-end">
-				<div id="sidebar" class="sidebar sm-col-3 md-col-2 maxsm-d-none">
-					{% include sidebar.html %}
-				</div>
+			<div id="drawer-overlay" class="drawer-overlay"></div>
+			
+			<div class="drawer-outside">
+				{% include header.html %}
 
-				<div id="third-col" class="third-col sm-col-9 maxmd-col-9 md-col-2 order-3 maxmd-ta-center">
-					{% include third-col.html %}
-				</div>
+				<div class="cntr">
+					<div class="row jc-flex-end">
+						<div id="sidebar" class="sidebar sm-col-3 md-col-2 maxsm-d-none">
+							{% include sidebar.html %}
+						</div>
 
-				<div class="content sm-col-9 md-col-8 a-bd-bottom">
-					<div class="row jc-center">
-						<div class="lg-col-11 xl-col-10">
-							{{ content }}
+						<div id="third-col" class="third-col sm-col-9 maxmd-col-9 md-col-2 order-3 maxmd-ta-center">
+							{% include third-col.html %}
+						</div>
+
+						<div class="content sm-col-9 md-col-8 a-bd-bottom">
+							<div class="row jc-center">
+								<div class="lg-col-11 xl-col-10">
+									{{ content }}
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

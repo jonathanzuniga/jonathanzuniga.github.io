@@ -5,12 +5,12 @@
 			<div class="col-12">
 				{% assign current = page.url | downcase | split: '/' %}
 				<nav class="navbar navbar--dark maxsm-navbar-responsive maxsm-p-top-05">
-					<button class="btn btn--link navbar__toggler maxsm-order-1 sm-d-none">
-						<img src="images/ionicons_svg_ios-menu.svg" alt="Menu icon">
+					<button id="navbar__toggler" class="btn btn--link navbar__toggler maxsm-order-1 sm-d-none">
+						<img src="images/ionicons_svg_md-menu.svg" alt="Menu icon">
 					</button>
 					
 					<div class="navbar__brand maxsm-order-2">
-						<a class="navbar__a maxsm-p-left-0" href="{{ site.baseurl }}/">
+						<a class="navbar__a" href="{{ site.baseurl }}/">
 							<span class="header__title anim-slide-out-in">{{ author.name }} {{ author.lastname }}</span>
 						</a>
 					</div>
@@ -49,7 +49,7 @@
 						</ul>
 					</div>
 
-					<div class="navbar__form maxsm-order-3">
+					<div class="navbar__form maxsm-order-3 maxsm-p-x-0">
 						<div class="header__search-wrap anim-slide-in-out">
 							<form id="header__search-form" class="header__search-form" action="/search" method="get">
 								<input id="header__search-input" class="header__search-input input input--pill" name="query" placeholder="Search in the archives" type="text">
@@ -57,7 +57,7 @@
 						</div>
 
 						<button id="header__search-btn" class="header__search-btn sm-d-none btn btn--link">
-							Search
+							<img src="../images/ionicons_svg_md-search.svg" alt="Search icon">
 						</button>
 					</div>
 				</nav>
