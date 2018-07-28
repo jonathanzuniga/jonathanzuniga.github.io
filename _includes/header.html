@@ -4,18 +4,18 @@
 		<div class="row gutters-0">
 			<div class="col-12">
 				{% assign current = page.url | downcase | split: '/' %}
-				<nav class="navbar navbar--dark maxmd-navbar-responsive maxmd-p-top-05">
+				<nav class="navbar navbar--dark maxmd-navbar-responsive">
 					<button id="navbar__toggler" class="btn btn--link navbar__toggler maxmd-order-1 md-d-none">
 						<img src="images/ionicons_svg_md-menu.svg" alt="Menu icon">
 					</button>
 
-					<div class="navbar__brand maxmd-order-2">
-						<a class="navbar__a" href="{{ site.baseurl }}/">
+					<div class="navbar__brand maxmd-fxg-1 maxmd-order-2">
+						<a class="navbar__a maxmd-p-left-0" href="{{ site.baseurl }}/">
 							<span class="header__title anim-slide-out-in">{{ author.name }} {{ author.lastname }}</span>
 						</a>
 					</div>
 
-					<div class="navbar__no-collapse maxmd-order-4 jc-space-between maxmd-p-bottom-05 fxg-1">
+					<div class="navbar__no-collapse maxmd-order-4 jc-space-between maxmd-p-bottom-05 fxg-1 maxmd-d-none">
 						<ul class="navbar__menu">
 							<li class="navbar__item {% if page.url == '/' %}active{% endif %}">
 								<a class="navbar__a" href="{{ site.baseurl }}/">

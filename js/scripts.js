@@ -106,15 +106,15 @@ jQuery( document ).ready( function ( $ ) {
 
 	$( '#navbar__toggler' ).click(function () {
 
-		$( '.drawer--left' ).addClass( 'open' );
-		$( 'body' ).addClass( 'drawer-is-open' );
+		$( '.drawer--left' ).removeClass( 'close' ).addClass( 'open' );
+		$( 'body' ).removeClass( 'drawer-is-close' ).addClass( 'drawer-is-open' );
 
 	});
 
 	$( '#drawer-overlay' ).click( function () {
 
-		$( '.drawer--left' ).removeClass( 'open' );
-		$( 'body' ).removeClass( 'drawer-is-open' );
+		$( '.drawer--left' ).removeClass( 'open' ).addClass( 'close' );
+		$( 'body' ).removeClass( 'drawer-is-open' ).addClass( 'drawer-is-close' );
 
 	});
 
@@ -133,7 +133,7 @@ jQuery( document ).ready( function ( $ ) {
 
 		if ( $( window ).width() < 1024 ) {
 
-			let sidebar = $( '#sidebar__body' ).contents().clone();
+			let sidebar = $( '.navbar__menu' ).contents().clone();
 
 			$( '#drawer-left' ).html( '' );
 
