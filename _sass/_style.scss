@@ -116,6 +116,12 @@ p.ac-c a:not( .btn ) {
 	}
 }
 
+/* Change text in autofill textbox. */
+
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px $day__navbar-bg-color inset;
+}
+
 .cntr {
 	max-width: $container-max-width;
 }
