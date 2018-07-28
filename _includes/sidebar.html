@@ -3,7 +3,7 @@
 	<h5>Recent articles</h5>
 
 	<ul class="ls-unstyled ac-c">
-		{% for post in site.posts limit: 6 %}
+		{% for post in site.posts limit: 16 %}
 			<li>
 				<a href="{{ post.url }}#post-{{ forloop.index }}">
 					{{ post.title }}
@@ -37,7 +37,7 @@
 {% comment %}
 {% assign author = site.authors['jonathan'] %}
 <div class="sidebar">
-	{% if page.url == '/' 
+	{% if page.url == '/'
 		or page.layout == 'post'
 		or page.layout == 'moments' %}
 		<div class="sidebar__content" id="sidebar__content--fixed">
@@ -62,17 +62,17 @@
 							<p>
 								<span class="post__date">
 									<time datetime="{{ post.date | date_to_xmlschema }}" data-post-date-to-string="{{ post.date | date_to_string }}">
-										{% 
-											assign months = 
-											'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
+										{%
+											assign months =
+											'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' |
 											split: '|'
 										%}
 										{% assign day = post.date | date: '%-d' %}
 										{% assign m = post.date | date: '%-m' | minus: 1 %}
 										{% assign month = months[m] %}
 										{% assign year = post.date | date: '%Y' %}
-										<span class="day">{{ day }}</span> de 
-										<span class="month">{{ month }}</span> de 
+										<span class="day">{{ day }}</span> de
+										<span class="month">{{ month }}</span> de
 										<span class="year">{{ year }}</span>.
 									</time>
 								</span>
@@ -189,15 +189,15 @@
 	</div>
 
 	<div class="sidebar__module sidebar__module-contact">
-		Puedes seguirme en 
-		<a href="https://twitter.com/{{ author.twitter_username }}" target="_blank">Twitter</a> 
-		o enviarme un mensaje por 
+		Puedes seguirme en
+		<a href="https://twitter.com/{{ author.twitter_username }}" target="_blank">Twitter</a>
+		o enviarme un mensaje por
 		<a href="mailto:{{ author.email }}">correo electrónico</a>.
 	</div>
 
 	<div class="sidebar__module sidebar__module-subscribe">
-		Suscribete al 
-		<a href="{{ '/feed.xml' | prepend: site.baseurl }}" target="_blank">RSS feed</a> 
+		Suscribete al
+		<a href="{{ '/feed.xml' | prepend: site.baseurl }}" target="_blank">RSS feed</a>
 		o busca una publicación anterior:
 	</div>
 
@@ -443,7 +443,7 @@
 			{% assign categories_list = nil %}
 		</ul>
 	</div>
-	
+
 	{% unless page.url == '/' %}
 		<ul class="pageNav">
 			<li class="pageNav-item pageNav-pagePrev {% unless page.next.url %}disabled{% endunless %}">
@@ -497,7 +497,7 @@
 			<ul class="list-unstyled">
 				{% if page.next.url %}
 					<li>
-						Siguiente: 
+						Siguiente:
 						<a href="{{ page.next.url }}" title="{{ page.next.title }}">
 							{{ page.next.title }}
 						</a>
@@ -505,14 +505,14 @@
 				{% endif %}
 				{% if page.previous.url %}
 					<li>
-						Anterior: 
+						Anterior:
 						<a href="{{ page.previous.url }}" title="{{ page.previous.title }}">
 							{{ page.previous.title }}
 						</a>
 					</li>
 				{% endif %}
 				<li>
-					Destino: 
+					Destino:
 					<a class="random-post" href="" title="Leer un artículo al azar">
 						Leer un artículo al azar
 					</a>
@@ -524,7 +524,7 @@
 						{% if category == 'articulos' %}
 							<a class="post-category text-capitalize" href="{{ site.baseurl }}/articulos">artículos</a>
 						{% elsif category == 'inspiracion' %}
-							<a class="post-category text-capitalize" href="{{ site.baseurl }}/historias">inspiración</a> 
+							<a class="post-category text-capitalize" href="{{ site.baseurl }}/historias">inspiración</a>
 						{% else %}
 							<a class="post-category text-capitalize" href="{{ site.baseurl }}/{{ category }}">{{ category }}</a>
 						{% endif %}
@@ -545,7 +545,7 @@
 						<a href="">
 							{{ post.title }}
 						</a>
-								
+
 						<div>
 							{{ post.excerpt | strip_html | truncatewords: 15 }}
 						</div>
@@ -629,10 +629,10 @@
 						<div class="teaser-content">
 							<p class="teaser-meta">
 								{% include date.html %}
-								por 
+								por
 								{% assign sorted_authors = post.authors | sort %}
 								{% for author in sorted_authors %}<!--
-									-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %} 
+									-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %}
 									{% assign author_items = site.authors[author] %}
 									{% if author == 'jonathan' %}
 										<a class="teaser-author" href="{{ site.baseurl }}/autor">
@@ -642,7 +642,7 @@
 										{{ author_items.name }}<!--
 									--></a><!--
 								-->{% endfor %}
-								en 
+								en
 								{% assign sorted_categories = post.categories | sort %}
 								{% for category in sorted_categories %}
 									<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
@@ -666,7 +666,7 @@
 				{% endif %}
 			{% endfor %}
 		</section>
-	{% elsif page.layout == 'post' or 
+	{% elsif page.layout == 'post' or
 					 page.url == '/autor' %}
 		<section class="aside-entries aside-entries-post">
 			<h2 class="aside-entries-title">
@@ -694,10 +694,10 @@
 					<div class="teaser-content">
 						<p class="teaser-meta">
 							{% include date.html %}
-							por 
+							por
 							{% assign sorted_authors = post.authors | sort %}
 							{% for author in sorted_authors %}<!--
-								-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %} 
+								-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %}
 								{% assign author_items = site.authors[author] %}
 								{% if author == 'jonathan' %}
 									<a class="teaser-author" href="{{ site.baseurl }}/autor">
@@ -707,7 +707,7 @@
 									{{ author_items.name }}<!--
 								--></a><!--
 							-->{% endfor %}
-							en 
+							en
 							{% assign sorted_categories = post.categories | sort %}
 							{% for category in sorted_categories %}
 								<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
@@ -767,7 +767,7 @@
 			{% endfor %}
 		</div>
 		{% endcomment %}
-		
+
 		{% comment %}
 		{% if page.categories contains 'articulos' %}
 			<h3 class="aside-title">
@@ -792,7 +792,7 @@
 		<p class="entry">
 			Publicado el
 			{% include date.html %}
-			en 
+			en
 			{% assign sorted_categories = page.categories | sort %}
 			{% for category in sorted_categories %}
 				{% if category == 'articulos' %}
@@ -807,7 +807,7 @@
 			{% if author_items.github_username %}
 				{% assign filename = page.url | replace_first: '/', '' | replace: '/', '-' | replace: '.html', '.md' %}
 				<a href="https://github.com/{{ author_items.github_username }}/jonathanzuniga.github.io/edit/master/_posts/articles/{{ filename }}.md">
-					Mejora 
+					Mejora
 					{% assign sorted_categories = page.categories | sort %}
 					{% for category in sorted_categories %}
 						{% if category == 'historias' %}
@@ -818,11 +818,11 @@
 					{% endfor %}
 					en GitHub</a>.
 			{% endif %}
-			Esta obra está bajo una licencia 
+			Esta obra está bajo una licencia
 			<a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">
 				Creative Commons Atribución 4.0 Internacional</a>.
 		</p>
-		
+
 		<ul class="tags">
 			{% assign sorted_tags = page.tags | sort %}
 			{% for tag in sorted_tags %}

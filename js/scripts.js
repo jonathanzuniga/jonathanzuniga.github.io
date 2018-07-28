@@ -5,7 +5,7 @@ jQuery( document ).ready( function ( $ ) {
 		var is_form_valid = true;
 
 		// No permitir buscar si el input esta vacio.
-		
+
 		if ( $.trim( $( '#header__search-input' ).val() ).length == 0 )
 			is_form_valid = false;
 
@@ -55,9 +55,9 @@ jQuery( document ).ready( function ( $ ) {
 
 	function startIScroll() {
 
-		if ( $( window ).width() < 768 ) {
+		if ( $( window ).width() < 1024 ) {
 
-			$( '#third-col' ).css( 'overflow-y', '' );
+			$( '#sidebar' ).css( 'overflow-y', '' );
 
 			if ( myScroll1 != null ) {
 
@@ -65,20 +65,6 @@ jQuery( document ).ready( function ( $ ) {
 				myScroll1 = null;
 
 			}
-
-		} else {
-
-			if ( myScroll1 == null ) {
-
-				myScroll1 = new IScroll( '#sidebar', iScrollOptions );
-
-				$( '#sidebar' ).css( 'overflow-y', 'hidden' );
-
-			}
-
-		}
-
-		if ( $( window ).width() < 1024 ) {
 
 			$( '#third-col' ).css( 'overflow-y', '' );
 
@@ -91,6 +77,14 @@ jQuery( document ).ready( function ( $ ) {
 			}
 
 		} else {
+
+			if ( myScroll1 == null ) {
+
+				myScroll1 = new IScroll( '#sidebar', iScrollOptions );
+
+				$( '#sidebar' ).css( 'overflow-y', 'hidden' );
+
+			}
 
 			if ( myScroll2 == null ) {
 
@@ -123,6 +117,38 @@ jQuery( document ).ready( function ( $ ) {
 		$( 'body' ).removeClass( 'drawer-is-open' );
 
 	});
+
+	$( window ).resize( function () {
+
+		if ( $( window ).width() >= 1024 ) {
+
+			$( '.drawer' ).removeClass( 'open' );
+			$( 'body' ).removeClass( 'drawer-is-open' );
+
+		}
+
+	} );
+
+	function putDrawerContent() {
+
+		if ( $( window ).width() < 1024 ) {
+
+			let sidebar = $( '#sidebar__body' ).contents().clone();
+
+			$( '#drawer-left' ).html( '' );
+
+			sidebar
+				.wrapAll( '<div class="drawer__body" />' )
+				.parent()
+				.appendTo( '#drawer-left' );
+
+		}
+
+	}
+
+	putDrawerContent();
+
+	$( window ).resize( putDrawerContent );
 
 	// $('#search__input, #search__btn-submit').on('focus', function() {
 	// 	$(this).parent().addClass('focus');
@@ -184,7 +210,7 @@ jQuery( document ).ready( function ( $ ) {
 	// 		$('#mobile-nav ul')
 	// 			.append(`
 	// 				<li class="mobile-nav__item bd-top txt-uc ` + navbar_item_active + `">
-	// 					<a class="mobile-nav__link d-block p-x-4 p-y-2" href="` + navbar_item_link + `">` + 
+	// 					<a class="mobile-nav__link d-block p-x-4 p-y-2" href="` + navbar_item_link + `">` +
 	// 						navbar_item_text + `
 	// 					</a>
 	// 				</li>`)

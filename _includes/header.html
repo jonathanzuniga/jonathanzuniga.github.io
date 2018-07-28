@@ -4,18 +4,18 @@
 		<div class="row gutters-0">
 			<div class="col-12">
 				{% assign current = page.url | downcase | split: '/' %}
-				<nav class="navbar navbar--dark maxsm-navbar-responsive maxsm-p-top-05">
-					<button id="navbar__toggler" class="btn btn--link navbar__toggler maxsm-order-1 sm-d-none">
+				<nav class="navbar navbar--dark maxmd-navbar-responsive maxmd-p-top-05">
+					<button id="navbar__toggler" class="btn btn--link navbar__toggler maxmd-order-1 md-d-none">
 						<img src="images/ionicons_svg_md-menu.svg" alt="Menu icon">
 					</button>
-					
-					<div class="navbar__brand maxsm-order-2">
+
+					<div class="navbar__brand maxmd-order-2">
 						<a class="navbar__a" href="{{ site.baseurl }}/">
 							<span class="header__title anim-slide-out-in">{{ author.name }} {{ author.lastname }}</span>
 						</a>
 					</div>
 
-					<div class="navbar__no-collapse maxsm-order-4 jc-space-between maxsm-p-bottom-05 fxg-1">
+					<div class="navbar__no-collapse maxmd-order-4 jc-space-between maxmd-p-bottom-05 fxg-1">
 						<ul class="navbar__menu">
 							<li class="navbar__item {% if page.url == '/' %}active{% endif %}">
 								<a class="navbar__a" href="{{ site.baseurl }}/">
@@ -49,14 +49,14 @@
 						</ul>
 					</div>
 
-					<div class="navbar__form maxsm-order-3 maxsm-p-x-0">
+					<div class="navbar__form maxmd-order-3 maxmd-p-x-0">
 						<div class="header__search-wrap anim-slide-in-out">
 							<form id="header__search-form" class="header__search-form" action="/search" method="get">
 								<input id="header__search-input" class="header__search-input input input--pill" name="query" placeholder="Search in the archives" type="text">
 							</form>
 						</div>
 
-						<button id="header__search-btn" class="header__search-btn sm-d-none btn btn--link">
+						<button id="header__search-btn" class="header__search-btn md-d-none btn btn--link">
 							<img src="../images/ionicons_svg_md-search.svg" alt="Search icon">
 						</button>
 					</div>

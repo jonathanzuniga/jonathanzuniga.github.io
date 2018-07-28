@@ -16,14 +16,14 @@
 
 				appendString += 
 					`<div class="post bd-bottom-1">
-						<header class="post__header maxsm-ta-center">
+						<header class="post__header">
 							<div class="post__meta">
 								<span class="post__date">
 									` + item.date + `
 								</span>
 							</div>
 
-							<h3 class="post__title ac-c m-top-16 m-bottom-16">
+							<h3 class="post__title ac-c m-top-1 m-bottom-1">
 								<a class="post__link" href="` + item.url + `">
 									` + item.title + `
 								</a>
