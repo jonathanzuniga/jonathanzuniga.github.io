@@ -106,7 +106,7 @@ jQuery( document ).ready( function ( $ ) {
 
 	var lastScroll = 0;
 
-	$( '.header' ).addClass( 'header--full' );
+	// $( '.header' ).addClass( 'header--full' );
 
 	$( window ).scroll( function () {
 
@@ -118,17 +118,17 @@ jQuery( document ).ready( function ( $ ) {
 
 				if ( scroll > lastScroll + 16 ) {
 
-					$( '.header' ).removeClass( 'header--full' );
+					$( '.header' ).addClass( 'header--collapsed' );
 
 				} else if ( scroll < lastScroll - 16 ) {
 
-					$( '.header' ).addClass( 'header--full' );
+					$( '.header' ).removeClass( 'header--collapsed' );
 
 				}
 
 				lastScroll = scroll;
 
-			}, 400 );
+			}, 0 );
 
 		}
 

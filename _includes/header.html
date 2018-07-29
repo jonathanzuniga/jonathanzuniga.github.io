@@ -5,9 +5,9 @@
 			<div class="col-12">
 				{% assign current = page.url | downcase | split: '/' %}
 				<nav class="navbar navbar--dark maxmd-navbar-responsive">
-					<button class="header__btn btn btn--link maxmd-order-1">
+					<a class="header__avatar-wrap maxmd-order-1" href="{{ site.baseurl }}/">
 						<img class="header__avatar img-responsive" src="{{ site.baseurl }}/images/authors/{{ author.avatar }}" alt="Avatar">
-					</button>
+					</a>
 
 					<div class="navbar__brand maxmd-fxg-1 maxmd-order-2">
 						<a class="navbar__a p-left-0" href="{{ site.baseurl }}/">
