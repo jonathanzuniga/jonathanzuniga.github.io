@@ -111,7 +111,9 @@ jQuery( document ).ready( function ( $ ) {
 
 	});
 
-	$( '#drawer-overlay' ).click( function () {
+	$( 'body' ).on( 'click', '#drawer-overlay, .drawer__body .a', function () {
+
+		console.log( 'hi' );
 
 		$( '.drawer--left' ).removeClass( 'open' ).addClass( 'close' );
 		$( 'body' ).removeClass( 'drawer-is-open' ).addClass( 'drawer-is-close' );
@@ -133,11 +135,18 @@ jQuery( document ).ready( function ( $ ) {
 
 		if ( $( window ).width() < 1024 ) {
 
-			let sidebar = $( '.navbar__menu' ).contents().clone();
+			let sidebar = $( '.navbar__menu' ).clone();
 
 			$( '#drawer-left' ).html( '' );
 
 			sidebar
+				.addClass( 'ls-unstyled ac-c' )
+				.removeClass( 'navbar__menu' )
+				.children()
+				.removeClass( 'navbar__item' )
+				.children()
+				.removeClass( 'navbar__a' )
+				.closest( 'ul' )
 				.wrapAll( '<div class="drawer__body" />' )
 				.parent()
 				.appendTo( '#drawer-left' );

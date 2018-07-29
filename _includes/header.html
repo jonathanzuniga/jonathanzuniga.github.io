@@ -18,30 +18,30 @@
 					<div class="navbar__no-collapse maxmd-order-4 jc-space-between maxmd-p-bottom-05 fxg-1 maxmd-d-none">
 						<ul class="navbar__menu">
 							<li class="navbar__item {% if page.url == '/' %}active{% endif %}">
-								<a class="navbar__a" href="{{ site.baseurl }}/">
+								<a class="navbar__a a a--home" href="{{ site.baseurl }}/">
 									Home
 								</a>
 							</li>
 							<li class="navbar__item {% if current[1] == 'articles' %}active{% endif %}">
-								<a class="navbar__a" href="{{ site.baseurl }}/articles">
+								<a class="navbar__a a a--articles" href="{{ site.baseurl }}/articles">
 									Articles
 								</a>
 							</li>
 							<li class="navbar__item {% if current[1] == 'about' %}active{% endif %}">
-								<a class="navbar__a" href="{{ site.baseurl }}/about">
+								<a class="navbar__a a a--about" href="{{ site.baseurl }}/about">
 									About
 								</a>
 							</li>
 							{% if author.twitter_username %}
 								<li class="navbar__item">
-									<a class="navbar__a" href="https://twitter.com/{{ author.twitter_username }}">
+									<a class="navbar__a a a--twitter" href="https://twitter.com/{{ author.twitter_username }}" target="_blank">
 										Twitter
 									</a>
 								</li>
 							{% endif %}
 							{% if author.github_username %}
 								<li class="navbar__item">
-									<a class="navbar__a" href="https://github.com/{{ author.github_username }}">
+									<a class="navbar__a a a--github" href="https://github.com/{{ author.github_username }}" target="_blank">
 										GitHub
 									</a>
 								</li>
