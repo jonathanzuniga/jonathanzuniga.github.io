@@ -102,62 +102,39 @@ jQuery( document ).ready( function ( $ ) {
 
 	$( window ).resize( startIScroll );
 
-	// Drawer
 
-	$( '#navbar__toggler' ).click(function () {
 
-		$( '.drawer--left' ).removeClass( 'close' ).addClass( 'open' );
-		$( 'body' ).removeClass( 'drawer-is-close' ).addClass( 'drawer-is-open' );
+	var lastScroll = 0;
 
-	});
+	$( '.header' ).addClass( 'header--full' );
 
-	$( 'body' ).on( 'click', '#drawer-overlay, .drawer__body .a', function () {
+	$( window ).scroll( function () {
 
-		console.log( 'hi' );
+		if ( $( window ).width() < 1024 ) {
 
-		$( '.drawer--left' ).removeClass( 'open' ).addClass( 'close' );
-		$( 'body' ).removeClass( 'drawer-is-open' ).addClass( 'drawer-is-close' );
+			setTimeout( function () {
 
-	});
+				let scroll = $( window ).scrollTop();
 
-	$( window ).resize( function () {
+				if ( scroll > lastScroll + 16 ) {
 
-		if ( $( window ).width() >= 1024 ) {
+					$( '.header' ).removeClass( 'header--full' );
 
-			$( '.drawer' ).removeClass( 'open' );
-			$( 'body' ).removeClass( 'drawer-is-open' );
+				} else if ( scroll < lastScroll - 16 ) {
+
+					$( '.header' ).addClass( 'header--full' );
+
+				}
+
+				lastScroll = scroll;
+
+			}, 400 );
 
 		}
 
 	} );
 
-	function putDrawerContent() {
 
-		if ( $( window ).width() < 1024 ) {
-
-			let sidebar = $( '.navbar__menu' ).clone();
-
-			$( '#drawer-left' ).html( '' );
-
-			sidebar
-				.addClass( 'ls-unstyled ac-c' )
-				.removeClass( 'navbar__menu' )
-				.children()
-				.removeClass( 'navbar__item' )
-				.children()
-				.removeClass( 'navbar__a' )
-				.closest( 'ul' )
-				.wrapAll( '<div class="drawer__body" />' )
-				.parent()
-				.appendTo( '#drawer-left' );
-
-		}
-
-	}
-
-	putDrawerContent();
-
-	$( window ).resize( putDrawerContent );
 
 	// $('#search__input, #search__btn-submit').on('focus', function() {
 	// 	$(this).parent().addClass('focus');
