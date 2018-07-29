@@ -14,8 +14,8 @@
 				// if (item.description)
 				//   post_description = '<span class="post__description">' + item.description + '</span>';
 
-				appendString += 
-					`<div class="post bd-bottom-1">
+				appendString +=
+					`<div class="post bd-bottom-0063">
 						<header class="post__header">
 							<div class="post__meta">
 								<span class="post__date">
@@ -28,7 +28,7 @@
 									` + item.title + `
 								</a>
 							</h3>
-							
+
 							<div class="post__content">
 								` + item.excerpt + `
 							</div>

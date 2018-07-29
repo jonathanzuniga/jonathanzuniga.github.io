@@ -119,7 +119,13 @@ p.ac-c a:not( .btn ) {
 /* Change text in autofill textbox. */
 
 input:-webkit-autofill {
-	-webkit-box-shadow: 0 0 0px 1000px $day__navbar-bg-color inset;
+	&, &:hover, &:active, &:focus {
+		transition-delay: 3600s;
+	}
+
+	&:hover, &:active, &:focus {
+		-webkit-text-fill-color: $day__navbar__input-color;
+	}
 }
 
 .cntr {
@@ -410,7 +416,8 @@ input:-webkit-autofill {
 		}
 	}
 
-	.post__header {
+	.post__header,
+	.search-results__title {
 		text-align: center;
 	}
 }
