@@ -25,15 +25,11 @@ jQuery( document ).ready( function ( $ ) {
 
 			$( '#header__search-input' ).focus();
 
-			$( '.header__search-btn' ).html( '<img src="../images/ionicons_svg_md-close.svg" alt="Cancel icon">' );
-
 		} else {
 
 			_this.closest( '.navbar' ).removeClass( 'active-search' ).addClass( 'inactive-search' );
 
 			$( '#header__search-input' ).blur();
-
-			$( '.header__search-btn' ).html( '<img src="../images/ionicons_svg_md-search.svg" alt="Search icon">' );
 
 		}
 
