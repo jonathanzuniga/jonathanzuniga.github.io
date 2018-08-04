@@ -463,7 +463,7 @@ input:-webkit-autofill {
 }
 
 .drawer--push.drawer--left {
-	background-color: $day__body-bg-color;
+	background-color: transparent;
     transform: translateX( 0 ) !important;
 	width: 100%;
 	max-width: $drawer-max-width;
