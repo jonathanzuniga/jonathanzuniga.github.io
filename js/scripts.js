@@ -134,79 +134,83 @@ jQuery( document ).ready( function ( $ ) {
 
 	} );
 
-	// Drawer
+	// // Drawer
 
-	function openDrawer() {
+	// function openDrawer() {
 
-		$( '.drawer--left' ).removeClass( 'close' ).addClass( 'open' );
-		$( 'body' ).removeClass( 'drawer-is-close' ).addClass( 'drawer-is-open' );
+	// 	$( '.drawer--left' ).removeClass( 'close' ).addClass( 'open' );
+	// 	$( 'body' ).removeClass( 'drawer-is-close' ).addClass( 'drawer-is-open' );
 
-	}
+	// }
 
-	function closeDrawer() {
+	// function closeDrawer() {
 
-		$( '.drawer--left' ).removeClass( 'open' ).addClass( 'close' );
-		$( 'body' ).removeClass( 'drawer-is-open' ).addClass( 'drawer-is-close' );
+	// 	$( '.drawer--left' ).removeClass( 'open' ).addClass( 'close' );
+	// 	$( 'body' ).removeClass( 'drawer-is-open' ).addClass( 'drawer-is-close' );
 
-	}
+	// }
 
-	$( '#navbar__toggler' ).click( function () {
+	// $( '#navbar__toggler' ).click( function () {
 
-		if ( $( 'body' ).hasClass( 'drawer-is-open' ) ) {
+	// 	if ( $( 'body' ).hasClass( 'drawer-is-open' ) ) {
 
-			closeDrawer();
+	// 		closeDrawer();
 
-		} else {
+	// 	} else {
 
-			openDrawer();
+	// 		openDrawer();
 
-		}
+	// 	}
 
-	} );
+	// } );
 
-	$( 'body' ).on( 'click', '#drawer-overlay, .drawer__body .a', function () {
+	// $( 'body' ).on( 'click', '#drawer-overlay, .drawer__body .a', function () {
 
-		closeDrawer();
+	// 	closeDrawer();
 
-	} );
+	// } );
 
-	$( window ).resize( function () {
+	// $( window ).resize( function () {
 
-		if ( $( window ).width() >= 1024 ) {
+	// 	if ( $( window ).width() >= 1024 ) {
 
-			closeDrawer();
+	// 		closeDrawer();
 
-		}
+	// 	}
 
-	} );
+	// } );
 
-	function putDrawerContent() {
+	// function putDrawerContent() {
 
-		if ( $( window ).width() < 1024 ) {
+	// 	if ( $( window ).width() < 1024 ) {
 
-			let sidebar = $( '.navbar__menu' ).clone();
+	// 		let sidebar = $( '.navbar__menu' ).clone();
 
-			$( '#drawer-left' ).html( '' );
+	// 		$( '#drawer-left' ).html( '' );
 
-			sidebar
-				.addClass( 'ls-unstyled ac-c' )
-				.removeClass( 'navbar__menu' )
-				.children()
-				.removeClass( 'navbar__item' )
-				.children()
-				.removeClass( 'navbar__a' )
-				.closest( 'ul' )
-				.wrapAll( '<div class="drawer__body" />' )
-				.parent()
-				.appendTo( '#drawer-left' );
+	// 		sidebar
+	// 			.addClass( 'ls-unstyled ac-c' )
+	// 			.removeClass( 'navbar__menu' )
+	// 			.children()
+	// 			.removeClass( 'navbar__item' )
+	// 			.children()
+	// 			.removeClass( 'navbar__a' )
+	// 			.closest( 'ul' )
+	// 			.wrapAll( '<div class="drawer__body" />' )
+	// 			.parent()
+	// 			.appendTo( '#drawer-left' );
 
-		}
+	// 	}
 
-	}
+	// }
 
-	putDrawerContent();
+	// putDrawerContent();
 
 	// $( window ).resize( putDrawerContent );
+
+
+
+
 
 
 	// $('#search__input, #search__btn-submit').on('focus', function() {

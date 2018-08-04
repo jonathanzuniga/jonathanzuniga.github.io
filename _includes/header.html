@@ -5,20 +5,17 @@
 			<div class="col-12">
 				{% assign current = page.url | downcase | split: '/' %}
 				<nav class="navbar navbar--dark maxmd-navbar-responsive">
-					<button id="navbar__toggler" class="btn btn--link navbar__toggler maxmd-order-1 md-d-none">
-						<img src="images/ionicons_svg_md-menu.svg" alt="Menu icon">
-					</button>
-					<!-- <a class="header__avatar-wrap maxmd-order-1" href="{{ site.baseurl }}/">
+					<a class="header__avatar-wrap maxmd-order-1" href="{{ site.baseurl }}/">
 						<img class="header__avatar img-responsive" src="{{ site.baseurl }}/images/authors/{{ author.avatar }}" alt="Avatar">
-					</a> -->
+					</a>
 
 					<div class="navbar__brand maxmd-fxg-1 maxmd-order-2">
-						<a class="navbar__a maxmd-p-left-0" href="{{ site.baseurl }}/">
+						<a class="navbar__a p-left-0" href="{{ site.baseurl }}/">
 							<span class="header__title anim-slide-out-in">{{ author.name }} {{ author.lastname }}</span>
 						</a>
 					</div>
 
-					<div class="navbar__no-collapse maxmd-order-4 jc-space-between fxg-1 maxmd-d-none">
+					<div class="navbar__no-collapse maxmd-order-4 jc-space-between fxg-1">
 						<ul class="navbar__menu">
 							<li class="navbar__item {% if page.url == '/' %}active{% endif %}">
 								<a class="navbar__a a a--home" href="{{ site.baseurl }}/">
