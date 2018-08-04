@@ -106,27 +106,27 @@ jQuery( document ).ready( function ( $ ) {
 
 	$( window ).scroll( function () {
 
-		if ( $( window ).width() < 1024 ) {
+		setTimeout( function () {
 
-			setTimeout( function () {
+			let scroll = $( window ).scrollTop();
 
-				let scroll = $( window ).scrollTop();
+			if ( scroll > lastScroll + 1 ) {
 
-				if ( scroll > lastScroll + 16 ) {
+				$( '.header' ).addClass( 'header--collapsed' );
+				$( '.header' ).addClass( 'header--shadow' );
 
-					$( '.header' ).addClass( 'header--collapsed' );
+			} else if ( scroll < lastScroll - 1 ) {
 
-				} else if ( scroll < lastScroll - 16 ) {
+				$( '.header' ).removeClass( 'header--collapsed' );
 
-					$( '.header' ).removeClass( 'header--collapsed' );
+			}
 
-				}
+			if ( scroll == 0 )
+				$( '.header' ).removeClass( 'header--shadow' );
 
-				lastScroll = scroll;
+			lastScroll = scroll;
 
-			}, 0 );
-
-		}
+		}, 0 );
 
 	} );
 

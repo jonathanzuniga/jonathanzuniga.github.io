@@ -8,7 +8,7 @@ $base-font-size-sm: 1rem;
 $base-font-size-md: 1rem;
 $base-font-size-lg: 1rem;
 
-$day__navbar-bg-color: #8a74b9;
+$day__navbar-bg-color: #8b58e3;
 $navbar-a-font-weight: 400;
 $navbar-min-height:    56px;
 $md-navbar-min-height: 64px;
@@ -30,7 +30,7 @@ $day__navbar__input-active-border-color:     $day__navbar__input-focus-border-co
 $day__body-bg-color: #fff;
 $day__body-color:    rgba( #000, 0.9 );
 
-$day__a-color:         #8a74b9;
+$day__a-color:         $day__navbar-bg-color;
 $a-font-weight:        500;
 $day__a-visited-color: $day__a-color;
 $day__a-hover-color:   darken( $day__a-color, 15% );
