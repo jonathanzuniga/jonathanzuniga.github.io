@@ -110,19 +110,19 @@ jQuery( document ).ready( function ( $ ) {
 
 			let scroll = $( window ).scrollTop();
 
-			if ( scroll > lastScroll + 1 ) {
+			if ( scroll > lastScroll + 8 ) {
 
 				$( '.header' ).addClass( 'header--collapsed' );
-				$( '.header' ).addClass( 'header--shadow' );
+				// $( '.header' ).addClass( 'header--shadow' );
 
-			} else if ( scroll < lastScroll - 1 ) {
+			} else if ( scroll < lastScroll - 8 ) {
 
 				$( '.header' ).removeClass( 'header--collapsed' );
 
 			}
 
-			if ( scroll == 0 )
-				$( '.header' ).removeClass( 'header--shadow' );
+			// if ( scroll == 0 )
+			// 	$( '.header' ).removeClass( 'header--shadow' );
 
 			lastScroll = scroll;
 
