@@ -98,7 +98,7 @@ jQuery( document ).ready( function ( $ ) {
 
 	$( window ).resize( startIScroll );
 
-	// Navbar show/hide when scroll.
+	// Show/hide navbar menu when scroll.
 
 	var lastScroll = 0;
 
@@ -113,7 +113,7 @@ jQuery( document ).ready( function ( $ ) {
 			if ( scroll > lastScroll + 8 ) {
 
 				$( '.header' ).addClass( 'header--collapsed' );
-				// $( '.header' ).addClass( 'header--shadow' );
+				$( '.header' ).addClass( 'header--shadow' );
 
 			} else if ( scroll < lastScroll - 8 ) {
 
@@ -121,14 +121,53 @@ jQuery( document ).ready( function ( $ ) {
 
 			}
 
-			// if ( scroll == 0 )
-			// 	$( '.header' ).removeClass( 'header--shadow' );
+			if ( scroll == 0 )
+				$( '.header' ).removeClass( 'header--shadow' );
 
 			lastScroll = scroll;
 
 		}, 0 );
 
 	} );
+
+	// // Show/hide navbar menu when click toggler.
+
+	// function openDrawer() {
+
+	// 	$( '.navbar__collapse' ).removeClass( 'close' ).addClass( 'open' );
+
+	// }
+
+	// function closeDrawer() {
+
+	// 	$( '.navbar__collapse' ).removeClass( 'open' ).addClass( 'close' );
+
+	// }
+
+	// $( '#navbar__toggler' ).click( function () {
+
+	// 	if ( $( '.navbar__collapse' ).hasClass( 'open' ) ) {
+
+	// 		closeDrawer();
+
+	// 	} else {
+
+	// 		openDrawer();
+
+	// 	}
+
+	// } );
+
+	// $( window ).resize( function () {
+
+	// 	if ( $( window ).width() >= 1024 ) {
+
+	// 		closeDrawer();
+
+	// 	}
+
+	// } );
+
 
 	// // Drawer
 

@@ -135,123 +135,84 @@ input:-webkit-autofill {
 	transition: box-shadow 0.24s ease-in-out;
 	z-index: 10000;
 
-	// &--shadow {
-	// 	box-shadow: 0 2px  4px -1px rgba( 0, 0, 0, 0.06 ),
-	// 				0 4px  5px  0px rgba( 0, 0, 0, 0.06 ),
-	// 				0 1px 10px  0px rgba( 0, 0, 0, 0.08 );
-	// }
+	&--shadow {
+		box-shadow: 0 2px  4px -1px rgba( 0, 0, 0, 0.06 ),
+					0 4px  5px  0px rgba( 0, 0, 0, 0.06 ),
+					0 1px 10px  0px rgba( 0, 0, 0, 0.08 );
+	}
 }
 
 @media ( max-width: 1023px ) {
 
 	.header {
 		transform: translateY( 0 );
-		transition: transform 0.16s ease-in-out;
-	}
-
-	.header__wrap,
-	.navbar__no-collapse {
-		background-color: $day__navbar-bg-color;
-		height: $navbar-min-height;
-
-		transform-origin: left top;
-		transition: background-color 0.24s linear,
-					transform 0.24s ease-in-out;
-
-		backface-visibility: hidden;
-	}
-
-	.header__wrap {
-		background-color: darken( $day__navbar-bg-color, 15% );
-		display: flex;
-		flex-grow: 1;
-
-		transform: rotateX( 90deg );
-	}
-
-	.navbar__no-collapse {
-		transform: translateY( -#{ $navbar-min-height } ) rotateX( 0 );
+		transition: box-shadow 0.24s ease-in-out,
+					transform 0.16s ease-in-out;
 	}
 
 	.header--collapsed {
-		.header__wrap {
-			background-color: $day__navbar-bg-color;
-			transform: rotateX( 0 );
-		}
+		transform: translateY( -#{ $navbar-min-height - 16 } );
 
-		.navbar__no-collapse {
-			background-color: darken( $day__navbar-bg-color, 15% );
-			transform: rotateX( -90deg );
+		.header__avatar-wrap,
+		.navbar__brand,
+		.navbar__form {
+			opacity: 0;
 		}
 	}
 
 }
 
-.header,
 .navbar {
-	background-color: transparent;
-}
-
-.navbar {
-	height: $navbar-min-height;
+	background-color: $day__navbar-bg-color;
+	min-height: $navbar-min-height;
 	perspective: 600px;
 }
 
 @media ( min-width: 1024px ) {
 
 	.navbar {
-		background-color: $day__navbar-bg-color;
 		min-height: $md-navbar-min-height;
 	}
 
 }
 
-// .header__avatar-wrap {
-// 	display: flex;
-// 	align-items: center;
+.header__avatar-wrap {
+	display: flex;
+	align-items: center;
 
-// 	padding: 0.5rem 1rem;
-// }
+	padding: 0.5rem 1rem;
+}
 
 @media ( max-width: 1023px ) {
 
-	.navbar__toggler,
-	// .header__avatar-wrap,
+	.header__avatar-wrap,
 	.navbar__brand,
 	.navbar__form {
-		height: 56px;
+		height: $navbar-min-height;
+		transition: opacity 0.16s linear;
 	}
 
 }
 
-// .header__avatar {
-// 	border-radius: 50%;
+.header__avatar {
+	border-radius: 50%;
 
-// 	width: 2rem;
-// 	height: 2rem;
-// }
-
-@media ( max-width: 1023px ) {
-
-	.navbar__brand {
-		opacity: 1;
-		transition: opacity 0.2s cubic-bezier( 0.645, 0.045, 0.355, 1 );
-	}
-
+	width: 2rem;
+	height: 2rem;
 }
 
 .header__title {
 	font-weight: 500;
 }
 
-// @media ( max-width: 1023px ) {
+@media ( max-width: 1023px ) {
 
-// 	.navbar__no-collapse {
-// 		height: $navbar-min-height;
-// 		margin-top: -1rem;
-// 	}
+	.navbar__no-collapse {
+		height: $navbar-min-height;
+		margin-top: -1rem;
+	}
 
-// }
+}
 
 .navbar__menu .navbar__a {
 	padding-right: 0.625rem;
@@ -271,15 +232,15 @@ input:-webkit-autofill {
 	.header__search-wrap {
 		opacity: 0;
 		position: absolute;
-		top: 1.125rem;
-		right: 3.5rem;
+		top: 0.64rem;
+		right: 3rem;
 		left: 4rem;
 
 		z-index: -1;
 	}
 
 	.active-search {
-		.navbar__brand {
+		.header__title {
 			opacity: 0;
 		}
 
@@ -290,7 +251,7 @@ input:-webkit-autofill {
 
 	.anim-slide-in-out,
 	.anim-slide-out-in {
-		animation-duration: 200ms;
+		animation-duration: 0.24s;
 		animation-fill-mode: forwards;
 		animation-timing-function: ease-in-out;
 	}
@@ -339,8 +300,7 @@ input:-webkit-autofill {
 
 }
 
-.header__search-btn,
-.navbar__toggler {
+.header__search-btn {
 	color: #fff;
 	opacity: 0.9;
 
@@ -351,8 +311,8 @@ input:-webkit-autofill {
 
 	transition: all 0.16s ease-in-out;
 
-	width: 4rem;
-	height: auto;
+	width: 3rem;
+	height: $navbar-min-height;
 
 	&:hover {
 		opacity: 0.9;
@@ -368,9 +328,9 @@ input:-webkit-autofill {
 	}
 }
 
-.header__search-icn {
-	margin-left: -1rem;
-	margin-top: -1rem;
+.header__icn {
+	margin-left: -0.75rem;
+	margin-top: -0.75rem;
 
 	position: absolute;
 	top: 50%;
@@ -378,11 +338,11 @@ input:-webkit-autofill {
 
 	transition: transform 0.24s cubic-bezier( 0.4, 0, 0.2, 1 );
 
-	width: 2rem;
-	height: 2rem;
+	width: 1.5rem;
+	height: 1.5rem;
 }
 
-.header__search-icn--close {
+.header__icn--close {
 	transform: rotate( -90deg ) scale( 0.5 );
 	transform-origin: center;
 	visibility: hidden;
@@ -391,12 +351,12 @@ input:-webkit-autofill {
 @media ( max-width: 1023px ) {
 
 	.active-search {
-		.header__search-icn--search {
+		.header__icn--search {
 			transform: scale( 0.5 );
 			visibility: hidden;
 		}
 
-		.header__search-icn--close {
+		.header__icn--close {
 			transform: rotate( 0 ) scale( 1 );
 			visibility: visible;
 		}
