@@ -5,7 +5,7 @@ layout: default
 <div class="posts">
 	{% for post in site.posts limit: 4 %}
 		<div id="post-{{ forloop.index }}" class="post post-{{ forloop.index }}">
-			<header class="post__header maxsm-ta-center">
+			<header class="post__header">
 				<div class="post__meta">
 					<span class="post__date">
 						{% include date.html %}
@@ -91,7 +91,7 @@ layout: default
 
 		<div class="post__meta">
 			<!-- <span class="post__author">
-				por 
+				por
 				{% assign author = site.authors['jonathan'] %}
 				<a class="author-link" href="{{ site.baseurl }}/autor">
 					{{ author.name }}
@@ -169,7 +169,7 @@ layout: default
 						</span>
 					{% endif %}
 
-					<span class="post__read-time">{% include read_time.html %}</span>, 
+					<span class="post__read-time">{% include read_time.html %}</span>,
 
 					<span class="post__date">{% include date.html %}</span>
 				</p>
@@ -199,7 +199,7 @@ layout: default
 
 			<p class="post-meta">
 				<span class="post-author">
-					por 
+					por
 					{% assign author = site.authors['jonathan'] %}
 					<a class="post-authorLink" href="{{ site.baseurl }}/autor">
 						{{ author.name }}
@@ -410,7 +410,7 @@ layout: default
 					<h3 class="post-title">
 							{{ post.title }}
 					</h3>
-					
+
 					<div class="post-cover" style="background-image: url('{{ post.cover }}')"></div>
 				</div>
 			</a>
@@ -420,7 +420,7 @@ layout: default
 					<h3 class="post-title">
 							{{ post.title }}
 					</h3>
-					
+
 					<div class="post-excerpt">
 						{{ post.excerpt | strip_html }}
 
@@ -471,12 +471,12 @@ layout: default
 			<h2 class="post-title">
 				{{ post.title }}
 			</h2>
-			
+
 			<div class="post-excerpt">
 				{{ post.excerpt | strip_html | truncatewords: 32 }}
 			</div>
 
-			
+
 			{% if post.cover %}
 				<img class="post-cover" src="{{ post.cover }}">
 			{% else %}
@@ -484,7 +484,7 @@ layout: default
 					{{ post.excerpt | strip_html | truncatewords: 32 }}
 				</div>
 			{% endif %}
-			
+
 
 			<p class="post-date">
 				{% include date.html %}
@@ -518,7 +518,7 @@ layout: default
 						<span class="post-date">
 							{% include date.html %}
 						</span>
-						
+
 						<span class="post-title">
 								{{ post.title }}
 						</span>
@@ -557,7 +557,7 @@ layout: default
 			{{ post.content }}
 		</div>
 	</article>
-	
+
 	<hr>
 {% endfor %}
 {% endcomment %}
@@ -704,10 +704,10 @@ layout: default
 							<div class="teaser-content teaser-content-featured">
 								<p class="teaser-meta">
 									{% include date.html %}
-									por 
+									por
 									{% assign sorted_authors = post.authors | sort %}
 									{% for author in sorted_authors %}<!--
-										-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %} 
+										-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %}
 										{% assign author_items = site.authors[author] %}
 										{% if author == 'jonathan' %}
 											<a class="teaser-author" href="{{ site.baseurl }}/autor">
@@ -717,7 +717,7 @@ layout: default
 											{{ author_items.name }}<!--
 										--></a><!--
 									-->{% endfor %}
-									en 
+									en
 									{% assign sorted_categories = post.categories | sort %}
 									{% for category in sorted_categories %}
 										<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
@@ -735,7 +735,7 @@ layout: default
 									{{ post.excerpt | strip_html | truncatewords: 32 }}
 								</div>
 							</div>
-							{% assign postCounter = postCounter | plus: 1 %}	
+							{% assign postCounter = postCounter | plus: 1 %}
 							{% if postCounter >= maxPost %}
 								{% break %}
 							{% endif %}
@@ -780,7 +780,7 @@ layout: default
 						<h3 class="teaser-title">
 							{{ post.title }}
 						</h3>
-						
+
 						{% if post.cover %}
 							<img class="teaser-image" src="{{ post.cover }}" alt="{{ post.title }}">
 						{% endif %}
@@ -789,10 +789,10 @@ layout: default
 					<div class="teaser-content">
 						<p class="teaser-meta">
 							{% include date.html %}
-							por 
+							por
 							{% assign sorted_authors = post.authors | sort %}
 							{% for author in sorted_authors %}<!--
-								-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %} 
+								-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %}
 								{% assign author_items = site.authors[author] %}
 								{% if author == 'jonathan' %}
 									<a class="teaser-author" href="{{ site.baseurl }}/autor">
@@ -802,7 +802,7 @@ layout: default
 								{{ author_items.name }}<!--
 								--></a><!--
 							-->{% endfor %}
-							en 
+							en
 							{% assign sorted_categories = post.categories | sort %}
 							{% for category in sorted_categories %}
 								<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->

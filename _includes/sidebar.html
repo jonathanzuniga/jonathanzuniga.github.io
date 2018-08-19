@@ -1,6 +1,6 @@
 
 <div id="sidebar__body" class="sidebar__body">
-	<h5>Recent articles</h5>
+	<h5>Artículos recientes</h5>
 
 	<ul class="ls-unstyled ac-c">
 		{% for post in site.posts limit: 16 %}
@@ -12,21 +12,10 @@
 		{% endfor %}
 		<li>
 			<a href="{{ site.baseurl }}/articles">
-				<i>Read more publications</i>
+				<i>Leer más artículos</i>
 			</a>
 		</li>
 	</ul>
-
-{% comment %}
-	<p class="">
-		<input id="switch-night-mode" class="switch switch--sm" type="checkbox">
-		<label for="switch-night-mode" id="lbl-night-mode">
-			<span>
-				<i id="icon-night-mode" class="ion-ios-moon-outline" title="Modo nocturno"></i>
-			</span>
-		</label>
-	</p>
-{% endcomment %}
 </div>
 
 

@@ -1,8 +1,10 @@
 
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i');
+
 // $fonts: (
 // 	'Faune' 'Display' (
-// 		// 'Thin'        100 'normal', 
-// 		'Bold_Italic' 700 'italic', 
+// 		// 'Thin'        100 'normal',
+// 		'Bold_Italic' 700 'italic',
 // 		// 'Black'       900 'normal'
 // 	),
 // 	'Faune' 'Text' (
@@ -32,19 +34,19 @@
 
 // $fonts: (
 // 	'Mort Modern' 'Large' (
-// 		// '01' 'Light'    300, 
-// 		// '02' 'Regular'  400, 
-// 		// '03' 'Medium'   500, 
-// 		// '04' 'SemiBold' 600, 
-// 		'05' 'Bold'     700, 
+// 		// '01' 'Light'    300,
+// 		// '02' 'Regular'  400,
+// 		// '03' 'Medium'   500,
+// 		// '04' 'SemiBold' 600,
+// 		'05' 'Bold'     700,
 // 		// '06' 'Black'    800,
 // 	),
 // 	'Mort Modern' 'Text' (
-// 		// '23' 'Light'    300, 
-// 		'24' 'Regular'  400, 
-// 		'25' 'Medium'   500, 
-// 		// '26' 'SemiBold' 600, 
-// 		'27' 'Bold'     700, 
+// 		// '23' 'Light'    300,
+// 		'24' 'Regular'  400,
+// 		'25' 'Medium'   500,
+// 		// '26' 'SemiBold' 600,
+// 		'27' 'Bold'     700,
 // 		// '28' 'Black'    800
 // 	)
 // );
@@ -52,8 +54,8 @@
 // @function str_replace($string, $search, $replace: '') {
 // 	$index: str_index($string, $search);
 // 	@if $index {
-// 		@return str_slice($string, 1, $index - 1) + 
-// 			$replace + 
+// 		@return str_slice($string, 1, $index - 1) +
+// 			$replace +
 // 			str_replace(
 // 				str_slice($string, $index + str_length($search)
 // 			), $search, $replace);
@@ -68,7 +70,7 @@
 // 		@font-face {
 // 			font-family: '#{$font-family} #{$optical-size}';
 // 			font-weight: #{$weight-num};
-// 			src: url('../fonts/#{$font-family-r}Pro/#{$font-family-r}-#{$number}#{$optical-size}#{$weight}.otf') 
+// 			src: url('../fonts/#{$font-family-r}Pro/#{$font-family-r}-#{$number}#{$optical-size}#{$weight}.otf')
 // 			     format('opentype');
 // 		}
 
@@ -76,7 +78,7 @@
 // 			font-family: '#{$font-family} #{$optical-size}';
 // 			font-style: italic;
 // 			font-weight: #{$weight-num};
-// 			src: url('../fonts/#{$font-family-r}Pro/#{$font-family-r}-#{$number}#{$optical-size}#{$weight}Italic.otf') 
+// 			src: url('../fonts/#{$font-family-r}Pro/#{$font-family-r}-#{$number}#{$optical-size}#{$weight}Italic.otf')
 // 			     format('opentype');
 // 		}
 // 	}

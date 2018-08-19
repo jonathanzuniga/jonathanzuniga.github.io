@@ -14,15 +14,20 @@
 	<link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}" media="screen">
 
 	<script>
-		;(function(window, document, undefined) {
+
+		;( function( window, document, undefined ) {
+
 			'use strict';
 
-			if (!('localStorage' in window)) return;
+			if ( ! ( 'localStorage' in window ) ) return;
 
-			var nightMode = localStorage.getItem('nightMode');
-			if (!nightMode) return;
+			let nightMode = localStorage.getItem( 'nightMode' );
 
-			document.documentElement.classList.add('night', 'txt-smooth');
-		})(window, document);
+			if ( ! nightMode ) return;
+
+			document.documentElement.classList.add( 'night', 'fsmooth' );
+
+		} ) ( window, document );
+
 	</script>
 </head>

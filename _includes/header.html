@@ -4,32 +4,28 @@
 		<div class="row gutters-0">
 			<div class="col-12">
 				{% assign current = page.url | downcase | split: '/' %}
-				<nav class="navbar navbar--dark maxmd-navbar-responsive">
-					<a class="header__avatar-wrap maxmd-order-2" href="{{ site.baseurl }}/">
-						<img class="header__avatar img-responsive" src="{{ site.baseurl }}/images/authors/{{ author.avatar }}" alt="Avatar">
-					</a>
-
-					<div class="navbar__brand maxmd-fxg-1 maxmd-order-3">
-						<a class="navbar__a p-left-0" href="{{ site.baseurl }}/">
+				<nav class="navbar navbar--dark maxmd-navbar-responsive maxmd-jc-space-between">
+					<div class="navbar__brand maxmd-fxg-1 maxmd-order-2 maxmd-jc-center">
+						<a class="navbar__a" href="{{ site.baseurl }}/">
 							<span class="header__title anim-slide-out-in">{{ author.name }} {{ author.lastname }}</span>
 						</a>
 					</div>
 
-					<div class="navbar__no-collapse maxmd-order-5 jc-space-between fxg-1">
+					<div class="navbar__no-collapse maxmd-order-4 fxg-1">
 						<ul class="navbar__menu">
 							<li class="navbar__item {% if page.url == '/' %}active{% endif %}">
 								<a class="navbar__a a a--home" href="{{ site.baseurl }}/">
-									Home
+									Inicio
 								</a>
 							</li>
 							<li class="navbar__item {% if current[1] == 'articles' %}active{% endif %}">
 								<a class="navbar__a a a--articles" href="{{ site.baseurl }}/articles">
-									Articles
+									Artículos
 								</a>
 							</li>
 							<li class="navbar__item {% if current[1] == 'about' %}active{% endif %}">
 								<a class="navbar__a a a--about" href="{{ site.baseurl }}/about">
-									About
+									Autor
 								</a>
 							</li>
 							{% if author.twitter_username %}
@@ -49,10 +45,10 @@
 						</ul>
 					</div>
 
-					<div class="navbar__form maxmd-order-4 maxmd-p-x-0">
+					<div class="navbar__form maxmd-order-3 maxmd-p-x-0">
 						<div class="header__search-wrap anim-slide-in-out">
 							<form id="header__search-form" class="header__search-form" action="/search" method="get">
-								<input id="header__search-input" class="header__search-input input input--pill" name="query" placeholder="Search in the archives" type="text">
+								<input id="header__search-input" class="header__search-input input input--pill" name="query" placeholder="Buscar en los artículos" type="text">
 							</form>
 						</div>
 
@@ -60,6 +56,14 @@
 							<img class="header__icn header__icn--search" src="../images/ionicons_svg_md-search.svg" alt="Search icon">
 							<img class="header__icn header__icn--close" src="../images/ionicons_svg_md-close.svg" alt="Search icon">
 						</button>
+					</div>
+
+					<div class="navbar__no-collapse maxmd-order-1 header__night-mode">
+						<li class="navbar__item">
+							<button id="header__night-mode-btn" class="navbar__a a btn btn--link header__night-mode-btn">
+								<img class="header__icn header__icn--moon" src="../images/ionicons_svg_md-moon.svg" alt="Moon icon">
+							</button>
+						</li>
 					</div>
 				</nav>
 			</div>
