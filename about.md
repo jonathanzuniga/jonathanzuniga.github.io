@@ -8,7 +8,7 @@ title: 'Hola, mi nombre es Jonathan Zúñiga'
 
 {% assign author = site.authors['jonathan'] %}
 
-Soy un desarrollador front-end viviendo y trabajando en Tijuana, Baja California, una de las ciudades fronterizas más transitadas del mundo. Me especializo en la creación de aplicaciones web responsivas y totalmente personalizadas que interactúan con las APIs y servicios de terceros para crear experiencias simples y deliciosas. El trabajo que he realizado ha sido variado, pero principalmente desarrollo de sitios web y aplicaciones móviles, sin embargo cada vez que encuentro algo de tiempo libre, me gusta experimentar con la programación de juegos 2D.
+Soy un desarrollador front-end viviendo y trabajando en la ciudad de Tijuana, BC. Los proyectos que he realizado a lo largo de mi vida han sido variados, pero principalmente el desarrollo de sitios web y de aplicaciones móviles, sin embargo cada vez que encuentro algo de tiempo libre me gusta experimentar con la programación de juegos 2D, o simplemente escribir código creativo. Esa intersección que existe entre el arte y la tecnología es la que siempre he encontrado fascinante.
 
 Antes de estar expuesto a los microprocesadores, tenía la intención de estudiar diseño gráfico. Sin embargo, hacer cosas con los *bits* y los *bytes* es mucho más divertido que con los materiales tradicionales. Aproximadamente en el año 2000 hice mi primera página web en el extinto Geocities y de allí hice páginas por entretenimiento hasta que en el 2004, con mi sitio —antes de ser un blog— y otros para diversos clientes he estado involucrado en el maravilloso y desordenado mundo web.
 
