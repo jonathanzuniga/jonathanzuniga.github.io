@@ -4,51 +4,11 @@
 
 @charset 'utf-8';
 
-$base-font-size-sm: 1rem;
-$base-font-size-md: 1rem;
-$base-font-size-lg: 1rem;
+$day__header-bg-color: #fff;
+$ngt__header-bg-color: #1d1b20;
 
-$day__navbar-bg-color: #4d6baf;
-$ngt__navbar-bg-color: #151515;
-$navbar-a-font-weight: 500;
-$navbar-min-height:    56px;
-$md-navbar-min-height: 64px;
+$navbar-min-height:    48px;
 
-$day__navbar__input-bg-color:                rgba( #fff, 0.125 );
-$day__navbar__input-border-color:            transparent !important;
-$day__navbar__input-color:                   rgba( #fff, 0.9 );
-$day__navbar__input-placeholder-color:       rgba( #fff, 0.5 );
-
-$day__navbar__input-hover-bg-color:          rgba( #fff, 0.125 );
-
-$day__navbar__input-focus-bg-color:          rgba( #fff, 0.125 );
-$day__navbar__input-focus-border-color:      rgba( #fff, 0.6 ) !important;
-$day__navbar__input-focus-box-shadow:        inset 0 0 0 0.063rem $day__navbar__input-focus-border-color;
-$day__navbar__input-focus-placeholder-color: rgba( #fff, 0.25 );
-
-$day__navbar__input-active-border-color:     $day__navbar__input-focus-border-color;
-
-$day__body-bg-color: #fff;
-$ngt__body-bg-color: #202020;
-$day__body-color:    rgba( #000, 0.9 );
-$ngt__body-color:    rgba( #fff, 0.9 );
-
-$day__a-color:         #4d6baf;
-$ngt__a-color:         lighten( $day__a-color, 15% );
-$a-font-weight:        500;
-$day__a-visited-color: $day__a-color;
-$ngt__a-visited-color: $ngt__a-color;
-$day__a-hover-color:   darken( $day__a-color, 15% );
-$ngt__a-hover-color:   darken( $ngt__a-color, 15% );
-
-$a-border-bottom-width:            0.063rem;
-$a-border-bottom-style:            solid;
-$day__a-border-bottom-color:       $day__a-color;
-$ngt__a-border-bottom-color:       $ngt__a-color;
-$day__a-hover-border-bottom-color: $day__a-hover-color;
-$ngt__a-hover-border-bottom-color: $ngt__a-hover-color;
-
-$container-max-width: 1880px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 

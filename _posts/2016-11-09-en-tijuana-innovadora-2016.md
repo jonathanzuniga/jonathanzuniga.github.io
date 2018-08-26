@@ -2,7 +2,7 @@
 authors: [jonathan]
 categories: [stories]
 date: 2016-11-09
-description: 'Tuve la oportunidad de haber asistido a tres conferencias con el tema de tecnología, protección animal <i>y</i> entretenimiento.'
+summary: 'Tuve la oportunidad de haber asistido a tres conferencias con el tema de tecnología, protección animal <i>y</i> entretenimiento.'
 layout: post
 title: 'En Tijuana Innovadora 2016'
 ---

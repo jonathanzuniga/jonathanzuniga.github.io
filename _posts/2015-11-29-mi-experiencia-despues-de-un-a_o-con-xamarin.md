@@ -2,7 +2,7 @@
 authors: [jonathan]
 categories: ['mobile development']
 date: 2015-11-29 14:50:00
-description: '¿Las aplicaciones móviles solo convienen ser desarrolladas de forma nativa? Si así fuera ¿es posible mantener un buen nivel en dos o tres diferentes lenguajes de programación para hacer la misma tarea?'
+summary: '¿Las aplicaciones móviles solo convienen ser desarrolladas de forma nativa? Si así fuera ¿es posible mantener un buen nivel en dos o tres diferentes lenguajes de programación para hacer la misma tarea?'
 layout: post
 title: 'Mi experiencia después de un año con Xamarin'
 ---

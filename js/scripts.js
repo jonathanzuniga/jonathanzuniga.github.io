@@ -1,40 +1,60 @@
 
 jQuery( document ).ready( function ( $ ) {
 
-	$( '#header__search-form' ).submit( function () {
+	// Navbar collapse
 
-		let is_form_valid = true;
+	$( '#header__toggler-btn' ).click( function () {
 
-		// No permitir buscar si el input esta vacio.
+		if ( $( '#navbar-collapse' ).hasClass( 'show' ) ) {
 
-		if ( $.trim( $( '#header__search-input' ).val() ).length == 0 )
-			is_form_valid = false;
-
-		return is_form_valid;
-
-	} );
-
-	$( '#header__search-btn' ).click( function () {
-
-		let _this = $( this );
-
-		$( '#header__search-input' ).val( '' );
-
-		if ( ! $( '.navbar' ).hasClass( 'active-search' ) ) {
-
-			_this.closest( '.navbar' ).removeClass( 'inactive-search' ).addClass( 'active-search' );
-
-			$( '#header__search-input' ).focus();
+			$( '#navbar-collapse' )
+				.css( 'height', 0 )
+				.removeClass( 'show' );
 
 		} else {
 
-			_this.closest( '.navbar' ).removeClass( 'active-search' ).addClass( 'inactive-search' );
-
-			$( '#header__search-input' ).blur();
+			$( '#navbar-collapse' )
+				.css( 'height', $( '#navbar-collapse' )[ 0 ].scrollHeight + 24 )
+				.addClass( 'show' );
 
 		}
 
 	} );
+
+	// $( '#header__search-form' ).submit( function () {
+
+	// 	let is_form_valid = true;
+
+	// 	// No permitir buscar si el input esta vacio.
+
+	// 	if ( $.trim( $( '#header__search-input' ).val() ).length == 0 )
+	// 		is_form_valid = false;
+
+	// 	return is_form_valid;
+
+	// } );
+
+	// $( '#header__search-btn' ).click( function () {
+
+	// 	let _this = $( this );
+
+	// 	$( '#header__search-input' ).val( '' );
+
+	// 	if ( ! $( '.navbar' ).hasClass( 'active-search' ) ) {
+
+	// 		_this.closest( '.navbar' ).removeClass( 'inactive-search' ).addClass( 'active-search' );
+
+	// 		$( '#header__search-input' ).focus();
+
+	// 	} else {
+
+	// 		_this.closest( '.navbar' ).removeClass( 'active-search' ).addClass( 'inactive-search' );
+
+	// 		$( '#header__search-input' ).blur();
+
+	// 	}
+
+	// } );
 
 	// iscroll
 

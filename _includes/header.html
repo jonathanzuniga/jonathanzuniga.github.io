@@ -4,66 +4,83 @@
 		<div class="row gutters-0">
 			<div class="col-12">
 				{% assign current = page.url | downcase | split: '/' %}
-				<nav class="navbar navbar--dark maxmd-navbar-responsive maxmd-jc-space-between">
-					<div class="navbar__brand maxmd-fxg-1 maxmd-order-2 maxmd-jc-center">
-						<a class="navbar__a" href="{{ site.baseurl }}/">
-							<span class="header__title anim-slide-out-in">{{ author.name }} {{ author.lastname }}</span>
-						</a>
+				<nav class="navbar sm-navbar--expand">
+					<div class="navbar__items fxg-1 maxsm-order-2">
+						<div class="navbar__brand maxsm-jc-center maxsm-order-1">
+							<div class="navbar__item">
+								<a href="{{ site.baseurl }}/">
+									<span class="header__title maxmd-d-none">{{ author.name }} {{ author.lastname }}</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="navbar__item maxsm-p-x-0 fxg-1 maxsm-order-2">
+							<div class="header__search-wrap">
+								<form id="header__search-form" class="header__search-form" action="/search" method="get">
+									<input id="header__search-input" class="header__search-input input input--flat" name="query" placeholder="Buscar en los artículos" type="text">
+								</form>
+							</div>
+						</div>
+
+						<div class="navbar__items maxsm-order-3">
+							<div class="navbar__item">
+								<button id="header__night-mode-btn" class="btn btn--link btn--pill p-x-025 header__night-mode-btn">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M195 125c0-26.3 5.3-51.3 14.9-74.1C118.7 73 51 155.1 51 253c0 114.8 93.2 208 208 208 97.9 0 180-67.7 202.1-158.9-22.8 9.6-47.9 14.9-74.1 14.9-106 0-192-86-192-192z" /></svg>
+								</button>
+							</div>
+						</div>
+
+						<div class="navbar__toggler maxsm-order-4">
+							<div class="navbar__item">
+								<button id="header__toggler-btn" class="btn btn--link btn--pill p-x-025 header__toggler-btn" data-target="#navbar-collapse" data-toggle="collapse">
+									<svg class="svg svg--menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64 384h384v-42.666H64V384zm0-106.666h384v-42.667H64v42.667zM64 128v42.665h384V128H64z" /></svg>
+									<svg class="svg svg--close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z" /></svg>
+								</button>
+							</div>
+						</div>
 					</div>
 
-					<div class="navbar__no-collapse maxmd-order-4 fxg-1">
-						<ul class="navbar__menu">
+					<div id="navbar-collapse" class="navbar__collapse collapse maxsm-order-1 sm-jc-space-between">
+						<ul class="navbar__items">
 							<li class="navbar__item {% if page.url == '/' %}active{% endif %}">
-								<a class="navbar__a a a--home" href="{{ site.baseurl }}/">
+								<a href="{{ site.baseurl }}/">
 									Inicio
 								</a>
 							</li>
 							<li class="navbar__item {% if current[1] == 'articles' %}active{% endif %}">
-								<a class="navbar__a a a--articles" href="{{ site.baseurl }}/articles">
+								<a href="{{ site.baseurl }}/articles">
 									Artículos
 								</a>
 							</li>
 							<li class="navbar__item {% if current[1] == 'about' %}active{% endif %}">
-								<a class="navbar__a a a--about" href="{{ site.baseurl }}/about">
+								<a href="{{ site.baseurl }}/about">
 									Autor
 								</a>
 							</li>
+
 							{% if author.twitter_username %}
+
 								<li class="navbar__item">
-									<a class="navbar__a a a--twitter" href="https://twitter.com/{{ author.twitter_username }}" target="_blank">
+									<a href="https://twitter.com/{{ author.twitter_username }}"
+										target="_blank">
 										Twitter
 									</a>
 								</li>
+
 							{% endif %}
+
 							{% if author.github_username %}
+
 								<li class="navbar__item">
-									<a class="navbar__a a a--github" href="https://github.com/{{ author.github_username }}" target="_blank">
+									<a href="https://github.com/{{ author.github_username }}"
+										target="_blank">
 										GitHub
 									</a>
 								</li>
+
 							{% endif %}
+
 						</ul>
-					</div>
-
-					<div class="navbar__form maxmd-order-3 maxmd-p-x-0">
-						<div class="header__search-wrap anim-slide-in-out">
-							<form id="header__search-form" class="header__search-form" action="/search" method="get">
-								<input id="header__search-input" class="header__search-input input input--pill" name="query" placeholder="Buscar en los artículos" type="text">
-							</form>
-						</div>
-
-						<button id="header__search-btn" class="header__search-btn md-d-none btn btn--link">
-							<img class="header__icn header__icn--search" src="../images/ionicons_svg_md-search.svg" alt="Search icon">
-							<img class="header__icn header__icn--close" src="../images/ionicons_svg_md-close.svg" alt="Search icon">
-						</button>
-					</div>
-
-					<div class="navbar__no-collapse maxmd-order-1 header__night-mode">
-						<li class="navbar__item">
-							<button id="header__night-mode-btn" class="navbar__a a btn btn--link header__night-mode-btn">
-								<img class="header__icn header__icn--moon" src="../images/ionicons_svg_md-moon.svg" alt="Moon icon">
-							</button>
-						</li>
 					</div>
 				</nav>
 			</div>

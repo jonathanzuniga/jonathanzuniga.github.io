@@ -15,9 +15,9 @@ layout: default
 				{{ page.title }}
 			</h1>
 
-			{% if page.description %}
-				<p class="post__description fs-lg fw-300">
-					{{ page.description }}
+			{% if page.summary %}
+				<p class="post__summary fs-lg">
+					{{ page.summary }}
 				</p>
 			{% endif %}
 		</header>
@@ -45,7 +45,7 @@ layout: default
 		{% comment %}
 		<div class="post__meta">
 			<!-- <span class="post__author">
-				por 
+				por
 				{% assign author = site.authors['jonathan'] %}
 				<a class="author-link" href="{{ site.baseurl }}/autor">
 					{{ author.name }}
@@ -92,7 +92,7 @@ layout: default
 {% endcomment %}
 
 
-		
+
 
 <!-- <div class="page-nav">
 	<div class="row cols-2up">
@@ -188,7 +188,7 @@ layout: default
 		</h1>
 
 		<p class="post__meta">
-			<span class="post__date">{% include date.html %}</span>, 
+			<span class="post__date">{% include date.html %}</span>,
 
 			{% if page.description %}
 				<span class="post__description">
@@ -243,7 +243,7 @@ layout: default
 
 		<p class="post-meta">
 			<span class="post-author">
-				por 
+				por
 				{% assign author = site.authors['jonathan'] %}
 				<a class="post-authorLink" href="{{ site.baseurl }}/autor">
 					{{ author.name }}
@@ -272,7 +272,7 @@ layout: default
 		<hr>
 
 		<p class="post-comments">
-			¿Tienes algún comentario que compartir? 
+			¿Tienes algún comentario que compartir?
 			<a href="http://twitter.com/home?status=%40jonathan_zuniga%20mi%20comentario%20sobre%20tu%20publicación%20{{ page.title | truncatewords: 5 }}%20" target="_blank">Enviame un tweet</a>.
 		</p>
 	</section>
@@ -339,7 +339,7 @@ layout: default
 
 
 
-	
+
 {% comment %}
 <div class="layout-content layout-content-entry">
 	<article lang="es" role="main">
@@ -363,7 +363,7 @@ layout: default
 				por
 				{% assign sorted_authors = page.authors | sort %}
 				{% for author in sorted_authors %}<!--
-					-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %} 
+					-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %}
 					{% assign author_items = site.authors[author] %}
 					{% if author == 'jonathan' %}
 						<a class="teaser-author" href="{{ site.baseurl }}/autor">
@@ -373,7 +373,7 @@ layout: default
 						{{ author_items.name }}<!--
 					--></a><!--
 				-->{% endfor %}
-				en 
+				en
 				{% assign sorted_categories = page.categories | sort %}
 				{% for category in sorted_categories %}
 					{% if category == 'articulos' %}
@@ -388,7 +388,7 @@ layout: default
 				{% if author_items.github_username %}
 					{% assign filename = page.url | replace_first: '/', '' | replace: '/', '-' | replace: '.html', '.md' %}
 					<a href="https://github.com/{{ author_items.github_username }}/jonathanzuniga.github.io/edit/master/_posts/articles/{{ filename }}.md">
-						Mejora 
+						Mejora
 						{% assign sorted_categories = page.categories | sort %}
 						{% for category in sorted_categories %}
 							{% if category == 'historias' %}
@@ -399,11 +399,11 @@ layout: default
 						{% endfor %}
 						en GitHub</a>.
 				{% endif %}
-				Esta obra está bajo una licencia 
+				Esta obra está bajo una licencia
 				<a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">Creative Commons Atribución 4.0 Internacional</a>.
 			</p>
 		</div>
-		
+
 		<ul class="tags">
 			{% assign sorted_tags = page.tags | sort %}
 			{% for tag in sorted_tags %}

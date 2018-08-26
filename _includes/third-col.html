@@ -16,7 +16,7 @@
 
 	{% elsif page.layout == 'post' %}
 
-		<ul class="ls-unstyled ac-c">
+		<ul class="ls ac-c">
 			<li class="toc-entry toc-h2"><a href="#examples">Examples</a></li>
 			<li class="toc-entry toc-h2"><a href="#button-tags">Button tags</a></li>
 			<li class="toc-entry toc-h2"><a href="#outline-buttons">Outline buttons</a></li>
@@ -24,7 +24,7 @@
 			<li class="toc-entry toc-h2"><a href="#active-state">Active state</a></li>
 			<li class="toc-entry toc-h2"><a href="#disabled-state">Disabled state</a></li>
 			<li class="toc-entry toc-h2"><a href="#button-plugin">Button plugin</a>
-				<ul class="ls-unstyled">
+				<ul class="ls">
 					<li class="toc-entry toc-h3"><a href="#toggle-states">Toggle states</a></li>
 					<li class="toc-entry toc-h3"><a href="#checkbox-and-radio-buttons">Checkbox and radio buttons</a></li>
 					<li class="toc-entry toc-h3"><a href="#methods">Methods</a></li>
@@ -46,7 +46,7 @@
 			Proyectos selectos
 		</h5>
 
-		<ul class="ls-unstyled ac-c">
+		<ul class="ls ac-c">
 			{% assign selected_projects = site.data.selected_projects | sort: 'title' %}
 			{% for sp in selected_projects | limit: 6 %}
 			  <li>
@@ -69,7 +69,7 @@
 			Lectura recomendada
 		</h5>
 
-		<ul class="ls-unstyled ac-c">
+		<ul class="ls ac-c">
 			{% assign recommended_reading = site.data.recommended_reading %}
 			{% for rr in recommended_reading | limit: 3 %}
 			  <li>
