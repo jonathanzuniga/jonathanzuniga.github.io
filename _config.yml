@@ -13,7 +13,7 @@ encoding: utf-8
 # Author details
 authors:
   jonathan:
-    avatar: avatar-flat-jz-512.png
+    avatar:
     name: Jonathan
     lastname: Zúñiga
     email: jonathanzuniga@gmail.com

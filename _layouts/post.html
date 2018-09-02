@@ -5,13 +5,7 @@ layout: default
 <div class="posts">
 	<div id="post-{{ forloop.index }}" class="post post-{{ forloop.index }}">
 		<header class="post__header">
-			<div class="post__meta">
-				<span class="post__date">
-					{% include date.html %}
-				</span>
-			</div>
-
-			<h1 class="post__title ac-c m-top-1 m-bottom-1">
+			<h1 class="post__title h2">
 				{{ page.title }}
 			</h1>
 
@@ -24,6 +18,12 @@ layout: default
 
 		<div class="post__content">
 			{{ page.content }}
+		</div>
+
+		<div class="post__meta">
+			<span class="post__date">
+				{% include date.html %}
+			</span>
 		</div>
 	</div>
 </div>

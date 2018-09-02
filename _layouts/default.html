@@ -23,20 +23,20 @@
 
 			<div class="cntr">
 				<div class="row jc-flex-end maxmd-jc-center">
-					<div id="sidebar" class="sidebar md-col-2 maxmd-d-none">
+					<div class="content sm-col-12 md-col-8 a-bd-bottom order-2">
+						<div class="row">
+							<div class="sm-col-8 md-col-12">
+								{{ content }}
+							</div>
+						</div>
+					</div>
+
+					<div id="sidebar" class="sidebar md-col-2 maxmd-d-none order-1">
 						{% include sidebar.html %}
 					</div>
 
 					<div id="third-col" class="third-col sm-col-8 md-col-2 order-3">
 						{% include third-col.html %}
-					</div>
-
-					<div class="content sm-col-12 md-col-8 a-bd-bottom">
-						<div class="row jc-center">
-							<div class="sm-col-8 md-col-12 lg-col-11 xl-col-10">
-								{{ content }}
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>

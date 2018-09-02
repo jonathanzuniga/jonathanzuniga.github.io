@@ -5,43 +5,40 @@
 			<div class="col-12">
 				{% assign current = page.url | downcase | split: '/' %}
 				<nav class="navbar sm-navbar--expand">
-					<div class="navbar__items fxg-1 maxsm-order-2">
+					<div class="navbar__items fxg-1 maxsm-order-1">
 						<div class="navbar__brand maxsm-jc-center maxsm-order-1">
 							<div class="navbar__item">
-								<a href="{{ site.baseurl }}/">
+								<a class="p-left-0" href="{{ site.baseurl }}/">
 									<span class="header__title maxmd-d-none">{{ author.name }} {{ author.lastname }}</span>
 								</a>
 							</div>
 						</div>
 
-						<div class="navbar__item maxsm-p-x-0 fxg-1 maxsm-order-2">
-							<div class="header__search-wrap">
+						<div class="navbar__item fxg-1 maxsm-order-2">
+							<div class="header__search-wrap w-100">
 								<form id="header__search-form" class="header__search-form" action="/search" method="get">
-									<input id="header__search-input" class="header__search-input input input--flat" name="query" placeholder="Buscar en los artículos" type="text">
+									<div class="ctrl ctrl--icn-left">
+										<input id="header__search-input" class="header__search-input input input--flat input--pill" name="query" placeholder="Buscar en los artículos" type="text">
+										<span class="icn-wrap">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M337.509 305.372h-17.501l-6.571-5.486c20.791-25.232 33.922-57.054 33.922-93.257C347.358 127.632 283.896 64 205.135 64 127.452 64 64 127.632 64 206.629s63.452 142.628 142.225 142.628c35.011 0 67.831-13.167 92.991-34.008l6.561 5.487v17.551L415.18 448 448 415.086 337.509 305.372zm-131.284 0c-54.702 0-98.463-43.887-98.463-98.743 0-54.858 43.761-98.742 98.463-98.742 54.7 0 98.462 43.884 98.462 98.742 0 54.856-43.762 98.743-98.462 98.743z" /></svg>
+										</span>
+									</div>
 								</form>
 							</div>
 						</div>
 
-						<div class="navbar__items maxsm-order-3">
+						<div class="navbar__toggler maxsm-order-3">
 							<div class="navbar__item">
-								<button id="header__night-mode-btn" class="btn btn--link btn--pill p-x-025 header__night-mode-btn">
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M195 125c0-26.3 5.3-51.3 14.9-74.1C118.7 73 51 155.1 51 253c0 114.8 93.2 208 208 208 97.9 0 180-67.7 202.1-158.9-22.8 9.6-47.9 14.9-74.1 14.9-106 0-192-86-192-192z" /></svg>
-								</button>
-							</div>
-						</div>
-
-						<div class="navbar__toggler maxsm-order-4">
-							<div class="navbar__item">
-								<button id="header__toggler-btn" class="btn btn--link btn--pill p-x-025 header__toggler-btn" data-target="#navbar-collapse" data-toggle="collapse">
+								<button id="header__toggler-btn" class="header__toggler-btn btn btn--link btn--pill p-right-0" data-target="#navbar-collapse" data-toggle="collapse">
 									<svg class="svg svg--menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64 384h384v-42.666H64V384zm0-106.666h384v-42.667H64v42.667zM64 128v42.665h384V128H64z" /></svg>
-									<svg class="svg svg--close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z" /></svg>
+									<!-- <svg class="svg svg--close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z" /></svg> -->
 								</button>
 							</div>
 						</div>
 					</div>
 
-					<div id="navbar-collapse" class="navbar__collapse collapse maxsm-order-1 sm-jc-space-between">
-						<ul class="navbar__items">
+					<div id="navbar-collapse" class="navbar__collapse collapse maxsm-order-2 sm-jc-space-between">
+						<ul class="navbar__items ta-right">
 							<li class="navbar__item {% if page.url == '/' %}active{% endif %}">
 								<a href="{{ site.baseurl }}/">
 									Inicio
@@ -79,6 +76,12 @@
 								</li>
 
 							{% endif %}
+
+							<li class="navbar__item">
+								<button id="header__night-mode-btn" class="header__night-mode-btn btn btn--link btn--pill p-right-0 maxmd-ta-right">
+									<svg class="navbar__icn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M195 125c0-26.3 5.3-51.3 14.9-74.1C118.7 73 51 155.1 51 253c0 114.8 93.2 208 208 208 97.9 0 180-67.7 202.1-158.9-22.8 9.6-47.9 14.9-74.1 14.9-106 0-192-86-192-192z" /></svg>
+								</button>
+							</li>
 
 						</ul>
 					</div>

@@ -6,13 +6,7 @@ layout: default
 	{% for post in site.posts limit: 4 %}
 		<div id="post-{{ forloop.index }}" class="post post-{{ forloop.index }}">
 			<header class="post__header">
-				<div class="post__meta">
-					<span class="post__date">
-						{% include date.html %}
-					</span>
-				</div>
-
-				<h2 class="post__title ac-c h1 m-top-1 m-bottom-1">
+				<h2 class="post__title h2">
 					<a class="post__link" href="{{ post.url }}">
 						{{ post.title }}
 					</a>
@@ -27,6 +21,12 @@ layout: default
 
 			<div class="post__content">
 				{{ post.content }}
+			</div>
+
+			<div class="post__meta">
+				<span class="post__date">
+					{% include date.html %}
+				</span>
 			</div>
 		</div>
 	{% endfor %}
