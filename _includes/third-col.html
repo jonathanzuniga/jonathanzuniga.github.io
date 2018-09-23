@@ -32,59 +32,67 @@
 			</li>
 		</ul>
 
-	{% elsif page.url == '/about' %}
+	{% elsif page.url == '/autor' %}
 
-		<h5>
-			Contactar al autor
-		</h5>
+		<div class="sm-gcols-3 md-gcols-1">
+			<div>
+				<h5>
+					Contactar al autor
+				</h5>
 
-		<p>
-			¿Más preguntas? Siempre puedes <a href="mailto:{{ author.email }}">enviarme un correo electrónico</a> si deseas saber algo que no encuentras en línea, o simplemente para saludar.
-		</p>
-
-		<h5 class="bd-top-0063">
-			Proyectos selectos
-		</h5>
-
-		<ul class="ls">
-			{% assign selected_projects = site.data.selected_projects | sort: 'title' %}
-			{% for sp in selected_projects | limit: 6 %}
-			  <li>
-				<h6 class="m-bottom-0 hyp-auto">
-					<a href="{{ sp.url }}" target="_blank">
-					  {{ sp.title }}
-					</a>
-				</h6>
-
-				{% if sp.description %}
-					<p class="fs-sm">
-						{{ sp.description }}
-					</p>
-				{% endif %}
-			  </li>
-			{% endfor %}
-		</ul>
-
-		<h5 class="bd-top-0063">
-			Lectura recomendada
-		</h5>
-
-		<ul class="ls">
-			{% assign recommended_reading = site.data.recommended_reading %}
-			{% for rr in recommended_reading | limit: 3 %}
-			  <li>
-				<h6 class="m-bottom-0">
-					<a href="{{ rr.url }}" target="_blank">
-					  {{ rr.title }}
-					</a>
-				</h6>
-
-				<p class="fs-sm">
-					<i>by {{ rr.author }}</i>
+				<p>
+					¿Más preguntas? Siempre puedes <a href="mailto:{{ author.email }}">enviarme un correo electrónico</a> si deseas saber algo que no encuentras en línea, o simplemente para saludar.
 				</p>
-			  </li>
-			{% endfor %}
-		</ul>
+			</div>
+
+			<div>
+				<h5>
+					Proyectos selectos
+				</h5>
+
+				<ul class="ls">
+					{% assign selected_projects = site.data.selected_projects | sort: 'title' %}
+					{% for sp in selected_projects | limit: 4 %}
+					  <li>
+						<h6 class="m-bottom-0 hyp-auto">
+							<a href="{{ sp.url }}" target="_blank">
+							  {{ sp.title }}
+							</a>
+						</h6>
+
+						{% if sp.description %}
+							<p class="fs-sm">
+								{{ sp.description }}
+							</p>
+						{% endif %}
+					  </li>
+					{% endfor %}
+				</ul>
+			</div>
+
+			<div>
+				<h5>
+					Lectura recomendada
+				</h5>
+
+				<ul class="ls">
+					{% assign recommended_reading = site.data.recommended_reading %}
+					{% for rr in recommended_reading | limit: 3 %}
+					  <li>
+						<h6 class="m-bottom-0">
+							<a href="{{ rr.url }}" target="_blank">
+							  {{ rr.title }}
+							</a>
+						</h6>
+
+						<p class="fs-sm">
+							<i>by {{ rr.author }}</i>
+						</p>
+					  </li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
 
 	{% endif %}
 

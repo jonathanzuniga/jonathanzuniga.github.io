@@ -68,7 +68,7 @@ jQuery( document ).ready( function ( $ ) {
 	};
 
 	let myScroll1 = null;
-	let myScroll2 = null;
+	// let myScroll2 = null;
 
 	function startIScroll() {
 
@@ -83,15 +83,15 @@ jQuery( document ).ready( function ( $ ) {
 
 			}
 
-			$( '#third-col' ).css( 'overflow-y', '' );
+			// $( '#third-col' ).css( 'overflow-y', '' );
 
-			if ( myScroll2 != null ) {
+			// if ( myScroll2 != null ) {
 
-				myScroll2.scrollTo( 0, 0 );
-				myScroll2.destroy();
-				myScroll2 = null;
+			// 	myScroll2.scrollTo( 0, 0 );
+			// 	myScroll2.destroy();
+			// 	myScroll2 = null;
 
-			}
+			// }
 
 		} else {
 
@@ -103,13 +103,13 @@ jQuery( document ).ready( function ( $ ) {
 
 			}
 
-			if ( myScroll2 == null ) {
+			// if ( myScroll2 == null ) {
 
-				myScroll2 = new IScroll( '#third-col', iScrollOptions );
+			// 	myScroll2 = new IScroll( '#third-col', iScrollOptions );
 
-				$( '#third-col' ).css( 'overflow-y', 'hidden' );
+			// 	$( '#third-col' ).css( 'overflow-y', 'hidden' );
 
-			}
+			// }
 
 		}
 
@@ -155,17 +155,7 @@ jQuery( document ).ready( function ( $ ) {
 
 	function nightMode() {
 
-		if ( ! ( 'localStorage' in window ) ) return;
-
-		let nightMode = localStorage.getItem( 'nightMode' );
-
-		if ( nightMode ) {
-
-			$( '#header__night-mode-btn' ).addClass( 'active' );
-
-		}
-
-		$( '#header__night-mode-btn' ).click( function () {
+		$( '#nm-sw' ).change( function () {
 
 			toggleNightMode( $( this ) );
 
@@ -175,21 +165,17 @@ jQuery( document ).ready( function ( $ ) {
 
 	function toggleNightMode( el ) {
 
-		if ( $( el ).hasClass( 'active' ) ) {
-
-			localStorage.removeItem( 'nightMode' );
-
-			$( 'html' ).removeClass( 'night fsmooth' );
-
-			$( el ).removeClass( 'active' );
-
-		} else {
+		if ( ! $( el ).is( ':checked' ) ) {
 
 			localStorage.setItem( 'nightMode', true );
 
 			$( 'html' ).addClass( 'night fsmooth' );
 
-			$( el ).addClass( 'active' );
+		} else {
+
+			localStorage.removeItem( 'nightMode' );
+
+			$( 'html' ).removeClass( 'night fsmooth' );
 
 		}
 
