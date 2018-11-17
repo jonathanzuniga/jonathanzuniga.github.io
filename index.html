@@ -2,6 +2,188 @@
 layout: default
 ---
 
+<!-- <div class="articles__title bd-bottom-0063 a-custom">
+	<div class="row">
+		<div class="md-col-9">
+			<h1>Recientemente</h1>
+			<p class="fs-lg m-bottom-0">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua.
+			</p>
+		</div>
+	</div>
+</div> -->
+
+<article class="top-articles bd-bottom-0063 a-custom">
+
+	{% for post in site.tags[ 'top-article-start' ] limit: 1 %}
+
+		<section class="post top-article top-article--main-title">
+
+			<h3 class="post__title">
+				<a class="ac-c" href="{{ post.url }}">
+					{{ post.title }}
+				</a>
+			</h3>
+
+		</section>
+
+		<section class="post top-article top-article--start">
+
+			<div class="post__meta">
+				<span class="post__date">
+					{% include date.html %}
+				</span>
+			</div>
+
+			{% if post.summary %}
+
+				<p class="post__summary fs-lg">
+					{{ post.summary }}
+				</p>
+
+				{% comment %}
+				<p class="post__authors smcaps">
+					por
+					{% assign sorted_authors = post.authors | sort %}
+					{% for author in sorted_authors %}<!--
+						-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %}
+						{% assign author_items = site.authors[ author ] %}
+						{% if author == 'jonathan' %}
+							<a href="{{ site.baseurl }}/autor">
+						{% else %}
+							<a href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
+						{% endif %}
+							{{ author_items.first_name }} {{ author_items.last_name }}<!--
+						--></a><!--
+					-->{% endfor %}
+				</p>
+				{% endcomment %}
+
+			{% endif %}
+
+			<div class="post__content post__content--excerpt tindent">
+				{{ post.excerpt }}
+			</div>
+
+		</section>
+
+	{% endfor %}
+
+	{% for post in site.tags[ 'top-article-story' ] limit: 1 %}
+
+		<section class="post top-article top-article--story">
+
+			{% if post.cover %}
+
+				<figure>
+
+					<img class="post__cover img-responsive w-100 bdr-025" src="{{ post.cover }}">
+
+					{% if post.cover_note %}
+
+						<figcaption>
+							{{ post.cover_note }}
+						</figcaption>
+
+					{% endif %}
+
+				</figure>
+
+			{% endif %}
+
+			<h3 class="post__title">
+				<a class="ac-c" href="{{ post.url }}">
+					{{ post.title }}
+				</a>
+			</h3>
+
+			<div class="post__meta">
+				<span class="post__date">
+					{% include date.html %}
+				</span>
+			</div>
+
+			{% if post.summary %}
+
+				<p class="post__summary fs-lg">
+					{{ post.summary }}
+				</p>
+
+			{% endif %}
+
+			<div class="post__content md-cols-2 tindent">
+				{{ post.content }}
+			</div>
+
+		</section>
+
+	{% endfor %}
+
+	{% for post in site.tags[ 'top-article-aside' ] limit: 1 %}
+
+		<aside class="post top-article top-article--aside">
+
+			<h3 class="post__title">
+				<a class="ac-c" href="{{ post.url }}">
+					{{ post.title }}
+				</a>
+			</h3>
+
+			<div class="post__meta">
+				<span class="post__date">
+					{% include date.html %}
+				</span>
+			</div>
+
+			<div class="post__content post__content--excerpt tindent">
+				{{ post.excerpt }}
+			</div>
+
+		</aside>
+
+	{% endfor %}
+
+</article>
+
+<article class="bottom-articles bd-bottom-0063 a-custom">
+
+	{% for post in site.tags[ 'bottom-article' ] limit: 4 %}
+
+		<section class="post bottom-article">
+
+			<h4 class="post__title">
+				<a class="ac-c" href="{{ post.url }}">
+					{{ post.title }}
+				</a>
+			</h4>
+
+			<div class="post__meta">
+				<span class="post__date">
+					{% include date.html %}
+				</span>
+			</div>
+
+			<div class="post__content post__content--excerpt tindent">
+				{{ post.excerpt }}
+			</div>
+
+		</section>
+
+	{% endfor %}
+
+</article>
+
+
+
+
+
+
+
+
+
+
+{% comment %}
 <div class="posts">
 	{% for post in site.posts limit: 4 %}
 		<div id="post-{{ forloop.index }}" class="post post-{{ forloop.index }}">
@@ -31,7 +213,7 @@ layout: default
 		</div>
 	{% endfor %}
 </div>
-
+{% endcomment %}
 
 
 

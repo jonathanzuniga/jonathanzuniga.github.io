@@ -5,7 +5,7 @@
 
 -->
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="fsmooth">
 	{% include head.html %}
 
 	{% assign current = page.url | downcase | split: '/' %}
@@ -21,6 +21,13 @@
 		{% endif %}">
 			{% include header.html %}
 
+			<section class="articles">
+				<div class="cntr">
+					{{ content }}
+				</div>
+			</section>
+
+			{% comment %}
 			<div class="cntr">
 				<div class="row maxmd-jc-center">
 					<div class="main sm-col-9 md-col-8 order-2">
@@ -38,12 +45,15 @@
 					</div>
 				</div>
 			</div>
+			{% endcomment %}
 		</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="{{ '/js/lunr.min.js' | prepend: site.baseurl }}"></script>
-		<script src="{{ '/js/search.js'   | prepend: site.baseurl }}"></script>
-		<script src="{{ '/js/iscroll.js'  | prepend: site.baseurl }}"></script>
-		<script src="{{ '/js/scripts.js'  | prepend: site.baseurl }}"></script>
+		<script src="{{ '/js/search.js' | prepend: site.baseurl }}"></script>
+		<script src="{{ '/js/iscroll.js' | prepend: site.baseurl }}"></script>
+		<!-- <script src="{{ '/js/jquery.fittext.js' | prepend: site.baseurl }}"></script> -->
+		<script src="{{ '/js/fitty.min.js' | prepend: site.baseurl }}"></script>
+		<script src="{{ '/js/scripts.js' | prepend: site.baseurl }}"></script>
 	</body>
 </html>

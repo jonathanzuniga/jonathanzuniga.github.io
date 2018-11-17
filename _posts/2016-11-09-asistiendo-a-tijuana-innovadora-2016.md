@@ -1,17 +1,18 @@
 ---
-authors: [jonathan]
-categories: [stories]
+authors: [ jonathan ]
+categories: momentos
 date: 2016-11-09
-summary: 'Tuve la oportunidad de haber asistido a tres conferencias con el tema de tecnología, protección animal <i>y</i> entretenimiento.'
+summary: 'Tres conferencias con el tema de tecnología, protección animal y entretenimiento.'
 layout: post
-title: 'En Tijuana Innovadora 2016'
+tags: 'top-article-start'
+title: 'Asistiendo a Tijuana Innovadora 2016'
 ---
 
 El miércoles me preparé para asistir a la cuarta edición del evento <a href="http://tijuanainnovadora.com/" target="_blank">Tijuana Innovadora</a>.<!--more--> Antes de salir de la oficina escucho a algunos de mis compañeros hablar acerca de <a href="http://www.imdb.com/title/tt0475784/" target="_blank">Westworld</a>, una serie de televisión que los ha cautivado. Sin tiempo para platicar más, tomo mis cosas y me despido de los demás.
 
 Cuanto tráfico — da la vuelta de regreso.
 
-Llegamos unos minutos tarde para ver a Rika Muranaka. Entramos a la sala Veracruz del [World Trade Center Tijuana](http://www.wtctijuana.com/){:target='_blank'}. Todo esta oscuro con una pantalla larga en el fondo y muchas personas, creo que la mayoría son estudiantes. Prefiero sentarme en la última fila para tener [una mejor vista](https://flic.kr/p/NVA9ub){:target='_blank'}. Ella está platicando de su próximo juego de carreras en el que está trabajando. Reproducen un video de un proyecto que están desarrollando con realidad virtual para ayudar a las personas que sufrió alguna lesión cerebral y nos comparte una parte de sus vivencias. Termina la [sesión de preguntas](https://youtu.be/fLPzUWU6TDs){:target='_blank'}. Me acerco para escucharla y [convivir algunos segundos](https://youtu.be/pUbmhDOPCc8){:target='_blank'} junto con otros asistentes.
+Llegamos unos minutos tarde para ver a Rika Muranaka. Entramos a la sala Veracruz del [World Trade Center Tijuana](http://www.wtctijuana.com/){:target='_blank'}. Todo esta oscuro con una pantalla larga en el fondo y muchas personas, creo que la mayoría son estudiantes. Prefiero sentarme en la última fila para tener [una mejor vista](https://flic.kr/p/NVA9ub){:target='_blank'}. Ella está platicando de su próximo juego de carreras en el que está trabajando. Reproducen un video de<!-- more --> un proyecto que están desarrollando con realidad virtual para ayudar a las personas que sufrió alguna lesión cerebral y nos comparte una parte de sus vivencias. Termina la [sesión de preguntas](https://youtu.be/fLPzUWU6TDs){:target='_blank'}. Me acerco para escucharla y [convivir algunos segundos](https://youtu.be/pUbmhDOPCc8){:target='_blank'} junto con otros asistentes.
 
 Stan y yo salimos del edificio para esperar la siguiente conferencia. Enfrente de nosotros hay [una fuente](https://flic.kr/p/PgoPr5){:target='_blank'}—. Al entrar veo por última vez a Rika y Damien Matthias sacándose fotos con la gente.
 

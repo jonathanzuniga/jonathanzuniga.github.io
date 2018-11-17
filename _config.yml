@@ -14,8 +14,8 @@ encoding: utf-8
 authors:
   jonathan:
     avatar:
-    name: Jonathan
-    lastname: Zúñiga
+    first_name: Jonathan
+    last_name: Zúñiga
     email: jonathanzuniga@gmail.com
     web: http://
     # social media
@@ -32,7 +32,7 @@ authors:
     shelf_username: jonathan
     twitter_username: jonathan_zuniga
 
-excerpt_separator: <!--more-->
+excerpt_separator: <!-- more -->
 
 # Custom permalink
 # permalink: /:year/:month/:day/:title

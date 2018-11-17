@@ -1,5 +1,140 @@
 
 {% assign author = site.authors[ 'jonathan' ] %}
+
+<header class="header">
+	<div class="cntr">
+		<div class="row">
+			<div class="col">
+				<nav class="navbar md-navbar--expand">
+					<div class="navbar__items">
+						<div class="navbar__brand">
+							<a class="navbar__item p-left-0" href="{{ site.baseurl }}/">{{ author.first_name }} {{ author.last_name }}</a>
+						</div>
+					</div>
+					<div id="navbar-collapse" class="navbar__collapse collapse">
+						<div class="navbar__items">
+							<a class="navbar__item {% if page.url == '/' %}active{% endif %}" href="{{ site.baseurl }}/">
+								Inicio
+							</a>
+
+							<a class="navbar__item {% if current[1] == 'articles' %}active{% endif %}" href="{{ site.baseurl }}/articles">
+								Artículos
+							</a>
+
+							<a class="navbar__item {% if current[1] == 'autor' %}active{% endif %}" href="{{ site.baseurl }}/autor">
+								Autor
+							</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!-- <div class="header__subnav">
+	<div class="cntr">
+		<div class="row">
+			<div class="col">
+				<div class="header__categories bd-top-double-0188 bd-bottom-double-0188">
+					<div class="scroll-wrap jc-center">
+						<ul class="menu-x maxw-100">
+							<li class="active">
+								<a href="#">Link 1</a>
+							</li>
+							<li>
+								<a href="#">Link 2</a>
+							</li>
+							<li>
+								<a href="#">Link 3</a>
+							</li>
+							<li>
+								<a href="#">Link 4</a>
+							</li>
+							<li>
+								<a href="#">Link 5</a>
+							</li>
+							<li>
+								<a href="#">Link 6</a>
+							</li>
+							<li>
+								<a href="#">Link 7</a>
+							</li>
+							<li>
+								<a href="#">Link 8</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+
+
+
+{% comment %}
+
+	<div class="xs-col-2 sm-col-1"></div>
+	<div class="maxsm-d-none sm-col-2"></div>
+	<div class="xs-col-8 sm-col-6 p-x-0">
+		<h1 class="header__brand m-0">
+			<span class="header__title">
+				Momentos Continuos
+			</span>
+			<!-- <span class="header__slogan">
+				Historias, observaciones y otros escritos pasados a clicks de distancia
+			</span> -->
+		</h1>
+	</div>
+	<div class="maxsm-d-none sm-col-2"></div>
+	<div class="xs-col-2 sm-col-1"></div>
+</div>
+<div class="row">
+	<div class="col-12">
+		<div class="header__categories bd-top-double-0188 bd-bottom-double-0188">
+			<div class="scroll-wrap jc-center">
+				<ul class="menu-x maxw-100">
+					<li class="active">
+						<a href="#">Link 1</a>
+					</li>
+					<li>
+						<a href="#">Link 2</a>
+					</li>
+					<li>
+						<a href="#">Link 3</a>
+					</li>
+					<li>
+						<a href="#">Link 4</a>
+					</li>
+					<li>
+						<a href="#">Link 5</a>
+					</li>
+					<li>
+						<a href="#">Link 6</a>
+					</li>
+					<li>
+						<a href="#">Link 7</a>
+					</li>
+					<li>
+						<a href="#">Link 8</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+{% endcomment %}
+
+
+
+
+
+
+
+{% comment %}
+{% assign author = site.authors[ 'jonathan' ] %}
 {% assign current = page.url | downcase | split: '/' %}
 
 <header class="header bd-bottom-0063">
@@ -89,7 +224,7 @@
 	} ) ( window, document );
 
 </script>
-
+{% endcomment %}
 
 
 

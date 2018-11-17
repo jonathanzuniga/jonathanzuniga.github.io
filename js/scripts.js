@@ -3,23 +3,23 @@ jQuery( document ).ready( function ( $ ) {
 
 	// Navbar collapse
 
-	$( '#header__toggler-btn' ).click( function () {
+	// $( '#header__toggler-btn' ).click( function () {
 
-		if ( $( '#navbar-collapse' ).hasClass( 'show' ) ) {
+	// 	if ( $( '#navbar-collapse' ).hasClass( 'show' ) ) {
 
-			$( '#navbar-collapse' )
-				.css( 'height', 0 )
-				.removeClass( 'show' );
+	// 		$( '#navbar-collapse' )
+	// 			.css( 'height', 0 )
+	// 			.removeClass( 'show' );
 
-		} else {
+	// 	} else {
 
-			$( '#navbar-collapse' )
-				.css( 'height', $( '#navbar-collapse' )[ 0 ].scrollHeight + 24 )
-				.addClass( 'show' );
+	// 		$( '#navbar-collapse' )
+	// 			.css( 'height', $( '#navbar-collapse' )[ 0 ].scrollHeight + 24 )
+	// 			.addClass( 'show' );
 
-		}
+	// 	}
 
-	} );
+	// } );
 
 	// $( '#header__search-form' ).submit( function () {
 
@@ -58,66 +58,67 @@ jQuery( document ).ready( function ( $ ) {
 
 	// iscroll
 
-	iScrollOptions = {
-		click: true,
-		fadeScrollbars: true,
-		interactiveScrollbars: true,
-		mouseWheel: true,
-		probeType: 2,
-		scrollbars: false
-	};
+	// iScrollOptions = {
+	// 	click: true,
+	// 	fadeScrollbars: true,
+	// 	interactiveScrollbars: true,
+	// 	mouseWheel: true,
+	// 	probeType: 2,
+	// 	scrollbars: false
+	// };
 
-	let myScroll1 = null;
-	// let myScroll2 = null;
+	// let myScroll1 = null;
+	// // let myScroll2 = null;
 
-	function startIScroll() {
+	// function startIScroll() {
 
-		if ( $( window ).width() < 1024 ) {
+	// 	if ( $( window ).width() < 1024 ) {
 
-			$( '#sidebar' ).css( 'overflow-y', '' );
+	// 		$( '#sidebar' ).css( 'overflow-y', '' );
 
-			if ( myScroll1 != null ) {
+	// 		if ( myScroll1 != null ) {
 
-				myScroll1.destroy();
-				myScroll1 = null;
+	// 			myScroll1.destroy();
+	// 			myScroll1 = null;
 
-			}
+	// 		}
 
-			// $( '#third-col' ).css( 'overflow-y', '' );
+	// 		// $( '#third-col' ).css( 'overflow-y', '' );
 
-			// if ( myScroll2 != null ) {
+	// 		// if ( myScroll2 != null ) {
 
-			// 	myScroll2.scrollTo( 0, 0 );
-			// 	myScroll2.destroy();
-			// 	myScroll2 = null;
+	// 		// 	myScroll2.scrollTo( 0, 0 );
+	// 		// 	myScroll2.destroy();
+	// 		// 	myScroll2 = null;
 
-			// }
+	// 		// }
 
-		} else {
+	// 	} else {
 
-			if ( myScroll1 == null ) {
+	// 		if ( myScroll1 == null ) {
 
-				myScroll1 = new IScroll( '#sidebar', iScrollOptions );
+	// 			myScroll1 = new IScroll( '#sidebar', iScrollOptions );
 
-				$( '#sidebar' ).css( 'overflow-y', 'hidden' );
+	// 			$( '#sidebar' ).css( 'overflow-y', 'hidden' );
 
-			}
+	// 		}
 
-			// if ( myScroll2 == null ) {
+	// 		// if ( myScroll2 == null ) {
 
-			// 	myScroll2 = new IScroll( '#third-col', iScrollOptions );
+	// 		// 	myScroll2 = new IScroll( '#third-col', iScrollOptions );
 
-			// 	$( '#third-col' ).css( 'overflow-y', 'hidden' );
+	// 		// 	$( '#third-col' ).css( 'overflow-y', 'hidden' );
 
-			// }
+	// 		// }
 
-		}
+	// 	}
 
-	};
+	// };
 
-	startIScroll();
+	// startIScroll();
 
-	$( window ).resize( startIScroll );
+	// $( window ).resize( startIScroll );
+
 
 	// Show/hide navbar menu when scroll.
 
@@ -131,7 +132,7 @@ jQuery( document ).ready( function ( $ ) {
 
 			let scroll = $( window ).scrollTop();
 
-			if ( scroll > lastScroll ) {
+			if ( scroll > lastScroll + 8 ) {
 
 				$( '.header' ).addClass( 'header--collapsed' );
 				// $( '.header' ).addClass( 'header--shadow' );
@@ -142,8 +143,12 @@ jQuery( document ).ready( function ( $ ) {
 
 			}
 
-			// if ( scroll == 0 )
-			// 	$( '.header' ).removeClass( 'header--shadow' );
+			if ( scroll == 0 ) {
+
+				$( '.header' ).removeClass( 'header--collapsed' );
+				$( '.header' ).removeClass( 'header--shadow' );
+
+			}
 
 			lastScroll = scroll;
 
