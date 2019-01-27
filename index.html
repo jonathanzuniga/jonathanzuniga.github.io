@@ -2,6 +2,47 @@
 layout: default
 ---
 
+{% for post in site.posts limit: 10 %}
+
+	<article class="post post--{{ forloop.index }}">
+		<header class="post__header">
+			<div class="post__date">
+				{% include date.html %}
+			</div>
+
+			<h2 class="post__title h4 ac-c">
+				<a href="{{ post.url }}">
+					{{ post.title }}
+				</a>
+			</h2>
+		</header>
+
+		<div class="post__content post__content--excerpt">
+			{{ post.excerpt }}
+		</div>
+
+		<footer class="post__footer">
+			<p>
+				Publicado en
+				{% assign sorted_categories = post.categories | sort %}
+				{% for category in sorted_categories %}
+					<a href="{{ site.baseurl }}/categoría/{{ category }}">
+						{{ category | replace: '-', ' ' }}
+					</a>{% if forloop.last == false %}, {% endif %}
+				{% endfor %}
+			</p>
+		</footer>
+	</article>
+
+{% endfor %}
+
+
+
+
+
+
+
+{% comment %}
 <!-- <div class="articles__title bd-bottom-0063 a-custom">
 	<div class="row">
 		<div class="md-col-9">
@@ -173,7 +214,7 @@ layout: default
 	{% endfor %}
 
 </article>
-
+{% endcomment %}
 
 
 

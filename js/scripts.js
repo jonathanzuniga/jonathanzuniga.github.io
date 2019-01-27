@@ -122,70 +122,68 @@ jQuery( document ).ready( function ( $ ) {
 
 	// Show/hide navbar menu when scroll.
 
-	let lastScroll = 0;
+	// let lastScroll = 0;
 
-	// $( '.header' ).addClass( 'header--full' );
+	// // $( '.header' ).addClass( 'header--full' );
 
-	$( window ).scroll( function () {
+	// $( window ).scroll( function () {
 
-		setTimeout( function () {
+	// 	setTimeout( function () {
 
-			let scroll = $( window ).scrollTop();
+	// 		let scroll = $( window ).scrollTop();
 
-			if ( scroll > lastScroll + 8 ) {
+	// 		if ( scroll > lastScroll + 8 ) {
 
-				$( '.header' ).addClass( 'header--collapsed' );
-				// $( '.header' ).addClass( 'header--shadow' );
+	// 			$( '.header' ).addClass( 'header--collapsed' );
+	// 			// $( '.header' ).addClass( 'header--shadow' );
 
-			} else if ( scroll < lastScroll - 8 ) {
+	// 		} else if ( scroll < lastScroll - 8 ) {
 
-				$( '.header' ).removeClass( 'header--collapsed' );
+	// 			$( '.header' ).removeClass( 'header--collapsed' );
 
-			}
+	// 		}
 
-			if ( scroll == 0 ) {
+	// 		if ( scroll == 0 ) {
 
-				$( '.header' ).removeClass( 'header--collapsed' );
-				$( '.header' ).removeClass( 'header--shadow' );
+	// 			$( '.header' ).removeClass( 'header--collapsed' );
+	// 			$( '.header' ).removeClass( 'header--shadow' );
 
-			}
+	// 		}
 
-			lastScroll = scroll;
+	// 		lastScroll = scroll;
 
-		}, 0 );
+	// 	}, 0 );
 
-	} );
+	// } );
 
-	// Night mode.
+	// // Night mode.
 
-	function nightMode() {
+	// function toggleNightMode( el ) {
 
-		$( '#nm-sw' ).change( function () {
+	// 	if ( $( el ).is( ':checked' ) ) {
 
-			toggleNightMode( $( this ) );
+	// 		localStorage.removeItem( 'nightMode' )
 
-		} );
+	// 		$( 'html' ).removeClass( 'night' )
 
-	}
+	// 	} else {
 
-	function toggleNightMode( el ) {
+	// 		localStorage.setItem( 'nightMode', true )
 
-		if ( ! $( el ).is( ':checked' ) ) {
+	// 		$( 'html' ).addClass( 'night' )
 
-			localStorage.setItem( 'nightMode', true );
+	// 		document.getElementById( 'sw-night-mode' ).checked = false
 
-			$( 'html' ).addClass( 'night fsmooth' );
+	// 	}
 
-		} else {
+	// }
 
-			localStorage.removeItem( 'nightMode' );
+	// toggleNightMode( $( '#sw-night-mode' ) )
 
-			$( 'html' ).removeClass( 'night fsmooth' );
+	// $( '#sw-night-mode' ).change( function () {
 
-		}
+	// 	toggleNightMode( $( this ) )
 
-	}
+	// } )
 
-	nightMode();
-
-} );
+} )

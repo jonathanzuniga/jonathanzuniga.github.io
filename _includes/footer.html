@@ -1,3 +1,18 @@
+
+<footer class="footer">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.
+</footer>
+
+
+
+
+
+
+
+{% comment %}
 <footer class="footer">
 	<div class="container">
 		<div class="row cols-center">
@@ -9,7 +24,7 @@
 		</div>
 	</div>
 </footer>
-
+{% endcomment %}
 
 
 
@@ -84,7 +99,7 @@
 						<div class="post">
 							<a class="post__link" href="{{ post.url }}">
 								<div class="post__cover" style="background-image: url('{{ post.cover }}');"></div>
-								
+
 								<h3 class="post__title">
 									{{ post.title }}
 								</h3>
@@ -187,21 +202,21 @@
 			{% endif %}
 			{% if author.instagram_username %}
 			<li>
-				<a href="https://www.instagram.com/{{ author.instagram_username }}" target="_blank" 
+				<a href="https://www.instagram.com/{{ author.instagram_username }}" target="_blank"
 					<i class="fa fa-instagram" aria-hidden="true"></i>
 				</a>
 			</li>
 			{% endif %}
 			{% if author.spotify_username %}
 			<li>
-				<a href="https://open.spotify.com/user/{{ author.spotify_username }}" target="_blank" 
+				<a href="https://open.spotify.com/user/{{ author.spotify_username }}" target="_blank"
 					<i class="fa fa-spotify" aria-hidden="true"></i>
 				</a>
 			</li>
 			{% endif %}
 			{% if author.lastfm_username %}
 			<li>
-				<a href="http://www.last.fm/user/{{ author.lastfm_username }}" target="_blank" 
+				<a href="http://www.last.fm/user/{{ author.lastfm_username }}" target="_blank"
 					<i class="fa fa-lastfm" aria-hidden="true"></i>
 				</a>
 			</li>
@@ -227,7 +242,7 @@
 	<div class="row">
 		<div class="col-xs-12 col-lg-10 offset-lg-1">
 			<hr>
-				
+
 			<div class="row">
 				<div class="col-lg-8">
 					{% assign author = site.authors['jonathan'] %}
@@ -493,7 +508,7 @@
 {% comment %}
 <footer id="footer">
 	<p class="footer-content">
-		<strong>{{ site.title }}</strong> © 2015—{{ site.time | date: '%Y' }}. 
+		<strong>{{ site.title }}</strong> © 2015—{{ site.time | date: '%Y' }}.
 		<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
 			<i class="fa fa-rss fa-lg" aria-hidden="true"></i>
 			Suscribirse a las publicaciones</a>.

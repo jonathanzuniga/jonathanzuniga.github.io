@@ -1,6 +1,50 @@
 
 {% assign author = site.authors[ 'jonathan' ] %}
 
+<div class="header bd-bottom-0063 ac-c">
+	<h2 class="logo">
+		<a href="{{ site.baseurl }}/">
+			{{ author.first_name }} {{ author.last_name }}
+		</a>
+	</h2>
+
+	<ul class="nav">
+		<li class="nav__item {% if page.url == '/' %}active{% endif %}">
+			<a class="nav__a" href="{{ site.baseurl }}/">
+				Inicio
+			</a>
+		</li>
+		<li class="nav__item {% if current[ 1 ] == 'articulos' %}active{% endif %}">
+			<a class="nav__a" href="{{ site.baseurl }}/articulos">
+				Artículos
+			</a>
+		</li>
+		<li class="nav__item {% if current[ 1 ] == 'autor' %}active{% endif %}">
+			<a class="nav__a" href="{{ site.baseurl }}/autor">
+				Autor
+			</a>
+		</li>
+	</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
+
+{% assign author = site.authors[ 'jonathan' ] %}
+
 <header class="header">
 	<div class="cntr">
 		<div class="row">
@@ -71,6 +115,7 @@
 	</div>
 </div> -->
 
+{% endcomment %}
 
 
 

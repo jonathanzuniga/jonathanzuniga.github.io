@@ -13,7 +13,7 @@ encoding: utf-8
 # Author details
 authors:
   jonathan:
-    avatar:
+    avatar: 'images/authors/jonathan-zuniga-2015-v3.png'
     first_name: Jonathan
     last_name: Zúñiga
     email: jonathanzuniga@gmail.com

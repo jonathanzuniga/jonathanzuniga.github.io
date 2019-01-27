@@ -4,24 +4,24 @@
 
 @charset 'utf-8';
 
-// $font-family-sh: 'Mort Modern Subhead';
-// $font-family-t: 'Mort Modern Text';
-// $font-family-serif: georgia, times, Times New Roman, times-roman, serif;
-// $font-family-heading: sans-serif;
+// Style
 
-// $font-family-sans-serif: 'Roboto', sans-serif;
-// $font-family-cnd: 'Barlow Condensed';
-
-$font-family-base: 'Lato', sans-serif;
-
-// $font-family-bl: 'UnifrakturMaguntia', serif;
-
-// $font-family-lg-cnd: 'Mort Modern Large Condensed', serif;
-// $font-family-sh-cnd: 'Mort Modern Subhead Condensed', serif;
+// $font-family-base: 'Lato', sans-serif;
+// $font-size-xs: 0.813em; // 13px
+// $font-size-sm: 0.875em; // 14px
+// $grid-gap: 4vw;
+// $max-width: 92rem;
+// $spacing: 0.75rem;
+// $spacing-xxs: 0.125rem;
+// $spacing-xs: 0.25rem;
+// $spacing-sm: 0.5rem;
+// $spacing-md: 1rem;
+// $spacing-xl: 2rem;
+// $spacing-xxl: 3rem;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 
 @import
+	'font',
 	'style',
-	'syntax-highlighting',
-	'font';
+	'syntax-highlighting';

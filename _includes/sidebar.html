@@ -1,4 +1,57 @@
 
+{% assign author = site.authors[ 'jonathan' ] %}
+
+<aside class="aside">
+	<!-- <img class="avatar" src="{{ author.avatar }}" alt="{{ author.first_name }} {{ author.last_name }}"> -->
+
+	<p class="aside__author-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.</p>
+
+	<hr>
+
+	<h3 class="h5">Proyectos</h3>
+
+	<ul class="ls">
+		{% assign selected_projects = site.data.selected_projects | sort: 'title' %}
+		{% for sp in selected_projects | limit: 3 %}
+		  <li>
+			<a href="{{ sp.url }}" target="_blank">
+			  {{ sp.title }}
+			</a>
+			{% if sp.description %}
+				<p class="aside__item-description">
+					{{ sp.description }}
+				</p>
+			{% endif %}
+		  </li>
+		{% endfor %}
+	</ul>
+
+	<hr>
+
+	<h3 class="h5">Categorías</h3>
+
+	<ul class="ls">
+		<li>
+			<a href=""></a>
+		</li>
+	</ul>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
 <div id="sidebar__body" class="sidebar__body">
 	<ul class="ls ac-c">
 		{% for post in site.posts limit: 16 %}
@@ -45,6 +98,7 @@
 		</li>
 	</ul>
 </div>
+{% endcomment %}
 
 
 

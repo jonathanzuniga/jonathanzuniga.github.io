@@ -1,6 +1,6 @@
 ---
 authors: [ jonathan ]
-categories: programación
+categories: desarrollo
 date: 2015-11-29 14:50:00
 summary:
 layout: post
