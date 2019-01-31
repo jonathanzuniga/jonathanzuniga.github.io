@@ -1,14 +1,14 @@
 {% assign author = site.authors[ 'jonathan' ] %}
 
-<div class="header">
+<header class="header">
 	<ul class="list nav">
 		<li class="nav__item {% if page.url == '/' %}active{% endif %}">
-			<a class="nav__a" href="{{ site.baseurl }}/">
+			<a href="{{ site.baseurl }}/">
 				Inicio
 			</a>
 		</li>
 		<li class="nav__item {% if current[ 1 ] == 'articulos' %}active{% endif %}">
-			<a class="nav__a" href="{{ site.baseurl }}/articulos">
+			<a href="{{ site.baseurl }}/articulos">
 				Artículos
 			</a>
 		</li>
@@ -20,17 +20,17 @@
 			</h5>
 		</li>
 		<li class="nav__item {% if current[ 1 ] == 'autor' %}active{% endif %}">
-			<a class="nav__a" href="{{ site.baseurl }}/recursos">
+			<a href="{{ site.baseurl }}/recursos">
 				Recursos
 			</a>
 		</li>
 		<li class="nav__item {% if current[ 1 ] == 'autor' %}active{% endif %}">
-			<a class="nav__a" href="{{ site.baseurl }}/autor">
+			<a href="{{ site.baseurl }}/autor">
 				Autor
 			</a>
 		</li>
 	</ul>
-</div>
+</header>
 
 
 
