@@ -4,27 +4,27 @@
 <aside class="aside">
 	<!-- <img class="avatar" src="{{ author.avatar }}" alt="{{ author.first_name }} {{ author.last_name }}"> -->
 
-	<p class="aside__author-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat.</p>
+	<p class="small">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat.
+	</p>
 
 	<hr>
 
 	<h3 class="h5">Proyectos</h3>
 
-	<ul class="ls">
+	<ul class="list">
 		{% assign selected_projects = site.data.selected_projects | sort: 'title' %}
 		{% for sp in selected_projects | limit: 3 %}
 		  <li>
-			<a href="{{ sp.url }}" target="_blank">
-			  {{ sp.title }}
-			</a>
-			{% if sp.description %}
-				<p class="aside__item-description">
-					{{ sp.description }}
-				</p>
-			{% endif %}
+	  			<a href="{{ sp.url }}" target="_blank">
+	  			  {{ sp.title }}
+	  			</a>
+	  			{% if sp.description %}
+	  				<small>{{ sp.description }}</small>
+	  			{% endif %}
 		  </li>
 		{% endfor %}
 	</ul>
@@ -33,7 +33,7 @@
 
 	<h3 class="h5">Categorías</h3>
 
-	<ul class="ls">
+	<ul class="list">
 		<li>
 			<a href=""></a>
 		</li>

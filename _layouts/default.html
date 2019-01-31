@@ -19,25 +19,23 @@
 		{% elsif page.url == '/search' %}
 			body--search
 		{% endif %}">
-			{% comment %}
 			{% include header.html %}
 
 			<h1 class="intro-title">Lorem ipsum dolor sit amet.</h1>
 
-			<div class="intro-content md-fs-lg">
-				<p>
+			<div class="intro-content">
+				<p class="h5">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				</p>
 
 				<hr>
 			</div>
-			{% endcomment %}
 
 			<div class="content">{{ content }}</div>
 
-			{% comment %}
 			{% include sidebar.html %}
 
+			{% comment %}
 			{% include footer.html %}
 			{% endcomment %}
 
