@@ -2,6 +2,52 @@
 layout: default
 ---
 
+<article class="post post--{{ forloop.index }}">
+	{% comment %}
+	<header class="post__header">
+		<div class="post__date small">
+			{% include date.html %}
+		</div>
+
+		<h2 class="post__title h4">
+			<a href="{{ post.url }}">
+				{{ page.title }}
+			</a>
+		</h2>
+	</header>
+	{% endcomment %}
+
+	<div class="post__content">
+		{{ page.content }}
+	</div>
+
+	<footer class="post__footer">
+		<ul class="list list--inline small">
+			<li>
+				<b>Palabras de</b>
+				{% assign sorted_authors = page.authors | sort %}
+				{% for post_author in sorted_authors %}
+					{% assign author = site.authors[post_author] %}
+					<a href="{{ site.baseurl }}/autor">
+						{{ author.first_name }} {{ author.last_name }}
+					</a>{% if forloop.last == false %}, {% endif %}
+				{% endfor %}
+			</li>
+			<li>
+				{% include date.html %}
+			</li>
+			<li>
+				Publicado en
+				{% assign sorted_categories = page.categories | sort %}
+				{% for category in sorted_categories %}
+					<a href="{{ site.baseurl }}/categoría/{{ category }}">
+						{{ category | replace: '-', ' ' }}
+					</a>{% if forloop.last == false %}, {% endif %}
+				{% endfor %}
+			</li>
+		</ul>
+	</footer>
+</article>
 
 
 

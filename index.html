@@ -22,15 +22,17 @@ layout: default
 		</div>
 
 		<footer class="post__footer">
-			<p>
-				Publicado en
-				{% assign sorted_categories = post.categories | sort %}
-				{% for category in sorted_categories %}
-					<a href="{{ site.baseurl }}/categoría/{{ category }}">
-						{{ category | replace: '-', ' ' }}
-					</a>{% if forloop.last == false %}, {% endif %}
-				{% endfor %}
-			</p>
+			<ul class="list list---inline small">
+				<li>
+					Publicado en
+					{% assign sorted_categories = post.categories | sort %}
+					{% for category in sorted_categories %}
+						<a href="{{ site.baseurl }}/categoría/{{ category }}">
+							{{ category | replace: '-', ' ' }}
+						</a>{% if forloop.last == false %}, {% endif %}
+					{% endfor %}
+				</li>
+			</ul>
 		</footer>
 	</article>
 

@@ -21,14 +21,22 @@
 		{% endif %}">
 			{% include header.html %}
 
-			<h1 class="intro-title">Lorem ipsum dolor sit amet.</h1>
+			<h1 class="intro-title">
+				{% if page.url == '/' %}
+					Lorem ipsum dolor sit amet.
+				{% else %}
+					{{ page.title }}
+				{% endif %}
+			</h1>
 
 			<div class="intro-content">
-				<p class="h5">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-				</p>
+				{% if page.url == '/' %}
+					<p class="h5">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</p>
 
-				<hr>
+					<hr>
+				{% endif %}
 			</div>
 
 			<div class="content">{{ content }}</div>
