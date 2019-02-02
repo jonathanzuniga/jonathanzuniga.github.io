@@ -2,6 +2,20 @@
 layout: default
 ---
 
+<article class="post post--{{ forloop.index }}">
+	<div class="post__content">
+		{{ content }}
+	</div>
+</article>
+
+
+
+
+
+
+
+
+{% comment %}
 <div class="posts">
 	<div id="post-{{ forloop.index }}" class="post post-{{ forloop.index }}">
 		<header class="post__header">
@@ -21,3 +35,4 @@ layout: default
 		</div>
 	</div>
 </div>
+{% endcomment %}
