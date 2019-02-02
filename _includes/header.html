@@ -1,34 +1,37 @@
 {% assign author = site.authors[ 'jonathan' ] %}
 
 <header class="header">
-	<ul class="list nav">
-		<li class="nav__item {% if page.url == '/' %}active{% endif %}">
-			<a href="{{ site.baseurl }}/">
-				Inicio
-			</a>
-		</li>
-		<li class="nav__item {% if current[ 1 ] == 'articulos' %}active{% endif %}">
-			<a href="{{ site.baseurl }}/articulos">
-				Artículos
-			</a>
-		</li>
-		<li class="nav__item nav__item--brand">
-			<a href="{{ site.baseurl }}/">
-				Lorem ipsum <!-- {{ author.first_name }} {{ author.last_name }} -->
-			</a>
-		</li>
-		<li class="nav__item {% if current[ 1 ] == 'autor' %}active{% endif %}">
-			<a href="{{ site.baseurl }}/recursos">
-				Recursos
-			</a>
-		</li>
-		<li class="nav__item {% if current[ 1 ] == 'autor' %}active{% endif %}">
-			<a href="{{ site.baseurl }}/autor">
-				Autor
-			</a>
-		</li>
-	</ul>
+	<nav class="nav">
+	    <h2 class="nav__brand">
+        	<a href="{{ site.baseurl }}/">
+        		{{ author.first_name }} {{ author.last_name }}
+        	</a>
+	    </h2>
+	    <ul class="nav__menu list list--inline">
+	        <li class="nav__item {% if page.url == '/' %}active{% endif %}">
+	        	<a href="{{ site.baseurl }}/">
+	        		Blog
+	        	</a>
+	        </li>
+	        <!-- <li class="nav__item {% if current[ 1 ] == 'articulos' %}active{% endif %}">
+	        	<a href="{{ site.baseurl }}/articulos">
+	        		Artículos
+	        	</a>
+	        </li> -->
+	        <li class="nav__item {% if current[ 1 ] == 'autor' %}active{% endif %}">
+	        	<a href="{{ site.baseurl }}/recursos">
+	        		Recursos
+	        	</a>
+	        </li>
+	        <li class="nav__item {% if current[ 1 ] == 'autor' %}active{% endif %}">
+	        	<a href="{{ site.baseurl }}/autor">
+	        		Autor
+	        	</a>
+	        </li>
+	    </ul>
+	</nav>
 </header>
+
 
 
 
