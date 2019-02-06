@@ -40,7 +40,7 @@ layout: default
 				Publicado en
 				{% assign sorted_categories = page.categories | sort %}
 				{% for category in sorted_categories %}
-					<a href="{{ site.baseurl }}/categoría/{{ category }}">
+					<a href="/blog{{ site.baseurl }}/category/{{ category | slugify }}">
 						{{ category | replace: '-', ' ' }}
 					</a>{% if forloop.last == false %}, {% endif %}
 				{% endfor %}

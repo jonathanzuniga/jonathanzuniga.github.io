@@ -12,9 +12,9 @@
 	<body class="body
 		{% if page.url == '/' %}
 			body--home
-		{% elsif current[ 1 ] == 'articles' %}
+		{% elsif current[1] == 'articles' %}
 			body--articles
-		{% elsif current[ 1 ] == 'about' %}
+		{% elsif current[1] == 'about' %}
 			body--about
 		{% elsif page.url == '/search' %}
 			body--search
@@ -24,6 +24,8 @@
 			<h1 class="intro-title">
 				{% if page.url == '/' %}
 					Lorem ipsum dolor sit amet.
+				{% elsif page.layout == 'category' %}
+					«{{ page.category }}»
 				{% else %}
 					{{ page.title }}
 				{% endif %}
@@ -34,7 +36,15 @@
 					<p class="h5">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 					</p>
-
+					<hr>
+				{% elsif page.layout == 'category' %}
+					<p class="h5">
+						{% if page.description %}
+								{{ page.description }}
+						{% else %}
+							Estas leyendo todos los artículos publicados en la categoría «{{ page.category }}».
+						{% endif %}
+					</p>
 					<hr>
 				{% endif %}
 			</div>

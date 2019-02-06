@@ -34,9 +34,13 @@
 	<h3 class="h5">Categorías</h3>
 
 	<ul class="list">
-		<li>
-			<a href=""></a>
-		</li>
+		{% for category in site.categories %}
+			<li>
+				<a href="/blog/category/{{ category[0] | slugify }}">
+					{{ category[0] }} <span class="small">({{ category | last | size }})</span>
+				</a>
+			</li>
+		{% endfor %}
 	</ul>
 </aside>
 
