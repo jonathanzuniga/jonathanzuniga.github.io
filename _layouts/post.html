@@ -50,16 +50,16 @@ layout: default
 </article>
 
 <div class="paginator">
-	{% if page.previous.url %}
-	    <a href="{{ page.previous.url }}" class="paginator__item paginator__item--prev">
+	{% if page.next.url %}
+	    <a href="{{ page.next.url }}" class="paginator__item paginator__item--prev">
 	        <span>Anterior</span>
-	        <small>{{ page.previous.title }}</small>
+	        <small>{{ page.next.title }}</small>
 	    </a>
 	{% endif %}
-	{% if page.next.url %}
-	    <a href="{{ page.next.url }}" class="paginator__item paginator__item--next">
+	{% if page.previous.url %}
+	    <a href="{{ page.previous.url }}" class="paginator__item paginator__item--next">
 	        <span>Siguiente</span>
-	        <small>{{ page.next.title }}</small>
+	        <small>{{ page.previous.title }}</small>
 	    </a>
 	{% endif %}
 </div>

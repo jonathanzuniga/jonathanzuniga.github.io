@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% for post in site.posts limit: 10 %}
+{% for post in paginator.posts limit: 10 %}
 
 	<article class="post post--{{ forloop.index }}">
 		<header class="post__header">
@@ -38,6 +38,20 @@ layout: default
 
 {% endfor %}
 
+{% if paginator.total_pages > 1 %}
+	<div class="paginator">
+		{% if paginator.previous_page %}
+		    <a href="{{ paginator.previous_page_path }}" class="paginator__item paginator__item--prev">
+		        <span>Página {{ paginator.previous_page }}</span>
+		    </a>
+		{% endif %}
+		{% if paginator.next_page %}
+		    <a href="{{ paginator.next_page_path }}" class="paginator__item paginator__item--next">
+		        <span>Página {{ paginator.next_page }}</span>
+		    </a>
+		{% endif %}
+	</div>
+{% endif %}
 
 
 

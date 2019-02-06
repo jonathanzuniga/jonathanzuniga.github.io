@@ -41,6 +41,12 @@ permalink: /:title
 # timezone: America/Tijuana
 timezone: '-0800'
 
+plugins:
+    - 'jekyll-paginate'
+
+paginate: 10
+paginate_path: '/blog/page:num/'
+
 # gems: ['jekyll-twitter-plugin']
 # gems: ['jekyll-timeago']
 
