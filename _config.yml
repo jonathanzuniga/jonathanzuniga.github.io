@@ -44,7 +44,7 @@ timezone: '-0800'
 plugins:
     - 'jekyll-paginate'
 
-paginate: 10
+paginate: 1
 paginate_path: '/blog/page:num/'
 
 # gems: ['jekyll-twitter-plugin']
