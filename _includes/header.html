@@ -7,7 +7,9 @@
         		{{ author.first_name }} {{ author.last_name }}
         	</a>
 	    </h2>
-	    <ul class="nav__menu list list--inline">
+	    <input class="collapse__toggle" id="collapse-nav" name="collapse-nav" role="button" type="checkbox">
+	    <label class="collapse__head" for="collapse-nav">Menú</label>
+	    <ul class="nav__menu list collapse__body">
 	        <li class="nav__item {% if page.url == '/' %}active{% endif %}">
 	        	<a href="{{ site.baseurl }}/">
 	        		Blog

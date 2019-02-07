@@ -31,17 +31,21 @@
 
 	<hr>
 
-	<h3 class="h5">Categorías</h3>
+	<div class="collapse">
+		<input class="collapse__toggle" id="collapse-categories" name="collapse-categories" type="checkbox">
 
-	<ul class="list">
-		{% for category in site.categories %}
-			<li>
-				<a href="/blog/category/{{ category[0] | slugify }}">
-					{{ category[0] }} <span class="small">({{ category | last | size }})</span>
-				</a>
-			</li>
-		{% endfor %}
-	</ul>
+		<label class="h5 collapse__head collapse__head--right-icon" for="collapse-categories" >Categorías</label>
+
+		<ul class="list collapse__body">
+			{% for category in site.categories %}
+				<li>
+					<a href="/blog/category/{{ category[0] | slugify }}">
+						{{ category[0] }} <span class="small">({{ category | last | size }})</span>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
 </aside>
 
 
