@@ -41,6 +41,7 @@ permalink: /:title
 # timezone: America/Tijuana
 timezone: '-0800'
 
+# This will require each of these plugins automatically.
 plugins:
     - 'jekyll-paginate'
 
