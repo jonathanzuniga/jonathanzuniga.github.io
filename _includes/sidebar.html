@@ -40,7 +40,7 @@
 			{% for category in site.categories %}
 				<li>
 					<a href="/blog/category/{{ category[0] | slugify }}">
-						{{ category[0] }} <span class="small">({{ category | last | size }})</span>
+						{{ category[0] }} ({{ category | last | size }})
 					</a>
 				</li>
 			{% endfor %}
