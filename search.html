@@ -3,35 +3,41 @@ layout: default
 permalink: /search
 ---
 
+<!-- '{{ post.content | markdownify | strip_html | strip_newlines | truncatewords: 24 }}' -->
+
 <div class="search-results">
-	<div id="search-results__message" class="search-results__message"></div>
-	<div id="search-results__posts" class="search-results__posts posts"></div>
+    <div id="search-results__message" class="search-results__message"></div>
+    <div id="search-results__posts" class="search-results__posts posts"></div>
 </div>
 
 <script>
-	window.store = {
-		{% for post in site.posts %}
-			{% assign month_name = post.date | date: '%B' %}
-			{% assign day = post.date | date: '%-d' %}
-			{% assign year = post.date | date: '%Y' %}
+    window.store = {
+        {%
+            assign months =
+                'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' |
+                split: '|'
+        %}
+        {% for post in site.posts %}
+            {% assign month = post.date | date: '%-m' | minus: 1 %}
+            {% assign month_name = months[month] %}
+            {% assign day = post.date | date: '%-d' %}
+            {% assign year = post.date | date: '%Y' %}
 
-			'{{ post.url | slugify }}': {
-				'title': '{{ post.title | xml_escape }}',
-				'description': '{{ post.description }}',
-				'categories': '{{ post.categories | sort }}',
-				'excerpt': '{{ post.content | markdownify | strip_html | strip_newlines | truncatewords: 24 }}',
-				'content': {{ post.content | strip_html | strip_newlines | jsonify }},
-				'url': '{{ post.url | xml_escape }}',
-				'date': `<time datetime="{{ post.date | date_to_xmlschema }}">
-					<span class="month-name">{{ month_name }}</span>
-					<span class="day">` +
-						{% case day %}
-
-							{% when '1' or '21' or '31' %}`{{ day }}st`{% when '2' or '22' %}`{{ day }}nd`{% when '3' or '23' %}`{{ day }}rd`{% else %}`{{ day }}th`{% endcase %} + `</span>,
-					<span class="year">{{ year }}</span>
-				</time>`
-			}
-			{% unless forloop.last %}, {% endunless %}
-		{% endfor %}
-	};
+            '{{ post.url | slugify }}': {
+                'title': '{{ post.title | xml_escape }}',
+                'description': '{{ post.description }}',
+                'categories': '{{ post.categories | sort }}',
+                'excerpt': '{{ post.excerpt | strip_newlines }}',
+                'content': '{{ post.content | strip_html | strip_newlines }}',
+                'url': '{{ post.url | xml_escape }}',
+                'date':
+                    `<time datetime="{{ post.date | date_to_xmlschema }}">
+                        <span class="day">{{ day }}</span> de
+                        <span class="month">{{ month_name }}</span>,
+                        <span class="year">{{ year }}</span>
+                    </time>`
+            }
+            {% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+    };
 </script>

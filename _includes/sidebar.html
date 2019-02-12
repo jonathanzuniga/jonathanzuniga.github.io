@@ -2,50 +2,50 @@
 {% assign author = site.authors[ 'jonathan' ] %}
 
 <aside class="aside">
-	<!-- <img class="avatar" src="{{ author.avatar }}" alt="{{ author.first_name }} {{ author.last_name }}"> -->
+    <!-- <img class="avatar" src="{{ author.avatar }}" alt="{{ author.first_name }} {{ author.last_name }}"> -->
 
-	<p class="small">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat.
-	</p>
+    <p class="small">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+    </p>
 
-	<hr>
+    <hr>
 
-	<h3 class="h5">Proyectos</h3>
+    <h3 class="h5">Proyectos</h3>
 
-	<ul class="list">
-		{% assign selected_projects = site.data.selected_projects | sort: 'title' %}
-		{% for sp in selected_projects | limit: 3 %}
-		  <li>
-	  			<a href="{{ sp.url }}" target="_blank">
-	  			  {{ sp.title }}
-	  			</a>
-	  			{% if sp.description %}
-	  				<small>{{ sp.description }}</small>
-	  			{% endif %}
-		  </li>
-		{% endfor %}
-	</ul>
+    <ul class="list">
+        {% assign selected_projects = site.data.selected_projects | sort: 'title' %}
+        {% for sp in selected_projects | limit: 3 %}
+          <li>
+                <a href="{{ sp.url }}" target="_blank">
+                  {{ sp.title }}
+                </a>
+                {% if sp.description %}
+                    <small>{{ sp.description }}</small>
+                {% endif %}
+          </li>
+        {% endfor %}
+    </ul>
 
-	<hr>
+    <hr>
 
-	<div class="collapse">
-		<input class="collapse__toggle" id="collapse-categories" name="collapse-categories" type="checkbox">
+    <div class="collapse">
+        <input class="collapse__toggle" id="collapse-categories" name="collapse-categories" type="checkbox">
 
-		<label class="h5 collapse__head collapse__head--right-icon" for="collapse-categories" >Categorías</label>
+        <label class="h5 collapse__head collapse__head--right-icon" for="collapse-categories" >Categorías</label>
 
-		<ul class="list collapse__body">
-			{% for category in site.categories %}
-				<li>
-					<a href="/blog/category/{{ category[0] | slugify }}">
-						{{ category[0] }} ({{ category | last | size }})
-					</a>
-				</li>
-			{% endfor %}
-		</ul>
-	</div>
+        <ul class="list collapse__body">
+            {% for category in site.categories %}
+                <li>
+                    <a href="/blog/category/{{ category[0] | slugify }}">
+                        {{ category[0] }} ({{ category | last | size }})
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 </aside>
 
 
@@ -61,50 +61,50 @@
 
 {% comment %}
 <div id="sidebar__body" class="sidebar__body">
-	<ul class="ls ac-c">
-		{% for post in site.posts limit: 16 %}
-			<li>
-				<a href="{{ post.url }}#post-{{ forloop.index }}">
-					{{ post.title }}
-				</a>
-			</li>
-			<li>
-				<a href="{{ post.url }}#post-{{ forloop.index }}">
-					{{ post.title }}
-				</a>
-			</li>
-			<li>
-				<a href="{{ post.url }}#post-{{ forloop.index }}">
-					{{ post.title }}
-				</a>
-			</li>
-			<li>
-				<a href="{{ post.url }}#post-{{ forloop.index }}">
-					{{ post.title }}
-				</a>
-			</li>
-			<li>
-				<a href="{{ post.url }}#post-{{ forloop.index }}">
-					{{ post.title }}
-				</a>
-			</li>
-			<li>
-				<a href="{{ post.url }}#post-{{ forloop.index }}">
-					{{ post.title }}
-				</a>
-			</li>
-			<li>
-				<a href="{{ post.url }}#post-{{ forloop.index }}">
-					{{ post.title }}
-				</a>
-			</li>
-		{% endfor %}
-		<li>
-			<a href="{{ site.baseurl }}/articles">
-				<i>Leer más artículos</i>
-			</a>
-		</li>
-	</ul>
+    <ul class="ls ac-c">
+        {% for post in site.posts limit: 16 %}
+            <li>
+                <a href="{{ post.url }}#post-{{ forloop.index }}">
+                    {{ post.title }}
+                </a>
+            </li>
+            <li>
+                <a href="{{ post.url }}#post-{{ forloop.index }}">
+                    {{ post.title }}
+                </a>
+            </li>
+            <li>
+                <a href="{{ post.url }}#post-{{ forloop.index }}">
+                    {{ post.title }}
+                </a>
+            </li>
+            <li>
+                <a href="{{ post.url }}#post-{{ forloop.index }}">
+                    {{ post.title }}
+                </a>
+            </li>
+            <li>
+                <a href="{{ post.url }}#post-{{ forloop.index }}">
+                    {{ post.title }}
+                </a>
+            </li>
+            <li>
+                <a href="{{ post.url }}#post-{{ forloop.index }}">
+                    {{ post.title }}
+                </a>
+            </li>
+            <li>
+                <a href="{{ post.url }}#post-{{ forloop.index }}">
+                    {{ post.title }}
+                </a>
+            </li>
+        {% endfor %}
+        <li>
+            <a href="{{ site.baseurl }}/articles">
+                <i>Leer más artículos</i>
+            </a>
+        </li>
+    </ul>
 </div>
 {% endcomment %}
 
@@ -116,131 +116,131 @@
 {% comment %}
 {% assign author = site.authors['jonathan'] %}
 <div class="sidebar">
-	{% if page.url == '/'
-		or page.layout == 'post'
-		or page.layout == 'moments' %}
-		<div class="sidebar__content" id="sidebar__content--fixed">
-			<h5 class="sidebar__title mobile-header">
-				Momentos
-			</h5>
+    {% if page.url == '/'
+        or page.layout == 'post'
+        or page.layout == 'moments' %}
+        <div class="sidebar__content" id="sidebar__content--fixed">
+            <h5 class="sidebar__title mobile-header">
+                Momentos
+            </h5>
 
-			<p>
-				En este espacio encontrarás una colección de pensamientos y experiencias de mi vida diaria. Para recibir actualizaciones, puedes <a href="https://twitter.com/{{ author.twitter_username }}" target="_target">seguirme en twitter</a> o <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">suscríbirte a mi feed RSS</a>. Por favor, siéntete libre de enviarme por correo electrónico tus comentarios o correcciones.
-			</p>
+            <p>
+                En este espacio encontrarás una colección de pensamientos y experiencias de mi vida diaria. Para recibir actualizaciones, puedes <a href="https://twitter.com/{{ author.twitter_username }}" target="_target">seguirme en twitter</a> o <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">suscríbirte a mi feed RSS</a>. Por favor, siéntete libre de enviarme por correo electrónico tus comentarios o correcciones.
+            </p>
 
-			<div data-gumshoe-header>
-				<ul class="ls ac-txtc" data-gumshoe>
-					{% for post in site.posts limit: 6 %}
-						<li>
-							<h6>
-								<a href="{{ post.url }}#post-{{ forloop.index }}">
-									{{ post.title }}
-								</a>
-							</h6>
+            <div data-gumshoe-header>
+                <ul class="ls ac-txtc" data-gumshoe>
+                    {% for post in site.posts limit: 6 %}
+                        <li>
+                            <h6>
+                                <a href="{{ post.url }}#post-{{ forloop.index }}">
+                                    {{ post.title }}
+                                </a>
+                            </h6>
 
-							<p>
-								<span class="post__date">
-									<time datetime="{{ post.date | date_to_xmlschema }}" data-post-date-to-string="{{ post.date | date_to_string }}">
-										{%
-											assign months =
-											'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' |
-											split: '|'
-										%}
-										{% assign day = post.date | date: '%-d' %}
-										{% assign m = post.date | date: '%-m' | minus: 1 %}
-										{% assign month = months[m] %}
-										{% assign year = post.date | date: '%Y' %}
-										<span class="day">{{ day }}</span> de
-										<span class="month">{{ month }}</span> de
-										<span class="year">{{ year }}</span>.
-									</time>
-								</span>
+                            <p>
+                                <span class="post__date">
+                                    <time datetime="{{ post.date | date_to_xmlschema }}" data-post-date-to-string="{{ post.date | date_to_string }}">
+                                        {%
+                                            assign months =
+                                            'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' |
+                                            split: '|'
+                                        %}
+                                        {% assign day = post.date | date: '%-d' %}
+                                        {% assign m = post.date | date: '%-m' | minus: 1 %}
+                                        {% assign month = months[m] %}
+                                        {% assign year = post.date | date: '%Y' %}
+                                        <span class="day">{{ day }}</span> de
+                                        <span class="month">{{ month }}</span> de
+                                        <span class="year">{{ year }}</span>.
+                                    </time>
+                                </span>
 
-								{% comment %}
-								<span class="post__category">
-									en
-									{% assign sorted_categories = post.categories | sort %}
-									{% for category in sorted_categories %}
-										{% if category == 'codigo' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">código
-										{% elsif category == 'diseno' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">diseño
-										{% else %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">{{ category | replace: '-', ' ' }}
-										{% endif %}</a>{% if forloop.last == false %}, {% endif %}
-									{% endfor %}
-								</span>
-								{% endcomment %}
-							</p>
-						</li>
-					{% endfor %}
-					<li>
-						<h6>
-							<a class="txt-i" href="{{ site.baseurl }}/archivo">
-								Leer más publicaciones
-							</a>
-						</h6>
-					</li>
-				</ul>
-			</div>
-		</div>
-	{% elsif page.url == '/buscar' %}
-		<div class="sidebar__content" id="sidebar__content--fixed">
-			<div id="sidebar__search-results" class="sidebar__search-results">
-			</div>
-		</div>
-	{% elsif page.url == '/autor' %}
-		<div class="sidebar__content">
-			<h5 class="sidebar__title">
-				Info. de contacto
-			</h5>
+                                {% comment %}
+                                <span class="post__category">
+                                    en
+                                    {% assign sorted_categories = post.categories | sort %}
+                                    {% for category in sorted_categories %}
+                                        {% if category == 'codigo' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">código
+                                        {% elsif category == 'diseno' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">diseño
+                                        {% else %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">{{ category | replace: '-', ' ' }}
+                                        {% endif %}</a>{% if forloop.last == false %}, {% endif %}
+                                    {% endfor %}
+                                </span>
+                                {% endcomment %}
+                            </p>
+                        </li>
+                    {% endfor %}
+                    <li>
+                        <h6>
+                            <a class="txt-i" href="{{ site.baseurl }}/archivo">
+                                Leer más publicaciones
+                            </a>
+                        </h6>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    {% elsif page.url == '/buscar' %}
+        <div class="sidebar__content" id="sidebar__content--fixed">
+            <div id="sidebar__search-results" class="sidebar__search-results">
+            </div>
+        </div>
+    {% elsif page.url == '/autor' %}
+        <div class="sidebar__content">
+            <h5 class="sidebar__title">
+                Info. de contacto
+            </h5>
 
-			<p class="maxsm-txt-center">
-				Escríbeme a mí <a href="mailto:{{ author.email }}">correo electrónico</a> para consultas o simplemente para saludarme.
-			</p>
+            <p class="maxsm-txt-center">
+                Escríbeme a mí <a href="mailto:{{ author.email }}">correo electrónico</a> para consultas o simplemente para saludarme.
+            </p>
 
-			<h5 class="sidebar__title">
-				Proyectos selectos
-			</h5>
+            <h5 class="sidebar__title">
+                Proyectos selectos
+            </h5>
 
-			<ul class="ls ac-txtc">
-				{% assign selected_projects = site.data.selected_projects | sort: 'title' %}
-				{% for sp in selected_projects | limit: 6 %}
-				  <li>
-					<h6>
-						<a href="{{ sp.url }}" target="_blank">
-						  {{ sp.title }}
-						</a>
-					</h6>
+            <ul class="ls ac-txtc">
+                {% assign selected_projects = site.data.selected_projects | sort: 'title' %}
+                {% for sp in selected_projects | limit: 6 %}
+                  <li>
+                    <h6>
+                        <a href="{{ sp.url }}" target="_blank">
+                          {{ sp.title }}
+                        </a>
+                    </h6>
 
-					{% if sp.description %}
-						<p class="maxsm-txt-center">
-							{{ sp.description }}
-						</p>
-					{% endif %}
-				  </li>
-				{% endfor %}
-			</ul>
+                    {% if sp.description %}
+                        <p class="maxsm-txt-center">
+                            {{ sp.description }}
+                        </p>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+            </ul>
 
-			<h5 class="sidebar__title bd-bottom m-bottom-3 p-bottom-3">
-				Lectura recomendada
-			</h5>
+            <h5 class="sidebar__title bd-bottom m-bottom-3 p-bottom-3">
+                Lectura recomendada
+            </h5>
 
-			<ul class="ls ac-txtc">
-				{% assign recommended_reading = site.data.recommended_reading | sort: 'title' %}
-				{% for rr in recommended_reading | limit: 3 %}
-				  <li>
-					<h6>
-						<a href="{{ rr.url }}" target="_blank">
-						  {{ rr.title }}
-						</a>
-					</h6>
+            <ul class="ls ac-txtc">
+                {% assign recommended_reading = site.data.recommended_reading | sort: 'title' %}
+                {% for rr in recommended_reading | limit: 3 %}
+                  <li>
+                    <h6>
+                        <a href="{{ rr.url }}" target="_blank">
+                          {{ rr.title }}
+                        </a>
+                    </h6>
 
-					<p class="maxsm-txt-center">
-						<i>por {{ rr.author }}</i>
-					</p>
-				  </li>
-				{% endfor %}
-			</ul>
-		</div>
-	{% endif %}
+                    <p class="maxsm-txt-center">
+                        <i>por {{ rr.author }}</i>
+                    </p>
+                  </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
 </div>
 {% endcomment %}
 
@@ -253,52 +253,52 @@
 
 {% comment %}
 <div class="sidebar txt-sm">
-	<h3 class="sidebar__title">
-		Pensamientos
-	</h3>
+    <h3 class="sidebar__title">
+        Pensamientos
+    </h3>
 
-	{% assign author = site.authors['jonathan'] %}
-	<a class="" href="{{ site.baseurl }}/">
-		{{ author.name }} {{ author.lastname }}
-	</a>
+    {% assign author = site.authors['jonathan'] %}
+    <a class="" href="{{ site.baseurl }}/">
+        {{ author.name }} {{ author.lastname }}
+    </a>
 
-	<div class="sidebar__module sidebar__module-about">
-		Soy un desarrollador web viviendo y trabajando en la siempre cambiante ciudad de Tijuana.
-		<a href="{{ site.baseurl }}/autor" class="more">Además...</a>
-	</div>
+    <div class="sidebar__module sidebar__module-about">
+        Soy un desarrollador web viviendo y trabajando en la siempre cambiante ciudad de Tijuana.
+        <a href="{{ site.baseurl }}/autor" class="more">Además...</a>
+    </div>
 
-	<div class="sidebar__module sidebar__module-contact">
-		Puedes seguirme en
-		<a href="https://twitter.com/{{ author.twitter_username }}" target="_blank">Twitter</a>
-		o enviarme un mensaje por
-		<a href="mailto:{{ author.email }}">correo electrónico</a>.
-	</div>
+    <div class="sidebar__module sidebar__module-contact">
+        Puedes seguirme en
+        <a href="https://twitter.com/{{ author.twitter_username }}" target="_blank">Twitter</a>
+        o enviarme un mensaje por
+        <a href="mailto:{{ author.email }}">correo electrónico</a>.
+    </div>
 
-	<div class="sidebar__module sidebar__module-subscribe">
-		Suscribete al
-		<a href="{{ '/feed.xml' | prepend: site.baseurl }}" target="_blank">RSS feed</a>
-		o busca una publicación anterior:
-	</div>
+    <div class="sidebar__module sidebar__module-subscribe">
+        Suscribete al
+        <a href="{{ '/feed.xml' | prepend: site.baseurl }}" target="_blank">RSS feed</a>
+        o busca una publicación anterior:
+    </div>
 
-	<div class="sidebar__module sidebar__module-search">
-		<div class="search">
-			<form class="search__form" action="/buscar" method="get">
-				<div class="input__group">
-					<input class="search__box" id="sidebar__search-box" name="consulta" placeholder="Buscar..." required title="Buscar" type="search">
-					<span class="input__group-button">
-						<button class="button" type="submit">
-							<i class="fa fa-search icon" aria-hidden="true"></i>
-						</button>
-					</span>
-				</div>
-			</form>
-		</div>
-	</div>
+    <div class="sidebar__module sidebar__module-search">
+        <div class="search">
+            <form class="search__form" action="/buscar" method="get">
+                <div class="input__group">
+                    <input class="search__box" id="sidebar__search-box" name="consulta" placeholder="Buscar..." required title="Buscar" type="search">
+                    <span class="input__group-button">
+                        <button class="button" type="submit">
+                            <i class="fa fa-search icon" aria-hidden="true"></i>
+                        </button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
 
-	<div class="sidebar__module">
-		Este contenido está bajo una licencia
-		<a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license" target="_blank">CC BY 4.0</a>.
-	</div>
+    <div class="sidebar__module">
+        Este contenido está bajo una licencia
+        <a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license" target="_blank">CC BY 4.0</a>.
+    </div>
 </div>
 {% endcomment %}
 
@@ -314,89 +314,89 @@
 
 {% comment %}
 <ul class="sidebar__list">
-	{% assign postCounter = 0 %}
-	{% assign maxPost = 1 %}
-	{% for post in site.tags['destacado'] %}
-		{% unless post.title == page.title %}
-			<li class="sidebar__item sidebar__item--first">
-				<h3 class="sidebar__title">
-					Artículo recomendado
-				</h3>
+    {% assign postCounter = 0 %}
+    {% assign maxPost = 1 %}
+    {% for post in site.tags['destacado'] %}
+        {% unless post.title == page.title %}
+            <li class="sidebar__item sidebar__item--first">
+                <h3 class="sidebar__title">
+                    Artículo recomendado
+                </h3>
 
-				<h4 class="sidebar__post-title">
-					<a href="{{ post.url }}">
-						{{ post.title }}
-					</a>
-				</h4>
+                <h4 class="sidebar__post-title">
+                    <a href="{{ post.url }}">
+                        {{ post.title }}
+                    </a>
+                </h4>
 
-				<p class="sidebar__post-excerpt">
-					{{ post.content | markdownify | strip_html | truncatewords: 10 }}
-				</p>
-			</li>
-			{% assign postCounter = postCounter | plus: 1 %}
-		{% endunless %}
-		{% if postCounter >= maxPost %}
-			{% break %}
-		{% endif %}
-	{% endfor %}
-	{% if page.layout == 'post' %}
-		<li class="sidebar__item">
-			<h3 class="sidebar__title">
-				Lectura adicional sobre
-				{% assign sorted_categories = page.categories | sort %}
-				{% for category in sorted_categories %}
-					{% if category == 'codigo' %}
-						<a href="{{ site.baseurl }}/categoria/{{ category }}">
-							código
-					{% elsif category == 'diseno' %}
-						<a href="{{ site.baseurl }}/categoria/{{ category }}">
-							diseño
-					{% else %}
-						<a href="{{ site.baseurl }}/categoria/{{ category }}">
-							{{ category | replace: '-', ' ' }}
-					{% endif %}
-					</a>
-				{% endfor %}
-			</h3>
-		</li>
-		{% assign sorted_categories = page.categories | sort %}
-		{% for category in sorted_categories %}
-			{% for post in site.categories[category] limit: 2 %}
-				{% unless post.title == page.title %}
-					<li class="sidebar__item">
-						<h4 class="sidebar__post-title">
-							<a href="{{ post.url }}">
-								{{ post.title }}
-							</a>
-						</h4>
+                <p class="sidebar__post-excerpt">
+                    {{ post.content | markdownify | strip_html | truncatewords: 10 }}
+                </p>
+            </li>
+            {% assign postCounter = postCounter | plus: 1 %}
+        {% endunless %}
+        {% if postCounter >= maxPost %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+    {% if page.layout == 'post' %}
+        <li class="sidebar__item">
+            <h3 class="sidebar__title">
+                Lectura adicional sobre
+                {% assign sorted_categories = page.categories | sort %}
+                {% for category in sorted_categories %}
+                    {% if category == 'codigo' %}
+                        <a href="{{ site.baseurl }}/categoria/{{ category }}">
+                            código
+                    {% elsif category == 'diseno' %}
+                        <a href="{{ site.baseurl }}/categoria/{{ category }}">
+                            diseño
+                    {% else %}
+                        <a href="{{ site.baseurl }}/categoria/{{ category }}">
+                            {{ category | replace: '-', ' ' }}
+                    {% endif %}
+                    </a>
+                {% endfor %}
+            </h3>
+        </li>
+        {% assign sorted_categories = page.categories | sort %}
+        {% for category in sorted_categories %}
+            {% for post in site.categories[category] limit: 2 %}
+                {% unless post.title == page.title %}
+                    <li class="sidebar__item">
+                        <h4 class="sidebar__post-title">
+                            <a href="{{ post.url }}">
+                                {{ post.title }}
+                            </a>
+                        </h4>
 
-						<p class="sidebar__post-excerpt">
-							{{ post.content | markdownify | strip_html | truncatewords: 10 }}
-						</p>
-					</li>
-				{% endunless %}
-			{% endfor %}
-		{% endfor %}
-	{% else %}
-		<li class="sidebar__item">
-			<h3 class="sidebar__title">
-				Otras publicaciones
-			</h3>
-		</li>
-		{% for post in site.tags['destacado'] offset:1 limit:2 %}
-			<li class="sidebar__item">
-				<h4 class="sidebar__post-title">
-					<a href="{{ post.url }}">
-						{{ post.title }}
-					</a>
-				</h4>
+                        <p class="sidebar__post-excerpt">
+                            {{ post.content | markdownify | strip_html | truncatewords: 10 }}
+                        </p>
+                    </li>
+                {% endunless %}
+            {% endfor %}
+        {% endfor %}
+    {% else %}
+        <li class="sidebar__item">
+            <h3 class="sidebar__title">
+                Otras publicaciones
+            </h3>
+        </li>
+        {% for post in site.tags['destacado'] offset:1 limit:2 %}
+            <li class="sidebar__item">
+                <h4 class="sidebar__post-title">
+                    <a href="{{ post.url }}">
+                        {{ post.title }}
+                    </a>
+                </h4>
 
-				<p class="sidebar__post-excerpt">
-					{{ post.content | markdownify | strip_html | truncatewords: 10 }}
-				</p>
-			</li>
-		{% endfor %}
-	{% endif %}
+                <p class="sidebar__post-excerpt">
+                    {{ post.content | markdownify | strip_html | truncatewords: 10 }}
+                </p>
+            </li>
+        {% endfor %}
+    {% endif %}
 </ul>
 {% endcomment %}
 
@@ -412,50 +412,50 @@
 
 {% comment %}
 <div class="categories">
-	<ul class="categories__list">
-		{% assign current_page = page.url | downcase | split: '/' %}
-		{% assign categories_list = site.categories | sort %}
-		{% if categories_list.first[0] == null %}
-			{% for category in categories_list %}
-				<li class="categories__item">
-					{% if category == 'codigo' %}
-						<a class="categories__link {% if current_page[2] == category %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
-							código
-					{% elsif category == 'diseno' %}
-						<a class="categories__link {% if current_page[2] == category %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
-							diseño
-					{% else %}
-						<a class="categories__link {% if current_page[2] == category %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
-							{{ category | replace: '-', ' ' }}
-					{% endif %}
-						<span class="categories__count">
-							{{ site.categories[category].size }}
-						</span>
-					</a>
-				</li>
-			{% endfor %}
-		{% else %}
-			{% for category in categories_list %}
-				<li class="categories__item">
-					{% if category[0] == 'codigo' %}
-						<a class="categories__link {% if current_page[2] == category[0] %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
-							código
-					{% elsif category[0] == 'diseno' %}
-						<a class="categories__link {% if current_page[2] == category[0] %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
-							diseño
-					{% else %}
-						<a class="categories__link {% if current_page[2] == category[0] %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
-							{{ category[0] | replace: '-', ' ' }}
-					{% endif %}
-						<span class="categories__count">
-							{{ category[1].size }}
-						</span>
-					</a>
-				</li>
-			{% endfor %}
-		{% endif %}
-		{% assign categories_list = nil %}
-	</ul>
+    <ul class="categories__list">
+        {% assign current_page = page.url | downcase | split: '/' %}
+        {% assign categories_list = site.categories | sort %}
+        {% if categories_list.first[0] == null %}
+            {% for category in categories_list %}
+                <li class="categories__item">
+                    {% if category == 'codigo' %}
+                        <a class="categories__link {% if current_page[2] == category %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
+                            código
+                    {% elsif category == 'diseno' %}
+                        <a class="categories__link {% if current_page[2] == category %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
+                            diseño
+                    {% else %}
+                        <a class="categories__link {% if current_page[2] == category %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category }}">
+                            {{ category | replace: '-', ' ' }}
+                    {% endif %}
+                        <span class="categories__count">
+                            {{ site.categories[category].size }}
+                        </span>
+                    </a>
+                </li>
+            {% endfor %}
+        {% else %}
+            {% for category in categories_list %}
+                <li class="categories__item">
+                    {% if category[0] == 'codigo' %}
+                        <a class="categories__link {% if current_page[2] == category[0] %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
+                            código
+                    {% elsif category[0] == 'diseno' %}
+                        <a class="categories__link {% if current_page[2] == category[0] %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
+                            diseño
+                    {% else %}
+                        <a class="categories__link {% if current_page[2] == category[0] %}categories__link--selected{% endif %}" href="{{ site.baseurl }}/categoria/{{ category[0] }}">
+                            {{ category[0] | replace: '-', ' ' }}
+                    {% endif %}
+                        <span class="categories__count">
+                            {{ category[1].size }}
+                        </span>
+                    </a>
+                </li>
+            {% endfor %}
+        {% endif %}
+        {% assign categories_list = nil %}
+    </ul>
 </div>
 {% endcomment %}
 
@@ -474,74 +474,74 @@
 
 {% comment %}
 <div class="menu">
-	<div class="categories">
-		<ul class="categories-list">
-			<li class="category-item">
-				<a class="category-link {% if page.url == '/' %}category-active{% endif %}" href="{{ site.baseurl }}/">Reciente</a>
-			</li>
-			{% assign categories_list = site.categories | sort %}
-			{% if categories_list.first[0] == null %}
-				{% for category in categories_list %}
-					<li class="category-item">
-						{% if category == 'desarrollo-movil' %}
-							<a class="category-link" href="#{{ category }}" data-menu-category="{{ category }}">
-								desarrollo móvil
-						{% elsif category == 'fuentes-y-tipografias' %}
-							<a class="category-link" href="#{{ category }}" data-menu-category="{{ category }}">
-								fuentes y tipografías
-						{% else %}
-							<a class="category-link" href="#{{ category }}" data-menu-category="{{ category }}">
-								{{ category | replace: '-', ' ' }}
-						{% endif %}
-						</a>
-							<!-- <span class="category-count">
-								{{ site.categories[category].size }}
-							</span> -->
-					</li>
-				{% endfor %}
-			{% else %}
-				{% for category in categories_list %}
-					<li class="category-item">
-						{% if category[0] == 'desarrollo-movil' %}
-							<a class="category-link" href="#{{ category[0] }}" data-menu-category="{{ category[0] }}">
-								desarrollo móvil
-						{% elsif category[0] == 'fuentes-y-tipografias' %}
-							<a class="category-link" href="#{{ category[0] }}" data-menu-category="{{ category[0] }}">
-								fuentes y tipografías
-						{% else %}
-							<a class="category-link" href="#{{ category[0] }}" data-menu-category="{{ category[0] }}">
-								{{ category[0] | replace: '-', ' ' }}
-						{% endif %}
-						</a>
-							<!-- <span class="category-count">
-								{{ category[1].size }}
-							</span> -->
-					</li>
-				{% endfor %}
-			{% endif %}
-			{% assign categories_list = nil %}
-		</ul>
-	</div>
+    <div class="categories">
+        <ul class="categories-list">
+            <li class="category-item">
+                <a class="category-link {% if page.url == '/' %}category-active{% endif %}" href="{{ site.baseurl }}/">Reciente</a>
+            </li>
+            {% assign categories_list = site.categories | sort %}
+            {% if categories_list.first[0] == null %}
+                {% for category in categories_list %}
+                    <li class="category-item">
+                        {% if category == 'desarrollo-movil' %}
+                            <a class="category-link" href="#{{ category }}" data-menu-category="{{ category }}">
+                                desarrollo móvil
+                        {% elsif category == 'fuentes-y-tipografias' %}
+                            <a class="category-link" href="#{{ category }}" data-menu-category="{{ category }}">
+                                fuentes y tipografías
+                        {% else %}
+                            <a class="category-link" href="#{{ category }}" data-menu-category="{{ category }}">
+                                {{ category | replace: '-', ' ' }}
+                        {% endif %}
+                        </a>
+                            <!-- <span class="category-count">
+                                {{ site.categories[category].size }}
+                            </span> -->
+                    </li>
+                {% endfor %}
+            {% else %}
+                {% for category in categories_list %}
+                    <li class="category-item">
+                        {% if category[0] == 'desarrollo-movil' %}
+                            <a class="category-link" href="#{{ category[0] }}" data-menu-category="{{ category[0] }}">
+                                desarrollo móvil
+                        {% elsif category[0] == 'fuentes-y-tipografias' %}
+                            <a class="category-link" href="#{{ category[0] }}" data-menu-category="{{ category[0] }}">
+                                fuentes y tipografías
+                        {% else %}
+                            <a class="category-link" href="#{{ category[0] }}" data-menu-category="{{ category[0] }}">
+                                {{ category[0] | replace: '-', ' ' }}
+                        {% endif %}
+                        </a>
+                            <!-- <span class="category-count">
+                                {{ category[1].size }}
+                            </span> -->
+                    </li>
+                {% endfor %}
+            {% endif %}
+            {% assign categories_list = nil %}
+        </ul>
+    </div>
 
-	{% unless page.url == '/' %}
-		<ul class="pageNav">
-			<li class="pageNav-item pageNav-pagePrev {% unless page.next.url %}disabled{% endunless %}">
-				<a href="{{ page.next.url }}" title="Publicación anterior: {{ page.next.title }}">
-					<i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-				</a>
-			</li>
-			<li class="pageNav-item pageNav-randomPost">
-				<a class="pageNav-randomPostLink" href="" title="Leer un artículo al azar">
-					<i class="fa fa-random" aria-hidden="true"></i>
-				</a>
-			</li>
-			<li class="pageNav-item pageNav-pageNext {% unless page.previous.url %}disabled{% endunless %}">
-				<a href="{{ page.previous.url }}" title="Publicación siguiente: {{ page.previous.title }}">
-					<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-				</a>
-			</li>
-		</ul>
-	{% endunless %}
+    {% unless page.url == '/' %}
+        <ul class="pageNav">
+            <li class="pageNav-item pageNav-pagePrev {% unless page.next.url %}disabled{% endunless %}">
+                <a href="{{ page.next.url }}" title="Publicación anterior: {{ page.next.title }}">
+                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="pageNav-item pageNav-randomPost">
+                <a class="pageNav-randomPostLink" href="" title="Leer un artículo al azar">
+                    <i class="fa fa-random" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="pageNav-item pageNav-pageNext {% unless page.previous.url %}disabled{% endunless %}">
+                <a href="{{ page.previous.url }}" title="Publicación siguiente: {{ page.previous.title }}">
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    {% endunless %}
 </div>
 {% endcomment %}
 
@@ -555,95 +555,95 @@
 
 {% comment %}
 <div id="sidebar">
-	{% if page.url == '/' %}
-		<div id="twitter">
-			<h4>Twitter</h4>
+    {% if page.url == '/' %}
+        <div id="twitter">
+            <h4>Twitter</h4>
 
-			<div id="latest-tweets">
-			</div>
+            <div id="latest-tweets">
+            </div>
 
-			<p>
-				{% assign author_items = site.authors['jonathan'] %}
-				<a class="teaser-author" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
-					Más tweets
-				</a>
-			</p>
-		</div>
-	{% elsif page.layout == 'post' %}
-		<div class="page-navigation">
-			<h4>Explorar</h4>
+            <p>
+                {% assign author_items = site.authors['jonathan'] %}
+                <a class="teaser-author" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
+                    Más tweets
+                </a>
+            </p>
+        </div>
+    {% elsif page.layout == 'post' %}
+        <div class="page-navigation">
+            <h4>Explorar</h4>
 
-			<ul class="list-unstyled">
-				{% if page.next.url %}
-					<li>
-						Siguiente:
-						<a href="{{ page.next.url }}" title="{{ page.next.title }}">
-							{{ page.next.title }}
-						</a>
-					</li>
-				{% endif %}
-				{% if page.previous.url %}
-					<li>
-						Anterior:
-						<a href="{{ page.previous.url }}" title="{{ page.previous.title }}">
-							{{ page.previous.title }}
-						</a>
-					</li>
-				{% endif %}
-				<li>
-					Destino:
-					<a class="random-post" href="" title="Leer un artículo al azar">
-						Leer un artículo al azar
-					</a>
-				</li>
-				<li>
-					Categoría:
-					{% assign sorted_categories = page.categories | sort %}
-					{% for category in sorted_categories %}
-						{% if category == 'articulos' %}
-							<a class="post-category text-capitalize" href="{{ site.baseurl }}/articulos">artículos</a>
-						{% elsif category == 'inspiracion' %}
-							<a class="post-category text-capitalize" href="{{ site.baseurl }}/historias">inspiración</a>
-						{% else %}
-							<a class="post-category text-capitalize" href="{{ site.baseurl }}/{{ category }}">{{ category }}</a>
-						{% endif %}
-					{% endfor %}
-				</li>
-			</ul>
-		</div>
-	{% elsif page.url == '/archivo' or
-					 page.url == '/autor' %}
-		<div class="recent-posts">
-			<h4>Artículos recientes</h4>
+            <ul class="list-unstyled">
+                {% if page.next.url %}
+                    <li>
+                        Siguiente:
+                        <a href="{{ page.next.url }}" title="{{ page.next.title }}">
+                            {{ page.next.title }}
+                        </a>
+                    </li>
+                {% endif %}
+                {% if page.previous.url %}
+                    <li>
+                        Anterior:
+                        <a href="{{ page.previous.url }}" title="{{ page.previous.title }}">
+                            {{ page.previous.title }}
+                        </a>
+                    </li>
+                {% endif %}
+                <li>
+                    Destino:
+                    <a class="random-post" href="" title="Leer un artículo al azar">
+                        Leer un artículo al azar
+                    </a>
+                </li>
+                <li>
+                    Categoría:
+                    {% assign sorted_categories = page.categories | sort %}
+                    {% for category in sorted_categories %}
+                        {% if category == 'articulos' %}
+                            <a class="post-category text-capitalize" href="{{ site.baseurl }}/articulos">artículos</a>
+                        {% elsif category == 'inspiracion' %}
+                            <a class="post-category text-capitalize" href="{{ site.baseurl }}/historias">inspiración</a>
+                        {% else %}
+                            <a class="post-category text-capitalize" href="{{ site.baseurl }}/{{ category }}">{{ category }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </li>
+            </ul>
+        </div>
+    {% elsif page.url == '/archivo' or
+                     page.url == '/autor' %}
+        <div class="recent-posts">
+            <h4>Artículos recientes</h4>
 
-			<ul class="list-unstyled">
-				{% assign postCounter = 0 %}
-				{% assign maxPost = 6 %}
-				{% for post in site.posts %}
-					<li>
-						<a href="">
-							{{ post.title }}
-						</a>
+            <ul class="list-unstyled">
+                {% assign postCounter = 0 %}
+                {% assign maxPost = 6 %}
+                {% for post in site.posts %}
+                    <li>
+                        <a href="">
+                            {{ post.title }}
+                        </a>
 
-						<div>
-							{{ post.excerpt | strip_html | truncatewords: 15 }}
-						</div>
+                        <div>
+                            {{ post.excerpt | strip_html | truncatewords: 15 }}
+                        </div>
 
-						{% assign postCounter = postCounter | plus: 1 %}
-						{% if postCounter >= maxPost %}
-							{% break %}
-						{% endif %}
-					</li>
-				{% endfor %}
-			</ul>
+                        {% assign postCounter = postCounter | plus: 1 %}
+                        {% if postCounter >= maxPost %}
+                            {% break %}
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
 
-			<p>
-				<a class="teaser-author" href="{{ site.baseurl }}/archivo">
-					Más artículos
-				</a>
-			</p>
-		</div>
-	{% endif %}
+            <p>
+                <a class="teaser-author" href="{{ site.baseurl }}/archivo">
+                    Más artículos
+                </a>
+            </p>
+        </div>
+    {% endif %}
 </div>
 {% endcomment %}
 
@@ -653,23 +653,23 @@
 
 {% comment %}
 <div class="page-navigation">
-	<h4>Explorar</h4>
+    <h4>Explorar</h4>
 
-	<div class="btn-group btn-group-justified" role="group">
-		{% if page.previous.url %}
-			<a class="btn btn-link" href="{{ page.previous.url }}" title="{{ page.previous.title }}">
-				<i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-			</a>
-		{% endif %}
-		<a class="btn btn-link btn-random-post" href="" title="Leer un artículo al azar">
-			<i class="fa fa-random" aria-hidden="true"></i>
-		</a>
-		{% if page.next.url %}
-			<a class="btn btn-link" href="{{ page.next.url }}" title="{{ page.next.title }}">
-				<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-			</a>
-		{% endif %}
-	</div>
+    <div class="btn-group btn-group-justified" role="group">
+        {% if page.previous.url %}
+            <a class="btn btn-link" href="{{ page.previous.url }}" title="{{ page.previous.title }}">
+                <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+            </a>
+        {% endif %}
+        <a class="btn btn-link btn-random-post" href="" title="Leer un artículo al azar">
+            <i class="fa fa-random" aria-hidden="true"></i>
+        </a>
+        {% if page.next.url %}
+            <a class="btn btn-link" href="{{ page.next.url }}" title="{{ page.next.title }}">
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </a>
+        {% endif %}
+    </div>
 </div>
 {% endcomment %}
 
@@ -679,389 +679,389 @@
 
 {% comment %}
 <div class="layout-aside
-	{% if page.layout == 'page' or
-				page.layout == 'articles' or
-				page.layout == 'stories' %}
-		layout-aside-single
-	{% elsif page.layout == 'post' %}
-		layout-aside-entry
-	{% endif %}">
-	{% if page.url == '/' %}
-		<section class="aside-entries">
-			<h2 class="aside-entries-title">
-				<a href="{{ site.baseurl }}/historias">
-					Historias
-				</a>
-			</h2>
+    {% if page.layout == 'page' or
+                page.layout == 'articles' or
+                page.layout == 'stories' %}
+        layout-aside-single
+    {% elsif page.layout == 'post' %}
+        layout-aside-entry
+    {% endif %}">
+    {% if page.url == '/' %}
+        <section class="aside-entries">
+            <h2 class="aside-entries-title">
+                <a href="{{ site.baseurl }}/historias">
+                    Historias
+                </a>
+            </h2>
 
-			{% assign postCounter = 0 %}
-			{% assign maxPost = 3 %}
-			{% for post in site.posts %}
-				{% if post.categories contains 'historias' %}
-					<article class="teaser teaser-aside-entries">
-						<a class="teaser-link" href="{{ post.url }}">
-							<h3 class="teaser-title">
-								{{ post.title }}
-							</h3>
-						</a>
+            {% assign postCounter = 0 %}
+            {% assign maxPost = 3 %}
+            {% for post in site.posts %}
+                {% if post.categories contains 'historias' %}
+                    <article class="teaser teaser-aside-entries">
+                        <a class="teaser-link" href="{{ post.url }}">
+                            <h3 class="teaser-title">
+                                {{ post.title }}
+                            </h3>
+                        </a>
 
-						<div class="teaser-content">
-							<p class="teaser-meta">
-								{% include date.html %}
-								por
-								{% assign sorted_authors = post.authors | sort %}
-								{% for author in sorted_authors %}<!--
-									-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %}
-									{% assign author_items = site.authors[author] %}
-									{% if author == 'jonathan' %}
-										<a class="teaser-author" href="{{ site.baseurl }}/autor">
-									{% else %}
-										<a class="teaser-author" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
-									{% endif %}
-										{{ author_items.name }}<!--
-									--></a><!--
-								-->{% endfor %}
-								en
-								{% assign sorted_categories = post.categories | sort %}
-								{% for category in sorted_categories %}
-									<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
-									{% if category == 'articulos' %}
-										<a class="teaser-category" href="{{ site.baseurl }}/articulos">artículos</a>
-									{% elsif category == 'historias' %}
-										<a class="teaser-category" href="{{ site.baseurl }}/historias">historias</a>
-									{% endif %}
-								{% endfor %}
-							</p>
+                        <div class="teaser-content">
+                            <p class="teaser-meta">
+                                {% include date.html %}
+                                por
+                                {% assign sorted_authors = post.authors | sort %}
+                                {% for author in sorted_authors %}<!--
+                                    -->{% unless forloop.index == 1 %}<span>,</span>{% endunless %}
+                                    {% assign author_items = site.authors[author] %}
+                                    {% if author == 'jonathan' %}
+                                        <a class="teaser-author" href="{{ site.baseurl }}/autor">
+                                    {% else %}
+                                        <a class="teaser-author" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
+                                    {% endif %}
+                                        {{ author_items.name }}<!--
+                                    --></a><!--
+                                -->{% endfor %}
+                                en
+                                {% assign sorted_categories = post.categories | sort %}
+                                {% for category in sorted_categories %}
+                                    <!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
+                                    {% if category == 'articulos' %}
+                                        <a class="teaser-category" href="{{ site.baseurl }}/articulos">artículos</a>
+                                    {% elsif category == 'historias' %}
+                                        <a class="teaser-category" href="{{ site.baseurl }}/historias">historias</a>
+                                    {% endif %}
+                                {% endfor %}
+                            </p>
 
-							<div class="teaser-intro">
-								{{ post.excerpt }}
-							</div>
-						</div>
-					</article>
-					{% assign postCounter = postCounter | plus: 1 %}
-					{% if postCounter >= maxPost %}
-						{% break %}
-					{% endif %}
-				{% endif %}
-			{% endfor %}
-		</section>
-	{% elsif page.layout == 'post' or
-					 page.url == '/autor' %}
-		<section class="aside-entries aside-entries-post">
-			<h2 class="aside-entries-title">
-				{% if page.layout == 'post' %}
-					Más publicaciones
-				{% else %}
-					Publicaciones recientes
-				{% endif %}
-			</h2>
+                            <div class="teaser-intro">
+                                {{ post.excerpt }}
+                            </div>
+                        </div>
+                    </article>
+                    {% assign postCounter = postCounter | plus: 1 %}
+                    {% if postCounter >= maxPost %}
+                        {% break %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </section>
+    {% elsif page.layout == 'post' or
+                     page.url == '/autor' %}
+        <section class="aside-entries aside-entries-post">
+            <h2 class="aside-entries-title">
+                {% if page.layout == 'post' %}
+                    Más publicaciones
+                {% else %}
+                    Publicaciones recientes
+                {% endif %}
+            </h2>
 
-			{% assign postCounter = 0 %}
-			{% assign maxPost = 6 %}
-			{% for post in site.posts %}
-				<article class="teaser teaser-aside-entries">
-					<a class="teaser-link" href="{{ post.url }}">
-						<h3 class="teaser-title">
-							{{ post.title }}
-						</h3>
+            {% assign postCounter = 0 %}
+            {% assign maxPost = 6 %}
+            {% for post in site.posts %}
+                <article class="teaser teaser-aside-entries">
+                    <a class="teaser-link" href="{{ post.url }}">
+                        <h3 class="teaser-title">
+                            {{ post.title }}
+                        </h3>
 
-						<!-- {% if post.cover %}
-							<img class="teaser-image" src="{{ post.cover }}" alt="{{ post.title }}">
-						{% endif %} -->
-					</a>
+                        <!-- {% if post.cover %}
+                            <img class="teaser-image" src="{{ post.cover }}" alt="{{ post.title }}">
+                        {% endif %} -->
+                    </a>
 
-					<div class="teaser-content">
-						<p class="teaser-meta">
-							{% include date.html %}
-							por
-							{% assign sorted_authors = post.authors | sort %}
-							{% for author in sorted_authors %}<!--
-								-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %}
-								{% assign author_items = site.authors[author] %}
-								{% if author == 'jonathan' %}
-									<a class="teaser-author" href="{{ site.baseurl }}/autor">
-								{% else %}
-									<a class="teaser-author" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
-								{% endif %}
-									{{ author_items.name }}<!--
-								--></a><!--
-							-->{% endfor %}
-							en
-							{% assign sorted_categories = post.categories | sort %}
-							{% for category in sorted_categories %}
-								<!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
-								{% if category == 'articulos' %}
-									<a class="teaser-category" href="{{ site.baseurl }}/articulos">artículos</a>
-								{% elsif category == 'historias' %}
-									<a class="teaser-category" href="{{ site.baseurl }}/historias">historias</a>
-								{% endif %}
-							{% endfor %}
-						</p>
+                    <div class="teaser-content">
+                        <p class="teaser-meta">
+                            {% include date.html %}
+                            por
+                            {% assign sorted_authors = post.authors | sort %}
+                            {% for author in sorted_authors %}<!--
+                                -->{% unless forloop.index == 1 %}<span>,</span>{% endunless %}
+                                {% assign author_items = site.authors[author] %}
+                                {% if author == 'jonathan' %}
+                                    <a class="teaser-author" href="{{ site.baseurl }}/autor">
+                                {% else %}
+                                    <a class="teaser-author" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
+                                {% endif %}
+                                    {{ author_items.name }}<!--
+                                --></a><!--
+                            -->{% endfor %}
+                            en
+                            {% assign sorted_categories = post.categories | sort %}
+                            {% for category in sorted_categories %}
+                                <!-- <a class="teaser-category" href="{{ site.baseurl }}/">{{ category | replace: '-', ' ' }}</a> -->
+                                {% if category == 'articulos' %}
+                                    <a class="teaser-category" href="{{ site.baseurl }}/articulos">artículos</a>
+                                {% elsif category == 'historias' %}
+                                    <a class="teaser-category" href="{{ site.baseurl }}/historias">historias</a>
+                                {% endif %}
+                            {% endfor %}
+                        </p>
 
-						<div class="teaser-intro">
-							{{ post.excerpt | strip_html | truncatewords: 15  }}
-						</div>
-					</div>
-				</article>
-				{% assign postCounter = postCounter | plus: 1 %}
-				{% if postCounter >= maxPost %}
-					{% break %}
-				{% endif %}
-			{% endfor %}
-		</section>
+                        <div class="teaser-intro">
+                            {{ post.excerpt | strip_html | truncatewords: 15  }}
+                        </div>
+                    </div>
+                </article>
+                {% assign postCounter = postCounter | plus: 1 %}
+                {% if postCounter >= maxPost %}
+                    {% break %}
+                {% endif %}
+            {% endfor %}
+        </section>
 
 
 
-		{% comment %}
-		<div class="authors authors-fixed">
-			{% assign sorted_authors = page.authors | sort %}
-			{% for author in sorted_authors %}
-				<div class="authors-link-wrap">
-					{% assign author_items = site.authors[author] %}
-					{% if author == 'jonathan' %}
-						<a class="authors-link" href="{{ site.baseurl }}/autor">
-					{% else %}
-						<a class="authors-link" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
-					{% endif %}
-						<img class="authors-image authors-image-rounded" src="{{ site.baseurl }}/images/authors/{{ author_items.avatar }}" alt="{{ author_items.name }}">
-					</a>
+        {% comment %}
+        <div class="authors authors-fixed">
+            {% assign sorted_authors = page.authors | sort %}
+            {% for author in sorted_authors %}
+                <div class="authors-link-wrap">
+                    {% assign author_items = site.authors[author] %}
+                    {% if author == 'jonathan' %}
+                        <a class="authors-link" href="{{ site.baseurl }}/autor">
+                    {% else %}
+                        <a class="authors-link" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
+                    {% endif %}
+                        <img class="authors-image authors-image-rounded" src="{{ site.baseurl }}/images/authors/{{ author_items.avatar }}" alt="{{ author_items.name }}">
+                    </a>
 
-					<div class="authors-title">
-						{% if author == 'jonathan' %}
-							<a class="authors-link" href="{{ site.baseurl }}/autor">
-						{% else %}
-							<a class="authors-link" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
-						{% endif %}
-							<span class="authors-name">
-								Por {{ author_items.name }}
-							</span>
-						</a>
-						{% if author_items.twitter_username %}
-							<a class="authors-twitter" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
-								<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-							</a>
-						{% endif %}
-					</div>
-				</div>
-			{% endfor %}
-		</div>
-		{% endcomment %}
+                    <div class="authors-title">
+                        {% if author == 'jonathan' %}
+                            <a class="authors-link" href="{{ site.baseurl }}/autor">
+                        {% else %}
+                            <a class="authors-link" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
+                        {% endif %}
+                            <span class="authors-name">
+                                Por {{ author_items.name }}
+                            </span>
+                        </a>
+                        {% if author_items.twitter_username %}
+                            <a class="authors-twitter" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
+                                <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% endcomment %}
 
-		{% comment %}
-		{% if page.categories contains 'articulos' %}
-			<h3 class="aside-title">
-				Artículos
-			</h3>
+        {% comment %}
+        {% if page.categories contains 'articulos' %}
+            <h3 class="aside-title">
+                Artículos
+            </h3>
 
-			<p>
-				En lugar de mantener un blog tradicional, esta página sirve como hogar para la escritura y como depósito de respuestas a las preguntas más frecuentes acerca de mis gustos y mi trabajo. Para recibir actualizaciones, puedes <a href="https://twitter.com/{{ site.twitter_username }}" target="_target">seguirme en twitter</a> o <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">suscríbirte a mi feed RSS</a>. Por favor, siéntate libre de enviarme por correo electrónico tus comentarios o correcciones.
-			</p>
-		{% elsif page.categories contains 'historias' %}
-			<h3 class="aside-title">
-				Historias
-			</h3>
+            <p>
+                En lugar de mantener un blog tradicional, esta página sirve como hogar para la escritura y como depósito de respuestas a las preguntas más frecuentes acerca de mis gustos y mi trabajo. Para recibir actualizaciones, puedes <a href="https://twitter.com/{{ site.twitter_username }}" target="_target">seguirme en twitter</a> o <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">suscríbirte a mi feed RSS</a>. Por favor, siéntate libre de enviarme por correo electrónico tus comentarios o correcciones.
+            </p>
+        {% elsif page.categories contains 'historias' %}
+            <h3 class="aside-title">
+                Historias
+            </h3>
 
-			<p>
-				Por otra parte, en esta página encontrarás una colección de experiencias del pasado relatadas desde este inmejorable presente. Para recibir actualizaciones, puedes <a href="https://twitter.com/{{ site.twitter_username }}" target="_target">seguirme en twitter</a> o <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">suscríbirte a mi feed RSS</a>. Por favor, siéntate libre de enviarme por correo electrónico tus comentarios o correcciones.
-			</p>
-		{% endif %}
-		{% endcomment %}
+            <p>
+                Por otra parte, en esta página encontrarás una colección de experiencias del pasado relatadas desde este inmejorable presente. Para recibir actualizaciones, puedes <a href="https://twitter.com/{{ site.twitter_username }}" target="_target">seguirme en twitter</a> o <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">suscríbirte a mi feed RSS</a>. Por favor, siéntate libre de enviarme por correo electrónico tus comentarios o correcciones.
+            </p>
+        {% endif %}
+        {% endcomment %}
 
-		{% comment %}
-		<p class="entry">
-			Publicado el
-			{% include date.html %}
-			en
-			{% assign sorted_categories = page.categories | sort %}
-			{% for category in sorted_categories %}
-				{% if category == 'articulos' %}
-					<a class="entry-category" href="{{ site.baseurl }}/articulos">artículos</a>.
-				{% elsif category == 'historias' %}
-					<a class="entry-category" href="{{ site.baseurl }}/historias">historias</a>.
-				{% else %}
-					<a class="entry-category" href="{{ site.baseurl }}/momentos">momentos</a>.
-				{% endif %}
-			{% endfor %}
-			{% assign author_items = site.authors['jonathan'] %}
-			{% if author_items.github_username %}
-				{% assign filename = page.url | replace_first: '/', '' | replace: '/', '-' | replace: '.html', '.md' %}
-				<a href="https://github.com/{{ author_items.github_username }}/jonathanzuniga.github.io/edit/master/_posts/articles/{{ filename }}.md">
-					Mejora
-					{% assign sorted_categories = page.categories | sort %}
-					{% for category in sorted_categories %}
-						{% if category == 'historias' %}
-							esta historia
-						{% else %}
-							este artículo
-						{% endif %}
-					{% endfor %}
-					en GitHub</a>.
-			{% endif %}
-			Esta obra está bajo una licencia
-			<a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">
-				Creative Commons Atribución 4.0 Internacional</a>.
-		</p>
+        {% comment %}
+        <p class="entry">
+            Publicado el
+            {% include date.html %}
+            en
+            {% assign sorted_categories = page.categories | sort %}
+            {% for category in sorted_categories %}
+                {% if category == 'articulos' %}
+                    <a class="entry-category" href="{{ site.baseurl }}/articulos">artículos</a>.
+                {% elsif category == 'historias' %}
+                    <a class="entry-category" href="{{ site.baseurl }}/historias">historias</a>.
+                {% else %}
+                    <a class="entry-category" href="{{ site.baseurl }}/momentos">momentos</a>.
+                {% endif %}
+            {% endfor %}
+            {% assign author_items = site.authors['jonathan'] %}
+            {% if author_items.github_username %}
+                {% assign filename = page.url | replace_first: '/', '' | replace: '/', '-' | replace: '.html', '.md' %}
+                <a href="https://github.com/{{ author_items.github_username }}/jonathanzuniga.github.io/edit/master/_posts/articles/{{ filename }}.md">
+                    Mejora
+                    {% assign sorted_categories = page.categories | sort %}
+                    {% for category in sorted_categories %}
+                        {% if category == 'historias' %}
+                            esta historia
+                        {% else %}
+                            este artículo
+                        {% endif %}
+                    {% endfor %}
+                    en GitHub</a>.
+            {% endif %}
+            Esta obra está bajo una licencia
+            <a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">
+                Creative Commons Atribución 4.0 Internacional</a>.
+        </p>
 
-		<ul class="tags">
-			{% assign sorted_tags = page.tags | sort %}
-			{% for tag in sorted_tags %}
-				<li class="tags-item">
-					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/{{ tag }}">{{ tag }}</a>
-				</li>
-			{% endfor %}
-		</ul>
-		{% endcomment %}
-	{% elsif page.layout == 'tag_page' or
-					 page.url == '/buscar' %}
-		<ul class="tags">
-			{{ site | tag_cloud }}
-		</ul>
-	{% elsif page.layout == 'articles' %}
-		<ul class="tags">
-			{% comment %}
-				<!-- The following part extracts all the tags from your posts and sort tags, so that you do not need to manually collect your tags to a place. -->
-			{% endcomment %}
-			{% assign article_tags = '' %}
-			{% for article in site.categories['articulos'] %}
-				{% assign ttags = article.tags | join: '|' | append: '|' %}
-				{% assign article_tags = article_tags | append: ttags %}
-			{% endfor %}
-			{% assign article_tags = article_tags | split: '|' | sort %}
+        <ul class="tags">
+            {% assign sorted_tags = page.tags | sort %}
+            {% for tag in sorted_tags %}
+                <li class="tags-item">
+                    <a class="tags-link" href="{{ site.baseurl }}/etiqueta/{{ tag }}">{{ tag }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        {% endcomment %}
+    {% elsif page.layout == 'tag_page' or
+                     page.url == '/buscar' %}
+        <ul class="tags">
+            {{ site | tag_cloud }}
+        </ul>
+    {% elsif page.layout == 'articles' %}
+        <ul class="tags">
+            {% comment %}
+                <!-- The following part extracts all the tags from your posts and sort tags, so that you do not need to manually collect your tags to a place. -->
+            {% endcomment %}
+            {% assign article_tags = '' %}
+            {% for article in site.categories['articulos'] %}
+                {% assign ttags = article.tags | join: '|' | append: '|' %}
+                {% assign article_tags = article_tags | append: ttags %}
+            {% endfor %}
+            {% assign article_tags = article_tags | split: '|' | sort %}
 
-			{% comment %}
-				<!-- The following part removes duplicated tags and invalid tags like blank tag. -->
-			{% endcomment %}
-			{% assign tags = '' %}
-			{% for tag in article_tags %}
-				{% if tag != '' %}
-					{% if tags == '' %}
-						{% assign tags = tag | split: '|' %}
-					{% endif %}
-					{% unless tags contains tag %}
-						{% assign tags = tags | join: '|' | append: '|' | append: tag | split: '|' %}
-					{% endunless %}
-				{% endif %}
-			{% endfor %}
+            {% comment %}
+                <!-- The following part removes duplicated tags and invalid tags like blank tag. -->
+            {% endcomment %}
+            {% assign tags = '' %}
+            {% for tag in article_tags %}
+                {% if tag != '' %}
+                    {% if tags == '' %}
+                        {% assign tags = tag | split: '|' %}
+                    {% endif %}
+                    {% unless tags contains tag %}
+                        {% assign tags = tags | join: '|' | append: '|' | append: tag | split: '|' %}
+                    {% endunless %}
+                {% endif %}
+            {% endfor %}
 
-			{% for tag in tags %}
-				<li class="tags-item">
-					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/{{ tag }}">{{ tag }}</a>
-				</li>
-			{% endfor %}
-		</ul>
-	{% elsif page.layout == 'stories' %}
-		<ul class="tags">
-			{% comment %}
-			<!-- The following part extracts all the tags from your posts and sort tags, so that you do not need to manually collect your tags to a place. -->
-			{% endcomment %}
-			{% assign story_tags = '' %}
-			{% for story in site.categories['historias'] %}
-				{% assign ttags = story.tags | join: '|' | append: '|' %}
-				{% assign story_tags = story_tags | append: ttags %}
-			{% endfor %}
-			{% assign story_tags = story_tags | split: '|' | sort %}
+            {% for tag in tags %}
+                <li class="tags-item">
+                    <a class="tags-link" href="{{ site.baseurl }}/etiqueta/{{ tag }}">{{ tag }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% elsif page.layout == 'stories' %}
+        <ul class="tags">
+            {% comment %}
+            <!-- The following part extracts all the tags from your posts and sort tags, so that you do not need to manually collect your tags to a place. -->
+            {% endcomment %}
+            {% assign story_tags = '' %}
+            {% for story in site.categories['historias'] %}
+                {% assign ttags = story.tags | join: '|' | append: '|' %}
+                {% assign story_tags = story_tags | append: ttags %}
+            {% endfor %}
+            {% assign story_tags = story_tags | split: '|' | sort %}
 
-			{% comment %}
-			<!-- The following part removes duplicated tags and invalid tags like blank tag. -->
-			{% endcomment %}
-			{% assign tags = '' %}
-			{% for tag in story_tags %}
-				{% if tag != '' %}
-					{% if tags == '' %}
-						{% assign tags = tag | split: '|' %}
-					{% endif %}
-					{% unless tags contains tag %}
-						{% assign tags = tags | join: '|' | append: '|' | append: tag | split: '|' %}
-					{% endunless %}
-				{% endif %}
-			{% endfor %}
+            {% comment %}
+            <!-- The following part removes duplicated tags and invalid tags like blank tag. -->
+            {% endcomment %}
+            {% assign tags = '' %}
+            {% for tag in story_tags %}
+                {% if tag != '' %}
+                    {% if tags == '' %}
+                        {% assign tags = tag | split: '|' %}
+                    {% endif %}
+                    {% unless tags contains tag %}
+                        {% assign tags = tags | join: '|' | append: '|' | append: tag | split: '|' %}
+                    {% endunless %}
+                {% endif %}
+            {% endfor %}
 
-			{% for tag in tags %}
-				<li class="tags-item">
-					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/{{ tag }}">{{ tag }}</a>
-				</li>
-			{% endfor %}
-		</ul>
-	{% elsif page.url == '/recursos' %}
-		<ul class="sidebar">
-			<li>
-				<h3 class="sidebar-title">
-					Documentación
-				</h3>
+            {% for tag in tags %}
+                <li class="tags-item">
+                    <a class="tags-link" href="{{ site.baseurl }}/etiqueta/{{ tag }}">{{ tag }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% elsif page.url == '/recursos' %}
+        <ul class="sidebar">
+            <li>
+                <h3 class="sidebar-title">
+                    Documentación
+                </h3>
 
-				<ul class="sidebar-links">
-					{% assign sorted_resources = site.data.resources.documentation | sort: 'title' %}
-					{% for resource in sorted_resources %}
-						<li>
-							<a class="sidebar-link" href="{{ resource.url }}" target="_blank">
-								{{ resource.title }}
-							</a>
-						</li>
-					{% endfor %}
-				</ul>
-			</li>
+                <ul class="sidebar-links">
+                    {% assign sorted_resources = site.data.resources.documentation | sort: 'title' %}
+                    {% for resource in sorted_resources %}
+                        <li>
+                            <a class="sidebar-link" href="{{ resource.url }}" target="_blank">
+                                {{ resource.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
 
-			<li>
-				<h3 class="sidebar-title">
-					Guías y Ejemplos
-				</h3>
+            <li>
+                <h3 class="sidebar-title">
+                    Guías y Ejemplos
+                </h3>
 
-				<ul class="sidebar-links">
-					{% assign sorted_resources = site.data.resources.guides | sort: 'title' %}
-					{% for resource in sorted_resources %}
-						<li>
-							<a class="sidebar-link" href="{{ resource.url }}" target="_blank">
-								{{ resource.title }}
-							</a>
-						</li>
-					{% endfor %}
-				</ul>
-			</li>
+                <ul class="sidebar-links">
+                    {% assign sorted_resources = site.data.resources.guides | sort: 'title' %}
+                    {% for resource in sorted_resources %}
+                        <li>
+                            <a class="sidebar-link" href="{{ resource.url }}" target="_blank">
+                                {{ resource.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
 
-			<li>
-				<h3 class="sidebar-title">
-					Herramientas
-				</h3>
+            <li>
+                <h3 class="sidebar-title">
+                    Herramientas
+                </h3>
 
-				<ul class="sidebar-links">
-					{% assign sorted_resources = site.data.resources.tools | sort: 'title' %}
-					{% for resource in sorted_resources %}
-						<li>
-							<a class="sidebar-link" href="{{ resource.url }}" target="_blank">
-								{{ resource.title }}
-							</a>
-						</li>
-					{% endfor %}
-				</ul>
-			</li>
-		</ul>
-	{% comment %}
-		<p class="authors">
-			{% assign author = site.authors['jonathan'] %}
-			<img class="authors-image" src="{{ site.baseurl }}/images/authors/{{ author.avatar }}" alt="{{ author.name }}">
-		</p>
+                <ul class="sidebar-links">
+                    {% assign sorted_resources = site.data.resources.tools | sort: 'title' %}
+                    {% for resource in sorted_resources %}
+                        <li>
+                            <a class="sidebar-link" href="{{ resource.url }}" target="_blank">
+                                {{ resource.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+    {% comment %}
+        <p class="authors">
+            {% assign author = site.authors['jonathan'] %}
+            <img class="authors-image" src="{{ site.baseurl }}/images/authors/{{ author.avatar }}" alt="{{ author.name }}">
+        </p>
 
-		<p>
-			No intentes cambiar un sistema, construye uno nuevo que haga que el anterior se vuelva obsoleto.<br>
-			– Richard Buckminster Fuller
-		</p>
+        <p>
+            No intentes cambiar un sistema, construye uno nuevo que haga que el anterior se vuelva obsoleto.<br>
+            – Richard Buckminster Fuller
+        </p>
 
-		<h3 class="aside-title">
-			Habilidades
-		</h3>
+        <h3 class="aside-title">
+            Habilidades
+        </h3>
 
-		<p>
-			Conocimientos avanzados de HTML y CSS. Comprensión del desarrollo móvil, tecnologías web y diseño responsivo. Destrezas malabares.
-		</p>
+        <p>
+            Conocimientos avanzados de HTML y CSS. Comprensión del desarrollo móvil, tecnologías web y diseño responsivo. Destrezas malabares.
+        </p>
 
-		<h3 class="aside-title">
-			Fortalezas
-		</h3>
+        <h3 class="aside-title">
+            Fortalezas
+        </h3>
 
-		<p>
-			Aprendiz, autodidacta, constancia, curiosidad, individualización, intelección, perseverancia.
-		</p>
-	{% endcomment %}
-	{% endif %}
+        <p>
+            Aprendiz, autodidacta, constancia, curiosidad, individualización, intelección, perseverancia.
+        </p>
+    {% endcomment %}
+    {% endif %}
 </div>
 {% endcomment %}

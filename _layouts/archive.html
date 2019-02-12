@@ -3,192 +3,21 @@ layout: default
 ---
 
 {% for post in site.posts %}
-	<article class="post post--{{ forloop.index }}">
-		<header class="post__header">
-			<div class="post__date small">
-				{% include date.html %}
-			</div>
+    <article class="post post--{{ forloop.index }}">
+        <header class="post__header">
+            <div class="post__date small">
+                {% include date.html %}
+            </div>
 
-			<h2 class="post__title h4">
-				<a href="{{ post.url }}">
-					{{ post.title }}
-				</a>
-			</h2>
-		</header>
+            <h2 class="post__title h4">
+                <a href="{{ post.url }}">
+                    {{ post.title }}
+                </a>
+            </h2>
+        </header>
 
-		<div class="post__content post__content--excerpt">
-			{{ post.excerpt }}
-		</div>
-	</article>
+        <div class="post__content post__content--excerpt">
+            {{ post.excerpt }}
+        </div>
+    </article>
 {% endfor %}
-
-
-
-
-
-
-
-
-
-
-
-{% comment %}
-{%
-	assign months =
-	'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' |
-	split: '|'
-%}
-
-<div class="archive">
-	<!-- <h2 class="archive__title custom-title">
-		Previamente en...
-	</h2>
-
-	<div class="archive__categories">
-		Explorar por año:
-	</div> -->
-
-	<ul class="ls-unstyled ac-txtc">
-		{% for post in site.posts %}
-			{% assign m = post.date | date: '%-m' | minus: 1 %}
-			{% assign month = months[m] %}
-			{% assign year = post.date | date: '%Y' %}
-
-			{% unless post.next %}
-				<h3 class="archive__month-year txt-cap bd-bottom m-bottom-3 p-bottom-3 h5 maxsm-txt-center">{{ month }} {{ year }}</h3>
-			{% else %}
-				{% capture ym %}{{ post.date | date: '%Y%m' }}{% endcapture %}
-				{% capture next_ym %}{{ post.next.date | date: '%Y%m' }}{% endcapture %}
-				{% if ym != next_ym %}
-					<h3 class="archive__month-year txt-cap bd-bottom m-bottom-3 p-bottom-3 h5 maxsm-txt-center">{{ month }} {{ year }}</h3>
-				{% endif %}
-			{% endunless %}
-
-			<li>
-				<div class="post">
-					<h4 class="post__title">
-						<a class="post__link" href="{{ post.url }}">{{ post.title }}</a>
-					</h4>
-
-					<div class="post__excerpt txt-sm">
-						{{ post.content | markdownify | strip_html | strip_newlines | truncatewords: 30 }}
-					</div>
-				</div>
-			</li>
-		{% endfor %}
-	</ul>
-{% endcomment %}
-
-
-{% comment %}
-	{% for post in site.posts %}
-		{% assign current_date = post.date | date: "%Y" %}
-		{% if current_date != date %}
-			{% unless forloop.first %}
-				</ul>
-			{% endunless %}
-
-			<h2 id="{{ post.date | date: '%Y' }}" class="archive__year">
-				{{ current_date }}
-			</h2>
-
-			<ul class="ls-unstyled archive__list">
-			{% assign date = current_date %}
-		{% endif %}
-
-		<li class="archive__item">
-			<div class="post">
-				<h3 class="post__title">
-					<a class="post__link" href="{{ post.url }}">
-						{{ post.title }}
-					</a>
-				</h3>
-
-				<p class="post__content">
-					<span class="post__date">{% include date.html %}</span> ...
-					{{ post.content | markdownify | strip_html | truncatewords: 15 }}
-				</p>
-			</div>
-		</li>
-
-		{% if forloop.last %}
-			</ul>
-		{% endif %}
-	{% endfor %}
-</div>
-
-{% include form_search.html %}
-{% endcomment %}
-
-
-
-
-
-{% comment %}
-<article class="archive">
-	{% assign counter = 0 %}
-	{% for post in site.posts %}
-		{% assign current_date = post.date | date: '%B %Y' %}
-		{% assign previous_date = post.previous.date | date: '%B %Y' %}
-		{% assign counter = counter | plus: 1 %}
-		{% if current_date != date %}
-			{% unless forloop.first %}</ul>{% endunless %}
-
-			<h3 class="archive-title">
-				{{ current_date }}
-				<span class="archive-totalPosts">
-					{{ counter }} artículo{% if counter > 1 %}s{% endif %}
-					{% assign counter = 0 %}
-				</span>
-			</h3>
-
-			<ul class="archive-list">
-			{% assign date = current_date %}
-		{% endif %}
-
-		<li class="archive-item">
-			<a href="{{ post.url }}">
-				{{ post.title }}
-			</a>
-		</li>
-
-		{% if forloop.last %}</ul>{% endif %}
-	{% endfor %}
-</article>
-{% endcomment %}
-
-
-
-{% comment %}
-<article id="categories" class="page">
-	<header class="page-header">
-		<h3 class="page-title">
-			Archivo de publicaciones
-		</h3>
-	</header>
-
-	{% capture categories %}
-		{% for category in site.categories %}
-			{{ category[0] }}
-		{% endfor %}
-	{% endcapture %}
-	{% assign sorted_categories = categories | split:' ' | sort %}
-	{% for category in sorted_categories %}
-		<div class="posts-under">
-			<h4 id="{{ category }}" class="page-subtitle">
-				{{ category | replace: '-',' ' }}
-			</h4>
-
-			<ul>
-				{% for post in site.categories[category] %}
-					<li>
-						<a href="{{ post.url }}">
-							{{ post.title }}
-						</a>
-					</li>
-				{% endfor %}
-			</ul>
-		</div>
-	{% endfor %}
-</article>
-{% endcomment %}

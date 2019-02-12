@@ -3,65 +3,62 @@ layout: default
 ---
 
 <article class="post post--{{ forloop.index }}">
-	{% comment %}
-	<header class="post__header">
-		<div class="post__date small">
-			{% include date.html %}
-		</div>
+    {% comment %}
+    <header class="post__header">
+        <div class="post__date small">
+            {% include date.html %}
+        </div>
 
-		<h2 class="post__title h4">
-			<a href="{{ post.url }}">
-				{{ page.title }}
-			</a>
-		</h2>
-	</header>
-	{% endcomment %}
+        <h2 class="post__title h4">
+            <a href="{{ post.url }}">
+                {{ page.title }}
+            </a>
+        </h2>
+    </header>
+    {% endcomment %}
 
-	<div class="post__content">
-		{{ page.content }}
-	</div>
+    <div class="post__content">
+        {{ page.content }}
+    </div>
 
-	<footer class="post__footer">
-		<ul class="list list--inline small">
-			<li>
-				<b>Escrito por</b>
-				{% assign sorted_authors = page.authors | sort %}
-				{% for post_author in sorted_authors %}
-					{% assign author = site.authors[post_author] %}
-					<a href="{{ site.baseurl }}/autor">
-						{{ author.first_name }} {{ author.last_name }}
-					</a>{% if forloop.last == false %}, {% endif %}
-				{% endfor %}
-			</li>
-			<li>
-				{% include date.html %}
-			</li>
-			<li>
-				Publicado en
-				{% assign sorted_categories = page.categories | sort %}
-				{% for category in sorted_categories %}
-					<a href="/blog{{ site.baseurl }}/category/{{ category | slugify }}">
-						{{ category | replace: '-', ' ' }}
-					</a>{% if forloop.last == false %}, {% endif %}
-				{% endfor %}
-			</li>
-		</ul>
-	</footer>
+    <footer class="post__footer">
+        <ul class="list list--inline small">
+            <li>
+                <b>Escrito por</b>
+                {% assign sorted_authors = page.authors | sort %}
+                {% for post_author in sorted_authors %}
+                    {% assign author = site.authors[post_author] %}
+                    {% if author.web %}
+                        <a href="{{ author.web }}">{{ author.first_name }} {{ author.last_name }}</a>{% else %}{{ author.first_name }} {{ author.last_name }}{% endif %}{% if forloop.last == false %}, {% endif %}
+                {% endfor %}
+            </li>
+            <li>
+                {% include date.html %}
+            </li>
+            <li>
+                Publicado en
+                {% assign sorted_categories = page.categories | sort %}
+                {% for category in sorted_categories %}
+                    <a href="/blog{{ site.baseurl }}/category/{{ category | slugify }}">{{ category | replace: '-', ' ' }}</a>{% if forloop.last == false %}, {% endif %}
+                {% endfor %}
+            </li>
+        </ul>
+    </footer>
 </article>
 
 <div class="paginator">
-	{% if page.next.url %}
-	    <a href="{{ page.next.url }}" class="paginator__item paginator__item--prev">
-	        <span>Anterior</span>
-	        <small>{{ page.next.title }}</small>
-	    </a>
-	{% endif %}
-	{% if page.previous.url %}
-	    <a href="{{ page.previous.url }}" class="paginator__item paginator__item--next">
-	        <span>Siguiente</span>
-	        <small>{{ page.previous.title }}</small>
-	    </a>
-	{% endif %}
+    {% if page.next.url %}
+        <a href="{{ page.next.url }}" class="paginator__item paginator__item--prev">
+            <span>Anterior</span>
+            <small>{{ page.next.title }}</small>
+        </a>
+    {% endif %}
+    {% if page.previous.url %}
+        <a href="{{ page.previous.url }}" class="paginator__item paginator__item--next">
+            <span>Siguiente</span>
+            <small>{{ page.previous.title }}</small>
+        </a>
+    {% endif %}
 </div>
 
 
@@ -75,51 +72,51 @@ layout: default
 
 {% comment %}
 <div class="row">
-	<div class="md-col-9">
-		<div id="post-{{ forloop.index }}" class="post post-{{ forloop.index }} post--full a-custom">
-			<header class="post__header">
-				<h1 class="post__title">
-					{{ page.title }}
-				</h1>
+    <div class="md-col-9">
+        <div id="post-{{ forloop.index }}" class="post post-{{ forloop.index }} post--full a-custom">
+            <header class="post__header">
+                <h1 class="post__title">
+                    {{ page.title }}
+                </h1>
 
-				<div class="post__meta">
-					<span class="post__date">
-						{% include date.html %}
-					</span>
-				</div>
+                <div class="post__meta">
+                    <span class="post__date">
+                        {% include date.html %}
+                    </span>
+                </div>
 
-				{% if page.summary %}
+                {% if page.summary %}
 
-					<p class="post__summary fs-lg">
-						{{ page.summary }}
-					</p>
+                    <p class="post__summary fs-lg">
+                        {{ page.summary }}
+                    </p>
 
-				{% endif %}
-			</header>
+                {% endif %}
+            </header>
 
-			{% if page.cover %}
+            {% if page.cover %}
 
-				<figure>
+                <figure>
 
-					<img class="post__cover img-responsive w-100" src="{{ page.cover }}">
+                    <img class="post__cover img-responsive w-100" src="{{ page.cover }}">
 
-					{% if page.cover_note %}
+                    {% if page.cover_note %}
 
-						<figcaption>
-							{{ page.cover_note }}
-						</figcaption>
+                        <figcaption>
+                            {{ page.cover_note }}
+                        </figcaption>
 
-					{% endif %}
+                    {% endif %}
 
-				</figure>
+                </figure>
 
-			{% endif %}
+            {% endif %}
 
-			<div class="post__content tindent">
-				{{ page.content }}
-			</div>
-		</div>
-	</div>
+            <div class="post__content tindent">
+                {{ page.content }}
+            </div>
+        </div>
+    </div>
 </div>
 {% endcomment %}
 
@@ -129,55 +126,55 @@ layout: default
 
 {% comment %}
 <article class="full post">
-	<header class="post__header">
-		<h1 class="post__title h2">
-			{{ page.title }}
-		</h1>
+    <header class="post__header">
+        <h1 class="post__title h2">
+            {{ page.title }}
+        </h1>
 
-		{% comment %}
-		<div class="post__meta">
-			<!-- <span class="post__author">
-				por
-				{% assign author = site.authors['jonathan'] %}
-				<a class="author-link" href="{{ site.baseurl }}/autor">
-					{{ author.name }}
-				</a>
-			</span> -->
-			<span class="post__date">
-				{% include date.html %}
-			</span>
-			<span class="post__category">
-				en
-				{% assign sorted_categories = page.categories | sort %}
-				{% for category in sorted_categories %}
-					{% if category == 'codigo' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">código
-					{% elsif category == 'diseno' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">diseño
-					{% else %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">{{ category | replace: '-', ' ' }}
-					{% endif %}</a>{% if forloop.last == false %}, {% endif %}
-				{% endfor %}
-			</span>
-		</div>
-		{% endcomment %}
-	</header>
+        {% comment %}
+        <div class="post__meta">
+            <!-- <span class="post__author">
+                por
+                {% assign author = site.authors['jonathan'] %}
+                <a class="author-link" href="{{ site.baseurl }}/autor">
+                    {{ author.name }}
+                </a>
+            </span> -->
+            <span class="post__date">
+                {% include date.html %}
+            </span>
+            <span class="post__category">
+                en
+                {% assign sorted_categories = page.categories | sort %}
+                {% for category in sorted_categories %}
+                    {% if category == 'codigo' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">código
+                    {% elsif category == 'diseno' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">diseño
+                    {% else %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">{{ category | replace: '-', ' ' }}
+                    {% endif %}</a>{% if forloop.last == false %}, {% endif %}
+                {% endfor %}
+            </span>
+        </div>
+        {% endcomment %}
+    </header>
 
-	<section class="post__content">
-		{{ page.content }}
-	</section>
+    <section class="post__content">
+        {{ page.content }}
+    </section>
 
-	<div class="post__meta m-top-4">
-		{% for post_author in page.authors %}
-			{% assign author = site.authors[post_author] %}
-			{% if author.twitter_username %}
-				<a class="post__author" href="https://twitter.com/{{ author.twitter_username }}" target="_blank">
-					@{{ author.twitter_username }}
-				</a>
-			—
-			{% endif %}
-		{% endfor %}
-		<span class="post__date">
-			{% include date.html %}
-		</span>
-	</div>
+    <div class="post__meta m-top-4">
+        {% for post_author in page.authors %}
+            {% assign author = site.authors[post_author] %}
+            {% if author.twitter_username %}
+                <a class="post__author" href="https://twitter.com/{{ author.twitter_username }}" target="_blank">
+                    @{{ author.twitter_username }}
+                </a>
+            —
+            {% endif %}
+        {% endfor %}
+        <span class="post__date">
+            {% include date.html %}
+        </span>
+    </div>
 </article>
 
 {% include form_search.html %}
@@ -187,79 +184,79 @@ layout: default
 
 
 <!-- <div class="page-nav">
-	<div class="row cols-2up">
-		{% if page.next.url and page.previous.url %}
-			<div class="col">
-				{% if page.previous.url %}
-					<a class="page-nav__link" href="{{ page.previous.url }}" title="Artículo anterior: {{ page.previous.title }}">
-						<span class="page-nav__title">
-							<i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-						</span>
-						<span class="page-nav__content">
-							Artículo anterior
-						</span>
-					</a>
-				{% endif %}
-			</div>
-			<div class="col">
-				{% if page.next.url %}
-					<a class="page-nav__link" href="{{ page.next.url }}" title="Artículo siguiente: {{ page.next.title }}">
-						<span class="page-nav__title">
-							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-						</span>
-						<span class="page-nav__content">
-							Artículo siguiente
-						</span>
-					</a>
-				{% endif %}
-			</div>
-		{% else %}
-			{% if page.next.url %}
-				<div class="col">
-					<a class="page-nav__link page-nav__link-random" href="" title="Artículo aleatorio">
-						<span class="page-nav__title">
-							<i class="fa fa-random" aria-hidden="true"></i>
-						</span>
-						<span class="page-nav__content">
-							Artículo aleatorio
-						</span>
-					</a>
-				</div>
-				<div class="col">
-					<a class="page-nav__link" href="{{ page.next.url }}" title="Artículo siguiente: {{ page.next.title }}">
-						<span class="page-nav__title">
-							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-						</span>
-						<span class="page-nav__content">
-							Artículo siguiente
-						</span>
-					</a>
-				</div>
-			{% endif %}
-			{% if page.previous.url %}
-				<div class="col">
-					<a class="page-nav__link" href="{{ page.previous.url }}" title="Artículo anterior: {{ page.previous.title }}">
-						<span class="page-nav__title">
-							<i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-						</span>
-						<span class="page-nav__content">
-							Artículo anterior
-						</span>
-					</a>
-				</div>
-				<div class="col">
-					<a class="page-nav__link page-nav__link-random" href="" title="Artículo aleatorio">
-						<span class="page-nav__title">
-							<i class="fa fa-random" aria-hidden="true"></i>
-						</span>
-						<span class="page-nav__content">
-							Artículo aleatorio
-						</span>
-					</a>
-				</div>
-			{% endif %}
-		{% endif %}
-	</div>
+    <div class="row cols-2up">
+        {% if page.next.url and page.previous.url %}
+            <div class="col">
+                {% if page.previous.url %}
+                    <a class="page-nav__link" href="{{ page.previous.url }}" title="Artículo anterior: {{ page.previous.title }}">
+                        <span class="page-nav__title">
+                            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                        </span>
+                        <span class="page-nav__content">
+                            Artículo anterior
+                        </span>
+                    </a>
+                {% endif %}
+            </div>
+            <div class="col">
+                {% if page.next.url %}
+                    <a class="page-nav__link" href="{{ page.next.url }}" title="Artículo siguiente: {{ page.next.title }}">
+                        <span class="page-nav__title">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </span>
+                        <span class="page-nav__content">
+                            Artículo siguiente
+                        </span>
+                    </a>
+                {% endif %}
+            </div>
+        {% else %}
+            {% if page.next.url %}
+                <div class="col">
+                    <a class="page-nav__link page-nav__link-random" href="" title="Artículo aleatorio">
+                        <span class="page-nav__title">
+                            <i class="fa fa-random" aria-hidden="true"></i>
+                        </span>
+                        <span class="page-nav__content">
+                            Artículo aleatorio
+                        </span>
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="page-nav__link" href="{{ page.next.url }}" title="Artículo siguiente: {{ page.next.title }}">
+                        <span class="page-nav__title">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </span>
+                        <span class="page-nav__content">
+                            Artículo siguiente
+                        </span>
+                    </a>
+                </div>
+            {% endif %}
+            {% if page.previous.url %}
+                <div class="col">
+                    <a class="page-nav__link" href="{{ page.previous.url }}" title="Artículo anterior: {{ page.previous.title }}">
+                        <span class="page-nav__title">
+                            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                        </span>
+                        <span class="page-nav__content">
+                            Artículo anterior
+                        </span>
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="page-nav__link page-nav__link-random" href="" title="Artículo aleatorio">
+                        <span class="page-nav__title">
+                            <i class="fa fa-random" aria-hidden="true"></i>
+                        </span>
+                        <span class="page-nav__content">
+                            Artículo aleatorio
+                        </span>
+                    </a>
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
 </div> -->
 
 
@@ -274,46 +271,46 @@ layout: default
 
 {% comment %}
 <article class="post">
-	<header class="post__header">
-		<h1 class="post__title">
-			{{ page.title }}
-		</h1>
+    <header class="post__header">
+        <h1 class="post__title">
+            {{ page.title }}
+        </h1>
 
-		<p class="post__meta">
-			<span class="post__date">{% include date.html %}</span>,
+        <p class="post__meta">
+            <span class="post__date">{% include date.html %}</span>,
 
-			{% if page.description %}
-				<span class="post__description">
-					{{ page.description }}
-				</span>
-			{% else %}
-				<span class="post__read-time">{% include read_time.html %}</span>
-			{% endif %}
-		</p>
-	</header>
+            {% if page.description %}
+                <span class="post__description">
+                    {{ page.description }}
+                </span>
+            {% else %}
+                <span class="post__read-time">{% include read_time.html %}</span>
+            {% endif %}
+        </p>
+    </header>
 
-	<section class="post__content">
-		{{ page.content }}
-	</section>
+    <section class="post__content">
+        {{ page.content }}
+    </section>
 
-	<!-- <div class="share">
-		<div class="share__twitter">
-			<a href="https://twitter.com/share" class="twitter-share-button" data-lang="es" data-text="{{ page.title }}" data-url="{{ site.baseurl }}{{ post.url }}" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-		</div>
+    <!-- <div class="share">
+        <div class="share__twitter">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="es" data-text="{{ page.title }}" data-url="{{ site.baseurl }}{{ post.url }}" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
 
-		<div class="share__facebook">
-			<div id="fb-root"></div>
-			<script>(function(d, s, id) {
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-				js = d.createElement(s); js.id = id;
-				js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.9&appId=105857299967608";
-				fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));</script>
+        <div class="share__facebook">
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.9&appId=105857299967608";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
 
-			<div class="fb-share-button" data-href="{{ site.baseurl }}{{ post.url }}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
-		</div>
-	</div> -->
+            <div class="fb-share-button" data-href="{{ site.baseurl }}{{ post.url }}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+        </div>
+    </div> -->
 </article>
 {% endcomment %}
 
@@ -328,46 +325,46 @@ layout: default
 
 {% comment %}
 <article class="full post">
-	<header class="post-header">
-		<h2 class="post-title">
-			{{ page.title }}
-		</h2>
+    <header class="post-header">
+        <h2 class="post-title">
+            {{ page.title }}
+        </h2>
 
-		<p class="post-meta">
-			<span class="post-author">
-				por
-				{% assign author = site.authors['jonathan'] %}
-				<a class="post-authorLink" href="{{ site.baseurl }}/autor">
-					{{ author.name }}
-				</a>
-			</span>
-			<span class="post-date">
-				<i class="fa fa-clock-o" aria-hidden="true"></i>
-				{% include date.html %}
-			</span>
-			<span class="post-categories">
-				<i class="fa fa-folder-o" aria-hidden="true"></i>
-				{% assign sorted_categories = page.categories | sort %}
-				{% for category in sorted_categories %}
-					{% if category == 'codigo' %}<a class="post-categoryLink" href="{{ site.baseurl }}/categoria/{{ category }}">código
-					{% elsif category == 'diseno' %}<a class="post-categoryLink" href="{{ site.baseurl }}/categoria/{{ category }}">diseño
-					{% else %}<a class="post-categoryLink" href="{{ site.baseurl }}/categoria/{{ category }}">{{ category | replace: '-', ' ' }}
-					{% endif %}</a>{% if forloop.last == false %}, {% endif %}
-				{% endfor %}
-			</span>
-		</p>
-	</header>
+        <p class="post-meta">
+            <span class="post-author">
+                por
+                {% assign author = site.authors['jonathan'] %}
+                <a class="post-authorLink" href="{{ site.baseurl }}/autor">
+                    {{ author.name }}
+                </a>
+            </span>
+            <span class="post-date">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                {% include date.html %}
+            </span>
+            <span class="post-categories">
+                <i class="fa fa-folder-o" aria-hidden="true"></i>
+                {% assign sorted_categories = page.categories | sort %}
+                {% for category in sorted_categories %}
+                    {% if category == 'codigo' %}<a class="post-categoryLink" href="{{ site.baseurl }}/categoria/{{ category }}">código
+                    {% elsif category == 'diseno' %}<a class="post-categoryLink" href="{{ site.baseurl }}/categoria/{{ category }}">diseño
+                    {% else %}<a class="post-categoryLink" href="{{ site.baseurl }}/categoria/{{ category }}">{{ category | replace: '-', ' ' }}
+                    {% endif %}</a>{% if forloop.last == false %}, {% endif %}
+                {% endfor %}
+            </span>
+        </p>
+    </header>
 
-	<section class="post-content">
-		{{ page.content }}
+    <section class="post-content">
+        {{ page.content }}
 
-		<hr>
+        <hr>
 
-		<p class="post-comments">
-			¿Tienes algún comentario que compartir?
-			<a href="http://twitter.com/home?status=%40jonathan_zuniga%20mi%20comentario%20sobre%20tu%20publicación%20{{ page.title | truncatewords: 5 }}%20" target="_blank">Enviame un tweet</a>.
-		</p>
-	</section>
+        <p class="post-comments">
+            ¿Tienes algún comentario que compartir?
+            <a href="http://twitter.com/home?status=%40jonathan_zuniga%20mi%20comentario%20sobre%20tu%20publicación%20{{ page.title | truncatewords: 5 }}%20" target="_blank">Enviame un tweet</a>.
+        </p>
+    </section>
 </article>
 {% endcomment %}
 
@@ -379,49 +376,49 @@ layout: default
 
 {% comment %}
 <article class="full post">
-	<div class="wrap">
-		<header class="post-header">
-			<h1 class="post-title">
-				<span class="post-date">
-					{% include date.html %}
-				</span>
+    <div class="wrap">
+        <header class="post-header">
+            <h1 class="post-title">
+                <span class="post-date">
+                    {% include date.html %}
+                </span>
 
-				{{ page.title }}
-			</h1>
-		</header>
+                {{ page.title }}
+            </h1>
+        </header>
 
-		<div class="post-content">
-			{{ page.content }}
-		</div>
-	</div>
+        <div class="post-content">
+            {{ page.content }}
+        </div>
+    </div>
 </article>
 
 <div class="page-nav">
-	<div class="wrap">
-		<ul>
-			{% if page.previous.url %}
-				<li class="page-prev">
-					<a href="{{ page.previous.url }}" title="{{ page.previous.title }}">
-						<i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
-						{{ page.previous.title }}
-					</a>
-				</li>
-			{% endif %}
-			<li class="page-top">
-				<a href="#header">
-					Volver arriba
-				</a>
-			</li>
-			{% if page.next.url %}
-				<li class="page-next">
-					<a href="{{ page.next.url }}" title="{{ page.next.title }}">
-						{{ page.next.title }}
-						<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-					</a>
-				</li>
-			{% endif %}
-		</ul>
-	</div>
+    <div class="wrap">
+        <ul>
+            {% if page.previous.url %}
+                <li class="page-prev">
+                    <a href="{{ page.previous.url }}" title="{{ page.previous.title }}">
+                        <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+                        {{ page.previous.title }}
+                    </a>
+                </li>
+            {% endif %}
+            <li class="page-top">
+                <a href="#header">
+                    Volver arriba
+                </a>
+            </li>
+            {% if page.next.url %}
+                <li class="page-next">
+                    <a href="{{ page.next.url }}" title="{{ page.next.title }}">
+                        {{ page.next.title }}
+                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
 </div>
 {% endcomment %}
 
@@ -434,77 +431,77 @@ layout: default
 
 {% comment %}
 <div class="layout-content layout-content-entry">
-	<article lang="es" role="main">
-		<h1 class="content-title">
-			{{ page.title }}
-		</h1>
+    <article lang="es" role="main">
+        <h1 class="content-title">
+            {{ page.title }}
+        </h1>
 
-		<div class="content">
-			{{ content }}
-		</div>
+        <div class="content">
+            {{ content }}
+        </div>
 
-		<div class="entry">
-			<p>
-				{% assign author_items = site.authors['jonathan'] %}
-				Si deseas mantenerte en contacto, en Twitter me encontrarás como <a href="https://twitter.com/{{ author_items.twitter_username }}">@{{ author_items.twitter_username }}</a>. También eres bienvenido a enviarme un mensaje a la dirección <a href="mailto:{{ author_items.email }}">{{ author_items.email }}</a>. No siempre tengo la oportunidad de responder, pero el correo electrónico es siempre la mejor manera de contactar.
-			</p>
+        <div class="entry">
+            <p>
+                {% assign author_items = site.authors['jonathan'] %}
+                Si deseas mantenerte en contacto, en Twitter me encontrarás como <a href="https://twitter.com/{{ author_items.twitter_username }}">@{{ author_items.twitter_username }}</a>. También eres bienvenido a enviarme un mensaje a la dirección <a href="mailto:{{ author_items.email }}">{{ author_items.email }}</a>. No siempre tengo la oportunidad de responder, pero el correo electrónico es siempre la mejor manera de contactar.
+            </p>
 
-			<p>
-				Publicado el
-				{% include date.html %}
-				por
-				{% assign sorted_authors = page.authors | sort %}
-				{% for author in sorted_authors %}<!--
-					-->{% unless forloop.index == 1 %}<span>,</span>{% endunless %}
-					{% assign author_items = site.authors[author] %}
-					{% if author == 'jonathan' %}
-						<a class="teaser-author" href="{{ site.baseurl }}/autor">
-					{% else %}
-						<a class="teaser-author" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
-					{% endif %}
-						{{ author_items.name }}<!--
-					--></a><!--
-				-->{% endfor %}
-				en
-				{% assign sorted_categories = page.categories | sort %}
-				{% for category in sorted_categories %}
-					{% if category == 'articulos' %}
-						<a class="entry-category" href="{{ site.baseurl }}/articulos">artículos</a>.
-					{% elsif category == 'historias' %}
-						<a class="entry-category" href="{{ site.baseurl }}/historias">historias</a>.
-					{% else %}
-						<a class="entry-category" href="{{ site.baseurl }}/momentos">momentos</a>.
-					{% endif %}
-				{% endfor %}
-				{% assign author_items = site.authors['jonathan'] %}
-				{% if author_items.github_username %}
-					{% assign filename = page.url | replace_first: '/', '' | replace: '/', '-' | replace: '.html', '.md' %}
-					<a href="https://github.com/{{ author_items.github_username }}/jonathanzuniga.github.io/edit/master/_posts/articles/{{ filename }}.md">
-						Mejora
-						{% assign sorted_categories = page.categories | sort %}
-						{% for category in sorted_categories %}
-							{% if category == 'historias' %}
-								esta historia
-							{% else %}
-								este artículo
-							{% endif %}
-						{% endfor %}
-						en GitHub</a>.
-				{% endif %}
-				Esta obra está bajo una licencia
-				<a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">Creative Commons Atribución 4.0 Internacional</a>.
-			</p>
-		</div>
+            <p>
+                Publicado el
+                {% include date.html %}
+                por
+                {% assign sorted_authors = page.authors | sort %}
+                {% for author in sorted_authors %}<!--
+                    -->{% unless forloop.index == 1 %}<span>,</span>{% endunless %}
+                    {% assign author_items = site.authors[author] %}
+                    {% if author == 'jonathan' %}
+                        <a class="teaser-author" href="{{ site.baseurl }}/autor">
+                    {% else %}
+                        <a class="teaser-author" href="https://twitter.com/{{ author_items.twitter_username }}" target="_blank">
+                    {% endif %}
+                        {{ author_items.name }}<!--
+                    --></a><!--
+                -->{% endfor %}
+                en
+                {% assign sorted_categories = page.categories | sort %}
+                {% for category in sorted_categories %}
+                    {% if category == 'articulos' %}
+                        <a class="entry-category" href="{{ site.baseurl }}/articulos">artículos</a>.
+                    {% elsif category == 'historias' %}
+                        <a class="entry-category" href="{{ site.baseurl }}/historias">historias</a>.
+                    {% else %}
+                        <a class="entry-category" href="{{ site.baseurl }}/momentos">momentos</a>.
+                    {% endif %}
+                {% endfor %}
+                {% assign author_items = site.authors['jonathan'] %}
+                {% if author_items.github_username %}
+                    {% assign filename = page.url | replace_first: '/', '' | replace: '/', '-' | replace: '.html', '.md' %}
+                    <a href="https://github.com/{{ author_items.github_username }}/jonathanzuniga.github.io/edit/master/_posts/articles/{{ filename }}.md">
+                        Mejora
+                        {% assign sorted_categories = page.categories | sort %}
+                        {% for category in sorted_categories %}
+                            {% if category == 'historias' %}
+                                esta historia
+                            {% else %}
+                                este artículo
+                            {% endif %}
+                        {% endfor %}
+                        en GitHub</a>.
+                {% endif %}
+                Esta obra está bajo una licencia
+                <a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license">Creative Commons Atribución 4.0 Internacional</a>.
+            </p>
+        </div>
 
-		<ul class="tags">
-			{% assign sorted_tags = page.tags | sort %}
-			{% for tag in sorted_tags %}
-				<li class="tags-item">
-					<a class="tags-link" href="{{ site.baseurl }}/etiqueta/{{ tag }}">{{ tag }}</a>
-				</li>
-			{% endfor %}
-		</ul>
-	</article>
+        <ul class="tags">
+            {% assign sorted_tags = page.tags | sort %}
+            {% for tag in sorted_tags %}
+                <li class="tags-item">
+                    <a class="tags-link" href="{{ site.baseurl }}/etiqueta/{{ tag }}">{{ tag }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </article>
 </div>
 
 {% include sidebar.html %}

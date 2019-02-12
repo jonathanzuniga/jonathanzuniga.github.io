@@ -1,4 +1,5 @@
 # Site settings
+
 title: Jonathan Zúñiga
 email: jonathanzuniga@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
@@ -7,34 +8,39 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://jonathanzuniga.github.io" # the base hostname & protocol for your site
 
 # Build settings
+
 markdown: kramdown
 encoding: utf-8
 
 # Author details
+
 authors:
-  jonathan:
-    avatar: 'images/authors/jonathan-zuniga-2015-v3.png'
-    first_name: Jonathan
-    last_name: Zúñiga
-    email: jonathanzuniga@gmail.com
-    web: http://
-    # social media
-    facebook_username: jonathanzuniga
-    flickr_username: jonathan_zuniga
-    github_username: jonathanzuniga
-    googleplus_username: '110998212527855988388'
-    instagram_username: zuniga.jonathan
-    lastfm_username: jonathanzuniga
-    linkedin_username: jonathan-zúñiga-09b403ab
-    medium_username: jonathanzuniga
-    pinterest_username: jonathanzuniga
-    spotify_username: jonathanzuniga
-    shelf_username: jonathan
-    twitter_username: jonathan_zuniga
+    jonathan:
+        avatar: 'images/authors/jonathan-zuniga-2015-v3.png'
+        first_name: Jonathan
+        last_name: Zúñiga
+        email: jonathanzuniga@gmail.com
+        web: http://jonathanzuniga.github.io/about
+
+        # social media
+
+        facebook_username: jonathanzuniga
+        flickr_username: jonathan_zuniga
+        github_username: jonathanzuniga
+        googleplus_username: '110998212527855988388'
+        instagram_username: zuniga.jonathan
+        lastfm_username: jonathanzuniga
+        linkedin_username: jonathan-zúñiga-09b403ab
+        medium_username: jonathanzuniga
+        pinterest_username: jonathanzuniga
+        spotify_username: jonathanzuniga
+        shelf_username: jonathan
+        twitter_username: jonathan_zuniga
 
 excerpt_separator: <!-- more -->
 
 # Custom permalink
+
 # permalink: /:year/:month/:day/:title
 permalink: /:title
 
@@ -42,37 +48,22 @@ permalink: /:title
 timezone: '-0800'
 
 # This will require each of these plugins automatically.
+
 plugins:
-    - 'jekyll-paginate'
+    - jekyll-feed
+    - jekyll-paginate
 
 paginate: 10
 paginate_path: '/blog/page:num/'
 
-# gems: ['jekyll-twitter-plugin']
-# gems: ['jekyll-timeago']
-
-# jekyll_timeago:
-#   depth: 2 # Level of detail
-#   today: 'el día de hoy'
-#   yesterday: 'el día de ayer'
-#   tomorrow: 'mañana'
-#   and: 'y'
-#   # suffix: 'ago'
-#   suffix: ''
-#   prefix: 'hace'
-#   suffix_future: ''
-#   prefix_future: 'en'
-#   years: 'años'
-#   year: 'año'
-#   months: 'meses'
-#   month: 'mes'
-#   weeks: 'semanas'
-#   week: 'semana'
-#   days: 'días'
-#   day: 'día'
-
-# gems: ['emoji_for_jekyll']
-
-# tag_page_layout: tag_page
-# tag_page_dir: etiqueta
-# tag_permalink_style: pretty
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

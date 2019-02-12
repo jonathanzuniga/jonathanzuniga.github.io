@@ -3,88 +3,35 @@ layout: default
 ---
 
 {% for post in site.categories[page.category] %}
-	<article class="post post--{{ forloop.index }}">
-		<header class="post__header">
-			<div class="post__date small">
-				{% include date.html %}
-			</div>
+    <article class="post post--{{ forloop.index }}">
+        <header class="post__header">
+            <div class="post__date small">
+                {% include date.html %}
+            </div>
 
-			<h2 class="post__title h4">
-				<a href="{{ post.url }}">
-					{{ post.title }}
-				</a>
-			</h2>
-		</header>
+            <h2 class="post__title h4">
+                <a href="{{ post.url }}">
+                    {{ post.title }}
+                </a>
+            </h2>
+        </header>
 
-		<div class="post__content post__content--excerpt">
-			{{ post.excerpt }}
-		</div>
+        <div class="post__content post__content--excerpt">
+            {{ post.excerpt }}
+        </div>
 
-		<footer class="post__footer">
-			<ul class="list list---inline small">
-				<li>
-					Publicado en
-					{% assign sorted_categories = post.categories | sort %}
-					{% for category in sorted_categories %}
-						<a href="/blog{{ site.baseurl }}/category/{{ category | slugify }}">
-							{{ category | replace: '-', ' ' }}
-						</a>{% if forloop.last == false %}, {% endif %}
-					{% endfor %}
-				</li>
-			</ul>
-		</footer>
-	</article>
+        <footer class="post__footer">
+            <ul class="list list---inline small">
+                <li>
+                    Publicado en
+                    {% assign sorted_categories = post.categories | sort %}
+                    {% for category in sorted_categories %}
+                        <a href="/blog{{ site.baseurl }}/category/{{ category | slugify }}">
+                            {{ category | replace: '-', ' ' }}
+                        </a>{% if forloop.last == false %}, {% endif %}
+                    {% endfor %}
+                </li>
+            </ul>
+        </footer>
+    </article>
 {% endfor %}
-
-
-
-
-
-
-
-{% comment %}
-<div class="category-posts">
-	<h2 class="category-posts__title">
-		Estas leyendo todos los artículos publicados en la categoría «{{ page.category }}»
-	</h2>
-
-	{% for post in site.categories[page.category] %}
-		<article class="post">
-			<header class="post__header">
-				<h2 class="post__title">
-					<a class="post__link" href="{{ post.url }}">
-						{{ post.title }}
-					</a>
-				</h2>
-
-				<div class="post__meta">
-					<!-- <span class="post__author">
-						por
-						{% assign author = site.authors['jonathan'] %}
-						<a class="author-link" href="{{ site.baseurl }}/autor">
-							{{ author.name }}
-						</a>
-					</span> -->
-					<span class="post__date">
-						{% include date.html %}
-					</span>
-					<span class="post__category">
-						en
-						{% assign sorted_categories = post.categories | sort %}
-						{% for category in sorted_categories %}
-							{% if category == 'codigo' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">código
-							{% elsif category == 'diseno' %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">diseño
-							{% else %}<a class="category-link" href="{{ site.baseurl }}/categoria/{{ category }}">{{ category | replace: '-', ' ' }}
-							{% endif %}</a>{% if forloop.last == false %}, {% endif %}
-						{% endfor %}
-					</span>
-				</div>
-			</header>
-
-			<section class="post__content">
-				{{ post.content }}
-			</section>
-		</article>
-	{% endfor %}
-</div>
-{% endcomment %}

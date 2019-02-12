@@ -1,50 +1,28 @@
 <div class="search">
-	<form action="/search" id="search__form" method="get">
-		<div class="field">
-			<div class="form-el-with-button form-el-with-button--line form-el-with-button--lg">
-			    <input autofocus class="form-el" id="search__input" name="query" placeholder="Buscar en el blog" type="search">
-			    <button class="button" onClick="return empty()" type="submit">
-			        <svg
-			            xmlns="http://www.w3.org/2000/svg"
-			            width="24" height="24"
-			            viewBox="0 0 24 24"
-			            fill="none" stroke="currentColor"
-			            stroke-width="2"
-			            stroke-linecap="round"
-			            stroke-linejoin="round"
-			            class="feather feather-search button__icon"
-			        >
-			            <circle cx="11" cy="11" r="8"></circle>
-			            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-			        </svg>
-			    </button>
-			</div>
-		</div>
-	</form>
+    <form action="/search" id="search__form" method="get">
+        <div class="field">
+            <div class="form-el-with-button form-el-with-button--line form-el-with-button--lg">
+                <input autofocus class="form-el" id="search__input" name="query" placeholder="Buscar en el blog" type="search">
+                <button class="button" onClick="return empty()" type="submit">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24"
+                        viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-search button__icon"
+                    >
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </form>
 
-	<p class="search__total-results" id="search__total-results">
-		<strong>{{ site.posts | size }}</strong> resultados
-	</p>
+    <p class="search__total-results" id="search__total-results">
+        <strong>{{ site.posts | size }}</strong> resultados
+    </p>
 </div>
-
-
-
-
-
-{% comment %}
-<div class="search">
-	<form action="/buscar" id="search__form" method="get">
-		<div class="fld input-group">
-			<label class="lbl">
-				Buscar en el <a href="{{ site.baseurl }}/archivo">archivo</a>:
-			</label>
-			<div class="input-group-btn">
-				<input class="input" id="search__input" name="consulta" placeholder="" type="search">
-				<button class="btn btn--secondary" id="search__btn-submit" type="submit">
-					<i class="fa fa-search icon" aria-hidden="true"></i>
-				</button>
-			</div>
-		</div>
-	</form>
-</div>
-{% endcomment %}
