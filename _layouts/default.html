@@ -12,8 +12,8 @@
 	<body class="body
 		{% if page.url == '/' %}
 			body--home
-		{% elsif current[1] == 'articles' %}
-			body--articles
+		{% elsif current[1] == 'archive' %}
+			body--archive
 		{% elsif current[1] == 'about' %}
 			body--about
 		{% elsif page.url == '/search' %}
@@ -26,6 +26,8 @@
 					Lorem ipsum dolor sit amet.
 				{% elsif page.layout == 'category' %}
 					«{{ page.category }}»
+				{% elsif page.layout == 'archive' %}
+					Previamente en...
 				{% else %}
 					{{ page.title }}
 				{% endif %}
@@ -36,6 +38,7 @@
 					<p class="h5">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 					</p>
+
 					<hr>
 				{% elsif page.layout == 'category' %}
 					<p class="h5">
@@ -45,6 +48,19 @@
 							Estas leyendo todos los artículos publicados en la categoría «{{ page.category }}».
 						{% endif %}
 					</p>
+
+					<hr>
+				{% elsif page.layout == 'archive' %}
+					<p class="h5">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</p>
+
+					{% include form_search.html %}
+
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</p>
+
 					<hr>
 				{% endif %}
 			</div>

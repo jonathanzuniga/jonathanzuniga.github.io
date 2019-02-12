@@ -2,9 +2,54 @@
 layout: default
 ---
 
-{% 
-	assign months = 
-	'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' | 
+{% for post in site.posts limit: 50 %}
+	<article class="post post--{{ forloop.index }}">
+		<header class="post__header">
+			<div class="post__date small">
+				{% include date.html %}
+			</div>
+
+			<h2 class="post__title h4">
+				<a href="{{ post.url }}">
+					{{ post.title }}
+				</a>
+			</h2>
+		</header>
+
+		<div class="post__content post__content--excerpt">
+			{{ post.excerpt }}
+		</div>
+
+		<footer class="post__footer">
+			<ul class="list list---inline small">
+				<li>
+					Publicado en
+					{% assign sorted_categories = post.categories | sort %}
+					{% for category in sorted_categories %}
+						<a href="/blog{{ site.baseurl }}/category/{{ category | slugify }}">
+							{{ category | replace: '-', ' ' }}
+						</a>{% if forloop.last == false %}, {% endif %}
+					{% endfor %}
+				</li>
+			</ul>
+		</footer>
+	</article>
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
+{%
+	assign months =
+	'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre' |
 	split: '|'
 %}
 
@@ -14,7 +59,7 @@ layout: default
 	</h2>
 
 	<div class="archive__categories">
-		Explorar por año: 
+		Explorar por año:
 	</div> -->
 
 	<ul class="ls-unstyled ac-txtc">
@@ -46,6 +91,8 @@ layout: default
 			</li>
 		{% endfor %}
 	</ul>
+{% endcomment %}
+
 
 {% comment %}
 	{% for post in site.posts %}
@@ -54,7 +101,7 @@ layout: default
 			{% unless forloop.first %}
 				</ul>
 			{% endunless %}
-			
+
 			<h2 id="{{ post.date | date: '%Y' }}" class="archive__year">
 				{{ current_date }}
 			</h2>
@@ -82,10 +129,10 @@ layout: default
 			</ul>
 		{% endif %}
 	{% endfor %}
-{% endcomment %}
 </div>
 
 {% include form_search.html %}
+{% endcomment %}
 
 
 
@@ -108,7 +155,7 @@ layout: default
 					{% assign counter = 0 %}
 				</span>
 			</h3>
-			
+
 			<ul class="archive-list">
 			{% assign date = current_date %}
 		{% endif %}
