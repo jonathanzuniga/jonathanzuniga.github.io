@@ -4,13 +4,8 @@ permalink: /search
 ---
 
 <div class="search-results">
-	<h1 id="search-results__title" class="search-results__title maxsm-ta-center"></h1>
-
-	<div id="search-results__message" class="search-results__message">
-	</div>
-
-	<div id="search-results__posts" class="search-results__posts posts">
-	</div>
+	<div id="search-results__message" class="search-results__message"></div>
+	<div id="search-results__posts" class="search-results__posts posts"></div>
 </div>
 
 <script>
@@ -29,12 +24,12 @@ permalink: /search
 				'url': '{{ post.url | xml_escape }}',
 				'date': `<time datetime="{{ post.date | date_to_xmlschema }}">
 					<span class="month-name">{{ month_name }}</span>
-					<span class="day">` + 
+					<span class="day">` +
 						{% case day %}
 
 							{% when '1' or '21' or '31' %}`{{ day }}st`{% when '2' or '22' %}`{{ day }}nd`{% when '3' or '23' %}`{{ day }}rd`{% else %}`{{ day }}th`{% endcase %} + `</span>,
 					<span class="year">{{ year }}</span>
-				</time>` 
+				</time>`
 			}
 			{% unless forloop.last %}, {% endunless %}
 		{% endfor %}

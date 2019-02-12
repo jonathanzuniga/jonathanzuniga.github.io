@@ -5,7 +5,7 @@
 
 -->
 <!DOCTYPE html>
-<html lang="es" class="fsmooth">
+<html lang="es">
 	{% include head.html %}
 
 	{% assign current = page.url | downcase | split: '/' %}
@@ -18,87 +18,46 @@
 			body--about
 		{% elsif page.url == '/search' %}
 			body--search
-		{% endif %}">
-			{% include header.html %}
+		{% endif %}"
+	>
+		{% include header.html %}
 
+		{% if page.url == '/' %}
+			<h1 class="intro-title">Lorem ipsum dolor sit amet.</h1>
+		{% elsif page.layout == 'category' %}
+			<h1 class="intro-title">«{{ page.category }}»</h1>
+		{% elsif page.layout == 'archive' or page.url == '/search' %}
+		{% else %}
+			<h1 class="intro-title">{{ page.title }}</h1>
+		{% endif %}
+
+		<div class="intro-content">
 			{% if page.url == '/' %}
-				<h1 class="intro-title">Lorem ipsum dolor sit amet.</h1>
+				<p class="h5">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				</p>
+
+				<hr>
 			{% elsif page.layout == 'category' %}
-				<h1 class="intro-title">«{{ page.category }}»</h1>
-			{% elsif page.layout == 'archive' %}
-			{% else %}
-				<h1 class="intro-title">{{ page.title }}</h1>
+				<p class="h5">
+					{% if page.description %}
+							{{ page.description }}
+					{% else %}
+						Estas leyendo todos los artículos publicados en la categoría «{{ page.category }}».
+					{% endif %}
+				</p>
+
+				<hr>
+			{% elsif page.layout == 'archive' or page.url == '/search' %}
+				{% include search_form.html %}
 			{% endif %}
+		</div>
 
-			<div class="intro-content">
-				{% if page.url == '/' %}
-					<p class="h5">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-					</p>
+		<div class="content">{{ content }}</div>
 
-					<hr>
-				{% elsif page.layout == 'category' %}
-					<p class="h5">
-						{% if page.description %}
-								{{ page.description }}
-						{% else %}
-							Estas leyendo todos los artículos publicados en la categoría «{{ page.category }}».
-						{% endif %}
-					</p>
+		{% include sidebar.html %}
 
-					<hr>
-				{% elsif page.layout == 'archive' %}
-					{% include search_form.html %}
-				{% endif %}
-			</div>
-
-			<div class="content">{{ content }}</div>
-
-			{% include sidebar.html %}
-
-			{% include footer.html %}
-
-
-
-
-
-
-
-
-
-
-
-
-			{% comment %}
-			<section class="articles">
-				<div class="cntr">
-					{{ content }}
-				</div>
-			</section>
-			{% endcomment %}
-
-
-
-
-			{% comment %}
-			<div class="cntr">
-				<div class="row maxmd-jc-center">
-					<div class="main sm-col-9 md-col-8 order-2">
-						<div class="content">
-							{{ content }}
-						</div>
-					</div>
-
-					<div id="sidebar" class="sidebar md-col-2 order-1 maxmd-d-none">
-						{% include sidebar.html %}
-					</div>
-
-					<div class="third-col sm-col-9 md-col-2 order-3">
-						{% include third-col.html %}
-					</div>
-				</div>
-			</div>
-			{% endcomment %}
+		{% include footer.html %}
 
 		<script src="{{ '/js/lunr.min.js' | prepend: site.baseurl }}"></script>
 		<script src="{{ '/js/search.js' | prepend: site.baseurl }}"></script>

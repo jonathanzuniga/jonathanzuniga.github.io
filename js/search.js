@@ -1,8 +1,8 @@
 (function() {
 	function displaySearchResults(results, store) {
-		var searchResultsTitle = document.getElementById('search-results__title');
 		var searchResultsMessage = document.getElementById('search-results__message');
 		var searchResultsPosts = document.getElementById('search-results__posts');
+		var searchTotalResults = document.getElementById('search__total-results');
 
 		if (results.length) { // Are there any results?
 			var appendString = '';
@@ -10,38 +10,38 @@
 			for (var i = 0; i < results.length; i++) { // Iterate over the results
 				var item = store[results[i].ref];
 
-				// var post_description = '';
-				// if (item.description)
-				//   post_description = '<span class="post__description">' + item.description + '</span>';
-
-				appendString +=
-					`<div class="post bd-bottom-0063">
+				appendString += `
+					<article class="post post--${i}">
 						<header class="post__header">
 							<div class="post__meta">
-								<span class="post__date">
-									` + item.date + `
-								</span>
+								<div class="post__date small">
+									${item.date}
+								</div>
 							</div>
 
-							<h3 class="post__title ac-c m-top-1 m-bottom-1">
-								<a class="post__link" href="` + item.url + `">
-									` + item.title + `
+							<h2 class="post__title h4">
+								<a href="${item.url}">
+									${item.title}
 								</a>
-							</h3>
+							</h2>
 
-							<div class="post__content">
-								` + item.excerpt + `
+							<div class="post__content post__content--excerpt">
+								${item.excerpt}
 							</div>
 						</header>
-					</div>`;
+					</article>`;
 			}
 
-			searchResultsTitle.innerHTML = 'Search Results for ‘' + searchTerm + '’';
 			searchResultsMessage.innerHTML = '';
 			searchResultsPosts.innerHTML = appendString;
+			searchTotalResults.innerHTML =  `<strong>${i}</strong> resultados para <strong>${searchTerm}</strong>`;
 		} else {
-			searchResultsTitle.innerHTML = 'No se encontró ningún resultado';
-			searchResultsMessage.innerHTML = '<p>Lo siento, pero ninguna publicación coincide con tu búsqueda «' + searchTerm + '». Trata de buscar algo un poco menos específico o si solo estas aburrido y buscas una delicia para la vista, busca «Lettering».</p>';
+			searchResultsMessage.innerHTML = `
+				<p>
+					Lo siento, pero ninguna publicación coincide con tu búsqueda <strong>${searchTerm}</strong>.
+					Intenta buscar algo un poco menos específico o si solo estas aburrido y buscas una delicia para la vista, busca <strong>lettering</strong>.
+				</p>`;
+			searchTotalResults.innerHTML =  ``;
 		}
 	}
 
@@ -60,13 +60,13 @@
 
 	var searchTerm = getQueryVariable('query');
 	if (searchTerm) {
-		document.getElementById('header__search-input').setAttribute('value', searchTerm);
+		document.getElementById('search__input').setAttribute('value', searchTerm);
 
 		// Initalize lunr with the fields it will be searching on. I've given title
 		// a boost of 10 to indicate matches on this field are more important.
 		var idx = lunr(function () {
 			this.field('id');
-			this.field('title', { boost: 10 });
+			this.field('title', {boost: 10});
 			this.field('description');
 			this.field('categories');
 			this.field('content');

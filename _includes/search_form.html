@@ -2,8 +2,8 @@
 	<form action="/search" id="search__form" method="get">
 		<div class="field">
 			<div class="form-el-with-button form-el-with-button--line form-el-with-button--lg">
-			    <input autofocus class="form-el" placeholder="Buscar en el blog" type="search">
-			    <button class="button">
+			    <input autofocus class="form-el" id="search__input" name="query" placeholder="Buscar en el blog" type="search">
+			    <button class="button" onClick="return empty()" type="submit">
 			        <svg
 			            xmlns="http://www.w3.org/2000/svg"
 			            width="24" height="24"
@@ -22,8 +22,8 @@
 		</div>
 	</form>
 
-	<p class="search__total-results">
-		<b>{{ site.posts | size }}</b> resultados
+	<p class="search__total-results" id="search__total-results">
+		<strong>{{ site.posts | size }}</strong> resultados
 	</p>
 </div>
 
