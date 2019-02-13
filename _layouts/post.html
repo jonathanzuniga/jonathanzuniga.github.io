@@ -46,21 +46,7 @@ layout: default
     </footer>
 </article>
 
-<div class="paginator">
-    {% if page.next.url %}
-        <a href="{{ page.next.url }}" class="paginator__item paginator__item--prev">
-            <span>Anterior</span>
-            <small>{{ page.next.title }}</small>
-        </a>
-    {% endif %}
-    {% if page.previous.url %}
-        <a href="{{ page.previous.url }}" class="paginator__item paginator__item--next">
-            <span>Siguiente</span>
-            <small>{{ page.previous.title }}</small>
-        </a>
-    {% endif %}
-</div>
-
+{% include paginator.html %}
 
 
 

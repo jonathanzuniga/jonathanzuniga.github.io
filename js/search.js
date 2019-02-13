@@ -1,4 +1,4 @@
-(function() {
+(function () {
     function displaySearchResults(results, store) {
         var searchResultsMessage = document.getElementById('search-results__message');
         var searchResultsPosts = document.getElementById('search-results__posts');
@@ -64,6 +64,7 @@
 
         // Initalize lunr with the fields it will be searching on. I've given title
         // a boost of 10 to indicate matches on this field are more important.
+
         var idx = lunr(function () {
             this.field('id');
             this.field('title', {boost: 10});
@@ -82,6 +83,7 @@
             });
 
             var results = idx.search(searchTerm); // Get lunr to perform a search
+
             displaySearchResults(results, window.store); // We'll write this in the next section
         }
     }

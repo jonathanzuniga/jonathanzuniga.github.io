@@ -1,0 +1,31 @@
+{% if page.layout == 'post' %}
+    <div class="paginator">
+        {% if page.next.url %}
+            <a href="{{ page.next.url }}" class="paginator__item paginator__item--prev">
+                <small>Artículo Anterior</small>
+                <strong>{{ page.next.title }}</strong>
+            </a>
+        {% endif %}
+        {% if page.previous.url %}
+            <a href="{{ page.previous.url }}" class="paginator__item paginator__item--next">
+                <small>Siguiente Artículo</small>
+                <strong>{{ page.previous.title }}</strong>
+            </a>
+        {% endif %}
+    </div>
+{% else %}
+    {% if paginator.total_pages > 1 %}
+        <div class="paginator">
+            {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path }}" class="paginator__item paginator__item--prev">
+                    <small>Página <strong>{{ paginator.previous_page }}</strong></small>
+                </a>
+            {% endif %}
+            {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path }}" class="paginator__item paginator__item--next">
+                    <small>Página <strong>{{ paginator.next_page }}</strong></small>
+                </a>
+            {% endif %}
+        </div>
+    {% endif %}
+{% endif %}
