@@ -21,3 +21,4 @@
 - [ ] Review data information.
 - [ ] Move the blog to /blog and replace the index by a more visual content.
 - [ ] Backup and remove the fonts directory.
+- [ ] Save collapsed and un-collapsed state for categories.
