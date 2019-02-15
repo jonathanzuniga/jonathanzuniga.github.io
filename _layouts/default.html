@@ -22,14 +22,16 @@
     >
         {% include header.html %}
 
-        {% if page.url == '/' %}
-            <h1 class="intro-title">Lorem ipsum dolor sit amet.</h1>
-        {% elsif page.layout == 'category' %}
-            <h1 class="intro-title">«{{ page.category }}»</h1>
-        {% elsif page.layout == 'archive' or page.url == '/search' %}
-        {% else %}
-            <h1 class="intro-title">{{ page.title }}</h1>
-        {% endif %}
+        <h1 class="intro-title">
+            {% if page.url == '/' %}
+                Lorem ipsum dolor sit amet.
+            {% elsif page.layout == 'category' %}
+                «{{ page.category }}»
+            {% elsif page.layout == 'archive' or page.url == '/search' %}
+            {% else %}
+                {{ page.title }}
+            {% endif %}
+        </h1>
 
         <div class="intro-content">
             {% if page.url == '/' %}
@@ -56,6 +58,41 @@
         <div class="content">{{ content }}</div>
 
         {% include sidebar.html %}
+
+        <hr>
+
+        <div class="awesome-block-1">
+            <h5>Lectura recommendada</h5>
+
+            {% assign recommended_reading = site.data.recommended_reading | first %}
+
+            <p class="small">
+                <i><b><a href="{{ rr.url }}" target="_blank">{{ recommended_reading.title }}</a></b> por {{ recommended_reading.author }}</i>.
+                {{ recommended_reading.note | strip_html | truncate: 64 }}
+                <a href="">Todas las lecturas</a>.
+            </p>
+        </div>
+
+        <div class="awesome-block-2">
+            <h5>En otra parte</h5>
+
+            {% assign author = site.authors['jonathan'] %}
+
+            <p class="small">
+                Sígueme en <a href="https://twitter.com/{{ author.twitter_username }}/" target="_blank">Twitter</a>.<br>
+                Mis proyectos en <a href="https://github.com/{{ author.github_username }}/" target="_blank">GitHub</a>.<br>
+                Mis fotos en <a href="https://www.flickr.com/photos/{{ author.flickr_username }}/" target="_blank">Flickr</a>.
+            </p>
+        </div>
+
+        <div class="awesome-block-3">
+            <h5>Ponerse en contacto</h5>
+
+            <p class="small">
+                Escríbeme a mí <a href="mailto:{{ author.email }}">correo electrónico</a> para consultas o simplemente para saludarme.
+                <b><a href="mailto:{{ author.email }}">{{ author.email }}</a></b>
+            </p>
+        </div>
 
         {% include footer.html %}
 
