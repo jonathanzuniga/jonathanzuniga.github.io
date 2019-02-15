@@ -36,15 +36,17 @@
 
         <label class="h5 collapse__head collapse__head--right-icon" for="collapse-categories" >Categorías</label>
 
-        <ul class="list collapse__body">
-            {% for category in site.categories %}
-                <li>
-                    <a href="/blog/category/{{ category[0] | slugify }}">
-                        {{ category[0] }} ({{ category | last | size }})
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
+        <div class="collapse__body">
+            <ul class="list">
+                {% for category in site.categories %}
+                    <li>
+                        <a href="/blog/category/{{ category[0] | slugify }}">
+                            {{ category[0] }} ({{ category | last | size }})
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </aside>
 
