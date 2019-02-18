@@ -8,7 +8,7 @@
 - [x] Rename the archive page to articles.
 - [ ] Write the author information in the sidebar.
 - [ ] Write the blog intro title and content.
-- [ ] Edit the footer.
+- [x] Edit the footer.
 - [ ] Edit the about page.
 - [ ] Write more posts.
 - [ ] Create draft posts.

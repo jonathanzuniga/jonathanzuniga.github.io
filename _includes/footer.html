@@ -1,9 +1,16 @@
+{% assign author = site.authors['jonathan'] %}
 
 <footer class="footer">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat.
+	<p>
+		© <strong>{{ author.first_name }} {{ author.last_name }}</strong> 2015–{{ site.time | date: '%Y' }}. Algunos derechos reservados.
+		<!-- © <b>{{ site.title }}</b> 2015–{{ site.time | date: '%Y' }}.
+		<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">Suscribirse</a> a las publicaciones. -->
+	</p>
+	<p>
+		Contenidos bajo licencia Creative Commons.
+		<a href="https://github.com/jonathanzuniga/jonathanzuniga.github.io">Código fuente</a>.
+		<a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">Suscribirse</a> a las publicaciones.
+	</p>
 </footer>
 
 
