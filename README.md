@@ -14,7 +14,7 @@
 - [ ] Create draft posts.
 - [ ] Replace the resources page by a reading page.
 - [ ] Add a drawing or maybe a list of recent articles when searching and hasn't found any results.
-- [ ] Remove the commented code in footer file.
+- [x] Remove the commented code in footer file.
 - [ ] Remove the commented code in sidebar file.
 - [ ] Remove the commented code in post file.
 - [ ] Remove the third-col file.
