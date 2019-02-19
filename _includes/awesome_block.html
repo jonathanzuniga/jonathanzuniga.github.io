@@ -3,7 +3,7 @@
 
     {% assign recommended_reading = site.data.recommended_reading | first %}
 
-    <p class="small">
+    <p>
         <i><b><a href="{{ rr.url }}" target="_blank">{{ recommended_reading.title }}</a></b> por {{ recommended_reading.author }}</i>.
         {{ recommended_reading.opinion | strip_html | truncate: 64 }}
         <a href="">Todas las lecturas</a>.
@@ -15,7 +15,7 @@
 
     {% assign author = site.authors['jonathan'] %}
 
-    <p class="small">
+    <p>
         Sígueme en <a href="https://twitter.com/{{ author.twitter_username }}/" target="_blank">Twitter</a>.<br>
         Mis proyectos en <a href="https://github.com/{{ author.github_username }}/" target="_blank">GitHub</a>.<br>
         Mis fotos en <a href="https://www.flickr.com/photos/{{ author.flickr_username }}/" target="_blank">Flickr</a>.
@@ -25,7 +25,7 @@
 <div class="awesome-block awesome-block--3">
     <h5>Ponerse en contacto</h5>
 
-    <p class="small">
+    <p>
         Escríbeme a mí <a href="mailto:{{ author.email }}">correo electrónico</a> para consultas o simplemente para saludarme.
         <b><a href="mailto:{{ author.email }}">{{ author.email }}</a></b>
     </p>
