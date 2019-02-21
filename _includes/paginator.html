@@ -1,15 +1,15 @@
 {% if page.layout == 'post' %}
     <div class="paginator">
-        {% if page.next.url %}
-            <a href="{{ page.next.url }}" class="paginator__item paginator__item--prev">
+        {% if page.previous.url %}
+            <a href="{{ page.previous.url }}" class="paginator__item paginator__item--prev">
                 <small>Artículo Anterior</small>
-                <strong>{{ page.next.title }}</strong>
+                <strong>{{ page.previous.title }}</strong>
             </a>
         {% endif %}
-        {% if page.previous.url %}
-            <a href="{{ page.previous.url }}" class="paginator__item paginator__item--next">
+        {% if page.next.url %}
+            <a href="{{ page.next.url }}" class="paginator__item paginator__item--next">
                 <small>Siguiente Artículo</small>
-                <strong>{{ page.previous.title }}</strong>
+                <strong>{{ page.next.title }}</strong>
             </a>
         {% endif %}
     </div>
