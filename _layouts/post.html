@@ -5,7 +5,7 @@ layout: default
 <article class="post post--full">
     {% comment %}
     <header class="post__header">
-        <div class="post__date small">
+        <div class="post__date">
             {% include date.html %}
         </div>
 
@@ -22,7 +22,7 @@ layout: default
     </div>
 
     <footer class="post__footer">
-        <ul class="list list--inline small">
+        <ul class="list list--inline">
             <li>
                 <b>Escrito por</b>
                 {% assign sorted_authors = page.authors | sort %}

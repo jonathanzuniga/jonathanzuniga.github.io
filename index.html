@@ -5,7 +5,7 @@ layout: default
 {% for post in paginator.posts limit: 10 %}
     <article class="post post--{{ forloop.index }}">
         <header class="post__header">
-            <div class="post__date small">
+            <div class="post__date">
                 {% include date.html %}
             </div>
 
@@ -21,7 +21,7 @@ layout: default
         </div>
 
         <footer class="post__footer">
-            <ul class="list list---inline small">
+            <ul class="list list---inline">
                 <li>
                     Publicado en
                     {% assign sorted_categories = post.categories | sort %}

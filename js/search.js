@@ -14,7 +14,7 @@
                     `<article class="post post--${i}">
                         <header class="post__header">
                             <div class="post__meta">
-                                <div class="post__date small">
+                                <div class="post__date">
                                     ${item.date}
                                 </div>
                             </div>
