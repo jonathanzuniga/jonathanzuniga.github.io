@@ -8,7 +8,7 @@ tags: 'top-article-start'
 title: 'Asistiendo a Tijuana Innovadora 2016'
 ---
 
-El miércoles me preparé para asistir a la cuarta edición del evento <a href="http://tijuanainnovadora.com/" target="_blank">Tijuana Innovadora</a>.<!-- more --> Antes de salir de la oficina escucho a algunos de mis compañeros hablar acerca de <a href="http://www.imdb.com/title/tt0475784/" target="_blank">Westworld</a>, una serie de televisión que los ha cautivado. Sin tiempo para platicar más, tomo mis cosas y me despido de los demás.
+El miércoles me preparé para asistir a la cuarta edición del evento <a href="http://tijuanainnovadora.com/" target="_blank">Tijuana Innovadora</a>. Antes de salir de la oficina escucho a algunos de mis compañeros hablar acerca de <a href="http://www.imdb.com/title/tt0475784/" target="_blank">Westworld</a>, una serie de televisión que los ha cautivado. Sin tiempo para platicar más, tomo mis cosas y me despido de ellos.<!-- more -->
 
 Cuanto tráfico — da la vuelta de regreso.
 
