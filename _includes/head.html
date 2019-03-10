@@ -1,33 +1,60 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="author" content="Jonathan Zúñiga">
-    {% comment %}<meta name="theme-color" content="">{% endcomment %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+        name="description"
+        content="{% if page.excerpt %}{{
+            page.excerpt | strip_html | strip_newlines | truncate: 160
+        }}{% else %}{{ site.description }}{% endif %}"
+    />
+    <meta name="author" content="Jonathan Zúñiga" />
+    {% comment %}
+    <meta name="theme-color" content="" />
+    {% endcomment %}
 
-    <title>{% if page.title %}{{ page.title | strip_html }} + {% endif %}{{ site.title | strip_html }}</title>
+    <title>
+        {% if page.title %}{{ page.title | strip_html }} + {% endif %}{{
+            site.title | strip_html
+        }}
+    </title>
 
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-    <link rel="stylesheet" href="{{ '/css/patterns.min.css' | prepend: site.baseurl }}" media="screen">
-    <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}" media="screen">
+    <link
+        rel="canonical"
+        href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+    />
+    <link rel="alternate" type="application/rss+xml" title="{{
+        site.title
+    }}" href="{{
+        "/feed.xml" | prepend: site.baseurl | prepend: site.url
+    }}" />
+    <link
+        rel="stylesheet"
+        href="{{ '/css/patterns.min.css' | prepend: site.baseurl }}"
+        media="screen"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css"
+    />
+    <link
+        rel="stylesheet"
+        href="{{ '/css/main.css' | prepend: site.baseurl }}"
+        media="screen"
+    />
 
     <script>
-        ;( function( window, document, undefined ) {
+        (function(window, document, undefined) {
+            "use strict";
 
-            'use strict';
+            if (!("localStorage" in window)) return;
 
-            if ( ! ( 'localStorage' in window ) ) return;
+            const nightMode = localStorage.getItem("nightMode");
 
-            const nightMode = localStorage.getItem( 'nightMode' );
+            if (!nightMode) return;
 
-            if ( ! nightMode ) return;
-
-            document.documentElement.classList.add( 'night' );
-
-        } ) ( window, document );
+            document.documentElement.classList.add("night");
+        })(window, document);
     </script>
-    {% if site.google_analytics and jekyll.environment == 'production' %}
-        {% include analytics.html %}
-    {% endif %}
+    {% if site.google_analytics and jekyll.environment == 'production' %} {%
+    include analytics.html %} {% endif %}
 </head>

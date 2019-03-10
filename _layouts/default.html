@@ -20,39 +20,11 @@
             body--search
         {% endif %}"
     >
-        {% include header.html %} {% if page.url == '/' %}
-        <!-- <div class="intro-blob">
-            <svg
-                width="389.65356"
-                height="382.81693"
-                viewBox="0 0 389.65356 382.81693"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <defs>
-                    <pattern id="img" x="0" y="0" width="1" height="1">
-                        <image
-                            width="600"
-                            height="600"
-                            xlink:href="https://placekitten.com/600/600"
-                        />
-                    </pattern>
-                </defs>
-                <g transform="translate(205.82625,202.31793)">
-                    <path
-                        d="m 123.3,-103.3 c 36.2,50.4 65.2,101.7 59.9,153.3 -5.3,51.6 -44.8,103.5 -94,122.1 -49.1,18.6 -108,3.9 -167.4,-20.6 -59.4,-24.4 -119.3,-58.6 -126.8,-101.8 -7.5,-43.2 37.4,-95.4 80.3,-147.3 42.9,-52 83.8,-103.7 126,-104.7 42.2,-1.1 85.7,48.6 122,99 z"
-                        fill="url(#img)"
-                    />
-                </g>
-            </svg>
-        </div> -->
-        {% endif %} {% unless page.layout == 'articles' or page.url == '/search'
-        %}
+        {% include header.html %} {% if page.url == '/' %} {% include
+        featured.html %} {% else %} {% unless page.layout == 'articles' or
+        page.url == '/search' %}
         <h1 class="intro-title">
-            {% if page.url == '/' %} Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. {% elsif page.layout == 'category' %} «{{
-                page.category
-            }}» {% elsif page.layout == 'articles' or page.url == '/search' %}
-            {% else %}
+            {% if page.layout == 'category' %} «{{ page.category }}» {% else %}
             {{ page.title }}
             {% endif %}
         </h1>
@@ -74,6 +46,7 @@
             {% elsif page.layout == 'articles' or page.url == '/search' %} {%
             include search_form.html %} {% endif %}
         </div>
+        {% endif %}
 
         <div class="content">
             {% if page.url == '/' or page.layout == 'category' %}
@@ -91,6 +64,7 @@
 
         <script src="{{ '/js/lunr.min.js' | prepend: site.baseurl }}"></script>
         <script src="{{ '/js/search.js' | prepend: site.baseurl }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
         <script src="{{ '/js/scripts.js' | prepend: site.baseurl }}"></script>
     </body>
 </html>
