@@ -1,6 +1,26 @@
 {% assign author = site.authors['jonathan'] %}
 
 <aside class="aside">
+    <div class="collapse">
+        <input class="collapse__toggle" id="collapse-recent-posts" name="collapse-recent-posts" type="checkbox">
+
+        <label class="h5 collapse__head collapse__head--right-icon" for="collapse-recent-posts">Reciente</label>
+
+        <div class="collapse__body">
+            <ul class="list">
+                {% for post in site.posts limit: 10 %}
+                    <li>
+                        <a href="/blog/category/{{ category[0] | slugify }}">
+                            {{ post.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+    <hr>
+
     <h3 class="h5">Sobre el autor</h3>
 
     <!-- <img class="avatar" src="{{ author.avatar }}" alt="{{ author.first_name }} {{ author.last_name }}"> -->
