@@ -3,8 +3,9 @@
 <aside class="aside">
     <div class="collapse">
         <input class="collapse__toggle" id="collapse-recent-posts" name="collapse-recent-posts" type="checkbox">
-
-        <label class="h5 collapse__head collapse__head--right-icon" for="collapse-recent-posts">Reciente</label>
+        <label class="collapse__head collapse__head--right-icon h6" for="collapse-recent-posts">
+            Recientes
+        </label>
 
         <div class="collapse__body">
             <ul class="list">
@@ -21,7 +22,7 @@
     
     <hr>
 
-    <h3 class="h5">Sobre el autor</h3>
+    <h3 class="h6">Sobre el autor</h3>
 
     <!-- <img class="avatar" src="{{ author.avatar }}" alt="{{ author.first_name }} {{ author.last_name }}"> -->
 
@@ -31,7 +32,7 @@
 
     <hr>
 
-    <h3 class="h5">Proyectos</h3>
+    <h3 class="h6">Proyectos</h3>
 
     <ul class="list">
         {% assign selected_projects = site.data.selected_projects | sort: 'title' %}
@@ -52,7 +53,7 @@
     <div class="collapse">
         <input class="collapse__toggle" id="collapse-categories" name="collapse-categories" type="checkbox" checked>
 
-        <label class="h5 collapse__head collapse__head--right-icon" for="collapse-categories" >Categorías</label>
+        <label class="collapse__head collapse__head--right-icon h6" for="collapse-categories" >Categorías</label>
 
         <div class="collapse__body">
             <ul class="list">
