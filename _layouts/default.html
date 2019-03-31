@@ -20,15 +20,14 @@
             body--search
         {% endif %}"
     >
-        {% include header.html %} {% if page.url == '/' %} {% include
-        featured.html %} {% else %} {% unless page.layout == 'articles' or
-        page.url == '/search' %}
+        {% include header.html %}
         <h1 class="intro-title">
-            {% if page.layout == 'category' %} «{{ page.category }}» {% else %}
+            {% if page.url == '/' %} Lorem ipsum dolor sit amet. {% elsif
+            page.layout == 'category' %} «{{ page.category }}» {% elsif
+            page.layout == 'articles' or page.url == '/search' %} {% else %}
             {{ page.title }}
             {% endif %}
         </h1>
-        {% endunless %}
 
         <div class="intro-content">
             {% if page.url == '/' %}
@@ -46,7 +45,6 @@
             {% elsif page.layout == 'articles' or page.url == '/search' %} {%
             include search_form.html %} {% endif %}
         </div>
-        {% endif %}
 
         <div class="content">
             {% if page.url == '/' or page.layout == 'category' %}
@@ -64,7 +62,6 @@
 
         <script src="{{ '/js/lunr.min.js' | prepend: site.baseurl }}"></script>
         <script src="{{ '/js/search.js' | prepend: site.baseurl }}"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
         <script src="{{ '/js/scripts.js' | prepend: site.baseurl }}"></script>
     </body>
 </html>
