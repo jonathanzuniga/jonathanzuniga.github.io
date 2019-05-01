@@ -1,6 +1,38 @@
 {% assign author = site.authors['jonathan'] %}
 
 <aside class="aside">
+    <!-- <img class="avatar" src="{{ author.avatar }}" alt="{{ author.first_name }} {{ author.last_name }}"> -->
+
+    <p class="aside__about">
+        Soy Jonathan, un desarrollador front-end. Aquí comparto <a href="">breves pensamientos</a> sobre el desarrollo web y opiniones de diversos temas, tambien <a href="">tomo fotos</a>, y muy rara vez <a href="">dibujo letras</a>.
+    </p>
+
+    <hr>
+
+    <h3 class="h6">Proyectos</h3>
+
+    <ul class="list">
+        {% assign selected_projects = site.data.selected_projects | sort: 'title' %}
+        {% for sp in selected_projects | limit: 3 %}
+          <li>
+                <a href="{{ sp.url }}" target="_blank">
+                  {{ sp.title }}
+                </a>
+                {% if sp.description %}
+                    <small>{{ sp.description }}</small>
+                {% endif %}
+          </li>
+        {% endfor %}
+    </ul>
+</aside>
+
+
+
+
+{% comment %}
+{% assign author = site.authors['jonathan'] %}
+
+<aside class="aside">
     <div class="collapse">
         <input class="collapse__toggle" id="collapse-recent-posts" name="collapse-recent-posts" type="checkbox">
         <label class="collapse__head collapse__head--right-icon h6" for="collapse-recent-posts">
@@ -68,7 +100,7 @@
         </div>
     </div>
 </aside>
-
+{% endcomment %}
 
 
 
