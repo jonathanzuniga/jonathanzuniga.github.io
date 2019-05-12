@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% for post in paginator.posts limit: 10 %}
+{% comment %} {% for post in paginator.posts limit: 10 %}
 <article class="post post--{{ forloop.index }}">
     <header class="post__header">
         <div class="post__date">
@@ -35,4 +35,4 @@ layout: default
         </ul>
     </footer> -->
 </article>
-{% endfor %} {% include paginator.html %}
+{% endfor %} {% include paginator.html %} {% endcomment %}

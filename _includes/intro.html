@@ -1,0 +1,79 @@
+<h1 class="intro h2">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptates
+    hic <a href>mollitia</a> facilis eius neque,
+    <a href>ab voluptatibus autem</a> est <a href>dolore</a> quisquam molestiae
+    quaerat <a href>numquam praesentium</a> a similique
+    <a href>natus tempore</a>
+    voluptatem!
+</h1>
+
+<hr />
+
+<div class="recent-articles section">
+    <h2 class="section__title h6">Artículos Recientes</h2>
+
+    <ul class="list">
+        {% for post in site.posts limit: 3 %}
+        <li>
+            <article class="post post--{{ forloop.index }}">
+                <header class="post__header">
+                    <h3 class="post__title h5">
+                        <a href="{{ post.url }}">
+                            {{ post.title }}
+                        </a>
+                    </h3>
+                    <div class="post__date">
+                        <small>{% include date.html %}</small>
+                    </div>
+                </header>
+
+                {% if forloop.first %}
+                <div class="post__content post__content--excerpt">
+                    {{ post.excerpt }}
+                </div>
+                {% endif %}
+            </article>
+        </li>
+        {% endfor %}
+        <li>
+            <h3 class="h5">
+                <a href="{{ site.baseurl }}/blog">Leer más artículos</a>
+            </h3>
+        </li>
+    </ul>
+</div>
+
+<div class="selected-projects section">
+    <h2 class="section__title h6">Proyectos Selectos</h2>
+
+    <ul class="list">
+        {% assign selected_projects = site.data.selected_projects | sort:
+        'title' %} {% for sp in selected_projects limit: 5 %}
+        <li>
+            <h3 class="h5">
+                <a href="{{ sp.url }}" target="_blank">
+                    {{ sp.title }}
+                </a>
+            </h3>
+            {% if sp.description %}
+            <div>
+                <i>
+                    <small>{{ sp.description }}</small>
+                </i>
+            </div>
+            {% endif %}
+        </li>
+        {% endfor %}
+        <li>
+            <h3 class="h5">
+                <a
+                    href="https://github.com/{{ author.github_username }}/"
+                    target="_blank"
+                    >Todos mis proyectos</a
+                >
+            </h3>
+        </li>
+    </ul>
+</div>
+
+<hr />

@@ -7,7 +7,25 @@
                 {{ author.first_name }} {{ author.last_name }}
             </a>
         </h2>
-        <input class="collapse__toggle" id="collapse-nav" name="collapse-nav" role="button" type="checkbox">
+    </nav>
+</header>
+
+{% comment %} {% assign author = site.authors[ 'jonathan' ] %}
+
+<header class="header">
+    <nav class="nav">
+        <h2 class="nav__brand">
+            <a href="{{ site.baseurl }}/">
+                {{ author.first_name }} {{ author.last_name }}
+            </a>
+        </h2>
+        <input
+            class="collapse__toggle"
+            id="collapse-nav"
+            name="collapse-nav"
+            role="button"
+            type="checkbox"
+        />
         <label class="collapse__head" for="collapse-nav">Menú</label>
         <ul class="nav__menu list collapse__body">
             <li class="nav__item {% if page.url == '/' %}active{% endif %}">
@@ -15,17 +33,23 @@
                     Blog
                 </a>
             </li>
-            <li class="nav__item {% if current[ 1 ] == 'articles' %}active{% endif %}">
+            <li
+                class="nav__item {% if current[ 1 ] == 'articles' %}active{% endif %}"
+            >
                 <a href="{{ site.baseurl }}/articles">
                     Artículos
                 </a>
             </li>
-            <li class="nav__item {% if current[ 1 ] == 'resources' %}active{% endif %}">
+            <li
+                class="nav__item {% if current[ 1 ] == 'resources' %}active{% endif %}"
+            >
                 <a href="{{ site.baseurl }}/resources">
                     Recursos
                 </a>
             </li>
-            <li class="nav__item {% if current[ 1 ] == 'about' %}active{% endif %}">
+            <li
+                class="nav__item {% if current[ 1 ] == 'about' %}active{% endif %}"
+            >
                 <a href="{{ site.baseurl }}/about">
                     Autor
                 </a>
@@ -33,3 +57,4 @@
         </ul>
     </nav>
 </header>
+{% endcomment %}

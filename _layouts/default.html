@@ -20,7 +20,37 @@
             body--search
         {% endif %}"
     >
+        <!-- Header -->
+
         {% include header.html %}
+
+        <hr />
+
+        <!-- Intro -->
+
+        {% if page.url == '/' %} {% include intro.html %} {% endif %}
+
+        <!-- Content -->
+
+        {% unless page.url == '/' %}
+        <div class="content">
+            {{ content }}
+        </div>
+
+        <hr />
+        {% endunless %}
+
+        <!-- Awesome block -->
+
+        {% include awesome_block.html %}
+
+        <hr />
+
+        <!-- Footer -->
+
+        {% include footer.html %}
+
+        <!-- {% comment %}
         <h1 class="intro-title">
             {% if page.url == '/' %} Lorem ipsum dolor sit amet. {% elsif
             page.layout == 'category' %} «{{ page.category }}» {% elsif
@@ -59,8 +89,7 @@
         {% include sidebar.html %}
 
         <hr />
-
-        {% include awesome_block.html %} {% include footer.html %}
+        {% endcomment %} -->
 
         <script src="{{ '/js/lunr.min.js' | prepend: site.baseurl }}"></script>
         <script src="{{ '/js/search.js' | prepend: site.baseurl }}"></script>
