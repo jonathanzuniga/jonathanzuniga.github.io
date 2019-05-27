@@ -10,7 +10,7 @@
 <hr />
 
 <div class="recent-articles section">
-    <h2 class="section__title h6">Artículos Recientes</h2>
+    <h2 class="section__title">Artículos Recientes</h2>
 
     <ul class="list">
         {% for post in site.posts limit: 3 %}
@@ -44,7 +44,7 @@
 </div>
 
 <div class="selected-projects section">
-    <h2 class="section__title h6">Proyectos Selectos</h2>
+    <h2 class="section__title">Proyectos Selectos</h2>
 
     <ul class="list">
         {% assign selected_projects = site.data.selected_projects | sort:
