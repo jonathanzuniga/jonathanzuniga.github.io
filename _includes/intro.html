@@ -1,4 +1,4 @@
-<h1 class="intro h2">
+<h1 class="introduction h2">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptates
     hic <a href>mollitia</a> facilis eius neque,
     <a href>ab voluptatibus autem</a> est <a href>dolore</a> quisquam molestiae
@@ -25,13 +25,18 @@
                             {{ post.title }}
                         </a>
                     </h3>
+                    {% if post.description %}
+                    <h4 class="post__description">
+                        {{ post.description }}
+                    </h4>
+                    {% endif %}
                 </header>
 
-                {% if forloop.first %}
+                <!-- {% if forloop.first %}
                 <div class="post__content post__content--excerpt">
                     <i>{{ post.excerpt }}</i>
                 </div>
-                {% endif %}
+                {% endif %} -->
             </article>
         </li>
         {% endfor %}
