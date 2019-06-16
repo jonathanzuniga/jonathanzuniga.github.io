@@ -6,7 +6,4 @@
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 
-@import
-	'font',
-	// 'style',
-	'syntax-highlighting';
+@import "functions", "fonts", "syntax-highlighting";

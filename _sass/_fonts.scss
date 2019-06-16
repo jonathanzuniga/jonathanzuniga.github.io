@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700,700i&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700,700i&display=swap");
 
 // @import url("https://fonts.googleapis.com/css?family=BioRhyme:800|Merriweather+Sans:300,300i,400,400i,700,700i|Merriweather:400,400i,700,700i&display=swap");
 
@@ -62,73 +62,72 @@
 // }
 
 // $fonts: (
-// 	// 'Mort Modern' 'Large Condensed' 'Large' (
-// 	// 	'14' 'RegularCnd' 400,
-// 	// 	'15' 'MediumCnd'  500,
-// 	// 	'17' 'BoldCnd'    700,
-// 	// ),
-// 	// 'Mort Modern' 'Subhead Condensed' 'Regular' (
-// 	// 	'19' 'Condensed' 400,
-// 	// ),
-// 	// 'Mort Modern' 'Large' 'Large' (
-// 	// 	// '01' 'Light'    300,
-// 	// 	'02' 'Regular'  400,
-// 	// 	'03' 'Medium'   500,
-// 	// 	// '04' 'SemiBold' 600,
-// 	// 	'05' 'Bold'     700,
-// 	// 	// '06' 'Black'    800,
-// 	// ),
-// 	'Mort Modern' 'Subhead' 'Semi' (
-// 		'10' 'Bold' 600,
-// 	),
-// 	'Mort Modern' 'Text' 'Text' (
-// 		// '23' 'Light'    300,
-// 		'24' 'Regular'  400,
-// 		'25' 'Medium'   500,
-// 		// '26' 'SemiBold' 600,
-// 		'27' 'Bold'     700,
-// 		// '28' 'Black'    800
-// 	)
+//     "Mort Modern": (
+//         "Large"
+//             (
+//                 "01" "LargeLight" 300,
+//                 "02" "LargeRegular" 400,
+//                 "03" "LargeMedium" 500,
+//                 "04" "LargeSemiBold" 600,
+//                 "05" "LargeBold" 700,
+//                 "06" "LargeBlack" 800
+//             ),
+//         "Subhead"
+//             (
+//                 "07" "Light" 300,
+//                 "08" "Regular" 400,
+//                 "09" "Medium" 500,
+//                 "10" "SemiBold" 600,
+//                 "11" "Bold" 700,
+//                 "12" "Black" 800
+//             ),
+//         "Large Condensed"
+//             (
+//                 "13" "LargeLightCnd" 300,
+//                 "14" "LargeRegularCnd" 400,
+//                 "15" "LargeMediumCnd" 500,
+//                 "16" "LargeSemiBoldCnd" 600,
+//                 "17" "LargeBoldCnd" 700
+//             ),
+//         "Subhead Condensed"
+//             (
+//                 "18" "LightCondensed" 300,
+//                 "19" "RegularCondensed" 400,
+//                 "20" "MediumCondensed" 500,
+//                 "21" "SemiBoldCondensed" 600,
+//                 "22" "BoldCondensed" 700
+//             ),
+//         "Text"
+//             (
+//                 "23" "TextLight" 300,
+//                 "24" "TextRegular" 400,
+//                 "25" "TextMedium" 500,
+//                 "26" "TextSemiBold" 600,
+//                 "27" "TextBold" 700,
+//                 "28" "TextBlack" 800
+//             )
+//     )
 // );
 
-// @function str_replace( $string, $search, $replace: '' ) {
+// @each $font-family, $optical-sizes in $fonts {
+//     $font-family-cap: str_replace($font-family, " ", "");
 
-// 	$index: str_index( $string, $search );
+//     @each $optical-size, $weights in $optical-sizes {
+//         @each $font-number, $font-weight, $font-weight-number in $weights {
+//             @font-face {
+//                 font-family: "#{ $font-family } #{ $optical-size }";
+//                 font-weight: #{$font-weight-number};
+//                 src: url("../fonts/#{ $font-family-cap }Pro/#{ $font-family-cap }-#{ $font-number }#{ $font-weight }.otf")
+//                     format("opentype");
+//             }
 
-// 	@if $index {
-
-// 		@return str_slice( $string, 1, $index - 1 ) +
-// 			$replace +
-// 			str_replace(
-// 				str_slice( $string, $index + str_length( $search )
-// 			), $search, $replace );
-
-// 	}
-
-// 	@return $string;
-
-// }
-
-// @each $font-family, $optical-size, $optical-size-1st-word, $weights in $fonts {
-
-// 	@each $number, $weight, $weight-num in $weights {
-
-// 		$font-family-r: str_replace( $font-family, ' ', '' );
-
-// 		@font-face {
-// 			font-family: '#{ $font-family } #{ $optical-size }';
-// 			font-weight: #{ $weight-num };
-// 			src: url( '../fonts/#{ $font-family-r }Pro/#{ $font-family-r }-#{ $number }#{ $optical-size-1st-word }#{ $weight }.otf' )
-// 			     format( 'opentype' );
-// 		}
-
-// 		@font-face {
-// 			font-family: '#{ $font-family } #{ $optical-size }';
-// 			font-style: italic;
-// 			font-weight: #{ $weight-num };
-// 			src: url( '../fonts/#{ $font-family-r }Pro/#{ $font-family-r }-#{ $number }#{ $optical-size-1st-word }#{ $weight }Italic.otf' )
-// 			     format( 'opentype' );
-// 		}
-// 	}
-
+//             @font-face {
+//                 font-family: "#{ $font-family } #{ $optical-size }";
+//                 font-style: italic;
+//                 font-weight: #{$font-weight-number};
+//                 src: url("../fonts/#{ $font-family-cap }Pro/#{ $font-family-cap }-#{ $font-number }#{ $font-weight }Italic.otf")
+//                     format("opentype");
+//             }
+//         }
+//     }
 // }

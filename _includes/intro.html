@@ -1,10 +1,12 @@
+{% assign author = site.authors['jonathan'] %}
 <h1 class="introduction h2">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptates
-    hic <a href>mollitia</a> facilis eius neque,
-    <a href>ab voluptatibus autem</a> est <a href>dolore</a> quisquam molestiae
-    quaerat <a href>numquam praesentium</a> a similique
-    <a href>natus tempore</a>
-    voluptatem!
+    Bienvenido, soy
+    <a href="">{{ author.first_name }} {{ author.last_name }}</a> un
+    desarrollador web viviendo en la ciudad de Tijuana, B.C. En este espacio
+    comparto <a href="">experiencias de mi vida diaria</a>. Si quieres saber por
+    qué hice este sitio puedes leer <a href="">el primer artículo</a> y si te
+    preguntas quién soy, acá encontrarás algo de información
+    <a href="">acerca de mí</a>.
 </h1>
 
 <div class="recent-articles section">
@@ -56,7 +58,7 @@
             {% if sp.description %}
             <div>
                 <i>
-                    <small>{{ sp.description }}</small>
+                    {{ sp.description }}
                 </i>
             </div>
             {% endif %}
