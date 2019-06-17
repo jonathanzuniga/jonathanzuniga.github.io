@@ -24,25 +24,25 @@
 
         {% include header.html %}
 
-        <hr />
+        <main class="main">
+            <div class="container">
+                <!-- Intro -->
 
-        <!-- Intro -->
+                {% if page.url == '/' %} {% include intro.html %} {% endif %}
 
-        {% if page.url == '/' %} {% include intro.html %} {% endif %}
+                <!-- Content -->
 
-        <!-- Content -->
+                {% unless page.url == '/' %}
+                <div class="content">
+                    {{ content }}
+                </div>
+                {% endunless %}
 
-        {% unless page.url == '/' %}
-        <div class="content">
-            {{ content }}
-        </div>
-        {% endunless %}
+                <!-- Awesome block -->
 
-        <!-- Awesome block -->
-
-        {% include awesome_block.html %}
-
-        <hr />
+                {% include awesome_block.html %}
+            </div>
+        </main>
 
         <!-- Footer -->
 

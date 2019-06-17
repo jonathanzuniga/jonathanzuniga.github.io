@@ -1,13 +1,15 @@
 {% assign author = site.authors[ 'jonathan' ] %}
 
 <header class="header">
-    <nav class="nav">
-        <h2 class="nav__brand">
-            <a href="{{ site.baseurl }}/">
-                {{ author.first_name }} {{ author.last_name }}
-            </a>
-        </h2>
-    </nav>
+    <div class="container">
+        <nav class="nav">
+            <h2 class="nav__brand">
+                <a href="{{ site.baseurl }}/">
+                    {{ author.first_name }} {{ author.last_name }}
+                </a>
+            </h2>
+        </nav>
+    </div>
 </header>
 
 {% comment %} {% assign author = site.authors[ 'jonathan' ] %}
