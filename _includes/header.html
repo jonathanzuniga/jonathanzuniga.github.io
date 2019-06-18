@@ -1,13 +1,26 @@
-{% assign author = site.authors[ 'jonathan' ] %}
-
+{% assign author = site.authors['jonathan'] %}
 <header class="header">
     <div class="container">
         <nav class="nav">
-            <h2 class="nav__brand">
+            <h3 class="nav__brand">
                 <a href="{{ site.baseurl }}/">
                     {{ author.first_name }} {{ author.last_name }}
                 </a>
-            </h2>
+            </h3>
+            <div class="nav__left">
+                <div class="nav__menu">
+                    <a
+                        class="nav__item {% if page.url == '/' %}is-active{% endif %}"
+                        href="{{ site.baseurl }}/"
+                        >Inicio</a
+                    >
+                    <a
+                        class="nav__item {% if current[1] == 'about' %}is-active{% endif %}"
+                        href="{{ site.baseurl }}/about"
+                        >Autor</a
+                    >
+                </div>
+            </div>
         </nav>
     </div>
 </header>
