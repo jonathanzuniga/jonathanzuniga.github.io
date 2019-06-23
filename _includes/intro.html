@@ -1,10 +1,11 @@
 {% assign author = site.authors['jonathan'] %}
 <div class="introduction">
-    <h1>Desarrollador front-end — web, experimental</h1>
-    <p>
+    <h1 class="introduction__title">
         Hola, soy
-        <a href="">{{ author.first_name }}</a> un desarrollador web viviendo en
-        Tijuana, B.C. Este es el sitio en el que comparto
+        {{ author.first_name }} {{ author.last_name }}, un desarrollador web.
+    </h1>
+    <p class="introduction__description">
+        Este es el sitio en el que comparto
         <a href="">experiencias de mi vida diaria</a>. Si quieres saber por qué
         hice este sitio puedes leer <a href="">el primer artículo</a> y si te
         preguntas quién soy, acá encontrarás algo de información
