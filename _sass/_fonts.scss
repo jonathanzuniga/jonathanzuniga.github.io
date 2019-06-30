@@ -1,4 +1,21 @@
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,500,500i,700,700i|IBM+Plex+Serif:400,400i,600,600i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|IBM+Plex+Serif:400,400i,500,500i,700,700i&display=swap");
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/pt-sans-pro/PTSansPro-Demi.eot");
+    src: url("../fonts/pt-sans-pro/PTSansPro-Demi.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/pt-sans-pro/PTSansPro-Demi.woff") format("woff"),
+        url("../fonts/pt-sans-pro/PTSansPro-Demi.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+// @import url("../fonts/Inter-3.7/Inter (web)/inter.css");
+
+// @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,500,500i,700,700i|IBM+Plex+Serif:400,400i,700,700i&display=swap");
+
+// @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,500,500i,700,700i|IBM+Plex+Serif:400,400i,600,600i,700,700i&display=swap");
 
 // @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|PT+Serif:400,400i,700,700i&display=swap");
 
