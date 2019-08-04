@@ -1,3 +1,60 @@
+:root {
+    --color-functional-1: #f5f2f0; // body bg color
+    --color-neutral-dark: #222; // text color
+    --color-primary: #ed6e87; // links color
+    --color-primary-65: #{rgba(#ed6e87, 0.65)};
+
+    --font-family-sans: "PT Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Helvetica, sans-serif;
+    --font-family-serif: "PT Serif", Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+    background-color: v(color-functional-1);
+    color: v(color-neutral-dark);
+    font-family: v(font-family-sans);
+}
+
+a {
+    background-image: linear-gradient(v(color-primary-65), v(color-primary-65));
+    background-origin: padding-box;
+    background-position: center bottom 26%;
+    background-repeat: no-repeat;
+    background-size: 100% 0.156rem;
+    color: v(color-neutral-dark);
+    padding: 0.625em 0;
+    text-shadow: none;
+    transition: color 0.16s;
+    text-decoration: none;
+
+    &:hover {
+        background-image: linear-gradient(
+            v(color-primary-65),
+            v(color-primary-65)
+        );
+        color: v(color-primary);
+        text-decoration: none;
+
+        svg {
+            fill: v(color-primary);
+        }
+    }
+
+    &:hover,
+    &:active {
+        outline: 0;
+        transition-duration: 0;
+    }
+
+    &:focus {
+        color: v(color-primary);
+
+        svg {
+            fill: v(color-primary);
+        }
+    }
+}
+
 .navbar {
     display: block;
 
