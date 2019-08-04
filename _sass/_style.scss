@@ -1,0 +1,23 @@
+.navbar {
+    display: block;
+
+    &__brand {
+        display: flex;
+        text-align: center;
+
+        .navbar__item {
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+    }
+
+    &__item {
+        text-align: center;
+    }
+}
