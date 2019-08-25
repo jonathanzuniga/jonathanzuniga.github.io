@@ -1,5 +1,5 @@
 {% assign author = site.authors['jonathan'] %}
-<div class="introduction">
+<!-- <div class="introduction">
     <h1 class="introduction__title">
         Momentos de un desarrollador web
     </h1>
@@ -12,8 +12,27 @@
         leer <a href="">el primer artículo</a> y si te preguntas quién soy, acá
         encontrarás algo de información <a href="">acerca de mí</a>.
     </p>
-</div>
+</div> -->
 
+{% for post in site.posts limit: 8 %}
+<article class="post post--recent post--recent-{{ forloop.index }}">
+    <header class="post__header">
+        <div class="post__date">
+            <small>{% include date.html %}</small>
+        </div>
+        <h2 class="post__title">
+            <a href="{{ post.url }}">
+                {{ post.title }}
+            </a>
+        </h2>
+        {% if post.description %}
+        <p class="post__description">
+            {{ post.description }}
+        </p>
+        {% endif %}
+    </header>
+</article>
+{% endfor %} {% comment %}
 <div class="recent-articles section">
     <h2 class="section__title">Artículos Recientes</h2>
 
@@ -80,3 +99,4 @@
         </li>
     </ul>
 </div>
+{% endcomment %}

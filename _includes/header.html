@@ -1,55 +1,40 @@
 {% assign author = site.authors['jonathan'] %}
 <header class="header">
-    <div class="container">
-        <div class="navbar">
-            <h2 class="navbar__brand">
-                <a class="navbar__item" href="">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 512 512"
-                    >
-                        <path
-                            d="M256 387c-8.5 0-15.4 6.9-15.4 15.4v46.2c0 8.5 6.9 15.4 15.4 15.4s15.4-6.9 15.4-15.4v-46.2c0-8.5-6.9-15.4-15.4-15.4zM256 48c-8.5 0-15.4 6.9-15.4 15.4v46.2c0 8.5 6.9 15.4 15.4 15.4s15.4-6.9 15.4-15.4V63.4c0-8.5-6.9-15.4-15.4-15.4zM125 256c0-8.5-6.9-15.4-15.4-15.4H63.4c-8.5 0-15.4 6.9-15.4 15.4s6.9 15.4 15.4 15.4h46.2c8.5 0 15.4-6.9 15.4-15.4zM448.6 240.6h-46.2c-8.5 0-15.4 6.9-15.4 15.4s6.9 15.4 15.4 15.4h46.2c8.5 0 15.4-6.9 15.4-15.4s-6.9-15.4-15.4-15.4zM152.5 344.1c-4.1 0-8 1.6-10.9 4.5l-32.7 32.7c-2.9 2.9-4.5 6.8-4.5 10.9s1.6 8 4.5 10.9c2.9 2.9 6.8 4.5 10.9 4.5 4.1 0 8-1.6 10.9-4.5l32.7-32.7c6-6 6-15.8 0-21.8-2.9-2.9-6.8-4.5-10.9-4.5zM359.5 167.9c4.1 0 8-1.6 10.9-4.5l32.7-32.7c2.9-2.9 4.5-6.8 4.5-10.9s-1.6-8-4.5-10.9c-2.9-2.9-6.8-4.5-10.9-4.5-4.1 0-8 1.6-10.9 4.5l-32.7 32.7c-2.9 2.9-4.5 6.8-4.5 10.9s1.6 8 4.5 10.9c2.9 2.9 6.8 4.5 10.9 4.5zM130.7 108.9c-2.9-2.9-6.8-4.5-10.9-4.5-4.1 0-8 1.6-10.9 4.5-2.9 2.9-4.5 6.8-4.5 10.9 0 4.1 1.6 8 4.5 10.9l32.7 32.7c2.9 2.9 6.8 4.5 10.9 4.5 4.1 0 8-1.6 10.9-4.5 2.9-2.9 4.5-6.8 4.5-10.9s-1.6-8-4.5-10.9l-32.7-32.7zM370.4 348.6c-2.9-2.9-6.8-4.5-10.9-4.5-4.1 0-8 1.6-10.9 4.5-6 6-6 15.8 0 21.8l32.7 32.7c2.9 2.9 6.8 4.5 10.9 4.5 4.1 0 8-1.6 10.9-4.5 2.9-2.9 4.5-6.8 4.5-10.9s-1.6-8-4.5-10.9l-32.7-32.7zM256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96z"
-                        />
-                    </svg>
-                </a>
-                <a class="navbar__item" href="{{ site.baseurl }}/">
-                    {{ author.first_name }} {{ author.last_name }}
-                </a>
-                <a class="navbar__item" href="">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 512 512"
-                    >
-                        <path
-                            d="M443.5 420.2L336.7 312.4c20.9-26.2 33.5-59.4 33.5-95.5 0-84.5-68.5-153-153.1-153S64 132.5 64 217s68.5 153 153.1 153c36.6 0 70.1-12.8 96.5-34.2l106.1 107.1c3.2 3.4 7.6 5.1 11.9 5.1 4.1 0 8.2-1.5 11.3-4.5 6.6-6.3 6.8-16.7.6-23.3zm-226.4-83.1c-32.1 0-62.3-12.5-85-35.2-22.7-22.7-35.2-52.9-35.2-84.9 0-32.1 12.5-62.3 35.2-84.9 22.7-22.7 52.9-35.2 85-35.2s62.3 12.5 85 35.2c22.7 22.7 35.2 52.9 35.2 84.9 0 32.1-12.5 62.3-35.2 84.9-22.7 22.7-52.9 35.2-85 35.2z"
-                        />
-                    </svg>
-                </a>
-            </h2>
-            <nav class="navbar__menu">
-                <a
-                    class="navbar__item {% if page.url == '/' %}is-active{% endif %}"
-                    href="{{ site.baseurl }}/"
-                    >Inicio</a
-                >
-                <a
-                    class="navbar__item {% if current[1] == 'articles' %}is-active{% endif %}"
-                    href=""
-                    >Artículos</a
-                >
-                <a
-                    class="navbar__item {% if current[1] == 'reading' %}is-active{% endif %}"
-                    href=""
-                    >Lectura</a
-                >
-                <a
-                    class="navbar__item {% if current[1] == 'about' %}is-active{% endif %}"
-                    href="{{ site.baseurl }}/about"
-                    >Autor</a
-                >
-            </nav>
+    <div class="navbar">
+        <div class="navbar__head">
+            <a
+                class="navbar__item navbar__item--brand"
+                href="{{ site.baseurl }}/"
+            >
+                {{ author.first_name }} {{ author.last_name }}
+            </a>
         </div>
+        <nav class="navbar__menu">
+            <a
+                class="navbar__item {% if page.url == '/' %}is-active{% endif %}"
+                href="{{ site.baseurl }}/"
+            >
+                Inicio
+            </a>
+            <a
+                class="navbar__item {% if current[1] == 'articles' %}is-active{% endif %}"
+                href=""
+            >
+                Artículos
+            </a>
+            <a
+                class="navbar__item {% if current[1] == 'reading' %}is-active{% endif %}"
+                href=""
+            >
+                Lectura
+            </a>
+            <a
+                class="navbar__item {% if current[1] == 'about' %}is-active{% endif %}"
+                href="{{ site.baseurl }}/about"
+            >
+                Autor
+            </a>
+        </nav>
     </div>
 </header>
 
