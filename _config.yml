@@ -16,7 +16,7 @@ encoding: utf-8
 
 authors:
     jonathan:
-        avatar: 'images/authors/jonathan-zuniga-2015-v3.png'
+        avatar: "images/authors/jonathan-zuniga-2015-v3.png"
         first_name: Jonathan
         last_name: Zúñiga
         email: jonathanzuniga@gmail.com
@@ -27,7 +27,7 @@ authors:
         facebook_username: jonathanzuniga
         flickr_username: jonathan_zuniga
         github_username: jonathanzuniga
-        googleplus_username: '110998212527855988388'
+        googleplus_username: "110998212527855988388"
         instagram_username: zuniga.jonathan
         lastfm_username: jonathanzuniga
         linkedin_username: jonathan-zúñiga-09b403ab
@@ -45,7 +45,7 @@ excerpt_separator: <!-- more -->
 permalink: /:title
 
 # timezone: America/Tijuana
-timezone: '-0800'
+timezone: "-0800"
 
 # This will require each of these plugins automatically.
 
@@ -54,12 +54,11 @@ plugins:
     - jekyll-paginate
 
 paginate: 10
-paginate_path: '/blog/page:num/'
+paginate_path: "/articles/page-:num/"
 
 # Google Analytics
 
 google_analytics: UA-134641865-1
-
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

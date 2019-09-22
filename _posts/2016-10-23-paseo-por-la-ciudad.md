@@ -1,10 +1,11 @@
 ---
 authors: [jonathan]
 categories: momentos
+cover: https://live.staticflickr.com/5772/30441576784_4b7d7ebb73_n.jpg
 date: 2016-10-23
+description: Durante el camino empezó a lloviznar. Llegué y esperé afuera del Sanborns como habíamos acordado. Continuó la llovizna.
 layout: post
-tags: "top-article-aside"
-title: "Paseo por la ciudad"
+title: Paseo por la ciudad
 ---
 
 Me levanto temprano, desayuno y me voy a la [Plaza Río](http://www.plazariotijuana.com.mx/){:target='\_blank'}. Durante el camino empezó a lloviznar. Llegué y esperé afuera del Sanborns como habíamos acordado. Continuó la llovizna. Poco después más fuerte. Pensé que debí ir más abrigado. Me atajé del agua debajo de un árbol. Seguí esperando, ya eran más de las diez y nadie más había llegado.<!-- more --> Escuché una voz detras de mí, volteo detrás de mi. Llegó [Nicté](https://nictetrujillo.wordpress.com/){:target='\_blank'}, nos saludamos y pruebo un chocolate con macadamia que me ofreció —delicioso—. Mientras esperamos decido tomarle [una foto al poster](https://www.instagram.com/p/BMZ0oXgh9Rw/?taken-by=zuniga.jonathan){:target='\_blank'} que está enfrente de nosostros. Ya no esperamos más, tomamos nuestras cosas.
