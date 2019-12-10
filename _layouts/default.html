@@ -18,56 +18,11 @@
             body--search
         {% endif %}"
     >
-        {% include header.html %} {% include introduction.html %}
-
-        <main class="main">
-            {{ content }}
-        </main>
-
-        <!-- {% include awesome_block.html %} -->
-
-        {% include sidebar.html %} {% include footer.html %}
-
-        <!-- {% comment %}
-        <h1 class="intro-title">
-            {% if page.url == '/' %} Lorem ipsum dolor sit amet. {% elsif
-            page.layout == 'category' %} «{{ page.category }}» {% elsif
-            page.layout == 'articles' or page.url == '/search' %} {% else %}
-            {{ page.title }}
-            {% endif %}
-        </h1>
-
-        <div class="intro-content">
-            {% if page.url == '/' %}
-            <p class="h5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-                laudantium sed quod dolores quibusdam molestias praesentium
-                doloribus magni est repellendus. Tempora in enim dolorum,
-                suscipit itaque ab ipsam culpa voluptates.
-            </p>
-            {% elsif page.layout == 'category' %}
-            <p class="h5">
-                {% if page.description %}
-                {{ page.description }}
-                {% else %} Estas leyendo todos los artículos publicados en la
-                categoría «{{ page.category }}». {% endif %}
-            </p>
-            {% elsif page.layout == 'articles' or page.url == '/search' %} {%
-            include search_form.html %} {% endif %}
+        <div class="container">
+            {% include header.html %}
+            <main class="main">{{ content }}</main>
+            {% include footer.html %}
         </div>
-
-        <div class="content">
-            {% if page.url == '/' or page.layout == 'category' %}
-            <hr />
-            {% endif %}
-
-            {{ content }}
-        </div>
-
-        {% include sidebar.html %}
-
-        <hr />
-        {% endcomment %} -->
 
         <script src="{{ '/js/lunr.min.js' | prepend: site.baseurl }}"></script>
         <script src="{{ '/js/search.js' | prepend: site.baseurl }}"></script>
