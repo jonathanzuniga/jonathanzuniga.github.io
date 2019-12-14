@@ -1,0 +1,27 @@
+.navbar {
+    ul {
+        border-bottom: $border-width $border-style $border-color;
+        display: block;
+        font-family: $font-family-sans;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    li {
+        border-top-color: gray;
+        letter-spacing: 0.05em;
+
+        a {
+            display: block;
+            padding-top: $space-sm;
+            padding-bottom: $space-sm;
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-lg-min-width) {
+    .navbar {
+        padding: 30%;
+        text-align: center;
+    }
+}

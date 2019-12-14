@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    color: $body-color;
+    font-family: $body-font-family;
+    line-height: $body-line-height;
+
+    @include fluid-type(
+        $breakpoint-sm-min-width,
+        $breakpoint-xl-min-width,
+        $font-size,
+        $font-size-xl
+    );
+
+    // font-feature-settings: normal;
+    font-feature-settings: "liga" 1, "lnum" 1;
+}
+
+@supports (font-variant-ligatures: common-ligatures) {
+    body {
+        font-variant-ligatures: common-ligatures;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+$headings-map: (
+    $h1-font-size,
+    $h2-font-size,
+    $h3-font-size,
+    $h4-font-size,
+    $h5-font-size,
+    $h6-font-size
+);
+
+@each $heading-size in $headings-map {
+    $i: index($headings-map, $heading-size);
+
+    h#{ $i },
+    .h#{ $i } {
+        font-family: $heading-font-family;
+        font-size: $heading-size;
+        font-stretch: $heading-font-stretch;
+        font-weight: $heading-font-weight;
+        line-height: 1.125;
+        margin: 0 0 $space-sm;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+        border-top: $border-width $border-style $border-color;
+    }
+}
