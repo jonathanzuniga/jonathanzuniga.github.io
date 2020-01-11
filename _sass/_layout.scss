@@ -18,7 +18,8 @@ body {
 
 @media screen and (min-width: $breakpoint-lg-min-width) {
     .header {
-        width: $header-width-lg;
+        left: 0.3rem;
+        width: calc(#{$header-width-lg} - 0.3rem);
     }
 }
 
