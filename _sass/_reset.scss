@@ -11,9 +11,9 @@ body {
 
     @include fluid-type(
         $breakpoint-sm-min-width,
-        $breakpoint-xl-min-width,
+        $breakpoint-lg-min-width,
         $font-size,
-        $font-size-xl
+        $font-size-lg
     );
 
     // font-feature-settings: normal;

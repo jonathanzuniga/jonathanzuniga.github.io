@@ -4,7 +4,7 @@
         <ul>
             <li>
                 <a
-                    class="navbar__item navbar__item--brand"
+                    class="navbar__item navbar__item--home {% if page.url == '/' %}is-active{% endif %}"
                     href="{{ site.baseurl }}/"
                 >
                     Home
@@ -12,18 +12,18 @@
             </li>
             <li>
                 <a
-                    class="navbar__item navbar__item--author {% if current[1] == 'about' %}is-active{% endif %}"
-                    href="{{ site.baseurl }}/about"
+                    class="navbar__item navbar__item--brand"
+                    href="{{ site.baseurl }}/journal"
                 >
-                    About
+                    Journal
                 </a>
             </li>
             <li>
                 <a
-                    class="navbar__item navbar__item--home {% if page.url == '/' %}is-active{% endif %}"
-                    href="{{ site.baseurl }}/"
+                    class="navbar__item navbar__item--author {% if current[1] == 'about' %}is-active{% endif %}"
+                    href="{{ site.baseurl }}/about"
                 >
-                    Blog
+                    Author
                 </a>
             </li>
             <!-- <li>

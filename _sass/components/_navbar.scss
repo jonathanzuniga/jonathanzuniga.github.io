@@ -2,13 +2,13 @@
     ul {
         border-bottom: $border-width $border-style $border-color;
         display: block;
-        font-family: $font-family-sans;
-        font-weight: 600;
-        text-transform: uppercase;
+        font-family: $font-family-serif;
+        font-weight: 700;
+        // text-transform: uppercase;
     }
 
     li {
-        border-top-color: gray;
+        border-top-color: $border-color;
         letter-spacing: 0.05em;
 
         a {

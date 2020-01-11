@@ -54,7 +54,7 @@ plugins:
     - jekyll-paginate
 
 paginate: 10
-paginate_path: "/articles/page-:num/"
+paginate_path: "/journal/page-:num/"
 
 # Google Analytics
 
