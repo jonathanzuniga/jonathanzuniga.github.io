@@ -42,7 +42,7 @@ excerpt_separator: <!-- more -->
 # Custom permalink
 
 # permalink: /:year/:month/:day/:title
-permalink: /:title
+permalink: /journal/:title
 
 # timezone: America/Tijuana
 timezone: "-0800"

@@ -20,11 +20,15 @@
     >
         <div class="container">
             {% include header.html %}
+
             <main class="main">
                 <div class="content">
-                    {{ content }}
+                    <div class="content__wrap">
+                        {{ content }}
+                    </div>
                 </div>
             </main>
+
             {% include footer.html %}
         </div>
 

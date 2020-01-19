@@ -18,6 +18,9 @@ body {
 
     // font-feature-settings: normal;
     font-feature-settings: "liga" 1, "lnum" 1;
+
+    // -moz-osx-font-smoothing: grayscale;
+    // -webkit-font-smoothing: antialiased;
 }
 
 @supports (font-variant-ligatures: common-ligatures) {
@@ -27,7 +30,43 @@ body {
 }
 
 a {
+    color: $body-color;
+    padding: 0.625em 0;
+    text-shadow: none;
+    transition: color $transition-duration;
     text-decoration: none;
+
+    &:hover {
+        color: $color-primary;
+        text-decoration: none;
+    }
+
+    &:hover,
+    &:active {
+        outline: 0;
+        transition-duration: 0;
+    }
+
+    &:focus {
+        color: $color-primary;
+    }
+}
+
+p {
+    a {
+        background-image: linear-gradient($color-primary-65, $color-primary-65);
+        background-origin: padding-box;
+        background-position: center bottom 28%;
+        background-repeat: no-repeat;
+        background-size: 100% 0.125rem;
+
+        &:hover {
+            background-image: linear-gradient(
+                $color-primary-65,
+                $color-primary-65
+            );
+        }
+    }
 }
 
 $headings-map: (
@@ -46,7 +85,6 @@ $headings-map: (
     .h#{ $i } {
         font-family: $heading-font-family;
         font-size: $heading-size;
-        font-stretch: $heading-font-stretch;
         font-weight: $heading-font-weight;
         line-height: 1.125;
         margin: 0 0 $space-sm;

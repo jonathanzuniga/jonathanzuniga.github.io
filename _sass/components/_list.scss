@@ -1,0 +1,31 @@
+.list {
+    &__head {
+        border-top: $border-width $border-style $color-neutral-dark;
+        font-size: $font-size-md;
+        margin: 0;
+        padding: $space-sm 0;
+        text-transform: capitalize;
+    }
+
+    &__body {
+        list-style: none;
+        margin: 0;
+
+        li {
+            border-top: $border-width $border-style $color-neutral-dark-15;
+            padding: $space-sm 0;
+            position: relative;
+
+            a {
+                margin-right: 2.25em;
+            }
+        }
+    }
+
+    .amount {
+        position: absolute;
+        top: $space-sm;
+        right: 0;
+        text-align: right;
+    }
+}

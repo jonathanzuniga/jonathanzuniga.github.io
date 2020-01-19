@@ -2,7 +2,137 @@
 layout: default
 ---
 
-{% for post in paginator.posts %}
+{% include introduction.html %}
+
+<div class="most-recent list">
+    <h2 class="list__head">Most recent</h2>
+    <ul class="list__body">
+        <div class="cols">
+            {% for post in site.posts limit: 3 %}
+            <li class="col">
+                <article class="post post--{{ forloop.index }}">
+                    <header class="post__header">
+                        <div class="post__date">
+                            <small>{% include date.html %}</small>
+                        </div>
+
+                        <h2 class="post__title h3">
+                            <a href="{{ post.url }}">
+                                {{ post.title }}
+                            </a>
+                        </h2>
+                    </header>
+                    {% if post.description %}
+                    <div class="post__description">
+                        {{ post.description }}
+                    </div>
+                    {% endif %}
+                </article>
+            </li>
+            {% endfor %}
+        </div>
+        <div class="cols">
+            {% for post in site.posts offset: 3 limit: 4 %}
+            <li class="col">
+                <article class="post post--{{ forloop.index }}">
+                    <header class="post__header">
+                        <div class="post__date">
+                            <small>{% include date.html %}</small>
+                        </div>
+
+                        <h2 class="post__title h4">
+                            <a href="{{ post.url }}">
+                                {{ post.title }}
+                            </a>
+                        </h2>
+                    </header>
+                    {% if post.description %}
+                    <div class="post__description">
+                        {{ post.description }}
+                    </div>
+                    {% endif %}
+                </article>
+            </li>
+            {% endfor %}
+        </div>
+    </ul>
+</div>
+
+<div class="browse">
+    <div class="browse__more-articles list">
+        <h2 class="list__head">More articles</h2>
+        <ul class="list__body">
+            {% for post in site.posts offset: 7 limit: 4 %}
+            <li>
+                <article class="post post--{{ forloop.index }}">
+                    <header class="post__header">
+                        <div class="post__date">
+                            <small>{% include date.html %}</small>
+                        </div>
+
+                        <h2 class="post__title h4">
+                            <a href="{{ post.url }}">
+                                {{ post.title }}
+                            </a>
+                        </h2>
+                    </header>
+                    {% if post.description %}
+                    <div class="post__description">
+                        {{ post.description }}
+                    </div>
+                    {% endif %}
+                </article>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="browse__by-category list">
+        <h2 class="list__head">Browse by category</h2>
+        <ul class="list__body">
+            {% assign categories_list = site.categories %} {% if
+            categories_list.first[0] == null %} {% for category in
+            categories_list %}
+            <li>
+                <a
+                    href="#{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}"
+                >
+                    {{ category | camelcase }}
+                    <span class="amount">{{ site.tags[category].size }}</span>
+                </a>
+            </li>
+            {% endfor %} {% else %} {% for category in categories_list %}
+            <li>
+                <a
+                    href="#{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}"
+                >
+                    {{ category[0] | camelcase }}
+                    <span class="amount">{{ category[1].size }}</span>
+                </a>
+            </li>
+            {% endfor %} {% endif %} {% assign categories_list = nil %}
+        </ul>
+    </div>
+
+    <div class="browse__by-year list">
+        <h2 class="list__head">Browse by year</h2>
+        <ul class="list__body">
+            {% assign counter = 0 %} {% for post in site.posts %} {% assign
+            this_year = post.date | date: '%Y' %} {% assign prev_year =
+            post.previous.date | date: '%Y' %} {% assign counter = counter |
+            plus: 1 %} {% if this_year != prev_year %}
+            <li>
+                <a href="/journal/#{{ post.date | date: '%Y' }}"
+                    >{{ this_year }}
+                    <span class="amount">{{ counter }}</span></a
+                >
+            </li>
+            {% assign counter = 0 %} {% endif %} {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<!-- {% for post in paginator.posts %}
 <article class="post post--{{ forloop.index }}">
     <header class="post__header">
         <div class="post__date">
@@ -18,9 +148,9 @@ layout: default
 
     <div class="post__content post__content--excerpt">
         {{ post.excerpt }}
-    </div>
+    </div> -->
 
-    <!-- <footer class="post__footer">
+<!-- <footer class="post__footer">
         <ul class="list list---inline">
             <li>
                 Publicado en {% assign sorted_categories = post.categories |
@@ -34,5 +164,5 @@ layout: default
             </li>
         </ul>
     </footer> -->
-</article>
-{% endfor %} {% include paginator.html %}
+<!-- </article>
+{% endfor %} {% include paginator.html %} -->

@@ -2,17 +2,17 @@
 <header class="header">
     <nav class="navbar">
         <ul>
-            <li>
+            <!-- <li>
                 <a
                     class="navbar__item navbar__item--home {% if page.url == '/' %}is-active{% endif %}"
                     href="{{ site.baseurl }}/"
                 >
                     Home
                 </a>
-            </li>
+            </li> -->
             <li>
                 <a
-                    class="navbar__item navbar__item--brand"
+                    class="navbar__item navbar__item--journal {% if current[1] == 'journal' %}is-active{% endif %}"
                     href="{{ site.baseurl }}/journal"
                 >
                     Journal
@@ -20,10 +20,10 @@
             </li>
             <li>
                 <a
-                    class="navbar__item navbar__item--author {% if current[1] == 'about' %}is-active{% endif %}"
-                    href="{{ site.baseurl }}/about"
+                    class="navbar__item navbar__item--profile {% if current[1] == 'about' %}is-active{% endif %}"
+                    href="{{ site.baseurl }}/profile"
                 >
-                    Author
+                    Profile
                 </a>
             </li>
             <!-- <li>

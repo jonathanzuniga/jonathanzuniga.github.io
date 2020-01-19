@@ -1,6 +1,6 @@
 ---
 authors: [jonathan]
-categories: momentos
+categories: personal
 cover: https://live.staticflickr.com/5495/30345298354_cd1f68e0f1_n.jpg
 date: 2016-11-09
 description: "Tres conferencias con el tema de tecnología, protección animal y entretenimiento."

@@ -2,8 +2,8 @@
     ul {
         border-bottom: $border-width $border-style $border-color;
         display: block;
-        font-family: $font-family-serif;
-        font-weight: 700;
+        font-family: $font-family-sans;
+        font-weight: $heading-font-weight;
         // text-transform: uppercase;
     }
 
@@ -17,11 +17,15 @@
             padding-bottom: $space-sm;
         }
     }
+
+    .is-active {
+        color: $color-primary;
+    }
 }
 
 @media screen and (min-width: $breakpoint-lg-min-width) {
     .navbar {
-        padding: 30%;
+        padding: 24%;
         text-align: center;
     }
 }
