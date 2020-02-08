@@ -7,14 +7,15 @@
 body {
     color: $body-color;
     font-family: $body-font-family;
+    font-size: $font-size-md;
     line-height: $body-line-height;
 
-    @include fluid-type(
-        $breakpoint-sm-min-width,
-        $breakpoint-lg-min-width,
-        $font-size,
-        $font-size-lg
-    );
+    // @include fluid-type(
+    //     $breakpoint-sm-min-width,
+    //     $breakpoint-lg-min-width,
+    //     $font-size,
+    //     $font-size-lg
+    // );
 
     // font-feature-settings: normal;
     font-feature-settings: "liga" 1, "lnum" 1;
@@ -88,6 +89,10 @@ $headings-map: (
         font-weight: $heading-font-weight;
         line-height: 1.125;
         margin: 0 0 $space-sm;
+
+        p + & {
+            margin-top: $space-lg;
+        }
     }
 }
 

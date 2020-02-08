@@ -20,7 +20,7 @@ body {
     }
 }
 
-@media screen and (min-width: $breakpoint-md-min-width) {
+@media screen and (min-width: $breakpoint-lg-min-width) {
     .header {
         left: auto;
         width: $header-width-lg;
@@ -177,6 +177,31 @@ body {
     &__date {
         color: $color-accent;
         text-transform: capitalize;
+    }
+
+    &__description,
+    &__content {
+        p {
+            margin: 0;
+
+            & + p {
+                text-indent: $space-lg;
+            }
+        }
+    }
+
+    &__description,
+    &__content {
+        font-size: $font-size-md;
+    }
+
+    @media screen and (min-width: $breakpoint-lg-min-width) {
+        &--full {
+            .post__description,
+            .post__content {
+                font-size: $font-size-md;
+            }
+        }
     }
 }
 

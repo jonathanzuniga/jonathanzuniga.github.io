@@ -1,3 +1,11 @@
+// @import url("https://fonts.googleapis.com/css?family=Barlow:400,400i,600,600i|Crimson+Pro:400,400i,700,700i&display=swap");
+
+// @import url("https://fonts.googleapis.com/css?family=Crimson+Pro:400,400i,700,700i|Hepta+Slab:700&display=swap");
+
+// @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i|IBM+Plex+Serif:400,400i,700,700i&display=swap");
+
+// @import url("https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:600,600i|Barlow:400,400i,700,700i&display=swap");
+
 // @import url("https://fonts.googleapis.com/css?family=Ibarra+Real+Nova:400,400i,600,600i&display=swap");
 
 // @import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,600,600i&display=swap");
@@ -6,19 +14,19 @@
 
 // @import url("https://fonts.googleapis.com/css?family=Crimson+Pro:400,400i,700,700i&display=swap");
 
-// @font-face {
-//     font-family: "Work Sans";
-//     src: url("../fonts/work-sans/WorkSans-Roman-VF.ttf") format("truetype");
-//     font-weight: 1 999;
-//     // font-stretch: 1 999;
-// }
+@font-face {
+    font-family: "Work Sans";
+    src: url("../fonts/work-sans/WorkSans-Roman-VF.ttf") format("truetype");
+    font-weight: 1 999;
+    // font-stretch: 1 999;
+}
 
-// @font-face {
-//     font-family: "Work Sans";
-//     src: url("../fonts/work-sans/WorkSans-Italic-VF.ttf") format("truetype");
-//     font-style: italic;
-//     // font-stretch: 1 999;
-// }
+@font-face {
+    font-family: "Work Sans";
+    src: url("../fonts/work-sans/WorkSans-Italic-VF.ttf") format("truetype");
+    font-style: italic;
+    // font-stretch: 1 999;
+}
 
 // @import url("https://fonts.googleapis.com/css?family=Vollkorn:400,400i,600,600i,700,700i,900,900i&display=swap");
 
@@ -75,38 +83,38 @@
 
 // @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i');
 
-$fonts: (
-    "Faune" "Display"
-        (
-            // 'Thin'        100 'normal',
-                "Bold_Italic" 700 "italic",
-            // 'Black'       900 'normal'
-        ),
-    "Faune" "Text"
-        ("Regular" 400 "normal", "Italic" 400 "italic", "Bold" 700 "normal")
-);
-$fonts-dir: "../fonts/Faune_Fonts/Webfonts/";
+// $fonts: (
+//     "Faune" "Display"
+//         (
+//             // 'Thin'        100 'normal',
+//                 "Bold_Italic" 700 "italic",
+//             // 'Black'       900 'normal'
+//         ),
+//     "Faune" "Text"
+//         ("Regular" 400 "normal", "Italic" 400 "italic", "Bold" 700 "normal")
+// );
+// $fonts-dir: "../fonts/Faune_Fonts/Webfonts/";
 
-@each $font-family, $optical-size, $props in $fonts {
-    @each $weight, $weight-num, $style in $props {
-        @font-face {
-            font-family: "#{ $font-family }";
-            src: url("#{ $fonts-dir }eot/#{ $font-family }-#{ $optical-size }_#{ $weight }.eot");
-            src: url("#{ $fonts-dir }eot/#{ $font-family }-#{ $optical-size }_#{ $weight }.eot?#iefix")
-                    format("embedded-opentype"),
-                url("#{ $fonts-dir }woff/#{ $font-family }-#{ $optical-size }_#{ $weight }.woff")
-                    format("woff"),
-                url("#{ $fonts-dir }woff2/#{ $font-family }-#{ $optical-size }_#{ $weight }.woff2")
-                    format("woff2"),
-                url("#{ $fonts-dir }ttf/#{ $font-family }-#{ $optical-size }_#{ $weight }.ttf")
-                    format("truetype"),
-                url("#{ $fonts-dir }svg/#{ $font-family }-#{ $optical-size }_#{ $weight }.svg#svgFontName")
-                    format("svg");
-            font-weight: #{$weight-num};
-            font-style: #{$style};
-        }
-    }
-}
+// @each $font-family, $optical-size, $props in $fonts {
+//     @each $weight, $weight-num, $style in $props {
+//         @font-face {
+//             font-family: "#{ $font-family }";
+//             src: url("#{ $fonts-dir }eot/#{ $font-family }-#{ $optical-size }_#{ $weight }.eot");
+//             src: url("#{ $fonts-dir }eot/#{ $font-family }-#{ $optical-size }_#{ $weight }.eot?#iefix")
+//                     format("embedded-opentype"),
+//                 url("#{ $fonts-dir }woff/#{ $font-family }-#{ $optical-size }_#{ $weight }.woff")
+//                     format("woff"),
+//                 url("#{ $fonts-dir }woff2/#{ $font-family }-#{ $optical-size }_#{ $weight }.woff2")
+//                     format("woff2"),
+//                 url("#{ $fonts-dir }ttf/#{ $font-family }-#{ $optical-size }_#{ $weight }.ttf")
+//                     format("truetype"),
+//                 url("#{ $fonts-dir }svg/#{ $font-family }-#{ $optical-size }_#{ $weight }.svg#svgFontName")
+//                     format("svg");
+//             font-weight: #{$weight-num};
+//             font-style: #{$style};
+//         }
+//     }
+// }
 
 // $fonts: (
 //     "Mort Modern": (

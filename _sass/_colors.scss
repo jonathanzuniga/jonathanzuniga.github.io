@@ -1,3 +1,16 @@
+$color-primary: #fc5d85;
+$color-primary-65: rgba($color-primary, 0.65);
+
+$color-neutral-dark: #414757;
+$color-neutral-dark-65: rgba($color-neutral-dark, 0.65);
+$color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
+$color-neutral-dark-15: rgba($color-neutral-dark, 0.15);
+
+$color-accent: $color-neutral-dark-65;
+
+$color-functional-1: #f2f3f5;
+$color-functional-2: #fff;
+
 // $color-primary: #f9776d;
 // $color-primary-65: rgba($color-primary, 0.65);
 
@@ -28,15 +41,15 @@
 
 //
 
-$color-primary: #78b3b7;
-$color-primary-65: rgba($color-primary, 0.65);
+// $color-primary: #78b3b7;
+// $color-primary-65: rgba($color-primary, 0.65);
 
-$color-neutral-dark: #3e5051;
-$color-neutral-dark-65: rgba($color-neutral-dark, 0.65);
-$color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
-$color-neutral-dark-15: rgba($color-neutral-dark, 0.15);
+// $color-neutral-dark: #3e5051;
+// $color-neutral-dark-65: rgba($color-neutral-dark, 0.65);
+// $color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
+// $color-neutral-dark-15: rgba($color-neutral-dark, 0.15);
 
-$color-accent: $color-neutral-dark-65;
+// $color-accent: $color-neutral-dark-65;
 
-$color-functional-1: #e7ecf0;
-$color-functional-2: #fff;
+// $color-functional-1: #e7ecf0;
+// $color-functional-2: #fff;

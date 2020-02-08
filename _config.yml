@@ -42,7 +42,7 @@ excerpt_separator: <!-- more -->
 # Custom permalink
 
 # permalink: /:year/:month/:day/:title
-permalink: /journal/:title
+permalink: /blog/:title
 
 # timezone: America/Tijuana
 timezone: "-0800"
@@ -54,7 +54,7 @@ plugins:
     - jekyll-paginate
 
 paginate: 10
-paginate_path: "/journal/page-:num/"
+paginate_path: "/blog/page-:num/"
 
 # Google Analytics
 
