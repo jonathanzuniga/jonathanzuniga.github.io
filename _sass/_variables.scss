@@ -1,22 +1,22 @@
 // global
 
-$breakpoint-xs-min-width: 0;
-$breakpoint-sm-min-width: 48em; // 768px
-$breakpoint-md-min-width: 64em; // 1024px
-$breakpoint-lg-min-width: 80em; // 1280px
-$breakpoint-xl-min-width: 105em; // 1680px
+// breakpoints
+$bp-xs-min-width: 0;
+$bp-sm-min-width: 48em; // 768px
+$bp-md-min-width: 64em; // 1024px
+$bp-lg-min-width: 80em; // 1280px
+$bp-xl-min-width: 105em; // 1680px
 
 $font-family-primary: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-$font-family-secondary: $font-family-primary;
 $font-family-mono: "Courier New", Courier, monospace;
 
-$font-size-xs: 0.75em; // 12px
+$font-size-xs: 0.813em; // 13px
 $font-size-sm: 0.875em; // 14px
 $font-size: 0.938em; // 15px
 $font-size-md: 1em; // 16px
 $font-size-lg: 1.125em; // 18px
-$font-size-xl: 1.313em; // 21px
+$font-size-xl: 1.25em; // 20px
 
 $space-xxs: 0.125rem;
 $space-xs: 0.25rem;
@@ -31,25 +31,21 @@ $transition-duration: 0.16s;
 
 // layout
 
-$container-max-width: $breakpoint-lg-min-width;
-
-$header-width: 16%;
-$header-width-lg: #{$breakpoint-lg-min-width * (strip-unit($header-width) / 100)};
-
-$navbar-padding-md: 29%;
+$body-bg-color: $color-functional-1;
+$body-max-width: 92rem;
 
 // reset
 
 $body-color: $color-neutral-dark;
-$body-font-family: $font-family-secondary;
+$body-font-family: $font-family-primary;
 $body-line-height: 1.5;
 
-$border-width: 0.125rem;
+$border-width: 0.063rem;
 $border-style: solid;
-$border-color: $color-functional-1;
+$border-color: $color-neutral-dark-30;
 
 $heading-font-family: $font-family-primary;
-$heading-font-weight: 600;
+$heading-font-weight: 700;
 
 $h1-font-size: 3em; // 48px
 $h2-font-size: 2em; // 32px

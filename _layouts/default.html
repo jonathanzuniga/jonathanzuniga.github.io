@@ -10,27 +10,27 @@
         class="body
         {% if page.url == '/' %}
             body--home
-        {% elsif current[1] == 'articles' %}
-            body--articles
+        {% elsif page.url == '/blog/' %}
+            body--blog
+        {% elsif current[1] == 'blog' %}
+            body--blog-post
         {% elsif current[1] == 'about' %}
             body--about
         {% elsif page.url == '/search' %}
             body--search
         {% endif %}"
     >
-        <div class="container">
-            {% include header.html %}
+        {% include header.html %} {% include introduction.html %}
 
-            <main class="main">
-                <div class="content">
-                    <div class="content__wrap">
-                        {{ content }}
-                    </div>
+        <main class="main">
+            <div class="content">
+                <div class="content__wrap">
+                    {{ content }}
                 </div>
-            </main>
+            </div>
+        </main>
 
-            {% include footer.html %}
-        </div>
+        {% include sidebar.html %} {% include footer.html %}
 
         <script src="{{ '/js/lunr.min.js' | prepend: site.baseurl }}"></script>
         <script src="{{ '/js/search.js' | prepend: site.baseurl }}"></script>

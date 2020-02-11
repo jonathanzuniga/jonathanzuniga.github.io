@@ -1,23 +1,16 @@
-<aside class="sidebar">
-
-</aside>
-
-
-{% comment %}
 {% assign author = site.authors['jonathan'] %}
-
-<aside class="aside">
+<aside class="sidebar">
     <!-- <img class="avatar" src="{{ author.avatar }}" alt="{{ author.first_name }} {{ author.last_name }}"> -->
 
-    <p class="aside__about">
+    <p class="sidebar__about">
         Soy Jonathan, un desarrollador front-end. Aquí comparto <a href="">breves pensamientos</a> sobre el desarrollo web y opiniones de diversos temas, tambien <a href="">tomo fotos</a>, y muy rara vez <a href="">dibujo letras</a>.
     </p>
 
     <hr>
 
-    <h3 class="h6">Proyectos</h3>
+    <h4>Proyectos</h4>
 
-    <ul class="list">
+    <ul class="sidebar__list list">
         {% assign selected_projects = site.data.selected_projects | sort: 'title' %}
         {% for sp in selected_projects | limit: 3 %}
           <li>
@@ -31,7 +24,6 @@
         {% endfor %}
     </ul>
 </aside>
-{% endcomment %}
 
 
 
