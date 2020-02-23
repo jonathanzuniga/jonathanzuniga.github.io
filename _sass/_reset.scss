@@ -5,6 +5,7 @@
 }
 
 body {
+    background-color: $body-bg-color;
     color: $body-color;
     font-family: $body-font-family;
     font-size: $font-size-md;
@@ -35,7 +36,8 @@ a {
     transition: color $transition-duration;
 
     text-decoration-color: $color-primary-65;
-    text-decoration-thickness: 0.063rem;
+    text-decoration-thickness: 0.094rem;
+    text-underline-offset: 0.156em;
 
     &:hover {
         color: $color-primary;
@@ -49,7 +51,7 @@ a {
     }
 
     &:focus {
-        color: $color-neutral-dark;
+        color: $body-color;
     }
 }
 
@@ -110,5 +112,24 @@ hr {
 
     .sidebar & {
         margin: 0 0 $space-md 0;
+    }
+}
+
+sup {
+    background-color: $color-primary-65;
+    border-radius: 50%;
+    color: $body-bg-color;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: $space-md;
+    height: $space-md;
+
+    a {
+        color: $body-bg-color;
+        font-size: $font-size-sm;
+        text-decoration: none;
     }
 }

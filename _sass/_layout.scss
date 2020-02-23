@@ -1,7 +1,3 @@
-body {
-    background-color: $body-bg-color;
-}
-
 .intro {
     &-head {
         margin-bottom: $space-xl;
@@ -80,4 +76,12 @@ body {
             font-size: $font-size-sm;
         }
     }
+}
+
+.footer {
+    background-color: $color-neutral-dark-075;
+    font-size: $font-size-sm;
+    margin: $space-xxl $space-xl;
+    padding: $space-xxl 0;
+    text-align: center;
 }
