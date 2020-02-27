@@ -29,6 +29,12 @@ $space-xxl: 3rem;
 
 $transition-duration: 0.16s;
 
+$border-width: 0.063rem;
+$border-style: solid;
+$border-color: $color-neutral-dark-30;
+
+$border-radius: $space-sm;
+
 // layout
 
 $body-max-width: 92rem;
@@ -39,10 +45,6 @@ $body-bg-color: $color-functional-1;
 $body-color: $color-neutral-dark;
 $body-font-family: $font-family-primary;
 $body-line-height: 1.5;
-
-$border-width: 0.063rem;
-$border-style: solid;
-$border-color: $color-neutral-dark-30;
 
 $heading-font-family: $font-family-primary;
 $heading-font-weight: 700;

@@ -3,7 +3,7 @@ date: 2018-05-09
 summary: 'Este es el sitio en el que recogeré las experiencias de mi vida diaria. Si quieres saber por qué hice este sitio puedes leer  <a href="#!">el primer artículo</a> y si te preguntas quién soy ahí va algo de información.'
 layout: page
 permalink: /about
-title: "Hola, mi nombre es Jonathan Zúñiga"
+title: "Acerca del autor"
 ---
 
 {% assign author = site.authors['jonathan'] %}

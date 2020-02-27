@@ -1,5 +1,35 @@
-<div class="awesome-block awesome-block--1 section">
-    <h2 class="section__title h6">En Otra Parte</h2>
+<div class="awesome-block awesome-block--1">
+    <h4>Lectura recomendada</h4>
+
+    {% assign recommended_reading = site.data.recommended_reading | first %}
+
+    <p>
+        <i>
+            <b>
+                <a href="{{ rr.url }}" target="_blank"
+                    >{{ recommended_reading.title }}</a
+                >
+            </b>
+            por {{ recommended_reading.author }}
+        </i>
+        {{ recommended_reading.opinion | strip_html | truncate: 64 }}
+        <a href="">Todas las lecturas</a>.
+    </p>
+</div>
+
+<div class="awesome-block awesome-block--2">
+    <h4>Ponerse en contacto</h4>
+
+    <p>
+        Escríbeme a mí
+        <a href="mailto:{{ author.email }}">correo electrónico</a> para
+        consultas o simplemente para saludarme.
+        <b><a href="mailto:{{ author.email }}">{{ author.email }}</a></b>
+    </p>
+</div>
+
+<div class="awesome-block awesome-block--3">
+    <h4>En otra parte</h4>
 
     {% assign author = site.authors['jonathan'] %}
 
@@ -18,33 +48,3 @@
         >.
     </p>
 </div>
-
-<div class="awesome-block awesome-block--2 section">
-    <h2 class="section__title h6">Lectura Recomendada</h2>
-
-    {% assign recommended_reading = site.data.recommended_reading | first %}
-
-    <p>
-        <i
-            ><b
-                ><a href="{{ rr.url }}" target="_blank">{{
-                    recommended_reading.title
-                }}</a></b
-            >
-            por {{ recommended_reading.author }}</i
-        >.
-        {{ recommended_reading.opinion | strip_html | truncate: 64 }}
-        <a href="">Todas las lecturas</a>.
-    </p>
-</div>
-
-{% comment %}
-<!-- <div class="awesome-block awesome-block--3">
-    <h5>Ponerse en contacto</h5>
-
-    <p>
-        Escríbeme a mí <a href="mailto:{{ author.email }}">correo electrónico</a> para consultas o simplemente para saludarme.
-        <b><a href="mailto:{{ author.email }}">{{ author.email }}</a></b>
-    </p>
-</div> -->
-{% endcomment %}

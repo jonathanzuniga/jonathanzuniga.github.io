@@ -1,7 +1,7 @@
 <h1 class="intro-head">
     {% if page.url == '/blog/' %}Publicaciones recientes
     <!-- --- -->
-    {% elsif page.layout == 'post' %}{{ page.title}}
+    {% elsif page.layout == 'post' or page.layout == 'page' %}{{ page.title}}
     <!-- --- -->
     {% elsif page.layout == 'category' %}Categoría: {{ page.category }}
     <!-- --- -->
@@ -13,7 +13,7 @@
     expedita reprehenderit maiores necessitatibus ut.
     <hr />
 </div>
-{% elsif page.layout == 'post' %}
+{% elsif page.layout == 'post' or page.layout == 'page' %}
 <!-- check summary -->
 {% if page.summary %}
 <div class="intro-body">{{ page.summary }}</div>
