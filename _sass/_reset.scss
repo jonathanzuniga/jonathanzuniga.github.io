@@ -139,7 +139,7 @@ figure {
     margin-right: 0;
 
     img {
-        padding-bottom: $space;
+        margin-bottom: $space;
     }
 }
 
@@ -150,5 +150,5 @@ figcaption {
 img {
     border-radius: $border-radius;
     mix-blend-mode: multiply;
-    padding: $space-lg;
+    // padding: $space-lg;
 }
