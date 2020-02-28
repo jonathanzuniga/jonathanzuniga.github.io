@@ -9,6 +9,7 @@ body {
     color: $body-color;
     font-family: $body-font-family;
     font-size: $font-size-md;
+    font-weight: $body-font-weight;
     line-height: $body-line-height;
 
     // @include fluid-type(
@@ -36,7 +37,7 @@ a {
     transition: color $transition-duration;
 
     text-decoration-color: $color-primary-65;
-    text-decoration-thickness: 0.094rem;
+    text-decoration-thickness: 0.125rem;
     text-underline-offset: 0.156em;
 
     &:hover {
@@ -46,7 +47,6 @@ a {
 
     &:hover,
     &:active {
-        outline: 0;
         transition-duration: 0;
     }
 
@@ -132,4 +132,23 @@ sup {
         font-size: $font-size-sm;
         text-decoration: none;
     }
+}
+
+figure {
+    margin-left: 0;
+    margin-right: 0;
+
+    img {
+        padding-bottom: $space;
+    }
+}
+
+figcaption {
+    font-size: $font-size-xs;
+}
+
+img {
+    border-radius: $border-radius;
+    mix-blend-mode: multiply;
+    padding: $space-lg;
 }
