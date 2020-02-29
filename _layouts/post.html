@@ -37,6 +37,11 @@ layout: default
                 {% endfor %}
             </li>
             <li>
+                <div class="post__date">
+                    {% include date.html %}
+                </div>
+            </li>
+            <li>
                 Publicado en
                 {% assign sorted_categories = page.categories | sort %}
                 {% for category in sorted_categories %}

@@ -74,16 +74,25 @@ $headings-map: (
         font-weight: $heading-font-weight;
         line-height: 1.125;
         margin: 0 0 $space-sm;
+    }
 
-        p + & {
+    // cambiarlo?
+    figure,
+    p,
+    ol,
+    ul {
+        & + h#{ $i },
+        & + .h#{ $i } {
             margin-top: $space-lg;
         }
     }
 }
 
+ol,
 ul {
-    list-style: none;
-    padding: 0;
+    list-style-position: outside;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 li {
@@ -135,8 +144,8 @@ sup {
 }
 
 figure {
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
 
     img {
         margin-bottom: $space;
@@ -149,6 +158,23 @@ figcaption {
 
 img {
     border-radius: $border-radius;
+    max-width: 100%;
     mix-blend-mode: multiply;
     // padding: $space-lg;
+}
+
+pre {
+    background-color: $color-neutral-dark-075;
+    border-radius: $border-radius;
+    overflow: auto;
+    padding: $space-lg;
+
+    code {
+        word-break: normal;
+    }
+}
+
+code {
+    word-wrap: break-word;
+    font-size: $font-size-lg;
 }

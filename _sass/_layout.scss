@@ -12,16 +12,25 @@
     margin-bottom: $space-xxl;
 
     &__date {
-        font-size: $font-size-xs;
-        margin-bottom: $space-sm;
-
         .month {
             text-transform: capitalize;
         }
     }
 
+    &__header &__date {
+        font-size: $font-size-xs;
+        margin-bottom: $space-sm;
+    }
+
     &__footer {
         font-size: $font-size-sm;
+    }
+
+    &--full {
+        .post__footer {
+            margin-top: $space-lg;
+            text-align: center;
+        }
     }
 }
 
@@ -80,6 +89,10 @@
     .intro-body,
     .main {
         grid-column: 3 / 8;
+    }
+
+    .main {
+        width: 100%;
     }
 
     .sidebar {
