@@ -5,10 +5,9 @@
 }
 
 body {
-    background-color: $body-bg-color;
     color: $body-color;
     font-family: $body-font-family;
-    font-size: $font-size-md;
+    font-size: $body-font-size;
     font-weight: $body-font-weight;
     line-height: $body-line-height;
 
@@ -83,7 +82,7 @@ $headings-map: (
     ul {
         & + h#{ $i },
         & + .h#{ $i } {
-            margin-top: $space-lg;
+            margin-top: $space-md;
         }
     }
 }
@@ -109,7 +108,7 @@ hr {
     grid-column: 1 / -1;
     clear: both;
     display: block;
-    margin: $space-xl 0;
+    margin: $space-lg 0;
     padding: 0;
     height: 0.063rem;
     border: 0;
@@ -120,24 +119,24 @@ hr {
     }
 
     .sidebar & {
-        margin: 0 0 $space-md 0;
+        margin: 0 0 $space 0;
     }
 }
 
 sup {
     background-color: $color-primary-65;
     border-radius: 50%;
-    color: $body-bg-color;
+    color: $site-bg-color;
 
     display: inline-flex;
     justify-content: center;
     align-items: center;
 
-    width: $space-md;
-    height: $space-md;
+    width: $space;
+    height: $space;
 
     a {
-        color: $body-bg-color;
+        color: $site-bg-color;
         font-size: $font-size-sm;
         text-decoration: none;
     }
@@ -148,7 +147,7 @@ figure {
     margin-left: 0;
 
     img {
-        margin-bottom: $space;
+        margin-bottom: $space-rg;
     }
 }
 
@@ -158,16 +157,16 @@ figcaption {
 
 img {
     border-radius: $border-radius;
+    border-width: 0;
     max-width: 100%;
     mix-blend-mode: multiply;
-    // padding: $space-lg;
 }
 
 pre {
     background-color: $color-neutral-dark-075;
     border-radius: $border-radius;
     overflow: auto;
-    padding: $space-lg;
+    padding: $space-md;
 
     code {
         word-break: normal;
@@ -176,5 +175,5 @@ pre {
 
 code {
     word-wrap: break-word;
-    font-size: $font-size-lg;
+    font-size: $font-size-md;
 }

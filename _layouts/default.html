@@ -20,23 +20,32 @@
             body--search
         {% endif %}"
     >
-        {% include header.html %} {% include introduction.html %}
+        <div class="bg bg--up">
+            <div class="bg__noise"></div>
+        </div>
+        <div class="bg bg--down">
+            <div class="bg__square-pattern"></div>
+        </div>
 
-        <main class="main">
-            <div class="content">
-                <div class="content__wrap">
-                    {{ content }}
+        <div class="container">
+            {% include header.html %} {% include introduction.html %}
+
+            <main class="main">
+                <div class="content">
+                    <div class="content__wrap">
+                        {{ content }}
+                    </div>
                 </div>
-            </div>
-        </main>
+            </main>
 
-        <hr />
+            <hr />
 
-        {% include sidebar.html %} {% include awesome_block.html %}
+            {% include sidebar.html %} {% include awesome_block.html %}
 
-        <hr />
+            <hr />
 
-        {% include footer.html %}
+            {% include footer.html %}
+        </div>
 
         <script src="{{ '/js/lunr.min.js' | prepend: site.baseurl }}"></script>
         <script src="{{ '/js/search.js' | prepend: site.baseurl }}"></script>
