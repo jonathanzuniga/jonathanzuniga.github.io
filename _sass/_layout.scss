@@ -18,7 +18,7 @@ body {
     }
 
     &--down {
-        // Fix Chrome issue
+        // Fix mix-blend-mode issue in Chrome
         background-color: $site-bg-color;
     }
 
@@ -35,9 +35,11 @@ body {
     }
 
     &__square-pattern {
+        $bg-size: 122.5px;
+
         background-image: url(../images/square-pattern.png);
-        background-position: 2.75% 2.75%;
-        background-size: calc((6.25 * #{$container-width}) / 100);
+        background-position: calc(50% - #{($bg-size / 2) - 1}) #{$bg-size / 2};
+        background-size: #{$bg-size} #{$bg-size};
     }
 }
 
