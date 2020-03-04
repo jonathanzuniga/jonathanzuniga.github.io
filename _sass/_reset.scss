@@ -162,6 +162,10 @@ img {
     mix-blend-mode: multiply;
 }
 
+p {
+    margin: 0 0 $space;
+}
+
 pre {
     background-color: $color-neutral-dark-075;
     border-radius: $border-radius;
