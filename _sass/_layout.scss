@@ -63,7 +63,10 @@ body {
 
     p {
         margin: 0;
+    }
 
+    p,
+    .figure--right {
         & + p {
             text-indent: $space-lg;
         }
