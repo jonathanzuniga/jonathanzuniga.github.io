@@ -1,10 +1,11 @@
 ---
 authors: [jonathan]
 categories: [mobile development]
+cover:
 date: 2015-11-29 14:50:00
-summary:
 layout: post
-tags: "bottom-article"
+summary:
+tags: [xamarin, mobile-dev, opinion]
 title: "Mi experiencia después de un año con Xamarin"
 ---
 

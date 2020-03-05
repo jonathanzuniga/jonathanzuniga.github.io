@@ -9,14 +9,20 @@
 </h1>
 {% if page.url == '/blog/' %}
 <div class="intro-body">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus autem
-    expedita reprehenderit maiores necessitatibus ut.
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus autem
+        expedita reprehenderit maiores necessitatibus ut.
+    </p>
     <hr />
 </div>
 {% elsif page.layout == 'post' or page.layout == 'page' %}
 <!-- check summary -->
 {% if page.summary %}
-<div class="intro-body">{{ page.summary }}</div>
+<div class="intro-body">
+    <p>
+        {{ page.summary }}
+    </p>
+</div>
 {% endif %}
 <!-- end - check summary -->
 {% endif %}
