@@ -1,0 +1,8 @@
+.figure {
+    &--right {
+        float: right;
+        margin: $space-sm 0 $space-sm $space-md;
+        width: 32%;
+        height: auto;
+    }
+}

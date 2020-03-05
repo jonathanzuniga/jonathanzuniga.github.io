@@ -18,14 +18,14 @@ $font-size-md: $font-size + 0.125; // 18px
 $font-size-lg: $font-size + 0.25; // 22px
 
 $space: 1rem;
-$space-xs: $space - 0.75;
-$space-sm: $space - 0.5;
-$space-rg: $space - 0.25;
-$space-md: $space + 0.5;
-$space-lg: $space + 1;
-$space-xl: $space + 2;
+$space-xs: $space - 0.75; // 0.25rem
+$space-sm: $space - 0.5; // 0.5rem
+$space-rg: $space - 0.25; // 0.75rem
+$space-md: $space + 0.5; // 1.5rem
+$space-lg: $space + 1; // 2rem
+$space-xl: $space + 2; // 3rem
 
-$transition-duration: 0.16s;
+$transition-duration: 0.32s;
 
 $border-width: 0.063rem;
 $border-style: solid;
@@ -45,7 +45,7 @@ $site-bg-color: $color-functional-1;
 $body-color: $color-neutral-dark;
 $body-font-family: $font-family-primary;
 $body-font-size: $font-size;
-$body-font-weight: 500;
+$body-font-weight: 400;
 $body-line-height: 1.5;
 
 $heading-font-family: $font-family-primary;

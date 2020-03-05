@@ -33,9 +33,9 @@ body {
 
 a {
     color: $body-color;
-    transition: color $transition-duration;
+    transition: all $transition-duration ease-out;
 
-    text-decoration-color: $color-primary-65;
+    text-decoration-color: rgba($color-primary, 0.4);
     text-decoration-thickness: 0.125rem;
     text-underline-offset: 0.156em;
 
@@ -46,7 +46,7 @@ a {
 
     &:hover,
     &:active {
-        transition-duration: 0;
+        transition-duration: 0s;
     }
 
     &:focus {
@@ -143,8 +143,7 @@ sup {
 }
 
 figure {
-    margin-right: 0;
-    margin-left: 0;
+    margin: $space-lg 0;
 
     img {
         margin-bottom: $space-rg;
@@ -163,7 +162,7 @@ img {
 }
 
 p {
-    margin: 0 0 $space;
+    margin-top: 0;
 }
 
 pre {

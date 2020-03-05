@@ -1,10 +1,10 @@
-<figure>
+<figure class="figure {{ include.classes }}">
     {% if include.link %}
     <a href="{{ include.link }}">
-        <img src="{{ include.src }}" alt="{{ include.description }}" />
+        <img src="{{ include.image }}" alt="{{ include.description }}" />
     </a>
     {% else %}
-    <img src="{{ include.src }}" alt="{{ include.description }}" />
+    <img src="{{ include.image }}" alt="{{ include.description }}" />
     {% endif %}
     <figcaption>{{ include.description }}</figcaption>
 </figure>
