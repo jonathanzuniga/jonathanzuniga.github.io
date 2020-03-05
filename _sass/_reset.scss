@@ -94,6 +94,26 @@ ul {
     padding-left: 0;
 }
 
+// numeros en negritas
+ol {
+    counter-reset: item;
+
+    & > li {
+        list-style-type: none;
+        counter-increment: item;
+        padding-left: #{$space-lg - $space-sm};
+        text-indent: -#{$space-lg};
+
+        &::before {
+            display: inline-block;
+            padding-right: $space-sm;
+            font-weight: bold;
+            text-align: right;
+            content: counter(item) ".";
+        }
+    }
+}
+
 li {
     margin-bottom: $space-sm;
 }
@@ -165,18 +185,24 @@ p {
     margin-top: 0;
 }
 
+code {
+    // background-color: $color-neutral-dark-0375;
+    font-family: $font-family-mono;
+    // font-size: #{$font-size + 0.125};
+    // padding: $space-xs;
+    word-wrap: break-word;
+}
+
+.highlighter-rouge {
+    margin: $space-lg 0;
+}
+
 pre {
-    background-color: $color-neutral-dark-075;
-    border-radius: $border-radius;
-    overflow: auto;
-    padding: $space-md;
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 
     code {
         word-break: normal;
     }
-}
-
-code {
-    word-wrap: break-word;
-    font-size: $font-size-md;
 }
