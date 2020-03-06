@@ -206,3 +206,25 @@ pre {
         word-break: normal;
     }
 }
+
+table {
+    border-collapse: collapse;
+    margin: #{$space-lg - $space-rg} 0;
+}
+
+th {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+th,
+td {
+    font-size: $font-size-sm;
+    padding: $space-rg $space $space-rg 0;
+    text-align: left;
+    vertical-align: top;
+}
+
+td:first-of-type {
+    padding-left: $space-xs;
+}
