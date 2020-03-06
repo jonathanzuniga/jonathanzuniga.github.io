@@ -144,21 +144,27 @@ hr {
 }
 
 sup {
-    background-color: $color-primary-65;
-    border-radius: 50%;
-    color: $site-bg-color;
-
     display: inline-flex;
     justify-content: center;
     align-items: center;
 
-    width: $space;
-    height: $space;
+    text-indent: 0;
 
     a {
+        background-color: $color-primary-65;
+        border-radius: 50%;
         color: $site-bg-color;
         font-size: $font-size-sm;
+        text-align: center;
         text-decoration: none;
+        width: $space;
+        height: $space;
+
+        &:hover,
+        &:active {
+            background-color: $color-primary;
+            color: $site-bg-color;
+        }
     }
 }
 
