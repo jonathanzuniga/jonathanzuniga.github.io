@@ -95,24 +95,28 @@ ul {
 }
 
 // numeros en negritas
-ol {
-    counter-reset: item;
+// ol {
+//     counter-reset: item;
 
-    & > li {
-        list-style-type: none;
-        counter-increment: item;
-        padding-left: #{$space-lg - $space-sm};
-        text-indent: -#{$space-lg};
+//     & > li {
+//         list-style-type: none;
+//         counter-increment: item;
+//         padding-left: #{$space-lg - $space-sm};
+//         text-indent: -#{$space-lg};
 
-        &::before {
-            display: inline-block;
-            padding-right: $space-sm;
-            font-weight: bold;
-            text-align: right;
-            content: counter(item) ".";
-        }
-    }
-}
+//         &::before {
+//             display: inline-block;
+//             padding-right: $space-sm;
+//             font-weight: bold;
+//             text-align: right;
+//             content: counter(item) ".";
+//         }
+
+//         & > p {
+//             display: inline;
+//         }
+//     }
+// }
 
 li {
     margin-bottom: $space-sm;
