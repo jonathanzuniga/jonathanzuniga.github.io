@@ -5,7 +5,7 @@ cover:
 date: 2016-11-26
 layout: post
 summary:
-tags: [xamarin, mobile-dev, xamarin.forms]
+tags: xamarin mobile-dev xamarin.forms
 title: "Xamarin.Forms: Data Bindings y Value Converters"
 ---
 

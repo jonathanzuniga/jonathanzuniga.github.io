@@ -5,7 +5,7 @@ cover:
 date: 2016-11-24
 layout: post
 summary:
-tags: [xamarin, mobile-dev, xamarin.forms]
+tags: xamarin mobile-dev xamarin.forms
 title: "Comenzando con Xamarin.Forms"
 ---
 

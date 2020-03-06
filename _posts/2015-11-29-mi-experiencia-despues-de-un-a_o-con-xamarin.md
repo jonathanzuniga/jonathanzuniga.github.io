@@ -5,7 +5,7 @@ cover:
 date: 2015-11-29 14:50:00
 layout: post
 summary:
-tags: [xamarin, mobile-dev, opinion]
+tags: xamarin mobile-dev opinion
 title: "Mi experiencia después de un año con Xamarin"
 ---
 

@@ -5,8 +5,8 @@ cover:
 date: 2016-01-16 13:39:00
 layout: post
 summary: John Romero, co-creador del legendario <i>shooter</i> en primera persona de id software ha vuelto a su obra maestra creando por primera vez un nuevo nivel para el juego original en más de 20 años.
-tags: [doom, wad, fps-game, game, john-romero]
-title: DOOM regresa con un nuevo nivel
+tags: doom wad fps-game game john-romero
+title: "DOOM regresa con un nuevo nivel"
 ---
 
 La noticia llegó a través de [Twitter](https://twitter.com/romero/status/688054778790834176). Casualmente el día 15 de enero, John anunció que había creado un nuevo nivel. El mapa se titula: _Tech Gone Bad_, y en la descripción John escribe que es: _My Boss level replacement for e1m8…22 years later._

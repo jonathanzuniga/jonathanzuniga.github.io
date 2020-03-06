@@ -5,7 +5,7 @@ cover: https://www.dropbox.com/s/te3scdrxsn5955t/astral-projection.jpg?raw=1
 date: 2016-10-14
 layout: post
 summary: Algo que me preguntaron algunas personas cuando publique uno de mis dibujos fue, ¿que es el <i>ANSI art</i>? Tratare de explicarlo, pero para entenderlo mejor explicare un poco de historia.
-tags: [ascii-art, ansi-art, textmode-art]
+tags: ascii-art ansi-art textmode-art
 title: "Arte en modo texto"
 ---
 

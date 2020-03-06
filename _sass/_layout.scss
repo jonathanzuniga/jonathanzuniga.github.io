@@ -61,16 +61,16 @@ body {
 .post {
     margin-bottom: $space-xl;
 
-    p {
-        margin: 0;
-    }
+    // p {
+    //     margin: 0;
+    // }
 
-    p,
-    .figure--right {
-        & + p {
-            text-indent: $space-lg;
-        }
-    }
+    // p,
+    // .figure--right {
+    //     & + p {
+    //         text-indent: $space-lg;
+    //     }
+    // }
 
     &__date {
         .month {
