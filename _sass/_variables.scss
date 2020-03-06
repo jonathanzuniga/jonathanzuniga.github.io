@@ -31,7 +31,7 @@ $border-width: 0.063rem;
 $border-style: solid;
 $border-color: $color-neutral-dark-65;
 
-$border-radius: 0;
+$border-radius: $space-sm;
 
 // layout
 
@@ -57,3 +57,6 @@ $h3-font-size: 1.5em; // 24px
 $h4-font-size: 1.25em; // 20px
 $h5-font-size: 1em; // 16px
 $h6-font-size: 0.875em; // 14px
+
+$open-quote: "«";
+$close-quote: "»";

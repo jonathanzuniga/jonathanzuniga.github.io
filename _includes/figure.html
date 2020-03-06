@@ -6,5 +6,8 @@
     {% else %}
     <img src="{{ include.image }}" alt="{{ include.description }}" />
     {% endif %}
+    <!-- description -->
+    {% if include.description %}
     <figcaption>{{ include.description }}</figcaption>
+    {% endif %}
 </figure>

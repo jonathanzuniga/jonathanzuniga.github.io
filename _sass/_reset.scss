@@ -165,13 +165,14 @@ sup {
 figure {
     margin: $space-lg 0;
 
-    img {
-        margin-bottom: $space-rg;
+    a {
+        display: flex;
     }
 }
 
 figcaption {
     font-size: $font-size-xs;
+    margin-top: $space-rg;
 }
 
 img {
@@ -228,3 +229,34 @@ td {
 td:first-of-type {
     padding-left: $space-xs;
 }
+
+blockquote {
+    background-color: $color-neutral-dark-0375;
+    border-radius: $border-radius;
+    font-size: $font-size-lg;
+    font-weight: 700;
+    margin: $space-lg 0;
+    padding: $space-md;
+
+    quotes: $open-quote $close-quote;
+    // quotes: '“' '”' '‘' '’';
+
+    p {
+        &:first-child::before {
+            content: open-quote;
+            color: $color-neutral-dark-30;
+        }
+
+        &:last-child::after {
+            content: close-quote;
+            color: $color-neutral-dark-30;
+        }
+    }
+}
+
+// @media screen and (min-width: $bp-md-min-width) {
+//     blockquote {
+//         transform: translateX(#{$space-md * -1});
+//         width: calc(100% + #{$space-xl});
+//     }
+// }

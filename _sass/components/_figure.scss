@@ -5,4 +5,20 @@
         width: 32%;
         height: auto;
     }
+
+    // img {
+    //     background-color: $color-neutral-dark-0375;
+    //     padding: $space-md;
+    // }
 }
+
+// @media screen and (min-width: $bp-md-min-width) {
+//     .figure {
+//         transform: translateX(#{$space-md * -1});
+//         width: calc(100% + #{$space-xl});
+
+//         &--right {
+//             width: calc(32% + #{$space-xl});
+//         }
+//     }
+// }
