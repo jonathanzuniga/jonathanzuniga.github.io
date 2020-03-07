@@ -1,3 +1,5 @@
 #!/bin/bash
 
-jekyll s --watch --force_polling
+bundle exec jekyll serve --watch --force_polling
+
+#jekyll s --watch --force_polling
