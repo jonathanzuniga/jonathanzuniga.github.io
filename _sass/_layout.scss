@@ -1,48 +1,49 @@
 body {
+    background-color: $body-bg-color;
     margin: 0;
     position: relative;
 }
 
-.bg {
-    mix-blend-mode: multiply;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    user-select: none;
-    width: 100%;
-    height: 100%;
+// .bg {
+//     mix-blend-mode: multiply;
+//     pointer-events: none;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     user-select: none;
+//     width: 100%;
+//     height: 100%;
 
-    &--up {
-        z-index: 1000;
-    }
+//     &--up {
+//         z-index: 1000;
+//     }
 
-    &--down {
-        // Fix mix-blend-mode issue in Chrome
-        background-color: $site-bg-color;
-    }
+//     &--down {
+//         // Fix mix-blend-mode issue in Chrome
+//         background-color: $site-bg-color;
+//     }
 
-    &__noise,
-    &__square-pattern {
-        @extend .bg;
+//     &__noise,
+//     &__square-pattern {
+//         @extend .bg;
 
-        background-repeat: repeat;
-    }
+//         background-repeat: repeat;
+//     }
 
-    &__noise {
-        background-image: url(../images/noise.png);
-        opacity: 0.8;
-        will-change: transform; // para evitar parpadeo al desplazar scroll
-    }
+//     &__noise {
+//         background-image: url(../images/noise.png);
+//         opacity: 0.8;
+//         will-change: transform; // para evitar parpadeo al desplazar scroll
+//     }
 
-    &__square-pattern {
-        $bg-size: 122.5px;
+//     &__square-pattern {
+//         $bg-size: 122.5px;
 
-        background-image: url(../images/square-pattern.png);
-        background-position: calc(50% - #{($bg-size / 2) - 1}) #{$bg-size / 2};
-        background-size: #{$bg-size} #{$bg-size};
-    }
-}
+//         background-image: url(../images/square-pattern.png);
+//         background-position: calc(50% - #{($bg-size / 2) - 1}) #{$bg-size / 2};
+//         background-size: #{$bg-size} #{$bg-size};
+//     }
+// }
 
 .container {
     position: relative;
