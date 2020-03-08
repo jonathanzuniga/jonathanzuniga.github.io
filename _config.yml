@@ -70,3 +70,17 @@ google_analytics: UA-134641865-1
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# https://jekyllrb.com/docs/upgrading/3-to-4/
+# default excludes
+exclude:
+    - .sass-cache/
+    - .jekyll-cache/
+    - gemfiles/
+    - Gemfile
+    - Gemfile.lock
+    - node_modules/
+    - vendor/bundle/
+    - vendor/cache/
+    - vendor/gems/
+    - vendor/ruby/
