@@ -101,6 +101,10 @@ body {
 }
 
 .sidebar {
+    &__about {
+        margin-top: $space-sm;
+    }
+
     &__list {
         a {
             display: inline-block;
