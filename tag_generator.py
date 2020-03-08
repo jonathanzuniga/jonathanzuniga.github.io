@@ -13,7 +13,7 @@ No plugins required.
 import glob
 import os
 
-# For Python2.7, use io.open()
+# For Python 2.7, use io.open()
 import io
 
 post_dir = '_posts/'
