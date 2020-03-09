@@ -5,7 +5,7 @@
 }
 
 ::selection {
-    background-color: $color-secondary-30;
+    background-color: $color-primary-30;
 }
 
 body {
@@ -201,7 +201,7 @@ p {
 }
 
 code {
-    background-color: darken($color-functional-1, 6%);
+    background-color: darken($color-functional-1, 5%);
     font-family: $font-family-mono;
     font-size: #{$font-size + 0.031};
     padding: $space-xs;
@@ -247,7 +247,7 @@ td:first-of-type {
 }
 
 blockquote {
-    background-color: darken($color-functional-1, 6%);
+    background-color: darken($color-functional-1, 5%);
     border-radius: $border-radius;
     font-size: $font-size-lg;
     font-weight: 700;
