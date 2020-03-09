@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: $color-secondary-30;
+}
+
 body {
     color: $body-color;
     font-family: $body-font-family;
@@ -199,7 +203,7 @@ p {
 code {
     background-color: darken($color-functional-1, 6%);
     font-family: $font-family-mono;
-    font-size: #{$font-size + 0.063};
+    font-size: #{$font-size + 0.031};
     padding: $space-xs;
     word-wrap: break-word;
 }
