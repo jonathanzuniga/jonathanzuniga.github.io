@@ -84,6 +84,12 @@ body {
         margin-bottom: $space-sm;
     }
 
+    &__content {
+        figure:first-child {
+            margin-top: 0;
+        }
+    }
+
     &__footer {
         font-size: $font-size-sm;
     }
@@ -101,9 +107,9 @@ body {
 }
 
 .sidebar {
-    &__about {
-        margin-top: $space-sm;
-    }
+    // &__about {
+    //     margin-top: $space-sm;
+    // }
 
     &__list {
         a {

@@ -253,16 +253,16 @@ blockquote {
 
     p {
         &:first-child::before {
-            content: open-quote;
             color: $color-neutral-dark-30;
+            content: open-quote;
         }
 
         &:last-child {
             margin-bottom: 0;
 
             &::after {
-                content: close-quote;
                 color: $color-neutral-dark-30;
+                content: close-quote;
             }
         }
     }

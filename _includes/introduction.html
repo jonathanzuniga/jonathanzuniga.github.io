@@ -15,17 +15,13 @@
     </p>
     <hr />
 </div>
-{% elsif page.layout == 'post' or page.layout == 'page' %}
-<!-- check summary -->
-{% if page.summary %}
+{% elsif page.layout == 'post' or page.layout == 'page' %} {% if page.summary %}
 <div class="intro-body">
     <p>
         {{ page.summary }}
     </p>
 </div>
-{% endif %}
-<!-- end - check summary -->
-{% endif %}
+{% endif %} {% endif %}
 
 <!-- --- -->
 
