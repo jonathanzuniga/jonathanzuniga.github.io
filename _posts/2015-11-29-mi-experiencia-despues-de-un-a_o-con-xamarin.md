@@ -15,7 +15,7 @@ Mientras seguía preguntándome si aun estoy en un sueño o si hubo una falla en
 
 La razón principal que tuve para elegir Xamarin fue que quería desarrollar aplicaciones móviles lo más cercano posible a una nativa, tenía algo de experiencia con [C#][csharp] y sabía que las bondades de este lenguaje son grandísimas, además de que nos proporciona un sin fin de posibilidades para crear software; conocía el proyecto [Mono][mono-project] desde hace ya bastante tiempo, pero nunca lo tomé muy en serio para mis planes como programador. Y quería comprobar eso que Xamarin dice, que todo lo que puedes hacer en Objective-C o Java lo puedes hacer en C#.
 
-### Experimentando
+## Experimentando
 
 A lo largo de todo este tiempo he tenido oportunidad de experimentar con la mayor cantidad de características posibles que una aplicación móvil puede contar, entre lo que más recuerdo ha sido el desarrollo con proyectos [PCL][pcl] y compartir código, integrar SQLite, utilizar los servicios de Parse y Azure, base de datos NoSQL como [Couchbase][couchbase], integración de redes sociales y [OAuth][oauth], consumir datos a través de una API REST, el uso de la cámara fotográfica y procesamiento de imágenes, OCR, el envío de notificaciones remotas, etc. El desarrollo para Android es más lento que para iOS y hacer las pruebas con el emulador ni se diga, pero en verdad funciona bastante bien y puedes desarrollar directamente en Mac usando Xamarin Studio o en Windows con Visual Studio; sin embargo si deseas desarrollar _apps_ para iOS de todos modos vas a necesitar una Mac.
 
@@ -27,7 +27,7 @@ En general me da la sensación de que lo que dicen los chicos de Xamarin es cier
 
 Cada vez hay más desarrolladores que lo ven como una gran alternativa, hay una comunidad activa y en crecimiento, otras empresas han comenzado a unirse y apoyar seriamente el proyecto.
 
-### Conclusión
+## Conclusión
 
 Así que, entonces en resumen ¿vale la pena continuar con Xamarin? Para quien es el autor de cada una de estas palabras... ¡Por supuesto que sí!, es una excelente herramienta pero que de ninguna forma sustituye al desarrollo «nativo» de una _app_, al menos por ahora no es posible y seguiré siendo feliz si en los próximos proyectos tengo disponible Xamarin.
 
