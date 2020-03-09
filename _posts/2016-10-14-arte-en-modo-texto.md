@@ -15,7 +15,7 @@ Este tipo de arte se podia apreciar comunmente desde finales de los setentas e i
 
 El <abbr title="American National Standards Institute">ANSI</abbr> _art_ nació despues, es similar al ASCII _art_ pero se tiene disponible un conjunto más amplio de caracteres que permite a los artistas crear un arte [más elaborado](https://www.youtube.com/watch?v=cmaK57M7ZV8&start=254), algunas veces aventurandose en largas pantallas de un detalle asombroso. Algunos de estos caracteres adicionales regularmente se usan para crear efectos de sombreado.
 
-Para crear estas piezas, al igual que en el _pixel art_ se requiere de una paciencia brutal y que normalmente se hace caracter por caracter a mano usando algún editor de textos, que es como se valora más.
+Para crear estas piezas, al igual que en el _pixel art_ se requiere de una paciencia brutal y que normalmente se hace caracter por caracter a mano usando algún editor de texto, que es como se valora más.
 
 <!-- <div class="row gutters-half">
 	<div class="col">

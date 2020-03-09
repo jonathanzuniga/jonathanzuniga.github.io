@@ -199,7 +199,7 @@ p {
 code {
     background-color: darken($color-functional-1, 6%);
     font-family: $font-family-mono;
-    // font-size: #{$font-size + 0.125};
+    font-size: #{$font-size + 0.063};
     padding: $space-xs;
     word-wrap: break-word;
 }
