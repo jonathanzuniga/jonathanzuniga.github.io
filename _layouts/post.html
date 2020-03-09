@@ -3,19 +3,13 @@ layout: default
 ---
 
 <article class="post post--full">
-    <!-- <header class="post__header">
-        <h1 class="post__title">
-            {{ page.title }}
-        </h1>
-        {% if page.description %}
-            <p class="post__description">
-                {{ page.description }}
+    <header class="post__header">
+        {% if page.summary %}
+            <p class="post__summary">
+                {{ page.summary }}
             </p>
         {% endif %}
-        <p class="post__date">
-            <small>{% include date.html %}</small>
-        </p>
-    </header> -->
+    </header>
 
     <div class="post__body">
         <div class="post__content">

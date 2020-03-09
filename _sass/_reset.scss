@@ -197,10 +197,10 @@ p {
 }
 
 code {
-    // background-color: $color-neutral-dark-0375;
+    background-color: darken($color-functional-1, 6%);
     font-family: $font-family-mono;
     // font-size: #{$font-size + 0.125};
-    // padding: $space-xs;
+    padding: $space-xs;
     word-wrap: break-word;
 }
 
@@ -214,6 +214,8 @@ pre {
     word-wrap: break-word;
 
     code {
+        padding-right: 0;
+        padding-left: 0;
         word-break: normal;
     }
 }
@@ -241,7 +243,7 @@ td:first-of-type {
 }
 
 blockquote {
-    background-color: $color-secondary-075;
+    background-color: darken($color-functional-1, 6%);
     border-radius: $border-radius;
     font-size: $font-size-lg;
     font-weight: 700;
