@@ -143,11 +143,7 @@ hr {
     border-bottom: $border-width $border-style $border-color;
 
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        border-bottom-width: #{$border-width / 2};
-    }
-
-    .sidebar & {
-        margin: 0 0 $space 0;
+        border-width: #{$border-width / 2};
     }
 }
 

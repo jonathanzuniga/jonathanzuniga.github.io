@@ -13,7 +13,7 @@
         {% elsif page.url == '/blog/' %}
             body--blog
         {% elsif current[1] == 'blog' %}
-            body--blog-post
+            body--full-post
         {% elsif current[1] == 'about' %}
             body--about
         {% elsif page.url == '/search' %}
@@ -32,9 +32,7 @@
 
             <main class="main">
                 <div class="content">
-                    <div class="content__wrap">
-                        {{ content }}
-                    </div>
+                    {{ content }}
                 </div>
             </main>
 

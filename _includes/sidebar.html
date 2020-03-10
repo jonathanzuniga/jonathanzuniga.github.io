@@ -1,3 +1,4 @@
+{% if page.url == '/blog/' %}
 {% assign author = site.authors['jonathan'] %}
 <aside class="sidebar">
     <!-- <img class="avatar" src="{{ author.avatar }}" alt="{{ author.first_name }} {{ author.last_name }}"> -->
@@ -57,7 +58,7 @@
         {% assign categories_list = nil %}
     </ul>
 </aside>
-
+{% endif %}
 
 
 

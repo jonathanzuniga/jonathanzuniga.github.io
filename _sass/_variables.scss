@@ -15,7 +15,7 @@ $font-size: 1em; // 16px
 $font-size-xs: $font-size - 0.188; // 13px
 $font-size-sm: $font-size - 0.125; // 14px
 $font-size-md: $font-size + 0.125; // 18px
-$font-size-lg: $font-size + 0.25; // 22px
+$font-size-lg: $font-size + 0.375; // 22px
 
 $space: 1rem;
 $space-xs: $space - 0.75; // 0.25rem
@@ -36,7 +36,9 @@ $border-radius: 0;
 // layout
 
 $container-width: 95%;
-$container-max-width: 92rem;
+$container-max-width: 77.5rem;
+
+$col-gap: 2vw;
 
 // reset
 
@@ -46,7 +48,7 @@ $body-bg-color: $color-functional-1;
 $body-color: $color-neutral-dark;
 $body-font-family: $font-family-primary;
 $body-font-size: $font-size;
-$body-font-weight: 500;
+$body-font-weight: 450;
 $body-line-height: 1.5;
 
 $heading-font-family: $font-family-primary;
