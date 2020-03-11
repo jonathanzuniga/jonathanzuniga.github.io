@@ -3,7 +3,17 @@ layout: default
 ---
 
 <article class="post post--full">
-    <div class="post__content">
-        {{ content }}
+    {% if page.summary %}
+    <header class="post__header">
+        <p class="post__summary">
+            {{ page.summary }}
+        </p>
+    </header>
+    {% endif %}
+
+    <div class="post__body">
+        <div class="post__content">
+            {{ content }}
+        </div>
     </div>
 </article>
