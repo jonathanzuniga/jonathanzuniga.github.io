@@ -177,7 +177,7 @@ sup {
 }
 
 figure {
-    margin: $space-lg 0;
+    // margin: $space-lg 0;
 
     a {
         display: flex;
@@ -196,24 +196,18 @@ img {
     mix-blend-mode: multiply;
 }
 
-p {
-    margin-top: 0;
-}
-
 code {
-    background-color: darken($color-functional-1, 5%);
     font-family: $font-family-mono;
-    font-size: #{$font-size + 0.031};
-    padding: $space-xs;
+    font-size: #{$font-size + 0.063};
     word-wrap: break-word;
 }
 
-.highlighter-rouge {
-    margin: $space-lg 0;
-}
+// .highlighter-rouge {
+//     margin: $space-lg 0;
+// }
 
 pre {
-    margin: 0;
+    // margin: 0;
     white-space: pre-wrap;
     word-wrap: break-word;
 
@@ -226,7 +220,7 @@ pre {
 
 table {
     border-collapse: collapse;
-    margin: #{$space-lg - $space-rg} 0;
+    // margin: #{$space-lg - $space-rg} 0;
 }
 
 th {
@@ -251,7 +245,7 @@ blockquote {
     border-radius: $border-radius;
     font-size: $font-size-md;
     font-weight: 700;
-    margin: $space-lg 0;
+    // margin: $space-lg 0;
     padding: $space-md;
 
     quotes: $open-quote $close-quote;

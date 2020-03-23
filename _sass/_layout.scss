@@ -24,11 +24,18 @@ ol,
 ul,
 blockquote,
 hr,
+pre,
+figure,
 .header,
+.post__header,
 .footer {
     margin-right: auto;
     margin-left: auto;
     max-width: 43.75rem;
+}
+
+figure {
+    max-width: calc(10rem + 43.75rem);
 }
 
 @media screen and (min-width: $bp-sm-min-width) {
