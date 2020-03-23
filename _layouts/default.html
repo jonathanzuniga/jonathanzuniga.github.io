@@ -21,19 +21,14 @@
         {% endif %}"
     >
         <div class="container">
-            {% include header.html %} {% include introduction.html %}
+            {% include header.html %} {% comment %}{% include introduction.html
+            %}{% endcomment %}
 
             <main class="main">
                 <div class="content">
                     {{ content }}
                 </div>
             </main>
-
-            <hr />
-
-            {% include awesome_block.html %}
-
-            <hr />
 
             {% include footer.html %}
         </div>

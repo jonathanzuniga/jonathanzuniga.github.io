@@ -11,59 +11,45 @@ body {
 
 .posts {
     list-style-type: none;
-    margin: 0;
+}
 
-    a {
-        text-decoration: none;
-    }
-
-    .post {
-        &__date,
-        &__title {
-            display: inline-flex;
-        }
-
-        &__date {
-            font-feature-settings: "tnum";
-            font-variant-numeric: tabular-nums;
-            min-width: 7rem;
-        }
-
-        &__title {
-            min-width: 26rem;
-        }
-
-        &__categories,
-        &__tags {
-            display: none;
-        }
-
-        &__categories {
-            min-width: 12rem;
-        }
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+blockquote,
+hr,
+.header,
+.footer {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 43.75rem;
 }
 
 @media screen and (min-width: $bp-sm-min-width) {
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-column-gap: $grid-gap;
-        grid-row-gap: $space-sm;
-    }
+    .posts {
+        .post {
+            &__date,
+            &__title {
+                display: inline-flex;
+            }
 
-    .header,
-    .intro-head,
-    .intro-body,
-    .main,
-    .footer {
-        grid-column: 1 / -1;
+            &__date {
+                font-feature-settings: "tnum";
+                font-variant-numeric: tabular-nums;
+                width: 7rem;
+            }
+        }
     }
 }
 
 @media screen and (min-width: $bp-md-min-width) {
     .container {
-        grid-template-columns: 2fr 1fr 1fr 2fr 2fr 1fr 1fr 2fr;
         margin: 0 auto;
         max-width: $container-max-width;
         padding: 0;
@@ -71,38 +57,11 @@ body {
     }
 
     .header {
-        border-bottom: $border-width $border-style $border-color;
         margin-bottom: $space-lg;
         padding: $space 0;
     }
 
     .main {
         width: 100%;
-    }
-
-    .posts .post {
-        &__categories {
-            display: inline-flex;
-        }
-    }
-
-    .awesome-block--1 {
-        grid-column: 1 / 3;
-    }
-
-    .awesome-block--2 {
-        grid-column: 4 / 6;
-    }
-
-    .awesome-block--3 {
-        grid-column: 7 / -1;
-    }
-}
-
-@media screen and (min-width: $bp-lg-min-width) {
-    .posts .post {
-        &__tags {
-            display: inline-flex;
-        }
     }
 }

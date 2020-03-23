@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<h2>Publicaciones recientes</h2>
+
 <ul class="posts">
     {% for post in paginator.posts %}
     <li class="post post--{{ forloop.index }}">
@@ -15,7 +17,7 @@ layout: default
             </a>
         </div>
 
-        <div class="post__categories">
+        <!-- <div class="post__categories">
             <ul class="list list--inline">
                 <li>
                     {% assign sorted_categories = post.categories | sort %} {%
@@ -43,7 +45,7 @@ layout: default
                     >{% if forloop.last == false %}, {% endif %} {% endfor %}
                 </li>
             </ul>
-        </div>
+        </div> -->
     </li>
     {% endfor %}
 </ul>
