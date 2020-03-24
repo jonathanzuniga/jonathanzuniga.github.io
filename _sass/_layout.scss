@@ -9,33 +9,61 @@ body {
     position: relative;
 }
 
-.posts {
-    list-style-type: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul,
-blockquote,
-hr,
-pre,
-figure,
 .header,
-.post__header,
+.body--blog .content,
 .footer {
     margin-right: auto;
     margin-left: auto;
     max-width: 43.75rem;
 }
 
-figure {
-    max-width: calc(10rem + 43.75rem);
+.post {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ol,
+    ul,
+    blockquote,
+    hr,
+    pre,
+    figure {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 43.75rem;
+    }
+
+    figure {
+        max-width: calc(43.75rem + 10rem);
+    }
+
+    p,
+    ol,
+    ul {
+        font-family: $font-family-secondary;
+    }
+
+    &__summary {
+        font-size: 1.25rem;
+    }
+}
+
+.posts {
+    list-style-type: none;
+
+    .post {
+        &__date {
+            font-feature-settings: "tnum";
+            font-variant-numeric: tabular-nums;
+        }
+
+        &__title {
+            font-family: $font-family-secondary;
+        }
+    }
 }
 
 @media screen and (min-width: $bp-sm-min-width) {
@@ -47,9 +75,7 @@ figure {
             }
 
             &__date {
-                font-feature-settings: "tnum";
-                font-variant-numeric: tabular-nums;
-                width: 7rem;
+                padding-right: $space-md;
             }
         }
     }
