@@ -1,34 +1,35 @@
 {% assign author = site.authors['jonathan'] %}
 <header class="header">
-    <nav class="navbar">
-        <strong class="navbar__logo h4">
-            <a href="{{ site.baseurl }}/">
-                {{ author.first_name }} {{ author.last_name }}
-            </a>
-        </strong>
-        <ul class="navbar__menu list list--inline">
-            <li
-                class="navbar__item navbar__item--home {% if page.url == '/' %}is-active{% endif %}"
-            >
+    <div class="container">
+        <nav class="navbar">
+            <strong class="navbar__logo h4">
                 <a href="{{ site.baseurl }}/">
-                    Inicio
+                    {{ author.first_name }} {{ author.last_name }}
                 </a>
-            </li>
-            <li
-                class="navbar__item navbar__item--blog {% if current[1] == 'blog' %}is-active{% endif %}"
-            >
-                <a href="{{ site.baseurl }}/blog">
-                    Blog
-                </a>
-            </li>
-            <li
-                class="navbar__item navbar__item--about {% if current[1] == 'about' %}is-active{% endif %}"
-            >
-                <a href="{{ site.baseurl }}/about">
-                    Acerca
-                </a>
-            </li>
-            <!-- <li>
+            </strong>
+            <ul class="navbar__menu list list--inline">
+                <li
+                    class="navbar__item navbar__item--home {% if page.url == '/' %}is-active{% endif %}"
+                >
+                    <a href="{{ site.baseurl }}/">
+                        Inicio
+                    </a>
+                </li>
+                <li
+                    class="navbar__item navbar__item--blog {% if current[1] == 'blog' %}is-active{% endif %}"
+                >
+                    <a href="{{ site.baseurl }}/blog">
+                        Blog
+                    </a>
+                </li>
+                <li
+                    class="navbar__item navbar__item--about {% if current[1] == 'about' %}is-active{% endif %}"
+                >
+                    <a href="{{ site.baseurl }}/about">
+                        Acerca
+                    </a>
+                </li>
+                <!-- <li>
                 <a
                     class="navbar__item navbar__item--articles {% if current[1] == 'articles' %}is-active{% endif %}"
                     href="{{ site.baseurl }}/articles"
@@ -36,7 +37,7 @@
                     Archive
                 </a>
             </li> -->
-            <!-- <li>
+                <!-- <li>
                 <a
                     class="navbar__item navbar__item--reading {% if current[1] == 'reading' %}is-active{% endif %}"
                     href=""
@@ -44,8 +45,9 @@
                     Reading
                 </a>
             </li> -->
-        </ul>
-    </nav>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 {% comment %} {% assign author = site.authors[ 'jonathan' ] %}

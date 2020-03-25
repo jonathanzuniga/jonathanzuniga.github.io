@@ -30,17 +30,18 @@ $transition-duration: 0.32s;
 
 $border-width: 0.063rem;
 $border-style: solid;
-$border-color: $color-neutral-dark-65;
+$border-color: $color-neutral-dark-075;
 
 $border-radius: 0;
 
 // layout
 
-$grid-gap: 4vw;
+$grid-cols: 12;
+$grid-gap: $space-sm;
 
 $body-bg-color: $color-functional-1;
 
-$container-max-width: 92rem;
+$container-max-width: 61.875rem; // 990px
 $container-width: 95%;
 
 // reset
