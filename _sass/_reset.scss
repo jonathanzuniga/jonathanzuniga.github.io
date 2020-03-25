@@ -44,6 +44,32 @@ a {
     }
 }
 
+blockquote {
+    border-left: $border-width $border-style $border-color;
+    font-style: italic;
+    margin: $space 0 $space-lg;
+    padding: $space-sm $space;
+
+    quotes: $open-quote $close-quote;
+    // quotes: '“' '”' '‘' '’';
+
+    p {
+        &:first-child::before {
+            color: $color-neutral-dark-30;
+            content: open-quote;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+
+            &::after {
+                color: $color-neutral-dark-30;
+                content: close-quote;
+            }
+        }
+    }
+}
+
 code {
     color: $color-functional-2;
     font-family: $font-family-mono;
@@ -90,7 +116,7 @@ $headings-map: ($h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size);
         font-size: $heading-size;
         font-weight: $heading-font-weight;
         line-height: 1.125;
-        margin: 0 0 $space-md;
+        margin: 0 0 $space;
 
         a {
             color: $body-color;
@@ -141,13 +167,28 @@ hr {
 ol,
 ul {
     list-style-position: outside;
-    margin: 0 0 $space-md;
     padding-right: 0;
     padding-left: 0;
 }
 
-p {
-    margin: 0 0 $space-md;
+li {
+    margin-bottom: $space-sm;
+}
+
+@media screen and (min-width: $bp-md-min-width) {
+    li {
+        margin-bottom: $space-xs;
+    }
+}
+
+p,
+ol,
+ul {
+    margin: 0 0 $space;
+}
+
+pre {
+    margin: $space 0 $space-lg;
 }
 
 strong {

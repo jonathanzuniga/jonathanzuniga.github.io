@@ -8,7 +8,7 @@ summary:
 tags: illustration old-book
 title: "Ilustraciones de libros antiguos"
 head-class: text-center
-foot-class: md-colstart-2 md-colend-6
+foot-class: md-colstart-2 md-colend-6 text-left
 ---
 
 {% include figure.html image="/images/posts/2020-02-28/south-australian-cobbler-768.jpg" description="South Australian cobbler (Gymnapistes marmoratus)." link="https://www.oldbookillustrations.com/illustrations/south-australian-cobbler/" class="md-colstart-1 md-colend-7" %}

@@ -95,15 +95,21 @@ hr {
         ol,
         ul,
         p,
+        .highlighter-rouge,
         .footnotes {
             padding: 0 $space;
         }
 
+        blockquote,
         ol,
         ul,
         p,
         .footnotes {
             font-family: $font-family-secondary;
+        }
+
+        figure:first-child {
+            margin-top: 0;
         }
 
         .footnotes {
@@ -116,6 +122,16 @@ hr {
 
         ul {
             margin: 0;
+        }
+    }
+
+    &--full {
+        .post__summary {
+            margin-bottom: $space-lg;
+        }
+
+        .post__footer {
+            text-align: center;
         }
     }
 }
@@ -180,4 +196,8 @@ $bps-map: (
 
 .text-center {
     text-align: center;
+}
+
+.text-left {
+    text-align: left;
 }
