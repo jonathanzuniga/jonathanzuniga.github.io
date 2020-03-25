@@ -1,0 +1,21 @@
+.navbar {
+    &__item {
+        border-left: $border-width $border-style $border-color;
+        font-size: $font-size-md;
+    }
+
+    a {
+        color: $body-color;
+        display: block;
+        padding: $space-sm $space;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        &:focus {
+            color: $color-primary;
+        }
+    }
+}

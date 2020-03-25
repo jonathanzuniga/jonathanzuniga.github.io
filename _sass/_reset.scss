@@ -19,17 +19,62 @@ body {
     }
 }
 
+// secondary font
+
+a {
+    color: $color-primary;
+    transition: all $transition-duration ease-out;
+
+    text-decoration-color: $color-primary-30;
+    text-decoration-thickness: 0.125rem;
+    text-underline-offset: 0.156em;
+
+    &:hover {
+        color: darken($color-primary, 10%);
+        text-decoration-color: darken($color-primary-65, 10%);
+    }
+
+    &:hover,
+    &:active {
+        transition-duration: 0s;
+    }
+
+    &:focus {
+        color: $color-primary;
+    }
+}
+
+code {
+    color: $color-functional-2;
+    font-family: $font-family-mono;
+    font-size: #{$font-size - 0.188};
+    word-wrap: break-word;
+}
+
+pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+    code {
+        word-break: normal;
+    }
+}
+
 figure {
-    margin-right: 0;
-    margin-left: 0;
+    margin: $space-lg 0;
 
     a {
         display: flex;
     }
+
+    img {
+        margin: 0 auto;
+    }
 }
 
 figcaption {
-    font-size: $font-size-xs;
+    font-size: $font-size-sm;
     margin-top: $space-rg;
     text-align: center;
 }
@@ -41,14 +86,23 @@ $headings-map: ($h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size);
 
     h#{ $i },
     .h#{ $i } {
-        font-family: $heading-font-family;
+        font-family: $font-family-primary;
         font-size: $heading-size;
         font-weight: $heading-font-weight;
         line-height: 1.125;
-        margin: 0 0 $space-sm;
+        margin: 0 0 $space-md;
 
         a {
+            color: $body-color;
             text-decoration: none;
+
+            &:hover {
+                color: $color-primary;
+            }
+
+            &:focus {
+                color: $color-primary;
+            }
         }
     }
 
@@ -56,7 +110,8 @@ $headings-map: ($h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size);
     figure,
     p,
     ol,
-    ul {
+    ul,
+    .highlighter-rouge {
         & + h#{ $i },
         & + .h#{ $i } {
             margin-top: $space-lg;
@@ -69,9 +124,32 @@ img {
     mix-blend-mode: multiply;
 }
 
+hr {
+    clear: both;
+    display: block;
+    margin: $space-lg 0;
+    padding: 0;
+    height: $border-width;
+    border: 0;
+    border-bottom: $border-width $border-style $border-color;
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        border-width: #{$border-width / 2};
+    }
+}
+
 ol,
 ul {
     list-style-position: outside;
+    margin: 0 0 $space-md;
     padding-right: 0;
     padding-left: 0;
+}
+
+p {
+    margin: 0 0 $space-md;
+}
+
+strong {
+    font-weight: 600;
 }

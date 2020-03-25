@@ -4,6 +4,17 @@ body {
     position: relative;
 }
 
+.container {
+    padding: 0 $grid-gap;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(#{$grid-cols - 4}, 1fr);
+    grid-column-gap: $grid-gap;
+    // grid-row-gap: $space-sm;
+}
+
 .guides {
     pointer-events: none;
     position: fixed;
@@ -19,13 +30,13 @@ body {
 }
 
 .guide {
-    border-left: $border-width $border-style $border-color;
-    border-right: $border-width $border-style $border-color;
+    border-left: $border-width $border-style $guides-color;
+    border-right: $border-width $border-style $guides-color;
     width: 100%;
 
     &:first-child {
         border-right: 0;
-        border-left: $border-width $border-style $border-color;
+        border-left: $border-width $border-style $guides-color;
         margin-left: -#{$grid-gap};
         position: absolute;
         top: 0;
@@ -35,7 +46,7 @@ body {
     }
 
     &:last-child {
-        border-right: $border-width $border-style $border-color;
+        border-right: $border-width $border-style $guides-color;
         border-left: 0;
         margin-right: -#{$grid-gap};
         position: absolute;
@@ -46,62 +57,127 @@ body {
     }
 }
 
+.header,
+.main,
+.post *,
+.footer,
+hr {
+    grid-column: 1 / -1;
+}
+
 .header {
-    border-bottom: $border-width $border-style $border-color;
     margin-bottom: $space-lg;
     padding: $space 0;
 }
 
 .post {
+    margin-bottom: $space-xl;
+
     &__header,
-    &__footer,
-    &__content {
+    &__footer {
         > * {
             padding: 0 $space;
         }
     }
+
+    &__summary {
+        font-family: $font-family-secondary;
+        font-size: $font-size-md;
+    }
+
+    &__content > {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        ol,
+        ul,
+        p,
+        .footnotes {
+            padding: 0 $space;
+        }
+
+        ol,
+        ul,
+        p,
+        .footnotes {
+            font-family: $font-family-secondary;
+        }
+
+        .footnotes {
+            font-size: $font-size-sm;
+        }
+    }
+
+    &__footer {
+        font-size: $font-size-xs;
+
+        ul {
+            margin: 0;
+        }
+    }
+}
+
+.footer {
+    font-size: $font-size-xs;
+    margin-bottom: $space-xl;
+    padding: 0 $space;
 }
 
 @media screen and (min-width: $bp-sm-min-width) {
-    .container,
-    .post__header,
-    .post__content,
-    .post__footer {
-        display: grid;
-        grid-column-gap: $grid-gap;
-        grid-row-gap: $space-sm;
-    }
-
-    .navbar,
-    .main,
-    .footer,
-    .post * {
-        grid-column: 1 / -1;
+    .grid {
+        grid-template-columns: repeat(#{$grid-cols - 2}, 1fr);
     }
 }
 
 @media screen and (min-width: $bp-md-min-width) {
     .container {
-        grid-template-columns: repeat(#{$grid-cols}, 1fr);
         margin: 0 auto;
         max-width: $container-max-width;
         padding: 0;
         width: $container-width;
     }
 
-    .post__header,
-    .post__content,
-    .post__footer {
+    .grid {
         grid-template-columns: repeat(#{$grid-cols}, 1fr);
     }
 }
 
-@for $i from 1 to $grid-cols {
-    .colstart-#{$i} {
-        grid-column-start: #{$i};
-    }
+$bps-map: (
+    xs $bp-xs-min-width $grid-cols - 4,
+    sm $bp-sm-min-width $grid-cols - 2,
+    md $bp-md-min-width $grid-cols,
+    lg $bp-lg-min-width $grid-cols
+);
 
-    .colend-#{$i + 1} {
-        grid-column-end: #{$i + 1};
+@each $prefix, $value, $cols in $bps-map {
+    @media screen and (min-width: #{$value}) {
+        @for $col from 1 to $cols {
+            .#{$prefix}-colstart-#{$col} {
+                grid-column-start: #{$col};
+            }
+
+            .#{$prefix}-colend-#{$col + 1} {
+                grid-column-end: #{$col + 1};
+            }
+
+            .#{$prefix}-rowstart-#{$col} {
+                grid-row-start: #{$col};
+            }
+
+            .#{$prefix}-rowend-#{$col + 1} {
+                grid-row-end: #{$col + 1};
+            }
+
+            .#{$prefix}-rowspan-#{$col + 1} {
+                grid-row: #{$col} / span #{$col + 1};
+            }
+        }
     }
+}
+
+.text-center {
+    text-align: center;
 }

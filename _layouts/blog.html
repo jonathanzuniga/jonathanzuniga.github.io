@@ -4,40 +4,51 @@ layout: default
 
 {% for post in paginator.posts %}
 <article class="post post--{{ forloop.index }}">
-    <header class="post__header">
+    <header class="post__header grid">
         <div class="{{ post.head-class }}">
-            <!-- <div class="post__date">
-            {% include date.html %}
-        </div> -->
-
-            <h2 class="post__title h1">
+            <h2 class="post__title {% if forloop.index == 1 %}h1{% endif %}">
                 <a href="{{ post.url }}">
                     {{ post.title }}
                 </a>
             </h2>
+
+            {% if post.summary %}
+            <p class="post__summary">
+                {{ post.summary }}
+            </p>
+            {% endif %}
         </div>
     </header>
 
-    {% if post.summary %}
-    <div class="post__content post__content--summary">
-        <p>{{ post.summary }}</p>
-    </div>
-    {% else %}
-    <div class="post__content post__content--excerpt">
+    {% unless post.summary %}
+    <div class="post__content post__content--excerpt grid">
         {{ post.excerpt }}
     </div>
-    {% endif %}
+    {% endunless %}
 
-    <footer class="post__footer">
+    <footer class="post__footer grid">
         <div class="{{ post.foot-class }}">
             <ul class="list list--inline">
+                <li>
+                    Escrito por {% assign sorted_authors = post.authors | sort
+                    %} {% for post_author in sorted_authors %} {% assign author
+                    = site.authors[post_author] %} {% if author.web %}
+                    <a href="{{ author.web }}"
+                        >{{ author.first_name }} {{ author.last_name }}</a
+                    >{% else %}{{ author.first_name }} {{ author.last_name }}{%
+                    endif %}{% if forloop.last == false %}, {% endif %} {%
+                    endfor %}
+                </li>
+                <li>
+                    <div class="post__date">
+                        {% include date.html %}
+                    </div>
+                </li>
                 <li>
                     Publicado en {% assign sorted_categories = post.categories |
                     sort %} {% for category in sorted_categories %}
                     <a
-                        href="/blog{{ site.baseurl }}/category/{{
-                        category | slugify
-                    }}"
+                        href="/blog{{ site.baseurl }}/category/{{ category | slugify }}"
                         >{{ category | replace: '-', ' ' }}</a
                     >{% if forloop.last == false %}, {% endif %} {% endfor %}
                 </li>
