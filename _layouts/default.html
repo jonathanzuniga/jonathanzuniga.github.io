@@ -22,31 +22,22 @@
     >
         <div class="guides">
             <div class="container grid">
+                {% for i in (1..11) %}
                 <div class="guide"></div>
-                <div class="guide"></div>
-                <div class="guide"></div>
-                <div class="guide"></div>
-                <div class="guide"></div>
-                <div class="guide"></div>
-                <div class="guide"></div>
-                <div class="guide"></div>
-                <div class="guide"></div>
-                <div class="guide"></div>
-                <div class="guide"></div>
-                <div class="guide"></div>
-                <div class="guide"></div>
-                <div class="guide"></div>
+                {% endfor %}
             </div>
         </div>
 
         <div class="container grid">
-            {% include header.html %}
+            {% include header.html %} {% include introduction.html %}
 
             <main class="main">
                 <div class="content">
                     {{ content }}
                 </div>
             </main>
+
+            {% include sidebar.html %}
 
             <hr />
 

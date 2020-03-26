@@ -1,0 +1,20 @@
+$bps-map: (
+    xs $bp-xs-min-width $grid-cols - 7,
+    sm $bp-sm-min-width $grid-cols - 3,
+    md $bp-md-min-width $grid-cols,
+    lg $bp-lg-min-width $grid-cols
+);
+
+@each $prefix, $value, $cols in $bps-map {
+    @media screen and (min-width: #{$value}) {
+        @for $col from 1 to $cols + 1 {
+            .#{$prefix}-colstart-#{$col} {
+                grid-column-start: #{$col} !important;
+            }
+
+            .#{$prefix}-colend-#{$col + 1} {
+                grid-column-end: #{$col + 1} !important;
+            }
+        }
+    }
+}

@@ -1,9 +1,9 @@
 {% assign author = site.authors['jonathan'] %}
 <header class="header">
     <nav class="navbar">
-        <ul class="navbar__menu grid list--unstyled">
+        <ul class="navbar__menu grid list--unstyled grid">
             <li
-                class="navbar__item navbar__item--logo md-colstart-1 md-colend-3"
+                class="navbar__item navbar__item--logo md-colstart-8 md-colend-10"
             >
                 <a href="{{ site.baseurl }}/">
                     <strong
@@ -11,13 +11,13 @@
                     >
                 </a>
             </li>
-            <!-- <li
+            <li
                 class="navbar__item navbar__item--home {% if page.url == '/' %}is-active{% endif %}"
             >
                 <a href="{{ site.baseurl }}/">
                     Inicio
                 </a>
-            </li> -->
+            </li>
             <li
                 class="navbar__item navbar__item--blog {% if current[1] == 'blog' %}is-active{% endif %}"
             >

@@ -1,7 +1,12 @@
 .navbar {
     &__item {
         border-left: $border-width $border-style $border-color;
-        font-size: $font-size-md;
+        font-family: $font-family-primary;
+
+        &--logo {
+            font-size: $font-size-md;
+            order: 6;
+        }
     }
 
     a {

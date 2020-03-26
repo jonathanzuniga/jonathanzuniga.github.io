@@ -1,4 +1,4 @@
-body {
+.body {
     background-color: $body-bg-color;
     margin: 0;
     position: relative;
@@ -12,7 +12,7 @@ body {
     display: grid;
     grid-template-columns: repeat(#{$grid-cols - 4}, 1fr);
     grid-column-gap: $grid-gap;
-    // grid-row-gap: $space-sm;
+    grid-row-gap: $space-sm;
 }
 
 .guides {
@@ -58,8 +58,10 @@ body {
 }
 
 .header,
+.intro-head,
+.intro-body,
 .main,
-.post *,
+.sidebar,
 .footer,
 hr {
     grid-column: 1 / -1;
@@ -70,6 +72,21 @@ hr {
     padding: $space 0;
 }
 
+.intro {
+    &-head {
+        margin-bottom: $space-lg;
+        padding: 0 $space;
+    }
+
+    &-body {
+        font-size: $font-size-lg;
+
+        p {
+            padding: 0 $space;
+        }
+    }
+}
+
 .post {
     margin-bottom: $space-xl;
 
@@ -78,6 +95,17 @@ hr {
         > * {
             padding: 0 $space;
         }
+    }
+
+    &__date {
+        .month {
+            text-transform: capitalize;
+        }
+    }
+
+    &__header &__date {
+        font-size: $font-size-xs;
+        margin-bottom: $space-sm;
     }
 
     &__summary {
@@ -100,40 +128,45 @@ hr {
             padding: 0 $space;
         }
 
-        blockquote,
-        ol,
-        ul,
-        p,
-        .footnotes {
-            font-family: $font-family-secondary;
-        }
-
-        figure:first-child {
-            margin-top: 0;
-        }
-
         .footnotes {
             font-size: $font-size-sm;
         }
     }
 
-    &__footer {
-        font-size: $font-size-xs;
+    figcaption {
+        padding: 0 $space;
+    }
 
-        ul {
-            margin: 0;
-        }
+    &__footer {
+        font-size: $font-size-sm;
     }
 
     &--full {
-        .post__summary {
-            margin-bottom: $space-lg;
-        }
-
         .post__footer {
-            margin-top: $space-md;
             text-align: center;
         }
+    }
+}
+
+.sidebar {
+    &__title,
+    p,
+    ul {
+        padding: 0 $space;
+    }
+
+    &__about {
+        font-size: $font-size-sm;
+    }
+
+    &__list {
+        a {
+            display: block;
+        }
+    }
+
+    hr {
+        margin: 0 0 $space 0;
     }
 }
 
@@ -145,7 +178,7 @@ hr {
 
 @media screen and (min-width: $bp-sm-min-width) {
     .grid {
-        grid-template-columns: repeat(#{$grid-cols - 2}, 1fr);
+        grid-template-columns: repeat(#{$grid-cols - 3}, 1fr);
     }
 }
 
@@ -160,45 +193,15 @@ hr {
     .grid {
         grid-template-columns: repeat(#{$grid-cols}, 1fr);
     }
+
+    .intro-head,
+    .intro-body,
+    .main {
+        grid-column: 1 / 8;
+    }
+
+    .sidebar {
+        grid-column: 8 / 10;
+        grid-row: 3 / 5;
+    }
 }
-
-$bps-map: (
-    xs $bp-xs-min-width $grid-cols - 4,
-    sm $bp-sm-min-width $grid-cols - 2,
-    md $bp-md-min-width $grid-cols,
-    lg $bp-lg-min-width $grid-cols
-);
-
-// @each $prefix, $value, $cols in $bps-map {
-//     @media screen and (min-width: #{$value}) {
-//         @for $col from 1 to $cols {
-//             .#{$prefix}-colstart-#{$col} {
-//                 grid-column-start: #{$col};
-//             }
-
-//             .#{$prefix}-colend-#{$col + 1} {
-//                 grid-column-end: #{$col + 1};
-//             }
-
-//             .#{$prefix}-rowstart-#{$col} {
-//                 grid-row-start: #{$col};
-//             }
-
-//             .#{$prefix}-rowend-#{$col + 1} {
-//                 grid-row-end: #{$col + 1};
-//             }
-
-//             .#{$prefix}-rowspan-#{$col + 1} {
-//                 grid-row: #{$col} / span #{$col + 1};
-//             }
-//         }
-//     }
-// }
-
-// .text-center {
-//     text-align: center;
-// }
-
-// .text-left {
-//     text-align: left;
-// }

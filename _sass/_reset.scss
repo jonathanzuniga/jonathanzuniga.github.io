@@ -19,8 +19,6 @@ body {
     }
 }
 
-// secondary font
-
 a {
     color: $color-primary;
     transition: all $transition-duration ease-out;
@@ -44,19 +42,30 @@ a {
     }
 }
 
+blockquote,
+ol,
+ul,
+p,
+.footnotes {
+    font-family: $font-family-secondary;
+}
+
 blockquote {
-    border-left: $border-width $border-style $border-color;
     font-style: italic;
-    margin: $space 0 $space-lg;
-    padding: $space-sm $space;
+    margin: $space-lg 0;
+    padding: $space-sm #{$space + $space-md};
 
     quotes: $open-quote $close-quote;
     // quotes: '“' '”' '‘' '’';
 
     p {
-        &:first-child::before {
-            color: $color-neutral-dark-30;
-            content: open-quote;
+        &:first-child {
+            margin-top: 0;
+
+            &::before {
+                color: $color-neutral-dark-30;
+                content: open-quote;
+            }
         }
 
         &:last-child {
@@ -72,8 +81,6 @@ blockquote {
 
 code {
     color: $color-functional-2;
-    font-family: $font-family-mono;
-    font-size: #{$font-size - 0.188};
     word-wrap: break-word;
 }
 
@@ -87,22 +94,22 @@ pre {
     }
 }
 
+code {
+    font-family: $font-family-mono;
+    font-size: #{$font-size - 0.188};
+}
+
 figure {
     margin: $space-lg 0;
 
     a {
         display: flex;
     }
-
-    // img {
-    //     margin: 0 auto;
-    // }
 }
 
 figcaption {
     font-size: $font-size-sm;
     margin-top: $space-rg;
-    text-align: center;
 }
 
 $headings-map: ($h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size);
@@ -116,7 +123,7 @@ $headings-map: ($h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size);
         font-size: $heading-size;
         font-weight: $heading-font-weight;
         line-height: 1.125;
-        margin: 0 0 $space;
+        margin: 0 0 $space-sm;
 
         a {
             color: $body-color;
@@ -181,14 +188,8 @@ li {
     }
 }
 
-p,
-ol,
-ul {
-    margin: 0 0 $space;
-}
-
 pre {
-    margin: $space 0 $space-lg;
+    margin: $space-lg 0;
 }
 
 strong {

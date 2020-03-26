@@ -3,12 +3,12 @@
     <!-- <img class="avatar" src="{{ author.avatar }}" alt="{{ author.first_name }} {{ author.last_name }}"> -->
 
     <p class="sidebar__about">
-        Soy Jonathan, un <b>desarrollador front-end</b>. Aquí comparto <a href="">breves pensamientos</a> sobre el desarrollo web y opiniones de diversos temas, tambien <a href="">tomo fotos</a>, y muy rara vez <a href="">dibujo letras</a>.
+        Soy Jonathan, un <b>desarrollador web</b>. Aquí comparto <a href="">breves pensamientos</a> y opiniones de diversos temas, tambien <a href="">tomo fotos</a>, y muy rara vez <a href="">dibujo letras</a>.
     </p>
 
     <hr>
 
-    <h4>Proyectos</h4>
+    <h4 class="sidebar__title">Proyectos</h4>
 
     <ul class="sidebar__list list list--unstyled">
         {% assign selected_projects = site.data.selected_projects | sort: 'title' %}
@@ -26,7 +26,7 @@
 
     <hr>
 
-    <h4>Categorías</h4>
+    <h4 class="sidebar__title">Categorías</h4>
 
     <ul class="sidebar__list list list--unstyled">
         {% assign sorted_categories = site.categories | sort %}

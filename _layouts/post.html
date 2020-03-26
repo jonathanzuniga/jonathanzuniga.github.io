@@ -3,48 +3,42 @@ layout: default
 ---
 
 <article class="post post--full">
-    <header class="post__header grid">
-        <div class="{{ page.head-class }}">
-            <h1 class="post__title">{{ page.title }}</h1>
-
-            {% if page.summary %}
-            <div class="post__summary">
-                <p>{{ page.summary }}</p>
-            </div>
-            {% endif %}
+    <header class="post__header">
+        {% if page.summary %}
+        <div class="post__summary">
+            <p>{{ page.summary }}</p>
         </div>
+        {% endif %}
     </header>
 
-    <div class="post__content grid">
+    <div class="post__content">
         {{ page.content }}
     </div>
 
-    <footer class="post__footer grid">
-        <div class="{{ page.foot-class }}">
-            <ul class="list list--inline">
-                <li>
-                    Escrito por
-                    {% assign sorted_authors = page.authors | sort %}
-                    {% for post_author in sorted_authors %}
-                        {% assign author = site.authors[post_author] %}
-                        {% if author.web %}
-                            <a href="{{ author.web }}">{{ author.first_name }} {{ author.last_name }}</a>{% else %}{{ author.first_name }} {{ author.last_name }}{% endif %}{% if forloop.last == false %}, {% endif %}
-                    {% endfor %}
-                </li>
-                <li>
-                    <div class="post__date">
-                        {% include date.html %}
-                    </div>
-                </li>
-                <li>
-                    Publicado en
-                    {% assign sorted_categories = page.categories | sort %}
-                    {% for category in sorted_categories %}
-                        <a href="/blog{{ site.baseurl }}/category/{{ category | slugify }}">{{ category | replace: '-', ' ' }}</a>{% if forloop.last == false %}, {% endif %}
-                    {% endfor %}
-                </li>
-            </ul>
-        </div>
+    <footer class="post__footer">
+        <ul class="list list--inline">
+            <li>
+                Escrito por
+                {% assign sorted_authors = page.authors | sort %}
+                {% for post_author in sorted_authors %}
+                    {% assign author = site.authors[post_author] %}
+                    {% if author.web %}
+                        <a href="{{ author.web }}">{{ author.first_name }} {{ author.last_name }}</a>{% else %}{{ author.first_name }} {{ author.last_name }}{% endif %}{% if forloop.last == false %}, {% endif %}
+                {% endfor %}
+            </li>
+            <li>
+                <div class="post__date">
+                    {% include date.html %}
+                </div>
+            </li>
+            <li>
+                Publicado en
+                {% assign sorted_categories = page.categories | sort %}
+                {% for category in sorted_categories %}
+                    <a href="/blog{{ site.baseurl }}/category/{{ category | slugify }}">{{ category | replace: '-', ' ' }}</a>{% if forloop.last == false %}, {% endif %}
+                {% endfor %}
+            </li>
+        </ul>
     </footer>
 </article>
 

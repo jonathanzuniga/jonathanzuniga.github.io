@@ -1,24 +1,9 @@
-.figure {
-    &--right {
-        float: right;
-        margin: $space-sm 0 $space-sm $space-md;
-        width: 32%;
-        height: auto;
-    }
-
-    // img {
-    //     background-color: $color-neutral-dark-0375;
-    //     padding: $space-md;
-    // }
+.figure__cols {
+    grid-column: 1 / -1;
 }
 
-// @media screen and (min-width: $bp-md-min-width) {
-//     .figure {
-//         transform: translateX(#{$space-md * -1});
-//         width: calc(100% + #{$space-xl});
-
-//         &--right {
-//             width: calc(32% + #{$space-xl});
-//         }
-//     }
-// }
+@media screen and (min-width: $bp-md-min-width) {
+    .figure {
+        grid-template-columns: repeat(#{$grid-cols - 2}, 1fr);
+    }
+}

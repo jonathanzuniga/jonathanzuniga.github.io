@@ -12,8 +12,8 @@ $font-family-secondary: Georgia, "Times New Roman", Times, serif;
 $font-family-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", Courier, monospace;
 
-$font-size: 1.125rem;
-$font-size-xs: $font-size - 0.188; // -1
+$font-size: 1.063rem;
+$font-size-xs: $font-size - 0.188; // -3
 $font-size-sm: $font-size - 0.125; // -2
 $font-size-md: $font-size + 0.125; // +2
 $font-size-lg: $font-size + 0.375; // +4
@@ -36,12 +36,12 @@ $border-radius: 0;
 
 // layout
 
-$grid-cols: 6;
-$grid-gap: 2vw;
+$grid-cols: 9;
+$grid-gap: 1vw;
 
 $body-bg-color: $color-functional-1;
 
-$container-max-width: 50rem; // 800px
+$container-max-width: 68.75rem; // 1100px
 $container-width: 95%;
 
 $guides-color: $color-primary-075;
