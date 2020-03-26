@@ -159,6 +159,7 @@ hr {
     &--full {
         @media screen and (min-width: $bp-md-min-width) {
             .post__footer {
+                margin-top: $space-md;
                 text-align: center;
             }
         }

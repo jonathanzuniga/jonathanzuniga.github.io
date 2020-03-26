@@ -17,8 +17,6 @@ title: "La tipografía de Alien"
 
 Dave Addey es el autor de [Typeset in the Future][typeset-in-the-future], un blog sobre tipografías en las peliculas de ciencia ficción. El elaboró un fascinante estudio sobre la [tipografía de Alien][tipografia-de-alien], un artículo bien documentado y muy disfrutable.<!-- more --> Tipografía, interfaces retro-futuristas, ciencia ficción... aborda todos mis temas favoritos.
 
-> En su último mensaje grabado antes del hiper sueño, Ripley señala que ella es la única superviviente del Nostromo. Lo que olvida mencionar es que en las últimas dos horas no encontró ni una sola vez alguna Eurostile Bold Extended.
-
 Además, no te pierdas las anteriores publicaciones de Dave sobre [Eurostile][eurostile], _[Moon][moon]_ y [_2001: A Space Odyssey_][2001-a-space-odyssey]. Todas son bastante recomendables.
 
 [typeset-in-the-future]: https://typesetinthefuture.com/

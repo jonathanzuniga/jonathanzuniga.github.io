@@ -18,7 +18,7 @@ layout: default
     <footer class="post__footer">
         <ul class="list list--inline">
             <li>
-                Escrito por
+                <b>Escrito por</b>
                 {% assign sorted_authors = page.authors | sort %}
                 {% for post_author in sorted_authors %}
                     {% assign author = site.authors[post_author] %}
