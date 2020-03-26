@@ -42,18 +42,20 @@ a {
     }
 }
 
-blockquote,
-ol,
-ul,
-p,
-.footnotes {
-    font-family: $font-family-secondary;
-}
+// blockquote,
+// ol,
+// ul,
+// p,
+// .footnotes {
+//     font-family: $font-family-secondary;
+// }
 
 blockquote {
-    font-style: italic;
+    border: $border-width $border-style $color-neutral-dark-075;
+    border-left: $space-xs $border-style $color-primary-65;
+    font-size: $font-size-md;
     margin: $space-lg 0;
-    padding: $space-sm #{$space + $space-md};
+    padding: $space;
 
     quotes: $open-quote $close-quote;
     // quotes: '“' '”' '‘' '’';
@@ -192,6 +194,7 @@ pre {
     margin: $space-lg 0;
 }
 
-strong {
-    font-weight: 600;
+strong,
+b {
+    font-weight: $heading-font-weight;
 }

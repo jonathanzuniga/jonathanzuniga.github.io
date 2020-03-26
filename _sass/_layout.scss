@@ -6,13 +6,28 @@
 
 .container {
     padding: 0 $grid-gap;
+
+    @media screen and (min-width: $bp-md-min-width) {
+        margin: 0 auto;
+        max-width: $container-max-width;
+        padding: 0;
+        width: $container-width;
+    }
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(#{$grid-cols - 4}, 1fr);
+    grid-template-columns: repeat(#{$grid-cols - 7}, 1fr);
     grid-column-gap: $grid-gap;
     grid-row-gap: $space-sm;
+
+    @media screen and (min-width: $bp-sm-min-width) {
+        grid-template-columns: repeat(#{$grid-cols - 3}, 1fr);
+    }
+
+    @media screen and (min-width: $bp-md-min-width) {
+        grid-template-columns: repeat(#{$grid-cols}, 1fr);
+    }
 }
 
 .guides {
@@ -109,7 +124,7 @@ hr {
     }
 
     &__summary {
-        font-family: $font-family-secondary;
+        // font-family: $font-family-secondary;
         font-size: $font-size-md;
     }
 
@@ -142,8 +157,10 @@ hr {
     }
 
     &--full {
-        .post__footer {
-            text-align: center;
+        @media screen and (min-width: $bp-md-min-width) {
+            .post__footer {
+                text-align: center;
+            }
         }
     }
 }
@@ -176,24 +193,7 @@ hr {
     padding: 0 $space;
 }
 
-@media screen and (min-width: $bp-sm-min-width) {
-    .grid {
-        grid-template-columns: repeat(#{$grid-cols - 3}, 1fr);
-    }
-}
-
-@media screen and (min-width: $bp-md-min-width) {
-    .container {
-        margin: 0 auto;
-        max-width: $container-max-width;
-        padding: 0;
-        width: $container-width;
-    }
-
-    .grid {
-        grid-template-columns: repeat(#{$grid-cols}, 1fr);
-    }
-
+@media screen and (min-width: $bp-lg-min-width) {
     .intro-head,
     .intro-body,
     .main {
