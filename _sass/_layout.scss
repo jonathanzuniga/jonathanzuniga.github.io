@@ -169,36 +169,36 @@ $bps-map: (
     lg $bp-lg-min-width $grid-cols
 );
 
-@each $prefix, $value, $cols in $bps-map {
-    @media screen and (min-width: #{$value}) {
-        @for $col from 1 to $cols {
-            .#{$prefix}-colstart-#{$col} {
-                grid-column-start: #{$col};
-            }
+// @each $prefix, $value, $cols in $bps-map {
+//     @media screen and (min-width: #{$value}) {
+//         @for $col from 1 to $cols {
+//             .#{$prefix}-colstart-#{$col} {
+//                 grid-column-start: #{$col};
+//             }
 
-            .#{$prefix}-colend-#{$col + 1} {
-                grid-column-end: #{$col + 1};
-            }
+//             .#{$prefix}-colend-#{$col + 1} {
+//                 grid-column-end: #{$col + 1};
+//             }
 
-            .#{$prefix}-rowstart-#{$col} {
-                grid-row-start: #{$col};
-            }
+//             .#{$prefix}-rowstart-#{$col} {
+//                 grid-row-start: #{$col};
+//             }
 
-            .#{$prefix}-rowend-#{$col + 1} {
-                grid-row-end: #{$col + 1};
-            }
+//             .#{$prefix}-rowend-#{$col + 1} {
+//                 grid-row-end: #{$col + 1};
+//             }
 
-            .#{$prefix}-rowspan-#{$col + 1} {
-                grid-row: #{$col} / span #{$col + 1};
-            }
-        }
-    }
-}
+//             .#{$prefix}-rowspan-#{$col + 1} {
+//                 grid-row: #{$col} / span #{$col + 1};
+//             }
+//         }
+//     }
+// }
 
-.text-center {
-    text-align: center;
-}
+// .text-center {
+//     text-align: center;
+// }
 
-.text-left {
-    text-align: left;
-}
+// .text-left {
+//     text-align: left;
+// }
