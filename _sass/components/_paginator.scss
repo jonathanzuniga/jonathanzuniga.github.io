@@ -1,0 +1,12 @@
+.paginator {
+    display: flex;
+
+    &__item {
+        padding-left: $space;
+    }
+
+    &__item--next {
+        border-left: $border-width $border-style $border-color;
+        margin-left: $space;
+    }
+}
