@@ -38,7 +38,7 @@ Para crear estas piezas, al igual que en el _pixel art_ se requiere de una pacie
 
 ## Enlaces interesantes
 
-Si les interesa conocer más, les comparto unos enlaces de comunidades, artículos y de algunas obras de arte fascinantes:
+Si tienen interés de conocer más, les comparto unos enlaces de comunidades, artículos y de algunas obras de arte fascinantes:
 
 -   #### [Blocktronics](http://blocktronics.org/)
 

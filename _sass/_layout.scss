@@ -119,11 +119,6 @@ hr {
         margin-bottom: $space-sm;
     }
 
-    &__summary {
-        // font-family: $font-family-secondary;
-        font-size: $font-size-md;
-    }
-
     &__content > {
         .footnotes {
             font-size: $font-size-sm;
@@ -135,9 +130,12 @@ hr {
     }
 
     &--full {
+        .post__footer {
+            margin-top: $space-md;
+        }
+
         @media screen and (min-width: $bp-md-min-width) {
             .post__footer {
-                margin-top: $space-md;
                 text-align: center;
             }
         }
@@ -161,7 +159,7 @@ hr {
 }
 
 .footer {
-    font-size: $font-size-xs;
+    font-size: $font-size-sm;
     margin-bottom: $space-xl;
 }
 
