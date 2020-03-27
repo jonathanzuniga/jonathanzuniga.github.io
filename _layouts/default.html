@@ -20,13 +20,7 @@
             body--search
         {% endif %}"
     >
-        <div class="guides">
-            <div class="container grid">
-                {% for i in (1..11) %}
-                <div class="guide"></div>
-                {% endfor %}
-            </div>
-        </div>
+        {% include background.html %}
 
         <div class="container grid">
             {% include header.html %} {% include introduction.html %}
