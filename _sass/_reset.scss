@@ -207,3 +207,41 @@ strong,
 b {
     font-weight: $heading-font-weight;
 }
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: $space-lg 0;
+    table-layout: auto;
+    width: 100%;
+    word-break: normal;
+
+    th {
+        background-color: $color-neutral-dark-04;
+        border-top: $border-width $border-style $border-color;
+        border-bottom: $border-width $border-style $border-color;
+        font-weight: $heading-font-weight;
+        text-align: left;
+        word-break: normal;
+    }
+
+    td {
+        border-bottom: $border-width dotted $border-color;
+    }
+
+    th,
+    td {
+        padding: $space-sm $space;
+        vertical-align: top;
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            border-width: #{$border-width / 2};
+        }
+    }
+
+    @media screen and (max-width: $bp-md-min-width) {
+        display: block;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+}
