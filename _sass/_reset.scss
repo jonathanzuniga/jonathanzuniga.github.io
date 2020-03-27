@@ -87,6 +87,8 @@ blockquote {
 
 code {
     color: $color-functional-2;
+    font-family: $font-family-mono;
+    font-size: #{$font-size - 0.125};
     word-wrap: break-word;
 }
 
@@ -98,11 +100,6 @@ pre {
     code {
         word-break: normal;
     }
-}
-
-code {
-    font-family: $font-family-mono;
-    font-size: #{$font-size - 0.188};
 }
 
 figure {
