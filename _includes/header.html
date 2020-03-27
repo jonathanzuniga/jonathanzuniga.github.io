@@ -1,16 +1,12 @@
 {% assign author = site.authors['jonathan'] %}
 <header class="header">
     <nav class="navbar">
-        <ul class="navbar__menu grid list--unstyled grid">
-            <li
-                class="navbar__item navbar__item--logo md-colstart-8 md-colend-10"
-            >
-                <a href="{{ site.baseurl }}/">
-                    <strong>
-                        {{ author.first_name }} {{ author.last_name }}
-                    </strong>
-                </a>
-            </li>
+        <a class="navbar__logo" href="{{ site.baseurl }}/">
+            <strong>
+                {{ author.first_name }} {{ author.last_name }}
+            </strong>
+        </a>
+        <ul class="navbar__menu list--unstyled">
             <li
                 class="navbar__item navbar__item--home {% if page.url == '/' %}is-active{% endif %}"
             >

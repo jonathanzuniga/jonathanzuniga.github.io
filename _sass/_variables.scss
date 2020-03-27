@@ -32,16 +32,15 @@ $border-width: 0.063rem;
 $border-style: solid;
 $border-color: $color-neutral-dark-30;
 
-$border-radius: 0;
+$border-radius: $space-sm;
 
 // layout
 
-$grid-cols: 9;
-$grid-gap: 1vw;
+$grid-gap: 4vw;
 
 $site-bg-color: $color-functional-1;
 
-$container-max-width: 68.75rem; // 1100px
+$container-max-width: 92rem;
 $container-width: 95%;
 
 // reset
@@ -55,10 +54,10 @@ $body-line-height: 1.5;
 $heading-font-family: $font-family-primary;
 $heading-font-weight: 600;
 
-$h1-font-size: 2.25em;
+$h1-font-size: 3em;
 $h2-font-size: 1.5em;
-$h3-font-size: 1.125em;
-$h4-font-size: 1em;
+$h3-font-size: 1.25em;
+$h4-font-size: 1.125em;
 
 $open-quote: "«";
 $close-quote: "»";

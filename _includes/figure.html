@@ -1,23 +1,21 @@
-<figure class="figure {{ include.class }} grid">
-    <div class="figure__cols {{ include.cols }}">
-        {% if include.link %}
-        <a href="{{ include.link }}">
-            <img
-                class="{% if include.filter %}filter-{{ include.filter }}{% endif %}"
-                src="{{ include.image }}"
-                alt="{{ include.description }}"
-            />
-        </a>
-        {% else %}
+<figure class="figure {{ include.class }}">
+    {% if include.link %}
+    <a href="{{ include.link }}">
         <img
             class="{% if include.filter %}filter-{{ include.filter }}{% endif %}"
             src="{{ include.image }}"
             alt="{{ include.description }}"
         />
-        {% endif %}
-        <!-- description -->
-        {% if include.description %}
-        <figcaption>{{ include.description }}</figcaption>
-        {% endif %}
-    </div>
+    </a>
+    {% else %}
+    <img
+        class="{% if include.filter %}filter-{{ include.filter }}{% endif %}"
+        src="{{ include.image }}"
+        alt="{{ include.description }}"
+    />
+    {% endif %}
+    <!-- description -->
+    {% if include.description %}
+    <figcaption>{{ include.description }}</figcaption>
+    {% endif %}
 </figure>

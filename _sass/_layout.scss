@@ -1,13 +1,23 @@
 .body {
+    background-color: $site-bg-color;
     margin: 0;
     position: relative;
 }
 
 .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: $grid-gap;
+    grid-row-gap: $space-sm;
     padding: 0 $grid-gap;
     position: relative;
 
+    @media screen and (min-width: $bp-sm-min-width) {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
     @media screen and (min-width: $bp-md-min-width) {
+        grid-template-columns: 2fr 1fr 1fr 2fr 2fr 1fr 1fr 2fr;
         margin: 0 auto;
         max-width: $container-max-width;
         padding: 0;
@@ -15,74 +25,59 @@
     }
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(#{$grid-cols - 7}, 1fr);
-    grid-column-gap: $grid-gap;
-    grid-row-gap: $space-sm;
+// .bg {
+//     pointer-events: none;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     user-select: none;
+//     width: 100%;
+//     height: 100%;
 
-    @media screen and (min-width: $bp-sm-min-width) {
-        grid-template-columns: repeat(#{$grid-cols - 3}, 1fr);
-    }
+//     &__down {
+//         @extend .bg;
+//         // Fix mix-blend-mode issue in Chrome
+//         background-color: $site-bg-color;
+//     }
 
-    @media screen and (min-width: $bp-md-min-width) {
-        grid-template-columns: repeat(#{$grid-cols}, 1fr);
-    }
-}
+//     &__guides {
+//         @extend .bg;
+//         opacity: 0.075;
 
-.bg {
-    pointer-events: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    user-select: none;
-    width: 100%;
-    height: 100%;
+//         .container {
+//             height: 100%;
+//             position: relative;
+//         }
+//     }
 
-    &__down {
-        @extend .bg;
-        // Fix mix-blend-mode issue in Chrome
-        background-color: $site-bg-color;
-    }
+//     &__vguide {
+//         border-left: $border-width $border-style $color-primary;
+//         border-right: $border-width $border-style $color-primary;
+//         width: 100%;
 
-    &__guides {
-        @extend .bg;
-        opacity: 0.075;
+//         &:first-child,
+//         &:last-child {
+//             position: absolute;
+//             top: 0;
+//             bottom: 0;
+//             width: $grid-gap;
+//         }
 
-        .container {
-            height: 100%;
-            position: relative;
-        }
-    }
+//         &:first-child {
+//             border-right: 0;
+//             border-left: $border-width $border-style $color-primary;
+//             margin-left: -#{$grid-gap};
+//             left: 0;
+//         }
 
-    &__vguide {
-        border-left: $border-width $border-style $color-primary;
-        border-right: $border-width $border-style $color-primary;
-        width: 100%;
-
-        &:first-child,
-        &:last-child {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: $grid-gap;
-        }
-
-        &:first-child {
-            border-right: 0;
-            border-left: $border-width $border-style $color-primary;
-            margin-left: -#{$grid-gap};
-            left: 0;
-        }
-
-        &:last-child {
-            border-right: $border-width $border-style $color-primary;
-            border-left: 0;
-            margin-right: -#{$grid-gap};
-            right: 0;
-        }
-    }
-}
+//         &:last-child {
+//             border-right: $border-width $border-style $color-primary;
+//             border-left: 0;
+//             margin-right: -#{$grid-gap};
+//             right: 0;
+//         }
+//     }
+// }
 
 .header,
 .intro-head,
@@ -95,34 +90,23 @@ hr {
 }
 
 .header {
+    border-bottom: $border-width $border-style $border-color;
     margin-bottom: $space-lg;
-    padding: $space-sm 0;
+    padding: $space 0;
 }
 
 .intro {
     &-head {
         margin-bottom: $space-lg;
-        padding: 0 $space;
     }
 
     &-body {
         font-size: $font-size-lg;
-
-        p {
-            padding: 0 $space;
-        }
     }
 }
 
 .post {
     margin-bottom: $space-xl;
-
-    &__header,
-    &__footer {
-        > * {
-            padding: 0 $space;
-        }
-    }
 
     &__date {
         .month {
@@ -141,27 +125,9 @@ hr {
     }
 
     &__content > {
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        ol,
-        ul,
-        p,
-        .highlighter-rouge,
-        .footnotes {
-            padding: 0 $space;
-        }
-
         .footnotes {
             font-size: $font-size-sm;
         }
-    }
-
-    figcaption {
-        padding: 0 $space;
     }
 
     &__footer {
@@ -179,12 +145,6 @@ hr {
 }
 
 .sidebar {
-    &__title,
-    p,
-    ul {
-        padding: 0 $space;
-    }
-
     &__about {
         font-size: $font-size-sm;
     }
@@ -203,18 +163,17 @@ hr {
 .footer {
     font-size: $font-size-xs;
     margin-bottom: $space-xl;
-    padding: 0 $space;
 }
 
-@media screen and (min-width: $bp-lg-min-width) {
+@media screen and (min-width: $bp-md-min-width) {
     .intro-head,
     .intro-body,
     .main {
-        grid-column: 1 / 8;
+        grid-column: 3 / 8;
     }
 
     .sidebar {
-        grid-column: 8 / 10;
+        grid-column: 1 / 3;
         grid-row: 3 / 5;
     }
 }
