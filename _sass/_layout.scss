@@ -162,6 +162,12 @@ hr {
     }
 }
 
+.awesome-block {
+    p {
+        font-size: $font-size-sm;
+    }
+}
+
 .footer {
     font-size: $font-size-sm;
     margin-bottom: $space-xl;

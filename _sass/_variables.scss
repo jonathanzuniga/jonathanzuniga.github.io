@@ -8,11 +8,11 @@ $bp-lg-min-width: 80em; // 1280px
 
 $font-family-primary: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-// $font-family-secondary: Georgia, "Times New Roman", Times, serif;
-$font-family-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", Courier, monospace;
+$font-family-heading: $font-family-primary;
+$font-family-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    Courier, monospace;
 
-$font-size: 1rem;
+$font-size: 1.063rem;
 $font-size-xs: $font-size - 0.188; // -3
 $font-size-sm: $font-size - 0.125; // -2
 $font-size-md: $font-size + 0.125; // +2
@@ -30,9 +30,9 @@ $transition-duration: 0.32s;
 
 $border-width: 0.063rem;
 $border-style: solid;
-$border-color: $color-neutral-dark-30;
+$border-color: $color-gray-750;
 
-$border-radius: 0;
+$border-radius: $space-xs;
 
 // layout
 
@@ -45,16 +45,18 @@ $container-width: 95%;
 
 // reset
 
-$body-color: $color-neutral-dark;
+$body-color: $color-gray-1000;
 $body-font-family: $font-family-primary;
 $body-font-size: $font-size;
 $body-font-weight: 400;
 $body-line-height: 1.5;
 
-$heading-font-family: $font-family-primary;
+$code-bg-color: $color-gray-750;
+
+$heading-font-family: $font-family-heading;
 $heading-font-weight: 600;
 
-$h1-font-size: 2.75em;
+$h1-font-size: 3em;
 $h2-font-size: 1.5em;
 $h3-font-size: 1.25em;
 $h4-font-size: 1.125em;

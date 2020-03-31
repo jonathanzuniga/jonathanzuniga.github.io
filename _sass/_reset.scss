@@ -28,8 +28,8 @@ a {
     text-underline-offset: 0.156em;
 
     &:hover {
-        color: darken($color-primary, 10%);
-        text-decoration-color: darken($color-primary-65, 10%);
+        color: darken($color-primary, 20%);
+        text-decoration-color: darken($color-primary-65, 20%);
     }
 
     &:hover,
@@ -86,10 +86,21 @@ blockquote {
 }
 
 code {
-    color: $color-functional-2;
+    display: inline-block;
     font-family: $font-family-mono;
     font-size: #{$font-size - 0.125};
+    padding: #{$space-xs / 2} #{$space-sm - 0.125};
+    position: relative;
     word-wrap: break-word;
+
+    &::after {
+        background-color: $code-bg-color;
+        border-radius: $border-radius;
+        content: "";
+        inset: -0.063rem;
+        opacity: 0.15;
+        position: absolute;
+    }
 }
 
 pre {
@@ -98,8 +109,19 @@ pre {
     word-wrap: break-word;
 
     code {
+        padding: 0;
         word-break: normal;
+
+        &::after {
+            content: none;
+        }
     }
+}
+
+em {
+    color: $color-primary;
+    font-style: italic;
+    font-weight: $heading-font-weight;
 }
 
 figure {
@@ -122,7 +144,7 @@ $headings-map: ($h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size);
 
     h#{ $i },
     .h#{ $i } {
-        font-family: $font-family-primary;
+        font-family: $heading-font-family;
         font-size: $heading-size;
         font-weight: $heading-font-weight;
         line-height: 1.125;
@@ -214,8 +236,6 @@ table {
     word-break: normal;
 
     th {
-        background-color: $color-neutral-dark-04;
-        border-top: $border-width $border-style $border-color;
         border-bottom: $border-width $border-style $border-color;
         font-weight: $heading-font-weight;
         text-align: left;
@@ -231,9 +251,9 @@ table {
         padding: $space-sm $space;
         vertical-align: top;
 
-        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-            border-width: #{$border-width / 2};
-        }
+        // @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        //     border-width: #{$border-width / 2};
+        // }
     }
 
     @media screen and (max-width: $bp-md-min-width) {

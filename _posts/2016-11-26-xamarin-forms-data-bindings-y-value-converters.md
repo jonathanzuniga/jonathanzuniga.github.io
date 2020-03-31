@@ -11,12 +11,15 @@ title: "Xamarin.Forms: Data Bindings y Value Converters"
 
 En el modelo <abbr title="Model–View–ViewModel">MVVM</abbr> la forma de comunicar la [vista][vista] con el [modelo de vista][modelo-de-vista] es a través de _[data bindings][data-bindings]_. La idea es muy simple, primero tenemos un [objeto][objeto] que expone una propiedad pública (origen). Este objeto puede ser el modelo de vista o algún otro objeto dentro de este.<!-- more -->
 
-    Binding nameBinding = new Binding();
-    nameBinding.Source = person;
-    nameBinding.Path = "Name";
+{% highlight csharp %}
+Binding nameBinding = new Binding();
+nameBinding.Source = person;
+nameBinding.Path = "Name";
 
-    Entry nameEntry = new Entry();
-    nameEntry.SetBinding(Entry.TextProperty, nameBinding);
+Entry nameEntry = new Entry();
+nameEntry.SetBinding(Entry.TextProperty, nameBinding);
+
+{% endhighlight %}
 
 Dentro de la [interfaz gráfica][interfaz-grafica] tendremos otro objeto que tienen una propiedad, la cual recibirá el valor de la propiedad del objeto origen (destino). El mecanismo para lograr esta comunicación se conoce como _data binding_. Este se encarga de informar a los objetos cada que ocurre un cambio en cualquiera de los extremos.
 
@@ -45,27 +48,33 @@ Para lograr el enlace de datos mediante _data bindings_, se requiere que un obje
 
 Otro concepto es el de _value converters_. Estos nos ayudaran a poder enlazar propiedades del objeto origen a las propiedades del elemento gráfico que espera otro tipo de dato.
 
-    <Label Text="{Binding PasswordStrength}"
-        TextColor="{Binding PasswordStrength}"
-        FontSize="24" />
+{% highlight xml %}
+<Label Text="{Binding PasswordStrength}"
+    TextColor="{Binding PasswordStrength}"
+    FontSize="24" />
+{% endhighlight %}
 
 En el código anterior, se está enlazando la propiedad `PasswordStrength` al texto de un `Label` que espera ese tipo de dato y también se está enlazando ese `PasswordStrength` al `TextColor`. El cual esperaría un tipo de dato diferente, que en este caso sería un color. Para lograr convertir ese `PasswordStrength` que es un texto a un color, se utiliza un [_converter_][converter].
 
-    // El 'value converter' trabaja en conjunto con el 'data binding' para hacer estas conversiones de datos en ambos sentidos.
-    public class PWStrengthConverter : IValueConverter
+<!-- prettier-ignore-start -->
+{% highlight csharp %}
+// El 'value converter' trabaja en conjunto con el 'data binding' para hacer estas conversiones de datos en ambos sentidos.
+public class PWStrengthConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            PasswordStrength pwdstr = (PasswordStrength) value;
-            ...
-            return Color.Red;
-        }
-
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            throw new NotSupportedException();
-        }
+        PasswordStrength pwdstr = (PasswordStrength) value;
+        // ...
+        return Color.Red;
     }
+
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        throw new NotSupportedException();
+    }
+}
+{% endhighlight %}
+<!-- prettier-ignore-end -->
 
 ### Su estructura
 

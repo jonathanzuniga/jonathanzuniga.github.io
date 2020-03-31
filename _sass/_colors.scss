@@ -1,115 +1,97 @@
-$color-primary: #007c89;
+$color-blue-100: #c4dbf2;
+$color-blue-250: #99c7ef;
+$color-blue-500: #4277ce;
+$color-blue-750: #284aa7;
+$color-blue-1000: #182473;
+
+$color-cyan-100: #dff5f1;
+$color-cyan-250: #99e0d7;
+$color-cyan-500: #4bc4c2;
+$color-cyan-750: #007c89;
+$color-cyan-1000: #002d3b;
+
+$color-gray-100: #f0efeb;
+$color-gray-250: #dedbce;
+$color-gray-500: #b6b0a3;
+$color-gray-750: #77716a;
+$color-gray-1000: #23201f;
+
+$color-green-100: #d5ebc8;
+$color-green-250: #a6e896;
+$color-green-500: #00c14e;
+$color-green-750: #01934f;
+$color-green-1000: #005733;
+
+$color-orange-100: #fccebc;
+$color-orange-250: #f97f50;
+$color-orange-500: #de4d14;
+$color-orange-750: #a73205;
+$color-orange-1000: #611e03;
+
+$color-pink-100: #fee6ff;
+$color-pink-250: #fa8cf8;
+$color-pink-500: #f73bb9;
+$color-pink-750: #a3296e;
+$color-pink-1000: #692340;
+
+$color-purple-100: #ece1fa;
+$color-purple-250: #d9baf7;
+$color-purple-500: #a941ce;
+$color-purple-750: #83249f;
+$color-purple-1000: #4f135e;
+
+$color-yellow-100: #fff1cc;
+$color-yellow-250: #fad173;
+$color-yellow-500: #d99536;
+$color-yellow-750: #a75e26;
+$color-yellow-1000: #702d16;
+
+$color-primary: $color-cyan-750;
 $color-primary-65: rgba($color-primary, 0.65);
 $color-primary-30: rgba($color-primary, 0.3);
 $color-primary-075: rgba($color-primary, 0.075);
 
-$color-neutral-dark: #241c15;
-$color-neutral-dark-65: rgba($color-neutral-dark, 0.65);
-$color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
-$color-neutral-dark-15: rgba($color-neutral-dark, 0.15);
-$color-neutral-dark-04: rgba($color-neutral-dark, 0.04);
-
 $color-functional-1: #fff;
-$color-functional-2: #a73205;
 
-// $color-primary: #e02254;
+$color-error: $color-orange-500;
+$color-success: $color-green-500;
+
+$syntax-bool: $color-purple-500;
+$syntax-comment: $color-gray-500;
+$syntax-fn: $color-blue-750;
+$syntax-name: $color-purple-750;
+$syntax-prop: $color-pink-500;
+$syntax-regex: $color-success;
+$syntax-str: $color-purple-750;
+$syntax-txt: $color-green-1000;
+$syntax-val: $color-gray-750;
+
+// $color-gray-100: hsl(225deg, 25%, 95%);
+// $color-gray-200: hsl(225deg, 16%, 90%);
+// $color-gray-300: hsl(225deg, 8%, 80%);
+// $color-gray-400: hsl(225deg, 8%, 70%);
+// $color-gray-500: hsl(225deg, 7%, 60%);
+// $color-gray-600: hsl(225deg, 15%, 50%);
+// $color-gray-700: hsl(225deg, 12%, 40%);
+// $color-gray-900: hsl(225deg, 25%, 20%);
+// $color-gray-1000: hsl(225deg, 15%, 15%);
+
+// $color-primary: hsl(240deg, 85%, 55%);
 // $color-primary-65: rgba($color-primary, 0.65);
 // $color-primary-30: rgba($color-primary, 0.3);
-
-// $color-neutral-dark: #141313;
-// $color-neutral-dark-65: rgba($color-neutral-dark, 0.65);
-// $color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
-// $color-neutral-dark-15: rgba($color-neutral-dark, 0.15);
-// $color-neutral-dark-0375: rgba($color-neutral-dark, 0.0375);
-
-// $color-functional-1: #eee4e5;
-
-// --
-
-// $color-primary: #f65664;
-// $color-primary-65: rgba($color-primary, 0.65);
-// $color-primary-30: rgba($color-primary, 0.3);
-
-// // $color-secondary: #29b2a0;
-// // $color-secondary-30: rgba($color-secondary, 0.3);
-// // $color-secondary-075: rgba($color-secondary, 0.075);
-
-// $color-neutral-dark: #27262c;
-// $color-neutral-dark-65: rgba($color-neutral-dark, 0.65);
-// $color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
-// $color-neutral-dark-15: rgba($color-neutral-dark, 0.15);
-// $color-neutral-dark-0375: rgba($color-neutral-dark, 0.0375);
-
-// $color-functional-1: #f9f7e8;
-
-// ---
-
-// $color-primary: #f66;
-// $color-primary-65: rgba($color-primary, 0.65);
-
-// $color-neutral-dark: #261d23;
-// $color-neutral-dark-65: rgba($color-neutral-dark, 0.65);
-// $color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
-// $color-neutral-dark-15: rgba($color-neutral-dark, 0.15);
-// $color-neutral-dark-075: rgba($color-neutral-dark, 0.075);
-
-// $color-functional-1: #e6e1e7;
-
-// --
-
-// green and sand
-
-// $color-primary: #bfa16b;
-// $color-primary-65: rgba($color-primary, 0.65);
-
-// $color-neutral-dark: #435c63;
-// $color-neutral-dark-65: rgba($color-neutral-dark, 0.65);
-// $color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
-// $color-neutral-dark-15: rgba($color-neutral-dark, 0.15);
+// $color-primary-075: rgba($color-primary, 0.075);
 
 // $color-functional-1: #fff;
 
-//
+// $color-error: hsl(340deg, 95%, 43%);
+// $color-success: hsl(160deg, 100%, 40%);
 
-// $color-primary: #f9776d;
-// $color-primary-65: rgba($color-primary, 0.65);
-
-// $color-neutral-dark: #6b4a42;
-// $color-neutral-dark-65: rgba($color-neutral-dark, 0.65);
-// $color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
-// $color-neutral-dark-15: rgba($color-neutral-dark, 0.15);
-
-// $color-accent: #7598a3;
-
-// $color-functional-1: #e6edef;
-// $color-functional-2: #fff;
-
-//
-
-// $color-primary: #ed7669;
-// $color-primary-65: rgba($color-primary, 0.65);
-
-// $color-neutral-dark: #663f46;
-// $color-neutral-dark-65: rgba($color-neutral-dark, 0.65);
-// $color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
-// $color-neutral-dark-15: rgba($color-neutral-dark, 0.15);
-
-// $color-accent: #d8956c;
-
-// $color-functional-1: #eeece8;
-// $color-functional-2: #fff;
-
-//
-
-// $color-primary: #78b3b7;
-// $color-primary-65: rgba($color-primary, 0.65);
-
-// $color-neutral-dark: #3e5051;
-// $color-neutral-dark-65: rgba($color-neutral-dark, 0.65);
-// $color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
-// $color-neutral-dark-15: rgba($color-neutral-dark, 0.15);
-
-// $color-accent: $color-neutral-dark-65;
-
-// $color-functional-1: #e7ecf0;
-// $color-functional-2: #fff;
+// $syntax-bool: #bf00b8;
+// $syntax-comment: #b0bec5;
+// $syntax-fn: #3d5afe;
+// $syntax-name: #aa00ff;
+// $syntax-prop: #f40088;
+// $syntax-regex: $color-success;
+// $syntax-str: #651fff;
+// $syntax-txt: #2a2a2a;
+// $syntax-val: #78909c;
