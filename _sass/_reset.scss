@@ -28,8 +28,8 @@ a {
     text-underline-offset: 0.156em;
 
     &:hover {
-        color: darken($color-primary, 20%);
-        text-decoration-color: darken($color-primary-65, 20%);
+        color: darken($color-primary, 10%);
+        text-decoration-color: darken($color-primary-65, 10%);
     }
 
     &:hover,

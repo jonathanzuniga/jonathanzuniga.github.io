@@ -54,25 +54,31 @@ $color-primary: $color-teal-750;
 $color-primary-65: rgba($color-primary, 0.65);
 $color-primary-30: rgba($color-primary, 0.3);
 
-$color-accent-pink: #ff3ebf;
-$color-accent-pink-darker: $color-pink-900;
-$color-accent-yellow: #e7b75f;
 $color-accent-green: $color-green-500;
 $color-accent-orange: #f25f25;
+$color-accent-pink-darker: $color-pink-900;
+$color-accent-pink: #ff3ebf;
+$color-accent-yellow: #e7b75f;
 
-$color-bg: hsl(0deg, 0%, 100%);
-$color-txt: hsl(222deg, 22%, 5%);
-$color-secondary: hsl(333deg, 100%, 45%);
-$color-tertiary: hsl(255deg, 85%, 30%);
-$color-decorative: hsl(200deg, 75%, 65%);
-$color-muted: hsl(210deg, 55%, 92%);
-$color-info: hsl(240deg, 85%, 55%);
-$color-success: $color-accent-green;
-$color-success-background: hsla(160deg, 100%, 40%, 0.1);
-$color-error: $color-accent-orange;
-$color-error-background: hsla(340deg, 95%, 43%, 0.1);
-$color-alert: hsl(37deg, 100%, 50%);
+$color-feedback-blue: #c5dbf2;
+$color-feedback-green: #d8eacc;
+$color-feedback-orange: #fbcfbd;
+$color-feedback-pink: #f9e0fa;
+$color-feedback-yellow: #fbeeca;
+
 $color-alert-background: hsla(52deg, 100%, 50%, 0.25);
+$color-alert: hsl(37deg, 100%, 50%);
+$color-bg: hsl(0deg, 0%, 100%);
+$color-decorative: hsl(200deg, 75%, 65%);
+$color-error-background: hsla(340deg, 95%, 43%, 0.1);
+$color-error: $color-accent-orange;
+$color-info: hsl(240deg, 85%, 55%);
+$color-muted: hsl(210deg, 55%, 92%);
+$color-secondary: hsl(333deg, 100%, 45%);
+$color-success-background: hsla(160deg, 100%, 40%, 0.1);
+$color-success: $color-accent-green;
+$color-tertiary: hsl(255deg, 85%, 30%);
+$color-txt: hsl(222deg, 22%, 5%);
 
 $syntax-bg: $color-bg;
 $syntax-bool: $color-pink-750;
