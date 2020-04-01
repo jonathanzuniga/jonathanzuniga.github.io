@@ -13,7 +13,7 @@
         font-weight: bold;
     } // Comment
     .err {
-        color: $color-error;
+        color: $syntax-error;
     } // Error
     .k {
         color: $syntax-str;
@@ -41,16 +41,16 @@
         font-style: italic;
     } // Comment.Special
     .gd {
-        color: $syntax-txt;
+        color: $syntax-del;
     } // Generic.Deleted
     .gd .x {
-        color: $syntax-txt;
+        color: $syntax-del;
     } // Generic.Deleted.Specific
     .ge {
         font-style: italic;
     } // Generic.Emph
     .gr {
-        color: $color-error;
+        color: $syntax-error;
     } // Generic.Error
     .gh {
         color: $syntax-comment;

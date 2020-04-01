@@ -42,6 +42,12 @@ a {
     }
 }
 
+abbr {
+    font-weight: $heading-font-weight;
+    text-decoration-thickness: 0.125rem;
+    text-underline-offset: 0.156em;
+}
+
 // blockquote,
 // ol,
 // ul,
@@ -88,7 +94,7 @@ blockquote {
 code {
     display: inline-block;
     font-family: $font-family-mono;
-    font-size: #{$font-size - 0.125};
+    font-size: #{$font-size - 0.188};
     padding: #{$space-xs / 2} #{$space-sm - 0.125};
     position: relative;
     word-wrap: break-word;
@@ -230,6 +236,7 @@ b {
 table {
     border-collapse: separate;
     border-spacing: 0;
+    font-size: $font-size-sm;
     margin: $space-lg 0;
     table-layout: auto;
     width: 100%;
