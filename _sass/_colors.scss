@@ -1,97 +1,228 @@
-$color-blue-100: #c4dbf2;
-$color-blue-250: #99c7ef;
-$color-blue-500: #4277ce;
-$color-blue-750: #284aa7;
-$color-blue-900: #182473;
+$color-cyan-50: #e5f8f8;
+$color-cyan-100: #bfedef;
+$color-cyan-200: #9be1e5;
+$color-cyan-300: #7fd4da;
+$color-cyan-400: #74cad2;
+$color-cyan-500: #72c1ca;
+$color-cyan-600: #6bb0b8; // P
+$color-cyan-700: #639b9f;
+$color-cyan-800: #5c8688;
+$color-cyan-900: #4f6261;
 
-$color-teal-100: #dff5f1;
-$color-teal-250: #99e0d7;
-$color-teal-500: #4bc4c2;
-$color-teal-750: #007c89;
-$color-teal-900: #002d3b;
+$color-gray-50: #efefef;
+$color-gray-100: #d8d8d8;
+$color-gray-200: #bebebe;
+$color-gray-300: #a0a5a5;
+$color-gray-400: #879293;
+$color-gray-500: #707f81;
+$color-gray-600: #647071; // P
+$color-gray-700: #545c5c;
+$color-gray-800: #464849;
+$color-gray-900: #333333;
 
-$color-gray-100: #f0efeb;
-$color-gray-250: #dedbce;
-$color-gray-500: #b6b0a3;
-$color-gray-750: #77716a;
-$color-gray-900: #23201f;
+$color-green-50: #f3f7e9;
+$color-green-100: #e0eac7;
+$color-green-200: #ccdca4;
+$color-green-300: #b8ce80;
+$color-green-400: #a9c465;
+$color-green-500: #9bba4b; // P
+$color-green-600: #8baa43;
+$color-green-700: #779739;
+$color-green-800: #648331;
+$color-green-900: #436222;
 
-$color-green-100: #d5ebc8;
-$color-green-250: #a6e896;
-$color-green-500: #00c14e;
-$color-green-750: #01934f;
-$color-green-900: #005733;
+$color-orange-50: #fbebe8;
+$color-orange-100: #fed0bf;
+$color-orange-200: #ffb296;
+$color-orange-300: #ff956c;
+$color-orange-400: #ff7e4b; // P
+$color-orange-500: #ff6a2c;
+$color-orange-600: #f46328;
+$color-orange-700: #e65c23;
+$color-orange-800: #d85520;
+$color-orange-900: #bf4818;
 
-$color-orange-100: #fccebc;
-$color-orange-250: #f97f50;
-$color-orange-500: #de4d14;
-$color-orange-750: #a73205;
-$color-orange-900: #611e03;
+$color-purple-50: #f2ecef;
+$color-purple-100: #dcd0d6;
+$color-purple-200: #c2b1bb;
+$color-purple-300: #aa919f;
+$color-purple-400: #96788a;
+$color-purple-500: #845f75;
+$color-purple-600: #77566a;
+$color-purple-700: #664a5c; // P
+$color-purple-800: #553f50;
+$color-purple-900: #443242;
 
-$color-pink-100: #fee6ff;
-$color-pink-250: #fa8cf8;
-$color-pink-500: #f73bb9;
-$color-pink-750: #a3296e;
-$color-pink-900: #692340;
+$color-red-50: #ffecef;
+$color-red-100: #ffd0d4;
+$color-red-200: #fa9e9c;
+$color-red-300: #f37875;
+$color-red-400: #ff5950; // P
+$color-red-500: #ff4833;
+$color-red-600: #f63f34;
+$color-red-700: #e4352e;
+$color-red-800: #d72d26;
+$color-red-900: #c82219;
 
-$color-purple-100: #ece1fa;
-$color-purple-250: #d9baf7;
-$color-purple-500: #a941ce;
-$color-purple-750: #83249f;
-$color-purple-900: #4f135e;
+$color-violet-50: #eaebf2;
+$color-violet-100: #c9cce0;
+$color-violet-200: #a7abcb;
+$color-violet-300: #858bb5;
+$color-violet-400: #6d71a5;
+$color-violet-500: #565897; // P
+$color-violet-600: #4f508e;
+$color-violet-700: #474682;
+$color-violet-800: #3f3d75;
+$color-violet-900: #322c5d;
 
-$color-yellow-100: #fff1cc;
-$color-yellow-250: #fad173;
-$color-yellow-500: #d99536;
-$color-yellow-750: #a75e26;
-$color-yellow-900: #702d16;
+$color-yellow-50: #fbfae7;
+$color-yellow-100: #f5f1c2;
+$color-yellow-200: #edea9b;
+$color-yellow-300: #e5e175;
+$color-yellow-400: #dfdb58; // P
+$color-yellow-500: #d9d53c;
+$color-yellow-600: #cbc337;
+$color-yellow-700: #b8ae30;
+$color-yellow-800: #a6972a;
+$color-yellow-900: #87721f;
 
-$color-neutral-dark: #241c15;
+$color-neutral-dark: $color-gray-600;
 $color-neutral-dark-65: rgba($color-neutral-dark, 0.65);
 $color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
 
-$color-primary: $color-teal-750;
+$color-primary: $color-cyan-600;
 $color-primary-65: rgba($color-primary, 0.65);
 $color-primary-30: rgba($color-primary, 0.3);
 
+$color-accent-cyan: $color-cyan-600;
+$color-accent-gray: $color-gray-600;
 $color-accent-green: $color-green-500;
-$color-accent-orange: #f25f25;
-$color-accent-pink-darker: $color-pink-900;
-$color-accent-pink: #ff3ebf;
-$color-accent-yellow: #e7b75f;
+$color-accent-orange: $color-orange-400;
+$color-accent-purple: $color-purple-700;
+$color-accent-red: $color-red-400;
+$color-accent-violet: $color-violet-500;
+$color-accent-yellow: $color-yellow-400;
 
-$color-feedback-blue: #c5dbf2;
-$color-feedback-green: #d8eacc;
-$color-feedback-orange: #fbcfbd;
-$color-feedback-pink: #f9e0fa;
-$color-feedback-yellow: #fbeeca;
-
-$color-alert-background: hsla(52deg, 100%, 50%, 0.25);
-$color-alert: hsl(37deg, 100%, 50%);
-$color-bg: hsl(0deg, 0%, 100%);
-$color-decorative: hsl(200deg, 75%, 65%);
-$color-error-background: hsla(340deg, 95%, 43%, 0.1);
-$color-error: $color-accent-orange;
-$color-info: hsl(240deg, 85%, 55%);
-$color-muted: hsl(210deg, 55%, 92%);
-$color-secondary: hsl(333deg, 100%, 45%);
-$color-success-background: hsla(160deg, 100%, 40%, 0.1);
+$color-alert-background: rgba($color-accent-yellow, 0.25);
+$color-alert: $color-accent-yellow;
+$color-bg: #fff;
+$color-error-background: rgba($color-accent-red, 0.1);
+$color-error: $color-accent-red;
+$color-success-background: rgba($color-accent-green, 0.1);
 $color-success: $color-accent-green;
-$color-tertiary: hsl(255deg, 85%, 30%);
-$color-txt: hsl(222deg, 22%, 5%);
+$color-txt: $color-gray-800;
 
 $syntax-bg: $color-bg;
-$syntax-bool: $color-pink-750;
+$syntax-bool: $color-purple-700;
 $syntax-comment: $color-gray-500;
-$syntax-del: $color-orange-250;
+$syntax-del: $color-accent-orange;
 $syntax-error: $color-error;
-$syntax-fn: $color-blue-500;
-$syntax-name: $color-purple-500;
-$syntax-prop: $color-pink-500;
+$syntax-fn: $color-accent-cyan;
+$syntax-name: $color-violet-500;
+$syntax-prop: $color-purple-500;
 $syntax-regex: $color-success;
 $syntax-str: $color-purple-500;
 $syntax-txt: $color-txt;
-$syntax-val: $color-gray-750;
+$syntax-val: $color-gray-700;
+
+// --
+
+// $color-blue-100: #c4dbf2;
+// $color-blue-250: #99c7ef;
+// $color-blue-500: #4277ce;
+// $color-blue-750: #284aa7;
+// $color-blue-900: #182473;
+
+// $color-teal-100: #dff5f1;
+// $color-teal-250: #99e0d7;
+// $color-teal-500: #4bc4c2;
+// $color-teal-750: #007c89;
+// $color-teal-900: #002d3b;
+
+// $color-gray-100: #f0efeb;
+// $color-gray-250: #dedbce;
+// $color-gray-500: #b6b0a3;
+// $color-gray-750: #77716a;
+// $color-gray-900: #23201f;
+
+// $color-green-100: #d5ebc8;
+// $color-green-250: #a6e896;
+// $color-green-500: #00c14e;
+// $color-green-750: #01934f;
+// $color-green-900: #005733;
+
+// $color-orange-100: #fccebc;
+// $color-orange-250: #f97f50;
+// $color-orange-500: #de4d14;
+// $color-orange-750: #a73205;
+// $color-orange-900: #611e03;
+
+// $color-pink-100: #fee6ff;
+// $color-pink-250: #fa8cf8;
+// $color-pink-500: #f73bb9;
+// $color-pink-750: #a3296e;
+// $color-pink-900: #692340;
+
+// $color-purple-100: #ece1fa;
+// $color-purple-250: #d9baf7;
+// $color-purple-500: #a941ce;
+// $color-purple-750: #83249f;
+// $color-purple-900: #4f135e;
+
+// $color-yellow-100: #fff1cc;
+// $color-yellow-250: #fad173;
+// $color-yellow-500: #d99536;
+// $color-yellow-750: #a75e26;
+// $color-yellow-900: #702d16;
+
+// $color-neutral-dark: #241c15;
+// $color-neutral-dark-65: rgba($color-neutral-dark, 0.65);
+// $color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
+
+// $color-primary: $color-teal-750;
+// $color-primary-65: rgba($color-primary, 0.65);
+// $color-primary-30: rgba($color-primary, 0.3);
+
+// $color-accent-green: $color-green-500;
+// $color-accent-orange: #f25f25;
+// $color-accent-pink-darker: $color-pink-900;
+// $color-accent-pink: #ff3ebf;
+// $color-accent-yellow: #e7b75f;
+
+// $color-feedback-blue: #c5dbf2;
+// $color-feedback-green: #d8eacc;
+// $color-feedback-orange: #fbcfbd;
+// $color-feedback-pink: #f9e0fa;
+// $color-feedback-yellow: #fbeeca;
+
+// $color-alert-background: hsla(52deg, 100%, 50%, 0.25);
+// $color-alert: hsl(37deg, 100%, 50%);
+// $color-bg: hsl(0deg, 0%, 100%);
+// $color-decorative: hsl(200deg, 75%, 65%);
+// $color-error-background: hsla(340deg, 95%, 43%, 0.1);
+// $color-error: $color-accent-orange;
+// $color-info: hsl(240deg, 85%, 55%);
+// $color-muted: hsl(210deg, 55%, 92%);
+// $color-secondary: hsl(333deg, 100%, 45%);
+// $color-success-background: hsla(160deg, 100%, 40%, 0.1);
+// $color-success: $color-accent-green;
+// $color-tertiary: hsl(255deg, 85%, 30%);
+// $color-txt: hsl(222deg, 22%, 5%);
+
+// $syntax-bg: $color-bg;
+// $syntax-bool: $color-pink-750;
+// $syntax-comment: $color-gray-500;
+// $syntax-del: $color-orange-250;
+// $syntax-error: $color-error;
+// $syntax-fn: $color-blue-500;
+// $syntax-name: $color-purple-500;
+// $syntax-prop: $color-pink-500;
+// $syntax-regex: $color-success;
+// $syntax-str: $color-purple-500;
+// $syntax-txt: $color-txt;
+// $syntax-val: $color-gray-750;
+
+// --
 
 // $color-gray-100: hsl(225deg, 25%, 95%);
 // $color-gray-200: hsl(225deg, 16%, 90%);
@@ -99,7 +230,7 @@ $syntax-val: $color-gray-750;
 // $color-gray-400: hsl(225deg, 8%, 70%);
 // $color-gray-500: hsl(225deg, 7%, 60%);
 // $color-gray-600: hsl(225deg, 15%, 50%);
-// $color-gray-700: rgb(53, 54, 58);
+// $color-gray-700: hsl(228, 5%, 22%);
 // $color-gray-900: hsl(225deg, 25%, 20%);
 // $color-gray-1000: hsl(225deg, 15%, 15%);
 
