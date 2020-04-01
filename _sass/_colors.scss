@@ -1,129 +1,51 @@
-$color-cyan-50: #e5f8f8;
-$color-cyan-100: #bfedef;
-$color-cyan-200: #9be1e5;
-$color-cyan-300: #7fd4da;
-$color-cyan-400: #74cad2;
-$color-cyan-500: #72c1ca;
-$color-cyan-600: #6bb0b8; // P
-$color-cyan-700: #639b9f;
-$color-cyan-800: #5c8688;
-$color-cyan-900: #4f6261;
+$color-pastel-red: #ff6969;
+$color-awesome: #ff1154;
+$color-pansy-purple: #7a1d47;
+$color-yellow-orange: #ffad43;
+$color-shadow: #947f5f;
+$color-pale-robin-egg-blue: #97cad1;
+$color-blue-munsell: #0098ab;
+$color-midnight-green: #00455d;
+$color-isabelline: #f4efeb;
+$color-tumbleweed: #e6a386;
+$color-prune: #6c1021;
+$color-polished-pine: #78a38b;
+$color-amazon: #31775a;
+$color-warm-black: #00443f;
+$color-vanilla-ice: #f294af;
+$color-wild-orchid: #c57aa2;
+$color-dark-scarlet: #4f002a;
+$color-onyx: #363837;
 
-$color-gray-50: #efefef;
-$color-gray-100: #d8d8d8;
-$color-gray-200: #bebebe;
-$color-gray-300: #a0a5a5;
-$color-gray-400: #879293;
-$color-gray-500: #707f81;
-$color-gray-600: #647071; // P
-$color-gray-700: #545c5c;
-$color-gray-800: #464849;
-$color-gray-900: #333333;
-
-$color-green-50: #f3f7e9;
-$color-green-100: #e0eac7;
-$color-green-200: #ccdca4;
-$color-green-300: #b8ce80;
-$color-green-400: #a9c465;
-$color-green-500: #9bba4b; // P
-$color-green-600: #8baa43;
-$color-green-700: #779739;
-$color-green-800: #648331;
-$color-green-900: #436222;
-
-$color-orange-50: #fbebe8;
-$color-orange-100: #fed0bf;
-$color-orange-200: #ffb296;
-$color-orange-300: #ff956c;
-$color-orange-400: #ff7e4b; // P
-$color-orange-500: #ff6a2c;
-$color-orange-600: #f46328;
-$color-orange-700: #e65c23;
-$color-orange-800: #d85520;
-$color-orange-900: #bf4818;
-
-$color-purple-50: #f2ecef;
-$color-purple-100: #dcd0d6;
-$color-purple-200: #c2b1bb;
-$color-purple-300: #aa919f;
-$color-purple-400: #96788a;
-$color-purple-500: #845f75;
-$color-purple-600: #77566a;
-$color-purple-700: #664a5c; // P
-$color-purple-800: #553f50;
-$color-purple-900: #443242;
-
-$color-red-50: #ffecef;
-$color-red-100: #ffd0d4;
-$color-red-200: #fa9e9c;
-$color-red-300: #f37875;
-$color-red-400: #ff5950; // P
-$color-red-500: #ff4833;
-$color-red-600: #f63f34;
-$color-red-700: #e4352e;
-$color-red-800: #d72d26;
-$color-red-900: #c82219;
-
-$color-violet-50: #eaebf2;
-$color-violet-100: #c9cce0;
-$color-violet-200: #a7abcb;
-$color-violet-300: #858bb5;
-$color-violet-400: #6d71a5;
-$color-violet-500: #565897; // P
-$color-violet-600: #4f508e;
-$color-violet-700: #474682;
-$color-violet-800: #3f3d75;
-$color-violet-900: #322c5d;
-
-$color-yellow-50: #fbfae7;
-$color-yellow-100: #f5f1c2;
-$color-yellow-200: #edea9b;
-$color-yellow-300: #e5e175;
-$color-yellow-400: #dfdb58; // P
-$color-yellow-500: #d9d53c;
-$color-yellow-600: #cbc337;
-$color-yellow-700: #b8ae30;
-$color-yellow-800: #a6972a;
-$color-yellow-900: #87721f;
-
-$color-neutral-dark: $color-gray-600;
+$color-neutral-dark: darken($color-onyx, 5%);
 $color-neutral-dark-65: rgba($color-neutral-dark, 0.65);
 $color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
 
-$color-primary: $color-cyan-600;
+$color-primary: $color-blue-munsell;
 $color-primary-65: rgba($color-primary, 0.65);
 $color-primary-30: rgba($color-primary, 0.3);
 
-$color-accent-cyan: $color-cyan-600;
-$color-accent-gray: $color-gray-600;
-$color-accent-green: $color-green-500;
-$color-accent-orange: $color-orange-400;
-$color-accent-purple: $color-purple-700;
-$color-accent-red: $color-red-400;
-$color-accent-violet: $color-violet-500;
-$color-accent-yellow: $color-yellow-400;
-
-$color-alert-background: rgba($color-accent-yellow, 0.25);
-$color-alert: $color-accent-yellow;
+$color-alert-background: rgba($color-yellow-orange, 0.25);
+$color-alert: $color-yellow-orange;
 $color-bg: #fff;
-$color-error-background: rgba($color-accent-red, 0.1);
-$color-error: $color-accent-red;
-$color-success-background: rgba($color-accent-green, 0.1);
-$color-success: $color-accent-green;
-$color-txt: $color-gray-800;
+$color-error-background: rgba($color-awesome, 0.1);
+$color-error: $color-awesome;
+$color-success-background: rgba($color-amazon, 0.1);
+$color-success: $color-amazon;
+$color-txt: $color-neutral-dark;
 
 $syntax-bg: $color-bg;
-$syntax-bool: $color-purple-700;
-$syntax-comment: $color-gray-500;
-$syntax-del: $color-accent-orange;
+$syntax-bool: darken($color-vanilla-ice, 10%);
+$syntax-comment: $color-neutral-dark-30;
+$syntax-del: $color-pastel-red;
 $syntax-error: $color-error;
-$syntax-fn: $color-accent-cyan;
-$syntax-name: $color-violet-500;
-$syntax-prop: $color-purple-500;
+$syntax-fn: lighten($color-midnight-green, 10%);
+$syntax-name: darken($color-wild-orchid, 10%);
+$syntax-prop: darken($color-vanilla-ice, 10%);
 $syntax-regex: $color-success;
-$syntax-str: $color-purple-500;
+$syntax-str: darken($color-wild-orchid, 10%);
 $syntax-txt: $color-txt;
-$syntax-val: $color-gray-700;
+$syntax-val: $color-neutral-dark-65;
 
 // --
 
