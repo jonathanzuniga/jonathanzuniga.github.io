@@ -11,20 +11,20 @@
     }
 
     a {
+        box-shadow: none;
         color: $body-color;
-        text-decoration: none;
 
         &:hover {
-            color: $color-primary;
+            color: $color-link;
         }
 
         &:focus {
-            color: $color-primary;
+            color: $color-link;
         }
     }
 
     .is-active a {
-        color: $color-primary;
+        color: $color-link;
     }
 }
 

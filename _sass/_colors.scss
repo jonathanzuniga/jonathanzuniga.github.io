@@ -1,188 +1,70 @@
-$color-pastel-red: #ff6969;
-$color-awesome: #ff1154;
-$color-pansy-purple: #7a1d47;
-$color-yellow-orange: #ffad43;
-$color-shadow: #947f5f;
-$color-pale-robin-egg-blue: #97cad1;
-$color-blue-munsell: #0098ab;
-$color-midnight-green: #00455d;
-$color-isabelline: #f4efeb;
-$color-tumbleweed: #e6a386;
-$color-prune: #6c1021;
-$color-polished-pine: #78a38b;
-$color-amazon: #31775a;
-$color-warm-black: #00443f;
-$color-vanilla-ice: #f294af;
-$color-wild-orchid: #c57aa2;
-$color-dark-scarlet: #4f002a;
-$color-onyx: #363837;
+$color-primary: #3786b3;
+$color-primary-20: lighten($color-primary, 30%);
+$color-primary-30: lighten($color-primary, 20%);
+$color-primary-40: lighten($color-primary, 10%);
+$color-primary-50: $color-primary;
+$color-primary-60: darken($color-primary, 10%);
+$color-primary-70: darken($color-primary, 20%);
+$color-primary-80: darken($color-primary, 30%);
 
-$color-neutral-dark: darken($color-onyx, 5%);
-$color-neutral-dark-65: rgba($color-neutral-dark, 0.65);
-$color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
+$color-neutral-dark: #9da3a5;
+$color-neutral-dark-20: lighten($color-neutral-dark, 30%);
+$color-neutral-dark-30: lighten($color-neutral-dark, 20%);
+$color-neutral-dark-40: lighten($color-neutral-dark, 10%);
+$color-neutral-dark-50: $color-neutral-dark;
+$color-neutral-dark-60: darken($color-neutral-dark, 10%);
+$color-neutral-dark-70: darken($color-neutral-dark, 20%);
+$color-neutral-dark-80: darken($color-neutral-dark, 30%);
 
-$color-primary: $color-blue-munsell;
-$color-primary-65: rgba($color-primary, 0.65);
-$color-primary-30: rgba($color-primary, 0.3);
+$color-success: #6c9;
+$color-success-20: lighten($color-success, 30%);
+$color-success-30: lighten($color-success, 20%);
+$color-success-40: lighten($color-success, 10%);
+$color-success-50: $color-success;
+$color-success-60: darken($color-success, 10%);
+$color-success-70: darken($color-success, 20%);
+$color-success-80: darken($color-success, 30%);
 
-$color-alert-background: rgba($color-yellow-orange, 0.25);
-$color-alert: $color-yellow-orange;
+$color-danger: #ec5f95;
+$color-danger-20: lighten($color-danger, 30%);
+$color-danger-30: lighten($color-danger, 20%);
+$color-danger-40: lighten($color-danger, 10%);
+$color-danger-50: $color-danger;
+$color-danger-60: darken($color-danger, 10%);
+$color-danger-70: darken($color-danger, 20%);
+$color-danger-80: darken($color-danger, 30%);
+
+$color-warning: #fbcf50;
+$color-warning-20: lighten($color-warning, 30%);
+$color-warning-30: lighten($color-warning, 20%);
+$color-warning-40: lighten($color-warning, 10%);
+$color-warning-50: $color-warning;
+$color-warning-60: darken($color-warning, 10%);
+$color-warning-70: darken($color-warning, 20%);
+$color-warning-80: darken($color-warning, 30%);
+
+$color-accent: #c752a8;
+$color-accent-20: lighten($color-accent, 30%);
+$color-accent-30: lighten($color-accent, 20%);
+$color-accent-40: lighten($color-accent, 10%);
+$color-accent-50: $color-accent;
+$color-accent-60: darken($color-accent, 10%);
+$color-accent-70: darken($color-accent, 20%);
+$color-accent-80: darken($color-accent, 30%);
+
 $color-bg: #fff;
-$color-error-background: rgba($color-awesome, 0.1);
-$color-error: $color-awesome;
-$color-success-background: rgba($color-amazon, 0.1);
-$color-success: $color-amazon;
-$color-txt: $color-neutral-dark;
+$color-txt: darken($color-neutral-dark-80, 10%);
+$color-link: $color-primary-50;
 
 $syntax-bg: $color-bg;
-$syntax-bool: darken($color-vanilla-ice, 10%);
-$syntax-comment: $color-neutral-dark-30;
-$syntax-del: $color-pastel-red;
-$syntax-error: $color-error;
-$syntax-fn: lighten($color-midnight-green, 10%);
-$syntax-name: darken($color-wild-orchid, 10%);
-$syntax-prop: darken($color-vanilla-ice, 10%);
-$syntax-regex: $color-success;
-$syntax-str: darken($color-wild-orchid, 10%);
+$syntax-bool: $color-accent-40;
+$syntax-comment: $color-neutral-dark-40;
+$syntax-del: $color-danger-40;
+$syntax-error: $color-danger-50;
+$syntax-fn: $color-primary-60;
+$syntax-name: $color-accent-60;
+$syntax-prop: $color-danger-50;
+$syntax-regex: $color-success-50;
+$syntax-str: $color-accent-60;
 $syntax-txt: $color-txt;
-$syntax-val: $color-neutral-dark-65;
-
-// --
-
-// $color-blue-100: #c4dbf2;
-// $color-blue-250: #99c7ef;
-// $color-blue-500: #4277ce;
-// $color-blue-750: #284aa7;
-// $color-blue-900: #182473;
-
-// $color-teal-100: #dff5f1;
-// $color-teal-250: #99e0d7;
-// $color-teal-500: #4bc4c2;
-// $color-teal-750: #007c89;
-// $color-teal-900: #002d3b;
-
-// $color-gray-100: #f0efeb;
-// $color-gray-250: #dedbce;
-// $color-gray-500: #b6b0a3;
-// $color-gray-750: #77716a;
-// $color-gray-900: #23201f;
-
-// $color-green-100: #d5ebc8;
-// $color-green-250: #a6e896;
-// $color-green-500: #00c14e;
-// $color-green-750: #01934f;
-// $color-green-900: #005733;
-
-// $color-orange-100: #fccebc;
-// $color-orange-250: #f97f50;
-// $color-orange-500: #de4d14;
-// $color-orange-750: #a73205;
-// $color-orange-900: #611e03;
-
-// $color-pink-100: #fee6ff;
-// $color-pink-250: #fa8cf8;
-// $color-pink-500: #f73bb9;
-// $color-pink-750: #a3296e;
-// $color-pink-900: #692340;
-
-// $color-purple-100: #ece1fa;
-// $color-purple-250: #d9baf7;
-// $color-purple-500: #a941ce;
-// $color-purple-750: #83249f;
-// $color-purple-900: #4f135e;
-
-// $color-yellow-100: #fff1cc;
-// $color-yellow-250: #fad173;
-// $color-yellow-500: #d99536;
-// $color-yellow-750: #a75e26;
-// $color-yellow-900: #702d16;
-
-// $color-neutral-dark: #241c15;
-// $color-neutral-dark-65: rgba($color-neutral-dark, 0.65);
-// $color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
-
-// $color-primary: $color-teal-750;
-// $color-primary-65: rgba($color-primary, 0.65);
-// $color-primary-30: rgba($color-primary, 0.3);
-
-// $color-accent-green: $color-green-500;
-// $color-accent-orange: #f25f25;
-// $color-accent-pink-darker: $color-pink-900;
-// $color-accent-pink: #ff3ebf;
-// $color-accent-yellow: #e7b75f;
-
-// $color-feedback-blue: #c5dbf2;
-// $color-feedback-green: #d8eacc;
-// $color-feedback-orange: #fbcfbd;
-// $color-feedback-pink: #f9e0fa;
-// $color-feedback-yellow: #fbeeca;
-
-// $color-alert-background: hsla(52deg, 100%, 50%, 0.25);
-// $color-alert: hsl(37deg, 100%, 50%);
-// $color-bg: hsl(0deg, 0%, 100%);
-// $color-decorative: hsl(200deg, 75%, 65%);
-// $color-error-background: hsla(340deg, 95%, 43%, 0.1);
-// $color-error: $color-accent-orange;
-// $color-info: hsl(240deg, 85%, 55%);
-// $color-muted: hsl(210deg, 55%, 92%);
-// $color-secondary: hsl(333deg, 100%, 45%);
-// $color-success-background: hsla(160deg, 100%, 40%, 0.1);
-// $color-success: $color-accent-green;
-// $color-tertiary: hsl(255deg, 85%, 30%);
-// $color-txt: hsl(222deg, 22%, 5%);
-
-// $syntax-bg: $color-bg;
-// $syntax-bool: $color-pink-750;
-// $syntax-comment: $color-gray-500;
-// $syntax-del: $color-orange-250;
-// $syntax-error: $color-error;
-// $syntax-fn: $color-blue-500;
-// $syntax-name: $color-purple-500;
-// $syntax-prop: $color-pink-500;
-// $syntax-regex: $color-success;
-// $syntax-str: $color-purple-500;
-// $syntax-txt: $color-txt;
-// $syntax-val: $color-gray-750;
-
-// --
-
-// $color-gray-100: hsl(225deg, 25%, 95%);
-// $color-gray-200: hsl(225deg, 16%, 90%);
-// $color-gray-300: hsl(225deg, 8%, 80%);
-// $color-gray-400: hsl(225deg, 8%, 70%);
-// $color-gray-500: hsl(225deg, 7%, 60%);
-// $color-gray-600: hsl(225deg, 15%, 50%);
-// $color-gray-700: hsl(228, 5%, 22%);
-// $color-gray-900: hsl(225deg, 25%, 20%);
-// $color-gray-1000: hsl(225deg, 15%, 15%);
-
-// $color-primary: hsl(240deg, 85%, 55%);
-// $color-primary-65: rgba($color-primary, 0.65);
-// $color-primary-30: rgba($color-primary, 0.3);
-
-// $color-bg: hsl(0deg, 0%, 100%);
-// $color-txt: hsl(222deg, 22%, 5%);
-// $color-secondary: hsl(333deg, 100%, 45%);
-// $color-tertiary: hsl(255deg, 85%, 30%);
-// $color-decorative: hsl(200deg, 75%, 65%);
-// $color-muted: hsl(210deg, 55%, 92%);
-// $color-info: hsl(240deg, 85%, 55%);
-// $color-success: hsl(160deg, 100%, 40%);
-// $color-success-background: hsla(160deg, 100%, 40%, 0.1);
-// $color-error: hsl(340deg, 95%, 43%);
-// $color-error-background: hsla(340deg, 95%, 43%, 0.1);
-// $color-alert: hsl(37deg, 100%, 50%);
-// $color-alert-background: hsla(52deg, 100%, 50%, 0.25);
-
-// $syntax-bg: hsl(225deg, 25%, 97%);
-// $syntax-bool: #bf00b8;
-// $syntax-comment: #b0bec5;
-// $syntax-del: #f55;
-// $syntax-error: $color-error;
-// $syntax-fn: #3d5afe;
-// $syntax-name: #aa00ff;
-// $syntax-prop: #f40088;
-// $syntax-regex: $color-success;
-// $syntax-str: #651fff;
-// $syntax-txt: $color-txt;
-// $syntax-val: #78909c;
+$syntax-val: $color-neutral-dark-60;

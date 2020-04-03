@@ -20,31 +20,40 @@ body {
 }
 
 a {
-    color: $color-primary;
-    transition: all $transition-duration ease-out;
+    color: $color-link;
+    // transition: all $transition-duration ease-out;
 
-    text-decoration-color: $color-primary-30;
-    text-decoration-thickness: 0.125rem;
-    text-underline-offset: 0.156em;
+    box-shadow: inset 0 -0.063rem 0 rgba($color-link, 0.3),
+        0 0 0 rgba($color-link, 0.3);
+    text-decoration: none;
+    transition: all 0.2s;
+
+    // text-decoration-color: rgba($color-link, 0.5);
+    // text-decoration-thickness: 0.063rem;
+    // text-underline-offset: 0.156em;
 
     &:hover {
-        color: darken($color-primary, 10%);
-        text-decoration-color: darken($color-primary-65, 10%);
+        color: $color-link;
+
+        box-shadow: inset 0 -5rem 0 rgba($color-link, 0.1),
+            0 0.063rem 0 rgba($color-link, 0.1);
+
+        // text-decoration-color: rgba($color-link, 0.5);
     }
 
-    &:hover,
-    &:active {
-        transition-duration: 0s;
-    }
+    // &:hover,
+    // &:active {
+    //     transition-duration: 0s;
+    // }
 
     &:focus {
-        color: $color-primary;
+        color: $color-link;
     }
 }
 
 abbr {
     font-weight: $heading-font-weight;
-    text-decoration-thickness: 0.125rem;
+    text-decoration-thickness: 0.063rem;
     text-underline-offset: 0.156em;
 }
 
@@ -57,8 +66,7 @@ abbr {
 // }
 
 blockquote {
-    // background-color: $color-primary-075;
-    border-left: $space-xs $border-style $color-primary-65;
+    border-left: $space-xs $border-style $border-color;
     border-radius: $border-radius;
     font-size: $font-size-md;
     font-style: italic;
@@ -73,7 +81,7 @@ blockquote {
             margin-top: 0;
 
             &::before {
-                color: $color-primary-65;
+                color: $color-neutral-dark-50;
                 content: open-quote;
                 @extend strong;
             }
@@ -83,7 +91,7 @@ blockquote {
             margin-bottom: 0;
 
             &::after {
-                color: $color-primary-65;
+                color: $color-neutral-dark-50;
                 content: close-quote;
                 @extend strong;
             }
@@ -125,8 +133,9 @@ pre {
 }
 
 em {
-    color: $color-primary;
+    color: $color-link;
     font-style: italic;
+    font-family: $heading-font-family;
     font-weight: $heading-font-weight;
 }
 
@@ -134,7 +143,12 @@ figure {
     margin: $space-lg 0;
 
     a {
+        box-shadow: none;
         display: flex;
+
+        &:hover {
+            box-shadow: none;
+        }
     }
 }
 
@@ -153,19 +167,23 @@ $headings-map: ($h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size);
         font-family: $heading-font-family;
         font-size: $heading-size;
         font-weight: $heading-font-weight;
-        line-height: 1.125;
+        line-height: #{$body-line-height - 0.375};
         margin: 0 0 $space-sm;
 
         a {
             color: $body-color;
             text-decoration: none;
 
+            &:visited {
+                color: $body-color;
+            }
+
             &:hover {
-                color: $color-primary;
+                color: $color-link;
             }
 
             &:focus {
-                color: $color-primary;
+                color: $color-link;
             }
         }
     }
@@ -228,8 +246,13 @@ pre {
     margin: $space-lg 0;
 }
 
+small {
+    font-size: $font-size-sm;
+}
+
 strong,
 b {
+    font-family: $heading-font-family;
     font-weight: $heading-font-weight;
 }
 
@@ -244,6 +267,7 @@ table {
 
     th {
         border-bottom: $border-width $border-style $border-color;
+        font-family: $heading-font-family;
         font-weight: $heading-font-weight;
         text-align: left;
         word-break: normal;

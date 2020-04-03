@@ -33,6 +33,13 @@
         href="{{ '/css/main.css' | prepend: site.baseurl }}"
         media="screen"
     />
+    {% if page.url == '/patterns' %}
+    <link
+        rel="stylesheet"
+        href="{{ '/css/patterns.css' | prepend: site.baseurl }}"
+        media="screen"
+    />
+    {% endif %}
 
     <script>
         (function(window, document, undefined) {

@@ -1,0 +1,82 @@
+@import "colors";
+@import "variables";
+
+.color-palette {
+    &__group {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        margin-bottom: $space;
+    }
+
+    &__swatch {
+        width: 100%;
+        height: $space-lg;
+    }
+}
+
+$colors-map: (
+    "primary": (
+        $color-primary-20,
+        $color-primary-30,
+        $color-primary-40,
+        $color-primary-50,
+        $color-primary-60,
+        $color-primary-70,
+        $color-primary-80
+    ),
+    "neutral-dark": (
+        $color-neutral-dark-20,
+        $color-neutral-dark-30,
+        $color-neutral-dark-40,
+        $color-neutral-dark-50,
+        $color-neutral-dark-60,
+        $color-neutral-dark-70,
+        $color-neutral-dark-80
+    ),
+    "success": (
+        $color-success-20,
+        $color-success-30,
+        $color-success-40,
+        $color-success-50,
+        $color-success-60,
+        $color-success-70,
+        $color-success-80
+    ),
+    "danger": (
+        $color-danger-20,
+        $color-danger-30,
+        $color-danger-40,
+        $color-danger-50,
+        $color-danger-60,
+        $color-danger-70,
+        $color-danger-80
+    ),
+    "warning": (
+        $color-warning-20,
+        $color-warning-30,
+        $color-warning-40,
+        $color-warning-50,
+        $color-warning-60,
+        $color-warning-70,
+        $color-warning-80
+    ),
+    "accent": (
+        $color-accent-20,
+        $color-accent-30,
+        $color-accent-40,
+        $color-accent-50,
+        $color-accent-60,
+        $color-accent-70,
+        $color-accent-80
+    )
+);
+
+@each $name, $colors in $colors-map {
+    @each $color in $colors {
+        $i: index($colors, $color);
+
+        .bgc-#{$name}-#{$i + 1}0 {
+            background-color: $color;
+        }
+    }
+}
