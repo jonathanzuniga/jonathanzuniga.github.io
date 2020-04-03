@@ -1,8 +1,9 @@
 ---
 authors: [jonathan]
 categories: [arte y diseño]
-cover:
+cover: /images/posts/2020-02-28/south-australian-cobbler-768.jpg
 date: 2020-02-28
+filter:
 layout: post
 summary: En <a href="https://www.oldbookillustrations.com/">Old Book Illustrations</a> encontraran una gran colección de ilustraciones antiguas de todo tipo.
 tags: illustration old-book

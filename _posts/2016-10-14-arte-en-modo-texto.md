@@ -3,6 +3,7 @@ authors: [jonathan]
 categories: [arte y diseño]
 cover: https://www.dropbox.com/s/te3scdrxsn5955t/astral-projection.jpg?raw=1
 date: 2016-10-14
+filter: 1977
 layout: post
 summary: Algo que me preguntaron algunas personas cuando publique uno de mis dibujos fue, ¿que es el <i>ANSI art</i>? Tratare de explicarlo, pero para entenderlo mejor explicare un poco de historia.
 tags: ascii-art ansi-art textmode-art
@@ -11,7 +12,7 @@ title: "Arte en modo texto"
 
 Este tipo de arte se podia apreciar comunmente desde finales de los setentas e inicios de los ochentas en los antiguos tableros de anuncios o [BBS's](https://es.wikipedia.org/wiki/Bulletin_Board_System), fue por la necesidad para tener imagenes en aquellas limitada tecnología de la epoca. El <abbr title="American Standard Code for Information Interchange">ASCII</abbr> es el conjunto de caracteres estándar de las <abbr title="Personal Computers">PC's</abbr> y a alguien se le ocurrió crear arte con esto. Y luego fueron apareciendo los primeros grupos de arte que fueron creando [diferentes estilos](http://www.roysac.com/roy-sac_styles_of_underground_text_art.html) de _ASCII art_. Es comun encontrarlo en los archivos .nfo que acompaña la distribución de [warez](https://es.wikipedia.org/wiki/Warez). Este es sin duda el medio más antiguo para trabajar en el _underground art scene_.
 
-{% include figure.html image="https://www.dropbox.com/s/te3scdrxsn5955t/astral-projection.jpg?raw=1" description="ASCII art «Astral projection» por mattmatthew" link="https://www.instagram.com/p/BHc9sH8BAPh/" filter="1977" %}
+{% include figure.html image="https://www.dropbox.com/s/te3scdrxsn5955t/astral-projection.jpg?raw=1" description="ASCII art «Astral projection» por mattmatthew" link="https://www.instagram.com/p/BHc9sH8BAPh/" filter=page.filter %}
 
 El <abbr title="American National Standards Institute">ANSI</abbr> _art_ nació despues, es similar al ASCII _art_ pero se tiene disponible un conjunto más amplio de caracteres que permite a los artistas crear un arte [más elaborado](https://www.youtube.com/watch?v=cmaK57M7ZV8&start=254), algunas veces aventurandose en largas pantallas de un detalle asombroso. Algunos de estos caracteres adicionales regularmente se usan para crear efectos de sombreado.
 

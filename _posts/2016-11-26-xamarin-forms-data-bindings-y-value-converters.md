@@ -3,6 +3,7 @@ authors: [jonathan]
 categories: [mobile development]
 cover:
 date: 2016-11-26
+filter:
 layout: post
 summary:
 tags: xamarin mobile-dev xamarin.forms

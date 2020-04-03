@@ -3,6 +3,7 @@ authors: [jonathan]
 categories: [mobile development]
 cover:
 date: 2015-11-29 14:50:00
+filter:
 layout: post
 summary:
 tags: xamarin mobile-dev opinion
