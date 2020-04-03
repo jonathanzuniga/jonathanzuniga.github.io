@@ -7,7 +7,8 @@
 body {
     color: $body-color;
     font-family: $body-font-family;
-    font-feature-settings: normal;
+    // font-feature-settings: normal;
+    font-feature-settings: "kern" 1, "liga" 1, "ss01" 1;
     font-size: $body-font-size;
     font-weight: $body-font-weight;
     line-height: $body-line-height;
@@ -20,32 +21,32 @@ body {
 }
 
 a {
-    color: $color-link;
-    // transition: all $transition-duration ease-out;
+    color: $color-txt;
+    transition: all $transition-duration ease-out;
 
-    box-shadow: inset 0 -0.063rem 0 rgba($color-link, 0.3),
-        0 0 0 rgba($color-link, 0.3);
-    text-decoration: none;
-    transition: all 0.2s;
+    // box-shadow: inset 0 -0.063rem 0 rgba($color-link, 0.5),
+    //     0 0 0 rgba($color-link, 0.3);
+    // text-decoration: none;
+    // transition: all 0.2s;
 
-    // text-decoration-color: rgba($color-link, 0.5);
-    // text-decoration-thickness: 0.063rem;
-    // text-underline-offset: 0.156em;
+    text-decoration-color: rgba($color-link, 0.65);
+    text-decoration-thickness: 0.063em;
+    text-underline-offset: 0.156em;
+    // text-underline-position: under;
 
     &:hover {
-        border-radius: $border-radius;
         color: $color-link;
 
-        box-shadow: inset 0 -5rem 0 rgba($color-link, 0.1),
-            0 0.063rem 0 rgba($color-link, 0.1);
+        // box-shadow: inset 0 -5rem 0 rgba($color-link, 0.05),
+        //     0 0.063rem 0 rgba($color-link, 0.1);
 
-        // text-decoration-color: rgba($color-link, 0.5);
+        text-decoration-color: rgba($color-link, 0.65);
     }
 
-    // &:hover,
-    // &:active {
-    //     transition-duration: 0s;
-    // }
+    &:hover,
+    &:active {
+        transition-duration: 0s;
+    }
 
     &:focus {
         color: $color-link;
@@ -137,7 +138,7 @@ em {
     color: $color-link;
     font-style: italic;
     font-family: $heading-font-family;
-    font-weight: $heading-font-weight;
+    font-weight: #{$heading-font-weight - 100};
 }
 
 figure {
@@ -173,7 +174,6 @@ $headings-map: ($h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size);
 
         a {
             color: $body-color;
-            text-decoration: none;
 
             &:visited {
                 color: $body-color;
