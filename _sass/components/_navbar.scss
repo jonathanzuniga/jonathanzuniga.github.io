@@ -1,6 +1,6 @@
 .navbar {
     font-family: $heading-font-family;
-    font-weight: $heading-font-weight;
+    font-weight: #{$heading-font-weight + 100};
 
     &__logo {
         font-size: $h2-font-size;

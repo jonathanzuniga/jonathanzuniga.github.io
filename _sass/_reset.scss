@@ -55,7 +55,7 @@ a {
 
 abbr {
     font-weight: $heading-font-weight;
-    text-decoration-thickness: 0.063rem;
+    text-decoration-thickness: 0.063em;
     text-underline-offset: 0.156em;
 }
 
@@ -200,6 +200,11 @@ $headings-map: ($h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size);
             margin-top: $space-lg;
         }
     }
+}
+
+h1,
+.h1 {
+    font-weight: #{$heading-font-weight + 100};
 }
 
 img {
