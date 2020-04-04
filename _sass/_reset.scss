@@ -12,6 +12,7 @@ body {
     font-size: $body-font-size;
     font-weight: $body-font-weight;
     line-height: $body-line-height;
+    text-rendering: optimizeLegibility;
 }
 
 @supports (font-variant-ligatures: common-ligatures) {

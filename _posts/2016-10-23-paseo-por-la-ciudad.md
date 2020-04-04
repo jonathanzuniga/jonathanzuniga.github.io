@@ -3,7 +3,6 @@ authors: [jonathan]
 categories: personal
 cover: https://live.staticflickr.com/5772/30441576784_4b7d7ebb73_n.jpg
 date: 2016-10-23
-filter:
 layout: post
 summary: Durante el camino empezó a lloviznar. Llegué y esperé afuera del Sanborns como habíamos acordado. Continuó la llovizna.
 tags: tijuana tour

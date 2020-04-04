@@ -1,15 +1,17 @@
 <figure class="figure {{ include.class }}">
-    {% if include.link %}
+    {% assign filter = 'filter-' | append: site.filter %} {% if include.filter
+    %} {% assign filter = 'filter-' | append: include.filter %} {% endif %} {%
+    if include.link %}
     <a href="{{ include.link }}">
         <img
-            class="{% if include.filter %}filter-{{ include.filter }}{% endif %}"
+            class="{{ filter }}"
             src="{{ include.image }}"
             alt="{{ include.description }}"
         />
     </a>
     {% else %}
     <img
-        class="{% if include.filter %}filter-{{ include.filter }}{% endif %}"
+        class="{{ filter }}"
         src="{{ include.image }}"
         alt="{{ include.description }}"
     />

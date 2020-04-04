@@ -3,7 +3,6 @@ authors: [jonathan]
 categories: [arte y diseño]
 cover: https://www.dropbox.com/s/b72s4gfysauwb70/alien_0_08_24_full.jpg?raw=1
 date: 2016-11-19
-filter: 1977
 layout: post
 summary: "Una revisión profunda de su iconografía y tipografía."
 tags: alien movie typography icon design
