@@ -30,8 +30,8 @@ a {
     // text-decoration: none;
     // transition: all 0.2s;
 
-    text-decoration-color: rgba($color-link, 0.65);
-    text-decoration-thickness: 0.063em;
+    text-decoration-color: rgba($color-link, 0.5);
+    text-decoration-thickness: 0.125rem;
     text-underline-offset: 0.156em;
     // text-underline-position: under;
 
@@ -41,7 +41,7 @@ a {
         // box-shadow: inset 0 -5rem 0 rgba($color-link, 0.05),
         //     0 0.063rem 0 rgba($color-link, 0.1);
 
-        text-decoration-color: rgba($color-link, 0.65);
+        text-decoration-color: rgba($color-link, 0.5);
     }
 
     &:hover,
