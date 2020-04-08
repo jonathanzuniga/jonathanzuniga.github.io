@@ -1,4 +1,4 @@
-// global
+// Global
 
 // breakpoints
 $bp-xs-min-width: 0;
@@ -16,7 +16,7 @@ $font-family-heading: $font-family-primary;
 $font-family-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
     Courier, monospace;
 
-$font-size: 1.063rem;
+$font-size: 1rem;
 $font-size-xs: $font-size - 0.25; // -4
 $font-size-sm: $font-size - 0.125; // -2
 $font-size-md: $font-size + 0.125; // +2
@@ -34,28 +34,45 @@ $transition-duration: 0.32s;
 
 $border-width: 0.063rem;
 $border-style: solid;
-$border-color: $color-neutral-dark-30;
 
 $border-radius: 0;
 
-// layout
+// Colors
+
+$site-bgcolor: #fff;
+$text-color: $color-neutral-dark-80;
+$link-color: $color-primary-50;
+$heading-color: $color-neutral-dark-80;
+
+$border-color: $color-neutral-dark-20;
+$code-bgcolor: $color-neutral-dark-60;
+
+$syntax-bg: $site-bgcolor;
+$syntax-bool: $color-accent-40;
+$syntax-comment: $color-neutral-dark-40;
+$syntax-del: $color-danger-40;
+$syntax-error: $color-danger-50;
+$syntax-fn: $color-primary-60;
+$syntax-name: $color-accent-60;
+$syntax-prop: $color-danger-50;
+$syntax-regex: $color-success-50;
+$syntax-str: $color-accent-60;
+$syntax-txt: $text-color;
+$syntax-val: $color-neutral-dark-60;
+
+// Layout
 
 $grid-gap: 4vw;
-
-$site-bg-color: $color-bg;
 
 $container-max-width: 92rem;
 $container-width: 95%;
 
-// reset
+// Reset
 
-$body-color: $color-txt;
 $body-font-family: $font-family-primary;
 $body-font-size: $font-size;
-$body-font-weight: 360;
+$body-font-weight: 400;
 $body-line-height: 1.5;
-
-$code-bg-color: $color-neutral-dark-60;
 
 $heading-font-family: $font-family-heading;
 $heading-font-weight: 600;

@@ -12,20 +12,20 @@
 
     a {
         box-shadow: none;
-        color: $body-color;
+        color: $text-color;
         text-decoration: none;
 
         &:hover {
-            color: $color-link;
+            color: $link-color;
         }
 
         &:focus {
-            color: $color-link;
+            color: $link-color;
         }
     }
 
     .is-active a {
-        color: $color-link;
+        color: $link-color;
     }
 }
 

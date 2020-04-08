@@ -22,7 +22,16 @@ $colors-map: (
         $color-primary-50,
         $color-primary-60,
         $color-primary-70,
-        $color-primary-80
+        $color-primary-80,
+    ),
+    "neutral-light": (
+        $color-neutral-light-20,
+        $color-neutral-light-30,
+        $color-neutral-light-40,
+        $color-neutral-light-50,
+        $color-neutral-light-60,
+        $color-neutral-light-70,
+        $color-neutral-light-80,
     ),
     "neutral-dark": (
         $color-neutral-dark-20,
@@ -31,7 +40,7 @@ $colors-map: (
         $color-neutral-dark-50,
         $color-neutral-dark-60,
         $color-neutral-dark-70,
-        $color-neutral-dark-80
+        $color-neutral-dark-80,
     ),
     "success": (
         $color-success-20,
@@ -40,7 +49,7 @@ $colors-map: (
         $color-success-50,
         $color-success-60,
         $color-success-70,
-        $color-success-80
+        $color-success-80,
     ),
     "danger": (
         $color-danger-20,
@@ -49,7 +58,7 @@ $colors-map: (
         $color-danger-50,
         $color-danger-60,
         $color-danger-70,
-        $color-danger-80
+        $color-danger-80,
     ),
     "warning": (
         $color-warning-20,
@@ -58,7 +67,7 @@ $colors-map: (
         $color-warning-50,
         $color-warning-60,
         $color-warning-70,
-        $color-warning-80
+        $color-warning-80,
     ),
     "accent": (
         $color-accent-20,
@@ -67,8 +76,8 @@ $colors-map: (
         $color-accent-50,
         $color-accent-60,
         $color-accent-70,
-        $color-accent-80
-    )
+        $color-accent-80,
+    ),
 );
 
 @each $name, $colors in $colors-map {

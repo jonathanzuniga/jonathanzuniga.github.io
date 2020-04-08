@@ -1,9 +1,10 @@
-$color-primary: #f9855e;
-$color-neutral-dark: #888;
-$color-success: #8a8e91;
-$color-danger: #8a8e91;
-$color-warning: #8a8e91;
-$color-accent: #8a8e91;
+$color-primary: #529ecc;
+$color-neutral-light: #fff;
+$color-neutral-dark: #748089;
+$color-success: #56bc8a;
+$color-danger: #fca369;
+$color-warning: #f2992e;
+$color-accent: #a77dc2;
 
 $color-primary-20: lighten($color-primary, 30%);
 $color-primary-30: lighten($color-primary, 20%);
@@ -12,6 +13,14 @@ $color-primary-50: $color-primary;
 $color-primary-60: darken($color-primary, 10%);
 $color-primary-70: darken($color-primary, 20%);
 $color-primary-80: darken($color-primary, 30%);
+
+$color-neutral-light-20: lighten($color-neutral-light, 30%);
+$color-neutral-light-30: lighten($color-neutral-light, 20%);
+$color-neutral-light-40: lighten($color-neutral-light, 10%);
+$color-neutral-light-50: $color-neutral-light;
+$color-neutral-light-60: darken($color-neutral-light, 10%);
+$color-neutral-light-70: darken($color-neutral-light, 20%);
+$color-neutral-light-80: darken($color-neutral-light, 30%);
 
 $color-neutral-dark-20: lighten($color-neutral-dark, 30%);
 $color-neutral-dark-30: lighten($color-neutral-dark, 20%);
@@ -52,20 +61,3 @@ $color-accent-50: $color-accent;
 $color-accent-60: darken($color-accent, 10%);
 $color-accent-70: darken($color-accent, 20%);
 $color-accent-80: darken($color-accent, 30%);
-
-$color-bg: #fff;
-$color-txt: $color-neutral-dark-80;
-$color-link: $color-primary-50;
-
-$syntax-bg: $color-bg;
-$syntax-bool: $color-accent-40;
-$syntax-comment: $color-neutral-dark-40;
-$syntax-del: $color-danger-40;
-$syntax-error: $color-danger-50;
-$syntax-fn: $color-primary-60;
-$syntax-name: $color-accent-60;
-$syntax-prop: $color-danger-50;
-$syntax-regex: $color-success-50;
-$syntax-str: $color-accent-60;
-$syntax-txt: $color-txt;
-$syntax-val: $color-neutral-dark-60;
