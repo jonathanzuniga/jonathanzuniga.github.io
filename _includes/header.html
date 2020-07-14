@@ -1,5 +1,46 @@
 {% assign author = site.authors['jonathan'] %}
 <header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar__top">
+                <div>
+                    <a href="/">Inicio</a>
+                </div>
+                <div class="navbar__brand">
+                    <a href="{{ site.baseurl }}/">
+                        {{ author.first_name }} {{ author.last_name }}
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <svg
+                            class="navbar__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="512"
+                            height="512"
+                            viewBox="0 0 512 512"
+                        >
+                            <title>ionicons-v5-f</title>
+                            <path
+                                d="M464,428,339.92,303.9a160.48,160.48,0,0,0,30.72-94.58C370.64,120.37,298.27,48,209.32,48S48,120.37,48,209.32s72.37,161.32,161.32,161.32a160.48,160.48,0,0,0,94.58-30.72L428,464ZM209.32,319.69A110.38,110.38,0,1,1,319.69,209.32,110.5,110.5,0,0,1,209.32,319.69Z"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="navbar__bottom">
+                <ul class="list list--inline">
+                    {% for category in site.categories limit: 8 %}
+                    <li>{{ category | first }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+{% comment %} {% assign author = site.authors['jonathan'] %}
+<header class="header">
     <nav class="navbar">
         <a class="navbar__logo" href="{{ site.baseurl }}/">
             {{ author.first_name }} {{ author.last_name }}
@@ -43,8 +84,7 @@
         </ul>
     </nav>
 </header>
-
-{% comment %} {% assign author = site.authors[ 'jonathan' ] %}
+{% endcomment %} {% comment %} {% assign author = site.authors[ 'jonathan' ] %}
 
 <header class="header">
     <nav class="nav">

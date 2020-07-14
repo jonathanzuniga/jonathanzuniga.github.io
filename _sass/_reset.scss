@@ -7,8 +7,8 @@
 body {
     color: $text-color;
     font-family: $body-font-family;
-    // font-feature-settings: normal;
-    font-feature-settings: "kern" 1, "liga" 1, "ss01" 1;
+    font-feature-settings: normal;
+    // font-feature-settings: "kern" 1, "liga" 1, "ss01" 1;
     font-size: $body-font-size;
     font-weight: $body-font-weight;
     line-height: $body-line-height;
@@ -22,18 +22,17 @@ body {
 }
 
 a {
-    color: $text-color;
+    color: $link-color;
+    text-decoration: none;
     transition: all $transition-duration ease-out;
-
-    text-decoration-color: rgba($link-color, 0.65);
-    text-decoration-line: underline;
-    text-decoration-thickness: 0.156rem;
-    text-underline-offset: 0.156em;
-    // text-underline-position: under;
 
     &:hover {
         color: $link-color;
         text-decoration-color: rgba($link-color, 0.65);
+        text-decoration-line: underline;
+        text-decoration-thickness: 0.125rem;
+        text-underline-offset: 0.125em;
+        // text-underline-position: under;
     }
 
     &:hover,
@@ -42,7 +41,7 @@ a {
     }
 
     &:focus {
-        color: $link-color;
+        color: $text-color;
     }
 }
 
@@ -97,14 +96,14 @@ blockquote {
 code {
     display: inline-block;
     font-family: $font-family-mono;
-    font-size: #{$font-size - 0.188};
+    font-size: $font-size;
     padding: #{$space-xs / 2} #{$space-sm - 0.125};
     position: relative;
     word-wrap: break-word;
 
     &::after {
         background-color: $code-bgcolor;
-        border-radius: $border-radius;
+        border-radius: #{$border-radius / 3};
         content: "";
         inset: -0.063rem;
         opacity: 0.15;
@@ -128,7 +127,6 @@ pre {
 }
 
 em {
-    color: $link-color;
     font-style: italic;
     font-family: $heading-font-family;
     font-weight: #{$heading-font-weight - 100};
@@ -138,6 +136,7 @@ figure {
     margin: $space-lg 0;
 
     a {
+        background-color: transparent;
         box-shadow: none;
         display: flex;
 
@@ -164,11 +163,12 @@ $headings-map: ($h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size);
         font-size: $heading-size;
         font-weight: $heading-font-weight;
         line-height: #{$body-line-height - 0.375};
-        margin: 0 0 $space-sm;
+        margin: 0 0 #{$space-md - 0.25};
 
         a {
+            background-color: transparent;
             color: $heading-color;
-            text-decoration: none;
+            padding: 0;
 
             &:visited {
                 color: $heading-color;
@@ -176,6 +176,7 @@ $headings-map: ($h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size);
 
             &:hover {
                 color: $link-color;
+                text-decoration: none;
             }
 
             &:focus {
@@ -199,13 +200,7 @@ $headings-map: ($h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size);
 
 h1,
 .h1 {
-    font-weight: #{$heading-font-weight + 100};
-}
-
-img {
-    border-radius: $border-radius;
-    max-width: 100%;
-    mix-blend-mode: multiply;
+    margin-bottom: $space-lg;
 }
 
 hr {
@@ -222,21 +217,29 @@ hr {
     }
 }
 
+img {
+    border-radius: $border-radius;
+    width: 100%;
+    // mix-blend-mode: multiply;
+
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: -o-crisp-edges; /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+}
+
 ol,
 ul {
     list-style-position: outside;
-    padding-right: 0;
-    padding-left: 0;
+}
+
+ul {
+    padding-left: $space;
 }
 
 li {
-    margin-bottom: $space-sm;
-}
-
-@media screen and (min-width: $bp-md-min-width) {
-    li {
-        margin-bottom: $space-xs;
-    }
+    margin: 0;
 }
 
 p {

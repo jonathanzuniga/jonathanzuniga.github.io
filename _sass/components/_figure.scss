@@ -1,9 +1,2 @@
-.figure__cols {
-    grid-column: 1 / -1;
-}
-
-@media screen and (min-width: $bp-md-min-width) {
-    .figure {
-        grid-template-columns: repeat(#{$grid-cols - 2}, 1fr);
-    }
+.figure {
 }

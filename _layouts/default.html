@@ -9,25 +9,15 @@
     <body
         class="body {% if page.url == '/' %} body--home {% elsif page.url == '/blog/' %} body--blog {% elsif current[1] == 'blog' %} body--full-post {% elsif current[1] == 'about' %} body--about {% elsif page.url == '/search' %} body--search {% endif %}"
     >
-        <div class="container">
-            {% include header.html %} {% include introduction.html %}
+        {% include header.html %}
 
-            <main class="main">
-                <div class="content">
-                    {{ content }}
-                </div>
-            </main>
+        <main class="main">
+            <div class="content">
+                {{ content }}
+            </div>
+        </main>
 
-            {% include sidebar.html %}
-
-            <hr />
-
-            {% include awesome-block.html %}
-
-            <hr />
-
-            {% include footer.html %}
-        </div>
+        <!-- {% include footer.html %} -->
 
         <script src="{{ '/js/lunr.min.js' | prepend: site.baseurl }}"></script>
         <script src="{{ '/js/search.js' | prepend: site.baseurl }}"></script>

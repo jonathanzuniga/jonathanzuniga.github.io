@@ -2,14 +2,142 @@
 layout: default
 ---
 
-{% for post in paginator.posts %}
-<article class="post post--{{ forloop.index }}">
-    <header class="post__header">
-        <div class="post__date">
-            {% include date.html %}
+<section class="featured">
+    <div class="container">
+        <div class="posts posts--featured">
+            {% for post in site.tags.featured limit: 5 %}
+            <article class="post post--{{ forloop.index }}">
+                <div
+                    class="{% unless forloop.first or forloop.last %}media-object{% endunless %}"
+                >
+                    {% if post.cover %}
+                    <div
+                        class="{% unless forloop.first or forloop.last %}media-object__left{% endunless %}"
+                    >
+                        <a
+                            class="preview-cover {% if forloop.first or forloop.last %}preview-cover--wide{% endif %} {% unless forloop.first or forloop.last %}preview-cover--w100{% endunless %}"
+                        >
+                            <div
+                                class="preview-cover__bg filter-1977"
+                                style="background-image: url('{{ post.cover }}');"
+                                href=""
+                            ></div>
+                        </a>
+                    </div>
+                    {% endif %}
+
+                    <div
+                        class="{% unless forloop.first or forloop.last %}media-object__content{% endunless %}"
+                    >
+                        <header class="post__header">
+                            <div class="post__date">
+                                {% include date.html %}
+                            </div>
+
+                            <h2
+                                class="post__title {% unless forloop.first or forloop.last %}h3{% endunless %}"
+                            >
+                                <a href="{{ post.url }}">
+                                    {{ post.title }}
+                                </a>
+                            </h2>
+                        </header>
+
+                        {% if forloop.first or forloop.last %} {% if
+                        post.summary %}
+                        <div class="post__content post__content--summary">
+                            <p>
+                                {{ post.summary | strip_html | strip_newlines |
+                                truncatewords: 15 }}
+                            </p>
+                        </div>
+                        {% else %}
+                        <div class="post__content post__content--excerpt">
+                            <p>
+                                {{ post.excerpt | strip_html | strip_newlines |
+                                truncatewords: 15 }}
+                            </p>
+                        </div>
+                        {% endif %} {% endif %}
+
+                        <footer class="post__footer"></footer>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
         </div>
 
-        <h2 class="post__title">
+        <div class="view-more">
+            <a href="">Ver todos los artículos destacados</a>
+        </div>
+
+        <hr />
+    </div>
+</section>
+
+<section class="browse">
+    <div class="container">
+        <div class="posts posts--latest">
+            {% for post in site.posts limit: 10 %} {% unless post.tags contains
+            'featured' %}
+            <article class="post post--{{ forloop.index }}">
+                <div class="media-object">
+                    <div class="media-object__content">
+                        <header class="post__header">
+                            <div class="post__date">
+                                {% include date.html %}
+                            </div>
+
+                            <h2 class="post__title">
+                                <a href="{{ post.url }}">
+                                    {{ post.title }}
+                                </a>
+                            </h2>
+                        </header>
+
+                        {% if post.summary %}
+                        <div class="post__content post__content--summary">
+                            <p>{{ post.summary }}</p>
+                        </div>
+                        {% else %}
+                        <div class="post__content post__content--excerpt">
+                            {{ post.excerpt }}
+                        </div>
+                        {% endif %}
+
+                        <footer class="post__footer"></footer>
+                    </div>
+
+                    {% if post.cover %}
+                    <div class="media-object__right">
+                        <a class="preview-cover preview-cover--w100">
+                            <div
+                                class="preview-cover__bg"
+                                style="background-image: url('{{ post.cover }}');"
+                                href=""
+                            ></div>
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+            </article>
+            {% endunless %} {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% comment %} {% for post in paginator.posts %}
+<article class="post post--{{ forloop.index }}">
+    <img class="post__cover" src="{{ post.cover }}" alt="" />
+</article>
+{% endfor %} {% include paginator.html %} {% endcomment %}
+
+<!-- -- -->
+
+{% comment %} {% for post in paginator.posts %}
+<article class="post post--{{ forloop.index }}">
+    <header class="post__header">
+        <h2 class="post__title h1">
             <a href="{{ post.url }}">
                 {{ post.title }}
             </a>
@@ -17,20 +145,23 @@ layout: default
     </header>
 
     {% if post.summary %}
-    <div class="post__content post__content--summary">
+    <div class="post__summary">
         <p>{{ post.summary }}</p>
     </div>
-    {% else %}
-    <div class="post__content post__content--excerpt">
-        {{ post.excerpt }}
-    </div>
     {% endif %}
+
+    <div class="post__content">
+        {{ post.content }}
+    </div>
 
     <footer class="post__footer">
         <ul class="list list--inline">
             <li>
-                Publicado en {% assign sorted_categories = post.categories |
-                sort %} {% for category in sorted_categories %}
+                <a href="{{ post.url }}">{% include date.html %}</a>
+            </li>
+            <li>
+                {% assign sorted_categories = post.categories | sort %} {% for
+                category in sorted_categories %}
                 <a
                     href="/blog{{ site.baseurl }}/category/{{
                         category | slugify
@@ -41,4 +172,4 @@ layout: default
         </ul>
     </footer>
 </article>
-{% endfor %} {% include paginator.html %}
+{% endfor %} {% include paginator.html %} {% endcomment %}

@@ -2,14 +2,19 @@
 layout: default
 ---
 
+{% comment %}
 <article class="post post--full">
     <header class="post__header">
-        {% if page.summary %}
-        <div class="post__summary">
-            <p>{{ page.summary }}</p>
-        </div>
-        {% endif %}
+        <h1 class="post__title">
+            {{ page.title }}
+        </h1>
     </header>
+
+    {% if page.summary %}
+    <div class="post__summary">
+        <p>{{ page.summary }}</p>
+    </div>
+    {% endif %}
 
     <div class="post__content">
         {{ page.content }}
@@ -41,6 +46,7 @@ layout: default
         </ul>
     </footer>
 </article>
+{% endcomment %}
 
 {% comment %}{% include paginator.html %}{% endcomment %}
 

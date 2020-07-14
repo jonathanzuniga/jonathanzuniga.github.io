@@ -4,20 +4,17 @@
 $bp-xs-min-width: 0;
 $bp-sm-min-width: 48em; // 768px
 $bp-md-min-width: 64em; // 1024px
-$bp-lg-min-width: 80em; // 1280px
+$bp-lg-min-width: 80em; // 1200px
 
-$font-family-primary: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-$font-family-heading: $font-family-primary;
-// $font-family-primary: "Futura PT Book", Futura, -apple-system,
-//     BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-//     "Open Sans", "Helvetica Neue", sans-serif;
-// $font-family-heading: "Futura PT Demi", $font-family-primary;
-$font-family-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
-    Courier, monospace;
+$font-family-primary: "Futura PT Book", Futura, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+$font-family-heading: "Futura PT Demi", $font-family-primary;
+$font-family-brand: "Futura PT", $font-family-heading;
+$font-family-mono: "Courier New", Courier, monospace;
 
-$font-size: 1rem;
-$font-size-xs: $font-size - 0.25; // -4
+$font-size: 1.125rem;
+$font-size-xs: $font-size - 0.188; // -3
 $font-size-sm: $font-size - 0.125; // -2
 $font-size-md: $font-size + 0.125; // +2
 $font-size-lg: $font-size + 0.25; // +4
@@ -39,32 +36,32 @@ $border-radius: 0;
 
 // Colors
 
-$site-bgcolor: #fff;
-$text-color: $color-neutral-dark-80;
+$site-bgcolor: $color-bg;
+$text-color: $color-neutral-dark;
 $link-color: $color-primary-50;
-$heading-color: $color-neutral-dark-80;
+$heading-color: $color-neutral-dark;
 
 $border-color: $color-neutral-dark-20;
 $code-bgcolor: $color-neutral-dark-60;
 
-$syntax-bg: $site-bgcolor;
-$syntax-bool: $color-accent-40;
-$syntax-comment: $color-neutral-dark-40;
-$syntax-del: $color-danger-40;
-$syntax-error: $color-danger-50;
-$syntax-fn: $color-primary-60;
-$syntax-name: $color-accent-60;
-$syntax-prop: $color-danger-50;
-$syntax-regex: $color-success-50;
-$syntax-str: $color-accent-60;
-$syntax-txt: $text-color;
-$syntax-val: $color-neutral-dark-60;
+// $syntax-bg: $site-bgcolor;
+// $syntax-bool: $color-accent-40;
+// $syntax-comment: $color-neutral-dark-40;
+// $syntax-del: $color-danger-40;
+// $syntax-error: $color-danger-50;
+// $syntax-fn: $color-primary-60;
+// $syntax-name: $color-accent-60;
+// $syntax-prop: $color-danger-50;
+// $syntax-regex: $color-success-50;
+// $syntax-str: $color-accent-60;
+// $syntax-txt: $text-color;
+// $syntax-val: $color-neutral-dark-60;
 
 // Layout
 
-$grid-gap: 4vw;
+$grid-gap: 0;
 
-$container-max-width: 92rem;
+$container-max-width: 1024px;
 $container-width: 95%;
 
 // Reset
@@ -77,10 +74,10 @@ $body-line-height: 1.5;
 $heading-font-family: $font-family-heading;
 $heading-font-weight: 600;
 
-$h1-font-size: 2.75em;
+$h1-font-size: 2.25em;
 $h2-font-size: 1.5em;
-$h3-font-size: 1.25em;
-$h4-font-size: 1.125em;
+$h3-font-size: 1.125em;
+$h4-font-size: 1em;
 
 $open-quote: "«";
 $close-quote: "»";

@@ -1,6 +1,5 @@
-{% assign months =
-'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre'
-| split: '|' %} {% if page.date %}
+{% assign months = 'ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic' | split:
+'|' %} {% if page.date %}
 <time datetime="{{ page.date | date_to_xmlschema }}">
     {% assign month = page.date | date: '%-m' | minus: 1 %} {% assign month_name
     = months[month] %} {% assign day = page.date | date: '%-d' %} {% assign year
@@ -18,6 +17,4 @@
     <span class="month">{{ month_name }}</span>,
     <span class="year">{{ year }}</span>
 </time>
-{% endif %} {% comment %} {% assign months =
-'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre'
-| split: '|' %} {% endcomment %}
+{% endif %}

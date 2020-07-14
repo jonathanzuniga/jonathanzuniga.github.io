@@ -4,9 +4,9 @@ categories: [arte y diseño]
 cover: https://www.dropbox.com/s/te3scdrxsn5955t/astral-projection.jpg?raw=1
 date: 2016-10-14
 layout: post
-summary: Algo que me preguntaron algunas personas cuando publique uno de mis dibujos fue, ¿que es el <i>ANSI art</i>? Tratare de explicarlo, pero para entenderlo mejor explicare un poco de historia.
-tags: ascii-art ansi-art textmode-art
-title: "Arte en modo texto"
+summary: Algo que me preguntaron algunas personas cuando publique uno de mis dibujos fue, ¿que es el <i>ANSI art</i>? Tratare de explicarlo.
+tags: ascii-art ansi-art textmode-art featured
+title: "Arte en Modo Texto"
 ---
 
 Este tipo de arte se podia apreciar comunmente desde finales de los setentas e inicios de los ochentas en los antiguos tableros de anuncios o [BBS's](https://es.wikipedia.org/wiki/Bulletin_Board_System), fue por la necesidad para tener imagenes en aquellas limitada tecnología de la epoca. El <abbr title="American Standard Code for Information Interchange">ASCII</abbr> es el conjunto de caracteres estándar de las <abbr title="Personal Computers">PC's</abbr> y a alguien se le ocurrió crear arte con esto. Y luego fueron apareciendo los primeros grupos de arte que fueron creando [diferentes estilos](http://www.roysac.com/roy-sac_styles_of_underground_text_art.html) de _ASCII art_. Es comun encontrarlo en los archivos .nfo que acompaña la distribución de [warez](https://es.wikipedia.org/wiki/Warez). Este es sin duda el medio más antiguo para trabajar en el _underground art scene_.

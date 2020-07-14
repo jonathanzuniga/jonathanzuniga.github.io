@@ -31,8 +31,8 @@ authors:
         twitter_username: jonathan_zuniga
 
 # Custom permalink
-# permalink: /:year/:month/:day/:title
-permalink: /blog/:title
+permalink: /blog/:year/:month/:day
+# permalink: /blog/:title
 
 # Build settings
 plugins:
