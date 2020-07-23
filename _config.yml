@@ -71,4 +71,4 @@ timezone: "-0800" # timezone: America/Tijuana
 google_analytics: UA-134641865-1
 
 # Images filter
-filter: 1977
+filter: custom

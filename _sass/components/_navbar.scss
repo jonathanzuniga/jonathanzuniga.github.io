@@ -1,42 +1,34 @@
 .navbar {
-    &__top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: $space;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: $border-width $border-style $border-color;
+    margin-bottom: $space-xl;
+    padding-top: $space;
+    padding-bottom: $space;
+
+    a {
+        color: $text-color;
+
+        &:hover {
+            color: $link-color;
+            text-decoration: none;
+        }
     }
 
     &__brand {
         font-family: $font-family-brand;
-        font-size: 1.75rem;
+        font-size: 2.75em;
         font-weight: 700;
-        text-transform: uppercase;
-
-        a {
-            color: $text-color;
-
-            &:hover {
-                color: $link-color;
-                text-decoration: none;
-            }
-        }
     }
 
-    &__icon {
-        width: 24px;
-        height: 24px;
-    }
+    // &__icon {
+    //     width: 24px;
+    //     height: 24px;
+    // }
 
-    &__bottom {
-        display: flex;
-        justify-content: safe center;
-
-        font-size: $font-size-sm;
-        overflow-x: auto;
-        text-transform: uppercase;
-
-        .list {
-            white-space: nowrap;
-        }
+    &__menu {
+        font-weight: $bold-font-weight;
     }
 }

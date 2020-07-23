@@ -30,7 +30,7 @@ a {
         color: $link-color;
         text-decoration-color: rgba($link-color, 0.65);
         text-decoration-line: underline;
-        text-decoration-thickness: 0.125rem;
+        text-decoration-thickness: 0.063rem;
         text-underline-offset: 0.125em;
         // text-underline-position: under;
     }
@@ -45,19 +45,24 @@ a {
     }
 }
 
+// Text
+
 abbr {
     font-weight: $heading-font-weight;
     text-decoration-thickness: 0.063em;
     text-underline-offset: 0.156em;
 }
 
-// blockquote,
-// ol,
-// ul,
-// p,
-// .footnotes {
-//     font-family: $font-family-secondary;
-// }
+b,
+strong {
+    font-weight: $bold-font-weight;
+}
+
+em {
+    font-style: italic;
+    font-family: $heading-font-family;
+    font-weight: #{$heading-font-weight - 100};
+}
 
 blockquote {
     border-left: $space-xs $border-style $border-color;
@@ -124,12 +129,6 @@ pre {
             content: none;
         }
     }
-}
-
-em {
-    font-style: italic;
-    font-family: $heading-font-family;
-    font-weight: #{$heading-font-weight - 100};
 }
 
 figure {
@@ -220,7 +219,7 @@ hr {
 img {
     border-radius: $border-radius;
     width: 100%;
-    // mix-blend-mode: multiply;
+    mix-blend-mode: multiply;
 
     image-rendering: -moz-crisp-edges; /* Firefox */
     image-rendering: -o-crisp-edges; /* Opera */
@@ -252,12 +251,6 @@ pre {
 
 small {
     font-size: $font-size-sm;
-}
-
-strong,
-b {
-    font-family: $heading-font-family;
-    font-weight: $heading-font-weight;
 }
 
 table {

@@ -1,9 +1,12 @@
-$color-bg: #f6f0ea;
-
 $color-neutral-light: #fff;
-$color-neutral-dark: #292929;
+$color-neutral-dark: #211532;
+$color-neutral-dark-15: rgba($color-neutral-dark, 0.15);
 
-$color-primary: #f16d68; // #efca83;
+$color-bg: #f5f4f0;
+$color-bg-alt: rgba(#b4b17c, 0.3); // borders
+$color-accent: #7f519d; // dates
+
+$color-primary: #5b8b6c;
 // $color-success: #5b8b6c;
 // $color-danger: #f16d68;
 // $color-warning: #efca83;

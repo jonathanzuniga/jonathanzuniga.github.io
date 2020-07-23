@@ -9,79 +9,118 @@
     max-width: $container-max-width;
 }
 
-.header {
-    margin-top: $space;
-    margin-bottom: $space;
+.introduction {
+    margin-bottom: $space-xl;
 }
 
-.posts {
-    margin-bottom: $space;
+.featured {
+    margin-bottom: $space-lg;
+}
 
-    .post {
-        &__title {
-            margin-bottom: $space-rg;
-        }
-
-        &__content {
-            // color: rgba($text-color, 0.54);
-        }
-
-        &__footer {
-            font-size: $font-size-xs;
-        }
-    }
-
-    &--latest {
-        .post {
-            margin-bottom: $space-lg;
-        }
-    }
+.grid {
+    // margin-bottom: $space;
 
     @media screen and (min-width: $bp-lg-min-width) {
+        display: grid;
+        gap: $grid-gap;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto 1fr;
+
         &--featured {
-            display: grid;
-            gap: $space-md;
-            grid-template-columns: 40% 34% 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
+            .grid__block {
+                $margin-neg: #{(($bp-lg-min-width - $container-max-width - 4) / 2) *
+                    -1};
 
-            .post {
+                // &--1,
+                // &--3,
+                // &--4 {
+                //     border-top: $border-width $border-style $border-color;
+                //     padding-top: $space-sm;
+                // }
+
                 &--1 {
-                    grid-column: 1;
-                    grid-row: 1 / 4;
+                    grid-column: 1 / 6;
+                    grid-row: 1 / 3;
 
-                    .preview-cover__bg {
-                        margin-left: -88px;
-                    }
+                    // margin-left: $margin-neg;
                 }
 
                 &--2 {
-                    grid-column: 2;
-                    grid-row: 1;
+                    grid-column: 6 / 10;
+                    grid-row: 1 / 2;
+
+                    .preview-cover {
+                        margin-bottom: $space;
+                    }
                 }
 
                 &--3 {
-                    grid-column: 2;
-                    grid-row: 2;
+                    grid-column: 10 / -1;
+                    grid-row: 1 / 2;
+
+                    // margin-right: $margin-neg;
                 }
 
                 &--4 {
-                    grid-column: 2;
-                    grid-row: 3;
+                    grid-column: 6 / 8;
+                    grid-row: 2 / 3;
                 }
 
                 &--5 {
-                    grid-column: 3;
-                    grid-row: 1 / 4;
+                    grid-column: 8 / 11;
+                    grid-row: 2 / 3;
 
-                    .preview-cover__bg {
-                        margin-right: -88px;
-                    }
-
-                    .post__content,
-                    .post__footer {
-                        margin-right: -50px;
+                    .preview-cover {
+                        margin-bottom: $space;
                     }
                 }
+
+                &--6 {
+                    grid-column: 11 / -1;
+                    grid-row: 2 / 3;
+
+                    // margin-right: $margin-neg;
+
+                    .preview-cover {
+                        margin-bottom: $space;
+                    }
+                }
+            }
+
+            .post:not(.post--featured-4):not(.post--featured-5) {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+        }
+
+        &--browse {
+            .grid__block {
+                &--1 {
+                    grid-column: 1 / 6;
+                    grid-row: 1 / 3;
+                }
+
+                &--2 {
+                    grid-column: 6 / 11;
+                    grid-row: 1 / 2;
+                }
+
+                &--3 {
+                    grid-column: 6 / 11;
+                    grid-row: 2 / 3;
+                }
+
+                &--4 {
+                    grid-column: 11 / -1;
+                    grid-row: 1 / 3;
+                }
+            }
+
+            .list-group--by-category .list-group__body,
+            .list-group--by-tag .list-group__body {
+                column-count: 2;
+                column-gap: $grid-gap;
             }
         }
     }
@@ -89,17 +128,32 @@
 
 .post {
     &__date {
+        color: $color-accent;
         font-size: $font-size-xs;
+        letter-spacing: 0.05em;
         margin-bottom: $space-sm;
         text-transform: uppercase;
+    }
+
+    &__title {
+        margin-bottom: $space-sm;
+    }
+
+    &__footer {
+        font-size: $font-size-xs;
     }
 }
 
 .preview-cover {
+    background-color: $color-neutral-light;
     display: block;
-    margin-bottom: $space;
     width: 100%;
     height: 100%;
+
+    &--minh150 {
+        margin-bottom: 0;
+        min-height: 150px;
+    }
 
     &--w100 {
         margin-bottom: 0;
@@ -111,15 +165,18 @@
         height: 150px;
     }
 
-    .preview-cover__bg {
-        // background-blend-mode: multiply;
+    &__bg {
+        background-blend-mode: multiply;
+        background-color: $site-bgcolor;
         background-origin: border-box;
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: $border-radius;
-        // -webkit-filter: grayscale(1);
-        // filter: grayscale(1);
+
+        // -webkit-filter: sepia(0.25) hue-rotate(-30deg) saturate(0.65);
+        // filter: sepia(0.25) hue-rotate(-30deg) saturate(0.65);
+
         height: 100%;
     }
 }
@@ -128,4 +185,46 @@
     font-size: $font-size-xs;
     text-align: right;
     text-transform: uppercase;
+}
+
+.list-group {
+    &--latest-posts {
+        li {
+            > * {
+                padding: $space 0 !important;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &--by-category,
+    &--by-tag,
+    &--by-year {
+        font-size: $font-size-xs;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+
+        > * {
+            padding-right: $space-lg;
+        }
+
+        a {
+            color: $color-accent;
+
+            &:hover {
+                color: $link-color;
+            }
+        }
+    }
+}
+
+.amount {
+    position: absolute;
+    top: $space-sm;
+    right: 0;
+    text-align: right;
+    font-feature-settings: "tnum" 1;
 }

@@ -5,7 +5,7 @@ cover: https://live.staticflickr.com/5495/30345298354_cd1f68e0f1_n.jpg
 date: 2016-11-09
 layout: post
 summary: "Tres conferencias con el tema de tecnología, protección animal y entretenimiento."
-tags: tijuana-innovadora tijuana 2016 conference featured
+tags: tijuana-innovadora tijuana conference featured
 title: "Asistiendo a Tijuana Innovadora 2016"
 ---
 
