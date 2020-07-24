@@ -129,10 +129,10 @@
 .post {
     &__date {
         color: $color-accent;
-        font-size: $font-size-xs;
-        letter-spacing: 0.05em;
+        font-size: $font-size-sm;
+        // letter-spacing: 0.05em;
         margin-bottom: $space-sm;
-        text-transform: uppercase;
+        // text-transform: uppercase;
     }
 
     &__title {
@@ -203,16 +203,13 @@
     &--by-category,
     &--by-tag,
     &--by-year {
-        font-size: $font-size-xs;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
+        font-size: $font-size-sm;
+        // letter-spacing: 0.05em;
+        // text-transform: uppercase;
 
-        > * {
-            padding-right: $space-lg;
-        }
-
-        a {
+        li > * {
             color: $color-accent;
+            padding-right: $space-lg;
 
             &:hover {
                 color: $link-color;

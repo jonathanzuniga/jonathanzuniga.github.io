@@ -1,6 +1,6 @@
 ---
-authors: [jonathan]
-categories: [arte y diseño]
+authors: jonathan
+categories: arte-y-diseño
 cover: https://www.dropbox.com/s/b72s4gfysauwb70/alien_0_08_24_full.jpg?raw=1
 date: 2016-11-19
 layout: post

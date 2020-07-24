@@ -1,6 +1,6 @@
 ---
-authors: [jonathan]
-categories: [games]
+authors: jonathan
+categories: games
 cover:
 date: 2016-01-16 13:39:00
 layout: post

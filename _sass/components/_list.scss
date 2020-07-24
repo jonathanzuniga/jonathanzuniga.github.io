@@ -22,13 +22,13 @@
         border-top: $border-width $border-style $border-color;
 
         &__head {
-            font-size: $font-size-xs;
+            font-size: $font-size-sm;
             font-weight: $bold-font-weight;
-            letter-spacing: 0.05em;
+            // letter-spacing: 0.05em;
             line-height: inherit;
             margin: 0;
             padding: $space-sm 0;
-            text-transform: uppercase;
+            // text-transform: uppercase;
         }
 
         &__body {

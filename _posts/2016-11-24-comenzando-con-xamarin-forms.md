@@ -1,6 +1,6 @@
 ---
-authors: [jonathan]
-categories: [mobile development]
+authors: jonathan
+categories: mobile-development
 cover:
 date: 2016-11-24
 layout: post

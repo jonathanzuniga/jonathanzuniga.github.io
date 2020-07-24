@@ -1,5 +1,5 @@
 ---
-authors: [jonathan]
+authors: jonathan
 categories: personal
 cover: https://live.staticflickr.com/5772/30441576784_4b7d7ebb73_n.jpg
 date: 2016-10-23
