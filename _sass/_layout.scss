@@ -9,12 +9,33 @@
     max-width: $container-max-width;
 }
 
-.introduction {
+.featured {
     margin-bottom: $space-xl;
+
+    &__title {
+        font-size: $font-size-xs;
+        letter-spacing: $letter-spacing;
+        margin-bottom: $space;
+        text-transform: uppercase;
+    }
 }
 
-.featured {
-    margin-bottom: $space-lg;
+.view-more {
+    display: inline-flex;
+    align-items: center;
+
+    font-size: $font-size-sm;
+
+    &:hover svg {
+        transform: translateX($space-xs);
+    }
+
+    .icon > svg {
+        margin-left: $space-xs - 0.125;
+        width: 0.9em;
+        height: 0.9em;
+        transition: transform $transition-duration linear;
+    }
 }
 
 .grid {
@@ -22,21 +43,15 @@
 
     @media screen and (min-width: $bp-lg-min-width) {
         display: grid;
-        gap: $grid-gap;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: auto 1fr;
+        gap: $grid-gap;
 
         &--featured {
             .grid__block {
-                $margin-neg: #{(($bp-lg-min-width - $container-max-width - 4) / 2) *
-                    -1};
-
-                // &--1,
-                // &--3,
-                // &--4 {
-                //     border-top: $border-width $border-style $border-color;
-                //     padding-top: $space-sm;
-                // }
+                $margin-neg: #{(
+                        ($bp-lg-min-width - $container-max-width - 4) / 2
+                    ) * -1};
 
                 &--1 {
                     grid-column: 1 / 6;
@@ -129,14 +144,14 @@
 .post {
     &__date {
         color: $color-accent;
-        font-size: $font-size-sm;
-        // letter-spacing: 0.05em;
+        font-size: $font-size-xs;
+        letter-spacing: $letter-spacing;
         margin-bottom: $space-sm;
-        // text-transform: uppercase;
+        text-transform: uppercase;
     }
 
     &__title {
-        margin-bottom: $space-sm;
+        margin-bottom: $space-sm !important;
     }
 
     &__footer {
@@ -181,12 +196,6 @@
     }
 }
 
-.view-more {
-    font-size: $font-size-xs;
-    text-align: right;
-    text-transform: uppercase;
-}
-
 .list-group {
     &--latest-posts {
         li {
@@ -201,15 +210,18 @@
     }
 
     &--by-category,
+    &--by-tag {
+        text-transform: capitalize;
+    }
+
+    &--by-category,
     &--by-tag,
     &--by-year {
         font-size: $font-size-sm;
-        // letter-spacing: 0.05em;
-        // text-transform: uppercase;
 
         li > * {
             color: $color-accent;
-            padding-right: $space-lg;
+            padding-right: $space-lg !important;
 
             &:hover {
                 color: $link-color;
@@ -220,8 +232,21 @@
 
 .amount {
     position: absolute;
-    top: $space-sm;
+    top: 0;
     right: 0;
     text-align: right;
     font-feature-settings: "tnum" 1;
+}
+
+.footer {
+    padding-bottom: $space-lg;
+
+    &__copyright {
+        font-size: $font-size-sm;
+    }
+}
+
+.separator {
+    color: $border-color;
+    margin: 0 $space-xs;
 }

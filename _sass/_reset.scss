@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: $text-color;
     font-family: $body-font-family;
@@ -42,6 +46,10 @@ a {
 
     &:focus {
         color: $text-color;
+    }
+
+    svg * {
+        stroke: $link-color !important;
     }
 }
 

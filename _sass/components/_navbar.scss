@@ -19,8 +19,8 @@
 
     &__brand {
         font-family: $font-family-brand;
-        font-size: 2.75em;
-        font-weight: 700;
+        font-size: 2.375em;
+        font-weight: 600;
     }
 
     // &__icon {
@@ -29,6 +29,8 @@
     // }
 
     &__menu {
-        font-weight: $bold-font-weight;
+        font-weight: 500;
+        letter-spacing: $letter-spacing;
+        text-transform: uppercase;
     }
 }

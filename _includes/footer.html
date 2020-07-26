@@ -1,9 +1,13 @@
 {% assign author = site.authors['jonathan'] %}
 <footer class="footer">
-	<p>
-		© <strong>{{ author.first_name }} {{ author.last_name }}</strong>
-		2015–{{ site.time | date: '%Y' }}<br>
-		Código fuente del sitio en <a href="https://github.com/jonathanzuniga/jonathanzuniga.github.io">GitHub</a>.
-		Suscríbete al <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">RSS feed</a> de las publicaciones.
-	</p>
+	<div class="container">
+		<hr>
+		<p class="footer__copyright">
+			© 2015–{{ site.time | date: '%Y' }} {{ author.first_name }} {{ author.last_name }}
+			<span class="separator">·</span>
+			Suscríbete al <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">RSS feed</a> de las publicaciones
+			<span class="separator">·</span>
+			Código fuente del sitio en <a href="https://github.com/jonathanzuniga/jonathanzuniga.github.io">GitHub</a>
+		</p>
+	</div>
 </footer>

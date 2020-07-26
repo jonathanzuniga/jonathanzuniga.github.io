@@ -1,11 +1,13 @@
 // Global
 
-// breakpoints
+// Breakpoints
 
 $bp-xs-min-width: 0;
 $bp-sm-min-width: 48em; // 768px
 $bp-md-min-width: 64em; // 1024px
 $bp-lg-min-width: 80em; // 1200px
+
+// Base
 
 $font-family-primary: "Wotfard", Futura, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
@@ -28,12 +30,9 @@ $space-md: $space + 0.5; // 1.5rem
 $space-lg: $space + 1; // 2rem
 $space-xl: $space + 2; // 3rem
 
-$transition-duration: 0.32s;
+$transition-duration: 0.16s;
 
-$border-width: 0.125rem;
-$border-style: solid;
-
-$border-radius: 0;
+$border-radius: 0.375rem;
 
 // Colors
 
@@ -61,7 +60,7 @@ $heading-color: $color-neutral-dark;
 
 $grid-gap: $space-md;
 
-$container-max-width: $bp-lg-min-width;
+$container-max-width: 68.75em;
 $container-width: 95%;
 
 // Reset
@@ -71,6 +70,11 @@ $body-font-size: $font-size;
 $body-font-weight: 400;
 $body-line-height: 1.5;
 
+$bold-font-weight: 600;
+
+$border-width: 0.063rem;
+$border-style: solid;
+
 $heading-font-family: $font-family-heading;
 $heading-font-weight: 700;
 
@@ -79,7 +83,7 @@ $h2-font-size: 1.5em;
 $h3-font-size: 1.125em;
 $h4-font-size: 1em;
 
-$bold-font-weight: 600;
+$letter-spacing: 0.063em;
 
 $open-quote: "«";
 $close-quote: "»";

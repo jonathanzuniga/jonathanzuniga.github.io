@@ -1,12 +1,12 @@
 $color-neutral-light: #fff;
-$color-neutral-dark: #14171a;
-$color-neutral-dark-15: rgba($color-neutral-dark, 0.15);
+$color-neutral-dark: #333;
+$color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
 
 $color-bg: #fff;
-$color-bg-alt: #e7ecf0; // borders
-$color-accent: #66757f; // dates
+$color-bg-alt: $color-neutral-dark-30; // borders
+$color-accent: $color-neutral-dark; // dates
 
-$color-primary: hsl(184, 30%, 49%);
+$color-primary: #ff5e33;
 // $color-success: #5b8b6c;
 // $color-danger: #f16d68;
 // $color-warning: #efca83;

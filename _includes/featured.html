@@ -1,0 +1,224 @@
+<section class="featured">
+    <div class="container">
+        <div class="grid grid--featured">
+            <div class="grid__block grid__block--1">
+                {% for post in site.tags.featured limit: 1 %}
+                <article class="post post--featured-1">
+                    <header class="post__header">
+                        <!-- <div class="post__date">
+                            {% include date.html %}
+                        </div> -->
+
+                        <h2 class="post__title">
+                            <a href="{{ post.url }}">
+                                {{ post.title }}
+                            </a>
+                        </h2>
+                    </header>
+
+                    {% if post.summary %}
+                    <div class="post__content post__content--summary">
+                        <p>
+                            {{ post.summary | strip_html | strip_newlines |
+                            truncatewords: 15 }}
+                        </p>
+                    </div>
+                    {% else %}
+                    <div class="post__content post__content--excerpt">
+                        <p>
+                            {{ post.excerpt | strip_html | strip_newlines |
+                            truncatewords: 15 }}
+                        </p>
+                    </div>
+                    {% endif %}
+
+                    <footer class="post__footer">
+                        {% include reading-time.html content=post.content %}
+                    </footer>
+
+                    {% if post.cover %}
+                    <a class="preview-cover">
+                        <div
+                            class="preview-cover__bg"
+                            style="background-image: url('{{ post.cover }}');"
+                            href=""
+                        ></div>
+                    </a>
+                    {% endif %}
+                </article>
+                {% endfor %}
+            </div>
+            <div class="grid__block grid__block--2">
+                {% for post in site.tags.featured limit: 1 offset: 1 %}
+                <article class="post post--featured-2">
+                    {% if post.cover %}
+                    <a class="preview-cover preview-cover--minh150">
+                        <div
+                            class="preview-cover__bg"
+                            style="background-image: url('{{ post.cover }}');"
+                            href=""
+                        ></div>
+                    </a>
+                    {% endif %}
+
+                    <header class="post__header">
+                        <!-- <div class="post__date">
+                            {% include date.html %}
+                        </div> -->
+
+                        <h2 class="post__title">
+                            <a href="{{ post.url }}">
+                                {{ post.title }}
+                            </a>
+                        </h2>
+                    </header>
+
+                    <footer class="post__footer">
+                        {% include reading-time.html content=post.content %}
+                    </footer>
+                </article>
+                {% endfor %}
+            </div>
+            <div class="grid__block grid__block--3">
+                {% for post in site.tags.featured limit: 1 offset: 2 %}
+                <article class="post post--featured-3">
+                    <header class="post__header">
+                        <!-- <div class="post__date">
+                            {% include date.html %}
+                        </div> -->
+
+                        <h2 class="post__title">
+                            <a href="{{ post.url }}">
+                                {{ post.title }}
+                            </a>
+                        </h2>
+                    </header>
+
+                    {% if post.summary %}
+                    <div class="post__content post__content--summary">
+                        <p>
+                            {{ post.summary | strip_html | strip_newlines |
+                            truncatewords: 15 }}
+                        </p>
+                    </div>
+                    {% else %}
+                    <div class="post__content post__content--excerpt">
+                        <p>
+                            {{ post.excerpt | strip_html | strip_newlines |
+                            truncatewords: 15 }}
+                        </p>
+                    </div>
+                    {% endif %}
+
+                    <footer class="post__footer"></footer>
+                </article>
+                {% endfor %}
+            </div>
+            <div class="grid__block grid__block--4">
+                {% for post in site.tags.featured limit: 3 offset: 3 %}
+                <article
+                    class="post post--featured-{{ forloop.index | plus: 3 }}"
+                >
+                    <header class="post__header">
+                        <!-- <div class="post__date">
+                            {% include date.html %}
+                        </div> -->
+
+                        <h2 class="post__title h3">
+                            <a href="{{ post.url }}">
+                                {{ post.title }}
+                            </a>
+                        </h2>
+                    </header>
+
+                    <footer class="post__footer">
+                        {% include reading-time.html content=post.content %}
+                    </footer>
+                </article>
+                {% endfor %}
+
+                <a class="view-more" href=""
+                    >Ver todo lo destacado
+                    <span class="icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="512"
+                            height="512"
+                            viewBox="0 0 512 512"
+                        >
+                            <title>ionicons-v5-a</title>
+                            <polyline
+                                points="184 112 328 256 184 400"
+                                style="
+                                    fill: none;
+                                    stroke: #000;
+                                    stroke-linecap: square;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 48px;
+                                "
+                            />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="grid__block grid__block--5">
+                {% for post in site.tags.featured limit: 1 offset: 6 %}
+                <article class="post post--featured-5">
+                    {% if post.cover %}
+                    <a class="preview-cover preview-cover--wide">
+                        <div
+                            class="preview-cover__bg"
+                            style="background-image: url('{{ post.cover }}');"
+                            href=""
+                        ></div>
+                    </a>
+                    {% endif %}
+
+                    <header class="post__header">
+                        <!-- <div class="post__date">
+                            {% include date.html %}
+                        </div> -->
+
+                        <h2 class="post__title">
+                            <a href="{{ post.url }}">
+                                {{ post.title }}
+                            </a>
+                        </h2>
+                    </header>
+
+                    <footer class="post__footer"></footer>
+                </article>
+                {% endfor %}
+            </div>
+            <div class="grid__block grid__block--6">
+                {% for post in site.tags.featured limit: 1 offset: 7 %}
+                <article class="post post--featured-6">
+                    {% if post.cover %}
+                    <a class="preview-cover preview-cover--wide">
+                        <div
+                            class="preview-cover__bg"
+                            style="background-image: url('{{ post.cover }}');"
+                            href=""
+                        ></div>
+                    </a>
+                    {% endif %}
+
+                    <header class="post__header">
+                        <!-- <div class="post__date">
+                            {% include date.html %}
+                        </div> -->
+
+                        <h2 class="post__title">
+                            <a href="{{ post.url }}">
+                                {{ post.title }}
+                            </a>
+                        </h2>
+                    </header>
+
+                    <footer class="post__footer"></footer>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
