@@ -5,7 +5,7 @@ cover:
 date: 2016-01-16 13:39:00
 layout: post
 summary: John Romero, co-creador del legendario <i>shooter</i> en primera persona de id software ha vuelto a su obra maestra creando por primera vez un nuevo nivel para el juego original en más de 20 años.
-tags: doom wad fps-game game john-romero
+tags: doom game john-romero
 title: "DOOM regresa con un nuevo nivel"
 ---
 

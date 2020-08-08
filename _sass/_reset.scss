@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: $selection-bgcolor;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -11,19 +15,28 @@ html {
 body {
     color: $text-color;
     font-family: $body-font-family;
-    font-feature-settings: normal;
-    // font-feature-settings: "kern" 1, "liga" 1, "ss01" 1;
     font-size: $body-font-size;
     font-weight: $body-font-weight;
     line-height: $body-line-height;
     text-rendering: optimizeLegibility;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 @supports (font-variant-ligatures: common-ligatures) {
     body {
+        font-feature-settings: normal;
         font-variant-ligatures: common-ligatures;
     }
 }
+
+// @supports (font-variant-numeric: oldstyle-nums) {
+//     body {
+//         font-feature-settings: normal;
+//         font-variant-numeric: oldstyle-nums
+//     }
+// }
 
 a {
     color: $link-color;
@@ -35,7 +48,7 @@ a {
         text-decoration-color: rgba($link-color, 0.65);
         text-decoration-line: underline;
         text-decoration-thickness: 0.063rem;
-        text-underline-offset: 0.125em;
+        text-underline-offset: 0.156em;
         // text-underline-position: under;
     }
 
@@ -45,7 +58,7 @@ a {
     }
 
     &:focus {
-        color: $text-color;
+        color: $link-color;
     }
 
     svg * {

@@ -1,12 +1,13 @@
 $color-neutral-light: #fff;
-$color-neutral-dark: #333;
-$color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
+$color-neutral-dark:#1d2326;
+// $color-neutral-dark-30: rgba($color-neutral-dark, 0.3);
 
-$color-bg: #fff;
-$color-bg-alt: $color-neutral-dark-30; // borders
+$color-primary: #f65664;
+$color-selection: rgba($color-primary, 0.16);
+$color-bg: #f9f7e8;
+$color-bg-alt: rgba(darken($color-bg, 40%), 0.3); // borders
 $color-accent: $color-neutral-dark; // dates
 
-$color-primary: #ff5e33;
 // $color-success: #5b8b6c;
 // $color-danger: #f16d68;
 // $color-warning: #efca83;

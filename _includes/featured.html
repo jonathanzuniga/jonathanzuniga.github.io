@@ -5,9 +5,7 @@
                 {% for post in site.tags.featured limit: 1 %}
                 <article class="post post--featured-1">
                     <header class="post__header">
-                        <!-- <div class="post__date">
-                            {% include date.html %}
-                        </div> -->
+                        {% include date.html %}
 
                         <h2 class="post__title">
                             <a href="{{ post.url }}">
@@ -32,9 +30,9 @@
                     </div>
                     {% endif %}
 
-                    <footer class="post__footer">
+                    <!-- <footer class="post__footer">
                         {% include reading-time.html content=post.content %}
-                    </footer>
+                    </footer> -->
 
                     {% if post.cover %}
                     <a class="preview-cover">
@@ -62,9 +60,7 @@
                     {% endif %}
 
                     <header class="post__header">
-                        <!-- <div class="post__date">
-                            {% include date.html %}
-                        </div> -->
+                        {% include date.html %}
 
                         <h2 class="post__title">
                             <a href="{{ post.url }}">
@@ -73,9 +69,9 @@
                         </h2>
                     </header>
 
-                    <footer class="post__footer">
+                    <!-- <footer class="post__footer">
                         {% include reading-time.html content=post.content %}
-                    </footer>
+                    </footer> -->
                 </article>
                 {% endfor %}
             </div>
@@ -83,9 +79,7 @@
                 {% for post in site.tags.featured limit: 1 offset: 2 %}
                 <article class="post post--featured-3">
                     <header class="post__header">
-                        <!-- <div class="post__date">
-                            {% include date.html %}
-                        </div> -->
+                        {% include date.html %}
 
                         <h2 class="post__title">
                             <a href="{{ post.url }}">
@@ -98,19 +92,19 @@
                     <div class="post__content post__content--summary">
                         <p>
                             {{ post.summary | strip_html | strip_newlines |
-                            truncatewords: 15 }}
+                            truncatewords: 10 }}
                         </p>
                     </div>
                     {% else %}
                     <div class="post__content post__content--excerpt">
                         <p>
                             {{ post.excerpt | strip_html | strip_newlines |
-                            truncatewords: 15 }}
+                            truncatewords: 10 }}
                         </p>
                     </div>
                     {% endif %}
 
-                    <footer class="post__footer"></footer>
+                    <!-- <footer class="post__footer"></footer> -->
                 </article>
                 {% endfor %}
             </div>
@@ -120,9 +114,7 @@
                     class="post post--featured-{{ forloop.index | plus: 3 }}"
                 >
                     <header class="post__header">
-                        <!-- <div class="post__date">
-                            {% include date.html %}
-                        </div> -->
+                        {% include date.html %}
 
                         <h2 class="post__title h3">
                             <a href="{{ post.url }}">
@@ -131,9 +123,9 @@
                         </h2>
                     </header>
 
-                    <footer class="post__footer">
+                    <!-- <footer class="post__footer">
                         {% include reading-time.html content=post.content %}
-                    </footer>
+                    </footer> -->
                 </article>
                 {% endfor %}
 
@@ -175,9 +167,7 @@
                     {% endif %}
 
                     <header class="post__header">
-                        <!-- <div class="post__date">
-                            {% include date.html %}
-                        </div> -->
+                        {% include date.html %}
 
                         <h2 class="post__title">
                             <a href="{{ post.url }}">
@@ -186,7 +176,7 @@
                         </h2>
                     </header>
 
-                    <footer class="post__footer"></footer>
+                    <!-- <footer class="post__footer"></footer> -->
                 </article>
                 {% endfor %}
             </div>
@@ -204,9 +194,7 @@
                     {% endif %}
 
                     <header class="post__header">
-                        <!-- <div class="post__date">
-                            {% include date.html %}
-                        </div> -->
+                        {% include date.html %}
 
                         <h2 class="post__title">
                             <a href="{{ post.url }}">
@@ -215,7 +203,7 @@
                         </h2>
                     </header>
 
-                    <footer class="post__footer"></footer>
+                    <!-- <footer class="post__footer"></footer> -->
                 </article>
                 {% endfor %}
             </div>

@@ -20,12 +20,12 @@
 
     &-group {
         &__head {
-            font-size: $font-size-xs;
+            font-size: $font-size;
             font-weight: $bold-font-weight;
-            letter-spacing: $letter-spacing;
+            // letter-spacing: $letter-spacing;
             line-height: inherit;
             margin-bottom: $space-sm;
-            text-transform: uppercase;
+            // text-transform: uppercase;
         }
 
         &__body {
@@ -37,7 +37,7 @@
                 > * {
                     border-top: $border-width $border-style $border-color;
                     display: block;
-                    padding: #{$space-xs / 2} 0;
+                    padding: $space-xs 0;
                     position: relative;
 
                     @media (-webkit-min-device-pixel-ratio: 2),

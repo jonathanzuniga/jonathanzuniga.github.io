@@ -3,13 +3,14 @@
     justify-content: space-between;
     align-items: center;
 
-    border-bottom: $border-width $border-style $border-color;
+    // border-bottom: $border-width $border-style $border-color;
     margin-bottom: $space-xl;
     padding-top: $space;
     padding-bottom: $space;
 
     a {
         color: $text-color;
+        text-decoration: none;
 
         &:hover {
             color: $link-color;
@@ -19,8 +20,8 @@
 
     &__brand {
         font-family: $font-family-brand;
-        font-size: 2.375em;
-        font-weight: 600;
+        font-size: 1.75em;
+        font-weight: $bold-font-weight;
     }
 
     // &__icon {
@@ -29,8 +30,12 @@
     // }
 
     &__menu {
-        font-weight: 500;
-        letter-spacing: $letter-spacing;
-        text-transform: uppercase;
+        font-weight: $bold-font-weight;
+        // letter-spacing: $letter-spacing;
+        // text-transform: uppercase;
+    }
+
+    .is-active a {
+        color: $link-color;
     }
 }
