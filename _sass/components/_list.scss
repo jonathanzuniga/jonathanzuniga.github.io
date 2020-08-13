@@ -22,10 +22,10 @@
         &__head {
             font-size: $font-size;
             font-weight: $bold-font-weight;
-            // letter-spacing: $letter-spacing;
+            letter-spacing: $letter-spacing;
             line-height: inherit;
             margin-bottom: $space-sm;
-            // text-transform: uppercase;
+            text-transform: uppercase;
         }
 
         &__body {

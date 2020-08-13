@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
 
-    // border-bottom: $border-width $border-style $border-color;
+    border-bottom: $border-width $border-style $border-color;
     margin-bottom: $space-xl;
     padding-top: $space;
     padding-bottom: $space;
@@ -21,7 +21,7 @@
     &__brand {
         font-family: $font-family-brand;
         font-size: 1.75em;
-        font-weight: $bold-font-weight;
+        font-weight: 500;
     }
 
     // &__icon {

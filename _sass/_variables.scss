@@ -5,7 +5,7 @@
 $bp-xs-min-width: 0;
 $bp-sm-min-width: 48em; // 768px
 $bp-md-min-width: 64em; // 1024px
-$bp-lg-min-width: 80em; // 1200px
+$bp-lg-min-width: 75em; // 1200px
 
 // Base
 
@@ -31,13 +31,13 @@ $space-xl: $space + 2; // 3rem
 
 $transition-duration: 0.16s;
 
-$border-radius: 0;
+$border-radius: $space-rg;
 
 // Colors
 
 $border-color: $color-bg-alt;
-$code-bgcolor: $color-neutral-dark-60;
-$link-color: $color-primary-50;
+$code-bgcolor: blue;
+$link-color: $color-primary;
 $site-bgcolor: $color-bg;
 $text-color: $color-neutral-dark;
 $heading-color: $color-neutral-dark;
@@ -60,7 +60,7 @@ $selection-bgcolor: $color-selection;
 
 $grid-gap: $space-md;
 
-$container-max-width: 68.75em;
+$container-max-width: 75em;
 $container-width: 95%;
 
 // Reset
@@ -72,7 +72,7 @@ $body-line-height: 1.5;
 
 $bold-font-weight: 600;
 
-$border-width: 0.188rem;
+$border-width: 0.125rem;
 $border-style: solid;
 
 $heading-font-family: $font-family-heading;

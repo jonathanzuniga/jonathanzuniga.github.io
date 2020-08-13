@@ -47,8 +47,9 @@ a {
         color: $link-color;
         text-decoration-color: rgba($link-color, 0.65);
         text-decoration-line: underline;
+        text-decoration-skip-ink: none;
         text-decoration-thickness: 0.063rem;
-        text-underline-offset: 0.156em;
+        text-underline-offset: 0.125em;
         // text-underline-position: under;
     }
 
@@ -101,7 +102,7 @@ blockquote {
             margin-top: 0;
 
             &::before {
-                color: $color-neutral-dark-50;
+                // color: $color-neutral-dark-50;
                 content: open-quote;
                 @extend strong;
             }
@@ -111,7 +112,7 @@ blockquote {
             margin-bottom: 0;
 
             &::after {
-                color: $color-neutral-dark-50;
+                // color: $color-neutral-dark-50;
                 content: close-quote;
                 @extend strong;
             }
@@ -189,6 +190,7 @@ $headings-map: ($h1-font-size, $h2-font-size, $h3-font-size, $h4-font-size);
             background-color: transparent;
             color: $heading-color;
             padding: 0;
+            text-decoration: none;
 
             &:visited {
                 color: $heading-color;
