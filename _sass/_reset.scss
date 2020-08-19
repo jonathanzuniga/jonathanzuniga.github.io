@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 
-::selection {
-    background-color: $selection-bgcolor;
-}
+// ::selection {
+//     background-color: $selection-bgcolor;
+// }
 
 html {
     scroll-behavior: smooth;
@@ -20,8 +20,8 @@ body {
     line-height: $body-line-height;
     text-rendering: optimizeLegibility;
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
 }
 
 @supports (font-variant-ligatures: common-ligatures) {

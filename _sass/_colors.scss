@@ -1,12 +1,12 @@
 // links
-$color-primary: #0069ff;
+$color-primary: #000;
 // text
-$color-neutral-dark: #031b4e;
+$color-neutral-dark: $color-primary;
 $color-neutral-light: #fff;
 // site bg color
 $color-bg: #fff;
 // borders
-$color-bg-alt: #e6e9ee;
+$color-bg-alt: $color-neutral-dark;
 // dates
 $color-accent: $color-neutral-dark;
 $color-selection: rgba($color-primary, 0.16);

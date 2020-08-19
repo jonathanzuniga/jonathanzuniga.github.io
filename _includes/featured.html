@@ -1,6 +1,76 @@
 <section class="featured">
     <div class="container">
         <div class="grid grid--featured">
+            {% for post in site.tags.featured limit: 5 %}
+            <div class="grid__block grid__block--{{ forloop.index }}">
+                <article
+                    class="post post--featured post--featured-{{ forloop.index }}"
+                >
+                    <!-- post cover -->
+                    {% if post.cover %}
+                    <div
+                        class="preview-cover {% if forloop.index == 1 %}preview-cover--lg{% endif %}"
+                    >
+                        <img
+                            class="preview-cover__img post__cover"
+                            src="{{ post.cover }}"
+                            alt=""
+                        />
+                    </div>
+                    {% endif %}
+
+                    <!-- post data -->
+                    {% if forloop.index == 1 %}
+                    <div class="post--featured__back-half"></div>
+                    <div class="post--featured__data">
+                        <header class="post__header">
+                            {% include date.html %}
+
+                            <h2 class="post__title">
+                                <a href="{{ post.url }}">
+                                    {{ post.title }}
+                                </a>
+                            </h2>
+                        </header>
+
+                        {% if post.summary %}
+                        <div class="post__content post__content--summary">
+                            <p>
+                                {{ post.summary | strip_html | strip_newlines |
+                                truncatewords: 10 }}
+                            </p>
+                        </div>
+                        {% else %}
+                        <div class="post__content post__content--excerpt">
+                            <p>
+                                {{ post.excerpt | strip_html | strip_newlines |
+                                truncatewords: 10 }}
+                            </p>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% else %}
+                    <header class="post__header">
+                        {% include date.html %}
+
+                        <h2 class="post__title h3">
+                            <a href="{{ post.url }}">
+                                {{ post.title }}
+                            </a>
+                        </h2>
+                    </header>
+                    {% endif %}
+                </article>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% comment %}
+<section class="featured">
+    <div class="container">
+        <div class="grid grid--featured">
             <div class="grid__block grid__block--1">
                 {% for post in site.tags.featured limit: 1 %}
                 <article class="post post--featured-1">
@@ -210,3 +280,4 @@
         </div>
     </div>
 </section>
+{% endcomment %}
