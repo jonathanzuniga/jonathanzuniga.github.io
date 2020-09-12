@@ -1,7 +1,7 @@
 ---
 authors: jonathan
 categories: personal
-cover: https://live.staticflickr.com/5495/30345298354_cd1f68e0f1_n.jpg
+cover:
 date: 2016-11-09
 layout: post
 summary: "Tres conferencias con el tema de tecnología, protección animal y entretenimiento."

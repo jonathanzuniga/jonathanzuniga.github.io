@@ -1,7 +1,7 @@
 ---
 authors: jonathan
 categories: arte-y-diseño
-cover: https://www.dropbox.com/s/te3scdrxsn5955t/astral-projection.jpg?raw=1
+cover:
 date: 2016-10-14
 layout: post
 summary: Algo que me preguntaron algunas personas cuando publique uno de mis dibujos fue, ¿que es el <i>ANSI art</i>? Tratare de explicarlo.

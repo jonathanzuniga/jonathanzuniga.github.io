@@ -1,0 +1,33 @@
+.box {
+    padding: $space-sm;
+
+    &--doodle-data {
+        display: none;
+        font-family: $font-family-mono;
+        font-size: $font-size-sm;
+        position: fixed;
+        right: $space-sm;
+        bottom: $space-sm;
+        left: $space-sm;
+
+        dl, dt, dd {
+            display: inline;
+        }
+
+        dl {
+            margin: 0;
+        }
+
+        dd {
+            margin-left: $space-sm;
+
+            &:not(:first-child) {
+                margin-right: $space-rg;
+            }
+        }
+    }
+
+    &.is-visible {
+        display: block;
+    }
+}

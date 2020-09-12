@@ -55,20 +55,27 @@ timezone: "-0800" # timezone: America/Tijuana
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - blog.code-workspace
+  - js/blog.js
+  - package.json
+  - package-lock.json
+  - tag_generator.py
+  - run.sh
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 
 # Google Analytics
 google_analytics: UA-134641865-1
 
-# Images filter
-filter: custom
+# Doodles path
+doodles_path: /images/doodles/
+
