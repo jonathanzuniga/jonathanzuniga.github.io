@@ -1,5 +1,0 @@
-<p class="post__reading-time" title="Tiempo de lectura estimado">
-    {% assign words = include.content | strip_html | number_of_words %} {{ words
-    | divided_by: 180 | plus: 1 }} min{% if words == 1 %}s{% endif %}. de
-    lectura
-</p>

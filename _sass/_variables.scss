@@ -1,89 +1,11 @@
-// Global
-
-// Breakpoints
-
-$bp-xs-min-width: 0;
-$bp-sm-min-width: 48em; // 768px
-$bp-md-min-width: 64em; // 1024px
-$bp-lg-min-width: 75em; // 1200px
-
-// Base
-
-$font-family-primary: "Wotfard", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-$font-family-heading: $font-family-primary;
-$font-family-brand: $font-family-heading;
-$font-family-mono: 'Roboto Mono', "Courier New", Courier, monospace;
-
-$font-size: 1rem;
-$font-size-xs: $font-size - 0.188; // -3
-$font-size-sm: $font-size - 0.125; // -2
-$font-size-md: $font-size + 0.125; // +2
-$font-size-lg: $font-size + 0.25; // +4
+// Variables
 
 $space: 1rem;
-$space-xs: $space - 0.75; // 0.25rem
-$space-sm: $space - 0.5; // 0.5rem
-$space-rg: $space - 0.25; // 0.75rem
 $space-md: $space + 0.5; // 1.5rem
 $space-lg: $space + 1; // 2rem
-$space-xl: $space + 2; // 3rem
 
-$transition-duration: 0.16s;
+$font-family: Courier, sans-serif;
+$font-size: 90%;
+$line-height: 130%;
 
-$border-radius: $space-sm;
-
-// Colors
-
-$border-color: $color-bg-alt;
-$code-bgcolor: blue;
-$link-color: $color-primary;
-$site-bgcolor: $color-bg;
-$text-color: $color-neutral-dark;
-$heading-color: $color-neutral-dark;
-$selection-bgcolor: $color-selection;
-
-// $syntax-bg: $site-bgcolor;
-// $syntax-bool: $color-accent-40;
-// $syntax-comment: $color-neutral-dark-40;
-// $syntax-del: $color-danger-40;
-// $syntax-error: $color-danger-50;
-// $syntax-fn: $color-primary-60;
-// $syntax-name: $color-accent-60;
-// $syntax-prop: $color-danger-50;
-// $syntax-regex: $color-success-50;
-// $syntax-str: $color-accent-60;
-// $syntax-txt: $text-color;
-// $syntax-val: $color-neutral-dark-60;
-
-// Layout
-
-$grid-gap: $space-md;
-
-$container-max-width: 75em;
-$container-width: 95%;
-
-// Reset
-
-$body-font-family: $font-family-primary;
-$body-font-size: $font-size;
-$body-font-weight: 500;
-$body-line-height: 1.5;
-
-$bold-font-weight: 600;
-
-$border-width: 0.063rem;
-$border-style: solid;
-
-$heading-font-family: $font-family-heading;
-$heading-font-weight: 700;
-
-$h1-font-size: 3em;
-$h2-font-size: 1.75em;
-$h3-font-size: 1.25em;
-$h4-font-size: 1.125em;
-
-$letter-spacing: 0.063em;
-
-$open-quote: "«";
-$close-quote: "»";
+$heading-font-weight: 400;

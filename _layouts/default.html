@@ -12,18 +12,13 @@
         {% comment %}{% include header.html %}{% endcomment %}
 
         <main class="main">
-            <div class="content">
-                {{ content }}
-            </div>
+            <div class="content">{{ content }}</div>
         </main>
 
-        {% comment %}{% include footer.html %}{% endcomment %}
-
+        {% comment %}{% include footer.html %}{% endcomment %} {% comment %}
         <script src="{{ '/js/lunr.min.js' | prepend: site.baseurl }}"></script>
         <script src="{{ '/js/search.js' | prepend: site.baseurl }}"></script>
-        <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/bricklayer/0.4.3/bricklayer.min.js"></script> -->
-        <!-- <script src="{{ '/js/bundle.js' | prepend: site.baseurl }}"></script> -->
-        <script src='https://unpkg.com/panzoom@9.2.5/dist/panzoom.min.js'></script>
+        {% endcomment %}
         <script src="{{ '/js/scripts.js' | prepend: site.baseurl }}"></script>
     </body>
 </html>

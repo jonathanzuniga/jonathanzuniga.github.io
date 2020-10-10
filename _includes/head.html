@@ -13,43 +13,25 @@
     {% endcomment %}
 
     <title>
-        {% comment %} {% if page.title %}{{ page.title | strip_html }} + {%
-        endif %}{{ site.title | strip_html }} {% endcomment %}
+        {% if page.title %}{{ page.title | strip_html }} + {% endif %}{{
+        site.title | strip_html }}
     </title>
 
     <link
         rel="canonical"
         href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
     />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
-    href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bricklayer/0.4.3/bricklayer.min.css">
+    <link
+        rel="alternate"
+        type="application/rss+xml"
+        title="{{ site.title }}"
+        href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}"
+    />
     <link
         rel="stylesheet"
         href="{{ '/css/main.css' | prepend: site.baseurl }}"
         media="screen"
     />
-    {% if page.url == '/patterns' %}
-    <link
-        rel="stylesheet"
-        href="{{ '/css/patterns.css' | prepend: site.baseurl }}"
-        media="screen"
-    />
-    {% endif %}
-
-    <script>
-        (function (window, document, undefined) {
-            "use strict";
-
-            if (!("localStorage" in window)) return;
-
-            const nightMode = localStorage.getItem("nightMode");
-
-            if (!nightMode) return;
-
-            document.documentElement.classList.add("night");
-        })(window, document);
-    </script>
     {% if site.google_analytics and jekyll.environment == 'production' %} {%
     include analytics.html %} {% endif %}
 </head>

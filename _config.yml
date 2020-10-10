@@ -10,25 +10,9 @@ url: "http://jonathanzuniga.github.io" # the base hostname & protocol for your s
 # Author details
 authors:
     jonathan:
-        avatar: "images/authors/jonathan-zuniga-2015-v3.png"
         first_name: Jonathan
         last_name: Zúñiga
         email: jonathanzuniga@gmail.com
-        web: http://jonathanzuniga.github.io/about
-
-        # social media
-        facebook_username: jonathanzuniga
-        flickr_username: jonathan_zuniga
-        github_username: jonathanzuniga
-        googleplus_username: "110998212527855988388"
-        instagram_username: zuniga.jonathan
-        lastfm_username: jonathanzuniga
-        linkedin_username: jonathan-zúñiga-09b403ab
-        medium_username: jonathanzuniga
-        pinterest_username: jonathanzuniga
-        spotify_username: jonathanzuniga
-        shelf_username: jonathan
-        twitter_username: jonathan_zuniga
 
 # Custom permalink
 permalink: /blog/:year/:month/:day
@@ -56,26 +40,22 @@ timezone: "-0800" # timezone: America/Tijuana
 # their entries' file path in the `include:` list.
 #
 exclude:
-  - blog.code-workspace
-  - js/blog.js
-  - package.json
-  - package-lock.json
-  - tag_generator.py
-  - run.sh
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+    - blog.code-workspace
+    - js/blog.js
+    - package.json
+    - package-lock.json
+    - tag_generator.py
+    - run.sh
+    - .sass-cache/
+    - .jekyll-cache/
+    - gemfiles/
+    - Gemfile
+    - Gemfile.lock
+    - node_modules/
+    - vendor/bundle/
+    - vendor/cache/
+    - vendor/gems/
+    - vendor/ruby/
 
 # Google Analytics
 google_analytics: UA-134641865-1
-
-# Doodles path
-doodles_path: /images/doodles/
-
